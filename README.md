@@ -1,50 +1,135 @@
-# Cybersecurity Hub 🛡️
+# 🛡️ Cybersecurity Hub – Dein zentraler Wissensspeicher
 
-Willkommen in unserem zentralen Knowledge-Hub für Cybersecurity!
-Diese Sammlung richtet sich an Einsteiger, Fortgeschrittene und alle, die tiefer in die Welt der IT-Sicherheit eintauchen möchten.
+Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools, Techniken, Notizen und Cheat Sheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.  
+Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen.
 
-## 🔍 Inhalt & Struktur
-Dieses Repository dient als strukturierte Sammlung von Lernressourcen, Kursen, Tools, Cheat Sheets und Best Practices – unterteilt nach Themengebieten.
+---
 
-Wir beginnen mit der Kuratierung von kostenlosen Kursen auf Udemy, Tutorials und Praxis-Tools. Das Ziel ist eine übersichtliche Plattform zum Selbststudium oder zur Weiterbildung innerhalb unserer Community.
+## Inhaltsverzeichnis:
 
-## 📂 Aktuelle Kategorien
-Diese Datei wird laufend erweitert. Beiträge willkommen!
+- [🧭 Struktur & Inhalte](#-struktur--inhalte)
+    - [Aktuelle Themen](#aktuelle-highlights)
+- [📁 Themenübersicht](#-themenübersicht)
+    - [🐱‍💻 Offensive Security (Red Team)](#-offensive-security-red-team)
+    - [🔵 Defensive Security (Blue Team)](#-defensive-security-blue-team)
+    - [🧰 Werkzeuge & Cheatsheets](#-werkzeuge--cheatsheets)
+- [🗂️ Dateiübersicht](#️-dateiübersicht-wird-laufend-erweitert)
+- [📚 Zielgruppe](#-zielgruppe)
+- [🤝 Mitwirken & Beiträge](#-mitwirken--beiträge)
+- [📜 Lizenz](#-lizenz)
+- [📡 Community Support](#-community-support)
+- [⚠️ Disclaimer](#️-disclaimer)
 
-## 🔧 Geplante Themenbereiche
+---
 
-- 🧠 Grundlagen der IT-Sicherheit
+## 🧭 Struktur & Inhalte
 
-- 🐱‍💻 Penetration Testing
+Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert. Ziel ist es, eine **schnelle Nachschlagbasis** zu bieten – sowohl zum Lernen als auch zur Vorbereitung auf Prüfungen, CTFs oder reale Audits.
 
-- 🔵 Blue Teaming & Defensive Security
+### Aktuelle Highlights:
 
-- :red_circle: Red Teaming & Offensive Security
- 
-- 🌐 Netzwerk- & Web-Security
+| Thema | Beschreibung |
+|-------|--------------|
+| `pentest_tools.md` | Strukturierte Liste gängiger Tools für alle Phasen eines Penetration Tests (Recon bis Reporting) |
+| `blueteam_tools.md` | Sammlung von Tools für Defensive Security, Forensik, Log-Analyse und Incident Response |
+| `sqlInjectionToShell.md` | Vollständiger Ablauf, wie SQLi zur Shell-Übernahme genutzt wird – inkl. Beispiel, Kontext und Cracking |
+| `UnionBasedAttack.md` | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
+| `wireshark_cheatsheet.md` | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
 
-- 💣 Exploits & Schwachstellenanalyse
+---
 
-- 🛠️ Tools (Burp, Nmap, Wireshark, etc.)
+## 📁 Themenübersicht
 
-- 🧾 Cheatsheets & Befehlsübersichten
+### 🐱‍💻 Offensive Security (Red Team)
+- Recon & Scanning
+- Vulnerability Analysis
+- Web Application Hacking
+- Exploitation & Privilege Escalation
+- Password Attacks
+- Wireless & Social Engineering
+- Reverse Engineering
+- SQL Injection zur Shell
 
-- 📚 Empfohlene Bücher & Literatur
+### 🔵 Defensive Security (Blue Team)
+- Log Management
+- SIEM & Monitoring Tools
+- Threat Hunting & Forensics
+- Incident Response Playbooks
+- Hardening & Detection Techniques
+- Malware Analysis
 
-## 🤝 Mitmachen
-Du hast hilfreiche Links, Tools oder Lernmaterialien?
-Pull Requests & Issues sind willkommen!
+### 🧰 Werkzeuge & Cheatsheets
+- Wireshark
+- Nmap
+- Burp Suite
+- Hashcat, John the Ripper
+- Metasploit & Empire
+- Passwort-Cracking & Netzwerküberwachung
+- Cheat Sheets zu Befehlen, Payloads, Tools
+- [weitere Cheat Sheets hier](/cheatsheets/)
 
-1. Forke das Repo
+---
+
+## 🗂️ Dateiübersicht (wird laufend erweitert)
+
+```bash
+📦 cybersecurity-hub/
+├── blueteam_tools.md
+├── pentest_tools.md
+├── sqlInjectionToShell.md
+├── UnionBasedAttack.md
+├── wireshark_cheatsheet.md
+├── README.md 
+```
+
+---
+
+## 📚 Zielgruppe
+
+- Berufseinsteiger in die IT-Security
+- Teilnehmer von CTFs, Bootcamps und Umschulungen
+- SOC Analysten, Pentester, Incident Responder
+- Autodidakten & Studenten im Bereich IT-Sicherheit
+
+---
+
+## 🤝 Mitwirken & Beiträge
+
+Du hast Tools, Skripte oder Notes, die hier reinpassen?
+Pull Requests und Issues sind jederzeit willkommen!
+
+So kannst du mitmachen:
+
+1. Forke dieses Repository
 2. Erstelle einen Branch mit deinen Änderungen
-3. Erstelle einen Pull Request – wir freuen uns über deine Beiträge!
+3. Erstelle einen Pull Request – wir freuen uns über deinen Beitrag!
+
+---
 
 ## 📜 Lizenz
-Dieses Repository steht unter der MIT-Lizenz – freie Nutzung erwünscht, mit Credits.
-Alle externen Links gehören den jeweiligen Anbietern.
 
-Stay curious – stay secure! 🔐
+Dieses Repository steht unter der MIT-Lizenz – freie Nutzung & Bearbeitung sind erwünscht.
+Credits bei Weiterverwendung wären nice. 😉
+**Hinweis:** Externe Tools und Links gehören den jeweiligen Anbietern.
 
-***HINWEIS:***
-- Bei Fragen zu VM oder zur Einrichtung:
-    - Kontaktiere uns über [Discord](https://discord.gg/fNcTyYVVb9)
+---
+
+## 📡 Community Support
+💬 Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
+👉 [Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
+
+---
+
+## ⚠️ Disclaimer
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+--- 
+
+Stay curious – stay secure. 🔐
+

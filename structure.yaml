@@ -12,9 +12,13 @@ root:
       - linux_basics.md
       - pentest_basics.md
       - nmap_basics.md
+      - wireshark_shortcuts.md
   - sqlInjection/                             # Thema: SQL Injection
+      - BreakAndFixQuery.md                  
       - BreakAndFixQuery.txt                  
+      - SQLInjectionToShell.md       
       - SQLInjectionToShellSolution.txt       
+      - UnionBasedAttack.md                  
       - UnionBasedAttack.txt                  
       - cmdshellAndHowToUse/                  # Weitere Textdateien für SQL Injections
           - bypassExtensionRestrictions.txt   
@@ -22,6 +26,9 @@ root:
           - cmdshell.php3                     
   - kurse/                                  
       - cybersecurityLinks.md
+  - tools/
+      - blueTeamTools.md
+      - redTeamTools.md
 
 # Vorgeschlagene Struktur für weitere Inhalte
 sections:
