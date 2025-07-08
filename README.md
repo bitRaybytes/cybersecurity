@@ -18,7 +18,7 @@ Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die si
 - [🤝 Mitwirken & Beiträge](#-mitwirken--beiträge)
 - [📜 Lizenz](#-lizenz)
 - [📡 Community Support](#-community-support)
-- [⚠️ Disclaimer](#️-disclaimer)
+- [⚠️ Haftungsausschluss](#️-Haftungsausschluss)
 
 ---
 
@@ -120,7 +120,7 @@ Credits bei Weiterverwendung wären nice. 😉
 
 ---
 
-## ⚠️ Disclaimer
+## ⚠️ Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -133,3 +133,5 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
+🗓️ **Letzte Aktualisierung:** Juli 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!

@@ -5,20 +5,21 @@
 
 ## Inhaltsverzeichnis
 
-1) [Informationsbeschaffung](#1️⃣-informationsbeschaffung-reconnaissance)
-2) [Vulnerability Analyse](#2️⃣-vulnerability-analyse)
-3) [Webb Application Analyse](#3️⃣-web-application-analyse)
-4) [Datenbank Assessement](#4️⃣-datenbank-assessment)
-5) [Password Attacks](#5️⃣-password-attacks)
-6) [Wireless Attacks](#6️⃣-wireless-attacks)
-7) [Reverse Engineering](#7️⃣-reverse-engineering)
-8) [Exploitation Tools](#8️⃣-exploitation-tools)
-9) [Sniffing & Spoofing](#9️⃣-sniffing--spoofing)
-10) [Post Exploitation](#-post-exploitation)
-11) [Forensics](#1️⃣1️⃣-forensik--log-analyse)
-12) [Reporting Tools](#1️⃣2️⃣-reporting-tools)
-13) [Social Engineering Tools](#1️⃣3️⃣-social-engineering-tools)
-14) [System Services](#1️⃣4️⃣-systemdienste-für-enumeration--missbrauch)
+1. [Informationsbeschaffung](#1️⃣-informationsbeschaffung-reconnaissance)
+2. [Vulnerability Analyse](#2️⃣-vulnerability-analyse)
+3. [Webb Application Analyse](#3️⃣-web-application-analyse)
+4. [Datenbank Assessement](#4️⃣-datenbank-assessment)
+5. [Password Attacks](#5️⃣-password-attacks)
+6. [Wireless Attacks](#6️⃣-wireless-attacks)
+7. [Reverse Engineering](#7️⃣-reverse-engineering)
+8. [Exploitation Tools](#8️⃣-exploitation-tools)
+9. [Sniffing & Spoofing](#9️⃣-sniffing--spoofing)
+10. [Post Exploitation](#-post-exploitation)
+11. [Forensics](#1️⃣1️⃣-forensik--log-analyse)
+12. [Reporting Tools](#1️⃣2️⃣-reporting-tools)
+13. [Social Engineering Tools](#1️⃣3️⃣-social-engineering-tools)
+14. [System Services](#1️⃣4️⃣-systemdienste-für-enumeration--missbrauch)
+15. [Haftungsausschluss](#1️⃣5️⃣-️-Haftungsausschluss)
 
 ---
 
@@ -201,6 +202,19 @@
 
 ---
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+## 1️⃣5️⃣ ⚠️ Haftungsausschluss
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+--- 
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** Juli 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 

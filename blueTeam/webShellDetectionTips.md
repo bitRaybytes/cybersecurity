@@ -1,0 +1,97 @@
+# 🛡️ Web Shell Detection Tips
+
+**Ziel dieser Datei:**  
+Diese Datei dient Blue Teamern und IT-Sicherheitsverantwortlichen zur schnellen Orientierung 
+bei der Erkennung und Abwehr von Webshells auf kompromittierten Systemen. Webshells ermöglichen 
+Angreifern oft den Fernzugriff auf Server – und sind daher eine kritische Bedrohung.
+
+---
+
+## 🧩 Typische Auffälligkeiten
+
+Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet werden:
+
+### 🔍 Verdächtige Dateinamen / Uploads
+
+- Dateien mit doppelter Erweiterung:  
+  `cmdshell.php.jpg`, `backdoor.php%00.jpg`, `web.php5`
+- Unerwartete Erweiterungen wie:  
+  `.phtml`, `.php4`, `.php5`, `.pht`, `.inc`, `.phar`
+- Dateinamen mit `cmd`, `shell`, `eval`, `upload`, `backdoor`
+
+### 🔥 Verdächtiger Code innerhalb von Dateien
+
+- Verwendung gefährlicher PHP-Funktionen:
+  - `eval()`, `system()`, `shell_exec()`, `passthru()`, `exec()`
+  - `base64_decode()`, `gzinflate()`, `str_rot13()`, `assert()`
+- Obfuskierter Code (z. B. Base64 oder Hex verschlüsselt)
+- Dynamisch generierte Funktionennamen:  
+  z. B. `($func = 'sys'.'tem')($cmd);`
+
+### 📈 Log-/Verhaltensauffälligkeiten
+
+- GET-Parameter mit Shell-Befehlen (z. B. `?cmd=ls`)
+- Unerwartete POST- oder GET-Anfragen auf verdächtige Dateien
+- Anfragen mit `curl`, `wget`, `whoami`, `id`, `cat /etc/passwd` in den Parametern
+
+---
+
+## 🛠️ Tools & Techniken zur Erkennung
+
+### 🔬 Dateibasierte Analyse
+
+- 🔍 **YARA Rules**
+  - Erkennung von typischen Shell-Mustern im Quelltext
+  - Beispiel: Regel für `eval(base64_decode(...))`
+- 📦 **Antivirus-/EDR-Signaturen**
+  - Viele AV-Produkte erkennen bekannte Webshell-Signaturen
+- 🧪 **Regex-Suche**
+  - Suchen nach `eval\(base64_decode\(`, `assert\(` etc.
+- 📁 **Diff-Tools**
+  - Änderungen in Web-Verzeichnissen erkennen (z. B. mit `inotify`, `ossec`)
+
+### 🖥️ Laufzeitanalyse & Logüberwachung
+
+- 🔍 **Log-Analyse**
+  - Webserver-Logs auf ungewöhnliche Requests überwachen
+  - z. B. Apache/Nginx Logs mit `cmd=`, `eval`, `.php.jpg`
+- 🛡️ **WAF (Web Application Firewall)**
+  - Nutze ModSecurity-Regeln zur Blockierung verdächtiger Parameter
+- 📊 **SIEM-Systeme**
+  - Automatisierte Alarmierung bei verdächtigen Zugriffsmustern
+
+---
+
+## 🔐 Best Practices zur Härtung
+
+### 1. Uploads & Ausführung trennen
+- Ladeverzeichnis (z. B. `/uploads`) darf keine `.php`-Dateien ausführen
+- Webserver-Config: `php_admin_flag engine off` für Upload-Pfade
+
+### 2. Whitelisting statt Blacklisting
+- Nur bestimmte Dateitypen zulassen (`.jpg`, `.png`, `.pdf`)
+
+### 3. Input validieren & filtern
+- Keine Dateiumbenennungen oder Erweiterungen auf Serverseite übernehmen
+- MIME-Type-Prüfung, Magic-Bytes-Check
+
+### 4. Rechte & Isolation
+- Webserver unter Low-Privilege-User laufen lassen (z. B. `www-data`)
+- Dateiberechtigungen restriktiv setzen (z. B. 640)
+
+### 5. Monitoring & Alerting
+- Dateisystemmonitoring (z. B. `tripwire`, `ossec`)
+- Logs rotieren, zentralisieren und auswerten (z. B. mit `logwatch`, `ELK`)
+
+---
+
+## 📚 Weitere Ressourcen
+
+- [OWASP Web Shell Detection](https://owasp.org/www-community/attacks/Web_Shell)
+- [YARA Rule Database (GitHub)](https://github.com/Yara-Rules/rules)
+- [MITRE ATT&CK - T1505.003: Web Shell](https://attack.mitre.org/techniques/T1505/003/)
+
+---
+
+> ⚠️ **Hinweis:** Diese Datei ist Teil des Blue Team-Bereichs des Repositories und dient ausschließlich zur Verteidigung und Früherkennung von Angriffen – nicht zur Durchführung selbiger.
+
