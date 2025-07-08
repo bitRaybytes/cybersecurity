@@ -1,0 +1,55 @@
+# structure.yaml
+# Übersicht über den Aufbau des Cybersecurity-Repositories
+
+root:
+  - README.md                                 # Hauptübersicht und Einstiegspunkt
+  - LICENSE                                   # Lizenz (z. B. MIT)
+  - .gitignore                                # Git-Ignore-Datei
+  - CybersecurityLinks.md                     # Link-Sammlung (wird erweitert)
+  - structure.yaml                            # Diese Strukturdatei zur Dokumentation
+  - cheatsheet/                               
+      - burpSuite_shortcuts.md
+      - linux_basics.md
+      - pentest_basics.md
+      - nmap_basics.md
+      - wireshark_shortcuts.md
+  - sqlInjection/                             
+      - BreakAndFixQuery.txt                  
+      - SQLInjectionToShellSolution.txt       
+      - UnionBasedAttack.txt                  
+      - cmdshellAndHowToUse/                  
+          - bypassExtensionRestrictions.txt   
+          - cmdshell-commands.txt             
+          - cmdshell.php3                     
+  - kurse/                                  
+      - cybersecurityLinks.md
+
+# Struktur für weitere Inhalte
+sections:
+  - tools/
+      - burpSuite.md
+      - nmap.md
+      - metasploit.md
+  - webSecurity/
+      - xss.md
+      - csrf.md
+      - commandInjection.md
+  - blueTeam/
+      - log_analysis.md
+      - siem_basics.md
+      - detection_rules.md
+  - redTeam/
+      - enumeration.md
+      - privilege_escalation.md
+      - post_exploitation.md
+  - literatur/
+      - buecher.md               # Fachliteratur (Print & E-Books)
+      - blogs.md                 # Empfohlene Blogs / Newsletter
+  - tutorials/
+      - own_labs.md              # Eigene Übungslabore (Anleitungen)
+      - vm_setup.md              # Virtuelle Maschinen vorbereiten
+      - vpn_hackthebox.md        # Beispiel: HTB VPN konfigurieren
+
+meta:
+  - changelog.md                 # (optional) Änderungsverlauf
+
