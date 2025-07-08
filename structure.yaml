@@ -7,27 +7,27 @@ root:
   - .gitignore                                # Git-Ignore-Datei
   - CybersecurityLinks.md                     # Link-Sammlung (wird erweitert)
   - structure.yaml                            # Diese Strukturdatei zur Dokumentation
-  - cheatsheet/                               
+  - cheatsheet/                               # Order für Cheat Sheets
       - burpSuite_shortcuts.md
       - linux_basics.md
       - pentest_basics.md
       - nmap_basics.md
-      - wireshark_shortcuts.md
-  - sqlInjection/                             
+  - sqlInjection/                             # Thema: SQL Injection
       - BreakAndFixQuery.txt                  
       - SQLInjectionToShellSolution.txt       
       - UnionBasedAttack.txt                  
-      - cmdshellAndHowToUse/                  
+      - cmdshellAndHowToUse/                  # Weitere Textdateien für SQL Injections
           - bypassExtensionRestrictions.txt   
           - cmdshell-commands.txt             
           - cmdshell.php3                     
   - kurse/                                  
       - cybersecurityLinks.md
 
-# Struktur für weitere Inhalte
+# Vorgeschlagene Struktur für weitere Inhalte
 sections:
   - tools/
       - burpSuite.md
+      - wireshark.md
       - nmap.md
       - metasploit.md
   - webSecurity/
