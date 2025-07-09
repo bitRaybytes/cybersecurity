@@ -60,3 +60,114 @@ sections:
 meta:
   - changelog.md                 # (optional) Änderungsverlauf
 
+
+Cybersecurity-Hub/
+│
+├── 00-Disclaimer/
+│   └── legal-notice.md              # Hinweis: Nur zu Trainingszwecken, keine Illegalität!
+│
+├── 01-Basics-Intro/
+│   ├── cybersec-overview.md
+│   ├── daily-practice.md
+│   ├── recommended-books.md
+│   └── certifications.md            # OSCP, CEH, Security+, etc.
+│
+├── 02-Network-Security/
+│   ├── tcp-ip-basics.md
+│   ├── port-scanning.md
+│   ├── firewall-bypass.md
+│   ├── sniffing-spoofing.md
+│   └── tools/
+│       ├── nmap.md
+│       ├── wireshark.md
+│       └── tcpdump.md
+│
+├── 03-Web-Security/
+│   ├── sql-injection.md
+│   ├── xss.md
+│   ├── lfi-rfi.md
+│   ├── ssti.md
+│   ├── csrf.md
+│   ├── file-upload.md
+│   ├── php-shells/
+│   │   ├── phpWebShellUsage.md
+│   │   ├── phpFilenameBypass.md
+│   │   └── cmdExamplesFromShell.md
+│   ├── break-fix/
+│   │   └── breakAndFixQuery.md
+│   └── tools/
+│       ├── burpSuite.md
+│       ├── ffuf.md
+│       └── dirbuster.md
+│
+├── 04-OS-Enumeration/
+│   ├── linux-enum.md
+│   ├── windows-enum.md
+│   ├── linux-privesc.md
+│   ├── windows-privesc.md
+│   ├── postExploitationTools.md
+│   └── recon-commands.md
+│
+├── 05-Red-Teaming/
+│   ├── attack-lifecycle.md
+│   ├── payloads.md
+│   ├── obfuscation-techniques.md
+│   └── tools/
+│       ├── metasploit.md
+│       ├── veil.md
+│       └── msfvenom.md
+│
+├── 06-Blue-Teaming/
+│   ├── detection-strategies.md
+│   ├── log-analysis.md
+│   ├── SIEM-basics.md
+│   └── hardening-checklists/
+│       ├── windows-hardening.md
+│       └── linux-hardening.md
+│
+├── 07-Crypto-Stego/
+│   ├── encoding-vs-encryption.md
+│   ├── crypto-attacks.md
+│   ├── stegano-tools.md
+│   └── cyberchef-tricks.md
+│
+├── 08-Social-Engineering/
+│   ├── phishing.md
+│   ├── payload-delivery.md
+│   ├── awareness-training.md
+│   └── tools/
+│       ├── gophish.md
+│       └── setoolkit.md
+│
+├── 09-Tools-Cheatsheets/
+│   ├── linux-terminal.md
+│   ├── powershell-cheatsheet.md
+│   ├── hashcat.md
+│   ├── john.md
+│   ├── hydra.md
+│   ├── smbclient.md
+│   ├── impacket.md
+│   └── others.md
+│
+├── 10-Practice-Labs/
+│   ├── tryhackme/
+│   │   └── room-writeups/
+│   ├── hackthebox/
+│   │   └── machine-writeups/
+│   ├── vulnhub/
+│   └── custom-labs/
+│
+├── 11-Exploitation-Scripts/
+│   ├── reverse-shells/
+│   ├── upload-bypasses/
+│   ├── sqli-automation/
+│   └── fuzzing/
+│
+├── 12-CheatSheets-QuickRefs/
+│   ├── linux-privesc.md
+│   ├── windows-privesc.md
+│   ├── web-attacks.md
+│   ├── recon.md
+│   └── enum-checklist.md
+│
+└── README.md
