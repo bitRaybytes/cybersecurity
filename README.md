@@ -66,7 +66,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 - Metasploit & Empire
 - Passwort-Cracking & Netzwerküberwachung
 - Cheat Sheets zu Befehlen, Payloads, Tools
-- [weitere Cheat Sheets hier](/cheatsheets/)
+- [weitere Cheat Sheets hier](/12-cheatsheets-quickrefs/cheatsheets/)
 
 ---
 
