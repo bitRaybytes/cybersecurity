@@ -2,75 +2,15 @@
 # Übersicht über den Aufbau des Cybersecurity-Repositories
 
 root:
-  - README.md                                 # Hauptübersicht und Einstiegspunkt
-  - LICENSE                                   # Lizenz (z. B. MIT)
-  - .gitignore                                # Git-Ignore-Datei
-  - CybersecurityLinks.md                     # Link-Sammlung (wird erweitert)
-  - structure.yaml                            # Diese Strukturdatei zur Dokumentation
-  - cheatsheet/                               # Order für Cheat Sheets
-      - burpSuite_shortcuts.md
-      - linux_basics.md
-      - pentest_basics.md
-      - nmap_basics.md
-      - wireshark_shortcuts.md
-  - sqlInjection/                             # Thema: SQL Injection
-      - BreakAndFixQuery.md                  
-      - BreakAndFixQuery.txt                  
-      - SQLInjectionToShell.md       
-      - SQLInjectionToShellSolution.txt       
-      - UnionBasedAttack.md                  
-      - UnionBasedAttack.txt                  
-      - cmdshellAndHowToUse/                  # Weitere Textdateien für SQL Injections
-          - bypassExtensionRestrictions.txt   
-          - cmdshell-commands.txt             
-          - cmdshell.php3                     
-  - kurse/                                  
-      - cybersecurityLinks.md
-  - tools/
-      - blueTeamTools.md
-      - redTeamTools.md
-
-# Vorgeschlagene Struktur für weitere Inhalte
-sections:
-  - tools/
-      - burpSuite.md
-      - wireshark.md
-      - nmap.md
-      - metasploit.md
-  - webSecurity/
-      - xss.md
-      - csrf.md
-      - commandInjection.md
-  - blueTeam/
-      - log_analysis.md
-      - siem_basics.md
-      - detection_rules.md
-  - redTeam/
-      - enumeration.md
-      - privilege_escalation.md
-      - post_exploitation.md
-  - literatur/
-      - buecher.md               # Fachliteratur (Print & E-Books)
-      - blogs.md                 # Empfohlene Blogs / Newsletter
-  - tutorials/
-      - own_labs.md              # Eigene Übungslabore (Anleitungen)
-      - vm_setup.md              # Virtuelle Maschinen vorbereiten
-      - vpn_hackthebox.md        # Beispiel: HTB VPN konfigurieren
-
-meta:
-  - changelog.md                 # (optional) Änderungsverlauf
-
-
 Cybersecurity-Hub/
 │
 ├── 00-Disclaimer/
-│   └── legal-notice.md              # Hinweis: Nur zu Trainingszwecken, keine Illegalität!
+│   └── disclaimer.md                # Hinweis: Nur zu Trainingszwecken, keine Illegalität!
 │
 ├── 01-Basics-Intro/
 │   ├── cybersec-overview.md
-│   ├── daily-practice.md
 │   ├── recommended-books.md
-│   └── certifications.md            # OSCP, CEH, Security+, etc.
+│   └── certifications.md            # (kommt noch) OSCP, CEH, Security+, etc.
 │
 ├── 02-Network-Security/
 │   ├── tcp-ip-basics.md
@@ -158,16 +98,32 @@ Cybersecurity-Hub/
 │   └── custom-labs/
 │
 ├── 11-Exploitation-Scripts/
-│   ├── reverse-shells/
-│   ├── upload-bypasses/
-│   ├── sqli-automation/
-│   └── fuzzing/
+│   ├── reverse-shells/                 #
+│   ├── upload-bypasses/                #
+│   ├── sqli-automation/                #
+│   └── fuzzing/                        #
 │
 ├── 12-CheatSheets-QuickRefs/
-│   ├── linux-privesc.md
-│   ├── windows-privesc.md
-│   ├── web-attacks.md
-│   ├── recon.md
-│   └── enum-checklist.md
+│   ├── linux-privesc.md                   #
+│   ├── windows-privesc.md                 #
+│   ├── web-attacks.md                     #
+│   ├── recon.md                           #
+│   └── enum-checklist.md                  #
 │
-└── README.md
+├── 13-kurse/
+│   ├── cybersecurityLinks.md
+│
+├── 14-vulnerabilities/
+│   ├── sqlInjection/
+│   │   └── postExploitationTools.md
+│   │   └── UnionBasedAttack.md
+│   ├── payloadCraftingTips.md 
+│   ├── windows-privesc.md              #
+│   ├── web-attacks.md                  #
+│   ├── recon.md                        #
+│   └── enum-checklist.md               #
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── structur.yaml
