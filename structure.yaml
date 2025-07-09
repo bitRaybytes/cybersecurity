@@ -41,10 +41,8 @@ Cybersecurity-Hub/
 │       └── dirbuster.md
 │
 ├── 04-OS-Enumeration/
-│   ├── linux-enum.md
-│   ├── windows-enum.md
-│   ├── linux-privesc.md
-│   ├── windows-privesc.md
+│   ├── linuxPrivilegeEscalation.md
+│   ├── windowsPrivilegeEscalation.md
 │   ├── postExploitationTools.md
 │   └── recon-commands.md
 │
@@ -98,30 +96,28 @@ Cybersecurity-Hub/
 │   └── custom-labs/
 │
 ├── 11-Exploitation-Scripts/
-│   ├── reverse-shells/                 #
-│   ├── upload-bypasses/                #
-│   ├── sqli-automation/                #
-│   └── fuzzing/                        #
+│   ├── reverse-shells/ 
+│   ├── upload-bypasses/ 
+│   ├── sqli-automation/
+│   └── fuzzing/
 │
 ├── 12-CheatSheets-QuickRefs/
-│   ├── linux-privesc.md                   #
-│   ├── windows-privesc.md                 #
-│   ├── web-attacks.md                     #
-│   ├── recon.md                           #
-│   └── enum-checklist.md                  #
+│   ├── linuxPrivilegeEscalation.md
+│   ├── windowsPrivilegeEscalation.md
+│   ├── web-attacks.md
+│   ├── recon.md 
+│   └── enum-checklist.md 
 │
 ├── 13-kurse/
 │   ├── cybersecurityLinks.md
 │
 ├── 14-vulnerabilities/
 │   ├── sqlInjection/
-│   │   └── postExploitationTools.md
 │   │   └── UnionBasedAttack.md
 │   ├── payloadCraftingTips.md 
-│   ├── windows-privesc.md              #
-│   ├── web-attacks.md                  #
-│   ├── recon.md                        #
-│   └── enum-checklist.md               #
+│   ├── web-attacks.md
+│   └── enum-checklist.md
+│
 ├── .gitignore
 ├── CONTRIBUTING.md
 ├── LICENSE
