@@ -70,15 +70,15 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 ---
 
-## 🗂️ Dateiübersicht (wird laufend erweitert)
+## 🗂️ Dateiübersicht Auszug (wird laufend erweitert)
 
 ```bash
 📦 cybersecurity-hub/
-├── blueteam_tools.md
-├── pentest_tools.md
+├── blueTeamTools.md
+├── redTeamTools.md
 ├── sqlInjectionToShell.md
 ├── UnionBasedAttack.md
-├── wireshark_cheatsheet.md
+├── phishing.md
 ├── README.md 
 ```
 
