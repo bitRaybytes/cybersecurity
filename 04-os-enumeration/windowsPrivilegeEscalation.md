@@ -136,4 +136,3 @@ Diese Datei dient **nur zu Schulungszwecken**. Sie soll helfen, Schwachstellen i
 
 * [GTFOBins Windows Pendant: LOLBAS](https://lolbas-project.github.io/)
 * [Windows-Privilege-Escalation-Cheat-Sheet](https://github.com/netbiosX/Checklists)
-* [PayloadsAllTheThings - Windows Privilege Escalation](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation)

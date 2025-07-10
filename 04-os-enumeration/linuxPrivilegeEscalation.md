@@ -106,7 +106,6 @@ uname -r
 
 * [https://www.exploit-db.com/](https://www.exploit-db.com/)
 * [https://github.com/lucyoa/kernel-exploits](https://github.com/lucyoa/kernel-exploits)
-* [https://github.com/shellcodes/PayloadsAllTheThings](https://github.com/shellcodes/PayloadsAllTheThings)
 
 > **Wichtig:** Nicht jeder Exploit funktioniert auf jeder Version. Führe sie in isolierter Umgebung aus (VM).
 
