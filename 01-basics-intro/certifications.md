@@ -106,11 +106,10 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ## 📚 Weiterführende Ressourcen
 
-- Roadmap.sh/cyber-security – Interaktive Übersicht aller Themenfelder
-- r/netsecstudents – Austauschplattform für Lernende
-- HackTricks – Exploit-Cheatsheets für Red/Blue
-- Malware Unicorn Labs – Reverse Engineering Training
-- GitHub: awesome-cybersecurity-certifications – Zertifikats-Sammlung
+- [Roadmap.sh/cyber-security – Interaktive Übersicht aller Themenfelder](https://roadmap.sh/cyber-security)
+- [r/cybersecurity – Austauschplattform](https://www.reddit.com/r/cybersecurity/)
+- [HackTricks – Exploit-Cheatsheets für Red/Blue](https://book.hacktricks.wiki/en/index.html)
+- [Malware Unicorn Labs – Reverse Engineering Training](https://malwareunicorn.org/workshops/re101.html#0)
 
 ---
 
