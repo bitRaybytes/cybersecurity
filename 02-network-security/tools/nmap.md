@@ -11,6 +11,9 @@
 ```bash
 sudo apt update && sudo apt install nmap
 ```
+
+***Hinweis:*** Unter Kali ist `nmap` bereits vorinstalliert.
+
 **macOS (Homebrew):**
 ```bash
 brew install nmap
@@ -24,11 +27,14 @@ brew install nmap
 
 | Befehl                 | Beschreibung                           |
 | ---------------------- | -------------------------------------- |
+| `nmap -h`              | Help Seite von `nmap`                  |
+| `nmap -V`              | Version und Infos über `nmap`          |
 | `nmap <IP>`            | Standardscan der Ziel-IP               |
 | `nmap <IP1> <IP2>`     | Scan mehrerer Ziele                    |
 | `nmap 192.168.0.1-50`  | IP-Range scannen                       |
 | `nmap -iL targets.txt` | Scan aus Liste von IPs                 |
 | `nmap -v <Ziel>`       | Verbose-Modus (detailliertere Ausgabe) |
+| `nmap -vv <Ziel>`      | detailliertere Ausgabe als `-v`        |
 | `nmap -n <Ziel>`       | Kein DNS-Lookup (schneller)            |
 
 ---
@@ -119,6 +125,7 @@ brew install nmap
 
 - 🔗 [NMAP Manpage](https://nmap.org/book/man.html)
 - 🌐 [NMAP Offizielle Webseite](https://nmap.org/)
+- [YouTube: NMAP Full Guide, Hacker Joe](https://www.youtube.com/watch?v=JHAMj2vN2oU)
 
 ---
 
