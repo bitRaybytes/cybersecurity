@@ -3,6 +3,9 @@
 Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools, Techniken, Notizen und Cheat Sheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.  
 Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen.
 
+
+> **Hinweis:** Bitte [.github-Dateien](/.github/.gitignore) beachten.
+
 ---
 
 ## Inhaltsverzeichnis:
