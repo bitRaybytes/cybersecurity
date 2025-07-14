@@ -128,3 +128,4 @@ Stay curious – stay secure. 🔐
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
+
