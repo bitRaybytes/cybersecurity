@@ -1,18 +1,19 @@
-# 🤝 Beitrag leisten – Contributing Guide
+# Beitrag zur CyberSecurity-Repo
 
-Willkommen und danke, dass du zu diesem Cybersecurity-Projekt beitragen möchtest!  
-Ob du einen Rechtschreibfehler korrigierst, neue Cheatsheets schreibst oder spannende Tools verlinkst – **jede Hilfe ist willkommen**.  
-Bitte lies dir die folgenden Richtlinien durch, bevor du loslegst.
+Danke für dein Interesse!
 
----
+## Workflow
 
-## 🧭 Inhaltsverzeichnis
+1. Forke das Repository
+2. Erstelle einen Branch mit deinem Feature (`feature/neues-tool`)
+3. Stelle sicher, dass dein Code getestet ist
+4. Eröffne einen Pull Request auf `main`
 
-1. [Wie du beitragen kannst](#-wie-du-beitragen-kannst)
-2. [Struktur & Konventionen](#-struktur--konventionen)
-3. [Pull Requests](#-pull-requests)
-4. [Code of Conduct](#-code-of-conduct)
-5. [Lizenzhinweis](#-lizenzhinweis)
+## Code-Richtlinien
+
+- Kein Push direkt auf `main`
+- Nutze sprechende Commits (`feat:`, `fix:`, `docs:`)
+- PR-Titel sollen kurz und verständlich sein
 
 ---
 
