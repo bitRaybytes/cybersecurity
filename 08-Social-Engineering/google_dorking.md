@@ -8,14 +8,14 @@ Diese Datei liefert dir ein umfassendes Verständnis von **Google Dorking** als 
 
 ## 🧭 Inhaltsverzeichnis
 
-1. Was ist Google Dorking?
-2. Zusammenhang mit der Reconnaissance-Phase
-3. Nützliche Dorking-Operatoren
-4. Beispiele für gezielte Dorks
-5. Reverse Engineering durch Dorking
-6. Tools zur Unterstützung
-7. Rechtlicher Hinweis
-8. Weiterführende Ressourcen
+1. [Was ist Google Dorking?](#1--was-ist-google-dorking)
+2. [Zusammenhang mit der Reconnaissance-Phase](#2--zusammenhang-mit-der-reconnaissance-phase)
+3. [Nützliche Dorking-Operatoren](#3--nützliche-google-operatoren)
+4. [Beispiele für gezielte Dorks](#4--beispiele-für-gezielte-dorks)
+5. [Reverse Engineering durch Dorking](#5--reverse-engineering-durch-google-dorking)
+6. [Tools zur Unterstützung](#6--tools-zur-unterstützung)
+7. [Rechtlicher Hinweis](#7-️-rechtlicher-hinweis)
+8. [Weiterführende Ressourcen](#8--weiterführende-ressourcen)
 
 ---
 

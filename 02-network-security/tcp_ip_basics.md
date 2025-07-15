@@ -66,6 +66,7 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 - Klasse B: `172.16.0.0/12`
 - Klasse C: `192.168.0.0/16`
 
+> [Mehr zum Thema IP-Adressen findest du hier](/02-network-security/ip_adressen_basics.md)
 ---
 
 ## 🧮 CIDR (Classless Inter-Domain Routing)
