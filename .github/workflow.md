@@ -7,9 +7,9 @@
 gpg --list-secret-keys --keyid-format=long
 
 # Git-Konfiguration (einmalig oder global)
-git config --global user.name "Ray"
-git config --global user.email "gueray.cataltepe@epppuls.com"
-git config --global user.signingkey 42378199F80E754C
+git config --global user.name "dein Username"
+git config --global user.email "deine@email.com"
+git config --global user.signingkey ABCDEFGHIJKL1234
 git config --global commit.gpgsign true
 ```
 
