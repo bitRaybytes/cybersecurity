@@ -56,7 +56,7 @@ git push origin feature/neues-ui-design
 
 ## ✅ 6. Code reviewen und mergen
 
-- Code wird einmal reviewt und dann in der Main Branch übertragen.
+- Code wird einmal reviewt und dann in den Main Branch übertragen.
 
 ---
 
