@@ -79,7 +79,7 @@ http://<IP-Adresse>
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
-> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/cybersercurity/03-web-security/sql_injection_to_shell.md)
+> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/cybersercurity/03-web-security/sql-injection/sql-injection-cheatsheet.md)
 
 
 ---
