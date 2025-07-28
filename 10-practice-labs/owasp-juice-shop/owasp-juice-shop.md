@@ -57,7 +57,7 @@ Eine ausführliche Installationsanleitung erhältst du im [OWASP Juice Shop Comp
 ```bash
 docker ps
 ```
-Hier sollten `juice-shop` auftauchen. Und vielleicht andere Container, die du am Laufen hast.
+Hier sollte `juice-shop` auftauchen. Und vielleicht andere Container, die du am Laufen hast.
 
 ### 3.4 Juice Shop im Webbrowser öffnen
 
