@@ -29,7 +29,7 @@ In der IT-Sicherheit 🛡️ und DevOps ⚙️ wird Docker oft genutzt, um Testu
 
 ---
 
-## 🛠️ Docker auf Kali Linux installieren
+## 🛠️ Docker auf Kali Linux installieren (Debian basiert)
 
 ### 1️⃣ System aktualisieren
 
@@ -37,19 +37,22 @@ In der IT-Sicherheit 🛡️ und DevOps ⚙️ wird Docker oft genutzt, um Testu
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 2️⃣ Benötigte Abhängigkeiten installieren
+### 2️⃣ Benötigte Abhängigkeiten installieren 
+(optional)
 
 ```bash
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
 ```
 
-### 3️⃣ Docker GPG-Schlüssel hinzufügen
+### 3️⃣ Docker GPG-Schlüssel hinzufügen 
+(optional, wenn 2 installiert wurde)
 
 ```bash
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-### 4️⃣ Docker Repository einrichten
+### 4️⃣ Docker Repository einrichten 
+(optional)
 
 ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nulldocker
@@ -69,6 +72,17 @@ sudo apt-get install -y docker.io
 
 🖼️ ![Docker installieren](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step4installDocker.png)
 
+#### weitere nützliche Docker Add-Ons (optional)
+
+- Docker Compose
+    - Docker Compose ist ein Tool für das Definieren von mehreren Container-Umgebungen, die gleichzeitig laufen und untereinander verlinkt sein können.
+    - Nützlich, wenn man einzelne Porgramme in Containern starten will. 
+
+So installierst du Docker Compose:
+
+```bash
+sudo apt install docker-compose
+```
 
 ### 6️⃣ Docker testen 🧪
 

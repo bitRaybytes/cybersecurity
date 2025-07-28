@@ -12,6 +12,8 @@
 
 ## 🐳 1. Docker mit DVWA starten
 
+**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/cybersercurity/09-tools-cheatsheet/docker-infos.md). 
+
 Wir arbeiten mit Docker, um DVWA in einer sicherer Umgebung zu testen.
 Für die Applikation wählen wir den Port 80. Sollte dieser nicht funktioniere, probiere 8080
 
