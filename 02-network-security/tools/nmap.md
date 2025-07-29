@@ -47,6 +47,7 @@ brew install nmap
 | `nmap --top-ports 100 <Ziel>` | Die 100 häufigsten Ports    |
 | `nmap -F <Ziel>`              | Fast Scan (Standardports)   |
 
+Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techniques.html).
 ---
 
 ## 🕵️‍♂️ Service & OS-Erkennung
