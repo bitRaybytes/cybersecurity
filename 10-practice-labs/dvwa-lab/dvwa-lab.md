@@ -20,7 +20,7 @@ Folgende Schritte zeigen dir, wie du DVWA über Docker auf Kali Linux installier
 sudo apt update -y
 ```
 
-![Schritt 1: Update Kali Linux](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step1UpdateKali.png)
+![Schritt 1: Update Kali Linux](/cybersercurity/10-practice-labs/ressources/pictures/step1UpdateKali.png)
 
 ### 🔧 Schritt 2: Kali Linux upgraden
 
@@ -30,7 +30,7 @@ Anschließend führst du das Upgrade durch:
 sudo apt upgrade -y
 ```
 
-![Schritt 2: Upgrade Kali Linux](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step2UpgradeKali.png)
+![Schritt 2: Upgrade Kali Linux](/cybersercurity/10-practice-labs/ressources/pictures/step2UpgradeKali.png)
 
 💡 **Tipp:** Das `-y` steht für "yes" – es bestätigt alle Rückfragen automatisch.
 
@@ -48,7 +48,7 @@ Hier die Kurzfassung:
 4. Docker installieren 🐳
 5. Testlauf mit `hello-world` 🔄
 
-![Schritt 3: Abhängigkeiten installieren](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step3installDependencies.png)
+![Schritt 3: Abhängigkeiten installieren](/cybersercurity/10-practice-labs/ressources/pictures/step3installDependencies.png)
 
 ### 🔥 Schritt 4: DVWA starten
 
@@ -75,7 +75,7 @@ Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die ents
 http://<IP-Adresse>
 ```
 
-![DVWA starten](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step3installDependencies.png)
+![DVWA starten](/cybersercurity/10-practice-labs/ressources/pictures/step3installDependencies.png)
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
