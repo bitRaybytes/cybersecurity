@@ -110,9 +110,9 @@ Stay curious – stay secure. 🔐
 
 ## 📁 Siehe auch
 
-- [sqlInjectionToShell.md](/vulnerabilities/sqlInjection/SQLInjectionToShell.md)
-- [breakAndFixQuery.md](/vulnerabilities/sqlInjection/BreakAndFixQuery.md)
-- [UnionBasedAttack.md](/vulnerabilities/sqlInjection/UnionBasedAttack.md)
-- [postExploitationTools.md](/vulnerabilities/postExploitationTools.md)
+- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
+- [break_and_fix_query.md](/03-web-security/break-fix/break_and_fix_query.md)
+- [union_based_attack.md](/14-vulnerabilities/sqlInjection/union_based_attack.md)
+- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
 
 
