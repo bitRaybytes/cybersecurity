@@ -70,7 +70,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 sudo apt-get install -y docker.io
 ```
 
-🖼️ ![Docker installieren](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step4installDocker.png)
+🖼️ ![Docker installieren](/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step4installDocker.png)
 
 #### weitere nützliche Docker Add-Ons (optional)
 
@@ -90,7 +90,7 @@ sudo apt install docker-compose
 sudo docker run hello-world
 ```
 
-🖼️ ![Docker Installation testen](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step5dockerTest.png)
+🖼️ ![Docker Installation testen](/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step5dockerTest.png)
 
 ### 🔓 Optional: Docker ohne sudo verwenden
 
@@ -149,7 +149,7 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
-[Disclaimer](/cybersercurity/00-disclaimer/disclaimer.md)
+[Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
