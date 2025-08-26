@@ -118,7 +118,7 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
-[Disclaimer](/cybersercurity/00-disclaimer/disclaimer.md)
+[Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
