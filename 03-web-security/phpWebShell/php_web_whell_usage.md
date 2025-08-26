@@ -126,7 +126,7 @@ Stay curious – stay secure. 🔐
 
 ## 📚 Siehe auch:
 
-- [phpWebShellBypassTricks.md](/vulnerabilities/sqlInjection/phpWebShell/phpWebShellBypassTricks.md)
-- [postExploitationTools.md](/vulnerabilities/sqlInjection/postExploitationTools.md)
-- [cmdExamplesFromShell.md](/vulnerabilities/sqlInjection/cmdExamplesFromShell.md)
-- [phpRCE_CheatSheet.md](/vulnerabilities/sqlInjection/phpWebShell/phpRCE_CheatSheet.md)
+- [php_web_shell_bypass_tricks.md](/03-web-security/phpWebShell/php_web_shell_bypass_tricks.md)
+- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
+- [cmd_examples_from_shell.md](/03-web-security/phpWebShell/cmd_examples_from_shell.md)
+- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
