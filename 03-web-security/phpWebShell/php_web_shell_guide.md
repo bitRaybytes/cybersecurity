@@ -104,6 +104,6 @@ Stay curious – stay secure. 🔐
 ---
 
 ## 🔗 Siehe auch
-- [phpRCE_CheatSheet.md](/vulnerabilities/sqlInjection/cmdshellAndHowToUse/phpRCE_CheatSheet.md)
-- [sqlInjectionToShell.md](/vulnerabilities/sqlInjection/SQLInjectionToShell.md)
-- [postExploitationTools.md](/vulnerabilities/postExploitationTools.md)
+- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
+- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
+- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
