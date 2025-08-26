@@ -139,7 +139,7 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 - [hackertarget.com](https://hackertarget.com/)
 - [osintframework.com](https://drive.google.com/drive/home)
 - [attack.mitre.org](https://attack.mitre.org/)
-- [redteam-tools.md](05-red-teaming/redTeamTools.md)
+- [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
 --- 
 
