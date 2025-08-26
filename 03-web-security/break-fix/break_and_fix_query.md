@@ -72,8 +72,8 @@ Beispiel mit Kommentar-Fix:
 
 ## 🧪 Nützlich in Kombination mit
 
-- [sqlInjectionToShell.md](/sqlInjection/SQLInjectionToShell.md) → zeigt komplette Angriffskette
-- [UnionBasedAttack.md](/sqlInjection/UnionBasedAttack.md) → enthält Datenextraktion über UNION SELECT
+- [sqlInjectionToShell.md](03-web-security/sql-injection/sql_injection_to_shell.md) → zeigt komplette Angriffskette
+- [UnionBasedAttack.md](14-vulnerabilities/sqlInjection/union_based_attack.md) → enthält Datenextraktion über UNION SELECT
 - [Tools](/tools/) wie: Burp Suite, SQLMap, ZAP Proxy
 
 ---
