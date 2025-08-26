@@ -173,6 +173,7 @@ Erste Iteration, direkter Erfolg! Das ist Glück. In der Praxis sollte das natü
 Finden wir mit dem `Order By`-Befehl heraus, wie viele Entitätstypen im SQL-Befehl abgefragt werden.
 
 **Was sagt uns das?**
+
 *Kurzer Exkurs zu Datenbank*
 
 Eine Datenbank in SQL ist folgendermaßen aufgebaut:
@@ -212,6 +213,7 @@ SELECT Name, E-Mail, Passwort FROM User WHERE user.name LIKE "Adm%" ORDER BY use
 Der Befehl sagt: WÄHLE Name, E-Mail und Passwort (Entitätstypen) VON User (Datenbanktabelle), WO der Name vom User WIE "Adm%" ist und sortiere mir die Datensätze in aufsteigender Reihenfolge (ASC = Ascending). Gegenteil wäre DESC (Descending)
 
 *Exkurs ENDE*
+
 In einer SQL-Injection kann uns `Order By` helfen, herauszufinden, wie viele Spalten die Datenbankabfrage im Backend hat.
 Mit dieser SQL-Injection erhalten wir die Anzahl, der in der SQL-Abfrage hinterlegten Entitätstypen (Spalten).
 
