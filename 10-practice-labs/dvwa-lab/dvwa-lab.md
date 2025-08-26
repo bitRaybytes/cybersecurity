@@ -20,7 +20,7 @@ Folgende Schritte zeigen dir, wie du DVWA über Docker auf Kali Linux installier
 sudo apt update -y
 ```
 
-![Schritt 1: Update Kali Linux](/cybersercurity/10-practice-labs/ressources/pictures/step1UpdateKali.png)
+![Schritt 1: Update Kali Linux](/10-practice-labs/ressources/pictures/step1UpdateKali.png)
 
 ### 🔧 Schritt 2: Kali Linux upgraden
 
@@ -30,7 +30,7 @@ Anschließend führst du das Upgrade durch:
 sudo apt upgrade -y
 ```
 
-![Schritt 2: Upgrade Kali Linux](/cybersercurity/10-practice-labs/ressources/pictures/step2UpgradeKali.png)
+![Schritt 2: Upgrade Kali Linux](/10-practice-labs/ressources/pictures/step2UpgradeKali.png)
 
 💡 **Tipp:** Das `-y` steht für "yes" – es bestätigt alle Rückfragen automatisch.
 
@@ -38,7 +38,7 @@ sudo apt upgrade -y
 
 ### 🐳 Schritt 3: Docker installieren
 
-Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/cybersercurity/09-tools-cheatsheet/docker-infos.md).
+Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/09-tools-cheatsheet/docker-infos.md).
 
 Hier die Kurzfassung:
 
@@ -48,7 +48,7 @@ Hier die Kurzfassung:
 4. Docker installieren 🐳
 5. Testlauf mit `hello-world` 🔄
 
-![Schritt 3: Abhängigkeiten installieren](/cybersercurity/10-practice-labs/ressources/pictures/step3installDependencies.png)
+![Schritt 3: Abhängigkeiten installieren](/10-practice-labs/ressources/pictures/step3installDependencies.png)
 
 ### 🔥 Schritt 4: DVWA starten
 
@@ -75,11 +75,11 @@ Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die ents
 http://<IP-Adresse>
 ```
 
-![DVWA starten](/cybersercurity/10-practice-labs/ressources/pictures/step3installDependencies.png)
+![DVWA starten](/10-practice-labs/ressources/pictures/step3installDependencies.png)
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
-> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/cybersercurity/03-web-security/sql-injection/sql-injection-cheatsheet.md)
+> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/03-web-security/sql-injection/sql-injection-cheatsheet.md)
 
 
 ---
@@ -113,7 +113,7 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
-[Disclaimer](/cybersercurity/00-disclaimer/disclaimer.md)
+[Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
