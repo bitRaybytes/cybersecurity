@@ -172,9 +172,9 @@ powershell -EncodedCommand $encoded
 ---
 
 ## 📁 Verknüpfte Dateien im Repository
-- [windowsPrivlegeEscalation.md](/04-os-enumeration/windowsPrivilegeEscalation.md)
-- [linuxPrivlegeEscalation.md](/04-os-enumeration/linuxPrivilegeEscalation.md)
-- [redTeamTools.md](/05-red-teaming/redTeamTools.md)
+- [windows_privilege_escalation.md](/04-os-enumeration/windows_privilege_escalation.md)
+- [linux_privilege_escalation.md](/04-os-enumeration/linux_privilege_escalation.md)
+- [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
 ---
 
