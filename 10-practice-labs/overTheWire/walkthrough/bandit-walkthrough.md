@@ -802,9 +802,6 @@ Wenn du nämlich eine `ssh`-Verbindung aufbaust, wirst du nach dem Passwort gefr
 
 Das liegt daran, dass die `.bashrc` des Userse `bandit18` modifiziert wurde und jedes mal, wenn dieser User sich über eine `ssh`-Verbindung einloggen möchte, wird er wieder ausgeloggt.
 
-
-Bei dem Versuch dich einzuloggen, wirst du wie gewohnt nach dem Passwort des Levels gefragt. Gibst du das Passwort ein, wird die die Nachricht `Byebye !` angezeigt.
-
 ![Bandit19 Login-Versuch mit SSH und Passwort](/cybersercurity/10-practice-labs/ressources/pictures/otw-19.png)
 
 ![Bandit19 byebye](/cybersercurity/10-practice-labs/ressources/pictures/otw-19b.png)
