@@ -108,6 +108,6 @@ Stay curious – stay secure. 🔐
 
 ## 📚 Siehe auch:
 
-- [phpWebShellUsage.md](/vulnerabilities/sqlInjection/SQLInjectionToShell.md)
-- [phpRCE_CheatSheet.md](/vulnerabilities/sqlInjection/cmdshellAndHowToUse/phpRCE_CheatSheet.md)
-- [postExpoitationTools.md](/vulnerabilities/postExploitationTools.md)
+- [php_web_shell_usage.md](/03-web-security/phpWebShell/php_web_whell_usage.md)
+- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
+- [post_expoitation_tools.md](04-os-enumeration/post_exploitation_tools.md)
