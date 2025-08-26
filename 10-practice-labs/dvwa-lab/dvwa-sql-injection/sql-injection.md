@@ -135,6 +135,8 @@ Ein Apostroph `'` ist ein einfacher Payload. In der Syntax beendet ein Apostroph
 
 Dadurch können wir vielleicht einen Fehler erzeugen und herausfinden, welche Syntax-Sprache für diese Art von SQL-Abfrage genutzt wird.
 
+Hier erfährst du mehr über den [Break von SQLi](03-web-security/break-fix/break_and_fix_query.md)
+
 Probieren wir es aus. Schreib ein `'` (Apostroph) in das Eingabefeld und drück auf `Submit`.
 
 Du solltest nun folgenden Fehler erhalten:
