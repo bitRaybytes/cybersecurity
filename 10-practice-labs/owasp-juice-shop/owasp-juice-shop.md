@@ -2,7 +2,7 @@
 
 ## 1. Was ist OWASP Juice Shop
 
-`OWASP Juice Shop` ist eine Webanwendung mit sehr vielen Sicherheitslücken wie es beispielsweise [DVWA](/cybersercurity/10-practice-labs/dvwa-lab/dvwa-lab.md) ist.
+`OWASP Juice Shop` ist eine Webanwendung mit sehr vielen Sicherheitslücken wie es beispielsweise [DVWA](/10-practice-labs/dvwa-lab/dvwa-lab.md) ist.
 
 Das Ziel dieser Anwendung ist es, die [OWASP Top 10](https://owasp.org/www-project-top-ten/) einmal selbst auszunutzen, ohne sich sofort strafbar zu machen. 
 
@@ -21,7 +21,7 @@ sudo apt update && sudo apt upgrade -y
 
 ## 3. Docker mit OWASP Juice Shop starten
 
-**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/cybersercurity/09-tools-cheatsheet/docker-infos.md) (Debian basierte Installation)
+**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/09-tools-cheatsheet/docker-infos.md) (Debian basierte Installation)
 
 Wir arbeiten mit Docker, um `OWASP Juice Shop` in einer sicherer Umgebung zu testen.
 
@@ -95,7 +95,7 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
-[Disclaimer](/cybersercurity/00-disclaimer/disclaimer.md)
+[Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
