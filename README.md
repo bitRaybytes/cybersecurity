@@ -33,11 +33,10 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 | Thema | Beschreibung |
 |-------|--------------|
-| `pentest_tools.md` | Strukturierte Liste gängiger Tools für alle Phasen eines Penetration Tests (Recon bis Reporting) |
-| `blueteam_tools.md` | Sammlung von Tools für Defensive Security, Forensik, Log-Analyse und Incident Response |
-| `sqlInjectionToShell.md` | Vollständiger Ablauf, wie SQLi zur Shell-Übernahme genutzt wird – inkl. Beispiel, Kontext und Cracking |
-| `UnionBasedAttack.md` | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
-| `wireshark_cheatsheet.md` | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
+| [`blue_team_tools.md`](06-blue-teaming/blue_team_tools.md) | Sammlung von Tools für Defensive Security, Forensik, Log-Analyse und Incident Response |
+| [`sql_injection_to_shell.md`](03-web-security/sql-injection/sql_injection_to_shell.md) | Vollständiger Ablauf, wie SQLi zur Shell-Übernahme genutzt wird – inkl. Beispiel, Kontext und Cracking |
+| [`union_based_attack.md`](14-vulnerabilities/sqlInjection/union_based_attack.md) | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
+| [`wireshark_shortcuts.md`](12-cheatsheets-quickrefs/cheatsheets/wireshark_shortcuts.md) | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
 
 ---
 
