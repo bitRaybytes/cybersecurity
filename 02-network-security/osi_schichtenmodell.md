@@ -159,6 +159,101 @@ Der Datenfluss im OSI-Modell folgt dem Prinzip der **Kapselung (Encapsulation)**
 - **Kapselung (Sender):** Jede Schicht fügt den Daten, die sie von der oberen Schicht empfängt, einen Header (und ggf. Trailer) hinzu und übergibt die neue Daten-Einheit an die darunterliegende Schicht.
 - **Entkapselung (Empfänger):** Der Empfänger entfernt in umgekehrter Reihenfolge die Header jeder Schicht, bis die ursprünglichen Anwendungsdaten übrig bleiben.
 
+### 📥 Kapselung (Sender)
+
+Die Daten werden von oben nach unten durch die Schichten geleitet. Jede Schicht fügt den Daten einen eigenen Header (H) hinzu, bis die Bits zur Übertragung bereit sind.
+
+```text
+       7. Anwendungsschicht
+              |
+              V
++----------+------------+
+|  H7      |    Daten   |
++----------+------------+
+              |
+              V
++----------+----------------+
+|  H6      |    H7 + Daten  |
++----------+----------------+
+              |
+              V
++----------+--------------------+
+|  H5      |    H6 + H7 + Daten |
++----------+--------------------+
+              |
+              V
++----------+-------------------------+
+|  H4      |    H5 + H6 + H7 + Daten |
++----------+-------------------------+
+              |
+              V
++----------+------------------------------+
+|  H3      |    H4 + H5 + H6 + H7 + Daten |
++----------+------------------------------+
+              |
+              V
++----------+-----------------------------------+----------+
+|  H2      |    H3 + H4 + H5 + H6 + H7 + Daten |    T2    |
++----------+-----------------------------------+----------+
+              |
+              V
++----------+-----------------------------------------+
+|  H1      |    H2 + H3 + H4 + H5 + H6 + H7 + Daten  |
++----------+-----------------------------------------+
+              |
+              V
+              B I T S
+```              
+
+**Anmerkung:** Schicht 2 (Data Link) fügt zusätzlich zum Header (H2) auch einen Trailer (T2) hinzu.
+
+### 📤 Entkapselung (Empfänger)
+
+Am Empfänger werden die Bits wieder in die ursprüngliche Form zurückverwandelt, indem die Header von unten nach oben Schicht für Schicht entfernt werden.
+
+```text
+              B I T S
+              ^
+              |
++----------+-----------------------------------------+
+|  H1      |    H2 + H3 + H4 + H5 + H6 + H7 + Daten  |
++----------+-----------------------------------------+
+              ^
+              |
++----------+-----------------------------------+----------+
+|  H2      |    H3 + H4 + H5 + H6 + H7 + Daten |    T2    |  <-- T2 wird entfernt
++----------+-----------------------------------+----------+
+              ^
+              |
++----------+------------------------------+
+|  H3      |    H4 + H5 + H6 + H7 + Daten |
++----------+------------------------------+
+              ^
+              |
++----------+--------------------------+
+|  H4      |    H5 + H6 + H7 + Daten  |
++----------+--------------------------+
+              ^
+              |
++----------+--------------------+
+|  H5      |    H6 + H7 + Daten |
++----------+--------------------+
+              ^
+              |
++----------+----------------+
+|  H6      |    H7 + Daten  |
++----------+----------------+
+              ^
+              |
++----------+------------+
+|  H7      |    Daten   |
++----------+------------+
+              ^
+              |
+       Anwendungsschicht
+       (ursprüngliche Daten)
+```
+
 ---
 
 ## 💡 Das TCP/IP-Modell
