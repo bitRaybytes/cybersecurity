@@ -87,7 +87,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 +--------------------------------------------------------------+
 | Acknowledgment Number (4 B)                                  |
 +--------------------------------------------------------------+
-| Data Offset | Res. | Flags  | Window Size    (16 b)          |  => Data Offste 4b; Reserviert 6b; Flags 6b;
+| Data Offset | Res. | Flags  | Window Size    (16 b)          |  => Data Offset 4b; Reserviert 6b; Flags 6b;
 +--------------------------------------------------------------+
 | Checksum (2 B)              | Urgent Pointer                 |
 +-----------------------------+--------------------------------+
