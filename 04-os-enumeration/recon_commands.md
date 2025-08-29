@@ -137,7 +137,7 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 - [nmap.org](https://nmap.org/)
 - [github.com/OWASP/Amass](https://github.com/owasp-amass/amass)
 - [hackertarget.com](https://hackertarget.com/)
-- [osintframework.com](https://drive.google.com/drive/home)
+- [osintframework.com](https://osintframework.com/)
 - [attack.mitre.org](https://attack.mitre.org/)
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
