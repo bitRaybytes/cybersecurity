@@ -75,7 +75,7 @@ Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die ents
 http://<IP-Adresse>
 ```
 
-![DVWA starten](/10-practice-labs/ressources/pictures/step3installDependencies.png)
+![DVWA starten](10-practice-labs/ressources/pictures/step4installDocker.png)
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
