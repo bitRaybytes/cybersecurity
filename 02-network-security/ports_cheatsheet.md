@@ -110,9 +110,9 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ## Nützliche Links
 - [firewall_cheatsheet.md](02-network-security/firewall_cheatsheet.md) - Einführung in Firwalls
-- [tcp_ip_basics.md](02-network-security/tcp_ip_basics.md) - Einführung in TCP/IP
-- [osi_schichtenmodell.md](02-network-security/osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
-- [ip_adressen_basics.md](02-network-security/ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
+- [tcp_ip_basics.md](tcp_ip_basics.md) - Einführung in TCP/IP
+- [osi_schichtenmodell.md](osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
+- [ip_adressen_basics.md](ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
 
 ---
 
