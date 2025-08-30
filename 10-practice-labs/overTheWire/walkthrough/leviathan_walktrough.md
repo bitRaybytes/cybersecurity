@@ -55,9 +55,9 @@ Damit haben wir nun Zugriff auf die Daten des Users und können uns auf die Such
 Gib folgende Befehle ein, um das Passwort für das nächste Level zu erhalten:
 
 ```bash
-ll    # listet alle Dateien und Verzeichnisse im aktuellen Verzeichnis, in dem sich der User befindet
-cd .backup/    # cd wechselt in das Verzeichnis
-ll    # listet die Dateien und Verzeichnisse im .backup/-Verzeichnis
+ll           # listet alle Dateien und Verzeichnisse im aktuellen Verzeichnis, in dem sich der User befindet
+cd .backup/  # cd wechselt in das Verzeichnis
+ll           # listet die Dateien und Verzeichnisse im .backup/-Verzeichnis
 cat bookmarks.html | grep passw
 ```
 
