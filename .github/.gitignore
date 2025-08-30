@@ -1,0 +1,112 @@
+# System- & Editor-Dateien
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# Python 
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+
+# Node.js 
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# IDE & Editor Ordner
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+
+# Sicherheit / Secrets
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.der
+*.asc
+*.gpg
+.secret
+.env
+.env.*
+
+# OSINT / Labs / Dumps
+*.pcap
+*.pcapng
+*.dump
+*.log
+*.sqlite
+*.db
+*.db3
+*.bak
+*.old
+
+# VM & Container-Dateien
+*.vdi
+*.vbox
+*.vbox-prev
+*.ova
+*.ovf
+*.qcow2
+*.vmdk
+*.vmx
+*.iso
+*.img
+*.qcow
+*.raw
+*.tar
+*.gz
+*.tgz
+
+# Archive (z. B. große Payload-Sammlungen)
+*.zip
+*.rar
+*.7z
+
+# Office / Reports (nur lokale Arbeitsversionen)
+*.docx
+*.xlsx
+*.pptx
+*.odt
+*.ods
+*.odp
+
+# Backup & temporäre Files
+*~
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Binary/Executable Files (generisch)
+*.exe
+*.dll
+*.so
+*.o
+*.a
+*.out
+*.bin
+*.class
+*.jar
+
+# Tools & Pentest-Artefakte
+loot/
+output/
+results/
+reports/
+scans/
