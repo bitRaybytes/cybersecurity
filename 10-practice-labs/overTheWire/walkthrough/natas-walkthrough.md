@@ -618,10 +618,6 @@ URL:        http://natas11.natas.labs.overthewire.org
     <summary>Lösung</summary>
 
 
-
-
-![Natas4 Password](/10-practice-labs/ressources/pictures/natas)
-
 </details>
 
 ---
