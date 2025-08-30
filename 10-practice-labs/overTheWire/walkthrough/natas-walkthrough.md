@@ -2,6 +2,23 @@
 
 > **ACHTUNG: SPOILER GEFAHR**
 
+## Inhaltsverzeichnis
+
+- [Einleitung](#einleitung)
+- [Natas 0 Zugang](#natas-0-zugang)
+- [Natas 0 -> 1](#natas-0--1)
+- [Natas 1 -> 2](#natas-1--2)
+- [Natas 2 -> 3](#natas-2--3)
+- [natas 3 -> 4](#natas-3--4)
+- [natas 4 -> 5](#natas-4--5)
+- [natas 5 -> 6](#natas-5--6)
+- [natas 6 -> 7](#natas-6--7)
+- [natas 7 -> 8](#natas-7--8)
+- [natas 8 -> 9](#natas-8--9)
+- [natas 9 -> 10](#natas-9--10)
+- [natas 10 -> 11](#natas-10--11)
+
+
 ## Einleitung
 
 Einleitung zum Wargame Natas (OverTheWire)
@@ -51,6 +68,8 @@ Finde das Passwort für das nächste Level `natas1`.
 
 ---
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
 ## Natas 0 ➝ 1
 
 Username:   natas1
@@ -70,6 +89,8 @@ In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 1 ➝ 2
 
@@ -112,6 +133,8 @@ Klick auf die Datei, um das Passwort zu erhalten.
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 2 ➝ 3
 
@@ -159,6 +182,8 @@ Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für d
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 3 ➝ 4
 
@@ -242,6 +267,10 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 
 ---
 
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+
 ## Natas 4 ➝ 5
 
 Username:   natas5
@@ -276,6 +305,8 @@ Und siehe da, wir erhalten das Passwort im Terminal.
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 5 ➝ 6
 
@@ -320,6 +351,8 @@ Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, soll
 
 ---
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
 ## Natas 6 ➝ 7
 
 Username:   natas7
@@ -363,6 +396,8 @@ http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 7 ➝ 8
 
@@ -448,6 +483,8 @@ Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Ein
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 8 ➝ 9
 
@@ -549,6 +586,8 @@ Damit solltest du das Passwort für die nächste Challenge erhalten.
 
 ---
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
 ## Natas 9 ➝ 10
 
 Username:   natas10
@@ -603,6 +642,8 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## Natas 10 ➝ 11
 

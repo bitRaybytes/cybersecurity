@@ -5,32 +5,42 @@
 ## Inhaltsverzeichnis
 
 - [Einleitung](#einleitung)
-- [Tipss zu Beginn](#tipps-zu-beginn)
-- [Bandit 0 ➝ Zugang zur Challenge](#badnit-0-zugang-zur-challenge)
-- [Bandit 0 ➝ 1](#bandit-0--1)
-- [Bandit 1 ➝ 2](#bandit-1--2)
-- [Bandit 2 ➝ 3](#level-2--3)
-- [Bandit 3 ➝ 4](#level-3--4)
-- [Bandit 4 ➝ 5](#level-4--5)
-- [Bandit 5 ➝ 6](#level-5--6)
-- [Bandit 6 ➝ 7](#level-6--7)
-- [Bandit 7 ➝ 8](#level-7--8)
-- [Bandit 8 ➝ 9](#level-8--9)
-- [Bandit 9 ➝ 10](#level-9--10)
-- [Bandit 10 ➝ 11](#level-10--11)
-- [Bandit 11 ➝ 12](#level-11--12)
-- [Bandit 12 ➝ 13](#level-12--13)
-- [Bandit 13 ➝ 14](#level-13--14)
-- [Bandit 14 ➝ 15](#level-14--15)
-- [Bandit 15 ➝ 16](#level-15--16)
-- [Bandit 16 ➝ 17](#level-16--17)
-- [Bandit 17 ➝ 18](#level-17--18)
-- [Bandit 18 ➝ 19](#level-18--19)
-- [Bandit 19 ➝ 20](#level-19--20)
-- [Bandit 20 ➝ 21](#level-20--21)
-- [Bandit 21 ➝ 22](#level-21--22)
-- [Bandit 22 ➝ 23](#level-22--23)
-- [Bandit 23 ➝ 24](#level-23--24)
+- [Tipps zu Beginn](#tipps-zu-beginn)
+- [Bandit 0 ➝ Zugang zur Challenge](#bandit-0-zugang-zur-challenge)
+- [Bandit 0 ➝ 1](#bandit-0---1)
+- [Bandit 1 ➝ 2](#bandit-1---2)
+- [Bandit 2 ➝ 3](#bandit-2---3)
+- [Bandit 3 ➝ 4](#bandit-3---4)
+- [Bandit 4 ➝ 5](#bandit-4---5)
+- [Bandit 5 ➝ 6](#bandit-5---6)
+- [Bandit 6 ➝ 7](#bandit-6---7)
+- [Bandit 7 ➝ 8](#bandit-7---8)
+- [Bandit 8 ➝ 9](#bandit-8---9)
+- [Bandit 9 ➝ 10](#bandit-9---10)
+- [Bandit 10 ➝ 11](#bandit-10---11)
+- [Bandit 11 ➝ 12](#bandit-11---12)
+- [Bandit 12 ➝ 13](#bandit-12---13)
+- [Bandit 13 ➝ 14](#bandit-13---14)
+- [Bandit 14 ➝ 15](#bandit-14---15)
+- [Bandit 15 ➝ 16](#bandit-15---16)
+- [Bandit 16 ➝ 17](#bandit-16---17)
+- [Bandit 17 ➝ 18](#bandit-17---18)
+- [Bandit 18 ➝ 19](#bandit-18---19)
+- [Bandit 19 ➝ 20](#bandit-19---20)
+- [Bandit 20 ➝ 21](#bandit-20---21)
+- [Bandit 21 ➝ 22](#bandit-21---22)
+- [Bandit 22 ➝ 23](#bandit-22---23)
+- [Bandit 23 ➝ 24](#bandit-23---24)
+- [Bandit 24 ➝ 25](#bandit-24---25)
+- [Bandit 25 ➝ 26](#bandit-25---26)
+- [Bandit 26 ➝ 27](#bandit-26---27)
+- [Bandit 27 ➝ 28](#bandit-27---28)
+- [Bandit 28 ➝ 29](#bandit-28---29)
+- [Bandit 29 ➝ 30](#bandit-29---30)
+- [Bandit 30 ➝ 31](#bandit-30---31)
+- [Bandit 31 ➝ 32](#bandit-31---32)
+- [Bandit 32 ➝ 33](#bandit-32---33)
+- [Bandit 33 ➝ 34](#bandit-33---34)
 
 ## Einleitung
 
@@ -88,7 +98,9 @@ Für jedes weitere Programm ersetzt du das Wort `cat` mit der entsprechenden Bez
 
 ---
 
-## Badnit 0 Zugang zur Challenge:
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 0 Zugang zur Challenge:
 **Aufgabe:** Logge dich mit `bandit0` ein und beginne die Challenges
 <details>
   <summary>Bandit 0 Zugang zur Challenge</summary>
@@ -127,7 +139,9 @@ In den meisten Bandit-Level ist es nötig, mit dem Befehl `exit` die SSH-Verbind
 
 ---
 
-## Bandit 0 ➝ 1
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 0 -> 1
 
 **Aufgabe:** Finde das Passwort in der Datei `readme`.
 <details>
@@ -165,7 +179,9 @@ echo "lvl1 passwort: {Passwort hier rein}" > ~/Documents/bandits/1
 
 ---
 
-## Bandit 1 ➝ 2
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 1 -> 2
 
 **Aufgabe:** Das Password findest du in der Datei mit der Bezeichnung: `-` im Home-Verzeichnnis.
 <details>
@@ -190,7 +206,9 @@ Logge dich anschließend wieder aus (`exit`).
 
 ---
 
-## Level 2 ➝ 3
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 2 -> 3
 
 **Aufgabe:** Datei heißt `--spaces in this filename--`
 <details>
@@ -224,7 +242,9 @@ Speichere das Passwort und beende die Shell.
 
 ---
 
-## Level 3 ➝ 4
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 3 -> 4
 
 **Aufgabe:** Versteckte Datei im Verzeichnis `inhere` finden.
 <details>
@@ -252,7 +272,9 @@ cat ./... Hiding-From-You
 
 ---
 
-## Level 4 ➝ 5
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 4 -> 5
 
 **Aufgabe:** Finde die Datei mit `human-readable` Inhalt im Verzeichnis `inhere`.
 <details>
@@ -298,7 +320,9 @@ Speicher das Passwort und beende die Shell, um fortzufahren.
 
 ---
 
-## Level 5 ➝ 6
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 5 -> 6
 
 **Aufgabe:** Finde die Datei mit diesen Bedingungen:
 <details>
@@ -337,7 +361,9 @@ cat ./inhere/maybehere07/.file2
 
 ---
 
-## Level 6 ➝ 7
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 6 -> 7
 
 **Aufgabe:** Datei gehört Benutzer `bandit7` und Gruppe `bandit6`, Größe 33 Bytes
 <details>
@@ -359,7 +385,9 @@ cat /var/lib/dpkg/info/bandit7.password
 
 ---
 
-## Level 7 ➝ 8
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 7 -> 8
 
 **Aufgabe:** Datei mit Passwort enthält das Wort "millionth"
 <details>
@@ -380,7 +408,9 @@ cat data.txt | grep millionth
 
 ---
 
-## Level 8 ➝ 9
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 8 -> 9
 
 **Aufgabe:** Passwort ist die einzige Zeile, die **einmal** vorkommt
 <details>
@@ -403,7 +433,9 @@ cat data.txt | sort data.txt | uniq -u
 
 ---
 
-## Level 9 ➝ 10
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 9 -> 10
 
 **Aufgabe:** Passwort ist in einer Datei als Hexdump gespeichert.
 <details>
@@ -432,7 +464,9 @@ xxd -r data.txt | strings
 
 ---
 
-## Level 10 ➝ 11
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 10 -> 11
 
 **Aufgabe:** Datei wurde base64-kodiert
 <details>
@@ -454,7 +488,9 @@ cat data.txt | base64 -d
 
 ---
 
-## Level 11 ➝ 12
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 11 -> 12
 
 **Aufgabe:** Der Inhalt der Datei wurde verschlüsselt. 
 <details>
@@ -481,8 +517,12 @@ Nach dem Entschlüsseln erhalten wir folgendes Passwort:
 
 </details>
 
+---
 
-## Level 12 ➝ 13
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+
+## Bandit 12 -> 13
 
 **Aufgabe:** Passwort wurde mehrfach mit verschiedenen Kompressionen komprimiert
 <details>
@@ -572,7 +612,9 @@ Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
 
 ---
 
-## Bandit 13 ➝ 14
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 13 -> 14
 
 **Aufgabe:** Das Passwort ist in einem Datei, welche nur vom User `bandit14` betrachtet werden kann. Es gibt jedoch einen privaten SSH-Key, der genutzt werden kann.
 <details>
@@ -601,7 +643,9 @@ Sobald du die `SSH`-Verbindung initiiert hast, wirst du gefragt, ob du sicher bi
 
 ---
 
-## Bandit 14 ➝ 15
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 14 -> 15
 
 **Aufgabe:** Das Passwort gibt es über einen initiierten `netcat`-Service auf Port `30000`.
 <details>
@@ -649,7 +693,9 @@ Und solange die SSH-Verbindung des Users `bandit14` existiert, exisitiert die SS
 
 --- 
 
-## Bandit 15 ➝ 16
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 15 -> 16
 
 **Aufgabe:** Das Passwort für das nächste Level kann wieder über den `netcat`-Service erhalten werden.
 <details>
@@ -671,7 +717,9 @@ ncat --ssl localhost 30001      # Mit ncat Service verbinden und SSL Verslüssel
 
 ---
 
-## Bandit 16 ➝ 17
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 16 -> 17
 
 **Aufgabe:** Die Zugangsdaten des nächsten Levels erhältst du, wenn du den richtigen Server anwählst.
 <details>
@@ -728,7 +776,9 @@ Markiere und kopiere den privaten Key, den du erhalten hast. Erstelle eine neue 
 
 ---
 
-## Bandit 17 ➝ 18
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 17 -> 18
 
 **Aufgabe:** Es gibt zwei Dateien im `/home`-Verzeichnis. 1. `password.old` und `password.new`. Das Passwort für das nächste Level ist in `password.new`. Differenz zwischen beiden Dateien?
 <details>
@@ -790,7 +840,9 @@ diff -d passwords.new passwords.old
 
 ---
 
-## Bandit 18 ➝ 19
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 18 -> 19
 
 **Aufgabe:** Das Passwort ist in einer Datei im `home`-Verzeichnis. 
 <details>
@@ -841,7 +893,9 @@ Kopiere und speicher das Passwort für die nächste Challenge.
 
 ---
 
-## Bandit 19 ➝ 20
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 19 -> 20
 
 **Aufgabe:** Um das Passwort herauszufinden, muss du die `setuid binary` im `home`-Verzeichnis nutzen.
 <details>
@@ -864,7 +918,9 @@ Das kannst du verwenden, um beispielsweise das Passsword des Users auszuspähen 
 
 ---
 
-## Bandit 20 ➝ 21
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 20 -> 21
 
 **Aufgabe:** Du findest eine `setuid binary` in deinem `home`-Verzeichnis. Diese Datei stellt eine Verbindung zu deinem `localhost` an einem bestimmten `<Port>` her.
 <details>
@@ -937,7 +993,9 @@ Anschließend kannst du beide Terminals mit `exit` beenden und die nächste Chal
 
 ---
 
-## Bandit 21 ➝ 22
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 21 -> 22
 
 **Aufgabe:** Ein Programm läuft automatisch zu regulären Intervallen aus `cron`. Schau in `/etc/cron.d/` vorbei.
 <details>
@@ -965,7 +1023,9 @@ Kopiere und speichere das Passwort für die nächste Challenge.
 
 ---
 
-## Bandit 22 ➝ 23
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 22 -> 23
 
 **Aufgabe:** Ein Programm führt sich zu regulären Intervallen aus. Schau in `/etc/cron.d/` vorbei.
 <details>
@@ -1031,7 +1091,9 @@ Kopiere und speichere das Password für die nächste Challenge.
 
 ---
 
-## Bandit 23 ➝ 24
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 23 -> 24
 
 **Aufgabe:**
 
@@ -1105,7 +1167,9 @@ Du solltest jetzt das Passwort erhalten und kannst mit der nächsten Challenge f
 
 ---
 
-## Bandit 24 ➝ 25
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 24 -> 25
 
 **Aufgabe:** Ein `daemon` belauscht auf Port `30002`und gibt dir das richtige Passwort, nach der Eingabe des aktuellen Passwort und der richtigen Kombination einer vierstelligen Zahl.
 
@@ -1162,7 +1226,9 @@ Nun solltest du das Passwort für `bandit25` erhalten haben und kannst mit der n
 
 ---
 
-## Bandit 25 ➝ 26
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 25 -> 26
 
 **Aufgabe:** Logge dich mit `bandit26` über die Shell von `bandit25` an. Beachte, dass die Shell von `bandit26` nicht `/bin/bash` ist.
 
@@ -1274,7 +1340,9 @@ Bleib gleich eingeloggt und mach in dem Terminal von `bandit26` weiter, aber spe
 
 ---
 
-## Bandit 26 ➝ 27
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 26 -> 27
 
 **Aufgabe:** Finde das Passwort von `bandit27`
 
@@ -1307,7 +1375,9 @@ Anschließend wirst du das Passwort für `bandit27` erhalten. Speichere es und n
 
 ---
 
-## Bandit 27 ➝ 28
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 27 -> 28
 
 **Aufgabe:** Git Repository klonen und das Passwort finden.
 
@@ -1336,7 +1406,9 @@ Du solltest nun dein Passwort für `bandit28` erhalten haben. Speichere es und n
 
 ---
 
-## Bandit 28 ➝ 29
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 28 -> 29
 
 **Aufgabe:** Git Repository klonen und das Passwort finden.
 
@@ -1369,7 +1441,9 @@ git show
 
 ---
 
-## Bandit 29 ➝ 30
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 29 -> 30
 
 **Aufgabe:** Git Repository klonen und das Passwort finden.
 
@@ -1405,7 +1479,9 @@ Du solltest nun das Passwort erhalten und kannst mit der nächsten Challange for
 
 ---
 
-## Bandit 30 ➝ 31
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 30 -> 31
 
 **Aufgabe:** Git Repository klonen und das Passwort finden.
 
@@ -1461,7 +1537,9 @@ Jetzt solltest du das Passwort für die nächste Challenge ausgegeben bekommen.
 
 ---
 
-## Bandit 31 ➝ 32
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 31 -> 32
 
 **Aufgabe:** Git Repository klonen und das Passwort finden.
 
@@ -1524,7 +1602,9 @@ Anschließend solltest du dein Passwort erhalten und kannst mit dem nächsten Le
 
 ---
 
-## Bandit 32 ➝ 33
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 32 -> 33
 
 **Aufgabe:** Finde das Passwort in der UPPERCASE-Shell.
 
@@ -1555,7 +1635,9 @@ Du solltest nun das Passwort für `bandit33` erhalten und kannst mit der letzten
 
 ---
 
-## Bandit 33 ➝ 34
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+## Bandit 33 -> 34
 
 **Aufgabe:** Es gibt aktuell kein Level 34.
 
@@ -1570,6 +1652,8 @@ Aktuell gibt es kein weiteres Level mehr. Die Entwickler sind jedoch bemüht, we
 </details>
 
 ---
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 ## ⚠️ Haftungsausschluss
 
@@ -1586,7 +1670,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
