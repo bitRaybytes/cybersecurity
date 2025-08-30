@@ -12,7 +12,9 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 - **Quelladresse / Quellport** -> z. B. IP-Adressen oder Netzwerkbereiche  
 - **Zieladresse / Zielport** -> z. B. Server, Dienste oder Ports (80/443 für HTTP/HTTPS)  
 - **Protokoll** -> TCP, UDP, ICMP usw.  
-- **Richtung** -> eingehend (Inbound) oder ausgehend (Outbound)  
+- **Richtung** -> eingehend (Inbound) oder ausgehend (Outbound)
+- **Whitelist** -> Nur bekannte Geräte sind berechtigt
+- **Blacklist** -> Alles in der Liste wird geblockt
 
 👉 **Best Practice:**  
 - **Default Deny** (alles verbieten, nur explizit erlaubtes zulassen)  
@@ -43,7 +45,7 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
   - Nutzt eine **Connection Table** (Status-Tabelle) mit Zuständen wie `ESTABLISHED`, `NEW`, `RELATED`  
   - Erlaubt Rückantworten nur zu legitimen Verbindungen (z. B. TCP-Handshake)  
 - ✅ Vorteile:  
-  - Bessere Sicherheit als reine Paketfilter  
+  - Bessere Sicherheit als reine Paketfilter, Schutz vor SYN-Flooding  
   - Erkennt gefälschte / unautorisierte Pakete  
 - ❌ Nachteile:  
   - Kein inhaltliches Verständnis (kein Schutz auf Layer 7)  
