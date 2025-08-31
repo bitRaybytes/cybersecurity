@@ -40,13 +40,20 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ## ⚠️ Bedingungen für CSRF
 
-- Der Nutzer ist bereits authentifiziert
+- Der Nutzer ist bereits authentifiziert (eingeloggt)
 - Session Cookie wird automatisch gesendet
 - Die Zielseite hat keine Schutzmechanismen
 
-## 📌 Besonders gefährdet sind:
+### Schritte zum CSRF
+1. **Authentifizierung:** Das Opfer meldet sich auf einer legitimen Webseite an und erhält einen Sitzungscode, welcher seine Sitzung authentifiziert.
+2. **Böswillige Anfrage:** Angreifer erstellt eine Anfrage an die legitime Webseite, die eine vom Angreifer gewünschte Aktion durchführt (Banküberweisung, Passwort ändern usw.)
+3. **Ausführung:** Wenn Opfer auf böswillige Webseite kommt oder manipulierten Link aus eMail anklickt, während er noch auf der legitimen Webseite angemeldet ist, fügt der Browser automatisch den Sitzungscookie in die Anfrage ein und täuscht eine legitime Anfrage des Opfers vor.
+4. **Angriff:** Die legitime Webseite verarbeitet die Anfrage und führt sie aus, das sie offenbar von einem legitimen Nutzer stammt.
 
---- 
+
+----
+
+## 📌 Besonders gefährdet sind:
 
 - Admin-Panels
 - Formular-basierte Aktionen (Passwort ändern, Konto löschen, E-Mail ändern)
