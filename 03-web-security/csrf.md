@@ -144,6 +144,14 @@ Kein `GET` für sensible Änderungen
 
 ---
 
+## 📚 Weiterführende Links
+
+- [OWASP CSRF Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
+- [PortSwigger CSRF Labs](https://portswigger.net/web-security/csrf)
+- [Mozilla MDN – SameSite Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)
+
+---
+
 ## ⚠️ Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -161,9 +169,3 @@ Stay curious – stay secure. 🔐
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-## 📚 Weiterführende Links
-
-- [OWASP CSRF Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
-- [PortSwigger CSRF Labs](https://portswigger.net/web-security/csrf)
-- [Mozilla MDN – SameSite Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)

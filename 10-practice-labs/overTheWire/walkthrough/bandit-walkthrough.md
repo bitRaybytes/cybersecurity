@@ -98,7 +98,13 @@ Für jedes weitere Programm ersetzt du das Wort `cat` mit der entsprechenden Bez
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 0 Zugang zur Challenge:
 **Aufgabe:** Logge dich mit `bandit0` ein und beginne die Challenges
@@ -139,7 +145,13 @@ In den meisten Bandit-Level ist es nötig, mit dem Befehl `exit` die SSH-Verbind
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 0 -> 1
 
@@ -179,7 +191,13 @@ echo "lvl1 passwort: {Passwort hier rein}" > ~/Documents/bandits/1
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 1 -> 2
 
@@ -206,7 +224,13 @@ Logge dich anschließend wieder aus (`exit`).
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 2 -> 3
 
@@ -242,7 +266,13 @@ Speichere das Passwort und beende die Shell.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 3 -> 4
 
@@ -272,7 +302,13 @@ cat ./... Hiding-From-You
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 4 -> 5
 
@@ -320,7 +356,13 @@ Speicher das Passwort und beende die Shell, um fortzufahren.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 5 -> 6
 
@@ -361,7 +403,13 @@ cat ./inhere/maybehere07/.file2
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 6 -> 7
 
@@ -385,7 +433,13 @@ cat /var/lib/dpkg/info/bandit7.password
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 7 -> 8
 
@@ -408,7 +462,13 @@ cat data.txt | grep millionth
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 8 -> 9
 
@@ -433,7 +493,13 @@ cat data.txt | sort data.txt | uniq -u
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 9 -> 10
 
@@ -464,7 +530,13 @@ xxd -r data.txt | strings
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 10 -> 11
 
@@ -488,7 +560,13 @@ cat data.txt | base64 -d
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 11 -> 12
 
@@ -519,7 +597,13 @@ Nach dem Entschlüsseln erhalten wir folgendes Passwort:
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 ## Bandit 12 -> 13
@@ -612,7 +696,13 @@ Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 13 -> 14
 
@@ -643,7 +733,13 @@ Sobald du die `SSH`-Verbindung initiiert hast, wirst du gefragt, ob du sicher bi
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 14 -> 15
 
@@ -693,7 +789,13 @@ Und solange die SSH-Verbindung des Users `bandit14` existiert, exisitiert die SS
 
 --- 
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 15 -> 16
 
@@ -717,7 +819,13 @@ ncat --ssl localhost 30001      # Mit ncat Service verbinden und SSL Verslüssel
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 16 -> 17
 
@@ -776,7 +884,13 @@ Markiere und kopiere den privaten Key, den du erhalten hast. Erstelle eine neue 
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 17 -> 18
 
@@ -840,7 +954,13 @@ diff -d passwords.new passwords.old
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 18 -> 19
 
@@ -893,7 +1013,13 @@ Kopiere und speicher das Passwort für die nächste Challenge.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 19 -> 20
 
@@ -918,7 +1044,13 @@ Das kannst du verwenden, um beispielsweise das Passsword des Users auszuspähen 
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 20 -> 21
 
@@ -993,7 +1125,13 @@ Anschließend kannst du beide Terminals mit `exit` beenden und die nächste Chal
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 21 -> 22
 
@@ -1023,7 +1161,13 @@ Kopiere und speichere das Passwort für die nächste Challenge.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 22 -> 23
 
@@ -1091,7 +1235,13 @@ Kopiere und speichere das Password für die nächste Challenge.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 23 -> 24
 
@@ -1167,7 +1317,13 @@ Du solltest jetzt das Passwort erhalten und kannst mit der nächsten Challenge f
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 24 -> 25
 
@@ -1226,7 +1382,13 @@ Nun solltest du das Passwort für `bandit25` erhalten haben und kannst mit der n
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 25 -> 26
 
@@ -1340,7 +1502,13 @@ Bleib gleich eingeloggt und mach in dem Terminal von `bandit26` weiter, aber spe
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 26 -> 27
 
@@ -1375,7 +1543,13 @@ Anschließend wirst du das Passwort für `bandit27` erhalten. Speichere es und n
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 27 -> 28
 
@@ -1406,7 +1580,13 @@ Du solltest nun dein Passwort für `bandit28` erhalten haben. Speichere es und n
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 28 -> 29
 
@@ -1441,7 +1621,13 @@ git show
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 29 -> 30
 
@@ -1479,7 +1665,13 @@ Du solltest nun das Passwort erhalten und kannst mit der nächsten Challange for
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 30 -> 31
 
@@ -1537,7 +1729,13 @@ Jetzt solltest du das Passwort für die nächste Challenge ausgegeben bekommen.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 31 -> 32
 
@@ -1602,7 +1800,13 @@ Anschließend solltest du dein Passwort erhalten und kannst mit dem nächsten Le
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 32 -> 33
 
@@ -1635,7 +1839,13 @@ Du solltest nun das Passwort für `bandit33` erhalten und kannst mit der letzten
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Bandit 33 -> 34
 
@@ -1653,7 +1863,13 @@ Aktuell gibt es kein weiteres Level mehr. Die Entwickler sind jedoch bemüht, we
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## ⚠️ Haftungsausschluss
 

@@ -68,7 +68,13 @@ Finde das Passwort für das nächste Level `natas1`.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 0 ➝ 1
 
@@ -90,7 +96,13 @@ In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 1 ➝ 2
 
@@ -134,7 +146,13 @@ Klick auf die Datei, um das Passwort zu erhalten.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 2 ➝ 3
 
@@ -183,7 +201,13 @@ Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für d
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 3 ➝ 4
 
@@ -268,7 +292,13 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 ---
 
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 ## Natas 4 ➝ 5
@@ -306,7 +336,13 @@ Und siehe da, wir erhalten das Passwort im Terminal.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 5 ➝ 6
 
@@ -351,7 +387,13 @@ Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, soll
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 6 ➝ 7
 
@@ -397,7 +439,13 @@ http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 7 ➝ 8
 
@@ -484,7 +532,13 @@ Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Ein
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 8 ➝ 9
 
@@ -586,7 +640,13 @@ Damit solltest du das Passwort für die nächste Challenge erhalten.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 9 ➝ 10
 
@@ -643,7 +703,13 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 
 ---
 
+
+<div align=right>
+
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 10 ➝ 11
 
