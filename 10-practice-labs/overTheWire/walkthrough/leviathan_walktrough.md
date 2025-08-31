@@ -54,7 +54,7 @@ Gib dazu in deinem Terminal folgenden Befehl ein:
 ssh leviathan0@leviathan.labs.overthewire.org -p 2223
 ```
 
-Nach dem Befehl wirst du gefragt, ob du den Fingerprint bestätigen willst. Tippe `yes` ein, um fortzufahren.
+Nach dem Befehl wirst du gefragt, ob du die Verbindung bestätigen willst. Tippe `yes` ein, um fortzufahren.
 
 ![leviathan1 Zugang](/10-practice-labs/ressources/pictures/leviathan1.png)
 
