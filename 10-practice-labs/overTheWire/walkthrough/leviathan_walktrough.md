@@ -603,6 +603,73 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 <details>
     <summary>Lösung</summary>
 
+### Einleitung
+
+Auch in diesem Level liegt der Fokus auf der Eingabeverarbeitung von Programmen. In einem Verzeichnis findest du das Programm `leviathan5*`. Das `*` zeigt an, dass du es eine ausführbare Datei ist.
+
+Das Programm sucht nach der Datei `/tmp/file.log` im `/tmp/`-Verzeichnis. Wenn du die Datei ausführst, dann erhältst du die Fehlermeldung, dass die Datei im angegeben Pfad nicht gefunden werden konnte.
+
+Es genügt wohl nicht, nur eine Datei anzulegen und diese mit dem Programm auszuführen. Der Befehl `ltrace` gibt uns Aufschluss darüber, welche Befehle und Funktionen das Programm verarbeitet. Vielleicht kannst du dir daraus etwas herleiten, um eine Privilege Escalation hervorzurufen.
+
+Mit dem `ltrace`-Befehl habe ich bspw. erfahren, dass das Programm folgendermaßen funktioniert:
+- `__libc_start_main()` -> Hauptfunkton, um das Programm ausführbar zu machen.
+- `fopen("/tmp/file.log", "r")` -> Öffnet die Datei im Verzeichnis, im `read`-Modus.
+- `fgetc()` -> Das Zeichenweise (vorzeichenlose Zeichen) lesen von Bytes aus einem Eingabestream, der zuvor mit `fopen()` geöffnet wurde. Return dieses Zeichens als `int`
+- `feof()` -> prüft, ob das Ende einer Datei erreicht ist und gibt einen Wert ungleich Null (`true`), wenn Dateiende erreicht (EOF, End-of-File) oder Null (`false`), wenn nicht.
+- `fclose()` -> wird verwendet, um einen zuvor geöffneten Datei-Stream zu schließen (leert gleichzeitig den Puffer).
+- `getuid()` -> POSIX-Aufruf, der reale Benuter-ID des aufrufenden Prozesses zurückgibt. Ermittelt, ob Benutzer Programm ausführen darf.
+- `setuid()` -> Systemaufruf, der Prozessen ermöglicht, die Benutzer-ID (EUID) auf eine andere ID zu setzen (was temporär erhöhte Berechitungen verleiht).
+- `unlink()` -> Funktion, um Dateinamen oder einen Link zu einer Datei zu entfernen.
+
+
+> **Tipp:** Mit `touch` erstellst du eine Datei, ohne sie sofort zu öffnen wie bspw. dem `nano`-Editor.
+
+Die Funktion `unlink()` klingt interessant. 
+
+Was ist, wenn du die Datei `/etc/leviathan_pass/leviathan6` mit dem gesuchten Dateinamen verlinkst? 
+
+### Lösung
+
+Gib im Terminal folgende Befehle ein, um an das Passwort zu kommen:
+
+```bash
+
+ll                  # listet das Verzeichnis aus, in dem du bist (wir starten im Home-Verzeichnis)
+./leviathan5        # startet das Programm normal, ohne die Datei /tmp/file.log => Fehler!
+ltrace ./leviathan5 # Startet das Programm mit dem ltrace Befehl
+touch /tmp/file.log # erstellt die Datei file.log im /tmp/-Verzeichnis
+
+ltrace ./leviathan6 /tmp/file.log   # startet das Programm mit ltrace und der Datei
+# Die Datei wird im Anschluss gelöscht!
+```
+
+![Leviathan6 Programm erkunden](/10-practice-labs/ressources/pictures/leviathan6.png)
+
+Die Datei ist nun gelöscht, doch wir haben eine Menge an Informationen erhalten, die du bereits vorab in der Einleitung erfahren konntest.
+
+Verlinke die Datei `/etc/leviathan_pass/leviathan6` mit der gesuchten File aus dem Programm. Schau im Anschluss nach, ob die Datei verlinkt wurde:
+
+```bash
+ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
+ll /tmp/file.log
+```
+
+![Leviathan6 Passwort-Datei verlinken](/10-practice-labs/ressources/pictures/leviathan6b.png)
+
+![Leviathan6 File auflisten](/10-practice-labs/ressources/pictures/leviathan6c.png)
+
+Die Datei ist erfoglreich verlinkt worden. Probiere die Datei mit dem Programm auszuführen und schau, was passiert.
+
+Gib dazu folgenden Befehl im Termianl ein:
+
+```bash
+./leviathan5 /tmp/file.log
+```
+
+![Leviathan6 Passwort](/10-practice-labs/ressources/pictures/leviathan6d.png)
+
+Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort für `leviathan6`. Du kannst mit `exit` die Verbindung trennen und mit dem nächsten Level weitermachen. 
+
 </details>
 
 ---
@@ -636,13 +703,31 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 
 ## Erkenntnisse
 
+### Allgemeines
 - Mit `file` kann man herausfinden, welche Art/Architektur eine Datei hat.
 - `ll` oder `ls -l` zeigt die Berechtigungen einer Datei an.
 - `ltrace` zeigt, welche Bibliotheksfunktionen aufgerufen werden (z.B. strcmp, fopen).
-- `string` zeigt die Systemaufrufe (Dateizugriffe, execve, etc.). Hilfreich, wenn Datei etwas außerhalb lädt.
+- `strings` zeigt die Systemaufrufe (Dateizugriffe, execve, etc.). Hilfreich, wenn Datei etwas außerhalb lädt.
 - `SETUID`-Bit für die Vererbung der Berechtigung auf Group/Others.
-- `ln` Verlinkungen von Dateien, um Rechte zu umgehen.
+- `ln` Verlinkungen von Dateien, um Rechte zu umgehen (`-h` Hardlink; `-s` Softlink).
 
+### Funktionen aus Sprachen wie PHP, C, C++
+- `__libc_start_main()` -> Hauptfunkton, um das Programm ausführbar zu machen.
+- `access()` -> Prüft, ob Prozess Zugriff auf eine Datei hat und welche Berechtigungen dafür nötig sind.
+- `strcmp()` -> Vergleicht Strings miteinander. Kann auch Eingabewerte erhalten.
+- `fopen()` -> Öffnet eine Datei, "r" für Read, "w" Write, usw., oder bereitet sie vor.
+- `fgetc()` -> Das Zeichenweise (vorzeichenlose Zeichen) lesen von Bytes aus einem Eingabestream, der zuvor mit `fopen()` geöffnet wurde. Return dieses Zeichens als `int`
+- `feof()` -> Prüft, ob das Ende einer Datei erreicht ist und gibt einen Wert ungleich Null (`true`), wenn Dateiende erreicht (EOF, End-of-File) oder Null (`false`), wenn nicht.
+- `fclose()` -> Wird verwendet, um einen zuvor geöffneten Datei-Stream zu schließen (leert gleichzeitig den Puffer).
+- `puts()` -> Ausgabe in die CL
+- `getuid()` -> POSIX-Aufruf, der reale Benuter-ID des aufrufenden Prozesses zurückgibt. Ermittelt, ob Benutzer Programm ausführen darf.
+- `setuid()` -> Systemaufruf, der Prozessen ermöglicht, die Benutzer-ID (EUID) auf eine andere ID zu setzen (was temporär erhöhte Berechitungen verleiht).
+- `unlink()` -> Funktion, um Dateinamen oder einen Link zu einer Datei zu entfernen.
+- `getchar()` -> Liest ein einzelnes Zeichen von der Standardeingabe (typischerweise Tastatur).
+- `snprintf()` -> Gibt die Anzahl der Byte zurück, die in das Array geschrieben werden, ohne das abschließende Nullzeichen (`\0`) zu zählen.
+- `setreuid()` -> Ermöglicht es einem Prozess, seine reale Benutzer-ID (`Real UID`) und seine effektive Benutzer-ID (`Effective UID`) gleichzeitig zu ändern.
+- `system()` -> Ermöglicht, einen Befehl direkt aus einem Programm heraus an das Betriebssystem zu übergeben und dort ausführen zu lassen
+- `atoi()` -> Funktion, die eine Zeichenkette in einen Ganzzahlwert (Integer) umwandelt.
 ---
 
 
