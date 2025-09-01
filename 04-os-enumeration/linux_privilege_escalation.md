@@ -1,12 +1,26 @@
 # Linux Privilege Escalation
 
-## 📁 Kontext & Ziel
+
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [1. System Checks & Enumeration](#1-system-checks--enumeration)
+- [2. SUID-Binaries & Exploits](#2-suid-binaries--exploits)
+- [3. Exploitable Binaries & Schwachstellen](#3-exploitable-binaries--schwachstellen)
+- [4. Kernel Exploits (lokale Ausnutzung)](#4-kernel-exploits-lokale-ausnutzung)
+- [Tools zur Privilege Escalation](#tools-zur-privilege-escalation)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
 
 Diese Datei dient als strukturiertes Cheat Sheet zur Privilege Escalation auf Linux-Systemen im Rahmen von Post-Exploitation. Sie hilft Pentestern und Sicherheitsanalysten, systematisch nach Wegen zu suchen, um aus eingeschränkten Benutzerrechten Root-Rechte zu erlangen. **Ausschließlich für legale Schulungszwecke gedacht.**
 
 ---
 
-## 🔍 1. System Checks & Enumeration
+## 1. System Checks & Enumeration
 
 ### Grundlegende Informationen
 
@@ -35,7 +49,13 @@ find / -writable -type d 2>/dev/null # beschreibbare Verzeichnisse
 
 ---
 
-## ⚖️ 2. SUID-Binaries & Exploits
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 2. SUID-Binaries & Exploits
 
 SUID-Binaries werden mit den Rechten des Dateieigentümer (oft root) ausgeführt.
 
@@ -62,7 +82,7 @@ find . -exec /bin/sh -p \; -quit
 
 ---
 
-## 📁 3. Exploitable Binaries & Schwachstellen
+## 3. Exploitable Binaries & Schwachstellen
 
 ### PATH-Variable manipulieren
 
@@ -92,7 +112,13 @@ sudo vim -c '!sh'
 
 ---
 
-## 🚀 4. Kernel Exploits (lokale Ausnutzung)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 4. Kernel Exploits (lokale Ausnutzung)
 
 Falls keine "Low Hanging Fruits" über SUIDs/Sudo/etc., dann auf Kernel-Level prüfen:
 
@@ -118,7 +144,7 @@ wget https://www.exploit-db.com/raw/40616
 
 ---
 
-## 🏗️ Tools zur Privilege Escalation
+## Tools zur Privilege Escalation
 
 | Tool                                                                        | Zweck                                              |
 | --------------------------------------------------------------------------- | -------------------------------------------------- |
@@ -135,13 +161,28 @@ chmod +x linpeas.sh
 
 ---
 
-## 🔨 Ethik & Rechtlicher Hinweis
+## Haftungsausschluss
 
-Dieses Dokument dient **ausschließlich zu Schulungszwecken**.
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
-* **Nutze dieses Wissen niemals für unautorisierte Zugriffe!**
-* Nur in Testumgebungen oder mit ausdrücklicher Erlaubnis verwenden!
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-Stay legal. Stay ethical. 🚀

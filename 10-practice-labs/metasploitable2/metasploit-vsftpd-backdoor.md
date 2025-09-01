@@ -10,8 +10,22 @@ Wir haben unser [Labnet](/10-practice-labs/labnet_infos.md) über Virtualbox ein
 
 Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Metasploitable2 und pfSense).
 
+## Inhaltsverzeichnis
+- [Ziel](#ziel)
+- [Testumgebung](#testumgebung)
+- [1. Netzwerkerkennung via Nmap](#1-netzwerkerkennung-via-nmap)
+- [2. Service-Erkennung](#2-service-erkennung)
+- [3. Exploitation mit Metasploit](#3-exploitation-mit-metasploit)
+- [4. Zugriff sichern (Backdoor persistieren)](#4-zugriff-sichern-backdoor-persistieren)
+- [5. Cleanup & Hinweise](#5-cleanup--hinweise)
+- [Zusammenfassung der Schritte](#zusammenfassung-der-schritte)
+- [Tools benötigt](#tools-benötigt)
+- [Empfehlung](#empfehlung)
+- [Haftungsausschluss](#haftungsausschluss)
 
-## 🔍 Ziel
+---
+
+## Ziel
 
 1. Finde Metasploitable2 im Netzwerk, 
 2. nutze eine bekannte Schwachstelle aus, 
@@ -20,7 +34,7 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 
 ---
 
-## 🧪 Testumgebung
+## Testumgebung
 
 - **Angreifer:** Kali Linux (z. B. 192.168.1.100)
 - **Zielsystem:** Metasploitable2 (IP wird ermittelt)
@@ -29,7 +43,7 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 
 ---
 
-## 1. 🧭 Netzwerkerkennung via Nmap
+## 1. Netzwerkerkennung via Nmap
 
 Scanne das Netzwerk, um das Zielsystem zu identifizieren:
 
@@ -66,7 +80,13 @@ Merke dir die IP, z. B. 192.168.1.102.
 
 ---
 
-## 2. 🎯 Service-Erkennung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 2. Service-Erkennung
 
 Ziel-IP-Adresse scannen mit silent Syn-Paketen und der Versionen:
 
@@ -95,6 +115,11 @@ Diese Version ist bekannt verwundbar für eine Backdoor-Shell über speziell for
 
 ![nmap Versionsscan](/10-practice-labs/ressources/pictures/metasploit-vsftpd2.png)
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 - **PORT:** Listet alle Ports auf, die mit der IP-Adresse verknüpft sind.
 - **STATE:** Zeigt den aktuellen Stand des Ports an.
@@ -115,7 +140,7 @@ deine IP-Adresse).
 In unserem [nmap Guide](/02-network-security/tools/nmap.md) erhältst du mehr Infos.
 
 ---
-## 3. 💥 Exploitation mit Metasploit
+## 3. Exploitation mit Metasploit
 
 Wenn du möchtest, kannst du ab hier mit einem zweiten Terminal starten, um auf msfconsole zuzugreifen.
 
@@ -137,6 +162,12 @@ Um das passende Exploit-Modul zu suchen, gib einfach in die `msfconsole` folgend
 ```
 search vsftpd
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ![Exploit-Modul suchen](/10-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
 
@@ -172,6 +203,12 @@ Wir haben `msfconsole` geöffnet und nach der Version gesucht und waren erfolgre
 Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit hast. 
 
 ![msfconsole option-Befehl](/10-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Für uns sind hier an dieser Stelle nur der `RHOST` und `RPORT` wichtig, da wir nicht über einen Proxy laufen oder sonst locale Clients haben.
 
@@ -239,15 +276,23 @@ Dazu habe ich in beiden Terminals den Befehl `whoami` eingegeben. Der `whoami`-B
 
 Kali zeigt mir den folgenden User:
 Das heißt, ich bin in meiner Kali Maschine der Nutzer mit dem Name Kali
+
 ![Kali whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd9.png)
 
 Metasploitable2 zeigt mir folgende User:
 Metasploitable2 hingegen zeigt mir, dass ich der Root Nutzer bin.
+
 ![Metasploitable2 whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
 
 ---
 
-## 4. 🛠️ Zugriff sichern (Backdoor persistieren)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 4. Zugriff sichern (Backdoor persistieren)
 
 Du hast jetzt eine Shell, das bedeutet, dass du Zugriff auf die Client-Software hast.
 Ziel ist es nun, eine persistente Backdoor zu installieren. Diese ermöglicht es uns, viele Schritte zu überspringen und direkt auf die Maschine zuzugreifen. 
@@ -290,7 +335,7 @@ echo "redteam ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ```
 ---
 
-## 5. 📎 Cleanup & Hinweise
+## 5. Cleanup & Hinweise
 
 - Für realistische Tests kann `history -c` verwendet werden, um Spuren zu verwischen.
 - Beachte: Metasploitable2 ist absichtlich verwundbar – verwende diese Methoden nicht gegen produktive Systeme.
@@ -301,7 +346,13 @@ script pentest_session.log
 
 ---
 
-## 🧾 Zusammenfassung der Schritte
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Zusammenfassung der Schritte
 
 | Schritt | Tool        | Zweck                           |
 | ------- | ----------- | ------------------------------- |
@@ -314,7 +365,7 @@ script pentest_session.log
 
 ---
 
-## ✅ Tools benötigt
+## Tools benötigt
 
 - nmap
 - msfconsole (Metasploit Framework)
@@ -327,32 +378,35 @@ script pentest_session.log
 
 ---
 
-## 🧠 Empfehlung
+## Empfehlung
 
-Nutze iptables oder pfSense Logging, um zu beobachten, wie Angriffe in der Firewall sichtbar werden. 
+Nutze `iptables` oder `pfSense` Logging, um zu beobachten, wie Angriffe in der Firewall sichtbar werden. 
 Dies ist nützlich für spätere Blue Team-Analysen.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
-Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich 
-der IT-Sicherheit.
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
-Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet 
-werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
 
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
-Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch 
-und rechtlich korrekt handeln.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

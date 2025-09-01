@@ -1,5 +1,12 @@
 # OWASP Juice Shop Installation
 
+## Inhaltsverzeichnis
+- [1. Was ist OWASP Juice Shop](#1-was-ist-owasp-juice-shop)
+- [2. System Updates vorbereiten und durchführen](#2-system-updates-vorbereiten-und-durchführen)
+- [3. Docker mit OWASP Juice Shop starten](#3-docker-mit-owasp-juice-shop-starten)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
 ## 1. Was ist OWASP Juice Shop
 
 `OWASP Juice Shop` ist eine Webanwendung mit sehr vielen Sicherheitslücken wie es beispielsweise [DVWA](/10-practice-labs/dvwa-lab/dvwa-lab.md) ist.
@@ -46,6 +53,12 @@ docker pull bkimminich/juice-shop
 ```bash
 docker run -d -p 3000:3000 --name juice-shop bkimminich/juice-shop
 ```
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 - `-d`: Startet den Container im Hintergrund (detached mode)
 - `-p 3000:3000`: Öffnet Port 3000 auf deiner Maschine und verknüpft sie mit Port 3000 im Container.
 - `--name juice-shop`: Benennt den Container `juice-shop`
@@ -86,7 +99,7 @@ docker start juice-shop
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -99,9 +112,15 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

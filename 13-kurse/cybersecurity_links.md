@@ -11,10 +11,15 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 ---
 
 ## Inhaltsverzeichnis:
-- 
+- [Ausgewählte Udemy-Kurse](#ausgewählte-udemy-kurse)
+- [Udemy: Kostenlose Kurskategorien (Englisch)](#udemy-kostenlose-kurskategorien-englisch)
+- [Linux-Kurse & Trainings](#linux-kurse--trainings)
+- [Coursera-Kurse (kostenfrei zugänglich)](#coursera-kurse-kostenfrei-zugänglich)
+- [Virtuelle Maschinen (VMs) zum Üben](#virtuelle-maschinen-vms-zum-üben)
+- [Haftungsausschluss](#haftungsausschluss)
 
 
-## 📚 Ausgewählte Udemy-Kurse
+## Ausgewählte Udemy-Kurse
 
 > 👉 Ideal für den schnellen Einstieg in spezifische Pentesting-Themen
 
@@ -28,7 +33,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 ---
 
-## 🗂️ Udemy: Kostenlose Kurskategorien (Englisch)
+## Udemy: Kostenlose Kurskategorien (Englisch)
 
 | Kategorielink        | Beschreibung |
 |:---------------------|:-------------|
@@ -49,7 +54,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 ---
 
-## 🐧 Linux-Kurse & Trainings
+## Linux-Kurse & Trainings
 
 > 👉 Grundlage für jedes Cybersecurity- oder Pentest-Umfeld
 
@@ -59,9 +64,9 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 ---
 
-## 🎓 Coursera-Kurse (kostenfrei zugänglich)
+## Coursera-Kurse (kostenfrei zugänglich)
 
-> ➕ Anmeldung erforderlich, evtl. eingeschränkter Zertifikatszugang
+> Anmeldung erforderlich, evtl. eingeschränkter Zertifikatszugang
 
 | Kurs                         | Link                                                                 |
 |-----------------------------|----------------------------------------------------------------------|
@@ -72,7 +77,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 ---
 
-## 💻 Virtuelle Maschinen (VMs) zum Üben
+## Virtuelle Maschinen (VMs) zum Üben
 
 > VM-basierte Labs - eignen sich hervorragend für praktisches Pentesting.  
 
@@ -80,12 +85,12 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 |------------------|-----------------------------|
 | VulnHub           | [vulnhub.com](https://www.vulnhub.com/) – Realistische Schwachstellen-Labs |
 
-> ❓ **Fragen zur VM-Einrichtung?**  
+> **Fragen zur VM-Einrichtung?**  
 > Tritt unserem [Discord-Server](https://discord.gg/fNcTyYVVb9) bei!
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -94,9 +99,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

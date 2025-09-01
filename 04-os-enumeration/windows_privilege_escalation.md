@@ -1,10 +1,20 @@
-# Windows Privilege Escalation 🪟
+# 🪟 Windows Privilege Escalation 
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Nützliche Tools](#nützliche-tools)
+- [Typische Escalation-Vektoren](#typische-escalation-vektoren)
+- [Tipps zur Analyse](#tipps-zur-analyse)
+- [Weiterführende Links](#weiterführende-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+## Einleitung
 
 Diese Datei dokumentiert Methoden, Tools und Vorgehensweisen zur Privilegienerweiterung (Privilege Escalation) auf **Windows-Systemen**. Sie dient ausschließlich zu **Schulungszwecken** im Rahmen von Penetration Tests und Security-Audits durch autorisierte Fachkräfte.
 
 ---
 
-## 🔧 Nützliche Tools
+## Nützliche Tools
 
 ### 1. `whoami`-Befehle
 
@@ -45,7 +55,13 @@ Identifiziert potenzielle Schwachstellen wie Dienste mit schwachen ACLs, ungesic
 
 ---
 
-## 🧰 Typische Escalation-Vektoren
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Typische Escalation-Vektoren
 
 ### 🔹 1. Unquoted Service Paths
 
@@ -83,6 +99,12 @@ reg query HKCU\Software\Policies\Microsoft\Windows\Installer
 reg query HKLM\Software\Policies\Microsoft\Windows\Installer
 ```
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Werte:
 
 ```
@@ -116,7 +138,7 @@ UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACM
 
 ---
 
-## 📜 Tipps zur Analyse
+## Tipps zur Analyse
 
 * **PowerUp.ps1** (PowerShell Framework)
 * **SharpUp** (C#): Enumeration wie PowerUp, aber für AV-Bypass geeignet
@@ -124,15 +146,35 @@ UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACM
 
 ---
 
-## ⚠️ Ethik-Hinweis
-
-Diese Datei dient **nur zu Schulungszwecken**. Sie soll helfen, Schwachstellen in Windows-Systemen zu erkennen, um sie gezielt zu **schließen**. Jegliche nicht autorisierte Nutzung der genannten Methoden ist **illegal** und wird strafrechtlich verfolgt.
-
-> "Mit Wissen kommt Verantwortung. Nutze es zum Schutz, nicht zum Schaden."
-
----
-
-## 🔗 Weiterführende Links
+## Weiterführende Links
 
 * [GTFOBins Windows Pendant: LOLBAS](https://lolbas-project.github.io/)
 * [Windows-Privilege-Escalation-Cheat-Sheet](https://github.com/netbiosX/Checklists)
+
+---
+
+## Haftungsausschluss
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

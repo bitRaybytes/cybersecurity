@@ -1,23 +1,35 @@
 # 📋 Enumeration Checklist
 
-## 🧠 Ziel dieser Datei
+## Ziel dieser Datei
 
 Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Penetration Tests, Red Team Exercises und CTFs. Ziel ist es, systematisch Informationen über Zielsysteme, Netzwerke und Dienste zu sammeln, um Angriffsvektoren aufzudecken. Sie deckt **lokale**, **Netzwerk-**, **Web-** und **Cloud-spezifische** Enumeration ab.
 
+
+## Inhaltsverzeichnis
+- [Allgemeine Hinweise zur Enumeration](#allgemeine-hinweise-zur-enumeration)
+- [Netzwerk- & Port-Enumeration](#netzwerk---port-enumeration)
+- [System-/Host-Enumeration (Linux/Windows)](#system-host-enumeration-linuxwindows)
+- [Web-Enumeration](#web-enumeration)
+- [Active Directory Enumeration](#active-directory-enumeration)
+- [Cloud- & API-Enumeration (AWS / Azure / GCP)](#cloud---api-enumeration-aws--azure--gcp)
+- [Auth-Mechanismen & Bruteforce-Punkte](#auth-mechanismen--bruteforce-punkte)
+- [Checklisten-Snippet zum Mitnehmen](#checklisten-snippet-zum-mitnehmen)
+- [Haftungsausschluss](#haftungsausschluss)
+
 ---
 
-## ✅ Allgemeine Hinweise zur Enumeration
+## Allgemeine Hinweise zur Enumeration
 
-- 📌 Enumeration erfolgt nach der Reconnaissance-Phase
-- 🔍 Ziel ist **aktive Informationsgewinnung** (Banner, Benutzer, Shares, Ports etc.)
-- ⚠️ Immer mit Genehmigung (Legal Boundaries)
-- 📂 Alle Informationen dokumentieren (z. B. in Markdown, CherryTree, Obsidian, KeepNote etc.)
+- Enumeration erfolgt nach der Reconnaissance-Phase
+- Ziel ist **aktive Informationsgewinnung** (Banner, Benutzer, Shares, Ports etc.)
+- Immer mit Genehmigung (Legal Boundaries)
+- Alle Informationen dokumentieren (z. B. in Markdown, CherryTree, Obsidian, KeepNote etc.)
 
 ---
 
-## 🔌 Netzwerk- & Port-Enumeration
+## Netzwerk- & Port-Enumeration
 
-### 🔍 Ziel: Identifikation erreichbarer Systeme und offener Ports
+### Ziel: Identifikation erreichbarer Systeme und offener Ports
 
 | Aufgabe                             | Tools/Techniken                          | Check? |
 |-------------------------------------|------------------------------------------|--------|
@@ -30,9 +42,9 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## 🖥️ System-/Host-Enumeration (Linux/Windows)
+## System-/Host-Enumeration (Linux/Windows)
 
-### 🧾 Ziel: Lokale Informationen nach erstem Zugriff oder über RPC/SMB
+### Ziel: Lokale Informationen nach erstem Zugriff oder über RPC/SMB
 
 | Aufgabe                              | Tools/Techniken                           | Check? |
 |--------------------------------------|-------------------------------------------|--------|
@@ -47,9 +59,9 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## 🌐 Web-Enumeration
+## Web-Enumeration
 
-### 🌎 Ziel: Services, APIs, CMS, Parameter und Schwachstellen erkennen
+### Ziel: Services, APIs, CMS, Parameter und Schwachstellen erkennen
 
 | Aufgabe                              | Tools/Techniken                         | Check? |
 |-------------------------------------|------------------------------------------|--------|
@@ -63,7 +75,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## 🧬 Active Directory Enumeration
+## Active Directory Enumeration
 
 | Aufgabe                              | Tools/Techniken                         | Check? |
 |-------------------------------------|------------------------------------------|--------|
@@ -75,7 +87,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## ☁️ Cloud- & API-Enumeration (AWS / Azure / GCP)
+## Cloud- & API-Enumeration (AWS / Azure / GCP)
 
 | Aufgabe                              | Tools/Techniken                         | Check? |
 |-------------------------------------|------------------------------------------|--------|
@@ -86,7 +98,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## 🔐 Auth-Mechanismen & Bruteforce-Punkte
+## Auth-Mechanismen & Bruteforce-Punkte
 
 | Ziel                                 | Tools/Techniken                          | Check? |
 |--------------------------------------|------------------------------------------|--------|
@@ -96,7 +108,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 ---
 
-## 🧩 Checklisten-Snippet zum Mitnehmen
+## Checklisten-Snippet zum Mitnehmen
 
 ```bash
 nmap -sS -sV -p- -T4 10.10.10.0/24
@@ -108,7 +120,7 @@ linpeas.sh (nach Upload)
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -117,12 +129,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-

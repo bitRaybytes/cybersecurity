@@ -1,5 +1,15 @@
 # 🧪 Labnet Testumgebung
 
+
+## Inhaltsverzeichnis
+- [Aufbau eines Test-Labnets](#aufbau-eines-test-labnets)
+- [Architekturübersicht](#architekturübersicht)
+- [Sicherheitskonzept](#sicherheitskonzept)
+- [Tools & Rollenverteilung](#tools--rollenverteilung)
+- [Nächste Verbesserungen](#nächste-verbesserungen)
+- [Weitere Ideen](#weitere-ideen)
+- [Haftungsausschluss](#haftungsausschluss)
+
 ## Aufbau eines Test-Labnets
 
 Aufbau eines Test-Labs mit **3-virutellen Maschinen und einer Gatewayverbindung über pfSense** (Firewall/NAT/Tor).
@@ -20,51 +30,58 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **Keine Internetverbindung ohne Kontrolle**       | Das verhindert unbemerkte Outbound-Calls.                                                   |
 
 --- 
-## 📐 Architekturübersicht
+## Architekturübersicht
 
 ```text
 ┌──────────────────────────────┐
-│ 👻 Windows 10 Host (isoliert)│
+│   Windows 10 Host (isoliert) │
 │ - Kein Netzwerk zu VMs       │
 │ - Drag&Drop/Clipboard: aus   │
 │ - Keine Gasterweiterungen    │
 └────────────┬─────────────────┘
              │
              ▼
-┌──────────────────────────────────────────┐
-│ Interne VirtualBox-Umgebung (Labnet)     │
-│                                          │
-│  ┌────────────┐    ┌──────────────────┐  │
-│  │ 🐉 Kali    │ ↔︎ │ 💠 Metasploitable│  │
-│  └─────▲──────┘    └────▲─────────────┘  │
-│        │                │                │
-│        ▼                ▼                │
-│     ┌──────────────────────────┐         │
-│     │ 🐦 Parrot OS (Red/Blue)  │        │
-│     └──────────────────────────┘         │
-│             │                            │
-│             ▼                            │
-│      ┌──────────────────────┐            │
-│      │ 🌐 pfSense Gateway   │           │
-│      │ - Firewall/NAT/DHCP  │            │
-│      │ - ProxyChains + Tor  │            │
-│      └──────────────────────┘            │
-└──────────────────────────────────────────┘
+┌───────────────────────────────────────────┐
+│   Interne VirtualBox-Umgebung (Labnet)    │
+│                                           │
+│  ┌────────────┐     ┌──────────────────┐  │
+│  │    Kali    │ <-> │  Metasploitable  │  |
+│  └─────▲──────┘     └────▲─────────────┘  │
+│        │                 │                │
+│        ▼                 ▼                │
+│     ┌──────────────────────────┐          │
+│     │   Parrot OS (Red/Blue)   │          │
+│     └──────────────────────────┘          │
+│             │                             │
+│             ▼                             │
+│      ┌──────────────────────┐             │
+│      │   pfSense Gateway    │             │
+│      │ - Firewall/NAT/DHCP  │             │
+│      │ - ProxyChains + Tor  │             │
+│      └──────────────────────┘             │
+└───────────────────────────────────────────┘
 
 ```
-## 🔒 Sicherheitskonzept
-| Feature                                    | Status                           |
-| ------------------------------------------ | -------------------------------- |
-| **Host-VM-Kommunikation**                  | ❌ Verboten (internes Netzwerk)  |
-| **Copy/Paste & Gasterweiterung**           | ❌ Deaktiviert                   |
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Sicherheitskonzept
+| Feature                                    | Status                          |
+| ------------------------------------------ | --------------------------------|
+| **Host-VM-Kommunikation**                  | ❌ Verboten (internes Netzwerk) |
+| **Copy/Paste & Gasterweiterung**           | ❌ Deaktiviert                  |
 | **Internetzugang**                         | ✔️ Nur über pfSense / Tor        |
 | **VM-IP-Konfiguration**                    | ✔️ Statisch (nicht DHCP-basiert) |
-| **Externe Erreichbarkeit**                 | ❌ Komplett unterbunden          |
+| **Externe Erreichbarkeit**                 | ❌ Komplett unterbunden         |
 | **Interne Kommunikation (z.B. Exploits)**  | ✔️ Erlaubt                       |
 
 ---
 
-## 🧰 Tools & Rollenverteilung
+## Tools & Rollenverteilung
 
 | VM             | Betriebssystem | Rolle                | Tools                              |
 | -------------- | -------------- | -------------------- | ---------------------------------- |
@@ -75,7 +92,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 
 ---
 
-## ✨ nächste Verbesserungen
+## Nächste Verbesserungen
 
 | Thema                                         | Verbesserung                                                       | Warum?                                                                           |
 | --------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
@@ -85,7 +102,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **Bridging für gezielte Angriffe (optional)** | Isolierte „Opfer-VMs“ über anderes Subnetz bridgen (z.B. IoT-VMs)  | Für fortgeschrittene Tests von Netzwerk-Pivoting.                                |
 | **Firmware/BIOS-Zugriff**                     | Host absichern (BIOS-Passwort, USB-Blocking)                       | Wenn Angriffe simuliert werden: Schutz für physischen Layer.                     |
 
-### 🔎 Monitoring
+### Monitoring
 
 - ELK oder Security Onion in einer VM für Netzwerk- und Angriffsanalyse installieren.
 - Zeek/Bro für Netzwerk-Traffic nutzen.
@@ -93,17 +110,17 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 
 ---
 
-## 📘 Weitere Ideen
+## Weitere Ideen
 
-- 📡 Integration eines DNS-Sinkholes
-- 🐞 Integration von intentionally vulnerable Web-Apps (z.B. DVWA, Juice Shop)
-- 📦 Reverse Engineering Umgebung (Ghidra, Radare2) auf Parrot VM
-- 📁 File Server mit SMB für Lateral Movement Tests
-- 🔐 Integration von Active Directory in Windows VM (für Realismustests)
+- Integration eines DNS-Sinkholes
+- Integration von intentionally vulnerable Web-Apps (z.B. DVWA, Juice Shop)
+- Reverse Engineering Umgebung (Ghidra, Radare2) auf Parrot VM
+- File Server mit SMB für Lateral Movement Tests
+- Integration von Active Directory in Windows VM (für Realismustests)
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -112,9 +129,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

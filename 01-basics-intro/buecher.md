@@ -4,7 +4,19 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🔰 Grundlagen der IT-Sicherheit
+## Inhaltsverzeichnis
+
+- [Grundlagen der IT-Sicherheit](#grundlagen-der-it-sicherheit)
+- [Penetration Testing & Offensive Security](#penetration-testing--offensive-security)
+- [Blue Teaming & Defensive Security](#-blue-teaming--defensive-security)
+- [Exploits und Schwachstellen](#exploits--schwachstellenanalyse)
+- [Kryptographie & Datenschutz](#kryptographie--datenschutz)
+- [Ethical Hacking & Philosophie](#ethical-hacking--philosophie)
+- [Weitere Tipps](#weitere-tipps)
+- [Haftungsausschluss](#️-haftungsausschluss)
+---
+
+## Grundlagen der IT-Sicherheit
 
 ### 1. **IT-Sicherheit: Konzepte - Verfahren - Protokolle**  
 🖊️ *von Rüdiger Grimm*  
@@ -18,7 +30,7 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🧪 Penetration Testing & Offensive Security
+## Penetration Testing & Offensive Security
 
 ### 3. **The Hacker Playbook 3: Practical Guide To Penetration Testing**  
 🖊️ *von Peter Kim*  
@@ -37,6 +49,12 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 🔵 Blue Teaming & Defensive Security
 
 ### 6. **Blue Team Field Manual (BTFM)**  
@@ -51,7 +69,7 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🔬 Exploits & Schwachstellenanalyse
+## Exploits & Schwachstellenanalyse
 
 ### 8. **The Art of Exploitation (2nd Edition)**  
 🖊️ *von Jon Erickson*  
@@ -65,7 +83,13 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🔐 Kryptographie & Datenschutz
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Kryptographie & Datenschutz
 
 ### 10. **Crypto: How the Code Rebels Beat the Government—Saving Privacy in the Digital Age**  
 🖊️ *von Steven Levy*  
@@ -79,7 +103,7 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🧠 Ethical Hacking & Philosophie
+## Ethical Hacking & Philosophie
 
 ### 12. **Hacking: Die Kunst des Exploits (deutsche Ausgabe)**  
 🖊️ *von Jon Erickson*  
@@ -88,7 +112,13 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ---
 
-## 🧾 Weitere Tipps
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Weitere Tipps
 
 - Nutze Bücher in Kombination mit **Hands-On-Plattformen** wie:
   - [HackTheBox](https://www.hackthebox.com/)
@@ -120,11 +150,13 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

@@ -6,20 +6,20 @@ Diese Datei liefert dir ein umfassendes Verständnis von **Google Dorking** als 
 
 ---
 
-## 🧭 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
-1. [Was ist Google Dorking?](#1--was-ist-google-dorking)
-2. [Zusammenhang mit der Reconnaissance-Phase](#2--zusammenhang-mit-der-reconnaissance-phase)
-3. [Nützliche Dorking-Operatoren](#3--nützliche-google-operatoren)
-4. [Beispiele für gezielte Dorks](#4--beispiele-für-gezielte-dorks)
-5. [Reverse Engineering durch Dorking](#5--reverse-engineering-durch-google-dorking)
-6. [Tools zur Unterstützung](#6--tools-zur-unterstützung)
-7. [Rechtlicher Hinweis](#7-️-rechtlicher-hinweis)
-8. [Weiterführende Ressourcen](#8--weiterführende-ressourcen)
+1. [Was ist Google Dorking?](#1-was-ist-google-dorking)
+2. [Zusammenhang mit der Reconnaissance-Phase](#2-zusammenhang-mit-der-reconnaissance-phase)
+3. [Nützliche Dorking-Operatoren](#3-nützliche-google-operatoren)
+4. [Beispiele für gezielte Dorks](#4-beispiele-für-gezielte-dorks)
+5. [Reverse Engineering durch Dorking](#5-reverse-engineering-durch-google-dorking)
+6. [Tools zur Unterstützung](#6-tools-zur-unterstützung)
+7. [Rechtlicher Hinweis](#7-rechtlicher-hinweis)
+8. [Weiterführende Ressourcen](#8-weiterführende-ressourcen)
 
 ---
 
-## 1. ❓ Was ist Google Dorking?
+## 1. Was ist Google Dorking?
 
 **Google Dorking** (auch "Google Hacking" genannt) bezeichnet das gezielte Ausnutzen von **Suchoperatoren**, um mit Hilfe von Suchmaschinen (v.a. Google) **sensible Informationen** auf Webseiten zu finden, die fälschlicherweise öffentlich erreichbar sind.
 
@@ -34,7 +34,7 @@ Dazu gehören unter anderem:
 
 ---
 
-## 2. 🧠 Zusammenhang mit der Reconnaissance-Phase
+## 2. Zusammenhang mit der Reconnaissance-Phase
 
 Google Dorking ist eine **passive Reconnaissance-Methode**, d.h. du sammelst Informationen, ohne direkt mit dem Zielsystem zu interagieren.
 
@@ -49,7 +49,13 @@ Beispiele für Informationen, die sich durch Google Dorking finden lassen:
 
 ---
 
-## 3. 🧩 Nützliche Google-Operatoren
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 3. Nützliche Google-Operatoren
 
 | Operator       | Beschreibung                                |
 |----------------|---------------------------------------------|
@@ -66,7 +72,7 @@ Beispiele für Informationen, die sich durch Google Dorking finden lassen:
 
 ---
 
-## 4. 🧪 Beispiele für gezielte Dorks
+## 4. Beispiele für gezielte Dorks
 
 ```text
 # Zugriff auf Login-Panels
@@ -97,7 +103,7 @@ intext:"Warning: mysql_fetch_array()" site:example.com
 
 --- 
 
-## 5. 🧬 Reverse Engineering durch Google Dorking
+## 5. Reverse Engineering durch Google Dorking
 
 Die Informationen, die durch Dorking gewonnen werden, können im nächsten Schritt analysiert und "rückentwickelt" werden:
 Beispiele für Reverse Engineering mit Google Dorking:
@@ -110,7 +116,13 @@ Beispiele für Reverse Engineering mit Google Dorking:
 
 ---
 
-## 6. 🛠 Tools zur Unterstützung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 6. Tools zur Unterstützung
 
 | Tool                                                       | Zweck                                 |
 | ---------------------------------------------------------- | ------------------------------------- |
@@ -125,19 +137,19 @@ Beispiele für Reverse Engineering mit Google Dorking:
 
 ---
 
-## 7. ⚖️ Rechtlicher Hinweis
+## 7. Rechtlicher Hinweis
 
 Achtung:
 Google Dorking kann schnell rechtlich heikel werden, insbesondere wenn du gezielt Schwachstellen auf fremden Systemen ausnutzt oder automatisierte Scans durchführst.
 
-> 🔒 Regel: Nur auf eigenen Systemen oder mit schriftlicher Erlaubnis!
+> Regel: Nur auf eigenen Systemen oder mit schriftlicher Erlaubnis!
 
 - Passives Suchen ist oft nicht strafbar – aber das Sammeln und Weiterverarbeiten kann es werden.
 - Bei Missbrauch greift das Computerstrafrecht (§202a StGB, §303b StGB) in Deutschland.
 
 ---
 
-## 8. 📚 Weiterführende Ressourcen
+## 8. Weiterführende Ressourcen
 
 - [Google Hacking Database – Exploit-DB](https://www.exploit-db.com/google-hacking-database)
 - [Recon-NG Framework](https://github.com/lanmaster53/recon-ng)
@@ -146,7 +158,7 @@ Google Dorking kann schnell rechtlich heikel werden, insbesondere wenn du geziel
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -155,9 +167,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

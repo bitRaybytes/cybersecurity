@@ -1,12 +1,24 @@
 # 🛡️ Überblick: Cybersecurity & Verantwortungsbewusster Umgang
 
-## 🔍 Was ist Cybersecurity?
+---
+## Inhaltsverzeichnis
+- [Was ist Cybersecurity?](#was-ist-cybersecurity)
+- [Wichtige Säulen der Cybersicherheit](#wichtige-säulen-der-cybersicherheit)
+- [Kernbereiche & Spezialisierungen](#kernbereiche--spezialisierungen)
+- [Verantwortung & Rechtlicher Rahmen](#verantwortung--rechtlicher-rahmen)
+- [Best Practices für Lernende](#best-practices-für-lernende)
+- [Ziel dieses Repositories](#ziel-dieses-repositories)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Was ist Cybersecurity?
 
 Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologien, die dem Schutz von IT-Systemen, Netzwerken, Programmen und Daten vor unbefugtem Zugriff, Angriffen, Manipulation oder Zerstörung dienen. Sie ist ein unverzichtbarer Bestandteil moderner digitaler Infrastrukturen – ob in Unternehmen, öffentlichen Einrichtungen oder im privaten Bereich.
 
 ---
 
-## 🧱 Wichtige Säulen der Cybersicherheit
+## Wichtige Säulen der Cybersicherheit
 
 ### 1. **Vertraulichkeit (Confidentiality)**
 - Schutz sensibler Daten vor unautorisiertem Zugriff
@@ -22,7 +34,13 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 ---
 
-## 🧠 Kernbereiche & Spezialisierungen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Kernbereiche & Spezialisierungen
 
 | Bereich                   | Beschreibung |
 |---------------------------|--------------|
@@ -34,7 +52,7 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 ---
 
-## ⚖️ Verantwortung & Rechtlicher Rahmen
+## Verantwortung & Rechtlicher Rahmen
 
 **Cybersecurity ist kein Freifahrtschein für digitales "Hacken".** Vielmehr liegt die Verantwortung darin, Schwachstellen zu erkennen und **verantwortungsvoll zu melden oder zu beheben.**
 
@@ -46,7 +64,13 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 ---
 
-## 🧭 Best Practices für Lernende
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Best Practices für Lernende
 
 - Verwende isolierte Test-VMs (z. B. Kali Linux, Metasploitable, DVWA).
 - Trainiere auf Plattformen wie HackTheBox, TryHackMe, VulnHub.
@@ -56,7 +80,7 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 ---
 
-## ✅ Ziel dieses Repositories
+## Ziel dieses Repositories
 
 Dieses Repository soll dich dabei unterstützen:
 
@@ -68,7 +92,7 @@ Dieses Repository soll dich dabei unterstützen:
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -77,11 +101,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

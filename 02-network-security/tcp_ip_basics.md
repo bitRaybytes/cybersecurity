@@ -1,12 +1,26 @@
 # 🌐 TCP/IP Basics – Grundlagen der Netzwerkkommunikation
 
-## 📘 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Das TCP/IP-Modell – Schichtenüberblick](#das-tcpip-modell---schichtenüberblick)
+- [Protokolle & Funktionen im Detail](#protokolle--funktionen-im-detail)
+- [IPv4 – Adressierung & Aufbau](#ipv4---adressierung--aufbau)
+- [CIDR (Classless Inter-Domain Routing)](#cidr-classless-inter-domain-routing)
+- [Wichtige Protokolle & Tools](#wichtige-protokolle--tools)
+- [TCP-Verbindungsaufbau: Der 3-Way Handshake](#tcp-verbindungsaufbau-der-3-way-handshake)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
 
 TCP/IP ist das Rückgrat der modernen digitalen Kommunikation – es ermöglicht den Austausch von Daten über das Internet und private Netzwerke. Es handelt sich dabei um ein Protokoll-Stack, also ein Schichtenmodell aus mehreren Netzwerkprotokollen, die zusammenarbeiten.
 
 ---
 
-## 🧱 Das TCP/IP-Modell – Schichtenüberblick
+## Das TCP/IP-Modell - Schichtenüberblick
 
 Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
@@ -19,7 +33,13 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
 ---
 
-## 🔐 Protokolle & Funktionen im Detail
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Protokolle & Funktionen im Detail
 
 ### 1. Anwendungsschicht
 - Protokolle: HTTP, FTP, SMTP, DNS, DHCP, SSH
@@ -46,7 +66,13 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
 ---
 
-## 🌐 IPv4 – Adressierung & Aufbau
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## IPv4 - Adressierung & Aufbau
 
 - **IPv4-Adresse:** 32 Bit → 4 Dezimalzahlen (z. B. `192.168.1.1`)
 - Besteht aus:
@@ -67,9 +93,10 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 - Klasse C: `192.168.0.0/16`
 
 > [Mehr zum Thema IP-Adressen findest du hier](/02-network-security/ip_adressen_basics.md)
+
 ---
 
-## 🧮 CIDR (Classless Inter-Domain Routing)
+## CIDR (Classless Inter-Domain Routing)
 
 - Ermöglicht flexible Subnetzbildung mit **/Notation** (z. B. `/24 = 255.255.255.0`)
 - Beispiel: `192.168.1.0/24` → 256 Adressen (254 nutzbar)
@@ -77,7 +104,13 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
 ---
 
-## 🔁 Wichtige Protokolle & Tools
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Wichtige Protokolle & Tools
 
 | Tool / Protokoll | Zweck                              |
 |------------------|-------------------------------------|
@@ -90,19 +123,20 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
 ---
 
-## 📈 TCP-Verbindungsaufbau: Der 3-Way Handshake
+## TCP-Verbindungsaufbau: Der 3-Way Handshake
 
 ```text
-Client         Server
-  |  SYN  -------->
-  |        <------ SYN-ACK
-  |  ACK  -------->
-Verbindung steht!
+Client                    Server
+  |  SYN  ----------------->|
+  |<-------------- SYN-ACK  |
+  |  ACK  ----------------->|
+  
+      Verbindung steht!
 ```
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -111,11 +145,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

@@ -1,6 +1,22 @@
 # 🌐 Ports & ihre Funktionsweise – Cheat Sheet
 
-## 🔎 Einführung
+---
+
+## Inhaltsverzeichnis
+- [Einführung](#einführung)
+- [Funktionsweise von Ports](#funktionsweise-von-ports)
+- [Port-Bereiche](#port-bereiche)
+- [Wichtige Standard-Ports (Well-Known)](#wichtige-standard-ports-well-known)
+- [Ports & Firewalls](#ports--firewalls)
+- [Ports & Sicherheit](#ports--sicherheit)
+- [Beispiel: Verbindungsaufbau TCP vs. UDP](#beispiel-verbindungsaufbau-tcp-vs-udp)
+- [Zusammenfassung](#zusammenfassung)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einführung
 Ein **Port** ist eine logische Schnittstelle in einem Betriebssystem, die als **Kommunikationsendpunkt** für Anwendungen dient.  
 Zusammen mit einer IP-Adresse bildet ein Port eine **Socket-Adresse** (`IP:Port`).  
 Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wenn nur eine IP vorhanden ist.
@@ -11,7 +27,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## ⚙️ Funktionsweise von Ports
+## Funktionsweise von Ports
 - Ports sind **16-Bit-Werte** (0–65535).  
 - Sie ermöglichen **Multiplexing**, d. h. mehrere Anwendungen können gleichzeitig Netzwerkressourcen nutzen.  
 - Betriebssysteme unterscheiden:  
@@ -20,7 +36,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 📊 Port-Bereiche
+## Port-Bereiche
 
 | Bereich             | Nummern        | Zweck |
 |---------------------|----------------|-------|
@@ -32,7 +48,13 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 🌍 Wichtige Standard-Ports (Well-Known)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Wichtige Standard-Ports (Well-Known)
 
 | Port | Protokoll | Dienst |
 |------|-----------|--------|
@@ -65,7 +87,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 🧭 Ports & Firewalls
+## Ports & Firewalls
 - Firewalls kontrollieren, welche Ports **eingehend/ausgehend** genutzt werden dürfen.  
 - Beispiel:  
   - Eingehend auf Port 22 offen -> Remote-Login erlaubt  
@@ -73,7 +95,13 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 🔐 Ports & Sicherheit
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Ports & Sicherheit
 - **Port Scanning** (z. B. mit `nmap`) identifiziert offene Ports und Dienste.  
 - **Gefahren offener Ports:**  
   - Angriffsvektor (z. B. SMB auf Port 445 → WannaCry)  
@@ -85,7 +113,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 📊 Beispiel: Verbindungsaufbau TCP vs. UDP
+## Beispiel: Verbindungsaufbau TCP vs. UDP
 
 ### TCP (z. B. HTTP, SSH)
 1. Client öffnet **ephemeren Port** (z. B. 50000)  
@@ -100,7 +128,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## 📚 Zusammenfassung
+## Zusammenfassung
 - Ports sind **16-Bit-Nummern (0–65535)**, die Anwendungen eindeutige Kommunikationskanäle bereitstellen.  
 - Es gibt drei Bereiche: **Well-Known, Registered, Ephemeral**.  
 - TCP = verbindungsorientiert, UDP = verbindungslos.  
@@ -116,7 +144,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -128,6 +156,12 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 📅 **Letzte Aktualisierung:** August 2025  
 🤝 Ergänzungen und Pull Requests sind willkommen!

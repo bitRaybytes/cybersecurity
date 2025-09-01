@@ -1,6 +1,21 @@
 # 🧰 Proxychains – Anonymität durch Kaskadierung von Proxys
 
-## 🔎 Was ist Proxychains?
+---
+
+## Inhaltsverzeichnis
+- [Was ist Proxychains?](#was-ist-proxychains)
+- [Aufbau & Funktionsweise](#aufbau--funktionsweise)
+- [Installation](#installation)
+- [Konfiguration – /etc/proxychains.conf](#konfiguration--etcproxychainsconf)
+- [Nutzung](#nutzung)
+- [Beispiel: Konfiguration für Tor](#beispiel-konfiguration-für-tor)
+- [Tipps & Best Practices](#tipps--best-practices)
+- [Weitere Ressourcen](#weitere-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Was ist Proxychains?
 
 **Proxychains** ist ein Unix-basiertes Tool, mit dem du beliebige Programme über eine oder mehrere Proxys (z. B. SOCKS5, HTTP) ins Internet tunneln kannst – etwa über Tor. Dadurch bleibt die eigene **echte IP-Adresse verborgen**, was es ideal für anonymes Scanning, Browsing oder Datenabfragen macht.
 
@@ -8,7 +23,7 @@ Proxychains *hängt sich vor die Netzwerkaufrufe eines Programms* und zwingt es,
 
 ---
 
-## 🧱 Aufbau & Funktionsweise
+## Aufbau & Funktionsweise
 
 Proxychains funktioniert über drei zentrale Komponenten:
 
@@ -18,7 +33,7 @@ Proxychains funktioniert über drei zentrale Komponenten:
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 Auf Debian-basierten Systemen (z. B. Kali, Parrot OS):
 
@@ -29,7 +44,13 @@ sudo apt install proxychains
 
 ---
 
-## 📝 Konfiguration – /etc/proxychains.conf
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Konfiguration – /etc/proxychains.conf
 
 Die Konfigurationsdatei steuert den Ablauf der Weiterleitung. 
 Beispielsweise die Verkettung der Proxys (strict/dnymic/random...)
@@ -69,7 +90,13 @@ socks5 127.0.0.1 9050
 
 ---
 
-## 🚀 Nutzung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Nutzung
 
 Einfach vor ein Kommando setzen, z. B.:
 
@@ -82,7 +109,7 @@ Wenn alles funktioniert, wird die eigene IP-Adresse nicht die echte sein, sonder
 
 ---
 
-## 📌 Beispiel: Konfiguration für Tor
+## Beispiel: Konfiguration für Tor
 
 1. Konfigurationen vornehmen:
 
@@ -111,7 +138,13 @@ proxychains curl ifconfig.io
 
 ---
 
-## 🧪 Tipps & Best Practices
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Tipps & Best Practices
 
 | Tipp                             | Beschreibung                                                            |
 | -------------------------------- | ----------------------------------------------------------------------- |
@@ -123,7 +156,7 @@ proxychains curl ifconfig.io
 
 ---
 
-## 📚 Weitere Ressourcen
+## Weitere Ressourcen
 
 - 🔗 [Proxychains GitHub](https://github.com/rofl0r/proxychains-ng)
 - 🔐 [Tor Project](https://www.torproject.org/)
@@ -131,7 +164,7 @@ proxychains curl ifconfig.io
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -140,9 +173,17 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!

@@ -53,7 +53,7 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 
 <div align="right">
 
-[↑ zum Inhaltsverzeichnis](#inhaltsverzeichnis)
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
@@ -117,7 +117,7 @@ curl_exec($ch);            // klassische HTTP-Anfragen
 
 <div align="right">
 
-[↑ zum Inhaltsverzeichnis](#inhaltsverzeichnis)
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
@@ -189,15 +189,9 @@ if (!$isDenied) {file_get_contents($input);}
 - [F5 - Was ist SSRF?](https://www.f5.com/de_de/glossary/ssrf)
 
 
-<div align="right">
-
-[↑ zum Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -210,5 +204,16 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-📅 **Letzte Aktualisierung:** August 2025  
-🤝 **Pull Requests willkommen** – Ergänzungen & Verbesserungen gern gesehen!  
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---
+

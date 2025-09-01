@@ -1,6 +1,21 @@
 # 🐚 PHP Webshell Upload Tricks & Bypasses
 
-## 📘 Kontext
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Klassische Upload-Namen für Webshells](#klassische-upload-namen-für-webshells)
+- [Tarnung als Bilddatei (Double Extensions)](#tarnung-als-bilddatei-double-extensions)
+- [Groß-/Kleinschreibung (Bypass durch Case-Insensitive Filter)](#groß-kleinschreibung-bypass-durch-case-insensitive-filter)
+- [Weitere gebräuchliche alternative Erweiterungen](#weitere-gebräuchliche-alternative-erweiterungen)
+- [Upload-Verzeichnisse testen](#upload-verzeichnisse-testen)
+- [Nützliches Tool: Content-Disposition & MIME-Typ prüfen](#nützliches-tool-content-disposition--mime-typ-prüfen)
+- [Siehe auch](#siehe-auch)
+- [Haftungsausschluss](#haftungsausschluss)
+
+--- 
+
+## Einleitung
 
 In diesem Dokument findest du typische Dateinamen- und Erweiterungstricks, die bei **File Upload Attacks** verwendet werden, um **PHP-Webshells** trotz Dateifilter oder Upload-Validierung auf einen Webserver zu schleusen.
 
@@ -10,7 +25,7 @@ Solche Techniken sind besonders in **Capture The Flag (CTF)**-Challenges, **Bug 
 
 ---
 
-## 🧨 Klassische Upload-Namen für Webshells
+## Klassische Upload-Namen für Webshells
 
 ```text
 cmdshell.phtml
@@ -24,7 +39,13 @@ cmdshell.inc
 
 ---
 
-## 🖼️ Tarnung als Bilddatei (Double Extensions)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Tarnung als Bilddatei (Double Extensions)
 
 **Ziel:** 
 Umgehen von Filtermechanismen, die .php blockieren, aber .jpg oder .png erlauben.
@@ -38,7 +59,7 @@ cmdshell.jpg.php
 
 ---
 
-## 🔡 Groß-/Kleinschreibung (Bypass durch Case-Insensitive Filter)
+## Groß-/Kleinschreibung (Bypass durch Case-Insensitive Filter)
 
 Manche Filter prüfen nur .php in Kleinbuchstaben:
 ```text
@@ -49,7 +70,7 @@ cmdshell.PHP
 
 ---
 
-## 🛠️ Weitere gebräuchliche alternative Erweiterungen
+## Weitere gebräuchliche alternative Erweiterungen
 Diese Erweiterungen werden auf manchen falsch konfigurierten Servern ebenfalls als PHP interpretiert:
 
 ```text
@@ -62,7 +83,13 @@ Diese Erweiterungen werden auf manchen falsch konfigurierten Servern ebenfalls a
 ```
 ---
 
-## 📂 Upload-Verzeichnisse testen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Upload-Verzeichnisse testen
 Wenn du eine Datei erfolgreich hochgeladen hast, teste verschiedene Uploadpfade:
 
 ```bash
@@ -73,7 +100,7 @@ http://[IP]/images/cmdshell.php.jpg
 
 ---
 
-## 📜 Nützliches Tool: Content-Disposition & MIME-Typ prüfen
+## Nützliches Tool: Content-Disposition & MIME-Typ prüfen
 Manche Filter prüfen den MIME-Typ. Tools wie Burp Suite oder curl helfen dir, die Content-Type-Header zu manipulieren:
 
 ```bash
@@ -87,7 +114,15 @@ Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Datei
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Siehe auch:
+
+- [php_web_shell_usage.md](/03-web-security/phpWebShell/php_web_whell_usage.md)
+- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
+- [post_expoitation_tools.md](04-os-enumeration/post_exploitation_tools.md)
+
+----
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -96,18 +131,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
-
 ---
-
-## 📚 Siehe auch:
-
-- [php_web_shell_usage.md](/03-web-security/phpWebShell/php_web_whell_usage.md)
-- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
-- [post_expoitation_tools.md](04-os-enumeration/post_exploitation_tools.md)

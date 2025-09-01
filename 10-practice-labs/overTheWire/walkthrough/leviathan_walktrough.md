@@ -13,6 +13,9 @@
 - [Leviathan 4 -> 5](#leviathan-4---5)
 - [Leviathan 5 -> 6](#leviathan-5---6)
 - [Leviathan 6 -> 7](#leviathan-6---7)
+- [Erkenntnisse](#erkenntnisse)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ----
 
@@ -657,15 +660,7 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 
 ---
 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
-
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -677,6 +672,12 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 

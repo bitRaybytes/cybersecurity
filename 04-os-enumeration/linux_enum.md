@@ -1,6 +1,28 @@
 # 🐧 Linux Enumeration – Privilege Escalation & Recon
 
-## 🧭 Ziel der Linux-Enumeration
+---
+
+## Inhaltsverzeichnis
+- [Ziel der Linux-Enumeration](#ziel-der-linux-enumeration)
+- [1. Allgemeine Systeminfos](#1-allgemeine-systeminfos)
+- [2. Benutzer & Rechte](#2-benutzer--rechte)
+- [3. Benutzerrechte & sudo](#3-benutzerrechte--sudo)
+- [4. Prozesse & laufende Dienste](#4-prozesse--laufende-dienste)
+- [5. Cronjobs & zeitgesteuerte Tasks](#5-cronjobs--zeitgesteuerte-tasks)
+- [6. Dateien mit gefährlichen Rechten](#6-dateien-mit-gefährlichen-rechten)
+- [7. Interessante Dateien & Pfade](#7-interessante-dateien--pfade)
+- [8. SSH-Keys und Zugangsdaten](#8-ssh-keys-und-zugangsdaten)
+- [9. Netzwerk-Infos](#9-netzwerk-infos)
+- [10. Installierte Pakete & Schwachstellen](#10-installierte-pakete--schwachstellen)
+- [11. Passwort & Konfig-Dateien](#11-passwort--konfig-dateien)
+- [12. Verbindungen & Weiterleitung](#12-verbindungen--weiterleitung)
+- [13. Mounts & Dateisysteme](#13-mounts--dateisysteme)
+- [Automatisierte Enumeration](#automatisierte-enumeration)
+- [Haftungsausschluss](#haftungsausschluss)
+
+--- 
+
+## Ziel der Linux-Enumeration
 
 Die Linux-Enumeration dient dazu, Informationen über ein kompromittiertes System zu sammeln, um Schwachstellen zu identifizieren und eventuell höhere Rechte (z. B. root) zu erlangen.
 
@@ -8,7 +30,7 @@ Die Linux-Enumeration dient dazu, Informationen über ein kompromittiertes Syste
 
 ---
 
-## 📁 1. Allgemeine Systeminfos
+## 1. Allgemeine Systeminfos
 
 ```bash
 uname -a                 # Kernel-Version
@@ -23,7 +45,7 @@ uptime                   # Systemlaufzeit
 
 ---
 
-## 👤 2. Benutzer & Rechte
+## 2. Benutzer & Rechte
 
 ```bash
 cat /etc/passwd
@@ -38,7 +60,13 @@ who -a
 
 ---
 
-## 🧑‍💻 3. Benutzerrechte & sudo
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 3. Benutzerrechte & sudo
 
 ```bash
 sudo -l                 # Liste erlaubter Befehle (wichtig!)
@@ -51,7 +79,7 @@ groups                  # Gruppen des Benutzers
 
 ---
 
-## 📦 4. Prozesse & laufende Dienste
+## 4. Prozesse & laufende Dienste
 
 ```bash
 ps aux
@@ -65,7 +93,7 @@ ss -tuln
 
 ---
 
-## 📜 5. Cronjobs & zeitgesteuerte Tasks
+## 5. Cronjobs & zeitgesteuerte Tasks
 
 ```bash
 crontab -l
@@ -76,7 +104,13 @@ cat /etc/crontab
 
 ---
 
-## 🗃️ 6. Dateien mit gefährlichen Rechten
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 6. Dateien mit gefährlichen Rechten
 
 ```bash
 find / -perm -4000 -type f 2>/dev/null     # SUID-Files
@@ -95,7 +129,7 @@ Wichtige SUID-Binaries z. B.:
 
 --- 
 
-## 🔍 7. Interessante Dateien & Pfade
+## 7. Interessante Dateien & Pfade
 
 ```bash
 ls -la ~
@@ -109,7 +143,7 @@ find / -name 'id_rsa' 2>/dev/null
 
 ---
 
-## 🔐 8. SSH-Keys und Zugangsdaten
+## 8. SSH-Keys und Zugangsdaten
 
 ```bash
 cat ~/.ssh/id_rsa
@@ -120,7 +154,13 @@ cat ~/.ssh/authorized_keys
 
 ---
 
-## 🌐 9. Netzwerk-Infos
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 9. Netzwerk-Infos
 
 ```bash
 ip a
@@ -135,7 +175,7 @@ netstat -antup
 
 ---
 
-## 🧰 10. Installierte Pakete & Schwachstellen
+## 10. Installierte Pakete & Schwachstellen
 
 ```bash
 dpkg -l       # Debian/Ubuntu
@@ -146,7 +186,7 @@ rpm -qa       # CentOS/RHEL
 
 ---
 
-## 🪪 11. Passwort & Konfig-Dateien
+## 11. Passwort & Konfig-Dateien
 
 ```bash
 grep -i "password" /etc/*.conf
@@ -158,7 +198,13 @@ find / -name "*.php" | xargs grep -i "db_pass"
 
 ---
 
-## 📡 12. Verbindungen & Weiterleitung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 12. Verbindungen & Weiterleitung
 
 ```bash
 lsof -i
@@ -170,7 +216,7 @@ iptables -L
 
 ---
 
-## 🔗 13. Mounts & Dateisysteme
+## 13. Mounts & Dateisysteme
 
 ```bash
 mount
@@ -183,7 +229,7 @@ cat /etc/fstab
 
 ----
 
-## 🧪 Automatisierte Enumeration
+## Automatisierte Enumeration
 
 | Tool               | Beschreibung                       |
 | ------------------ | ---------------------------------- |
@@ -196,7 +242,7 @@ cat /etc/fstab
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -205,11 +251,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

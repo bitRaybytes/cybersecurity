@@ -1,13 +1,28 @@
 # 🐘 phpRCE Cheat Sheet
 
-## 🔍 Kontext: Remote Command Execution in PHP
+
+---
+
+## Inhaltsverzeichnis
+- [Einleitung: Remote Command Execution in PHP](#einleitung-remote-command-execution-in-php)
+- [Beispiel: Verwundbarer PHP-Code](#beispiel-verwundbarer-php-code)
+- [Sicherheitsanalyse](#sicherheitsanalyse)
+- [Typische Post-Exploitation-Befehle](#typische-post-exploitation-befehle)
+- [Anwendungsszenarien (für Lab- oder CTF-Zwecke)](#anwendungsszenarien-für-lab--oder-ctf-zwecke)
+- [Verteidigung (Blue Team)](#verteidigung-blue-team)
+- [Siehe auch](#siehe-auch)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung: Remote Command Execution in PHP
 
 Diese Datei beschreibt ein typisches Beispiel für **Remote Command Execution (RCE)** durch eine unsichere PHP-Webanwendung.  
 Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebige Shell-Befehle auf dem Zielsystem auszuführen – **ein schwerwiegender Sicherheitsfehler**.
 
 ---
 
-## 🧠 Beispiel: Verwundbarer PHP-Code
+## Beispiel: Verwundbarer PHP-Code
 
 ```php
 <?php
@@ -33,7 +48,16 @@ Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebig
   echo "</pre>";
 ?>
 ```
-## ⚠️ Sicherheitsanalyse
+
+---
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Sicherheitsanalyse
 
 ### ❌ Problem:
 
@@ -52,7 +76,7 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 ---
 
-## 🧾 Typische Post-Exploitation-Befehle
+## Typische Post-Exploitation-Befehle
 
 | Befehl                       | Beschreibung                                          |                                   |
 | ---------------------------- | ----------------------------------------------------- | --------------------------------- |
@@ -72,7 +96,13 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 ---
 
-## 📦 Anwendungsszenarien (für Lab- oder CTF-Zwecke)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Anwendungsszenarien (für Lab- oder CTF-Zwecke)
 
 - 🧪 Testen von Webshells in Laborumgebungen
 - 🔍 Auffinden & Ausnutzen von RCE-Schwachstellen
@@ -81,7 +111,7 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 --- 
 
-## 🧱 Verteidigung (Blue Team)
+## Verteidigung (Blue Team)
 
 - Verwende niemals Benutzereingaben direkt in exec(), system(), passthru() etc.
 - Setze Application Firewalls ein (z. B. ModSecurity).
@@ -91,7 +121,16 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Siehe auch
+
+- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
+- [break_and_fix_query.md](/03-web-security/break-fix/break_and_fix_query.md)
+- [union_based_attack.md](/14-vulnerabilities/sqlInjection/union_based_attack.md)
+- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
+
+----
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -100,19 +139,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
-
-## 📁 Siehe auch
-
-- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
-- [break_and_fix_query.md](/03-web-security/break-fix/break_and_fix_query.md)
-- [union_based_attack.md](/14-vulnerabilities/sqlInjection/union_based_attack.md)
-- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
-
-
+---

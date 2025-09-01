@@ -1,12 +1,30 @@
 # pfSense in VirtualBox installieren und konfigurieren
 
-## ✨ Einleitung
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Voraussetzungen](#voraussetzungen)
+- [Schritt 1: Virtuelle Maschine anlegen](#schritt-1-virtuelle-maschine-anlegen)
+- [Schritt 2: Netzwerkkarten konfigurieren](#schritt-2-netzwerkkarten-konfigurieren)
+- [Schritt 3: ISO mounten & pfSense installieren](#schritt-3-iso-mounten--pfsense-installieren)
+- [Schritt 4: Netzwerkschnittstellen zuweisen (WAN/LAN)](#schritt-4-netzwerkschnittstellen-zuweisen-wanlan)
+- [Schritt 5: Zugriff über Webinterface](#schritt-5-zugriff-über-webinterface)
+- [Schritt 6: Wichtige Grundeinstellungen im WebGUI](#schritt-6-wichtige-grundeinstellungen-im-webgui)
+- [Schritt 7: pfSense als Gateway/Firewall nutzen](#schritt-7-pfsense-als-gatewayfirewall-nutzen)
+- [Tipps für dein Cybersecurity Lab](#tipps-für-dein-cybersecurity-lab)
+- [Weitere Infos & Doku](#weitere-infos--doku)
+- [Fazit](#fazit)
+- [Haftungsausschluss](#haftungsausschluss)
+
+----
+
+
+## Einleitung
 
 **pfSense** ist eine kostenlose, auf FreeBSD basierende Open-Source-Firewall- und Router-Distribution. In diesem Guide zeigen wir dir Schritt für Schritt, wie du pfSense in Oracle VirtualBox installierst und als Firewall für dein internes Lab-Netzwerk konfigurierst.
 
 ---
 
-## ✈ Voraussetzungen
+## Voraussetzungen
 
 * Oracle VirtualBox installiert
 * pfSense ISO-Image ([Download hier](https://www.pfsense.org/download/))
@@ -15,7 +33,7 @@
 
 ---
 
-## ✅ Schritt 1: Virtuelle Maschine anlegen
+## Schritt 1: Virtuelle Maschine anlegen
 
 1. Starte VirtualBox und klicke auf **Neu**.
 2. Name: `pfSense`, Typ: `BSD`, Version: `FreeBSD (64-bit)`
@@ -24,7 +42,7 @@
 
 ---
 
-## 🔧 Schritt 2: Netzwerkkarten konfigurieren
+## Schritt 2: Netzwerkkarten konfigurieren
 
 1. Klicke auf **Netzwerk** > Adapter 1:
 
@@ -39,7 +57,7 @@
 
 ---
 
-## 🌄 Schritt 3: ISO mounten & pfSense installieren
+## Schritt 3: ISO mounten & pfSense installieren
 
 1. In den VM-Einstellungen: Unter **Massenspeicher** das pfSense ISO als CD einbinden
 2. Starte die VM
@@ -56,7 +74,13 @@
 
 ---
 
-## 🛡️ Schritt 4: Netzwerkschnittstellen zuweisen (WAN/LAN)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schritt 4: Netzwerkschnittstellen zuweisen (WAN/LAN)
 
 1. Beim ersten Booten fragt pfSense, welche Schnittstellen zugewiesen werden sollen:
 
@@ -68,7 +92,7 @@
 
 ---
 
-## 🌐 Schritt 5: Zugriff über Webinterface
+## Schritt 5: Zugriff über Webinterface
 
 1. Starte eine weitere VM im gleichen **Internen Netzwerk (Labnet)**
 2. Gib im Browser der Lab-VM folgende Adresse ein:
@@ -88,7 +112,7 @@
 
 ---
 
-## 🔒 Schritt 6: Wichtige Grundeinstellungen im WebGUI
+## Schritt 6: Wichtige Grundeinstellungen im WebGUI
 
 | Funktion                | Ort im WebGUI                    | Empfehlung                         |
 | ----------------------- | -------------------------------- | ---------------------------------- |
@@ -99,7 +123,7 @@
 
 ---
 
-## 🚀 Schritt 7: pfSense als Gateway/Firewall nutzen
+## Schritt 7: pfSense als Gateway/Firewall nutzen
 
 * VMs im **Internen Netzwerk** erhalten über pfSense Internetzugang, wenn:
 
@@ -109,31 +133,31 @@
 
 ---
 
-## 🧱 Tipps für dein Cybersecurity Lab
+## Tipps für dein Cybersecurity Lab
 
-* ⚖️ Regeln definieren: Blockiere ausgehenden Verkehr gezielt
-* 🕵️ IDS/IPS aktivieren: Installiere z. B. Snort oder Suricata
-* ⚖️ VLANs konfigurieren: Netztrennung für Pentesting & Zielsysteme
-* ⚡ Traffic mitschneiden: Diagnostics > Packet Capture
+* Regeln definieren: Blockiere ausgehenden Verkehr gezielt
+* IDS/IPS aktivieren: Installiere z. B. Snort oder Suricata
+* VLANs konfigurieren: Netztrennung für Pentesting & Zielsysteme
+* Traffic mitschneiden: Diagnostics > Packet Capture
 
 ---
 
-## ✉ Weitere Infos & Doku
+## Weitere Infos & Doku
 
 * [Offizielle pfSense-Dokumentation](https://docs.netgate.com/pfsense/en/latest/)
 * [Netgate Forum](https://forum.netgate.com/)
 
 ---
 
-## 🔹 Fazit
+## Fazit
 
 Mit pfSense hast du eine leistungsstarke und flexible Firewall-Lösung in deinem virtuellen Lab. Sie bietet dir alle Möglichkeiten, ein realistisches und sicheres Netzwerk für Cybersecurity-Tests, Pentesting oder Netzwerktraining aufzubauen.
 
-> Viel Spaß beim Tüfteln im eigenen Labnet! ✨
+> Viel Spaß beim Tüfteln im eigenen Labnet!
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -146,9 +170,15 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

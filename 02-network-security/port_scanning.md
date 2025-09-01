@@ -1,6 +1,22 @@
 # 🚪 Port Scanning – Grundlagen, Techniken & Tools
 
-## 🧭 Was ist Port Scanning?
+---
+
+## Inhaltsverzeichnis
+- [Was ist Port Scanning?](#was-ist-ein-port)
+- [Grundlagen: Ports und Protokolle](#grundlagen-ports-und-protokolle)
+- [Arten von Port Scans](#arten-von-port-scans)
+- [Tool: Nmap - Der Klassiker](#tool-nmap---der-klassiker)
+- [Scan-Ergebnisse verstehen](#scan-ergebnisse-verstehen)
+- [Rechtliche Hinweise](#rechtliche-hinweise)
+- [Verteidigung gegen Port Scans (Blue Team)](#verteidigung-gegen-port-scans-blue-team)
+- [Lern-Tipps](#lern-tipps)
+- [Checkliste für Port Scanner:](#checkliste-für-port-scanner)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Was ist Port Scanning?
 
 Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports** auf einem Zielsystem zu identifizieren. Ziel ist es herauszufinden:
 - Welche **Dienste** (z. B. Webserver, Datenbank) aktiv sind
@@ -9,7 +25,7 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 
 ---
 
-## ⚙️ Grundlagen: Ports und Protokolle
+## Grundlagen: Ports und Protokolle
 
 ### Was ist ein Port?
 
@@ -38,7 +54,13 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 
 ---
 
-## 🔍 Arten von Port Scans
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Arten von Port Scans
 
 | Scan-Typ        | Beschreibung                                          | Detektion möglich? |
 |------------------|------------------------------------------------------|---------------------|
@@ -51,7 +73,7 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 
 ---
 
-## 🧪 Tool: Nmap – Der Klassiker
+## Tool: Nmap - Der Klassiker
 
 **Nmap (Network Mapper)** ist das bekannteste Tool für Netzwerkerkennung und Port Scanning.
 
@@ -87,7 +109,13 @@ nmap -sP 192.168.1.0/24
 
 ---
 
-## 🧱 Scan-Ergebnisse verstehen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Scan-Ergebnisse verstehen
 
 | Status         | Bedeutung                                         |
 | -------------- | ------------------------------------------------- |
@@ -99,7 +127,7 @@ nmap -sP 192.168.1.0/24
 
 ---
 
-## 🧑‍⚖️ Rechtliche Hinweise ⚠️
+## Rechtliche Hinweise 
 
 > Port Scanning ist in vielen Ländern ohne Erlaubnis illegal!
 
@@ -111,7 +139,7 @@ In Deutschland kann ein nicht autorisierter Scan gegen §202c StGB ("Vorbereiten
 
 ---
 
-## 🔐 Verteidigung gegen Port Scans (Blue Team)
+## Verteidigung gegen Port Scans (Blue Team)
 
 - Firewall einsetzen: Blockiert unnötige Ports (z. B. nur Port 443 offen lassen)
 - IDS/IPS: Tools wie Snort oder Suricata erkennen Scans
@@ -120,7 +148,13 @@ In Deutschland kann ein nicht autorisierter Scan gegen §202c StGB ("Vorbereiten
 
 ---
 
-## 🧠 Lern-Tipps
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Lern-Tipps
 Empfohlene Ressourcen:
 
 - Plattformen: TryHackMe („Nmap Room“), HackTheBox, Offensive Security Labs
@@ -131,15 +165,15 @@ Empfohlene Ressourcen:
 
 ## Checkliste für Port Scanner:
 
-✅ Zielsystem identifizieren
-✅ Scantyp wählen
-✅ Ports definieren
-✅ Firewalls/Filter beachten
-✅ Ergebnisse dokumentieren
+- ✅ Zielsystem identifizieren
+- ✅ Scantyp wählen
+- ✅ Ports definieren
+- ✅ Firewalls/Filter beachten
+- ✅ Ergebnisse dokumentieren
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -148,11 +182,20 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+> Erstellt von Ray – für das Cybersecurity Lern- und Pentest-Repository  
+> 🛡️ Stay curious. Stay safe.
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
----

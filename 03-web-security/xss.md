@@ -1,6 +1,21 @@
 # ⚠️ Cross-Site Scripting (XSS) – Überblick, Typen, Schutz
 
-## 📘 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Grundlagen & Ziel](#grundlagen--ziel)
+- [Typen von XSS](#typen-von-xss)
+- [Nützliche XSS Payloads](#nützliche-xss-payloads)
+- [Praxis – Testen mit XSS](#praxis---testen-mit-xss)
+- [Schutzmaßnahmen gegen XSS](#schutzmaßnahmen-gegen-xss)
+- [Bonus: XSS in modernen Frameworks](#bonus-xss-in-modernen-frameworks)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
 
 **Cross-Site Scripting (XSS)** ist eine Web-Sicherheitslücke, bei der Angreifer **schädlichen JavaScript-Code** in Webseiten einschleusen, der im Browser anderer Benutzer ausgeführt wird.
 
@@ -8,7 +23,7 @@
 
 ---
 
-## 🧠 Grundlagen & Ziel
+## Grundlagen & Ziel
 
 **Ziel von XSS**:  
 ➡️ Ausführen von JavaScript im Kontext des Opfers, z. B. um:
@@ -21,7 +36,13 @@
 
 ---
 
-## 🧨 Typen von XSS
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Typen von XSS
 
 ### 1. **Reflected XSS** (nicht persistent)
 
@@ -59,7 +80,13 @@ document.body.innerHTML = location.hash;
 
 ----
 
-## 🛠️ Nützliche XSS Payloads
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Nützliche XSS Payloads
 
 | Zweck                   | Beispiel-Payload                                                   |
 | ----------------------- | ------------------------------------------------------------------ |
@@ -73,7 +100,7 @@ document.body.innerHTML = location.hash;
 
 ---
 
-## 🧪 Praxis – Testen mit XSS
+## Praxis - Testen mit XSS
 
 ### 🔬 Tools
 
@@ -93,7 +120,13 @@ document.body.innerHTML = location.hash;
 
 ---
 
-## 🛡️ Schutzmaßnahmen gegen XSS
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schutzmaßnahmen gegen XSS
 
 ### ✅ Server-seitiger Schutz
 
@@ -120,7 +153,7 @@ X-XSS-Protection: 1; mode=block
 
 ---
 
-## 📚 Bonus: XSS in modernen Frameworks
+## Bonus: XSS in modernen Frameworks
 
 - React, Angular, Vue nutzen intern DOM-Sanitizer
 - Problematisch bleiben:
@@ -130,7 +163,17 @@ X-XSS-Protection: 1; mode=block
 
 ---
 
-## ⚠️ Haftungsausschluss
+
+## Nützliche Links
+
+- [OWASP XSS Overview](https://owasp.org/www-community/attacks/xss/)
+- [PortSwigger XSS Academy](https://portswigger.net/web-security/cross-site-scripting)
+- [XSS Cheat Sheet (OWASP)](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
+- [PayloadsAllTheThings: XSS](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
+
+---
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -139,19 +182,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-
-### 🧾 Nützliche Links
-
-- [OWASP XSS Overview](https://owasp.org/www-community/attacks/xss/)
-- [PortSwigger XSS Academy](https://portswigger.net/web-security/cross-site-scripting)
-- [XSS Cheat Sheet (OWASP)](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
-- [PayloadsAllTheThings: XSS](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)

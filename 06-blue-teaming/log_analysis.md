@@ -1,12 +1,12 @@
 # 📊 Log Analysis Guide
 
-## 📘 Ziel dieser Datei
+## Ziel dieser Datei
 
-Diese Datei bietet eine vollständige Übersicht zum Thema **Log-Analyse** im Bereich Cybersecurity. Sie hilft bei der Erkennung von Angriffsmustern, der forensischen Nachverfolgung von Vorfällen und der allgemeinen Sicherheitsüberwachung von Systemen und Netzwerken.
+Diese Datei bietet eine Übersicht zum Thema **Log-Analyse** im Bereich Cybersecurity. Sie hilft bei der Erkennung von Angriffsmustern, der forensischen Nachverfolgung von Vorfällen und der allgemeinen Sicherheitsüberwachung von Systemen und Netzwerken.
 
 ---
 
-## 🧭 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [1. Einführung in Log-Analyse](#1-einführung-in-log-analyse)
 - [2. Wichtige Log-Typen](#2-wichtige-log-typen)
@@ -16,10 +16,13 @@ Diese Datei bietet eine vollständige Übersicht zum Thema **Log-Analyse** im Be
 - [6. Zentrale Logformate](#6-zentrale-logformate)
 - [7. Best Practices](#7-best-practices)
 - [8. Nützliche Ressourcen](#8-nützliche-ressourcen)
+- [Rechtlicher Hinweis](#rechtlicher-hinweis)
+- [Haftungsausschluss](#haftungsausschluss)
+
 
 ---
 
-## 1. 🧾 Einführung in Log-Analyse
+## 1. Einführung in Log-Analyse
 
 Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse dieser Logs ist essenziell zur:
 
@@ -30,7 +33,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 
 ---
 
-## 2. 📚 Wichtige Log-Typen
+## 2. Wichtige Log-Typen
 
 | Logtyp | Beschreibung |
 |--------|--------------|
@@ -45,7 +48,13 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 
 ---
 
-## 3. 🛠️ Tools zur Log-Analyse
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 3. Tools zur Log-Analyse
 
 - **ELK Stack (Elasticsearch + Logstash + Kibana)**
 - **Graylog**
@@ -56,7 +65,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 
 ---
 
-## 4. 🔍 Wichtige Begriffe & Felder
+## 4. Wichtige Begriffe & Felder
 
 - **Timestamp** – Zeitstempel des Events
 - **Source IP** – Ursprungs-IP der Anfrage
@@ -69,46 +78,52 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 
 ---
 
-## 5. 🚨 Beispielhafte Angriffserkennung
+## 5. Beispielhafte Angriffserkennung
 
-### 🔓 Brute-Force auf SSH (Linux `/var/log/auth.log`)
+### Brute-Force auf SSH (Linux `/var/log/auth.log`)
 ```bash
 grep "Failed password" /var/log/auth.log | awk '{print $(NF-3)}' | sort | uniq -c | sort -nr
 ```
 
-### 🕷️ Webshell Detection (Apache)
+### Webshell Detection (Apache)
 ```bash
 grep "eval(" /var/log/apache2/access.log
 grep ".phtml" /var/log/apache2/access.log
 ```
 
-### 📦 Suspicious User-Agents
+### Suspicious User-Agents
 ```bash
 grep -i "curl\|python\|wget" /var/log/apache2/access.log
 ```
 
 ---
 
-## 6. 🧾 Zentrale Logformate
+<div align=right>
 
-### 🔹 Apache Access Log
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 6. Zentrale Logformate
+
+### Apache Access Log
 ```swift
 127.0.0.1 - - [10/Jul/2025:14:23:15 +0200] "GET /index.php HTTP/1.1" 200 2326 "-" "Mozilla/5.0"
 ```
 
-### 🔹 Auth Log (Linux)
+### Auth Log (Linux)
 ```pgsql
 Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin from 192.168.1.50 port 2222 ssh2
 ```
 
-### 🔹 Windows Security Log (Evt/EVTX)
+### Windows Security Log (Evt/EVTX)
 - Event ID 4624 – Erfolgreiche Anmeldung
 - Event ID 4625 – Fehlgeschlagene Anmeldung
 - Event ID 4688 – Prozess erstellt
 
 --- 
 
-## 7. ✅ Best Practices
+## 7. Best Practices
 - Zentralisierung der Logs mit SIEM
 - Regelmäßiges Monitoring und Alerts definieren
 - Langzeitarchivierung für forensische Analyse
@@ -117,18 +132,20 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 
 ---
 
-## 8. 📚 Nützliche Ressourcen
+## 8. Nützliche Ressourcen
 - [logcheck.org](https://logcheck.org/)
 - [wazuh.com](https://wazuh.com/) (Open Source Security Platform)
 - [Linux Log Files Overview](https://www.loggly.com/ultimate-guide/linux-logging-basics/)
 - [Sigma Rule GitHub](https://github.com/SigmaHQ/sigma)
 
----
 
-## ⚠️ Rechtlicher Hinweis
+
+## Rechtlicher Hinweis
 Die Analyse und Überwachung von Logs darf nur auf eigenen Systemen oder mit ausdrücklicher Genehmigung erfolgen. Logfiles können personenbezogene Daten enthalten und unterliegen ggf. Datenschutzregelungen.
 
-## ⚠️ Haftungsausschluss
+---
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -137,9 +154,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

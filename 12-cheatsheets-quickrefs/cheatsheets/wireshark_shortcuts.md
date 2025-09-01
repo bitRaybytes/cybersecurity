@@ -3,8 +3,23 @@
 >Ein schneller Überblick über die wichtigsten Filter, Shortcuts & Features in Wireshark.
 
 ---
+## Inhaltsverzeichnis
+- [Grundlagen](#grundlagen)
+- [Capture Filter vs Display Filter](#capture-filter-bpf-syntax)
+- [Häufige Display Filter](#häufige-display-filter)
+- [IP & Ports](#ip--ports)
+- [Verbindungen & Sessions](#verbindungen--sessions)
+- [TLS/SSL](#tlsssl)
+- [Capture Filter (BPF Syntax)](#capture-filter-bpf-syntax)
+- [Nützliche Tastenkombinationen](#nützliche-tastenkombinationen)
+- [Tools & Extras](#tools--extras)
+- [Exportieren](#exportieren)
+- [Tipps für Anfänger](#tipps-für-anfänger)
+- [Nützliche Ressourcen](#nützliche-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
 
-## 📍 Grundlagen
+
+## Grundlagen
 
 | Begriff       | Beschreibung                               |
 | ------------- | ------------------------------------------ |
@@ -15,7 +30,7 @@
 
 ---
 
-## 🎯 Capture Filter vs Display Filter
+## Capture Filter vs Display Filter
 
 | Typ                | Erklärung                       | Beispiel                       |
 | ------------------ | ------------------------------- | ------------------------------ |
@@ -27,7 +42,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🔍 Häufige Display Filter
+## Häufige Display Filter
 
 - http
 - tcp
@@ -41,7 +56,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🧪 IP & Ports
+## IP & Ports
 
 - ip.addr == 192.168.0.1
 - ip.src == 10.0.0.1
@@ -51,7 +66,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🧪 Verbindungen & Sessions
+## Verbindungen & Sessions
 
 - tcp.stream eq 0                 # Erstverbindung
 - tcp.flags.syn == 1              # SYN-Pakete (Handshake)
@@ -59,7 +74,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🧪 TLS/SSL
+## TLS/SSL
 
 - ssl.handshake
 - tls.record.version
@@ -67,7 +82,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## ⚙️ Capture Filter (BPF Syntax)
+## Capture Filter (BPF Syntax)
 
 - host 192.168.0.1
 - net 192.168.0.0/24
@@ -79,7 +94,13 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 💡 Nützliche Tastenkombinationen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Nützliche Tastenkombinationen
 
 | Shortcut           | Funktion                   |
 | ------------------ | -------------------------- |
@@ -94,7 +115,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🔧 Tools & Extras
+## Tools & Extras
 
 | Funktion              | Beschreibung                                     |
 | --------------------- | ------------------------------------------------ |
@@ -105,7 +126,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🗂️ Exportieren
+## Exportieren
 
 | Format    | Beschreibung                  |
 | --------- | ----------------------------- |
@@ -116,7 +137,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🧪 Tipps für Anfänger
+## Tipps für Anfänger
 
 - Beginne mit Display Filter – sicherer & einfacher.
 - Nutze Farben, um Protokolle visuell hervorzuheben.
@@ -126,7 +147,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## 🔗 Nützliche Ressourcen
+## Nützliche Ressourcen
 
 | Thema                   | Link                                                                                                     |
 | ----------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -138,7 +159,7 @@ Display Filter sind Wireshark-spezifisch.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -147,9 +168,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

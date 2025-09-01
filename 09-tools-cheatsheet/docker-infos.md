@@ -1,64 +1,84 @@
 # 🐳 Docker auf Kali Linux - Einführung und Installationsanleitung
 
-## 📘 Einleitung
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Vorteile von Docker](#vorteile-von-docker)
+- [Wichtige Begriffe](#wichtige-begriffe)
+- [Docker auf Kali Linux installieren (Debian basiert)](#docker-auf-kali-linux-installieren-debian-basiert)
+- [Docker Befehle für den Einstieg](#docker-befehle-für-den-einstieg)
+- [Sicherheitsaspekte bei Docker](#sicherheitsaspekte-bei-docker)
+- [Fazit](#fazit)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+
+## Einleitung
 
 Docker ist eine Plattform zur Containerisierung von Anwendungen. Sie ermöglicht es, Software samt ihrer Abhängigkeiten in sogenannten **Containern** auszuführen. Diese Container sind leichtgewichtig, portabel und bieten eine isolierte Umgebung für Anwendungen.
 
-In der IT-Sicherheit 🛡️ und DevOps ⚙️ wird Docker oft genutzt, um Testumgebungen zu erstellen, Tools zu isolieren oder Software reproduzierbar auszuführen.
+In der IT-Sicherheit und DevOps ⚙️ wird Docker oft genutzt, um Testumgebungen zu erstellen, Tools zu isolieren oder Software reproduzierbar auszuführen.
 
 ---
 
-## 🚀 Vorteile von Docker
+## Vorteile von Docker
 
-* ✅ **Portabilität:** Container laufen überall gleich (lokal, Server, Cloud)
-* 🔐 **Isolation:** Anwendungen laufen getrennt voneinander
-* ⚡ **Schnelle Bereitstellung:** Images lassen sich schnell laden und starten
-* ♻️ **Reproduzierbarkeit:** Gleiche Umgebung für Dev, Test und Prod
-* 🪶 **Ressourcenschonung:** Container sind leichtgewichtiger als VMs
+* **Portabilität:** Container laufen überall gleich (lokal, Server, Cloud)
+* **Isolation:** Anwendungen laufen getrennt voneinander
+* **Schnelle Bereitstellung:** Images lassen sich schnell laden und starten
+* **Reproduzierbarkeit:** Gleiche Umgebung für Dev, Test und Prod
+* **Ressourcenschonung:** Container sind leichtgewichtiger als VMs
 
 ---
 
-## 🧠 Wichtige Begriffe
+## Wichtige Begriffe
 
-| 📌 Begriff     | 💬 Bedeutung                                             |
+|   Begriff      |  Bedeutung                                               |
 | -------------- | -------------------------------------------------------- |
 | **Image**      | Vorlage für einen Container                              |
 | **Container**  | Laufzeitinstanz eines Images                             |
 | **Dockerfile** | Datei zur Beschreibung, wie ein Image aufgebaut ist      |
-| **Registry**   | Ort, an dem Images gespeichert werden (z. B. Docker Hub) |
+| **Registry**   | Ort, an dem Images gespeichert werden (z. B. Docker Hub)  |
 
 ---
 
-## 🛠️ Docker auf Kali Linux installieren (Debian basiert)
+<div align=right>
 
-### 1️⃣ System aktualisieren
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Docker auf Kali Linux installieren (Debian basiert)
+
+### 1. System aktualisieren
 
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
-### 2️⃣ Benötigte Abhängigkeiten installieren 
+### 2. Benötigte Abhängigkeiten installieren 
 (optional)
 
 ```bash
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
 ```
+![Docker Installation testen](/10-practice-labs/ressources/pictures/step3installDependencies.png)
 
-### 3️⃣ Docker GPG-Schlüssel hinzufügen 
+### 3. Docker GPG-Schlüssel hinzufügen 
 (optional, wenn 2 installiert wurde)
 
 ```bash
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
 
-### 4️⃣ Docker Repository einrichten 
+### 4. Docker Repository einrichten 
 (optional)
 
 ```bash
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/nulldocker
 ```
 
-### 5️⃣ Docker installieren
+### 5. Docker installieren
 
 ```bash
 sudo apt update
@@ -70,7 +90,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 sudo apt-get install -y docker.io
 ```
 
-🖼️ ![Docker installieren](/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step4installDocker.png)
+![Docker installieren](/10-practice-labs/ressources/pictures/step4installDocker.png)
 
 #### weitere nützliche Docker Add-Ons (optional)
 
@@ -84,28 +104,34 @@ So installierst du Docker Compose:
 sudo apt install docker-compose
 ```
 
-### 6️⃣ Docker testen 🧪
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+### 6️. Docker testen
 
 ```bash
 sudo docker run hello-world
 ```
 
-🖼️ ![Docker Installation testen](/10-practice-labs/dvwa-lab/dvwa-ressources/pictures/step5dockerTest.png)
+![Docker Installation testen](/10-practice-labs/ressources/pictures/step5dockerTest.png)
 
-### 🔓 Optional: Docker ohne sudo verwenden
+### Optional: Docker ohne sudo verwenden
 
 ```bash
 sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-> ℹ️ Danach ab- und wieder anmelden.
+> Danach ab- und wieder anmelden.
 
 ---
 
-## 🧰 Docker Befehle für den Einstieg
+## Docker Befehle für den Einstieg
 
-| 🧾 Befehl                        | 🛠️ Beschreibung                     |
+|   Befehl                         |  Beschreibung                        |
 | -------------------------------- | ------------------------------------ |
 | `docker run image`               | Container starten                    |
 | `docker ps`                      | Laufende Container anzeigen          |
@@ -118,29 +144,29 @@ newgrp docker
 
 ---
 
-## 🔐 Sicherheitsaspekte bei Docker
+## Sicherheitsaspekte bei Docker
 
-* ⚠️ **Root-Rechte:** Standardmäßig benötigt Docker Root-Rechte → Sicherheitsrisiko
-* 🧱 **Container-Isolation:** Stark, aber nicht so sicher wie echte VMs
-* 🌐 **Netzwerkzugriff:** Container können auf das Netzwerk zugreifen → Firewall wichtig
-* 🛡️ **Image-Vertrauen:** Nur Images aus vertrauenswürdigen Quellen verwenden
-
----
-
-## 🧩 Fazit
-
-Docker ist ein extrem nützliches Werkzeug, um Anwendungen und Tools **schnell**, **sicher** und **portabel** bereitzustellen. Besonders für **Pentester** 🕵️‍♂️ und **Entwickler** 👨‍💻 auf Kali Linux bietet Docker eine Möglichkeit, komplexe Tools oder komplette Lab-Umgebungen in isolierten Containern zu betreiben – ohne das Basissystem zu verunreinigen.
+* **Root-Rechte:** Standardmäßig benötigt Docker Root-Rechte → Sicherheitsrisiko
+* **Container-Isolation:** Stark, aber nicht so sicher wie echte VMs
+* **Netzwerkzugriff:** Container können auf das Netzwerk zugreifen → Firewall wichtig
+* **Image-Vertrauen:** Nur Images aus vertrauenswürdigen Quellen verwenden
 
 ---
 
-💡 **Tipp:** Verwende Docker in Kombination mit `docker-compose`, um mehrere Container gleichzeitig (z. B. Web + DB) zu starten 📦 ➕ 🗃️.
+## Fazit
+
+Docker ist ein extrem nützliches Werkzeug, um Anwendungen und Tools **schnell**, **sicher** und **portabel** bereitzustellen. Besonders für **Pentester** und **Entwickler** auf Kali Linux bietet Docker eine Möglichkeit, komplexe Tools oder komplette Lab-Umgebungen in isolierten Containern zu betreiben – ohne das Basissystem zu verunreinigen.
+
+---
+
+**Tipp:** Verwende Docker in Kombination mit `docker-compose`, um mehrere Container gleichzeitig (z. B. Web + DB) zu starten 📦 ➕ 🗃️.
 
 ## Nützliche Links
 - [Docker Website](https://www.docker.com/)
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -153,9 +179,15 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

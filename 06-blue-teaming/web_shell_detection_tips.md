@@ -1,5 +1,7 @@
 # 🛡️ Web Shell Detection Tips
 
+> **Hinweis:** Diese Datei ist Teil des Blue Team-Bereichs des Repositories und dient ausschließlich zur Verteidigung und Früherkennung von Angriffen – nicht zur Durchführung selbiger.
+
 **Ziel dieser Datei:**  
 Diese Datei dient Blue Teamern und IT-Sicherheitsverantwortlichen zur schnellen Orientierung 
 bei der Erkennung und Abwehr von Webshells auf kompromittierten Systemen. Webshells ermöglichen 
@@ -7,11 +9,20 @@ Angreifern oft den Fernzugriff auf Server – und sind daher eine kritische Bedr
 
 ---
 
-## 🧩 Typische Auffälligkeiten
+## Inhaltsverzeichnis
+- [Typische Auffälligkeiten](#typische-auffälligkeiten)
+- [Tools & Techniken zur Erkennung](#tools--techniken-zur-erkennung)
+- [Best Practices zur Härtung](#best-practices-zur-härtung)
+- [Weitere Ressourcen](#weitere-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Typische Auffälligkeiten
 
 Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet werden:
 
-### 🔍 Verdächtige Dateinamen / Uploads
+### Verdächtige Dateinamen / Uploads
 
 - Dateien mit doppelter Erweiterung:  
   `cmdshell.php.jpg`, `backdoor.php%00.jpg`, `web.php5`
@@ -19,7 +30,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
   `.phtml`, `.php4`, `.php5`, `.pht`, `.inc`, `.phar`
 - Dateinamen mit `cmd`, `shell`, `eval`, `upload`, `backdoor`
 
-### 🔥 Verdächtiger Code innerhalb von Dateien
+### Verdächtiger Code innerhalb von Dateien
 
 - Verwendung gefährlicher PHP-Funktionen:
   - `eval()`, `system()`, `shell_exec()`, `passthru()`, `exec()`
@@ -28,7 +39,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - Dynamisch generierte Funktionennamen:  
   z. B. `($func = 'sys'.'tem')($cmd);`
 
-### 📈 Log-/Verhaltensauffälligkeiten
+### Log-/Verhaltensauffälligkeiten
 
 - GET-Parameter mit Shell-Befehlen (z. B. `?cmd=ls`)
 - Unerwartete POST- oder GET-Anfragen auf verdächtige Dateien
@@ -36,33 +47,39 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 
 ---
 
-## 🛠️ Tools & Techniken zur Erkennung
+## Tools & Techniken zur Erkennung
 
-### 🔬 Dateibasierte Analyse
+### Dateibasierte Analyse
 
-- 🔍 **YARA Rules**
+- **YARA Rules**
   - Erkennung von typischen Shell-Mustern im Quelltext
   - Beispiel: Regel für `eval(base64_decode(...))`
-- 📦 **Antivirus-/EDR-Signaturen**
+- **Antivirus-/EDR-Signaturen**
   - Viele AV-Produkte erkennen bekannte Webshell-Signaturen
-- 🧪 **Regex-Suche**
+- **Regex-Suche**
   - Suchen nach `eval\(base64_decode\(`, `assert\(` etc.
-- 📁 **Diff-Tools**
+- **Diff-Tools**
   - Änderungen in Web-Verzeichnissen erkennen (z. B. mit `inotify`, `ossec`)
 
-### 🖥️ Laufzeitanalyse & Logüberwachung
+### Laufzeitanalyse & Logüberwachung
 
-- 🔍 **Log-Analyse**
+- **Log-Analyse**
   - Webserver-Logs auf ungewöhnliche Requests überwachen
   - z. B. Apache/Nginx Logs mit `cmd=`, `eval`, `.php.jpg`
-- 🛡️ **WAF (Web Application Firewall)**
+- **WAF (Web Application Firewall)**
   - Nutze ModSecurity-Regeln zur Blockierung verdächtiger Parameter
-- 📊 **SIEM-Systeme**
+- **SIEM-Systeme**
   - Automatisierte Alarmierung bei verdächtigen Zugriffsmustern
 
 ---
 
-## 🔐 Best Practices zur Härtung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Best Practices zur Härtung
 
 ### 1. Uploads & Ausführung trennen
 - Ladeverzeichnis (z. B. `/uploads`) darf keine `.php`-Dateien ausführen
@@ -85,7 +102,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 
 ---
 
-## 📚 Weitere Ressourcen
+## Weitere Ressourcen
 
 - [OWASP Web Shell Detection](https://owasp.org/www-community/attacks/Web_Shell)
 - [YARA Rule Database (GitHub)](https://github.com/Yara-Rules/rules)
@@ -93,5 +110,28 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 
 ---
 
-> ⚠️ **Hinweis:** Diese Datei ist Teil des Blue Team-Bereichs des Repositories und dient ausschließlich zur Verteidigung und Früherkennung von Angriffen – nicht zur Durchführung selbiger.
+## Haftungsausschluss
 
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

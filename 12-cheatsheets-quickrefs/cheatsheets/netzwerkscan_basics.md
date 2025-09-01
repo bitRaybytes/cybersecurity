@@ -1,6 +1,17 @@
 # ⚙️ Kommandozeilen Basics auf Linux
 
-## 🚀 Netzwerk Scans (Klassisch)
+## Inhaltsverzeichnis
+- [Netzwerk Scans (Klassisch)](#netzwerk-scans-klassisch)
+- [Netzwerk Scans (Moderne Tools)](#netzwerk-scans-moderne-tools)
+- [Erweiterte Tools für Netzwerk-Discovery](#erweiterte-tools-für-netzwerk-discovery)
+- [Tipps zur Netzwerkanalyse](#tipps-zur-netzwerkanalyse)
+- [Bonus: Interface-Troubleshooting](#bonus-interface-troubleshooting)
+- [Empfohlene Reihenfolge für Beginner](#empfohlene-reihenfolge-für-beginner)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Netzwerk Scans (Klassisch)
 
 | Befehl       | Beschreibung                                                                           |
 | ------------ | -------------------------------------------------------------------------------------- |
@@ -15,7 +26,7 @@
 
 ---
 
-## 🚀 Netzwerk Scans (Moderne Tools)
+## Netzwerk Scans (Moderne Tools)
 
 | Befehl | Beschreibung                                                      |
 | ------ | ----------------------------------------------------------------- |
@@ -25,9 +36,9 @@
 
 ---
 
-## 📊 Erweiterte Tools für Netzwerk-Discovery
+## Erweiterte Tools für Netzwerk-Discovery
 
-### 🔎 `netdiscover`
+### `netdiscover`
 
 Automatischer ARP-Scan im lokalen Netzwerk zur Erkennung aktiver Hosts.
 
@@ -35,7 +46,7 @@ Automatischer ARP-Scan im lokalen Netzwerk zur Erkennung aktiver Hosts.
 netdiscover -i eth0
 ```
 
-### ⚛️ `nmap`
+### `nmap`
 
 Vielseitiges Netzwerkscan-Tool:
 
@@ -55,7 +66,7 @@ nmap -O 192.168.1.102
 
 -> [Mehr Infos zu `nmap` hier](/02-network-security/tools/nmap.md)
 
-### 🔹 `arp-scan`
+### `arp-scan`
 
 Ein schneller ARP-basiertes Tool für lokale Netzwerke:
 
@@ -65,16 +76,16 @@ sudo arp-scan --interface=eth0 192.168.1.0/24
 
 ---
 
-## 📊 Tipps zur Netzwerkanalyse
+## Tipps zur Netzwerkanalyse
 
 - Stelle sicher, dass du Root-Rechte hast (`sudo`) bei Tools wie `nmap`, `arp-scan` oder `netdiscover`.
 - Nutze `ip a`, um deine eigene IP und Subnetz zu identifizieren.
-- ✅ Ziel: Aktive Hosts finden, deren offene Ports identifizieren, Dienste erkennen, Exploits vorbereiten.
+- Ziel: Aktive Hosts finden, deren offene Ports identifizieren, Dienste erkennen, Exploits vorbereiten.
 - Kombination aus: **Ping**, **ARP**, **DNS**, **Portscanning**, **Banner-Grabbing** = perfekte Recon.
 
 ---
 
-## 📘 Bonus: Interface-Troubleshooting
+## Bonus: Interface-Troubleshooting
 
 ```bash
 # Liste aller Netzwerkschnittstellen:
@@ -89,17 +100,17 @@ sudo dhclient eth0
 
 ---
 
-## 📊 Empfohlene Reihenfolge für Beginner
+## Empfohlene Reihenfolge für Beginner
 
-1. `ip a` → Eigene IP & Subnetz erkennen
-2. `netdiscover` oder `nmap -sn` → Aktive Hosts finden
-3. `nmap -sC -sV` → Dienste & Versionen erkennen
-4. `traceroute` → Netzwerkstruktur analysieren
-5. `arp -a` oder `ip n` → MAC-zu-IP-Zuordnung verstehen
+1. `ip a` -> Eigene IP & Subnetz erkennen
+2. `netdiscover` oder `nmap -sn` -> Aktive Hosts finden
+3. `nmap -sC -sV` -> Dienste & Versionen erkennen
+4. `traceroute` -> Netzwerkstruktur analysieren
+5. `arp -a` oder `ip n` -> MAC-zu-IP-Zuordnung verstehen
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -108,12 +119,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-

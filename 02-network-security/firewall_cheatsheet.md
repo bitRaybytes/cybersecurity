@@ -1,12 +1,25 @@
 # 🔥 Firewall – Cheat Sheet
 
-## 🛡️ Firewall – Definition
+---
+
+## Inhaltsverzeichnis
+
+- [Firewall-Definition](#firewall-definition)
+- [Firewall-Regeln](#firewall-regeln)
+- [Firewall-Arten](#firewall-arten)
+- [Vergleich nach Schichten](#vergleich-nach-schichten)
+- [Wichtige Hinweise](#wichtige-hinweise)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Firewall-Definition
 Eine **Firewall** schützt Netzwerke und Systeme vor unautorisierten Zugriffen, indem sie den Datenverkehr nach definierten Regeln filtert.  
 Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelassen.
 
 ---
 
-## 📜 Firewall-Regeln
+## Firewall-Regeln
 
 **Kriterien für Regelwerke:**
 - **Quelladresse / Quellport** -> z. B. IP-Adressen oder Netzwerkbereiche  
@@ -23,7 +36,13 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 
 ---
 
-## 🧱 Firewall-Arten
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Firewall-Arten
 
 ### 1. Paketfilter-Firewall (Stateless Packet Filtering)
 - **Funktionsweise:**  
@@ -90,7 +109,13 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 
 ---
 
-## 📊 Vergleich nach Schichten
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Vergleich nach Schichten
 
 | Firewall-Typ             | OSI-Layer | Prüfungsebene | Beispiele |
 |---------------------------|-----------|---------------|-----------|
@@ -101,7 +126,7 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 
 ---
 
-## 📝 Wichtige Hinweise
+## Wichtige Hinweise
 - **Layer 3–4 Firewalls** -> schnell, aber weniger sicher  
 - **Layer 7 Firewalls** -> granular, aber langsamer  
 - **Hybrid-Ansätze (NGFW)** sind heute Standard in Unternehmen  
@@ -109,7 +134,7 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -121,6 +146,12 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 📅 **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Ergänzungen & Verbesserungen gern gesehen!  

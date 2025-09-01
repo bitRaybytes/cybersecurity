@@ -4,7 +4,21 @@
 
 ---
 
-## 📂 Navigation im Dateisystem
+## Inhaltsverzeichnis
+- [Navigation im Dateisystem](#navigation-im-dateisystem)
+- [Datei- & Ordneroperationen](#datei---ordneroperationen)
+- [Suchen](#suchen)
+- [Paketverwaltung](#paketverwaltung)
+- [Benutzer & Rechte](#benutzer--rechte)
+- [Systemüberwachung](#systemüberwachung)
+- [Netzwerk](#netzwerk)
+- [Nützliche Tools (falls installiert)](#nützliche-tools-falls-installiert)
+- [Rechte & Sicherheit](#rechte--sicherheit)
+- [Cleanup & Logins](#cleanup--logins)
+- [Bonus: Nützliche Tastenkürzel im Terminal](#bonus-nützliche-tastenkürzel-im-terminal)
+- [Haftungsausschluss](#haftungsausschluss)
+
+## Navigation im Dateisystem
 
 | Befehl                       | Beschreibung                          |
 |------------------------------|---------------------------------------|
@@ -17,7 +31,7 @@
 
 ---
 
-## 📄 Datei- & Ordneroperationen
+## Datei- & Ordneroperationen
 
 | Befehl                       | Beschreibung                              |
 |------------------------------|-------------------------------------------|
@@ -36,7 +50,7 @@
 
 ---
 
-## 🔍 Suchen
+## Suchen
 
 | Befehl                               | Beschreibung                              |
 |--------------------------------------|-------------------------------------------|
@@ -49,7 +63,13 @@
 
 ---
 
-## 📦 Paketverwaltung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Paketverwaltung
 
 ### Debian/Ubuntu (APT)
 
@@ -69,7 +89,7 @@
 
 ---
 
-## 👤 Benutzer & Rechte
+## Benutzer & Rechte
 
 | Befehl                             | Beschreibung                             |
 |------------------------------------|------------------------------------------|
@@ -83,7 +103,7 @@
 
 ---
 
-## 📊 Systemüberwachung
+## Systemüberwachung
 
 | Befehl                 | Beschreibung                          |
 |------------------------|---------------------------------------|
@@ -97,7 +117,7 @@
 
 ---
 
-## 🌐 Netzwerk
+## Netzwerk
 
 | Befehl                       | Beschreibung                            |
 |------------------------------|-----------------------------------------|
@@ -111,7 +131,7 @@
 
 ---
 
-## 🧰 Nützliche Tools (falls installiert)
+## Nützliche Tools (falls installiert)
 
 | Tool       | Zweck                                    |
 |------------|------------------------------------------|
@@ -122,7 +142,13 @@
 
 ---
 
-## 🔐 Rechte & Sicherheit
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Rechte & Sicherheit
 
 | Befehl                       | Beschreibung                          |
 |------------------------------|---------------------------------------|
@@ -133,7 +159,7 @@
 
 ---
 
-## 🧹 Cleanup & Logins
+## Cleanup & Logins
 
 | Befehl                  | Beschreibung                         |
 |------------------------|---------------------------------------|
@@ -145,7 +171,7 @@
 
 ---
 
-## 🧠 Bonus: Nützliche Tastenkürzel im Terminal
+## Bonus: Nützliche Tastenkürzel im Terminal
 
 | Kürzel           | Funktion                                 |
 |------------------|------------------------------------------|
@@ -159,11 +185,11 @@
 
 ---
 
-> ✨ **Tipp**: Nutze `man befehl`, um die Manpage eines Befehls zu lesen, z. B. `man ls`.
+> **Tipp**: Nutze `man befehl`, um die Manpage eines Befehls zu lesen, z. B. `man ls`.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -172,9 +198,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
-🤝 Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

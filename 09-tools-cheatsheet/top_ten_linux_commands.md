@@ -7,7 +7,15 @@ Diese Datei enthält eine kompakte Auswahl der nützlichsten Linux-Kommandos fü
 
 ---
 
-## 🔟 Die wichtigsten Linux-Kommandos
+## Inhaltsverzeichnis
+- [Die 10 wichtigsten Linux-Kommandos](#die-10-wichtigsten-linux-kommandos)
+- [Weitere nützliche Kommandos](#weitere-nützliche-kommandos)
+- [Quellen & Empfehlungen](#quellen--empfehlungen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Die 10 wichtigsten Linux-Kommandos
 
 ### 1. `grep` – Textsuche in Dateien
 
@@ -39,6 +47,12 @@ chmod +x exploit.sh
 chmod 777 shell.php
 ```
 ➡️ Setze ausführbare Rechte oder öffne Berechtigungen für Datei-Uploads.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 5. scp – Dateien über SSH übertragen
 
@@ -90,7 +104,7 @@ pstree
 ```
 ➡️ Finde laufende Prozesse oder potenzielle Schwachstellen in Services.
 
-### 🧪 Bonus: Praktische Kombinationen
+### Bonus: Praktische Kombinationen
 
 ```bash
 find / -type f -name "*.php" 2>/dev/null | xargs grep -i 'db_password'
@@ -100,7 +114,13 @@ grep -r "api_key" /var/www/html
 
 --- 
 
-## 📎 Weitere nützliche Kommandos
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Weitere nützliche Kommandos
 
 | Kommando        | Zweck                                     |
 | --------------- | ----------------------------------------- |
@@ -113,7 +133,14 @@ grep -r "api_key" /var/www/html
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Quellen & Empfehlungen
+- [explainshell.com – Erklärt Bash-Befehle im Detail](https://explainshell.com/)
+- [GTFOBins – Nützliche Binaries für Privilege Escalation](https://gtfobins.github.io/)
+- [HackTricks Linux – Post-Exploitation Tipps](https://book.hacktricks.xyz/linux-hardening/)
+
+---
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -122,16 +149,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
 
-Stay methodical. Stay legal. Stay secure. 🔐
+<div align=right>
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-## 📚 Quellen & Empfehlungen
-- [explainshell.com – Erklärt Bash-Befehle im Detail](https://explainshell.com/)
-- [GTFOBins – Nützliche Binaries für Privilege Escalation](https://gtfobins.github.io/)
-- [HackTricks Linux – Post-Exploitation Tipps](https://book.hacktricks.xyz/linux-hardening/)

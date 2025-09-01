@@ -3,24 +3,34 @@
 **CyberChef** – "The Cyber Swiss Army Knife" – ist ein webbasiertes Tool von GCHQ, 
 das hunderte Funktionen für die Datenanalyse und -bearbeitung ohne lokale Installation bietet.
 
-🌐 Online: https://gchq.github.io/CyberChef/
+Online: https://gchq.github.io/CyberChef/
 
 ---
 
-## 🎯 Anwendungsgebiete (Use Cases)
-
-- 🔐 Entschlüsseln und Dekodieren (Base64, XOR, ROT13, etc.)
-- 📄 Analyse von Datenströmen (PCAP, Hex-Dumps)
-- 📊 Hash-Erzeugung & Vergleich
-- 📤 Encoding & Obfuscation-Erkennung
-- 📂 File-Forensik (z. B. Dateiheader identifizieren)
-- 🕵️‍♂️ Payload-Rekonstruktion aus Malware
-- 💬 JWT/Token-Analyse
-- 🧪 Encoding-Ketten (z. B. mehrfach Base64 + URL Encode)
+## Inhaltsverzeichnis
+- [Anwendungsgebiete (Use Cases)](#anwendungsgebiete-use-cases)
+- [Wichtige Funktionen & Operatoren](#wichtige-funktionen--operatoren)
+- [Praktische Rezepte (Recipes)](#praktische-rezepte-recipes)
+- [Tipps & Best Practices](#tipps--best-practices)
+- [Nützliche Links & Quellen](#nützliche-links--quellen)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 🛠️ Wichtige Funktionen & Operatoren
+## Anwendungsgebiete (Use Cases)
+
+- Entschlüsseln und Dekodieren (Base64, XOR, ROT13, etc.)
+- Analyse von Datenströmen (PCAP, Hex-Dumps)
+- Hash-Erzeugung & Vergleich
+- Encoding & Obfuscation-Erkennung
+- File-Forensik (z. B. Dateiheader identifizieren)
+- Payload-Rekonstruktion aus Malware
+- JWT/Token-Analyse
+- Encoding-Ketten (z. B. mehrfach Base64 + URL Encode)
+
+---
+
+## Wichtige Funktionen & Operatoren
 
 | Operator                  | Beschreibung                                      |
 |---------------------------|---------------------------------------------------|
@@ -40,9 +50,9 @@ das hunderte Funktionen für die Datenanalyse und -bearbeitung ohne lokale Insta
 
 ---
 
-## 🔍 Praktische Rezepte (Recipes)
+## Praktische Rezepte (Recipes)
 
-### 🔒 2. Hash-Analyse
+### 2. Hash-Analyse
 ```text
 Input: Hash-Wert
 Recipe:
@@ -50,14 +60,14 @@ Recipe:
 - [ggf. in Crackstation.org oder Hashcat prüfen]
 ```
 
-### 🔑 3. JWT-Token entschlüsseln
+### 3. JWT-Token entschlüsseln
 ```text
 Input: JWT Token (eyJhbGciOiJIUzI1...)
 Recipe:
 - Parse JWT
 ```
 
-### 🛡️ 4. Obfuscated JavaScript analysieren
+### 4. Obfuscated JavaScript analysieren
 ```text
 Recipe:
 - Beautify JavaScript
@@ -66,7 +76,7 @@ Recipe:
 - Find / Replace Pattern (z.B. eval, atob)
 ```
 
-### 🐚 5. Reverse Shell erkennen & dekodieren
+### 5. Reverse Shell erkennen & dekodieren
 ```text
 Input: encoded payload
 Recipe:
@@ -74,7 +84,7 @@ Recipe:
 - Beautify
 ```
 
-### 📤 6. Dateien extrahieren
+### 6. Dateien extrahieren
 ```text
 Input: Binärdump oder Base64-Daten
 Recipe:
@@ -83,26 +93,34 @@ Recipe:
 - Detect File Type
 ```
 
-### 🧾 7. Encoding erkennen & automatisieren
+### 7. Encoding erkennen & automatisieren
 ```text
 Recipe:
 - Magic
-→ CyberChef erkennt häufige Pattern automatisch
+=> CyberChef erkennt häufige Pattern automatisch
 ```
 
 ---
 
-## 🧠 Tipps & Best Practices
-- 🔄 Nutze "Magic" bei unbekannten Inhalten.
-- 🔀 Kombiniere mehrere Dekodierungsmethoden.
-- 🧪 Überprüfe mehrfach codierte Daten manuell.
-- ⚠️ Achte auf Nullbytes (%00) und Obfuskationstricks.
-- 🔎 Nutze "Regular Expressions" zum Extrahieren von Infos.
-- 📤 Nutze die Export-Funktion, um Ergebnisse weiterzuverarbeiten.
+## Tipps & Best Practices
+- Nutze "Magic" bei unbekannten Inhalten.
+- Kombiniere mehrere Dekodierungsmethoden.
+- Überprüfe mehrfach codierte Daten manuell.
+- Achte auf Nullbytes (%00) und Obfuskationstricks.
+- Nutze "Regular Expressions" zum Extrahieren von Infos.
+- Nutze die Export-Funktion, um Ergebnisse weiterzuverarbeiten.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Nützliche Links & Quellen
+
+- [CyberChef Online Tool](https://gchq.github.io/CyberChef/)
+- [CyberChef Cheatsheet (PDF)](https://malicious.link/file/cyberchef.pdf)
+- [CyberChef GitHub Repo](https://drive.google.com/drive/home)
+
+---
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -111,17 +129,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-## 📚 Nützliche Links & Quellen
-
-- 🔗 [CyberChef Online Tool](https://gchq.github.io/CyberChef/)
-- 📘 [CyberChef Cheatsheet (PDF)](https://malicious.link/file/cyberchef.pdf)
-- 📂 [CyberChef GitHub Repo](https://drive.google.com/drive/home)

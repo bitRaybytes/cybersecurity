@@ -41,6 +41,7 @@
 - [Bandit 31 ➝ 32](#bandit-31---32)
 - [Bandit 32 ➝ 33](#bandit-32---33)
 - [Bandit 33 ➝ 34](#bandit-33---34)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ## Einleitung
 
@@ -1871,7 +1872,7 @@ Aktuell gibt es kein weiteres Level mehr. Die Entwickler sind jedoch bemüht, we
 </div>
 
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 

@@ -1,15 +1,29 @@
 # 🎓 Cybersecurity-Zertifizierungen – Red & Blue Team (Kostenlos + Kostenpflichtig)
 
-## 🧭 Ziel dieser Datei
+---
+## Inhaltsverzeichnis
+- [Ziel dieser Datei](#ziel-dieser-datei)
+- [Red Team (Offensive Security)](#red-team-offensive-security)
+- [Blue Team (Defensive Security)](#red-team-offensive-security)
+- [Michzertifikate (Red/Blue Skills)](#mischzertifikate-red--blue-skills)
+- [Empfohlene Lernreihenfolge für Einsteiger](#empfohlene-lernreihenfolge-für-einsteiger)
+- [Tools & Skills - Was man lernen sollte](#tools--skills--was-man-lernen-sollte)
+- [Karriereziel - Was passt zu dir](#karriereziel-was-passt-zu-dir)
+- [Weiterführende Ressourcen](#weiterführende-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+
+---
+## Ziel dieser Datei
 
 Diese Datei bietet einen vollständigen Überblick über empfehlenswerte Zertifizierungen im Bereich Cybersecurity – sowohl **offensiv (Red Team)** als auch **defensiv (Blue Team)**.  
 Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachhaltig in der IT-Sicherheit weiterbilden wollen – mit Fokus auf **technischem Know-how**, **praktischer Relevanz** und **Karrierewirkung**.
 
 ---
 
-## 🔴 Red Team (Offensive Security)
+## Red Team (Offensive Security)
 
-### 🆓 Kostenlose Red Team Zertifizierungen / Trainings
+### Kostenlose Red Team Zertifizierungen / Trainings
 
 | Name | Anbieter | Inhalte | Link |
 |------|----------|---------|------|
@@ -32,7 +46,13 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 🔵 Blue Team (Defensive Security)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Blue Team (Defensive Security)
 
 ### 🆓 Kostenlose Blue Team Zertifizierungen / Labs
 
@@ -57,7 +77,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 🔁 Mischzertifikate (Red + Blue Skills)
+## Mischzertifikate (Red + Blue Skills)
 
 | Zertifikat | Anbieter | Preis | Inhalte |
 |------------|----------|-------|---------|
@@ -69,7 +89,13 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 🧠 Empfohlene Lernreihenfolge für Einsteiger
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Empfohlene Lernreihenfolge für Einsteiger
 
 ```text
 🔰 1. CompTIA Security+ (oder TryHackMe/TCM PEH)
@@ -81,7 +107,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 🔧 Tools & Skills – Was man lernen sollte
+## Tools & Skills – Was man lernen sollte
 
 | Bereich      | Wichtige Tools                                                                                        |
 | ------------ | ----------------------------------------------------------------------------------------------------- |
@@ -91,7 +117,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 🧭 Karriereziel: Was passt zu dir?
+## Karriereziel: Was passt zu dir?
 
 | Ziel                                   | Empfohlener Pfad                |
 | -------------------------------------- | ------------------------------- |
@@ -104,7 +130,13 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## 📚 Weiterführende Ressourcen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Weiterführende Ressourcen
 
 - [Roadmap.sh/cyber-security – Interaktive Übersicht aller Themenfelder](https://roadmap.sh/cyber-security)
 - [r/cybersecurity – Austauschplattform](https://www.reddit.com/r/cybersecurity/)
@@ -113,7 +145,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -122,11 +154,13 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

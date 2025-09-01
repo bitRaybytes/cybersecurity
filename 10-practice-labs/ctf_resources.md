@@ -4,11 +4,21 @@
 Diese Übersicht richtet sich an alle, die systematisch in die Welt der CTFs, Cybersicherheit und des ethischen Hackings einsteigen möchten – insbesondere Anfänger, Fortgeschrittene oder Teilnehmer einer IT-Umschulung.  
 Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communities.
 
-> ⚠️ **Disclaimer:** Alle hier aufgeführten Ressourcen dienen ausschließlich zu legalen, schulischen oder schulungsbezogenen Zwecken. Die Nutzung von Exploits, Recon-Techniken oder Hacking-Tools ist nur in autorisierten Testumgebungen erlaubt.
+> **Disclaimer:** Alle hier aufgeführten Ressourcen dienen ausschließlich zu legalen, schulischen oder schulungsbezogenen Zwecken. Die Nutzung von Exploits, Recon-Techniken oder Hacking-Tools ist nur in autorisierten Testumgebungen erlaubt.
 
 ---
 
-## 🧪 CTF-Plattformen & Übungslabore
+## Inhaltsverzeichnis
+- [CTF-Plattformen & Übungslabore](#ctf-plattformen--übungslabore)
+- [Nützliche Tools (Pentest & CTF)](#nützliche-tools-pentest--ctf)
+- [GitHub Repositories](#github-repositories)
+- [Communitys & Discord-Server](#communitys--discord-server)
+- [Lernempfehlungen nach Themengebiet](#lernempfehlungen-nach-themengebiet)
+- [Für den Einstieg empfohlen](#für-den-einstieg-empfohlen)
+- [Tägliche Lern-Routine (Beispiel)](#tägliche-lern-routine-beispiel)
+- [Haftungsausschluss](#haftungsausschluss)
+
+## CTF-Plattformen & Übungslabore
 
 | Plattform      | Beschreibung                                                   |
 |----------------|----------------------------------------------------------------|
@@ -22,7 +32,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 🧰 Nützliche Tools (Pentest & CTF)
+## Nützliche Tools (Pentest & CTF)
 
 | Tool           | Zweck                                         |
 |----------------|-----------------------------------------------|
@@ -38,7 +48,13 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 🛠️ GitHub Repositories
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## GitHub Repositories
 
 | Repo                                                   | Inhalt                                               |
 |--------------------------------------------------------|------------------------------------------------------|
@@ -51,7 +67,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 💬 Communitys & Discord-Server
+## Communitys & Discord-Server
 
 | Name                  | Fokus                            |
 |-----------------------|----------------------------------|
@@ -64,37 +80,37 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 📚 Lernempfehlungen nach Themengebiet
+## Lernempfehlungen nach Themengebiet
 
-### 🛜 Netzwerk & Recon
+### Netzwerk & Recon
 
 - Nmap, Wireshark
 - DNS/WHOIS Recon
 - Subdomain-Enumeration (amass, subfinder)
 
-### 🌐 Web Exploitation
+### Web Exploitation
 
 - Burp Suite Basics
 - OWASP Top 10
 - SQLi, XSS, SSTI, LFI, RCE
 
-### 📦 Binary Exploitation
+### Binary Exploitation
 
 - Buffer Overflows
 - Format String Attacks
 - pwntools, GDB
 
-### 🔒 Cryptography
+### Cryptography
 
 - Caesar, XOR, AES Challenges
 - RSA Crack (small e/n), FactorDB
 - CyberChef zum Testen
 
-### 🧠 Steganographie
+### Steganographie
 
 - Analyse mit `binwalk`, `steghide`, `zsteg`, `exiftool`
 
-### 🧬 Forensik / Blue Team
+### Forensik / Blue Team
 
 - Memory Analysis mit Volatility
 - Packet Captures (PCAP) analysieren
@@ -102,7 +118,13 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 🪜 Für den Einstieg empfohlen:
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Für den Einstieg empfohlen:
 
 1. **TryHackMe: "Pre-Security" oder "Complete Beginner" Pfad**  
 2. **HTB Academy: "Linux Fundamentals", "Web Requests", "Enumeration"**
@@ -116,7 +138,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## 🧭 Tägliche Lern-Routine (Beispiel)
+## Tägliche Lern-Routine (Beispiel)
 
 | Tag | Inhalt                            |
 |-----|-----------------------------------|
@@ -131,7 +153,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 ---
 
 **Letzter Tipp:**  
-📓 **Führe ein CTF-Tagebuch.** Notiere:
+**Führe ein CTF-Tagebuch.** Notiere:
 - verwendete Tools
 - Commands
 - Lösungswege
@@ -141,7 +163,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -150,11 +172,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
 
-Stay methodical. Stay legal. Stay secure. 🔐
+<div align=right>
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

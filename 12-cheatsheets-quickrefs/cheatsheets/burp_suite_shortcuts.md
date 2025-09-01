@@ -5,7 +5,17 @@
 
 ---
 
-## ⌨️ Tastenkombinationen (Default)
+## Inhaltsverzeichnis
+- [Tastenkombinationen (Default)](#tastenkombinationen-default)
+- [Workflow Shortcuts (via Kontextmenü / GUI)](#workflow-shortcuts-via-kontextmenü--gui)
+- [Nützliche Tools innerhalb von Burp](#nützliche-tools-innerhalb-von-burp)
+- [Erweiterungen (empfohlen)](#erweiterungen-empfohlen)
+- [Tipps zur Organisation](#tipps-zur-organisation)
+- [Quick Commands für Decoder](#quick-commands-für-decoder)
+- [Weitere Ressourcen](#weitere-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+## Tastenkombinationen (Default)
 
 | Shortcut             | Beschreibung                                         |
 |----------------------|------------------------------------------------------|
@@ -25,7 +35,7 @@
 
 ---
 
-## 🚦 Workflow Shortcuts (via Kontextmenü / GUI)
+## Workflow Shortcuts (via Kontextmenü / GUI)
 
 | Funktion              | Beschreibung                                         |
 |-----------------------|------------------------------------------------------|
@@ -36,7 +46,7 @@
 
 ---
 
-## 🧪 Nützliche Tools innerhalb von Burp
+## Nützliche Tools innerhalb von Burp
 
 | Tool            | Zweck                                         |
 |------------------|-----------------------------------------------|
@@ -49,7 +59,13 @@
 
 ---
 
-## 🛠️ Erweiterungen (empfohlen)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Erweiterungen (empfohlen)
 
 | Extension        | Funktion                                     |
 |------------------|----------------------------------------------|
@@ -62,7 +78,7 @@
 
 ---
 
-## 📁 Tipps zur Organisation
+## Tipps zur Organisation
 
 - Nutze `Burp Project Files (.burp)` zur Speicherung kompletter Sessions
 - Setze in **Proxy → Options** gezielte Scope-Filter
@@ -70,7 +86,7 @@
 
 ---
 
-## 🔒 Quick Commands für Decoder
+## Quick Commands für Decoder
 
 | Eingabe              | Ergebnis                           |
 |----------------------|-------------------------------------|
@@ -81,7 +97,7 @@
 
 ---
 
-## 📚 Weitere Ressourcen
+## Weitere Ressourcen
 
 - [PortSwigger Academy](https://portswigger.net/web-security) – Kostenlos lernen!
 - [Burp Suite Docs](https://portswigger.net/burp/documentation)
@@ -89,7 +105,7 @@
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -98,9 +114,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
-🤝 Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

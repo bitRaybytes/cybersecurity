@@ -7,23 +7,22 @@ Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die si
 ---
 
 ## Inhaltsverzeichnis:
-
-- [🧭 Struktur & Inhalte](#-struktur--inhalte)
-    - [Aktuelle Themen](#aktuelle-highlights)
-- [📁 Themenübersicht](#-themenübersicht)
-    - [🐱‍💻 Offensive Security (Red Team)](#-offensive-security-red-team)
-    - [🔵 Defensive Security (Blue Team)](#-defensive-security-blue-team)
-    - [🧰 Werkzeuge & Cheatsheets](#-werkzeuge--cheatsheets)
-- [🗂️ Dateiübersicht](#️-dateiübersicht-wird-laufend-erweitert)
-- [📚 Zielgruppe](#-zielgruppe)
-- [🤝 Mitwirken & Beiträge](#-mitwirken--beiträge)
-- [📜 Lizenz](#-lizenz)
-- [📡 Community Support](#-community-support)
-- [⚠️ Haftungsausschluss](#️-Haftungsausschluss)
+- [Struktur & Inhalte](#struktur--inhalte)
+    - [Aktuelle Highlights](#aktuelle-highlights)
+- [Themenübersicht](#themenübersicht)
+    - [Offensive Security (Red Team)](#offensive-security-red-team)
+    - [Defensive Security (Blue Team)](#defensive-security-blue-team)
+    - [Werkzeuge & Cheatsheets](#werkzeuge--cheatsheets)
+- [Dateiübersicht Auszug (wird laufend erweitert)](#dateiübersicht-auszug-wird-laufend-erweitert)
+- [Zielgruppe](#zielgruppe)
+- [Mitwirken & Beiträge](#mitwirken--beiträge)
+- [Lizenz](#lizenz)
+- [Community Support](#community-support)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 🧭 Struktur & Inhalte
+##  Struktur & Inhalte
 
 Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert. Ziel ist es, eine **schnelle Nachschlagbasis** zu bieten – sowohl zum Lernen als auch zur Vorbereitung auf Prüfungen, CTFs oder reale Audits.
 
@@ -38,9 +37,9 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 ---
 
-## 📁 Themenübersicht
+## Themenübersicht
 
-### 🐱‍💻 Offensive Security (Red Team)
+### Offensive Security (Red Team)
 - Recon & Scanning
 - Vulnerability Analysis
 - Web Application Hacking
@@ -50,7 +49,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 - Reverse Engineering
 - SQL Injection zur Shell
 
-### 🔵 Defensive Security (Blue Team)
+### Defensive Security (Blue Team)
 - Log Management
 - SIEM & Monitoring Tools
 - Threat Hunting & Forensics
@@ -58,7 +57,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 - Hardening & Detection Techniques
 - Malware Analysis
 
-### 🧰 Werkzeuge & Cheatsheets
+### Werkzeuge & Cheatsheets
 - Wireshark
 - Nmap
 - Burp Suite
@@ -70,7 +69,13 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 ---
 
-## 🗂️ Dateiübersicht Auszug (wird laufend erweitert)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Dateiübersicht Auszug (wird laufend erweitert)
 
 ```bash
 📦 cybersecurity-hub/
@@ -84,7 +89,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 ---
 
-## 📚 Zielgruppe
+## Zielgruppe
 
 - Berufseinsteiger in die IT-Security
 - Teilnehmer von CTFs, Bootcamps und Umschulungen
@@ -93,7 +98,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 ---
 
-## 🤝 Mitwirken & Beiträge
+## Mitwirken & Beiträge
 
 Du hast Tools, Skripte oder Notes, die hier reinpassen?
 Pull Requests und Issues sind jederzeit willkommen!
@@ -106,21 +111,23 @@ So kannst du mitmachen:
 
 ---
 
-## 📜 Lizenz
+## Lizenz
 
 Dieses Repository steht unter der MIT-Lizenz – freie Nutzung & Bearbeitung sind erwünscht.
 Credits bei Weiterverwendung wären nice. 😉
+
 **Hinweis:** Externe Tools und Links gehören den jeweiligen Anbietern.
 
 ---
 
-## 📡 Community Support
-💬 Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
-👉 [Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
+## Community Support
+Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
+
+[Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -129,9 +136,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

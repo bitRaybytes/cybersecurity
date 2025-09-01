@@ -1,6 +1,24 @@
 # 🧩 SSTI – Server-Side Template Injection
 
-## 📘 Was ist SSTI?
+---
+
+## Inhaltsverzeichnis
+- [Was ist SSTI?](#was-ist-ssti)
+- [Typische Template Engines](#typische-template-engines)
+- [Wie erkennt man SSTI?](#wie-erkennt-man-ssti)
+- [Typische Test-Payloads](#typische-test-payloads)
+- [Exploits: Jinja2 RCE (Python)](#exploits-jinja2-rce-python)
+- [SSTI Cheat-Sheet: Template Engines](#ssti-cheat-sheet-template-engines)
+- [Tools zur Unterstützung](#tools-zur-unterstützung)
+- [Schutzmaßnahmen](#schutzmaßnahmen)
+- [Beispiele aus der Praxis](#beispiele-aus-der-praxis)
+- [Lerne & Übe SSTI](#lerne--übe-ssti)
+- [Weiterführende Links](#weiterführende-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Was ist SSTI?
 
 **Server-Side Template Injection (SSTI)** bezeichnet eine Schwachstelle, bei der ein Angreifer serverseitige Template-Engines manipulieren kann, um beliebige Ausdrücke auszuführen. Das passiert, wenn Benutzereingaben ohne Filterung in Templates eingebunden werden.
 
@@ -8,7 +26,7 @@
 
 ---
 
-## 🛠️ Typische Template Engines
+## Typische Template Engines
 
 | Sprache  | Engine             | Erkennbar an…             |
 |----------|--------------------|----------------------------|
@@ -20,7 +38,13 @@
 
 ---
 
-## 🔍 Wie erkennt man SSTI?
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Wie erkennt man SSTI?
 
 ### Schritt-für-Schritt-Erkennung
 
@@ -36,7 +60,7 @@
 
 ---
 
-## 🧪 Typische Test-Payloads
+## Typische Test-Payloads
 
 | Payload       | Bedeutung                      |
 |---------------|-------------------------------|
@@ -48,7 +72,13 @@
 
 ---
 
-## 🔥 Exploits: Jinja2 RCE (Python)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Exploits: Jinja2 RCE (Python)
 
 ```jinja2
 {{''.__class__.__mro__[1].__subclasses__()}}
@@ -63,7 +93,7 @@
 
 ---
 
-## 📦 SSTI Cheat-Sheet: Template Engines
+## SSTI Cheat-Sheet: Template Engines
 
 | Engine     | Ausdruck                                                   | RCE möglich?  |
 | ---------- | ---------------------------------------------------------- | ------------- |
@@ -75,7 +105,13 @@
 
 ---
 
-## 🧰 Tools zur Unterstützung
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Tools zur Unterstützung
 
 | Tool       | Beschreibung                            |
 | ---------- | --------------------------------------- |
@@ -86,7 +122,7 @@
 
 ---
 
-## 🛡️ Schutzmaßnahmen
+## Schutzmaßnahmen
 
 | Maßnahme                             | Beschreibung                           |
 | ------------------------------------ | -------------------------------------- |
@@ -99,7 +135,7 @@
 
 ---
 
-## 🧠 Beispiele aus der Praxis
+## Beispiele aus der Praxis
 
 | Beispiel                               | Anfälligkeit |
 | -------------------------------------- | ------------ |
@@ -109,7 +145,13 @@
 
 ---
 
-## 🎓 Lerne & Übe SSTI
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Lerne & Übe SSTI
 
 | Plattform        | Inhalt                         |
 | ---------------- | ------------------------------ |
@@ -121,7 +163,16 @@
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Weiterführende Links
+
+- [PayloadsAllTheThings – SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
+- [PortSwigger SSTI Labs](https://portswigger.net/web-security/server-side-template-injection)
+- [tplmap Tool](https://github.com/epinna/tplmap)
+- [OWASP SSTI Guide](https://owasp.org/www-community/attacks/Server-Side_Template_Injection)
+
+----
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -130,20 +181,20 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-
-## 🔗 Weiterführende Links
-
-- [PayloadsAllTheThings – SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
-- [PortSwigger SSTI Labs](https://portswigger.net/web-security/server-side-template-injection)
-- [tplmap Tool](https://github.com/epinna/tplmap)
-- [OWASP SSTI Guide](https://owasp.org/www-community/attacks/Server-Side_Template_Injection)
 

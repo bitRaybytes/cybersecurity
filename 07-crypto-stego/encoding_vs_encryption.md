@@ -6,7 +6,7 @@ Diese Datei erklärt die Unterschiede und Anwendungsfälle von **Encoding**, **E
 
 ---
 
-## 🧭 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
 - [1. Encoding](#1-encoding)
 - [2. Encryption (Verschlüsselung)](#2-encryption-verschlüsselung)
@@ -16,10 +16,11 @@ Diese Datei erklärt die Unterschiede und Anwendungsfälle von **Encoding**, **E
 - [6. Häufige Missverständnisse](#6-häufige-missverständnisse)
 - [7. Tools und Befehle](#7-tools-und-befehle)
 - [8. Nützliche Links](#8-nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 1. 🔤 Encoding
+## 1. Encoding
 
 **Ziel:** Lesbare Daten in ein bestimmtes Format umwandeln, um Kompatibilität und Transport zu ermöglichen.
 
@@ -36,7 +37,7 @@ echo -n "password123" | base64
 
 ---
 
-## 2. 🔐 Encryption (Verschlüsselung)
+## 2. Encryption (Verschlüsselung)
 **Ziel:** Schutz von Vertraulichkeit und Integrität durch Umwandlung von Daten mithilfe eines Schlüssels.
 
 - **Zweck:** Vertrauliche Kommunikation oder Datenspeicherung
@@ -53,7 +54,13 @@ echo -n "secrettext" | openssl enc -aes-256-cbc -base64 -pass pass:MyKey
 
 --- 
 
-## 3. 🔁 Hashing
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 3. Hashing
 **Ziel:** Erzeugung eines eindeutigen, festen Ausgabewertes (Digest) zur Überprüfung von Integrität oder Identität.
 
 - **Zweck:** Fingerabdruck von Daten, z. B. für Passwörter, Datei-Integritätsprüfung
@@ -70,7 +77,7 @@ echo -n "secrettext" | sha256sum
 
 ---
 
-## 4. 📊 Vergleichstabelle
+## 4. Vergleichstabelle
 
 | Eigenschaft            | Encoding    | Encryption           | Hashing            |
 | ---------------------- | ----------- | -------------------- | ------------------ |
@@ -82,7 +89,7 @@ echo -n "secrettext" | sha256sum
 
 ---
 
-## 5. 🧪 Typische Einsatzszenarien
+## 5. Typische Einsatzszenarien
 
 - Encoding:
     - E-Mail-Anhänge (Base64)
@@ -99,7 +106,13 @@ echo -n "secrettext" | sha256sum
 
 --- 
 
-## 6. ❗ Häufige Missverständnisse
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 6. Häufige Missverständnisse
 
 - Base64 ist KEINE Verschlüsselung!
 - Hashes sind NICHT rückrechenbar – außer bei Rainbow Tables oder schwachen Algorithmen (MD5).
@@ -107,7 +120,7 @@ echo -n "secrettext" | sha256sum
 
 ---
 
-## 7. 🧰 Tools und Befehle
+## 7. Tools und Befehle
 
 | Tool        | Verwendung                                  |
 | ----------- | ------------------------------------------- |
@@ -120,7 +133,7 @@ echo -n "secrettext" | sha256sum
 
 ---
 
-## 8. 🔗 Nützliche Links
+## 8. Nützliche Links
 
 - [CyberChef – The Cyber Swiss Army Knife](https://gchq.github.io/CyberChef/)
 - [OWASP Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)
@@ -130,7 +143,7 @@ echo -n "secrettext" | sha256sum
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -139,9 +152,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

@@ -1,6 +1,25 @@
 # 🛡️ CSRF – Cross-Site Request Forgery
 
-## 📘 Was ist CSRF?
+---
+
+## Inhaltsverzeichnis
+- [Was ist CSRF?](#was-ist-csrf)
+- [Unterschied zu XSS](#unterschied-zu-xss)
+- [Typisches Beispiel (HTML)](#typisches-beispiel-html)
+- [Bedingungen für CSRF](#bedingungen-für-csrf)
+- [Besonders gefährdet sind](#besonders-gefährdet-sind)
+- [CSRF in der Praxis erkennen](#csrf-in-der-praxis-erkennen)
+- [Tools für CSRF-Tests](#tools-für-csrf-tests)
+- [Schutzmaßnahmen](#schutzmaßnahmen)
+- [Best Practices für Entwickler](#best-practices-für-entwickler)
+- [Angriff vs. Verteidigung](#angriff-vs-verteidigung)
+- [Übungsplattformen](#übungsplattformen)
+- [Weiterführende Links](#weiterführende-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Was ist CSRF?
 
 **CSRF (Cross-Site Request Forgery)** ist eine Web-Sicherheitslücke, bei der ein Angreifer den Browser eines authentifizierten Nutzers dazu bringt, unbeabsichtigt schädliche Anfragen an eine Webanwendung zu senden.
 
@@ -12,7 +31,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ---
 
-## 🔗 Unterschied zu XSS
+## Unterschied zu XSS
 
 | Merkmal     | CSRF                                | XSS                              |
 |-------------|-------------------------------------|----------------------------------|
@@ -22,7 +41,13 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ---
 
-## 🧪 Typisches Beispiel (HTML)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Typisches Beispiel (HTML)
 
 ```html
 <form action="http://bank.com/transfer" method="POST">
@@ -38,7 +63,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ---
 
-## ⚠️ Bedingungen für CSRF
+## Bedingungen für CSRF
 
 - Der Nutzer ist bereits authentifiziert (eingeloggt)
 - Session Cookie wird automatisch gesendet
@@ -53,7 +78,13 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ----
 
-## 📌 Besonders gefährdet sind:
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Besonders gefährdet sind:
 
 - Admin-Panels
 - Formular-basierte Aktionen (Passwort ändern, Konto löschen, E-Mail ändern)
@@ -61,7 +92,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ---
 
-## 🛠️ CSRF in der Praxis erkennen
+## CSRF in der Praxis erkennen
 
 | Methode                       | Beispiel                               |
 | ----------------------------- | -------------------------------------- |
@@ -71,7 +102,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ---
 
-## 🔍 Tools für CSRF-Tests
+## Tools für CSRF-Tests
 
 | Tool               | Beschreibung                               |
 | ------------------ | ------------------------------------------ |
@@ -82,7 +113,13 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 --- 
 
-## 🔒 Schutzmaßnahmen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schutzmaßnahmen
 
 ### 1. CSRF-Token verwenden
 
@@ -113,7 +150,13 @@ Kein `GET` für sensible Änderungen
 
 ---
 
-## 🧠 Best Practices für Entwickler
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Best Practices für Entwickler
 
 | Empfehlung                            | Warum?                            |
 | ------------------------------------- | --------------------------------- |
@@ -124,7 +167,7 @@ Kein `GET` für sensible Änderungen
 
 ---
 
-## 🎯 Angriff vs. Verteidigung
+## Angriff vs. Verteidigung
 
 | Rolle       | Aufgabe                                         |
 | ----------- | ----------------------------------------------- |
@@ -133,7 +176,13 @@ Kein `GET` für sensible Änderungen
 
 ---
 
-## 🧪 Übungsplattformen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Übungsplattformen
 
 | Plattform        | Inhalt                                           |
 | ---------------- | ------------------------------------------------ |
@@ -144,7 +193,7 @@ Kein `GET` für sensible Änderungen
 
 ---
 
-## 📚 Weiterführende Links
+## Weiterführende Links
 
 - [OWASP CSRF Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 - [PortSwigger CSRF Labs](https://portswigger.net/web-security/csrf)
@@ -152,7 +201,7 @@ Kein `GET` für sensible Änderungen
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -161,11 +210,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

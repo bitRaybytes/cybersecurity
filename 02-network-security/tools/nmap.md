@@ -3,9 +3,26 @@
 > Nmap ("Network Mapper") ist ein freier Open-Source-Scanner zur Netzwerkerkundung und Sicherheitsprüfung.  
 > ✅ Ideal für Reconnaissance beim Pentesting.
 
+
 ---
 
-## 📦 Installation
+## Inhaltsverzeichnis
+- [Installation](#installation)
+- [Grundlagen](#grundlagen)
+- [Port-Scans](#port-scans)
+- [Service & OS-Erkennung](#service--os-erkennung)
+- [Scan-Typen (Stealth, TCP, UDP …)](#scan-typen-stealth-tcp-udp-usw)
+- [NSE (Nmap Scripting Engine)](#nse-nmap-scripting-engine)
+- [Beispiele](#beispiele)
+- [Output speichern](#output-speichern)
+- [Weitere Tools](#weitere-tools)
+- [Ressourcen](#ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+
+---
+
+## Installation
 
 **Linux (Debian/Ubuntu):**
 ```bash
@@ -23,7 +40,7 @@ brew install nmap
 
 ---
 
-## 🔍 Grundlagen
+## Grundlagen
 
 | Befehl                 | Beschreibung                           |
 | ---------------------- | -------------------------------------- |
@@ -39,7 +56,14 @@ brew install nmap
 
 ---
 
-## 📡 Port-Scans
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Port-Scans
+
 | Befehl                        | Beschreibung                |
 | ----------------------------- | --------------------------- |
 | `nmap -p 80,443 <Ziel>`       | Nur bestimmte Ports scannen |
@@ -48,9 +72,10 @@ brew install nmap
 | `nmap -F <Ziel>`              | Fast Scan (Standardports)   |
 
 Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techniques.html).
+
 ---
 
-## 🕵️‍♂️ Service & OS-Erkennung
+## Service & OS-Erkennung
 
 | Befehl            | Beschreibung                                    |
 | ----------------- | ----------------------------------------------- |
@@ -61,7 +86,13 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## ⚙️ Scan-Typen (Stealth, TCP, UDP …)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Scan-Typen (Stealth, TCP, UDP, usw.)
 
 | Befehl            | Beschreibung                                 |
 | ----------------- | -------------------------------------------- |
@@ -73,7 +104,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## 🧠 NSE (Nmap Scripting Engine)
+## NSE (Nmap Scripting Engine)
 
 | Befehl                            | Beschreibung                           |
 | --------------------------------- | -------------------------------------- |
@@ -84,6 +115,12 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 | `nmap --script default <Ziel>`    | Default-Skripte (häufig nützlich)      |
 
 ---
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Beispiele
 
@@ -101,7 +138,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## 📝 Output speichern
+## Output speichern
 
 | Befehl            | Beschreibung                                  |
 | ----------------- | --------------------------------------------- |
@@ -112,7 +149,13 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## 🎯 Weitere Tools
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Weitere Tools
 
 | Tool       | Funktion                            |
 | ---------- | ----------------------------------- |
@@ -122,7 +165,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## 📚 Ressourcen
+## Ressourcen
 
 - 🔗 [NMAP Manpage](https://nmap.org/book/man.html)
 - 🌐 [NMAP Offizielle Webseite](https://nmap.org/)
@@ -130,7 +173,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -139,9 +182,17 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!

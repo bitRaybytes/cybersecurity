@@ -1,6 +1,30 @@
 # 📡 Netzwerk-Protokoll Header Cheat Sheet
 
-## 🔎 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Ethernet II (Layer 2)](#ethernet-ii-layer-2)
+- [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
+- [IPv6 Header (Layer 3)](#ipv6-header-layer-3)
+- [TCP Header (Layer 4)](#tcp-header-layer-4)
+- [UDP Header (Layer 4)](#udp-header-layer-4)
+- [ICMP Header (Layer 3)](#icmp-header-layer-3)
+- [ARP Header (Layer 2/3)](#arp-header-layer-23)
+- [DHCP (über UDP 67/68)](#dhcp-über-udp-6768)
+- [DNS Header (UDP/TCP Port 53)](#dns-header-udptcp-port-53)
+- [TLS/SSL Record Layer](#tlsssl-record-layer)
+- [Kerberos (Authentication)](#kerberos-authentication)
+- [RADIUS](#radius)
+- [IPSec (Security for IP)](#ipsec-security-for-ip)
+- [SMB (Server Message Block)](#smb-server-message-block)
+- [SNMP (Simple Network Management Protocol)](#snmp-simple-network-management-protocol)
+- [ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)](#arbitrary-protocols-smb-ipsec-kerberos-snmp-syslog)
+- [Vergleichstabelle](#vergleichstabelle)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+## Einleitung
 
 In der Netzwerksicherheit ist es wichtig, die Header der verschiedenen Protokolle zu verstehen.
 
@@ -9,7 +33,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 🖧 Ethernet II (Layer 2)
+## Ethernet II (Layer 2)
 
 - Zweck: Transport von Frames innerhalb eines LANs.
 - Header-Größe: 14 Bytes = 112 Bit
@@ -24,7 +48,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## 🌍 IPv4 Header (Layer 3)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## IPv4 Header (Layer 3)
 
 - Zweck: Routing von Paketen über Netzwerke hinweg.
 - Header-Größe: 20–60 Bytes (20 Bytes ohne Optionen; 5–15 Words à 32 Bit)
@@ -49,7 +79,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 🌍 IPv6 Header (Layer 3)
+## IPv6 Header (Layer 3)
 
 - Zweck: Nachfolger von IPv4, 128-Bit Adressen.
 - Header-Größe: Fix 40 Bytes (10 Words à 32 Bit)
@@ -72,7 +102,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 🔗 TCP Header (Layer 4)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## TCP Header (Layer 4)
 
 - Zweck: Verbindungsorientierte Kommunikation.
 - Header-Größe: 20–60 Bytes (5–15 Words à 32 Bit)
@@ -97,7 +133,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 📦 UDP Header (Layer 4)
+## UDP Header (Layer 4)
 
 - Zweck: Verbindungsloser Transport (z. B. DNS, DHCP).
 - Header-Größe: 8 Bytes = 2 Words à 32 Bit
@@ -114,7 +150,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 📡 ICMP Header (Layer 3)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## ICMP Header (Layer 3)
 
 - Zweck: Diagnose & Fehlerberichte (Ping, Traceroute).
 - Header-Größe: min. 8 Bytes (Standard, ohne Zusatzfelder)
@@ -131,7 +173,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## 🕵️ ARP Header (Layer 2/3)
+## ARP Header (Layer 2/3)
 
 - Zweck: Auflösung von IP → MAC-Adressen.
 - Header-Größe: 28 Bytes
@@ -158,7 +200,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## 🌐 DHCP (über UDP 67/68)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## DHCP (über UDP 67/68)
 
 - Zweck: Automatische Zuweisung von IP, Gateway, DNS.
 - Header-Größe: 236 Bytes + Optionen
@@ -190,7 +238,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## 🌐 DNS Header (UDP/TCP Port 53)
+## DNS Header (UDP/TCP Port 53)
 
 - Zweck: Namensauflösung (Domain → IP).
 - Header-Größe: 12 Bytes + Queries/Responses
@@ -209,7 +257,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## 🔒 TLS/SSL Record Layer
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## TLS/SSL Record Layer
 
 - Zweck: Verschlüsselte Kommunikation (HTTPS, SMTPS, FTPS).
 - Header-Größe: 5 Bytes + Payload
@@ -226,7 +280,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## 🔑 Kerberos (Authentication)
+## Kerberos (Authentication)
 
 - Zweck: Netzwerk-Authentifizierung (oft in Windows-AD, SSO).
 - Transport: meist über TCP/UDP Port 88
@@ -239,7 +293,7 @@ Kerberos Messages:
 
 -----
 
-## 📡 RADIUS
+## RADIUS
 
 - Zweck: Authentifizierung, Autorisierung, Accounting (AAA).
 - Transport: UDP 1812 (Auth), UDP 1813 (Accounting).
@@ -259,12 +313,18 @@ Kerberos Messages:
 
 ----
 
-## 🛰️ IPSec (Security for IP)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## IPSec (Security for IP)
 
 - Zweck: Sichere VPN-Kommunikation auf IP-Ebene.
 - Header-Typen:
   - AH (Authentication Header): 24 Bytes
-  -  ESP (Encapsulating Security Payload): variabel (mind. 8 Bytes + Payload + Padding + Auth Data)
+  - ESP (Encapsulating Security Payload): variabel (mind. 8 Bytes + Payload + Padding + Auth Data)
 
 ### AH Header
 
@@ -301,7 +361,7 @@ SPI (4 B)                                                      |
 
 ----
 
-## 🔄 SMB (Server Message Block)
+## SMB (Server Message Block)
 
 - Zweck: Datei- und Druckerfreigaben, häufiges Angriffsziel (EternalBlue, WannaCry).
 - Transport: TCP 445.
@@ -320,7 +380,13 @@ SPI (4 B)                                                      |
 
 ---
 
-## 📡 SNMP (Simple Network Management Protocol)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## SNMP (Simple Network Management Protocol)
 
 - Zweck: Geräteverwaltung, oft Ziel für Enumeration & Angriffe.
 - Transport: UDP 161.
@@ -345,7 +411,13 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
 ---
 
-## 📊 Vergleichstabelle
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Vergleichstabelle
 
 | Protokoll   | Header-Größe (min) | Header-Größe (max) | Wichtigkeit für Security      |
 | ----------- | ------------------ | ------------------ | ----------------------------- |
@@ -369,7 +441,7 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
 --- 
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -381,6 +453,12 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 

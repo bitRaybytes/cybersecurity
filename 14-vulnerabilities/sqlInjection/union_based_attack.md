@@ -2,6 +2,15 @@
 
 > Dieses Dokument beschreibt die Durchführung einer Union-Based. SQL-Injection zur Extraktion von Daten aus einer Datenbank.
 
+## Inhaltsverzeichnis
+- [Ziel](#ziel)
+- [Beispielhafte Schritte zur Datenextraktion mit `GROUP_CONCAT`](#beispielhafte-schritte-zur-datenextraktion-mit-group_concat)
+- [Hinweise](#hinweise)
+- [Sicherheitshinweis](#sicherheitshinweis)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
 ## Ziel
 
 Datenbankinformationen schrittweise über die `UNION SELECT`-Technik auslesen – insbesondere bei anfälligen Parametern wie z. B. `id`, `search`, `user`, etc.
@@ -60,7 +69,7 @@ Dieses Wissen dient ausschließlich der legalen Anwendung im Rahmen von Penetrat
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -69,9 +78,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

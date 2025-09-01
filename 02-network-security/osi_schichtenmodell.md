@@ -1,6 +1,24 @@
-🛰️ OSI-Schichtenmodell – Cheat Sheet
+# 🛰️ OSI-Schichtenmodell – Cheat Sheet
 
-🔎 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Übersicht der 7 Schichten](#übersicht-der-7-schichten)
+- [Schicht 1 - Physikalische Schicht (Physical Layer)](#schicht-1---physikalische-schicht-physical-layer)
+- [Schicht 2 - Sicherungsschicht (Data Link Layer)](#schicht-2---sicherungsschicht-data-link-layer)
+- [Schicht 3 - Vermittlungsschicht (Network Layer)](#schicht-3---vermittlungsschicht-network-layer)
+- [Schicht 4 - Transportschicht (Transport Layer)](#schicht-4---transportschicht-transport-layer)
+- [Schicht 5 - Sitzungsschicht (Session Layer)](#schicht-5---sitzungsschicht-session-layer)
+- [Schicht 6 - Darstellungsschicht (Presentation Layer)](#schicht-6---darstellungsschicht-presentation-layer)
+- [Schicht 7 - Anwendungsschicht (Application Layer)](#schicht-7---anwendungsschicht-application-layer)
+- [Encapsulation und Decapsulation](#encapsulation-und-decapsulation)
+- [Das TCP/IP-Modell](#das-tcpip-modell)
+- [Nützliche Links](#nützliche-links)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+##  Einleitung
 
 Das OSI-Modell (Open Systems Interconnection) ist ein Referenzmodell für Netzwerkprotokolle, das von der ISO (International Organization for Standardization) entwickelt wurde.
 Es teilt die Netzwerkkommunikation in 7 Schichten auf, die jeweils bestimmte Aufgaben haben.
@@ -33,7 +51,13 @@ Jede Schicht baut auf den darunterliegenden Schichten auf und stellt der nächst
 
 ----
 
-## Schicht 1 🔹 Physikalische Schicht (Physical Layer)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schicht 1 - Physikalische Schicht (Physical Layer)
 
 **Aufgabe:** Übertragung von Bits (0/1) über physikalische Medien. Sie definiert die Hardware-Spezifikationen.
 
@@ -51,7 +75,7 @@ Signalübertragung → Elektrisch, Optisch oder Funk
 
 ----
 
-## Schicht 2 🔹 Sicherungsschicht (Data Link Layer)
+## Schicht 2 - Sicherungsschicht (Data Link Layer)
 
 **Aufgabe:** Fehlererkennung und Sicherstellung einer zuverlässigen Übertragung zwischen zwei direkt verbundenen Geräten. Sie unterteilt sich in die Unterebenen **LLC (Logical Link Control)** und **MAC (Media Access Control)**.
 - **Einheit:** Frames
@@ -70,7 +94,13 @@ Ein Frame besteht aus Header (Ziel-MAC, Quell-MAC), den Daten und einem Trailer 
  
 ----
 
-## Schicht 3 🔹 Vermittlungsschicht (Network Layer)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schicht 3 - Vermittlungsschicht (Network Layer)
 
 **Aufgabe:** Routing von **Paketen** über verschiedene Netzwerke hinweg. Sie adressiert Geräte logisch, um Pfade zu finden.
 - **Einheit:** Pakete
@@ -89,7 +119,7 @@ Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 
 -----
 
-## Schicht 4 🔹 Transportschicht (Transport Layer)
+## Schicht 4 - Transportschicht (Transport Layer)
 
 **Aufgabe:** Ende-zu-Ende-Kommunikation und Zuverlässigkeit durch Segmentierung und Flusskontrolle. Sie entscheidet, welche Anwendung Daten empfängt.
 - **Einheit:** Segmente (TCP) oder Datagramme (UDP)
@@ -107,7 +137,13 @@ Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 
 ----
 
-## Shicht 5 🔹 Sitzungsschicht (Session Layer)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schicht 5 - Sitzungsschicht (Session Layer)
 
 **Aufgabe:** Steuerung der Dialoge zwischen Anwendungen (Sitzungen aufbauen, verwalten, beenden).
 - **Einheit:** Daten
@@ -122,7 +158,7 @@ Anmeldungen, Sitzungen und Logins zwischen Hosts
 
 -----
 
-## Schicht 6 🔹 Darstellungsschicht (Presentation Layer)
+## Schicht 6 - Darstellungsschicht (Presentation Layer)
 
 **Aufgabe:** Übersetzung, Kompression und Verschlüsselung der Daten, damit Sender und Empfänger sie verstehen.
 - **Einheit:** Daten
@@ -137,7 +173,7 @@ Rohdaten <--> Verstehbare Information
 
 ----
 
-## Schicht 7 🔹 Anwendungsschicht (Application Layer)
+## Schicht 7 - Anwendungsschicht (Application Layer)
 
 **Aufgabe:** Schnittstelle zwischen Benutzer und Netzwerkdiensten. Sie stellt die Anwendung bereit, mit der der Nutzer interagiert.
 - **Einheit:** Daten
@@ -153,7 +189,13 @@ Browser, Mail-Client, Chat-Apps <--> Netzwerk
 
 ---
 
-## ℹ️ Encapsulation und Decapsulation
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Encapsulation und Decapsulation
 
 Der Datenfluss im OSI-Modell folgt dem Prinzip der **Kapselung (Encapsulation)** und **Entkapselung (Decapsulation)**.
 - **Kapselung (Sender):** Jede Schicht fügt den Daten, die sie von der oberen Schicht empfängt, einen Header (und ggf. Trailer) hinzu und übergibt die neue Daten-Einheit an die darunterliegende Schicht.
@@ -256,7 +298,13 @@ Am Empfänger werden die Bits wieder in die ursprüngliche Form zurückverwandel
 
 ---
 
-## 💡 Das TCP/IP-Modell
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Das TCP/IP-Modell
 
 In der Praxis wird häufig das **TCP/IP-Modell** verwendet, das eine vereinfachte Version des OSI-Modells ist. Es fasst die oberen drei Schichten des OSI-Modells in der **Anwendungsschicht** und die unteren beiden Schichten in der **Netzzugangsschicht** zusammen.
 
@@ -286,3 +334,32 @@ In der Praxis wird häufig das **TCP/IP-Modell** verwendet, das eine vereinfacht
 - [Request for Comments (offizielle Seite)](https://www.rfc-editor.org)
 - [Elektronik Kompendium: OSI-Schichtenmodell in der Netzwerktechnik](https://www.elektronik-kompendium.de/sites/net/0706101.htm)
 - [Wikipedia: OSI-Model](https://de.wikipedia.org/wiki/OSI-Modell)
+
+---
+
+## Haftungsausschluss
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+> Erstellt von Ray – für das Cybersecurity Lern- und Pentest-Repository  
+> 🛡️ Stay curious. Stay safe.
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+

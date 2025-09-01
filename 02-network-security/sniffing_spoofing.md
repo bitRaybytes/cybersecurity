@@ -1,6 +1,20 @@
 # 🕵️ Sniffing & Spoofing – Grundlagen, Techniken & Schutz
 
-## 📘 Einleitung
+---
+
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Begriffe & Definitionen](#begriffe--definitionen)
+- [Sniffing – Überwachung des Netzverkehrs](#sniffing--überwachung-des-netzverkehrs)
+- [Spoofing - Identitätsfälschung im Netzwerk](#spoofing---identitätsfälschung-im-netzwerk)
+- [Beispielangriff: ARP Spoofing mit Ettercap](#beispielangriff-arp-spoofing-mit-ettercap)
+- [Schutzmaßnahmen](#schutzmaßnahmen)
+- [Lernressourcen](#lernressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
 
 **Sniffing** und **Spoofing** gehören zu den klassischen Angriffstechniken in der Netzwerksicherheit. Während Sniffing das **Abfangen von Netzwerkdaten** beschreibt, steht Spoofing für das **Fälschen von Identitäten** (z. B. IP, MAC oder DNS).
 
@@ -8,7 +22,7 @@ Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und k�
 
 ---
 
-## 🧠 Begriffe & Definitionen
+## Begriffe & Definitionen
 
 | Begriff         | Beschreibung                                                                 |
 |------------------|------------------------------------------------------------------------------|
@@ -20,7 +34,13 @@ Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und k�
 
 ---
 
-## 🔍 Sniffing – Überwachung des Netzverkehrs
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Sniffing – Überwachung des Netzverkehrs
 
 ### Voraussetzungen
 - Gerät muss sich im selben Netzwerksegment befinden
@@ -53,7 +73,13 @@ http.request
 
 ----
 
-## 🎭 Spoofing – Identitätsfälschung im Netzwerk
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Spoofing - Identitätsfälschung im Netzwerk
 
 Arten von Spoofing
 
@@ -77,7 +103,7 @@ Arten von Spoofing
 
 ----
 
-## 🧪 Beispielangriff: ARP Spoofing mit Ettercap
+## Beispielangriff: ARP Spoofing mit Ettercap
 
 ```bash
 ettercap -T -M arp:remote /192.168.1.10/ /192.168.1.1/
@@ -86,7 +112,13 @@ ettercap -T -M arp:remote /192.168.1.10/ /192.168.1.1/
 
 ----
 
-## 🛡️ Schutzmaßnahmen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Schutzmaßnahmen
 Gegen Sniffing
 
 - Switches statt Hubs einsetzen
@@ -109,7 +141,7 @@ Gegen Sniffing
 
 ---
 
-## 🎓 Lernressourcen
+## Lernressourcen
 
 - TryHackMe: „Packet Analysis“, „Wireshark“, „Network Attacks“
 - HackTheBox: Labs mit Spoofing und Sniffing-Szenarien
@@ -117,9 +149,9 @@ Gegen Sniffing
 - YouTube Channels: John Hammond, NetworkChuck – Sniffing Tutorials
 - Buch: „Network Security Assessment“ von Chris McNab
 
----
+--- 
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -128,11 +160,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

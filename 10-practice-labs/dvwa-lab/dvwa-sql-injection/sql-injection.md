@@ -2,15 +2,14 @@
 **Security Level: low**
 
 ## Inhaltsverzeichnis
+- [1. Docker mit DVWA starten](#1-docker-mit-dvwa-starten)
+- [2. Auf DVWA im Browser zugreifen](#2-auf-dvwa-im-browser-zugreifen)
+- [3. Kleines DVWA Setup](#3-kleines-dvwa-setup)
+- [4. Challenge SQL-Injection accepted](#4-challenge-sql-injection-accepted)
+- [Haftungsausschluss](#haftungsausschluss)
 
-1. [Docker mit DVWA starte](#-1-docker-mit-dvwa-starten)
-2. [Auf DVWA im Browser zugreifen](#-2-auf-dvwa-im-browser-zugreifen)
-3. [Kleines DVWA Setup](#-3-kleines-dvwa-setup)
-4. [Challenge SQL-Injection Accepted](#-4-challenge-sql-injection-accepted)
-5. [Haftungsausschluss](#️-haftungsausschluss)
 
-
-## 🐳 1. Docker mit DVWA starten
+## 1. Docker mit DVWA starten
 
 **Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/09-tools-cheatsheet/docker-infos.md). 
 
@@ -34,7 +33,13 @@ Du kannst im nächsten Schritt deinen Browser öffnen.
 
 ---
 
-## 🐞💻 2. Auf DVWA im Browser zugreifen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 2. Auf DVWA im Browser zugreifen
 
 In der URL-Leiste kannst du nun folgendes Seite aufrufen:
 
@@ -49,7 +54,7 @@ Wenn alles erfolgreich war, hast du nun Zugriff auf diese Seite:
 
 ---
 
-## 🔧 3. Kleines DVWA Setup
+## 3. Kleines DVWA Setup
 
 Wenn du DVWA zum ersten Mal nutzt bzw. in deiner VM das erste Mal installierst, dann musst du zunächst eine "Datenbank" kreieren.
 Klicke hierzu auf der `/login.php`-Seite auf den Button `login`
@@ -76,9 +81,15 @@ Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
 
 ---
 
-## 💉 4. Challenge SQL-Injection accepted
+<div align=right>
 
-### 🔍 Überblick
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 4. Challenge SQL-Injection accepted
+
+### Überblick
 
 1. In dieses Eingabefeld kannst du deine [SQL-Injections](/03-web-security/sql-injection/sql-injection-cheatsheet.md) eingeben.
 2. Hilfreiche Links zum Thema SQL-Injections
@@ -93,7 +104,7 @@ Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
 Über den Button `View Help` erhältst du nähere Infos zu dieser Challenge. Hier erfährst du unter anderem, dass diese Challenge 5 User in der Datenbank hat, mit IDs von 1 bis 5 und deine Mission ist es, die Passwörter via SQL-Injection zu stehlen.
 
 
-### 🧪 Erste Abfragen starten
+### Erste Abfragen starten
 
 Schauen wir uns die Webseite einmal an.
 Wir sehen ein Eingabfeld und ein Button mit dem Namen `Submit`.
@@ -111,6 +122,12 @@ Schauen wir uns mal an, was nach dem submitten der Daten passiert:
 ![SQL-Injection Auswertung Buchstabe](/10-practice-labs/ressources/pictures/dvwa-sqli-2.png)
 
 Wie du siehst, verändert sich die URL, doch eine Fehlermeldung? Fehlanzeige. Also probieren wir mal das alles mit einer Zahl aus.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ![SQL-Injection Auswertung Zahl](/10-practice-labs/ressources/pictures/dvwa-sqli-3.png)
 
@@ -160,6 +177,12 @@ Solltest du noch die Fehlermeldung der letzte Grafik sehen, gehe bitte eine Seit
 Klicke anschließend unten rechts auf `View Source`, um dir den Source Code anzusehen. 
 
 ![SQL-Injection Source Code](/10-practice-labs/ressources/pictures/dvwa-sqli-5.png)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Wir wir sehen, hatte wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richtige Syntax siehst du im Bild oben.
 
@@ -212,9 +235,15 @@ Dazu verwendet man die `WHERE` und `ORDER BY`-Befehle (es gibt auch andere Befeh
 SELECT Name, E-Mail, Passwort FROM User WHERE user.name LIKE "Adm%" ORDER BY user.name ASC;
 ```
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Der Befehl sagt: WÄHLE Name, E-Mail und Passwort (Entitätstypen) VON User (Datenbanktabelle), WO der Name vom User WIE "Adm%" ist und sortiere mir die Datensätze in aufsteigender Reihenfolge (ASC = Ascending). Gegenteil wäre DESC (Descending)
 
-*Exkurs ENDE*
+***Exkurs ENDE***
 
 In einer SQL-Injection kann uns `Order By` helfen, herauszufinden, wie viele Spalten die Datenbankabfrage im Backend hat.
 Mit dieser SQL-Injection erhalten wir die Anzahl, der in der SQL-Abfrage hinterlegten Entitätstypen (Spalten).
@@ -269,6 +298,12 @@ Wir wissen bereits, dass die Abfrage in `php` folgendermaßen aufgebaut ist:
 $query = "Select first_name, last_name FROM users WHERE user_id = '$id';"
 ```
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Dabei ist das Abfrage-Statement in eine Variable namens `$query` gesetzt worden (vereinfacht Arbeiten am Code).
 
 In dieser SQL-Injection Phase nutzen wir den `UNION`-Befehl, um über unsere Paylouds Zugriff auf die Datenbank zu erhalten oder direkt mehr Informationen herauszuholen.
@@ -304,6 +339,7 @@ test' UNION SELECT 1, group_concat(column_name) FROM information_schema.columns 
 ```
 
 Jetzt solltest du folgendes erhalten:
+
 ![UNION Based Attack Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-11.png)
 
 Du siehst nun klar, wie die Spaltennamen heißen.
@@ -336,7 +372,7 @@ Folgende Schritte kannst du nun umsetzen:
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -349,9 +385,15 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

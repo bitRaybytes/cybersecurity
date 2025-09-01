@@ -1,13 +1,25 @@
 # 🧩 breakAndFixQuery
 
-## 💥 Ziel dieser Datei
+---
+
+## Inhaltsverzeichnis
+- [Ziel dieser Datei](#ziel-dieser-datei)
+- [Wie man eine SQL-Query bricht](#wie-man-eine-sql-query-bricht)
+- [Wie man eine Query balanciert oder repariert](#wie-man-eine-query-balanciert-oder-repariert)
+- [Zusammenfassung: Angriffs- & Fix-Phasen](#zusammenfassung-angriffs---fix-phasen)
+- [Nützlich in Kombination mit](#nützlich-in-kombination-mit)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Ziel dieser Datei
 
 Diese Datei dient als kompakte Referenz zur **Analyse, Manipulation und Behebung von SQL-Queries** bei Sicherheitsanalysen – insbesondere im Rahmen von **SQL-Injection-Tests**.  
 Sie zeigt typische Zeichen, mit denen eine SQL-Query absichtlich *gebrochen* oder *balanciert* werden kann, um Informationen zu extrahieren oder eine **kontrollierte Ausführung** zu ermöglichen.
 
 ---
 
-## 🛠️ Wie man eine SQL-Query **bricht**
+## Wie man eine SQL-Query **bricht**
 
 Diese Zeichen und Sequenzen werden verwendet, um bestehende SQL-Befehle **syntaktisch zu unterbrechen**, um eigene Payloads einzuschleusen. Das Ziel ist es, den ursprünglichen Query-String so zu manipulieren, dass man Zugang zu sensiblen Daten oder Kontrolle über die SQL-Engine erhält.
 
@@ -34,7 +46,13 @@ Diese Zeichen und Sequenzen werden verwendet, um bestehende SQL-Befehle **syntak
 
 ---
 
-## 🔧 Wie man eine Query balanciert oder repariert
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Wie man eine Query balanciert oder repariert
 
 Sobald die Query unterbrochen wurde, ist es häufig erforderlich, sie korrekt zu balancieren, um eigene SQL-Kommandos einzuschleusen. Hier kommen sogenannte Fix-Operatoren zum Einsatz:
 
@@ -61,7 +79,7 @@ Beispiel mit Kommentar-Fix:
 
 ---
 
-## 🎯 Zusammenfassung: Angriffs- & Fix-Phasen
+## Zusammenfassung: Angriffs- & Fix-Phasen
 
 | Phase           | Ziel                                      | Beispiel    |
 | --------------- | ----------------------------------------- | ----------- |
@@ -70,15 +88,15 @@ Beispiel mit Kommentar-Fix:
 
 ---
 
-## 🧪 Nützlich in Kombination mit
+## Nützlich in Kombination mit
 
-- [sqlInjectionToShell.md](03-web-security/sql-injection/sql_injection_to_shell.md) → zeigt komplette Angriffskette
-- [UnionBasedAttack.md](14-vulnerabilities/sqlInjection/union_based_attack.md) → enthält Datenextraktion über UNION SELECT
-- [Tools](/tools/) wie: Burp Suite, SQLMap, ZAP Proxy
+- [sqlInjectionToShell.md](03-web-security/sql-injection/sql_injection_to_shell.md) -> zeigt komplette Angriffskette
+- [UnionBasedAttack.md](14-vulnerabilities/sqlInjection/union_based_attack.md) -> enthält Datenextraktion über UNION SELECT
+- [Tools](/09-tools-cheatsheet/) wie: Burp Suite, SQLMap, ZAP Proxy
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -87,9 +105,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

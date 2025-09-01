@@ -1,15 +1,10 @@
 # 🔍 Reconnaissance Commands Cheat Sheet
 
-## 📘 Ziel dieser Datei
-
-Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Penetration Test, CTF oder bei Red/Blue-Team-Analysen effizient zu identifizieren, zu kartieren und zu analysieren. Die Befehle decken sowohl **aktive als auch passive Recon-Techniken** ab.
-
-> ⚠️ Hinweis: Die hier gelisteten Befehle dürfen **nur in autorisierten, legalen Testumgebungen** eingesetzt werden!
-
 ---
 
-## 🧭 Inhaltsverzeichnis
+## Inhaltsverzeichnis
 
+- [Einleitung](#einleitung)
 - [1. DNS- & Domain-Recon](#1-dns--domain-recon)
 - [2. WHOIS & Zertifikatsinfos](#2-whois--zertifikatsinfos)
 - [3. Subdomain Enumeration](#3-subdomain-enumeration)
@@ -20,10 +15,21 @@ Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Pe
 - [8. OSINT & Tools](#8-osint--tools)
 - [9. Active Directory Recon](#9-active-directory-recon)
 - [10. Nützliche Ressourcen](#10-nützliche-ressourcen)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 1. 🌐 DNS & Domain Recon
+## Einleitung
+
+Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Penetration Test, CTF oder bei Red/Blue-Team-Analysen effizient zu identifizieren, zu kartieren und zu analysieren. Die Befehle decken sowohl **aktive als auch passive Recon-Techniken** ab.
+
+> ⚠️ Hinweis: Die hier gelisteten Befehle dürfen **nur in autorisierten, legalen Testumgebungen** eingesetzt werden!
+
+---
+
+---
+
+## 1. DNS & Domain Recon
 
 ```bash
 nslookup domain.com
@@ -36,7 +42,7 @@ host -t mx domain.com                   # Mailserver prüfen
 
 ---
 
-## 2. 🌍 WHOIS & Zertifikatsinfos
+## 2. WHOIS & Zertifikatsinfos
 ```bash
 whois domain.com
 whois -h whois.arin.net <IP>
@@ -45,7 +51,13 @@ openssl s_client -connect domain.com:443 -showcerts
 
 ---
 
-## 3. 🏗️ Subdomain Enumeration
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 3. Subdomain Enumeration
 ```bash
 amass enum -d domain.com
 subfinder -d domain.com
@@ -55,7 +67,7 @@ crt.sh/?q=%.domain.com
 
 ---
 
-## 4. 🚪 Port & Service Scanning
+## 4. Port & Service Scanning
 ```bash
 nmap -sC -sV -oA fullscan domain.com
 nmap -p- --min-rate 1000 -T4 domain.com
@@ -69,7 +81,7 @@ nmap -p 80,443 --script http-title,http-enum <target>
 
 ---
 
-## 5. 🌐 Web Recon & Fingerprinting
+## 5. Web Recon & Fingerprinting
 ```bash
 whatweb domain.com
 wappalyzer -u https://domain.com
@@ -83,7 +95,13 @@ curl -s -D- https://domain.com | grep "Server"
 
 ---
 
-## 6. 📂 Directory & File Brute Forcing
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 6. Directory & File Brute Forcing
 ```bash
 gobuster dir -u https://domain.com -w /usr/share/wordlists/dirb/common.txt
 ffuf -u https://domain.com/FUZZ -w wordlist.txt
@@ -92,7 +110,7 @@ dirsearch -u https://domain.com
 
 ---
 
-## 7. 📧 E-Mail & Benutzerrecherche
+## 7. E-Mail & Benutzerrecherche
 ```bash
 theharvester -d domain.com -b google,bing,linkedin
 hunter.io (manuell)
@@ -101,7 +119,7 @@ emailrep.io API (E-Mail Reputation)
 
 ---
 
-## 8. 🕵️ OSINT & Tools
+## 8. OSINT & Tools
 
 | Tool               | Beschreibung                |
 | ------------------ | --------------------------- |
@@ -116,7 +134,13 @@ emailrep.io API (E-Mail Reputation)
 
 ---
 
-## . 🧠 Active Directory Recon (intern)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## 9. Active Directory Recon (intern)
 ```powershell
 # PowerView (PowerShell)
 Get-NetUser
@@ -133,7 +157,7 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 
 ---
 
-## 10. 📚 Nützliche Ressourcen
+## 10. Nützliche Ressourcen
 - [nmap.org](https://nmap.org/)
 - [github.com/OWASP/Amass](https://github.com/owasp-amass/amass)
 - [hackertarget.com](https://hackertarget.com/)
@@ -143,7 +167,7 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 
 --- 
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -152,9 +176,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-**Letzte Aktualisierung:** Juli 2025  
-Pull Requests für neue Shortcuts, Plugins oder Verbesserungen willkommen!
+🗓️ **Letzte Aktualisierung:** August 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

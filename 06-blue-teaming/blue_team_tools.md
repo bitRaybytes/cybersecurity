@@ -6,27 +6,27 @@
 
 ## Inhaltsverzeichnis
 
-1. [1️⃣ Asset Discovery & Network Mapping](#1️⃣-asset-discovery--network-mapping)
-2. [2️⃣ Vulnerability Management](#2️⃣-vulnerability-management)
-3. [3️⃣ Patch Management](#3️⃣-patch-management)
-4. [4️⃣ Endpoint Detection & Response (EDR)](#4️⃣-endpoint-detection--response-edr)
-5. [5️⃣ Security Information & Event Management (SIEM)](#5️⃣-security-information--event-management-siem)
-6. [6️⃣ Intrusion Detection & Prevention (IDS / IPS)](#6️⃣-intrusion-detection--prevention-ids--ips)
-7. [7️⃣ Log Management & Monitoring](#7️⃣-log-management--monitoring)
-8. [8️⃣ Threat Intelligence](#8️⃣-threat-intelligence)
-9. [9️⃣ Vulnerability Intelligence & Attack Surface Management](#9️⃣-vulnerability-intelligence--attack-surface-management)
-10. [🔟 Digital Forensics & Incident Response (DFIR)](#-digital-forensics--incident-response-dfir)
-11. [1️⃣1️⃣ Malware Analysis](#1️⃣1️⃣-malware-analysis)
-12. [1️⃣2️⃣ Email Security & Phishing Defense](#1️⃣2️⃣-email-security--phishing-defense)
-13. [1️⃣3️⃣ Firewall & Network Security](#1️⃣3️⃣-firewall--network-security)
-14. [1️⃣4️⃣ Awareness & Simulation](#1️⃣4️⃣-awareness--simulation)
-15. [1️⃣5️⃣ Backup & Recovery](#1️⃣5️⃣-backup--recovery)
-16. [📋 Empfehlungen](#-empfehlungen)
-17. [Haftungsausschluss](#️-Haftungsausschluss)
+1. [Asset Discovery & Network Mapping](#asset-discovery--network-mapping)
+2. [Vulnerability Management](#vulnerability-management)
+3. [Patch Management](#patch-management)
+4. [Endpoint Detection & Response (EDR)](#endpoint-detection--response-edr)
+5. [Security Information & Event Management (SIEM)](#security-information--event-management-siem)
+6. [Intrusion Detection & Prevention (IDS / IPS)](#intrusion-detection--prevention-ids--ips)
+7. [Log Management & Monitoring](#log-management--monitoring)
+8. [Threat Intelligence](#threat-intelligence)
+9. [Vulnerability Intelligence & Attack Surface Management](#vulnerability-intelligence--attack-surface-management)
+10. [Digital Forensics & Incident Response (DFIR)](#digital-forensics--incident-response-dfir)
+11. [Malware Analysis](#malware-analysis)
+12. [Email Security & Phishing Defense](#email-security--phishing-defense)
+13. [Firewall & Network Security](#firewall--network-security)
+14. [Awareness & Simulation](#awareness--simulation)
+15. [Backup & Recovery](#backup--recovery)
+16. [Empfehlungen](#empfehlungen)
+17. [Haftungsausschluss](#haftungsausschluss)
 
 ---
 
-## 1️⃣ Asset Discovery & Network Mapping
+## Asset Discovery & Network Mapping
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -38,7 +38,7 @@
 
 ---
 
-## 2️⃣ Vulnerability Management
+## Vulnerability Management
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -49,7 +49,13 @@
 
 ---
 
-## 3️⃣ Patch Management
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Patch Management
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -60,7 +66,7 @@
 
 ---
 
-## 4️⃣ Endpoint Detection & Response (EDR)
+## Endpoint Detection & Response (EDR)
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -71,7 +77,7 @@
 
 ---
 
-## 5️⃣ Security Information & Event Management (SIEM)
+## Security Information & Event Management (SIEM)
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -82,7 +88,13 @@
 
 ---
 
-## 6️⃣ Intrusion Detection & Prevention (IDS / IPS)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Intrusion Detection & Prevention (IDS / IPS)
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -93,7 +105,7 @@
 
 ---
 
-## 7️⃣ Log Management & Monitoring
+## Log Management & Monitoring
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -104,7 +116,7 @@
 
 ---
 
-## 8️⃣ Threat Intelligence
+## Threat Intelligence
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -116,7 +128,7 @@
 
 ---
 
-## 9️⃣ Vulnerability Intelligence & Attack Surface Management
+## Vulnerability Intelligence & Attack Surface Management
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -126,7 +138,13 @@
 
 ---
 
-## 🔟 Digital Forensics & Incident Response (DFIR)
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Digital Forensics & Incident Response (DFIR)
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -138,7 +156,7 @@
 
 ---
 
-## 1️⃣1️⃣ Malware Analysis
+## Malware Analysis
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -149,7 +167,7 @@
 
 ---
 
-## 1️⃣2️⃣ Email Security & Phishing Defense
+## Email Security & Phishing Defense
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -160,7 +178,13 @@
 
 ---
 
-## 1️⃣3️⃣ Firewall & Network Security
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Firewall & Network Security
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -170,7 +194,7 @@
 
 ---
 
-## 1️⃣4️⃣ Awareness & Simulation
+## Awareness & Simulation
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -180,7 +204,7 @@
 
 ---
 
-## 1️⃣5️⃣ Backup & Recovery
+## Backup & Recovery
 
 | Tool              | Zweck                                      |
 |-------------------|--------------------------------------------|
@@ -191,14 +215,20 @@
 
 ---
 
-## 📋 Empfehlungen
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Empfehlungen
 
 - Nutze **Wazuh + ELK + Suricata** für eine Open-Source Blue-Team-Pipeline.
 - Kombiniere mit **MISP** und **Velociraptor** für erweiterte Threat Detection & IR.
 
 ---
 
-## ⚠️ Haftungsausschluss
+## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 
@@ -207,9 +237,19 @@ Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisi
 Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
 Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
 
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
 --- 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Juli 2025  
+🗓️ **Letzte Aktualisierung:** August 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---
