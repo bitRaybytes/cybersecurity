@@ -116,7 +116,7 @@ URL:        http://natas2.natas.labs.overthewire.org
     <summary>Lösung</summary>
 
 Das erste, was du siehst, ist der Satz: `There is nothing on this page`.
-Wenn also das Passwort nicht auf dieser Seite zu finden ist, gibt es vielleicht eine weitere Seite oder eventuell eine Datei. 
+Wenn also das Passwort nicht auf dieser Seite zu finden ist, gibt es vielleicht eine weitere Seite oder eine Datei. 
 
 Inspiziere den HTML-Code. Es gibt eine interessante Sache.
 
@@ -754,7 +754,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

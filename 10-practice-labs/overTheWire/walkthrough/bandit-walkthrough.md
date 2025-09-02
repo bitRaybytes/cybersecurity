@@ -577,9 +577,9 @@ cat data.txt | base64 -d
 
 Es wurde ein Algorithmus verwendet, der alle Klein- und Großbuchstaben um 13 Stellen verschiebt.
 
-> Diese Verschlüsselung hört sich dpch ganz nach `ROT13` an. Lass uns mal weitersehen...
+> Diese Verschlüsselung hört sich doch ganz nach `ROT13` an. Lass uns mal weitersehen...
 
-Gib im 
+Gib im Terminal folgende Befehle ein: 
 ```bash
 ls
 cat data.txt
@@ -939,11 +939,11 @@ Nun solltest du erfolgreich mit der Shell des Benutzers `bandi17` verbunden sein
 
 3. Passwort für Bandit18 herausfinden:
 
-Nun haben wir noch das Password für `bandit18`, welches sich in der Datei `password.new` befindet. 
+Jetz haben wir noch das Password für `bandit18`, welches sich in der Datei `password.new` befindet. 
 In dieser Datei gibt es 100 Wörter - das kannst du herausfinden, wenn du den Befehl `wc -w Datei` eingibst. 
 
 Diese Dateien unterscheiden sich nur um eine Zeile.
-Du kannst nun folgenden Befehl nutzen, um herauszufinden, wo der Unterschied dieser Dateien im Inhalt ist:
+Du kannst folgenden Befehl nutzen, um herauszufinden, wo der Unterschied dieser Dateien im Inhalt ist:
 
 ```bash
 diff -d passwords.new passwords.old
@@ -1217,7 +1217,7 @@ nano newcron.sh     # öffnet im Nano Editor die newcron.sh Datei
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 ```
 
-![Bandit23 Code-Zeile kopieren](/10-practice-labs/ressources/pictures/otw-22c.png)
+![Bandit23 Code-Zeile kopieren](/10-practice-labs/ressources/pictures/otw-23c.png)
 
 Du erhältst anschließend eine sehr lange Buchstaben- und Zahlenreihenfolge. Kopiere es und gib folgenden Befehl ein, um die Challenge abzuschließen:
 
@@ -1773,7 +1773,7 @@ Die Hälfte ist geschafft.
 
 **Wichtig:** `.gitignore` ist eine Datei, die als "Konfiguration" verwendet wird, die es Entwickler ermöglicht, Dateien und/oder Informationen auszuschließen, die dann beim Hochladen übersprungen werden.
 
-Beim Auslesen der Datei ist die vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien nicht hochladen würde. Das müssen wir laut der `README.md` jedoch tun, um das Passwort zu erhalten.
+Beim Auslesen der Datei ist dir vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien nicht hochladen würde. Das müssen wir laut der `README.md` jedoch tun, um das Passwort zu erhalten.
 
 Die Zeile in `.gitignore` kannst du einfach auskommentieren, was dieses Problem damit löst.
 
@@ -1887,7 +1887,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

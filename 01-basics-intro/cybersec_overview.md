@@ -21,16 +21,16 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 ## Wichtige Säulen der Cybersicherheit
 
 ### 1. **Vertraulichkeit (Confidentiality)**
-- Schutz sensibler Daten vor unautorisiertem Zugriff
-- Verschlüsselung, Zugriffskontrollen, VPNs
+- Schutz sensibler Daten vor unautorisiertem Zugriff.
+- Verschlüsselung, Zugriffskontrollen, VPNs.
 
 ### 2. **Integrität (Integrity)**
-- Gewährleistung, dass Daten nicht unbemerkt verändert werden
-- Hashing, Signaturen, Prüfmechanismen
+- Gewährleistung, dass Daten nicht unbemerkt verändert werden.
+- Hashing, Signaturen, Prüfmechanismen.
 
 ### 3. **Verfügbarkeit (Availability)**
-- Sicherstellung, dass Systeme und Daten bei Bedarf erreichbar sind
-- Redundanz, Backups, Schutz vor DDoS
+- Sicherstellung, dass Systeme und Daten bei Bedarf erreichbar sind.
+- Redundanz, Backups, Schutz vor DDoS.
 
 ---
 
@@ -44,11 +44,11 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 | Bereich                   | Beschreibung |
 |---------------------------|--------------|
-| 🔐 **Red Teaming**        | Offensive Sicherheit: Angriffe simulieren, Schwachstellen identifizieren (z. B. Penetration Testing, Social Engineering) |
-| 🔵 **Blue Teaming**       | Defensive Sicherheit: Systeme absichern, Angriffe erkennen und abwehren (z. B. SIEM, IDS, Monitoring) |
-| 🧪 **Forensik**           | Digitale Spurensuche, Incident Response, Analyse von Angriffen |
-| 🧰 **Sicherheits-Tools** | Einsatz von Tools wie Burp Suite, Nmap, Wireshark, Metasploit, etc. |
-| 🧾 **Compliance & Recht** | Gesetze, Normen und ethische Grundsätze im Umgang mit IT-Systemen |
+| **Red Teaming**        | Offensive Sicherheit: Angriffe simulieren, Schwachstellen identifizieren (z. B. Penetration Testing, Social Engineering) |
+| **Blue Teaming**       | Defensive Sicherheit: Systeme absichern, Angriffe erkennen und abwehren (z. B. SIEM, IDS, Monitoring) |
+| **Forensik**           | Digitale Spurensuche, Incident Response, Analyse von Angriffen |
+| **Sicherheits-Tools**  | Einsatz von Tools wie Burp Suite, Nmap, Wireshark, Metasploit, etc. |
+| **Compliance & Recht** | Gesetze, Normen und ethische Grundsätze im Umgang mit IT-Systemen |
 
 ---
 
@@ -56,7 +56,7 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 
 **Cybersecurity ist kein Freifahrtschein für digitales "Hacken".** Vielmehr liegt die Verantwortung darin, Schwachstellen zu erkennen und **verantwortungsvoll zu melden oder zu beheben.**
 
-### ⚠️ Wichtige Grundsätze:
+### Wichtige Grundsätze:
 - **Ethical Hacking only!** Immer mit Einwilligung des Besitzers (z. B. über Bug-Bounty-Programme oder Testumgebungen).
 - **Kein Zugriff auf fremde Systeme oder Daten** ohne rechtliche Erlaubnis.
 - **Niemals absichtlich Schaden verursachen.**
@@ -113,7 +113,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
