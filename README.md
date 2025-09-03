@@ -1,30 +1,62 @@
 # 🛡️ Cybersecurity Hub – Dein zentraler Wissensspeicher
+Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools**, **Techniken**, **Notizen** und **Cheatsheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.
 
-Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools, Techniken, Notizen und Cheat Sheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.  
 Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen.
 
 
----
-
 ## Inhaltsverzeichnis:
 - [Struktur & Inhalte](#struktur--inhalte)
-    - [Aktuelle Highlights](#aktuelle-highlights)
 - [Themenübersicht](#themenübersicht)
-    - [Offensive Security (Red Team)](#offensive-security-red-team)
-    - [Defensive Security (Blue Team)](#defensive-security-blue-team)
-    - [Werkzeuge & Cheatsheets](#werkzeuge--cheatsheets)
-- [Dateiübersicht Auszug (wird laufend erweitert)](#dateiübersicht-auszug-wird-laufend-erweitert)
+- [Aktuelle Highlights](#aktuelle-highlights)
 - [Zielgruppe](#zielgruppe)
 - [Mitwirken & Beiträge](#mitwirken--beiträge)
 - [Lizenz](#lizenz)
 - [Community Support](#community-support)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ##  Struktur & Inhalte
+Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien gegliedert. Ziel ist es, eine schnelle Nachschlagbasis zu bieten – sowohl zum Lernen als auch zur Vorbereitung auf Prüfungen, CTFs oder reale Audits.
 
-Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert. Ziel ist es, eine **schnelle Nachschlagbasis** zu bieten – sowohl zum Lernen als auch zur Vorbereitung auf Prüfungen, CTFs oder reale Audits.
+```text
+📦 cybersecurity-hub/
+├── 01_basics_intro/
+├── 02-network-security/
+├── 03-web-security/
+├── 04-os-enumeration/
+├── 05-red-teaming/
+├── 06-blue-teaming/
+├── 07-crypto-stego/
+├── 08-social-engineering/
+├── 09-tools-cheatsheet/
+├── 10-practice-labs/
+├── 11-checklists/
+├── 12-cheatsheets-quickrefs/
+├── 13-kurse/
+├── 14-vulnerabilities/
+└── 15-betriebssysteme/
+```
+
+## Themenübersicht
+
+Themenübersicht
+Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behandelt werden:
+
+- **Grundlagen:** [Einführung in IT-Sicherheit und rechtliche Rahmenbedingungen](/01-basics-intro/)
+- **Netzwerksicherheit:** [Konzepte, Protokolle und Angriffsarten](/02-network-security/)
+- **Websicherheit:** [Anleitungen zu gängigen Schwachstellen wie SQL-Injections und XSS](/03-web-security/)
+- Betriebssysteme & Enumeration: [Grundlagen zur Aufklärung von Systemen und Privilege Escalation](/04-os-enumeration/)
+- **Defensive Security:** [Strategien, Tools und Methoden für Red-Teaming](/05-red-teaming/)
+- **Offensive Security:** [Strategien, Tools und Methoden für Blue-Teaming](/06-blue-teaming/)
+- **Kryptographie & Steganographie:** [Verschlüsselungstechniken und das Verbergen von Daten](/07-crypto-stego/)
+- **Social Engineering:** [Techniken, die auf menschlicher Manipulation basieren](/08-Social-Engineering/)
+- **Tools & Cheatsheets:** [Tools sowie ](/08-Social-Engineering/)
+- **Praxis-Labs:** [Detaillierte Anleitungen für praktische Übungen](/10-practice-labs/)
+- **Checklisten:** [Checklisten für Pentesting, Analysen uvm.](/11-checklists/)
+- **Cheatsheets:** [Schnelle Referenz zu Tools und Befehlen](/12-cheatsheets-quickrefs/)
+- **Kurse:** [Diverse Kurse zu verschiedenen Themen der Cybersecurity](/13-kurse/)
+- **SpezifischeSchwachstellen:** [Tiefergehende Analysen einzelner Sicherheitslücken](/14-vulnerabilities/)
 
 ### Aktuelle Highlights:
 
@@ -35,39 +67,8 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 | [`union_based_attack.md`](14-vulnerabilities/sqlInjection/union_based_attack.md) | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
 | [`wireshark_shortcuts.md`](12-cheatsheets-quickrefs/cheatsheets/wireshark_shortcuts.md) | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
 
----
 
-## Themenübersicht
 
-### Offensive Security (Red Team)
-- Recon & Scanning
-- Vulnerability Analysis
-- Web Application Hacking
-- Exploitation & Privilege Escalation
-- Password Attacks
-- Wireless & Social Engineering
-- Reverse Engineering
-- SQL Injection zur Shell
-
-### Defensive Security (Blue Team)
-- Log Management
-- SIEM & Monitoring Tools
-- Threat Hunting & Forensics
-- Incident Response Playbooks
-- Hardening & Detection Techniques
-- Malware Analysis
-
-### Werkzeuge & Cheatsheets
-- Wireshark
-- Nmap
-- Burp Suite
-- Hashcat, John the Ripper
-- Metasploit & Empire
-- Passwort-Cracking & Netzwerküberwachung
-- Cheat Sheets zu Befehlen, Payloads, Tools
-- [weitere Cheat Sheets hier](/12-cheatsheets-quickrefs/cheatsheets/)
-
----
 
 <div align=right>
 
@@ -75,19 +76,8 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 
 </div>
 
-## Dateiübersicht Auszug (wird laufend erweitert)
 
-```bash
-📦 cybersecurity-hub/
-├── blueTeamTools.md
-├── redTeamTools.md
-├── sqlInjectionToShell.md
-├── UnionBasedAttack.md
-├── phishing.md
-├── README.md 
-```
 
----
 
 ## Zielgruppe
 
@@ -96,7 +86,7 @@ Das Repository ist in praktische, thematisch sortierte `.md`-Dateien gegliedert.
 - SOC Analysten, Pentester, Incident Responder
 - Autodidakten & Studenten im Bereich IT-Sicherheit
 
----
+
 
 ## Mitwirken & Beiträge
 
@@ -109,23 +99,23 @@ So kannst du mitmachen:
 2. Erstelle einen Branch mit deinen Änderungen
 3. Erstelle einen Pull Request – wir freuen uns über deinen Beitrag!
 
----
+
 
 ## Lizenz
 
 Dieses Repository steht unter der MIT-Lizenz – freie Nutzung & Bearbeitung sind erwünscht.
-Credits bei Weiterverwendung wären nice. 😉
+Credits bei Weiterverwendung wären nett. 😉
 
 **Hinweis:** Externe Tools und Links gehören den jeweiligen Anbietern.
 
----
+
 
 ## Community Support
 Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
 
-[Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
+💬 [Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
 
----
+
 
 ## Haftungsausschluss
 
@@ -148,7 +138,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
