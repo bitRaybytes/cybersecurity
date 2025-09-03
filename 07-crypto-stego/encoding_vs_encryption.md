@@ -11,9 +11,24 @@ Links zu den Tools findest du [hier](#8-nützliche-links)
 ## Inhaltsverzeichnis
 
 - [1. Encoding](#1-encoding-umwandlung)
+    - [Arten des Encodings](#arten-des-encodings)
+    - [Beispiele](#beispiele)
 - [2. Encryption (Verschlüsselung)](#2-encryption-verschlüsselung)
+    - [Symmetrisches Verschlüsselung](#symmetrisches-verschlüsselung)
+        - [Blockchiffre](#blockchiffre)
+        - [Stromchiffre](#stromchiffre)
+        - [Typische Anwendungsbeispiele](#typische-anwendungsbeispiele)
+    - [Asymmetrisches Verschlüsselung](#asymmetrisches-verschlüsselung)
+        - [Funktionsweise asymmetrischer Verschlüsselung](#funktionsweise-asymmetrischer-verschlüsselung)
+        - [Anwendungsbereich](#anwendungsbereich)
+        - [Algorithmen](#algorithmen)
+    - [hybride Verschlüsselung](#hybride-verschlüsselung)
+    - [Beispiele](#beispiele-1)
 - [3. Hashing](#3-hashing)
+    - [Sicherheit erhöhen durch Salting und Peppering](#sicherheit-erhöhen-durch-salting-und-peppering)
+    - [Salting vs. Peppering](#salting-vs-peppering)
 - [4. Vergleichstabelle](#4-vergleichstabelle)
+    - [Praktische Beispiele](#praktische-beispiele)
 - [5. Typische Einsatzszenarien](#5-typische-einsatzszenarien)
 - [6. Häufige Missverständnisse](#6-häufige-missverständnisse)
 - [7. Tools und Befehle](#7-tools-und-befehle)
@@ -24,7 +39,7 @@ Links zu den Tools findest du [hier](#8-nützliche-links)
 
 ## 1. Encoding (Umwandlung)
 
-In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Uhalenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten.
+In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Zahlenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten.
 Die Umwandlung erfolgt mithilfe von Regeln oder Algorithmen. 
 
 > kurz gesagt: Encoding ist die Technik, die zur Umwandlung von Informationen von einem Format in ein anders Format genutzt wird. 
@@ -247,14 +262,14 @@ Im Gegenzug dazu sind **langsamere Hashes**, zu denen kryptografische Algorithme
 > Nicht-kryptografische Algorithem werden dafür genutzt, um große Datenmengen schnell zu indizieren und zu vergleichen.
 
 
-#### Sicherheit erhöhen durch Salting und Peppering
+### Sicherheit erhöhen durch Salting und Peppering
 Sicherheitstechniken wie Salting oder Peppering werden beim Hashen dafür verwendet, die Sicherheit der Passwörter noch einmal zu erhöhen.
 
 Das **Salting** fügt dem **Passwort** einen zufälligen und einzigartigen Wert hinzu, bevor es gehasht wird. Beim **Peppering** wird dem **Password** eine zusätzliche Zeichenkette. Zusätzich zum Peppering kommt hinzu, dass dieser zufällige und zusätzliche Wert nicht mit dem Passwort-Hash gespeichert wird, sondern getrennt davon. Man bewahrt einen `Pepper` bspw. in einer Konfigurationsdatei oder einem Hardware-Sicherheitsmodul.
 
 Die Kombination von **Hashing**, **Salting** und **Peppering** ist eine sehr wirksame Methode, um Passwörter sicher zu speicher.
 
-#### Salting vs. Peppering
+### Salting vs. Peppering
 
 |               |   **Salting**    |   **Peppering**   |
 | ------------- | ---------------- | ----------------- |
@@ -337,7 +352,7 @@ echo -n "secrettext" | sha256sum
 | `openssl`   | Verschlüsselung/Entschlüsselung             |
 | `gpg`       | Asymmetrische Verschlüsselung               |
 | `sha256sum` | Hashing von Dateien/Text                    |
-| `CyberChef`| Kombiniert Encoding/Hashing/Verschlüsselung |
+| `CyberChef` | Kombiniert Encoding/Hashing/Verschlüsselung |
 | `hashcat`   | Passwortwiederherstellungs-Tool             |
 
 

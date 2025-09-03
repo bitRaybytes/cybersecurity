@@ -112,8 +112,8 @@ netstat -lp     # mit Prozessinfos (sofern verfügbar)
 ---
 
 ## Siehe auch
-- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
-- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
+- [php_rce_cheat_sheet.md](/03-web-security/webshells/php_rce_cheat_sheet.md)
+- [sql_injection_to_shell.md](/03-web-security/injektionen/sql_injection_to_shell.md)
 - [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
 
 ----

@@ -61,7 +61,7 @@ Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebig
 
 ### ❌ Problem:
 
-Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systembefehlen, die über die URL übergeben werden.
+Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Systembefehlen, die über die URL übergeben werden.
 
 → Beispiel:
 `http`
@@ -71,7 +71,7 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 - Verwendung vorbereiteter Kommandos ohne Benutzereingaben.
 - Whitelisting erlaubter Befehle.
-- Nutzung von escapeshellcmd() und escapeshellarg() (nur bedingt sicher).
+- Nutzung von `escapeshellcmd()` und `escapeshellarg()` (nur bedingt sicher).
 - Oder: Verzicht auf Shell-Zugriffe aus Webanwendungen.
 
 ---
@@ -113,7 +113,7 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 ## Verteidigung (Blue Team)
 
-- Verwende niemals Benutzereingaben direkt in exec(), system(), passthru() etc.
+- Verwende niemals Benutzereingaben direkt in `exec()`, `system()`, `passthru()` etc.
 - Setze Application Firewalls ein (z. B. ModSecurity).
 - Nutze sichere Webframeworks mit Sandboxing.
 - Begrenze Rechte des Webservers (z. B. www-data darf nicht root sein).
@@ -123,7 +123,7 @@ Die Funktion exec($_GET["cmd"]) erlaubt die ungefilterte Ausführung von Systemb
 
 ## Siehe auch
 
-- [sql_injection_to_shell.md](/03-web-security/sql-injection/sql_injection_to_shell.md)
+- [sql_injection_to_shell.md](/03-web-security/injektionen/sql_injection_to_shell.md)
 - [break_and_fix_query.md](/03-web-security/break-fix/break_and_fix_query.md)
 - [union_based_attack.md](/14-vulnerabilities/sqlInjection/union_based_attack.md)
 - [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)

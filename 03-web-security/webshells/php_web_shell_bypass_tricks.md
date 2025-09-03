@@ -116,9 +116,9 @@ Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Datei
 
 ## Siehe auch:
 
-- [php_web_shell_usage.md](/03-web-security/phpWebShell/php_web_whell_usage.md)
-- [php_rce_cheat_sheet.md](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)
-- [post_expoitation_tools.md](04-os-enumeration/post_exploitation_tools.md)
+- [php_web_shell_usage.md](/03-web-security/webshells/php_web_whell_usage.md)
+- [php_rce_cheat_sheet.md](/03-web-security/webshells/php_rce_cheat_sheet.md)
+- [post_expoitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
 
 ----
 

@@ -168,9 +168,9 @@ tail -f /var/log/auth.log  # SSH/Authentifizierungsversuche
 
 ## Siehe auch:
 
-- [php_web_shell_bypass_tricks.md](03-web-security/phpWebShell/php_web_shell_bypass_tricks.md)
-- [post_exploitation_tools.md](04-os-enumeration/post_exploitation_tools.md)
-- [php_web_shell_usage.md](03-web-security/phpWebShell/php_web_whell_usage.md)
+- [php_web_shell_bypass_tricks.md](/03-web-security/webshells/php_web_shell_bypass_tricks.md)
+- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
+- [php_web_shell_usage.md](/03-web-security/webshells/php_web_whell_usage.md)
 
 ---
 
