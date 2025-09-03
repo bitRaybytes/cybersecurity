@@ -4,22 +4,29 @@
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
-- [Ethernet II (Layer 2)](#ethernet-ii-layer-2)
-- [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
-- [IPv6 Header (Layer 3)](#ipv6-header-layer-3)
-- [TCP Header (Layer 4)](#tcp-header-layer-4)
-- [UDP Header (Layer 4)](#udp-header-layer-4)
-- [ICMP Header (Layer 3)](#icmp-header-layer-3)
-- [ARP Header (Layer 2/3)](#arp-header-layer-23)
-- [DHCP (über UDP 67/68)](#dhcp-über-udp-6768)
-- [DNS Header (UDP/TCP Port 53)](#dns-header-udptcp-port-53)
-- [TLS/SSL Record Layer](#tlsssl-record-layer)
-- [Kerberos (Authentication)](#kerberos-authentication)
-- [RADIUS](#radius)
-- [IPSec (Security for IP)](#ipsec-security-for-ip)
-- [SMB (Server Message Block)](#smb-server-message-block)
-- [SNMP (Simple Network Management Protocol)](#snmp-simple-network-management-protocol)
-- [ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)](#arbitrary-protocols-smb-ipsec-kerberos-snmp-syslog)
+- [Layer 2 Protokolle](#layer-2-protokolle)
+  - [ARP Header (Layer 2/3)](#arp-header-layer-23)
+  - [Ethernet II (Layer 2)](#ethernet-ii-layer-2)
+- [Layer 3 Protokolle](#layer-3-protokolle)
+  - [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
+  - [IPv6 Header (Layer 3)](#ipv6-header-layer-3)
+- [Layer 4 Protokolle](#layer-4-protokolle)
+  - [TCP Header (Layer 4)](#tcp-header-layer-4)
+  - [UDP Header (Layer 4)](#udp-header-layer-4)
+- [Layer 5-7 Protokolle](#)
+  - [DHCP (über UDP 67/68) (Layer 5)](#dhcp-über-udp-6768-layer-5-7)
+  - [DNS Header (UDP/TCP Port 53) (Layer 5)](#dns-header-udptcp-port-53-layer-5-7)
+  - [HTTP/HTTPS (Layer 5)](#httphttps-layer-5-7)
+  - [ICMP Header (Layer 3)](#icmp-header-layer-3)
+  - [NTP (Layer 5)](#ntp)
+  - [TLS/SSL Record Layer (Layer 5)](#tlsssl-record-layer-layer-5-7)
+  - [Kerberos (Authentication) (Layer 5)](#kerberos-authentication-layer-5-7)
+  - [RADIUS (Layer 5)](#radius-layer-5-7)
+  - [IPSec (Security for IP) (Layer 5)](#ipsec-internet-procotol-security-layer-5-7)
+  - [SMB (Server Message Block) (Layer 5)](#smb-server-message-block)
+  - [SNMP (Simple Network Management Protocol) (Layer 5)](#snmp-simple-network-management-protocol)
+  - [Syslog (Layer 5)](#syslog)
+  - [ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog) ](#arbitrary-protocols-smb-ipsec-kerberos-snmp-syslog)
 - [Vergleichstabelle](#vergleichstabelle)
 - [Haftungsausschluss](#haftungsausschluss)
 
@@ -33,7 +40,9 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## Ethernet II (Layer 2)
+## Layer 2 Protokolle
+
+###  Ethernet II (Layer 2)
 
 - Zweck: Transport von Frames innerhalb eines LANs.
 - Header-Größe: 14 Bytes = 112 Bit
@@ -46,6 +55,35 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 +--------------------+-------------------+----------------------+
 ```
 
+
+----
+
+
+###  ARP Header (Layer 2/3)
+
+- Zweck: Auflösung von IP → MAC-Adressen.
+- Header-Größe: 28 Bytes
+
+```text
+0              | 1             | 2               | 3
+0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
++------------------------------+--------------+-----------------+
+| Hardware Type 16b / 2B       | Protocol Type (PTYPE 2B / 16b) |
++------------------------------+--------------------------------+
+| HW Size (1B)   | Prot Size (1B) | Opcode (2B)                 |
++----------------+----------------+-----------------------------+
+| Sender MAC (8B)                                               |
+|                                                               |
++---------------------------------------------------------------+
+| Sender IP (4B)                                                |
++---------------------------------------------------------------+
+| Target MAC (8B)                                               |
+|                                                               |
++---------------------------------------------------------------+
+| Target IP (4B)                                                |
++---------------------------------------------------------------+
+```
+
 ----
 
 <div align=right>
@@ -54,7 +92,9 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 </div>
 
-## IPv4 Header (Layer 3)
+## Layer 3 Protokolle
+
+### IPv4 Header (Layer 3)
 
 - Zweck: Routing von Paketen über Netzwerke hinweg.
 - Header-Größe: 20–60 Bytes (20 Bytes ohne Optionen; 5–15 Words à 32 Bit)
@@ -77,9 +117,27 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 +----------------------------------------------------------------+
 ```
 
+
 ---
 
-## IPv6 Header (Layer 3)
+### ICMP Header (Layer 3)
+
+- Zweck: Diagnose & Fehlerberichte (Ping, Traceroute).
+- Header-Größe: min. 8 Bytes (Standard, ohne Zusatzfelder)
+
+```text
+0              | 1             | 2               | 3
+0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
++--------------+---------------+-----------------+-------------+
+| Type (1B)    | Code (1B)     | Checksum (16b / 2B)           |
++--------------+---------------+-------------------------------+
+| Rest of Header (4 B)                                         |
++--------------------------------------------------------------+
+```
+
+---
+
+### IPv6 Header (Layer 3)
 
 - Zweck: Nachfolger von IPv4, 128-Bit Adressen.
 - Header-Größe: Fix 40 Bytes (10 Words à 32 Bit)
@@ -108,7 +166,9 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 </div>
 
-## TCP Header (Layer 4)
+
+## Layer 4 Protokolle
+### TCP Header (Layer 4)
 
 - Zweck: Verbindungsorientierte Kommunikation.
 - Header-Größe: 20–60 Bytes (5–15 Words à 32 Bit)
@@ -133,7 +193,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-## UDP Header (Layer 4)
+### UDP Header (Layer 4)
 
 - Zweck: Verbindungsloser Transport (z. B. DNS, DHCP).
 - Header-Größe: 8 Bytes = 2 Words à 32 Bit
@@ -150,55 +210,6 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ---
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
-## ICMP Header (Layer 3)
-
-- Zweck: Diagnose & Fehlerberichte (Ping, Traceroute).
-- Header-Größe: min. 8 Bytes (Standard, ohne Zusatzfelder)
-
-```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+--------------+---------------+-----------------+-------------+
-| Type (1B)    | Code (1B)     | Checksum (16b / 2B)           |
-+--------------+---------------+-------------------------------+
-| Rest of Header (4 B)                                         |
-+--------------------------------------------------------------+
-```
-
-----
-
-## ARP Header (Layer 2/3)
-
-- Zweck: Auflösung von IP → MAC-Adressen.
-- Header-Größe: 28 Bytes
-
-```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+------------------------------+--------------+-----------------+
-| Hardware Type 16b / 2B       | Protocol Type (PTYPE 2B / 16b) |
-+------------------------------+--------------------------------+
-| HW Size (1B)   | Prot Size (1B) | Opcode (2B)                 |
-+----------------+----------------+-----------------------------+
-| Sender MAC (8B)                                               |
-|                                                               |
-+---------------------------------------------------------------+
-| Sender IP (4B)                                                |
-+---------------------------------------------------------------+
-| Target MAC (8B)                                               |
-|                                                               |
-+---------------------------------------------------------------+
-| Target IP (4B)                                                |
-+---------------------------------------------------------------+
-```
-
----
 
 <div align=right>
 
@@ -206,10 +217,13 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 </div>
 
-## DHCP (über UDP 67/68)
+## Layer 5-7 Protokolle
+
+### DHCP (über UDP 67/68) (Layer 5-7)
 
 - Zweck: Automatische Zuweisung von IP, Gateway, DNS.
 - Header-Größe: 236 Bytes + Optionen
+- Transport: UDP 67/68
 
 ```text
 0              | 1             | 2               | 3
@@ -238,10 +252,11 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ----
 
-## DNS Header (UDP/TCP Port 53)
+### DNS Header (UDP/TCP Port 53) (Layer 5-7)
 
 - Zweck: Namensauflösung (Domain → IP).
 - Header-Größe: 12 Bytes + Queries/Responses
+- Transport: UDP/TCP 53
 
 ```text
 0              | 1             | 2               | 3
@@ -254,6 +269,22 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 +------------------------------+--------------------------------+
 ```
 
+---
+
+### HTTP/HTTPS (Layer 5-7)
+
+- Zweck: Web-Kommunikation (Text-basiert).
+- Transport: TCP 80 (HTTP), TCP 443 (HTTPS via TLS/SSL)
+- Header: Variabel (Textzeilen mit Feldern wie Host, User-Agent, Cookie, …)
+
+```http
+GET /index.html HTTP/1.1
+Host: example.com
+User-Agent: curl/7.79.1
+Accept: */*
+```
+
+
 
 ----
 
@@ -263,7 +294,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 </div>
 
-## TLS/SSL Record Layer
+### TLS/SSL Record Layer (Layer 5-7)
 
 - Zweck: Verschlüsselte Kommunikation (HTTPS, SMTPS, FTPS).
 - Header-Größe: 5 Bytes + Payload
@@ -278,22 +309,51 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 +-------------------------------------------------+
 ```
 
+---
+
+### SSH 
+
+- Zweck: Sichere Remote-Verbindungen & Tunnels.
+- Transport: TCP 22
+- Header: Kein fester Standard wie bei IP/TCP → initiale Pakete:
+  - Protokoll-Version-String (SSH-2.0-OpenSSH_8.9)
+  - Key Exchange Init (Algorithmen, Nonces)
+- Payload: Verschlüsselt nach Schlüsselaustausch.
+
+
+### NTP
+
+- Zweck: Zeit-Synchronisation.
+- Transport: UDP 123
+- Header-Größe: 48 Bytes
+
+```text
+| LI | VN | Mode | Stratum | Poll | Precision |
+| Root Delay (32b) | Root Dispersion (32b)    |
+| Reference ID (32b)                          |
+| Reference Timestamp (64b)                   |
+| Originate Timestamp (64b)                   |
+| Receive Timestamp (64b)                     |
+| Transmit Timestamp (64b)                    |
+
+```
+
 ----
 
-## Kerberos (Authentication)
+### Kerberos (Authentication) (Layer 5-7)
 
 - Zweck: Netzwerk-Authentifizierung (oft in Windows-AD, SSO).
 - Transport: meist über TCP/UDP Port 88
 - Header-Größe: variabel (ASN.1-codiert, meist 20–200+ Bytes)
 
-Kerberos Messages:
+**Kerberos Messages:**
 - AS-REQ / AS-REP (Authentication Service)
 - TGS-REQ / TGS-REP (Ticket Granting Service)
 - AP-REQ / AP-REP (Application Service)
 
 -----
 
-## RADIUS
+### RADIUS (Layer 5-7)
 
 - Zweck: Authentifizierung, Autorisierung, Accounting (AAA).
 - Transport: UDP 1812 (Auth), UDP 1813 (Accounting).
@@ -319,14 +379,14 @@ Kerberos Messages:
 
 </div>
 
-## IPSec (Internet Procotol Security)
+### IPSec (Internet Procotol Security) (Layer 5-7)
 
 - Zweck: Sichere VPN-Kommunikation auf IP-Ebene.
 - Header-Typen:
   - AH (Authentication Header): 24 Bytes
   - ESP (Encapsulating Security Payload): variabel (mind. 8 Bytes + Payload + Padding + Auth Data)
 
-### AH Header
+#### AH Header
 
 ```text
 0              | 1             | 2               | 3
@@ -342,7 +402,7 @@ SPI (4 B)                                                      |
 +--------------------------------------------------------------+
 ```
 
-### ESP Header
+#### ESP Header
 
 ```text
 0              | 1             | 2               | 3
@@ -361,7 +421,7 @@ SPI (4 B)                                                      |
 
 ----
 
-## SMB (Server Message Block)
+### SMB (Server Message Block)
 
 - Zweck: Datei- und Druckerfreigaben, häufiges Angriffsziel (EternalBlue, WannaCry).
 - Transport: TCP 445.
@@ -369,7 +429,7 @@ SPI (4 B)                                                      |
   - 32 Bytes (SMBv1),
   - 64 Bytes (SMBv2)
 
-### SMB-Header Felder (SMBv2):
+#### SMB-Header Felder (SMBv2):
 - Protocol ID
 - Structure Size
 - Credit Charge
@@ -386,24 +446,34 @@ SPI (4 B)                                                      |
 
 </div>
 
-## SNMP (Simple Network Management Protocol)
+### SNMP (Simple Network Management Protocol)
 
 - Zweck: Geräteverwaltung, oft Ziel für Enumeration & Angriffe.
 - Transport: UDP 161.
 - Header: ASN.1-basiert (variabel, min. ca. 20 Bytes).
 
-### Struktur:
+#### Struktur:
 - Version
 - Community String (Passwort)
 - PDU (GetRequest, GetResponse, Trap, etc.)
 
-```php-template
+
+--- 
+
+### Syslog
+
+- Zweck: Zentrale Log-Sammlung.
+- Transport: UDP 514 (traditionell), TCP/TLS möglich
+- Header: variabel, Basisformat:
+
+```text
 <PRI> TIMESTAMP HOSTNAME TAG MESSAGE
 ```
 
+
 ----
 
-## ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)
+### ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)
 
 Diese Protokolle haben sehr variable Header-Aufbauten (häufig mit ASN.1 oder Block-Formaten). 
 
@@ -419,25 +489,30 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
 ## Vergleichstabelle
 
-| Protokoll   | Header-Größe (min) | Header-Größe (max) | Wichtigkeit für Security      |
-| ----------- | ------------------ | ------------------ | ----------------------------- |
-| Ethernet II | 14 B               | 14 B               | Basis für alles               |
-| IPv4        | 20 B               | 60 B               | Ziel für Spoofing             |
-| IPv6        | 40 B               | 40 B               | Zukunftssicher, DoS/RA        |
-| TCP         | 20 B               | 60 B               | Angriffe: SYN Flood, RST      |
-| UDP         | 8 B                | 8 B                | DNS, DHCP Angriffe            |
-| ICMP        | 4 B                | variabel           | Ping Flood, Tunnels           |
-| ARP         | 28 B               | 28 B               | ARP-Spoofing                  |
-| DHCP        | 236 B              | variabel           | Rogue DHCP Server             |
-| DNS         | 12 B               | variabel           | DNS-Spoofing, Poisoning       |
-| TLS/SSL     | 5 B                | variabel           | MitM, SSL-Stripping           |
-| Kerberos    | variabel           | variabel           | Ticket Attacks, Pass-the-Hash |
-| RADIUS      | 20 B               | variabel           | Bruteforce, Replay            |
-| IPSec AH    | 24 B               | variabel           | VPN Security                  |
-| IPSec ESP   | 8 B                | variabel           | VPN Security                  |
-| SMB         | 32 B               | 64 B               | Ransomware, Worms             |
-| SNMP        | \~20 B             | variabel           | Default Community Strings     |
-| Syslog      | variabel           | variabel           | Log Manipulation              |
+| Protokoll   | Port / Typ    | Header-Größe (min) | Header-Größe (max) | Security-Aspekt            |
+| ----------- | ------------- | ------------------ | ------------------ | -------------------------- |
+| Ethernet II | –             | 14 B               | 14 B               | Basis, VLAN-Hopping        |
+| ARP         | –             | 28 B               | 28 B               | ARP-Spoofing               |
+| IPv4        | –             | 20 B               | 60 B               | IP-Spoofing                |
+| IPv6        | –             | 40 B               | 40 B               | RA-Spoofing, DoS           |
+| ICMP        | –             | 8 B                | variabel           | Ping Flood, ICMP Tunnels   |
+| TCP         | –             | 20 B               | 60 B               | SYN Flood, Reset Attacks   |
+| UDP         | –             | 8 B                | 8 B                | Amplification Attacks      |
+| DHCP        | 67/68 UDP     | 236 B              | variabel           | Rogue DHCP                 |
+| DNS         | 53 UDP/TCP    | 12 B               | variabel           | DNS-Spoofing, Cache Poison |
+| HTTP        | 80 TCP        | variabel           | variabel           | Session Hijacking, XSS     |
+| HTTPS       | 443 TCP       | 5 B (TLS Record)   | variabel           | MitM, SSL-Stripping        |
+| TLS/SSL     | –             | 5 B                | variabel           | Downgrade, Weak Ciphers    |
+| SSH         | 22 TCP        | variabel           | variabel           | Bruteforce, Weak Keys      |
+| NTP         | 123 UDP       | 48 B               | 48 B               | NTP Amplification Attacks  |
+| Kerberos    | 88 TCP/UDP    | variabel           | variabel           | Pass-the-Ticket/Hash       |
+| RADIUS      | 1812/1813 UDP | 20 B               | variabel           | Replay, Bruteforce         |
+| IPSec AH    | –             | 24 B               | variabel           | VPN Security               |
+| IPSec ESP   | –             | 8 B                | variabel           | VPN Security               |
+| SMB         | 445 TCP       | 32 B               | 64 B               | Ransomware, Worms          |
+| SNMP        | 161 UDP       | \~20 B             | variabel           | Default Community Strings  |
+| Syslog      | 514 UDP/TCP   | variabel           | variabel           | Log Manipulation           |
+
 
 --- 
 
