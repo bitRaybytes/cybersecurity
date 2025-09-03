@@ -123,10 +123,10 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 
 ## Siehe auch
 
-- [sql_injection_to_shell.md](/03-web-security/injektionen/sql_injection_to_shell.md)
-- [break_and_fix_query.md](/03-web-security/break-fix/break_and_fix_query.md)
-- [union_based_attack.md](/14-vulnerabilities/sqlInjection/union_based_attack.md)
-- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/break-fix/break_and_fix_query.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/break-fix/break_and_fix_query.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/14-vulnerabilities/sqlInjection/union_based_attack.md](https://github.com/bitRaybytes/cybersecurity/blob/main/14-vulnerabilities/sqlInjection/union_based_attack.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 
 ----
 

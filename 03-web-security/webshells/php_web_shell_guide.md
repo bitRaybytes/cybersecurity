@@ -112,9 +112,9 @@ netstat -lp     # mit Prozessinfos (sofern verfügbar)
 ---
 
 ## Siehe auch
-- [php_rce_cheat_sheet.md](/03-web-security/webshells/php_rce_cheat_sheet.md)
-- [sql_injection_to_shell.md](/03-web-security/injektionen/sql_injection_to_shell.md)
-- [post_exploitation_tools.md](/04-os-enumeration/post_exploitation_tools.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md)
+- [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 
 ----
 
