@@ -51,7 +51,7 @@ Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behand
 - **Offensive Security:** [Strategien, Tools und Methoden für Blue-Teaming](/06-blue-teaming/)
 - **Kryptographie & Steganographie:** [Verschlüsselungstechniken und das Verbergen von Daten](/07-crypto-stego/)
 - **Social Engineering:** [Techniken, die auf menschlicher Manipulation basieren](/08-Social-Engineering/)
-- **Tools & Cheatsheets:** [Tools sowie ](/08-Social-Engineering/)
+- **Tools & Cheatsheets:** [Tools sowie Cheatsheets](/08-Social-Engineering/)
 - **Praxis-Labs:** [Detaillierte Anleitungen für praktische Übungen](/10-practice-labs/)
 - **Checklisten:** [Checklisten für Pentesting, Analysen uvm.](/11-checklists/)
 - **Cheatsheets:** [Schnelle Referenz zu Tools und Befehlen](/12-cheatsheets-quickrefs/)
