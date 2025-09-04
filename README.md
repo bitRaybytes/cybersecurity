@@ -25,17 +25,16 @@ Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien
 ├── 02-network-security/
 ├── 03-web-security/
 ├── 04-os-enumeration/
-├── 05-red-teaming/
-├── 06-blue-teaming/
-├── 07-crypto-stego/
-├── 08-social-engineering/
-├── 09-tools-cheatsheet/
-├── 10-practice-labs/
-├── 11-checklists/
-├── 12-cheatsheets-quickrefs/
-├── 13-kurse/
-├── 14-vulnerabilities/
-└── 15-betriebssysteme/
+├── 05-offensive_defensive_strategien/
+├── 06-crypto-stego/
+├── 07-social-engineering/
+├── 08-tools-cheatsheet/
+├── 09-practice-labs/
+├── 10-checklists/
+├── 11-cheatsheets-quickrefs/
+├── 12-kurse/
+├── 13-vulnerabilities/
+└── 14-betriebssysteme/
 ```
 
 ## Themenübersicht
