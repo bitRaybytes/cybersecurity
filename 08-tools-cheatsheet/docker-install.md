@@ -62,7 +62,7 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
 ```
-![Docker Installation testen](/10-practice-labs/ressources/pictures/step3installDependencies.png)
+![Docker Installation testen](/09-practice-labs/ressources/pictures/step3installDependencies.png)
 
 ### 3. Docker GPG-Schlüssel hinzufügen 
 (optional, wenn 2 installiert wurde)
@@ -90,7 +90,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 sudo apt-get install -y docker.io
 ```
 
-![Docker installieren](/10-practice-labs/ressources/pictures/step4installDocker.png)
+![Docker installieren](09-practice-labs/ressources/pictures/step4installDocker.png)
 
 #### weitere nützliche Docker Add-Ons (optional)
 
@@ -116,7 +116,7 @@ sudo apt install docker-compose
 sudo docker run hello-world
 ```
 
-![Docker Installation testen](/10-practice-labs/ressources/pictures/step5dockerTest.png)
+![Docker Installation testen](09-practice-labs/ressources/pictures/step5dockerTest.png)
 
 ### Optional: Docker ohne sudo verwenden
 

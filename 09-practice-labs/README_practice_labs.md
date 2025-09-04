@@ -1,8 +1,16 @@
-# 📚 Practice Labs
+# 📚 README - Practice Labs
 
 Hier findest du verschiedene Trainings und Labs zu
 CTF, SQL-Injections, Malware und weitere Themen zum herunterladen
 und selbst ausprobieren.
+
+## Inhaltsverzeichnis
+
+## Übersicht Pentesting-Labs
+- [DVWA - Damn Vulnerable Web Application](/09-practice-labs/dvwa-lab/)
+- [Metasploit](/09-practice-labs/metasploitable2/)
+- [Over The Wire](/09-practice-labs/overTheWire/)
+- [OWASP JuiceShop](/09-practice-labs/owasp/juiceShop/)
 
 ---
 

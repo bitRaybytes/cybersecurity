@@ -139,7 +139,7 @@ Wir verbinden uns grundsätzlich aus dem Kali Terminal stets über eine sichere 
 In den meisten Bandit-Level ist es nötig, mit dem Befehl `exit` die SSH-Verbindung zu trennen, damit du dich mit dem nächsten "User" anmelden kannst. Die User sind dabei die Level, die du als Userkennung nutzt, also `bandit0` für den Beginn und das erste Passwort zu `bandit1`. `bandit1` für das Level, um das Password für `bandit2` zu erhalten und so weiter.
 
 
-![Bandit Challenge starten](/10-practice-labs/ressources/pictures/otw-0.png)
+![Bandit Challenge starten](/09-practice-labs/ressources/pictures/otw-0.png)
 
   
 </details>
@@ -184,7 +184,7 @@ echo "lvl1 passwort: {Passwort hier rein}" > ~/Documents/bandits/1
     -  Dadurch wird die `readme`-Datei sichtbar. 
 - `cat` steht für concatenate (zusammenführen), wird als Pager zum Auslesen von Dateien genutzt.
 
-![Login bandit1](/10-practice-labs/ressources/pictures/otw-1.png)
+![Login bandit1](/09-practice-labs/ressources/pictures/otw-1.png)
 
 > Verlasse die SSH-Verbindung mit dem Befehl: `exit` und speichere das Passwort.
 
@@ -215,7 +215,7 @@ cat ./-
 
 `./` verweist auf das aktuelle Verzeichnis. Ohne dies würde `cat -` den Standard-Input erwarten.
 
-![bandit2 Passwort](/10-practice-labs/ressources/pictures/otw-2.png)
+![bandit2 Passwort](/09-practice-labs/ressources/pictures/otw-2.png)
 
 Kopiere das Passwort und speichere es wieder ab. Ändere die Bezeichnung des Lvls und die Zahl der zu speichernden Datei, wenn du nicht willst, dass die Datei sich überschreibt.
 
@@ -259,7 +259,7 @@ cat ./--spaces\ in\ this\ filename
 **Erklärung:** 
 Dateinamen mit Leerzeichen müssen in Anführungszeichen oder mit `\` escaped werden.
 
-![bandit3 Passwort](/10-practice-labs/ressources/pictures/otw-3.png)
+![bandit3 Passwort](/09-practice-labs/ressources/pictures/otw-3.png)
 
 Speichere das Passwort und beende die Shell.
 
@@ -297,7 +297,7 @@ cat ./... Hiding-From-You
 - `ls -la` und `ll` zeigen auch versteckte Dateien und Ordner (beginnen mit `.`).
 - `./` gibt an, dass es sich um das aktuelle Verzeichnis handelt.
 
-![bandit4 Passwort](/10-practice-labs/ressources/pictures/otw-4.png)
+![bandit4 Passwort](/09-practice-labs/ressources/pictures/otw-4.png)
 
 </details>
 
@@ -349,7 +349,7 @@ cat ./-file07
 
 Deine Ein- und Ausgabe sollte dann so aussehen:
 
-![bandit5 Passwort](/10-practice-labs/ressources/pictures/otw-5.png)
+![bandit5 Passwort](/09-practice-labs/ressources/pictures/otw-5.png)
 
 Speicher das Passwort und beende die Shell, um fortzufahren.
 
@@ -398,7 +398,7 @@ cat ./inhere/maybehere07/.file2
 - `! -executable`: nicht ausführbar
 - `-exec file {}`: prüft Dateityp
 
-![bandit6 Passwort](/10-practice-labs/ressources/pictures/otw-6.png)
+![bandit6 Passwort](/09-practice-labs/ressources/pictures/otw-6.png)
 
 </details>
 
@@ -428,7 +428,7 @@ cat /var/lib/dpkg/info/bandit7.password
 - `2>/dev/null` unterdrückt Fehlermeldungen
 - `/` durchsucht das gesamte Dateisystem (langsam!)
 
-![bandit7 Passwort](/10-practice-labs/ressources/pictures/otw-7.png)
+![bandit7 Passwort](/09-practice-labs/ressources/pictures/otw-7.png)
 
 </details>
 
@@ -457,7 +457,7 @@ cat data.txt | grep millionth
 **Erklärung:** 
 - `grep` durchsucht Zeilen nach Muster.
 
-![bandit8 Passwort](/10-practice-labs/ressources/pictures/otw-8.png)
+![bandit8 Passwort](/09-practice-labs/ressources/pictures/otw-8.png)
 
 </details>
 
@@ -488,7 +488,7 @@ cat data.txt | sort data.txt | uniq -u
 * `sort`: sortiert Zeilen (wobei das durch `uniq -u` optional ist).
 * `uniq -u`: zeigt nur einmalig vorkommende Zeilen.
 
-![bandit9 Passwort](/10-practice-labs/ressources/pictures/otw-9.png)
+![bandit9 Passwort](/09-practice-labs/ressources/pictures/otw-9.png)
 
 </details>
 
@@ -525,7 +525,7 @@ xxd -r data.txt | strings
 * `xxd -r`: wandelt Hexdump zurück in binär
 * `strings`: extrahiert druckbare Zeichen
 
-![bandit10 Passwort](/10-practice-labs/ressources/pictures/otw-10.png)
+![bandit10 Passwort](/09-practice-labs/ressources/pictures/otw-10.png)
 
 </details>
 
@@ -555,7 +555,7 @@ cat data.txt | base64 -d
 
 **Erklärung:** `base64 -d` dekodiert Base64-Text.
 
-![bandit11 Passwort](/10-practice-labs/ressources/pictures/otw-11.png)
+![bandit11 Passwort](/09-practice-labs/ressources/pictures/otw-11.png)
 
 </details>
 
@@ -586,13 +586,13 @@ cat data.txt
 ```
 Siehst du, das haben sie gemeint, als sie sagten, dass die Stellen um 13 Zeichen verschoben wurden:
 
-![bandit12 Passwort](/10-practice-labs/ressources/pictures/otw-12.png)
+![bandit12 Passwort](/09-practice-labs/ressources/pictures/otw-12.png)
 
 Du kannst nun über [google.de](https://www.google.de) nach `ROT13` oder `ROT13 decrypt` suchen oder direkt Cyberchef.io nutzen.
 
 Ich habe über Google nach `ROT13` gesucht und wurde direkt fündig.
 Nach dem Entschlüsseln erhalten wir folgendes Passwort:
-![Passwort entschlüsseln](/10-practice-labs/ressources/pictures/otw-12b.png)
+![Passwort entschlüsseln](/09-practice-labs/ressources/pictures/otw-12b.png)
 
 </details>
 
@@ -620,7 +620,7 @@ ls
 file data.txt
 ```
 
-![bandit13 Datei ausfindig machen](/10-practice-labs/ressources/pictures/otw-13.png)
+![bandit13 Datei ausfindig machen](/09-practice-labs/ressources/pictures/otw-13.png)
 
 2. Ordner im `/tmp/`-Verzeichnis erstellen. 
 ```bash
@@ -632,7 +632,7 @@ cd /tmp/tmp.DeinOrdnerName
 ```bash
 xxd -r ~/data.txt > data
 ```
-![bandit13 Ordner erstellen und Datei umwandeln](/10-practice-labs/ressources/pictures/otw-13b.png)
+![bandit13 Ordner erstellen und Datei umwandeln](/09-practice-labs/ressources/pictures/otw-13b.png)
 
 4. Datei inspizieren und modifizieren:
 ```bash
@@ -643,7 +643,7 @@ ls
 
 Nach dem inspizieren der Datei mit `file` siehst du, dass die Datei eine `gzip`- Datei ist. Also muss diese umbenannt werden, wofür du den Befehl `mv` verwenden kannst.
 
-![bandit13 inspizieren](/10-practice-labs/ressources/pictures/otw-13c.png)
+![bandit13 inspizieren](/09-practice-labs/ressources/pictures/otw-13c.png)
 
 
 **Erklärung:** 
@@ -660,7 +660,7 @@ ls
 file data
 ```
 
-![bandit13 Datei umwandeln](/10-practice-labs/ressources/pictures/otw-13d.png)
+![bandit13 Datei umwandeln](/09-practice-labs/ressources/pictures/otw-13d.png)
 
 **Erklärung:**
 - `gzip` ist ein ausführbares und bereits vorinstalliertes Programm, um Dateien zu entpacken oder komprimieren. Es ähnelt `7zip` oder `winRar`
@@ -691,7 +691,7 @@ usw.
 
 Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
 
-![bandit13 Dateien inspizieren, umbennen, dekompirimieren, umwandeln](/10-practice-labs/ressources/pictures/otw-13e.png)
+![bandit13 Dateien inspizieren, umbennen, dekompirimieren, umwandeln](/09-practice-labs/ressources/pictures/otw-13e.png)
 
 </details>
 
@@ -728,7 +728,7 @@ Sobald du die `SSH`-Verbindung initiiert hast, wirst du gefragt, ob du sicher bi
     - `bandit.labs.overthewire.org -p 2220` auf DNS mit Port 2220 verbinden.
     - `-i` steht für Datei. 
 
-![bandit14 Zugang mit SSH-Key](/10-practice-labs/ressources/pictures/otw-14.png)
+![bandit14 Zugang mit SSH-Key](/09-practice-labs/ressources/pictures/otw-14.png)
 
 </details>
 
@@ -776,7 +776,7 @@ Füge hier einfach das kopierte Passwort aus den Befehlen aus Punkt 1. hier ein 
 
 - `nc` (netcat) verbindet sich mit einem TCP-Port und zeigt den Output.
 
-![Bandit15 netcat-Service](/10-practice-labs/ressources/pictures/otw-15.png)
+![Bandit15 netcat-Service](/09-practice-labs/ressources/pictures/otw-15.png)
 
 **Tipp:**
 Um die `netcat`-Session zu beenden, drücke auf Windows `Strg` + `c` und auf Linux/Mac `Control` + `c`.
@@ -846,7 +846,7 @@ nmap -sV -p 31000-320000 localhost
 ```
 
 Dann sollte deine Shell folgendes ausgeben:
-![Bandit16 nmap Scan](/10-practice-labs/ressources/pictures/otw-16.png)
+![Bandit16 nmap Scan](/09-practice-labs/ressources/pictures/otw-16.png)
 
 **Erklärung zu der List im roten Rechteck:**
 - `PORT`: Zeigt den Port an, der in der Range 31000-32000 genutzt wird.
@@ -875,7 +875,7 @@ Gib in deiner Shell folgenden Befehl ein und füge anschließend das Passwort au
 ncat --ssl localhost 31790
 ```
 
-![Bandit17 Verbindung zum Server](/10-practice-labs/ressources/pictures/otw-17.png)
+![Bandit17 Verbindung zum Server](/09-practice-labs/ressources/pictures/otw-17.png)
 
 3. Kopiere den RSA Private Key:
 
@@ -912,18 +912,18 @@ Wenn du erfolgreich eingeloggt bist, dann kannst du das neue Passwort zum `bandi
 ```bash
 cat /etc/bandit_pass/bandit17
 ```
-![Bandit17 Passwort herausfinden](/10-practice-labs/ressources/pictures/otw-18d.png)
+![Bandit17 Passwort herausfinden](/09-practice-labs/ressources/pictures/otw-18d.png)
 
 Solltest du wie nachfolgend eine Fehlermeldung erhalten, dann liegt das daran, dass die Datei, die den private Key hält, von anderen Usern auch zugänglich ist. Das beudetet für dich, dass du die Berechtigungen für die Datei entziehen musst, sodass nur du Zugriff auf diese hast.
 
-![Bandit18 Verbindung zum Server](/10-practice-labs/ressources/pictures/otw-18.png)
+![Bandit18 Verbindung zum Server](/09-practice-labs/ressources/pictures/otw-18.png)
 
 Um dies zu tun, gib folgende Befehl ein:
 ```bash
 ll      # optional um noch einmal eine Liste der Dateien zu haben
 chmod 400 rsa.key
 ```
-![Bandit18 Verbindungsfehler beheben](/10-practice-labs/ressources/pictures/otw-18b.png)
+![Bandit18 Verbindungsfehler beheben](/09-practice-labs/ressources/pictures/otw-18b.png)
 
 2. Verbindung nach Fehlerbehebung aufbauen.
 
@@ -933,7 +933,7 @@ Gib im Terminal den folgenden Befehl ein und bestätige mit yes:
 ssh -l bandit17 bandit,labs.overthewire.org -p 2220 -i /dein/dateiPfadZur/Datei
 ```
 
-![Bandit18 Verbindung zum Server](/10-practice-labs/ressources/pictures/otw-18c.png)
+![Bandit18 Verbindung zum Server](/09-practice-labs/ressources/pictures/otw-18c.png)
 
 Nun solltest du erfolgreich mit der Shell des Benutzers `bandi17` verbunden sein.
 
@@ -949,7 +949,7 @@ Du kannst folgenden Befehl nutzen, um herauszufinden, wo der Unterschied dieser 
 diff -d passwords.new passwords.old
 ```
 
-![Bandit18 Passwort herausfinden](/10-practice-labs/ressources/pictures/otw-18e.png)
+![Bandit18 Passwort herausfinden](/09-practice-labs/ressources/pictures/otw-18e.png)
 
 </details>
 
@@ -975,9 +975,9 @@ Wenn du nämlich eine `ssh`-Verbindung aufbaust, wirst du nach dem Passwort gefr
 
 Das liegt daran, dass die `.bashrc` des Userse `bandit18` modifiziert wurde und jedes mal, wenn dieser User sich über eine `ssh`-Verbindung einloggen möchte, wird er wieder ausgeloggt.
 
-![Bandit19 Login-Versuch mit SSH und Passwort](/10-practice-labs/ressources/pictures/otw-19.png)
+![Bandit19 Login-Versuch mit SSH und Passwort](/09-practice-labs/ressources/pictures/otw-19.png)
 
-![Bandit19 byebye](/10-practice-labs/ressources/pictures/otw-19b.png)
+![Bandit19 byebye](/09-practice-labs/ressources/pictures/otw-19b.png)
 
 **Wie kannst du das umgehen?**
 
@@ -988,7 +988,7 @@ Dein Befehl sollte dann so aussehen:
 ```bash
 ssh -t -l bandit18 bandit.labs.overthewire.org -p 2220 bash --norc --noprofile
 ```
-![Bandit19 Login-Versuch mit anderer Bash über SSH](/10-practice-labs/ressources/pictures/otw-19c.png)
+![Bandit19 Login-Versuch mit anderer Bash über SSH](/09-practice-labs/ressources/pictures/otw-19c.png)
 
 **Erklärung:**
 - `-t`: Dieser Switch sorgt dafür, dass ein Pseudo-Terminal beim Host erzwungen wird (auch, wenn nicht unbedingt nötig).
@@ -1002,7 +1002,7 @@ Die letzten beiden Switche sorgen dafür, dass die Shell keine Konfigurationen l
 ssh -l bandit18 bandit.labs.overthewire.org -p 2220 bash --norc --noprofile
 ```
 
-![Bandit19 Login-Versuch ohne Anzeige über SSH](/10-practice-labs/ressources/pictures/otw-19d.png)
+![Bandit19 Login-Versuch ohne Anzeige über SSH](/09-practice-labs/ressources/pictures/otw-19d.png)
 
 **Tipp:**
 
@@ -1039,7 +1039,7 @@ ls           # listet alle Dateien im aktuellen Verzeichnis auf
 Das kannst du verwenden, um beispielsweise das Passsword des Users auszuspähen (`cat /etc/bandit_pass/bandit20`).
 
 
-![Bandit20 Password ausspähen](/10-practice-labs/ressources/pictures/otw-20.png)
+![Bandit20 Password ausspähen](/09-practice-labs/ressources/pictures/otw-20.png)
 
 </details>
 
@@ -1071,7 +1071,7 @@ ll
 
 Dann solltest du folgende Ausgabe erhalten:
 
-![Bandit21 Dateien auflisten mit `ll`](/10-practice-labs/ressources/pictures/otw-21.png)
+![Bandit21 Dateien auflisten mit `ll`](/09-practice-labs/ressources/pictures/otw-21.png)
 
 2. `namp`-Scan deines Localhost:
 
@@ -1085,7 +1085,7 @@ nmap -sV localhost
 Das sollte dir die Ports auflisten und die dazugehörigen `STATES` und den `SERVICE`.
 Wir haben **8 Ports** verfügbar, von dem ein Port ein Standard-Port ist (`22/tcp` für `ssh`).
 
-![Bandit21 Nmap Scan](/10-practice-labs/ressources/pictures/otw-21b.png)
+![Bandit21 Nmap Scan](/09-practice-labs/ressources/pictures/otw-21b.png)
 
 3. Zweites Terminal starten um Password zu erhalten:
 
@@ -1108,7 +1108,7 @@ cat /etc/bandit_pass/bandit20      # Ausgabe des aktuellen Passworts
 nc -lnvp 3000       # startet den Netcat Service (belauschen des Ports 3000)
 ```
 
-![Bandit21 Passwort erhalten](/10-practice-labs/ressources/pictures/otw-21c.png)
+![Bandit21 Passwort erhalten](/09-practice-labs/ressources/pictures/otw-21c.png)
 
 Jetzt läuft ein `netcat`-Service, der den Port `3000` belauscht.
 Im Terminal **Nr 2** gibst du nun folgenden Befehl ein:
@@ -1118,7 +1118,7 @@ Im Terminal **Nr 2** gibst du nun folgenden Befehl ein:
 
 > Es kann sein, dass du den Befehl erneut eingeben musst, so wie auf dem Bild zu sehen. Erst danach war es dem `nc`-Service möglich, eine Verbindung zu erhalten.
 
-![Bandit21 Passwort erhalten](/10-practice-labs/ressources/pictures/otw-21d.png)
+![Bandit21 Passwort erhalten](/09-practice-labs/ressources/pictures/otw-21d.png)
 
 Anschließend kannst du beide Terminals mit `exit` beenden und die nächste Challenge antreten.
 
@@ -1156,7 +1156,7 @@ cat /tmp/GibDeineZeichenHierEin # liest die Datei im /tmp-Verzeichnis aus
 
 Kopiere und speichere das Passwort für die nächste Challenge.
 
-![Bandit21 Passwort ermitteln](/10-practice-labs/ressources/pictures/otw-22.png)
+![Bandit21 Passwort ermitteln](/09-practice-labs/ressources/pictures/otw-22.png)
 
 </details>
 
@@ -1204,7 +1204,7 @@ cd /tmp/DeinOrdnerName      # in dein neues Verzeichnis wechseln
 ls      # optional
 ```
 
-![Bandit23 cronjob Datei analysieren](/10-practice-labs/ressources/pictures/otw-23.png)
+![Bandit23 cronjob Datei analysieren](/09-practice-labs/ressources/pictures/otw-23.png)
 
 3. `nano`-Editor oder `cat` eine Zeile herauskopieren
 
@@ -1217,7 +1217,7 @@ nano newcron.sh     # öffnet im Nano Editor die newcron.sh Datei
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 ```
 
-![Bandit23 Code-Zeile kopieren](/10-practice-labs/ressources/pictures/otw-23c.png)
+![Bandit23 Code-Zeile kopieren](/09-practice-labs/ressources/pictures/otw-23c.png)
 
 Du erhältst anschließend eine sehr lange Buchstaben- und Zahlenreihenfolge. Kopiere es und gib folgenden Befehl ein, um die Challenge abzuschließen:
 
@@ -1227,7 +1227,7 @@ cat /tmp/foo # foo mit deinem "Code" ersetzen
 
 Nach dem Auslesen der Datei erhältst du das Passwort für `bandit23`.
 
-![Bandit21 Passwort](/10-practice-labs/ressources/pictures/otw-23b.png)
+![Bandit21 Passwort](/09-practice-labs/ressources/pictures/otw-23b.png)
 
 
 Kopiere und speichere das Password für die nächste Challenge.
@@ -1495,7 +1495,7 @@ Nun solltest du Zugriff auf die normale Shell haben und mit folgendem Befehl das
 cat /etc/bandit_pass/bandit26
 ```
 
-![Passwort](/10-practice-labs/ressources/pictures/otw-26.png)
+![Passwort](/09-practice-labs/ressources/pictures/otw-26.png)
 
 Bleib gleich eingeloggt und mach in dem Terminal von `bandit26` weiter, aber speichere das Passwort, falls du erneut darauf zugreifen möchtest (optional).
 
@@ -1575,7 +1575,7 @@ cat README  # Datei ausgeben
 
 Du solltest nun dein Passwort für `bandit28` erhalten haben. Speichere es und nutze es in der nächsten Challenge.
 
-![Bandit28 Passwort](/10-practice-labs/ressources/pictures/otw-28.png)
+![Bandit28 Passwort](/09-practice-labs/ressources/pictures/otw-28.png)
 
 </details>
 
@@ -1615,7 +1615,7 @@ Gib nun folgenden Befehl ein, um das Passwort zu erhalten:
 git show
 ```
 
-![Bandit29 Passwort](/10-practice-labs/ressources/pictures/otw-29.png)
+![Bandit29 Passwort](/09-practice-labs/ressources/pictures/otw-29.png)
 
 
 </details>
@@ -1659,7 +1659,7 @@ cat README.md
 
 Du solltest nun das Passwort erhalten und kannst mit der nächsten Challange fortfahren.
 
-![Bandit30 Passwort](/10-practice-labs/ressources/pictures/otw-30.png)
+![Bandit30 Passwort](/09-practice-labs/ressources/pictures/otw-30.png)
 
 
 </details>
@@ -1695,7 +1695,7 @@ git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
 # Wenn du nach einem Passwort gefargst wirst, dann gib das des aktuellen Levels ein
 cd repo     # wechselt in die GitHub-Repo
 ```
-![Bandit31 GitHub-Repo klonen](/10-practice-labs/ressources/pictures/otw-31.png)
+![Bandit31 GitHub-Repo klonen](/09-practice-labs/ressources/pictures/otw-31.png)
 2. An das Passwort kommen
 
 Jetzt, nach dem die Git-Repo geklont wurde, gibst du folgende Befehle ein, um herauszufinden, was es für Branches gibt. 
@@ -1711,7 +1711,7 @@ git checkout    # drücke die Tab-Taste zwei Mal
 Wenn alles richtig ist, dann solltest du nun branches sehen, in die du wechseln kannst. 
 Mir ist direkt einer aufgefallen: `secret`.
 
-![Bandit31 git submodul](/10-practice-labs/ressources/pictures/otw-31b.png)
+![Bandit31 git submodul](/09-practice-labs/ressources/pictures/otw-31b.png)
 
 Allerdings gibt es ein Problem. `secret` ist kein Branch in den du wechseln kannst, sondern ein Submodul.
 Es wird in der Repo als `blob` - ein `binary large object` - gehandelt . Was du tun hier tun kannst, ist, das Submodul `secret` zu "entpacken".
@@ -1724,7 +1724,7 @@ cat .merge_file_6nv679      # gibt den Inhalt der erhaltenen File aus
 
 Jetzt solltest du das Passwort für die nächste Challenge ausgegeben bekommen.
 
-![Bandit31 Passwort](/10-practice-labs/ressources/pictures/otw-31c.png)
+![Bandit31 Passwort](/09-practice-labs/ressources/pictures/otw-31c.png)
 
 </details>
 
@@ -1754,7 +1754,7 @@ cd /tmp/DeinOrdnerName      # in deinen Ordner navigieren
 git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo  # Passwort des Users eingeben und Repo klonen
 cd repo     # alternativ hiervor ls oder ll um aufzulisten.
 ```
-![Bandit32 GitHub Repo klonen](/10-practice-labs/ressources/pictures/otw-32.png)
+![Bandit32 GitHub Repo klonen](/09-practice-labs/ressources/pictures/otw-32.png)
 
 2. Readme lesen, .gitignore modifizieren und Datei hochladen
 
@@ -1767,7 +1767,7 @@ git branch      # zeigt aktuellen Branch an
 cat .gitignore  # gibt die .gitignor aus
 nano .gitignore # öffnet den nano-Editor, um Datei zu bearbeiten
 ```
-![Bandit32 Dateien modifizieren](/10-practice-labs/ressources/pictures/otw-32b.png)
+![Bandit32 Dateien modifizieren](/09-practice-labs/ressources/pictures/otw-32b.png)
 
 Die Hälfte ist geschafft.
 
@@ -1795,7 +1795,7 @@ git push        # alles in die Repo hochladen
 
 Anschließend solltest du dein Passwort erhalten und kannst mit dem nächsten Level fortfahren.
 
-![Bandit32 Passwort](/10-practice-labs/ressources/pictures/otw-32d.png)
+![Bandit32 Passwort](/09-practice-labs/ressources/pictures/otw-32d.png)
 
 </details>
 
@@ -1834,7 +1834,7 @@ cat /etc/bandit_pass/bandit33   # Passwort ausgeben.
 
 Du solltest nun das Passwort für `bandit33` erhalten und kannst mit der letzten Challenge fortfahren.
 
-![Bandit33 Passwort](/10-practice-labs/ressources/pictures/otw-33.png)
+![Bandit33 Passwort](/09-practice-labs/ressources/pictures/otw-33.png)
 
 </details>
 
@@ -1857,7 +1857,7 @@ Du solltest nun das Passwort für `bandit33` erhalten und kannst mit der letzten
 
 Aktuell gibt es kein weiteres Level mehr. Die Entwickler sind jedoch bemüht, weitere Challenges hinzuzufügen.
 
-![Bandit34 Nachricht](/10-practice-labs/ressources/pictures/otw-34.png)
+![Bandit34 Nachricht](/09-practice-labs/ressources/pictures/otw-34.png)
 
 
 </details>

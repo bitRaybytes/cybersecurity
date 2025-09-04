@@ -22,12 +22,12 @@ Gehe hierzu in dein Kali Linux Terminal und gib folgenden Befehl ein:
 docker run --rm -ir -p 80:80 vulnerables/web-dvwa
 ```
 
-![Docker Containter mit DVWA starten](/10-practice-labs/ressources/pictures/dockerStart.png)
+![Docker Containter mit DVWA starten](/09-practice-labs/ressources/pictures/dockerStart.png)
 
 Das lädt die Image-Datei direkt im Docker-Container-
 Wenn alles erfolgreich war, dann solltest du nun dieses Terminal vorfinden:
 
-![DVWA erfogreich im Docker gestartet](/10-practice-labs/ressources/pictures/dockerDvwaRun.png)
+![DVWA erfogreich im Docker gestartet](/09-practice-labs/ressources/pictures/dockerDvwaRun.png)
 
 Du kannst im nächsten Schritt deinen Browser öffnen.
 
@@ -50,7 +50,7 @@ http://localhost:80
 Wenn alles erfolgreich war, hast du nun Zugriff auf diese Seite:
 
 
-![DVWA Login-Page](/10-practice-labs/ressources/pictures/dvwa-localhost-login.png)
+![DVWA Login-Page](/09-practice-labs/ressources/pictures/dvwa-localhost-login.png)
 
 ---
 
@@ -64,7 +64,7 @@ Das ist einfacher als es klingt. Klicke dazu einfach auf Login und du kommst auf
 Scrolle hier einfach bis ganz nach unten und klicke anschließend auf den Butten `Create / Reset Database`.
 
 
-![DVWA Datenbank initialisieren](/10-practice-labs/ressources/pictures/dvwa-createDb.png)
+![DVWA Datenbank initialisieren](/09-practice-labs/ressources/pictures/dvwa-createDb.png)
 
 
 Nachdem du auf den Button `Create / Reset Database`geklickt hast, kannst du die `http://localhost/login.php` erneut laden und dich mit Benutzernamen und Passwort anmelden.
@@ -75,7 +75,7 @@ Hier noch einmal der Benutzername und das Passwort: `admin`:`password`.
 Jetzt sollte die `index.php`-Seite laden und du kannst direkt mit deiner ersten Challenge anfangen. 
 Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
 
-![Challenge starten](/10-practice-labs/ressources/pictures/dvwa-sqi-start.png)
+![Challenge starten](/09-practice-labs/ressources/pictures/dvwa-sqi-start.png)
 
 **Hinweis:** Über die Navigationsleiste kannst du auch die Einstellungen zu deinem `Security Level` ändern. Die Default-Einstellung ist `low`. Deine Einstellung siehst du unten links unter deinem Usernamen.
 
@@ -97,7 +97,7 @@ Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
     - `View Source`: zeigt den Source Code der .php Datei an.
     - `View Help` : zeigt dir die Hilfe an; Vorsicht Spoiler Gefahr!
 
-![Challenge starten](/10-practice-labs/ressources/pictures/dvwa-sqi-injection-info.png)
+![Challenge starten](/09-practice-labs/ressources/pictures/dvwa-sqi-injection-info.png)
 
 ### View Help Page
 
@@ -115,11 +115,11 @@ vielleicht auch einen Buchstaben? Probieren wir es aus:
 
 Geben wir als erste irgendeinen Buchstaben ein. Sagen wir `a`, da dies der erste Buchstabe im Alphabet ist.
 
-![SQL-Injection probieren](/10-practice-labs/ressources/pictures/dvwa-sqli-1.png)
+![SQL-Injection probieren](/09-practice-labs/ressources/pictures/dvwa-sqli-1.png)
 
 Schauen wir uns mal an, was nach dem submitten der Daten passiert:
 
-![SQL-Injection Auswertung Buchstabe](/10-practice-labs/ressources/pictures/dvwa-sqli-2.png)
+![SQL-Injection Auswertung Buchstabe](/09-practice-labs/ressources/pictures/dvwa-sqli-2.png)
 
 Wie du siehst, verändert sich die URL, doch eine Fehlermeldung? Fehlanzeige. Also probieren wir mal das alles mit einer Zahl aus.
 
@@ -129,7 +129,7 @@ Wie du siehst, verändert sich die URL, doch eine Fehlermeldung? Fehlanzeige. Al
 
 </div>
 
-![SQL-Injection Auswertung Zahl](/10-practice-labs/ressources/pictures/dvwa-sqli-3.png)
+![SQL-Injection Auswertung Zahl](/09-practice-labs/ressources/pictures/dvwa-sqli-3.png)
 
 Interessant!
 
@@ -158,7 +158,7 @@ Probieren wir es aus. Schreib ein `'` (Apostroph) in das Eingabefeld und drück 
 
 Du solltest nun folgenden Fehler erhalten:
 
-![SQL-Injection Syntax Fehlermeldung](/10-practice-labs/ressources/pictures/dvwa-sqli-4.png)
+![SQL-Injection Syntax Fehlermeldung](/09-practice-labs/ressources/pictures/dvwa-sqli-4.png)
 
 Diese Fehlermeldung sagt, dass du einen Fehler in der MariaDB Syntax hast. Du Siehst auch im letzten Satz, wo der Syntax-Fehler liegt (`at Line 1`). Die Zeichenkette `'''''` (5x ') bedeutet, dass diese Abfrage (speziell nur das `'`) ein Fehler erzeugt.
 
@@ -176,7 +176,7 @@ Solltest du noch die Fehlermeldung der letzte Grafik sehen, gehe bitte eine Seit
 
 Klicke anschließend unten rechts auf `View Source`, um dir den Source Code anzusehen. 
 
-![SQL-Injection Source Code](/10-practice-labs/ressources/pictures/dvwa-sqli-5.png)
+![SQL-Injection Source Code](/09-practice-labs/ressources/pictures/dvwa-sqli-5.png)
 
 <div align=right>
 
@@ -189,7 +189,7 @@ Wir wir sehen, hatte wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richt
 #### Iterieren wir bekannte SQL-Injections
 
 Eine bekannte Abfrage ist `1' OR '1'='1`. Gib diese Abfrage in das Eingabefeld ein und submitte deine Anfrage. Was ist passiert?
-![SQL-Injection ERfolgreicher Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-6.png)
+![SQL-Injection ERfolgreicher Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-6.png)
 
 Erste Iteration, direkter Erfolg! Das ist Glück. In der Praxis sollte das natürlich kein Standard sein, da dies zu erheblichen Sicherheitseinbußen führen kann, wenn Angreifen durch Angriffe sensible Daten stehlen und sie ggfs. im Internet offenlegen bzw. verkaufen.
 
@@ -282,7 +282,7 @@ Das gleiche passiert, wenn du `'Order By 2#` eingibst.
 
 Und siehe da, bei `'Order By 3#` ist Schluss und wir erhalten folgende Fehlermeldung:
 
-![SQL-Injection Order By Fehlermeldung](/10-practice-labs/ressources/pictures/dvwa-sqli-8.png)
+![SQL-Injection Order By Fehlermeldung](/09-practice-labs/ressources/pictures/dvwa-sqli-8.png)
 
 
 **Das heißt:** Unsere Datenbank-Abfrage hat also 2 Spalten, da die letzte Abfrage mit der `3#` eine Fehlermeldung erzeugt hat.
@@ -321,14 +321,14 @@ test' UNION SELECT 1,database() FROM information_schema.tables #
 
 Dann solltest du folgende Information vorliegen haben:
 
-![UNION Based Attack Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-9.png)
+![UNION Based Attack Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-9.png)
 
 Mit nachfolgendem Befehl findest du heraus, wie die Datenbanktabellen in der Datenbank heißen:
 ```sql
 test' UNION SELECT 1, group_concat(schema_name) FROM information_schema.schemata #
 ```
 
-![UNION Based Attack Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-10.png)
+![UNION Based Attack Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-10.png)
 
 
 Der dritte Befehl zeigt dir, wie die Spaltennamen in den vorgefundenen Datebanktabellen heißen:
@@ -340,7 +340,7 @@ test' UNION SELECT 1, group_concat(column_name) FROM information_schema.columns 
 
 Jetzt solltest du folgendes erhalten:
 
-![UNION Based Attack Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-11.png)
+![UNION Based Attack Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-11.png)
 
 Du siehst nun klar, wie die Spaltennamen heißen.
 Das können wir für weitere Paylouds nutzen, um auf sensible Nutzerdaten Zugriff zu erhalten.
@@ -360,7 +360,7 @@ test' UNION SELECT user, password FROM users
 
 Sieh an, was wir herausgefunden haben:
 
-![UNION Based Attack Payload](/10-practice-labs/ressources/pictures/dvwa-sqli-12.png)
+![UNION Based Attack Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-12.png)
 
 Wir haben nun die 5 Datensätze herausgefunden und die Challenge damit erfolgreich bestanden.
 Herzlichen Glückwunsch zu deiner ersten erfolgreichen SQL-Injection.

