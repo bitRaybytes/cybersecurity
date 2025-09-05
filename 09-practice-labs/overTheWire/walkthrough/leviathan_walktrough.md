@@ -689,6 +689,89 @@ Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort 
 <details>
     <summary>Lösung</summary>
 
+### Einleitung
+
+In diesem aktuell letzten Level findest du eine Datei namens `leviathan6`. Nach dem Ausführen wirst du feststellen, dass dich das Programm nach einem vierstelligen Code fragt. 
+
+Mit `ltrace` habe ich bspw. herausgefunden, dass es eine Funktion der Standard-Bibliothek aus der Programmiersprache `C` namens `atoi()` gibt. Die Funktion wandelt `String` bzw. `ASCII` in `Integer` um und steht eigentlich für `ASCII to Integer`.
+
+![Leviathan7 Programm ausführen](/09-practice-labs/ressources/pictures/leviathan7b.png)
+
+**Bedeutung der `ltrace`-Ausgabe**
+
+Die `ltrace`-Ausgabe `atoi(0xffffd5cd, 0, 0, 0)` zeigt die Werte, die an die Funktion übergeben wurden. Das Besondere an der 32-Bit x86-Architektur ist, dass die Argumente für Funktionen in der Regel auf dem Stack abgelegt werden.
+
+- `0xffffd5cd`: Dies ist die **Speicheradresse** (Pointer) des ersten und einzigen Arguments für atoi(). `ltrace` zeigt hier nicht den Inhalt des Strings, sondern dessen Adresse auf dem Stack. An dieser Adresse liegt der vierstellige Code, den du als Benutzer eingegeben hast.
+
+- `0, 0, 0`: Die zusätzlichen Nullen sind **irrelevant** für die atoi() Funktion selbst. `ltrace` zeigt oft mehr Argumente an, als tatsächlich von der aufgerufenen Funktion erwartet werden, da es einfach die nächsten Werte vom Stack liest. Für atoi() ist nur der erste Parameter (die Adresse des Strings) von Bedeutung.
+
+![Leviathan7 ltrace-Befehl](/09-practice-labs/ressources/pictures/leviathan7c.png)
+
+Für die Lösung ist das nicht wirklich von Bedeutung, zumal wir nichts damit anfangen können. Selbst ein Buffer-Overflow (Puffer-Überfluss) bringt uns nicht zum Ziel.
+
+Es gibt jedoch zwei Wege, wie du an das Passwort von `leviathan7` kommst. Ich zeige dir den einfacheren Weg mit einer `for`-Schleife, die einen `bruteforce` initiiert.
+
+Die zweite Möglichkeit, die ich dir nicht vorenthalten möchte, ist, indem du Reverse-Engineering anwendest und den `Assembly` code analysierst. So kannst du herausfinden, wie die **Pointer** verarbeitet werden. Das kannst du mit Tools wie `gdb` (`The GNU Project Debugger`) oder `pwndgb` (Erweitegung von `gdb`, speziell für Exploit konzipiert) bewerkstelligen.
+
+**Ein Beispiel, wie ein *disassembled* Code aussieht:**
+
+![Leviathan7 zerlegter Code](/09-practice-labs/ressources/pictures/leviathan7i.png)
+
+Ich selbst bin nicht gut in der Assembly-Sprache. Wenn du dich jedoch etwas mit der Syntax befasst, dann wirst du schnell dahinter kommen.
+
+Im Bild oben siehst du beispielsweise, dass in Zeile `<+106>` die Funktion `setreuid()` und in Zeile `<+122>` die "Funktion" `system@plt` aufgerufen wird.
+
+`system@plt` ist keine Funktion. Es ist vielmehr ein technischer Ausdruck, der bei der dynamischen Verknüpfung von ELF-Programmen verwendet wird. `plt` steht hier für die `Procedure Linkage Table` und ist eine Datenstruktur in ELF-Dateien. Sie wird verwendet, um Adressen aus gemeinsam genutzten Funktionen erst zur Laufzeit aufzulösen (`lazy linking`). Für den Programmierer ist es letztlich ein Aufruf der system-Funktion, aber auf der Maschinenebene wird der Umweg über das PLT genommen. Weitere Informationen zum `PLT` erhältst du hier: [Google: Was ist Procedure Linkage Table](https://www.google.com/search?q=was+ist+Procedure+Linkage+Table&client=firefox-b-d&sca_esv=e3cd531e34091613&cs=0&sxsrf=AE3TifOPNC0R3gjt-EaYGyxHyBCqC9XYYg%3A1757083404211&ei=DPe6aPe7DL-Fxc8P6rKJyA4&ved=0ahUKEwj38Zfh7cGPAxW_QvEDHWpZAukQ4dUDCBA&uact=5&oq=was+ist+Procedure+Linkage+Table&gs_lp=Egxnd3Mtd2l6LXNlcnAiH3dhcyBpc3QgUHJvY2VkdXJlIExpbmthZ2UgVGFibGUyCBAhGKABGMMESPQcUIYXWO4bcAR4AJABAJgBlgGgAdcHqgEDMS43uAEDyAEA-AEBmAIGoALNAsICDRAAGIAEGLADGEMYigXCAggQABiABBiwA8ICCRAAGLADGAcYHsICBxAAGLADGB7CAggQABiwAxjvBcICChAhGKABGMMEGAqYAwCIBgGQBgqSBwM0LjKgB9chsgcDMC4yuAeKAsIHBzMuMy0yLjHIB0I&sclient=gws-wiz-serp)
+
+
+Die Anweisung `sub $0xc,%esp` in Zeile `<+123>` verringert den Wert des Stack Pointers (`%esp`) um `0xc` (dezimal 12). Dies ist eine sehr häufige Operation in Assembler, um Platz auf dem Stack für neue Argumente oder lokale Variablen zu schaffen. Das Programm bereitet hier den Stack für den nächsten Funktionsaufruf (`push $0x804a022` und `call 0x8049080 <system@plt>`) vor.
+
+`cmp %eax,-0xc(%ebp)` in Zeile `<+84>` vergleicht den Inhalt der Speicheradresse `%eax` mit der Speicheradresse `%ebp`. `%eax` erhält dabei den Rückgabewert der Funktion `atoi()`, also den Wert der Benutzereingabe und verweist auf die lokale Variable auf dem Stack, die den richtigen Code enthält (`0x1bd3` in Hexadezimal oder `7123` in Dezimal).
+
+Den Wert `0x1bd3` kannst du auch in Zeile `<+20>` in der Anweisung `movl $0x1b3d, -0xc(%ebp)` sehen. Hier wird der Wert `0x1bd3` in eine lokale Variable auf dem Stack (`-0xc(%ebp)`) geladen.
+
+
+Die einfachste Möglichkeit jedoch, an das Passwort zu kommen, ist die `bruteforce`-Variante. 
+
+### Lösung
+
+Um dieses Level zu lösen, werden wir den vierstelligen Code bruteforcen, dass dann eine Shell erzeugt, über die wir dann das Passwort zu Leviathan7 auslesen.
+
+Gib im Terminal folgenden Befehl ein, um eine `for`-Schleife zu realisieren, die den vierstellingen Code (0000..9999) iteriert und hacke so den Code:
+
+```bash
+for i in {0000.9999}; do ./leviathan6 $i ; done
+```
+
+![Leviathan For-Schleife](/09-practice-labs/ressources/pictures/leviathan7e.png)
+
+Das wird dafür sorgen, dass die Schleife, die du erzeugt hst, die Range 0000 bis 9999 durchprobiert und uns später eine Shell ausgibt. 
+Nach dem du den Befehl mit der Enter-Taste bestätigt hast, werden dir sehr viele `Wrong` angezeigt. Lass das Programm einfach durchlaufen. Am Ende wirst du aus der Shell von Leviathan6 ausbrechen und in der Shell von Leviathan7 sein.
+
+Mit dem Befehl `whoami` siehst du, dass du der User `leviathan7` bist.
+
+Gib dann folgenden letzten Befehl ein, um an das Passwort zu kommen:
+
+```bash
+cat /etc/leviathan_pass/leviathan7
+```
+
+
+![Leviathan Password](/09-practice-labs/ressources/pictures/leviathan7f.png)
+
+
+**Herzlichen Glückwunsch**, das Wargame ist vorbei. Aktuell.
+
+Das letzte Level ist nicht all zu spannend, weshalb ich dir das gleich hier vorstellen werden.
+Nach der `ssh`-Verbindung mit `leviathan7` zu `leviathan.labs.overthewire.org` kannst du dein Verzeichnis mit `ls` oder `ll` auflisten.
+
+Darin ist eine Datei names `CONGRATULATIONS`. Lies sie aus:
+
+![Leviathan Endgame](/09-practice-labs/ressources/pictures/leviathan7g.png)
+
+
+P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den einzelnen Wargames auf Overthewire.org. 
+
 </details>
 
 ---
@@ -728,6 +811,8 @@ Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort 
 - `setreuid()` -> Ermöglicht es einem Prozess, seine reale Benutzer-ID (`Real UID`) und seine effektive Benutzer-ID (`Effective UID`) gleichzeitig zu ändern.
 - `system()` -> Ermöglicht, einen Befehl direkt aus einem Programm heraus an das Betriebssystem zu übergeben und dort ausführen zu lassen
 - `atoi()` -> Funktion, die eine Zeichenkette in einen Ganzzahlwert (Integer) umwandelt.
+- `@plt` -> `Procedure Linkage Table`; Datenstruktur in ELF-Dateien für dynamisches Laden von Funktionen aus gemeinsamen Bibliotheken (Shared Libraries) wärend Laufzeit zu ermöglichen
+
 ---
 
 
@@ -742,6 +827,8 @@ Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort 
 - [WikiPedia: Executable and Linking Format](https://de.wikipedia.org/wiki/Executable_and_Linking_Format)
 - [LowLevel.eu](https://www.lowlevel.eu/wiki/ELF-Tutorial)
 - [Struktur eine ELF Datei von Ange Albertini](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format#/media/File:ELF_Executable_and_Linkable_Format_diagram_by_Ange_Albertini.png)
+- [TryHackMe: Windows x64 Assembly](https://tryhackme.com/room/win64assembly)
+- [Wikipedia: Assemblersprache](https://de.wikipedia.org/wiki/Assemblersprache)
 
 ---
 
@@ -766,7 +853,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
