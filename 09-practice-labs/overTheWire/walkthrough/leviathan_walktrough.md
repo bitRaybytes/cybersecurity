@@ -23,12 +23,12 @@
 Leviathan ist ein Wargame auf [OverTheWire](https://overthewire.org/wargames/), das sich speziell an Anfänger richtet.  
 Es vermittelt die Grundlagen von **Privilege Escalation** (Rechteausweitung) und einfachen **Security Misconfigurations** in Linux-Systemen.  
 
-Im Gegensatz zu anderen Wargames (wie Bandit oder Natas) liegt der Fokus hier weniger auf Web-Exploits, sondern auf klassischen **Binary Exploits** und **Dateiberechtigungen** in einer Unix-Umgebung.  
+Im Gegensatz zu anderen Wargames (wie [Bandit](/09-practice-labs/overTheWire/walkthrough/bandit_walkthrough.md) oder [Natas](/09-practice-labs/overTheWire/walkthrough/natas_walkthrough.md)) liegt der Fokus hier weniger auf Web-Exploits, sondern auf klassischen **Binary Exploits** und **Dateiberechtigungen** in einer Unix-Umgebung.  
 
 ---
 
 ## Zugang
-Der Einstieg erfolgt über eine **SSH-Verbindu09
+Der Einstieg erfolgt über eine **SSH-Verbindung
 
 ---
 
@@ -83,6 +83,7 @@ cat bookmarks.html | grep passw
 
 **Erklärung der Befehle:** 
 - `ll`: Verzeichnis auflisten, auch versteckte Dateien/Verzeichnisse, sowie Berechtigungen.
+    - `ll` ist dabei nur der Alias für `ls -la`
 - `cd [PFAD]`: wechselt in den angegebenen Pfad.
 - `cat`: "Pager", um Inhalte der Dateien auszugeben (cat = concatenate).
 
@@ -520,8 +521,7 @@ Sobald du das Programm ausführt, erhältst du eine lange binäre Zahlenreihe.
 
 Diese Zahlenreihe hat sicher eine versteckte Botschaft. Nun gilt es, dieses Nachricht in eine für uns menschen lesbare Sprache zu bringen. 
 
-Dafür gibt es mehrere Möglichkeiten. Du könntest ein `Python`-Script schreiben, dass die binären Zahlenfolge in das `ASCII`-Format bringt.
-Das Programm `perl` nutzen, auf einer Webseite das binären Zahlenformat in ASCII umwandeln oder die Umrechnung selbst ausrechnen.
+Dafür gibt es mehrere Möglichkeiten. Du könntest ein `Python`-Script schreiben, dass die binären Zahlenfolge in das `ASCII`-Format bringt, das Programm `perl` nutzen, auf einer Webseite das binären Zahlenformat in ASCII umwandeln oder die Umrechnung selbst ausrechnen.
 
 Ich zeige dir wie du an Passwort kommst mit einer Internetseite und einmal mit perl.
 
@@ -619,7 +619,7 @@ Mit dem `ltrace`-Befehl habe ich bspw. erfahren, dass das Programm folgendermaß
 - `fclose()` -> wird verwendet, um einen zuvor geöffneten Datei-Stream zu schließen (leert gleichzeitig den Puffer).
 - `getuid()` -> POSIX-Aufruf, der reale Benuter-ID des aufrufenden Prozesses zurückgibt. Ermittelt, ob Benutzer Programm ausführen darf.
 - `setuid()` -> Systemaufruf, der Prozessen ermöglicht, die Benutzer-ID (EUID) auf eine andere ID zu setzen (was temporär erhöhte Berechitungen verleiht).
-- `unlink()` -> Funktion, um Dateinamen oder einen Link zu einer Datei zu entfernen.
+- `unlink()` -> Funktion, um einen Link zu einer Datei zu entfernen, nicht die Original-Datei an sich.
 
 
 > **Tipp:** Mit `touch` erstellst du eine Datei, ohne sie sofort zu öffnen wie bspw. dem `nano`-Editor.
