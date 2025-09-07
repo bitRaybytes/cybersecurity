@@ -88,14 +88,13 @@ john --wordlist=rockyou.txt hashfile.txt
 hascat -a 3 -m 0 hash.txt ?a?a?a?a?a
 ```
 
-
-## Schutzmaßnahmen
-
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+## Schutzmaßnahmen
 
 ### 1. Rate Limiting (Login-Versuche begrenzen)
 
