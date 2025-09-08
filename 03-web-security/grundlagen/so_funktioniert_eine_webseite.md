@@ -3,7 +3,7 @@
 ## Inhaltsverzeichnis
 - [Grundlagen des Webs](#grundlagen-des-webs)
     - [Client-Server-Modell](#client-server-modell)
-    - [DNS – das Telefonbuch des Internets](#dns--das-telefonbuch-des-internets)
+    - [DNS – das Telefonbuch des Internets](#dns---das-telefonbuch-des-internets)
     - [HTTP/HTTPS](#httphttps)
 - [Webserver-Grundlagen](#webserver-grundlagen)
     - [Was ist ein Webserver?](#was-ist-ein-webserver)
@@ -39,7 +39,7 @@ Der Client **fordert** Inhalte an, der Server **liefert** Inhalte aus.
 
 ---
 
-### DNS – das Telefonbuch des Internets
+### DNS - das Telefonbuch des Internets
 
 Der Browser versteht keine Domainnamen wie `example.com`, sondern nur **IP-Adressen**.  
 Hier kommt das **Domain Name System (DNS)** ins Spiel:
@@ -97,6 +97,12 @@ Findet er eine Übereinstimmung, liefert er die entsprechende Website aus; ander
                                                  |
                                          /var/www/blog.example.com
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Weitere Web-Komponenten
 
@@ -166,6 +172,12 @@ Eine WAF agiert als Schutzschild zwischen einer Webanfrage und dem Webserver.
                      |
                      `-- Filtert schädliche Anfragen
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Statische vs. Dynamische Inhalte
