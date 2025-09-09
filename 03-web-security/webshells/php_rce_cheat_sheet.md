@@ -1,7 +1,7 @@
 # 🐘 phpRCE Cheat Sheet
 
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung: Remote Command Execution in PHP](#einleitung-remote-command-execution-in-php)
@@ -13,14 +13,14 @@
 - [Siehe auch](#siehe-auch)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung: Remote Command Execution in PHP
 
 Diese Datei beschreibt ein typisches Beispiel für **Remote Command Execution (RCE)** durch eine unsichere PHP-Webanwendung.  
 Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebige Shell-Befehle auf dem Zielsystem auszuführen – **ein schwerwiegender Sicherheitsfehler**.
 
----
+
 
 ## Beispiel: Verwundbarer PHP-Code
 
@@ -49,7 +49,7 @@ Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebig
 ?>
 ```
 
----
+
 
 <div align=right>
 
@@ -74,7 +74,7 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - Nutzung von `escapeshellcmd()` und `escapeshellarg()` (nur bedingt sicher).
 - Oder: Verzicht auf Shell-Zugriffe aus Webanwendungen.
 
----
+
 
 ## Typische Post-Exploitation-Befehle
 
@@ -94,7 +94,7 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 | `which wget`                 | Ist wget verfügbar für Datei-Downloads?               |                                   |
 | `find / -type f -perm -4000` | Alle SUID-Binaries finden (root privilege escalation) |                                   |
 
----
+
 
 <div align=right>
 
@@ -109,7 +109,7 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - 🔐 Erkennen typischer Privilege Escalation-Pfade
 - 🛠️ Automatisierung mit curl, Burp oder Exploitskripten
 
---- 
+ 
 
 ## Verteidigung (Blue Team)
 
@@ -119,7 +119,7 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - Begrenze Rechte des Webservers (z. B. www-data darf nicht root sein).
 - Erkenne Anomalien per Logüberwachung (z. B. suspicious cmd= Requests).
 
----
+
 
 ## Siehe auch
 
@@ -128,7 +128,7 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/14-vulnerabilities/sqlInjection/union_based_attack.md](https://github.com/bitRaybytes/cybersecurity/blob/main/14-vulnerabilities/sqlInjection/union_based_attack.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 
-----
+
 
 ## Haftungsausschluss
 

@@ -2,7 +2,7 @@
 
 > Tools & Techniken für die Verteidigung, Erkennung, Forensik & Reaktion auf Angriffe.  
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -24,7 +24,7 @@
 16. [Empfehlungen](#empfehlungen)
 17. [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Asset Discovery & Network Mapping
 
@@ -36,7 +36,7 @@
 | **Lansweeper**    | Netzwerkgeräte-Discovery                   |
 | **Open-AudIT**    | Automatische Inventarisierung              |
 
----
+
 
 ## Vulnerability Management
 
@@ -47,7 +47,7 @@
 | **Qualys**        | Cloud-basierte Schwachstellenverwaltung    |
 | **Rapid7 InsightVM** | Risikobasiertes VM-Management           |
 
----
+
 
 <div align=right>
 
@@ -64,7 +64,7 @@
 | **Ansible / Puppet / Chef** | Automatisierte Updates           |
 | **ManageEngine Patch Manager Plus** | Patchverwaltung         |
 
----
+
 
 ## Endpoint Detection & Response (EDR)
 
@@ -75,7 +75,7 @@
 | **Elastic EDR**   | Open-Source EDR (Elastic Stack)            |
 | **SentinelOne**   | KI-gestützte Bedrohungserkennung           |
 
----
+
 
 ## Security Information & Event Management (SIEM)
 
@@ -86,7 +86,7 @@
 | **Graylog**       | Open-Source SIEM                           |
 | **Wazuh**         | Hostüberwachung + SIEM-Funktionalität      |
 
----
+
 
 <div align=right>
 
@@ -103,7 +103,7 @@
 | **Zeek (Bro)**    | Netzwerküberwachung & Analyse              |
 | **Security Onion**| IDS/NSM-Plattform mit Snort, Suricata etc. |
 
----
+
 
 ## Log Management & Monitoring
 
@@ -114,7 +114,7 @@
 | **Kibana**        | Visualisierung von Logs                    |
 | **Fluentd / Logstash** | Logaggregation                       |
 
----
+
 
 ## Threat Intelligence
 
@@ -126,7 +126,7 @@
 | **VirusTotal**    | Dateianalyse & Reputation                  |
 | **AbuseIPDB**     | IP-Reputationsdatenbank                    |
 
----
+
 
 ## Vulnerability Intelligence & Attack Surface Management
 
@@ -136,7 +136,7 @@
 | **Attack Surface Analyzer** | Microsoft Tool zur Analyse       |
 | **Censys**        | Angriffsflächen-Scan                       |
 
----
+
 
 <div align=right>
 
@@ -154,7 +154,7 @@
 | **The Sleuth Kit**| Datei-Forensik                             |
 | **GRR Rapid Response** | Remote Incident Response              |
 
----
+
 
 ## Malware Analysis
 
@@ -165,7 +165,7 @@
 | **REMnux**        | Malware-Analyse-Linux-Toolkit              |
 | **IDA Free / Ghidra** | Reverse Engineering                    |
 
----
+
 
 ## Email Security & Phishing Defense
 
@@ -176,7 +176,7 @@
 | **MailCleaner**   | Open-Source Gateway                        |
 | **PhishTool**     | Analyse von verdächtigen E-Mails           |
 
----
+
 
 <div align=right>
 
@@ -192,7 +192,7 @@
 | **iptables / nftables** | Paketfilter für Linux                |
 | **Cisco ASA / Fortinet** | Kommerzielle Firewalls              |
 
----
+
 
 ## Awareness & Simulation
 
@@ -202,7 +202,7 @@
 | **KnowBe4**       | Security-Awareness-Training                |
 | **PhishSim**      | Benutzer-Schulung                          |
 
----
+
 
 ## Backup & Recovery
 
@@ -213,7 +213,7 @@
 | **Restic**        | Schnelles Backup CLI                       |
 | **Rsync / Duplicity** | Scriptbare Backuplösungen              |
 
----
+
 
 <div align=right>
 
@@ -226,7 +226,7 @@
 - Nutze **Wazuh + ELK + Suricata** für eine Open-Source Blue-Team-Pipeline.
 - Kombiniere mit **MISP** und **Velociraptor** für erweiterte Threat Detection & IR.
 
----
+
 
 ## Haftungsausschluss
 

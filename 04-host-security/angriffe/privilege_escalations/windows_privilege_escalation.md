@@ -12,7 +12,7 @@
 
 Diese Datei dokumentiert Methoden, Tools und Vorgehensweisen zur Privilegienerweiterung (Privilege Escalation) auf **Windows-Systemen**. Sie dient ausschließlich zu **Schulungszwecken** im Rahmen von Penetration Tests und Security-Audits durch autorisierte Fachkräfte.
 
----
+
 
 ## Nützliche Tools
 
@@ -53,7 +53,7 @@ WinPEASx64.exe oder WinPEASx86.exe
 
 Identifiziert potenzielle Schwachstellen wie Dienste mit schwachen ACLs, ungesicherte Tasks, UAC-Bypass-Möglichkeiten etc.
 
----
+
 
 <div align=right>
 
@@ -136,7 +136,7 @@ Identifiziere UAC-schwache Prozesse:
 
 UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACME)
 
----
+
 
 ## Tipps zur Analyse
 
@@ -144,14 +144,14 @@ UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACM
 * **SharpUp** (C#): Enumeration wie PowerUp, aber für AV-Bypass geeignet
 * **Windows Exploit Suggester – Next Generation**
 
----
+
 
 ## Weiterführende Links
 
 * [GTFOBins Windows Pendant: LOLBAS](https://lolbas-project.github.io/)
 * [Windows-Privilege-Escalation-Cheat-Sheet](https://github.com/netbiosX/Checklists)
 
----
+
 
 ## Haftungsausschluss
 

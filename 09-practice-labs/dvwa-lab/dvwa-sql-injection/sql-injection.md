@@ -31,7 +31,7 @@ Wenn alles erfolgreich war, dann solltest du nun dieses Terminal vorfinden:
 
 Du kannst im nächsten Schritt deinen Browser öffnen.
 
----
+
 
 <div align=right>
 
@@ -52,7 +52,7 @@ Wenn alles erfolgreich war, hast du nun Zugriff auf diese Seite:
 
 ![DVWA Login-Page](/09-practice-labs/ressources/pictures/dvwa-localhost-login.png)
 
----
+
 
 ## 3. Kleines DVWA Setup
 
@@ -79,7 +79,7 @@ Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
 
 **Hinweis:** Über die Navigationsleiste kannst du auch die Einstellungen zu deinem `Security Level` ändern. Die Default-Einstellung ist `low`. Deine Einstellung siehst du unten links unter deinem Usernamen.
 
----
+
 
 <div align=right>
 
@@ -370,7 +370,7 @@ Folgende Schritte kannst du nun umsetzen:
 - Docker beenden: im Kali Linux Terminal den Befehl `exit` eingeben.
 - Einstellungen den Schwierigkeitsgrad deinem Wissenstand anpassen und erneut testen.
 
----
+
 
 ## Haftungsausschluss
 

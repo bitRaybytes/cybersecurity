@@ -6,7 +6,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 > **Disclaimer:** Alle hier aufgeführten Ressourcen dienen ausschließlich zu legalen, schulischen oder schulungsbezogenen Zwecken. Die Nutzung von Exploits, Recon-Techniken oder Hacking-Tools ist nur in autorisierten Testumgebungen erlaubt.
 
----
+
 
 ## Inhaltsverzeichnis
 - [CTF-Plattformen & Übungslabore](#ctf-plattformen--übungslabore)
@@ -30,7 +30,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | [CTFtime.org](https://ctftime.org/)        | Kalender & Rankingsystem für aktuelle CTF-Wettbewerbe weltweit |
 | [CyberDefenders](https://cyberdefenders.org/) | DFIR & Blue Team Labs, gute Ergänzung zu Red-Team-Plattformen |
 
----
+
 
 ## Nützliche Tools (Pentest & CTF)
 
@@ -46,7 +46,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | Ghidra         | Reverse Engineering                           |
 | CyberChef      | Encoding/Decoding & Data-Transformation       |
 
----
+
 
 <div align=right>
 
@@ -65,7 +65,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | [LinEnum](https://github.com/rebootuser/LinEnum)       | Automatisierte Enumeration für Linux PrivEsc        |
 | [awesome-hacking](https://github.com/Hack-with-Github/Awesome-Hacking) | Riesige Linkliste zu Tools, CTFs, Lernmaterialien   |
 
----
+
 
 ## Communitys & Discord-Server
 
@@ -78,7 +78,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | r/netsec (Reddit)     | Allgemeine IT-Security Themen    |
 | r/AskNetsec           | Fragen zu Tools & Vorgehensweisen|
 
----
+
 
 ## Lernempfehlungen nach Themengebiet
 
@@ -136,7 +136,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
    - John Hammond
    - LiveOverflow
 
----
+
 
 ## Tägliche Lern-Routine (Beispiel)
 
@@ -150,7 +150,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | Sa  | CTF-Challenge mit Writeup         |
 | So  | Zusammenfassung + Schwachstellen lesen |
 
----
+
 
 **Letzter Tipp:**  
 **Führe ein CTF-Tagebuch.** Notiere:
@@ -161,7 +161,7 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 > Wer schreibt, der bleibt – und wiederholt Gelerntes schneller.
 
----
+
 
 ## Haftungsausschluss
 

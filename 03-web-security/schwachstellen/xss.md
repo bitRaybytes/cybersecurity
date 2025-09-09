@@ -1,6 +1,6 @@
 # ⚠️ Cross-Site Scripting (XSS) – Überblick, Typen, Schutz
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -13,7 +13,7 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -21,7 +21,7 @@
 
 💡 XSS zählt laut [OWASP Top 10](https://owasp.org/www-project-top-ten/) seit Jahren zu den **häufigsten Sicherheitslücken** in Webanwendungen.
 
----
+
 
 ## Grundlagen & Ziel
 
@@ -34,7 +34,7 @@
 - Keylogging durchzuführen
 - Zugriff auf Browser-APIs (z. B. `localStorage`) zu erlangen
 
----
+
 
 <div align=right>
 
@@ -78,7 +78,7 @@ document.body.innerHTML = location.hash;
 // Beispiel-URL: http://site.com/#<img src=x onerror=alert(1)>
 ```
 
-----
+
 
 <div align=right>
 
@@ -98,7 +98,7 @@ document.body.innerHTML = location.hash;
 
 🔐 Tipp: Nutze Tools wie [XSS Cheat Sheet (PortSwigger)](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)
 
----
+
 
 ## Praxis - Testen mit XSS
 
@@ -118,7 +118,7 @@ document.body.innerHTML = location.hash;
 - [HackTheBox Academy: XSS Fundamentals](https://academy.hackthebox.com/)
 - [TryHackMe: XSS Room](https://tryhackme.com/room/xss)
 
----
+
 
 <div align=right>
 
@@ -151,7 +151,7 @@ X-XSS-Protection Header (veraltet, aber teilweise wirksam):
 X-XSS-Protection: 1; mode=block
 ```
 
----
+
 
 ## Bonus: XSS in modernen Frameworks
 
@@ -161,7 +161,7 @@ X-XSS-Protection: 1; mode=block
     - `v-html` (Vue)
     - `innerHTML`, `document.write()`, `eval()` (JS allgemein)
 
----
+
 
 
 ## Nützliche Links
@@ -171,7 +171,7 @@ X-XSS-Protection: 1; mode=block
 - [XSS Cheat Sheet (OWASP)](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
 - [PayloadsAllTheThings: XSS](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
 
----
+
 
 ## Haftungsausschluss
 

@@ -4,7 +4,7 @@
 > ✅ Ideal für Reconnaissance beim Pentesting.
 
 
----
+
 
 ## Inhaltsverzeichnis
 - [Installation](#installation)
@@ -20,7 +20,7 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
----
+
 
 ## Installation
 
@@ -38,7 +38,7 @@ brew install nmap
 **Windows:**
 ➡ [Download von der offiziellen Webseite](https://nmap.org/download.html)
 
----
+
 
 ## Grundlagen
 
@@ -54,7 +54,7 @@ brew install nmap
 | `nmap -vv <Ziel>`      | detailliertere Ausgabe als `-v`        |
 | `nmap -n <Ziel>`       | Kein DNS-Lookup (schneller)            |
 
----
+
 
 <div align=right>
 
@@ -73,7 +73,7 @@ brew install nmap
 
 Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techniques.html).
 
----
+
 
 ## Service & OS-Erkennung
 
@@ -84,7 +84,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 | `nmap -A <Ziel>`  | Aggressiv: OS + Services + Skripte + Traceroute |
 | `nmap -sC <Ziel>` | Default NSE-Scripts ausführen                   |
 
----
+
 
 <div align=right>
 
@@ -102,7 +102,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 | `nmap -sN <Ziel>` | Null-Scan (keine Flags)                      |
 | `nmap -sX <Ziel>` | Xmas-Scan (alle Flags)                       |
 
----
+
 
 ## NSE (Nmap Scripting Engine)
 
@@ -117,7 +117,7 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nmap.org/book/nse-usage.html](https://nmap.org/book/nse-usage.html).
 
----
+
 
 <div align=right>
 
@@ -139,7 +139,7 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 **Scan auf CVEs (Vuln Scripts):**
 `nmap --script vuln <Ziel>`
 
----
+
 
 ## Output speichern
 
@@ -150,7 +150,7 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 | `-oG datei.gnmap` | Grepable Output                               |
 | `-oA scan`        | Alle Formate gleichzeitig (`scan.nmap`, etc.) |
 
----
+
 
 <div align=right>
 
@@ -166,7 +166,7 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 | `rustscan` | Superschneller Portscanner          |
 | `masscan`  | Ultra-fast Scan ganzer Netzbereiche |
 
----
+
 
 ## Ressourcen
 
@@ -174,7 +174,7 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 - 🌐 [NMAP Offizielle Webseite](https://nmap.org/)
 - [YouTube: NMAP Full Guide, Hacker Joe](https://www.youtube.com/watch?v=JHAMj2vN2oU)
 
----
+
 
 ## Haftungsausschluss
 

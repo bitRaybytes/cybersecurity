@@ -19,7 +19,7 @@ Docker ist eine Plattform zur Containerisierung von Anwendungen. Sie ermöglicht
 
 In der IT-Sicherheit und DevOps ⚙️ wird Docker oft genutzt, um Testumgebungen zu erstellen, Tools zu isolieren oder Software reproduzierbar auszuführen.
 
----
+
 
 ## Vorteile von Docker
 
@@ -29,7 +29,7 @@ In der IT-Sicherheit und DevOps ⚙️ wird Docker oft genutzt, um Testumgebunge
 * **Reproduzierbarkeit:** Gleiche Umgebung für Dev, Test und Prod
 * **Ressourcenschonung:** Container sind leichtgewichtiger als VMs
 
----
+
 
 ## Wichtige Begriffe
 
@@ -40,7 +40,7 @@ In der IT-Sicherheit und DevOps ⚙️ wird Docker oft genutzt, um Testumgebunge
 | **Dockerfile** | Datei zur Beschreibung, wie ein Image aufgebaut ist      |
 | **Registry**   | Ort, an dem Images gespeichert werden (z. B. Docker Hub)  |
 
----
+
 
 <div align=right>
 
@@ -127,7 +127,7 @@ newgrp docker
 
 > Danach ab- und wieder anmelden.
 
----
+
 
 ## Docker Befehle für den Einstieg
 
@@ -142,7 +142,7 @@ newgrp docker
 | `docker stop <id>`               | Container stoppen                    |
 | `docker rm <id>`                 | Container löschen                    |
 
----
+
 
 ## Sicherheitsaspekte bei Docker
 
@@ -151,20 +151,20 @@ newgrp docker
 * **Netzwerkzugriff:** Container können auf das Netzwerk zugreifen → Firewall wichtig
 * **Image-Vertrauen:** Nur Images aus vertrauenswürdigen Quellen verwenden
 
----
+
 
 ## Fazit
 
 Docker ist ein extrem nützliches Werkzeug, um Anwendungen und Tools **schnell**, **sicher** und **portabel** bereitzustellen. Besonders für **Pentester** und **Entwickler** auf Kali Linux bietet Docker eine Möglichkeit, komplexe Tools oder komplette Lab-Umgebungen in isolierten Containern zu betreiben – ohne das Basissystem zu verunreinigen.
 
----
+
 
 **Tipp:** Verwende Docker in Kombination mit `docker-compose`, um mehrere Container gleichzeitig (z. B. Web + DB) zu starten 📦 ➕ 🗃️.
 
 ## Nützliche Links
 - [Docker Website](https://www.docker.com/)
 
----
+
 
 ## Haftungsausschluss
 

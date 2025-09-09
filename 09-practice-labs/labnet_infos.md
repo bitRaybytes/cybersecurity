@@ -29,7 +29,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **pfSense-Firewall als zentrale Kontrollinstanz** | Zentralisierung der Internetfreigabe erhöht Kontrolle und Logging-Möglichkeiten.            |
 | **Keine Internetverbindung ohne Kontrolle**       | Das verhindert unbemerkte Outbound-Calls.                                                   |
 
---- 
+ 
 ## Architekturübersicht
 
 ```text
@@ -79,7 +79,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **Externe Erreichbarkeit**                 | ❌ Komplett unterbunden         |
 | **Interne Kommunikation (z.B. Exploits)**  | ✔️ Erlaubt                       |
 
----
+
 
 ## Tools & Rollenverteilung
 
@@ -90,7 +90,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | Parrot         | Linux          | Dualrolle (Red/Blue) | `wireshark`, `burpsuite`, `splunk` |
 | pfSense        | BSD            | Gateway/Firewall     | DNS Forwarding, NAT, Tor Routing   |
 
----
+
 
 ## Nächste Verbesserungen
 
@@ -108,7 +108,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 - Zeek/Bro für Netzwerk-Traffic nutzen.
 - Tor- & Proxy-Verbindungen, z.B. per torsocks-Integration loggen.
 
----
+
 
 ## Weitere Ideen
 
@@ -118,7 +118,7 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 - File Server mit SMB für Lateral Movement Tests
 - Integration von Active Directory in Windows VM (für Realismustests)
 
----
+
 
 ## Haftungsausschluss
 

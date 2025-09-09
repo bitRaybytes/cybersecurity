@@ -4,7 +4,7 @@
 
 Diese Datei liefert dir ein umfassendes Verständnis von **Google Dorking** als Technik zur Informationsbeschaffung in der **Reconnaissance-Phase** eines Penetration Tests oder Red Team Assessments. Zusätzlich zeigen wir, wie öffentlich zugängliche Daten in der Tiefe analysiert und ggf. für **Reverse Engineering**-Zwecke genutzt werden können.
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -17,7 +17,7 @@ Diese Datei liefert dir ein umfassendes Verständnis von **Google Dorking** als 
 7. [Rechtlicher Hinweis](#7-rechtlicher-hinweis)
 8. [Weiterführende Ressourcen](#8-weiterführende-ressourcen)
 
----
+
 
 ## 1. Was ist Google Dorking?
 
@@ -32,7 +32,7 @@ Dazu gehören unter anderem:
 - Offene Verzeichnisse (Index of/)
 - PDF-/DOC-/XLS-Dateien mit vertraulichem Inhalt
 
----
+
 
 ## 2. Zusammenhang mit der Reconnaissance-Phase
 
@@ -47,7 +47,7 @@ Beispiele für Informationen, die sich durch Google Dorking finden lassen:
 - Veraltete Softwareversionen
 - Dateien mit internen IPs, Ports oder Credentials
 
----
+
 
 <div align=right>
 
@@ -70,7 +70,7 @@ Beispiele für Informationen, die sich durch Google Dorking finden lassen:
 | `allintitle:`  | Alle Begriffe im Titel                      |
 | `link:`        | Seiten, die auf eine bestimmte URL linken   |
 
----
+
 
 ## 4. Beispiele für gezielte Dorks
 
@@ -101,7 +101,7 @@ site:example.com ext:env DB_PASSWORD
 intext:"Warning: mysql_fetch_array()" site:example.com
 ```
 
---- 
+ 
 
 ## 5. Reverse Engineering durch Google Dorking
 
@@ -114,7 +114,7 @@ Beispiele für Reverse Engineering mit Google Dorking:
 - Veraltete CMS entdecken: z. B. Joomla 3.4 → Reverse Exploit-Suche nach CVEs.
 - Offene API-Dokumentationen: Analyse des API-Aufrufs → mögliche Authorization-Bypass testen.
 
----
+
 
 <div align=right>
 
@@ -135,7 +135,7 @@ Beispiele für Reverse Engineering mit Google Dorking:
 | [Hunter.io](https://hunter.io)                             | E-Mail-Erkennung                      |
 | [FOFA](https://fofa.info)                                  | Suchmaschine für Cybersicherheit      |
 
----
+
 
 ## 7. Rechtlicher Hinweis
 
@@ -147,7 +147,7 @@ Google Dorking kann schnell rechtlich heikel werden, insbesondere wenn du geziel
 - Passives Suchen ist oft nicht strafbar – aber das Sammeln und Weiterverarbeiten kann es werden.
 - Bei Missbrauch greift das Computerstrafrecht (§202a StGB, §303b StGB) in Deutschland.
 
----
+
 
 ## 8. Weiterführende Ressourcen
 
@@ -156,7 +156,7 @@ Google Dorking kann schnell rechtlich heikel werden, insbesondere wenn du geziel
 - [HTB Academy: Information Gathering](https://github.com/lanmaster53/recon-ng)
 - [TheHarvester Tool](https://github.com/laramies/theHarvester)
 
----
+
 
 ## Haftungsausschluss
 

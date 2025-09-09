@@ -5,23 +5,23 @@
 
 ## Inhaltsverzeichnis
 
-1. [Informationsbeschaffung](#1️⃣-informationsbeschaffung-reconnaissance)
-2. [Vulnerability Analyse](#2️⃣-vulnerability-analyse)
-3. [Webb Application Analyse](#3️⃣-web-application-analyse)
-4. [Datenbank Assessement](#4️⃣-datenbank-assessment)
-5. [Password Attacks](#5️⃣-password-attacks)
-6. [Wireless Attacks](#6️⃣-wireless-attacks)
-7. [Reverse Engineering](#7️⃣-reverse-engineering)
-8. [Exploitation Tools](#8️⃣-exploitation-tools)
-9. [Sniffing & Spoofing](#9️⃣-sniffing--spoofing)
-10. [Post Exploitation](#-post-exploitation)
-11. [Forensics](#1️⃣1️⃣-forensik--log-analyse)
-12. [Reporting Tools](#1️⃣2️⃣-reporting-tools)
-13. [Social Engineering Tools](#1️⃣3️⃣-social-engineering-tools)
-14. [System Services](#1️⃣4️⃣-systemdienste-für-enumeration--missbrauch)
-15. [Haftungsausschluss](#1️⃣5️⃣-️-Haftungsausschluss)
+1. [Informationsbeschaffung (Reconnaissance)](#informationsbeschaffung-reconnaissance)
+2. [Vulnerability Analyse](#vulnerability-analyse)
+3. [Web Application Analyse](#web-application-analyse)
+4. [Datenbank Assessement](#datenbank-assessment)
+5. [Password Attacks](#password-attacks)
+6. [Wireless Attacks](#wireless-attacks)
+7. [Reverse Engineering](#reverse-engineering)
+8. [Exploitation Tools](#exploitation-tools)
+9. [Sniffing & Spoofing](#sniffing--spoofing)
+10. [Post Exploitation](#post-exploitation)
+11. [Forensics](#forensik--log-analyse)
+12. [Reporting Tools](#reporting-tools)
+13. [Social Engineering Tools](#social-engineering-tools)
+14. [Systemdienste (für Enumeration & Missbrauch) ](#systemdienste-für-enumeration--missbrauch)
+15. [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Informationsbeschaffung (Reconnaissance)
 
@@ -35,7 +35,7 @@
 | **Amass**        | Subdomain Enumeration                       |
 | **FOCA**         | Metadaten in Dokumenten finden              |
 
----
+
 
 ## Vulnerability Analyse
 
@@ -47,7 +47,7 @@
 | **LinEnum / LinPEAS / WinPEAS** | Lokale Privilege Escalation Checks   |
 | **Nmap NSE Scripts**            | Sicherheitslücken testen per Skripte |
 
----
+
 
 <div align=right>
 
@@ -67,7 +67,7 @@
 | **Nikto**                  | Webserver-Analyse                      |
 | **XSStrike**               | XSS-Finder & Exploiter                 |
 
----
+
 
 ## Datenbank Assessment
 
@@ -79,7 +79,7 @@
 | **Metasploit**              | Datenbankmodule                          |
 
 
----
+
 
 ## Password Attacks
 
@@ -92,7 +92,7 @@
 | **CeWL**            | Passwörter aus Webseiten generieren |
 | **Crunch**          | Passwortlisten generieren           |
 
----
+
 
 ## Wireless Attacks
 
@@ -105,7 +105,7 @@
 | **Bettercap**   | BLE/WiFi-Angriffe                |
 | **Reaver**      | WPS-Angriffe                     |
 
---- 
+ 
 
 <div align=right>
 
@@ -124,7 +124,7 @@
 | **Cutter**           | GUI für Radare2                 |
 | **x64dbg / OllyDbg** | Windows-Debugging               |
 
----
+
 
 ## Exploitation Tools
 
@@ -137,7 +137,7 @@
 | **Impacket**              | SMB/NTLM-Tools für Lateral Movement |
 | **PowerSploit / Nishang** | PowerShell-basierte Exploits        |
 
----
+
 
 ## Sniffing & Spoofing
 
@@ -150,7 +150,7 @@
 | **Responder** | LLMNR/NBTNS Poisoning        |
 | **tcpdump**   | CLI-Sniffer                  |
 
----
+
 
 <div align=right>
 
@@ -169,7 +169,7 @@
 | **PowerView**        | AD-Datenabfrage via PowerShell       |
 | **SharpHound**       | Daten für BloodHound sammeln         |
 
---- 
+ 
 
 ## Forensik & Log-Analyse
 
@@ -182,7 +182,7 @@
 | **binwalk**              | Binäranalyse von Firmware |
 | **ExifTool**             | Metadaten auslesen        |
 
----
+
 
 ## Reporting Tools
 
@@ -194,7 +194,7 @@
 | **Faraday**            | Team-Reporting-Plattform              |
 | **MS Word / Markdown** | Export von Ergebnissen                |
 
----
+
 
 <div align=right>
 
@@ -212,7 +212,7 @@
 | **King Phisher**                  | Spear-Phishing Tool            |
 | **Maltego**                       | OSINT und Personenanalyse      |
 
----
+
 
 ## Systemdienste (für Enumeration & Missbrauch)
 
@@ -224,7 +224,7 @@
 | **SNMP**               | snmpwalk, onesixtyone               |
 | **FTP / SSH / Telnet** | hydra, medusa, netcat               |
 
----
+
 
 ## Haftungsausschluss
 

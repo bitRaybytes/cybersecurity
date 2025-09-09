@@ -1,6 +1,6 @@
 # 🔍 Reconnaissance Commands Cheat Sheet
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -17,7 +17,7 @@
 - [10. Nützliche Ressourcen](#10-nützliche-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -25,9 +25,9 @@ Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Pe
 
 > ⚠️ Hinweis: Die hier gelisteten Befehle dürfen **nur in autorisierten, legalen Testumgebungen** eingesetzt werden!
 
----
 
----
+
+
 
 ## 1. DNS & Domain Recon
 
@@ -40,7 +40,7 @@ host -t mx domain.com                   # Mailserver prüfen
 # crt.sh/?q=domain.com (Zertifikate auslesen)
 ```
 
----
+
 
 ## 2. WHOIS & Zertifikatsinfos
 ```bash
@@ -49,7 +49,7 @@ whois -h whois.arin.net <IP>
 openssl s_client -connect domain.com:443 -showcerts
 ```
 
----
+
 
 <div align=right>
 
@@ -65,7 +65,7 @@ assetfinder --subs-only domain.com
 crt.sh/?q=%.domain.com
 ```
 
----
+
 
 ## 4. Port & Service Scanning
 ```bash
@@ -79,7 +79,7 @@ nmap -p 21 --script ftp-anon,ftp-bounce <target>
 nmap -p 80,443 --script http-title,http-enum <target>
 ```
 
----
+
 
 ## 5. Web Recon & Fingerprinting
 ```bash
@@ -93,7 +93,7 @@ curl -s -X OPTIONS https://domain.com
 curl -s -D- https://domain.com | grep "Server"
 ```
 
----
+
 
 <div align=right>
 
@@ -108,7 +108,7 @@ ffuf -u https://domain.com/FUZZ -w wordlist.txt
 dirsearch -u https://domain.com
 ```
 
----
+
 
 ## 7. E-Mail & Benutzerrecherche
 ```bash
@@ -117,7 +117,7 @@ hunter.io (manuell)
 emailrep.io API (E-Mail Reputation)
 ```
 
----
+
 
 ## 8. OSINT & Tools
 
@@ -132,7 +132,7 @@ emailrep.io API (E-Mail Reputation)
 | **GHunt**          | Google Account OSINT        |
 
 
----
+
 
 <div align=right>
 
@@ -155,7 +155,7 @@ SharpHound.exe -c All
 ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 ```
 
----
+
 
 ## 10. Nützliche Ressourcen
 - [nmap.org](https://nmap.org/)
@@ -165,7 +165,7 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 - [attack.mitre.org](https://attack.mitre.org/)
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
---- 
+ 
 
 ## Haftungsausschluss
 

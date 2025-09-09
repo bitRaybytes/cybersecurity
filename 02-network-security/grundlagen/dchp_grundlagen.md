@@ -11,13 +11,13 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 ## Was ist DHCP (Dynamic Host Configuration Protocol)
-DHCP ist ein Netzwerkprotokoll, das automatisch die Netzwerkkonfiguration an Clients verteilt. Es macht es unnötig, Geräte wie Computer, Smartphones oder IoT-Geräte manuell mit einer **IP-Adresse**, **Subnetzmaske**, **Gateway** und **DNS-Server-Adressen** zu konfigurieren.
+**DHCP** ist ein Netzwerkprotokoll, das automatisch die Netzwerkkonfiguration an Clients verteilt. Es macht es unnötig, Geräte wie Computer, Smartphones oder IoT-Geräte manuell mit einer **IP-Adresse**, **Subnetzmaske**, **Gateway** und **DNS-Server-Adressen** zu konfigurieren.
 
 - **Ports:** DHCP nutzt die UDP-Ports **67** (**Server**) und **68** (**Client**).
 
 - **RFC:** Das Protokoll ist im [RFC 2131](https://www.rfc-editor.org/rfc/rfc2131.html) definiert.
 
-Mehr zum Protokoll Header von DHCP und DNS findest du hier: => [protokoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md).
+Weitere Infos zum Protokoll Header von DHCP und DNS findest du hier: => [protokoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md).
 
 ## Das DORA-Prinzip: Der DHCP-Ablauf
 Der Prozess, bei dem ein Client eine IP-Adresse von einem DHCP-Server erhält, folgt dem sogenannten DORA-Prinzip, das aus vier Schritten besteht:
@@ -75,7 +75,7 @@ Die dem Client zugewiesene Adresse gehört ihm nur für eine bestimmte Dauer (Le
 - **Lease-Ablauf (100%):** Wenn die Lease-Zeit vollständig abgelaufen ist, gibt der Client seine IP-Adresse frei und beginnt den DORA-Prozess von Neuem, um eine neue IP-Adresse zu erhalten.
 
 ### DHCP-Relay
-Ein DHCP-Relay ist eine Funktion auf einem Router, die DHCP-Anfragen über Netzwerksegmente hinweg weiterleitet. Dies ist nützlich, wenn ein einziges DHCP-Subnetz für mehrere physische Netzwerke konfiguriert werden soll.
+Ein **DHCP-Relay** ist eine Funktion auf einem Router, die DHCP-Anfragen über Netzwerksegmente hinweg weiterleitet. Dies ist nützlich, wenn ein einziges DHCP-Subnetz für mehrere physische Netzwerke konfiguriert werden soll.
 
 - Der Client sendet eine Broadcast-Anfrage (`DHCP Discover`) im lokalen Netzwerk.
 - Der Router (`DHCP-Relay-Agent`) empfängt die Anfrage und leitet sie als Unicast an den konfigurierten DHCP-Server im entfernten Netzwerk weiter.

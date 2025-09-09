@@ -12,7 +12,7 @@ und selbst ausprobieren.
 - [Over The Wire](/09-practice-labs/overTheWire/)
 - [OWASP JuiceShop](/09-practice-labs/owasp/juiceShop/)
 
----
+
 
 ## Haftungsausschluss
 

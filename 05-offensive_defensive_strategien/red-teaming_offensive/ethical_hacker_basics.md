@@ -11,7 +11,7 @@
 - [YouTube-Kanäle](#youtube-kanäle)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## 1. Basic Skills
 
@@ -33,7 +33,7 @@
 4. Ausdauer
 5. Kritisches und analytisches Denken
 
----
+
 
 ## 2. Dokumentation
 
@@ -46,7 +46,7 @@ Außerdem ergibt es Sinn, seine Aufschriebe in Themen zu kategoriesieren und je 
 * [Obsidian - Markdown-basierte Notizverwaltung](https://obsidian.md/) (empfohlen)
 * GitHub Repositories für Versionierung
 
----
+
 
 <div align=right>
 
@@ -137,7 +137,7 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
     * TFTP 69
     * SNMP 161
 
----
+
 
 <div align=right>
 
@@ -176,7 +176,7 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 * Data Exfiltration
 * Lateral Movement (Pivoting)
 
----
+
 
 ## 5. Rechtliches (DE/AT/CH)
 
@@ -189,7 +189,7 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
   * AT: §118a StGB
   * CH: Art. 143-147 StGB
 
----
+
 
 <div align=right>
 
@@ -219,7 +219,7 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 * LiveOverflow
 * John Hammond
 
----
+
 
 ## Haftungsausschluss
 

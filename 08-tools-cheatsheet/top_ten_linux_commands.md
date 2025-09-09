@@ -5,7 +5,7 @@ Diese Datei enthält eine kompakte Auswahl der nützlichsten Linux-Kommandos fü
 
 > ⚠️ **Disclaimer:** Die hier beschriebenen Techniken und Kommandos sind ausschließlich für Schulungs- und Testzwecke gedacht – z. B. in CTF-Umgebungen oder autorisierten Penetrationstests. Der Missbrauch in realen, nicht autorisierten Systemen ist strafbar.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Die 10 wichtigsten Linux-Kommandos](#die-10-wichtigsten-linux-kommandos)
@@ -13,7 +13,7 @@ Diese Datei enthält eine kompakte Auswahl der nützlichsten Linux-Kommandos fü
 - [Quellen & Empfehlungen](#quellen--empfehlungen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Die 10 wichtigsten Linux-Kommandos
 
@@ -112,7 +112,7 @@ grep -r "api_key" /var/www/html
 ```
 ➡️ Kombiniere Tools für effiziente Enumeration und Looting.
 
---- 
+ 
 
 <div align=right>
 
@@ -131,14 +131,14 @@ grep -r "api_key" /var/www/html
 | `crontab -l`    | Geplante Tasks analysieren                |
 
 
----
+
 
 ## Quellen & Empfehlungen
 - [explainshell.com – Erklärt Bash-Befehle im Detail](https://explainshell.com/)
 - [GTFOBins – Nützliche Binaries für Privilege Escalation](https://gtfobins.github.io/)
 - [HackTricks Linux – Post-Exploitation Tipps](https://book.hacktricks.xyz/linux-hardening/)
 
----
+
 
 ## Haftungsausschluss
 

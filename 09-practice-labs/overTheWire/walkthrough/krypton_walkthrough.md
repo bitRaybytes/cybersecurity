@@ -25,12 +25,12 @@ Im Gegensatz zu anderen Wargames (wie [Leviathan](/09-practice-labs/overTheWire/
 
 Mehr zum Thema Verschlüsselung findest du [hier in der Repo](/06-crypto-stego/encoding_vs_encryption.md).
 
----
+
 
 ## Zugang
 Der Einstieg erfolgt über eine **SSH-Verbindung
 
----
+
 
 ## Allgemeine Infos
 - **Host:** krypton.labs.overthewire.org  
@@ -42,7 +42,7 @@ Der Einstieg erfolgt über eine **SSH-Verbindung
 - **Offizielle Seite:** [OverTheWire - Krypton](https://overthewire.org/wargames/krypton/)
 - **Hinweis:** Passwörter können aktualisiert worden sein!
 
----
+
 
 ## Krypton 0 -> 1
 
@@ -345,7 +345,7 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 
 </details>
 
----
+
 
 ## Erkenntnisse
 - `echo:` Gibt Text direkt im Terminal aus.

@@ -13,7 +13,7 @@ Die **Damn Vulnerable Web Application (DVWA)** ist eine bewusst unsichere Webanw
 
 [Was ist die DVWA? - Google-Suche](https://www.google.com/search?q=was+ist+die+dvwa&client=firefox-b-d&sca_esv=45ade08aecea71dd&sxsrf=AE3TifNZWbMyTSVuoLgFF1l0m5ggqQv_Ew%3A1753627769172&ei=eTyGaNOZCt3d7_UP4e2IoQs)
 
----
+
 
 ## DVWA im Docker unter Kali Linux installieren 
 
@@ -101,7 +101,7 @@ http://<IP-Adresse>
 > Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/03-web-security/sql-injection/sql-injection-cheatsheet.md)
 
 
----
+
 
 ## Nützliche Hinweise
 
@@ -112,7 +112,7 @@ http://<IP-Adresse>
   * **Passwort:** `password`
 * In DVWA musst du unter `DVWA Security` eventuell zuerst die Sicherheitsstufe auf **low** stellen, um alle Tests zu ermöglichen.
 
----
+
 
 ## Fazit
 
@@ -121,7 +121,7 @@ Mit DVWA kannst du realistische Web-Angriffe wie SQL-Injection, XSS oder Command
 > **Nächster Schritt:** Übe mit Tools wie Burp Suite, OWASP ZAP oder Nikto gegen deine DVWA-Instanz!
 
 
----
+
 
 ## Haftungsausschluss
 

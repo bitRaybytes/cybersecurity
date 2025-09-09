@@ -2,7 +2,7 @@
 
 > Diese Übersicht enthält nützliche Linux-Kommandos für den täglichen Gebrauch in Pentesting, Systemadministration oder beim Lernen.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Navigation im Dateisystem](#navigation-im-dateisystem)
@@ -29,7 +29,7 @@
 | `cd ~` oder `cd`             | Zum Home-Verzeichnis wechseln         |
 | `cd ..`                      | Ein Verzeichnis höher                 |
 
----
+
 
 ## Datei- & Ordneroperationen
 
@@ -48,7 +48,7 @@
 | `nano datei.txt`             | Datei im Editor öffnen                    |
 | `chmod +x script.sh`         | Datei ausführbar machen                   |
 
----
+
 
 ## Suchen
 
@@ -61,7 +61,7 @@
 | `locate datei.txt`                   | Schnelle Dateisuche (mit Index)           |
 | `which befehl`                       | Zeigt Pfad eines installierten Befehls    |
 
----
+
 
 <div align=right>
 
@@ -87,7 +87,7 @@
 | `sudo pacman -Syu`             | Systemupdate                           |
 | `sudo pacman -S paketname`     | Paket installieren                     |
 
----
+
 
 ## Benutzer & Rechte
 
@@ -101,7 +101,7 @@
 | `chmod 755 datei.sh`               | Rechte ändern                            |
 | `chown user:gruppe datei.txt`      | Besitzer ändern                          |
 
----
+
 
 ## Systemüberwachung
 
@@ -115,7 +115,7 @@
 | `free -h`              | RAM-Auslastung                        |
 | `uptime`               | Systemlaufzeit                        |
 
----
+
 
 ## Netzwerk
 
@@ -129,7 +129,7 @@
 | `wget http://seite.de/datei` | Datei herunterladen                     |
 | `nmap -sS 192.168.0.1`       | Portscan (mit nmap)                     |
 
----
+
 
 ## Nützliche Tools (falls installiert)
 
@@ -140,7 +140,7 @@
 | `jq`       | JSON-Parser für die Kommandozeile        |
 | `tree`     | Ordnerstruktur als Baum anzeigen         |
 
----
+
 
 <div align=right>
 
@@ -157,7 +157,7 @@
 | `ufw status`                 | Firewall-Status prüfen (Ubuntu)       |
 | `ufw enable`                 | Firewall aktivieren                   |
 
----
+
 
 ## Cleanup & Logins
 
@@ -169,7 +169,7 @@
 | `last`                 | Letzte Logins anzeigen               |
 | `who`                  | Wer ist eingeloggt?                  |
 
----
+
 
 ## Bonus: Nützliche Tastenkürzel im Terminal
 
@@ -183,11 +183,11 @@
 | `!!`             | Letzten Befehl wiederholen               |
 | `!xyz`           | Letzten Befehl mit "xyz" starten         |
 
----
+
 
 > **Tipp**: Nutze `man befehl`, um die Manpage eines Befehls zu lesen, z. B. `man ls`.
 
----
+
 
 ## Haftungsausschluss
 

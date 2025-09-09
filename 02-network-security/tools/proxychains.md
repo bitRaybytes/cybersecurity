@@ -1,6 +1,5 @@
 # 🧰 Proxychains – Anonymität durch Kaskadierung von Proxys
 
----
 
 ## Inhaltsverzeichnis
 - [Was ist Proxychains?](#was-ist-proxychains)
@@ -13,7 +12,7 @@
 - [Weitere Ressourcen](#weitere-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Was ist Proxychains?
 
@@ -21,7 +20,7 @@
 
 Proxychains *hängt sich vor die Netzwerkaufrufe eines Programms* und zwingt es, nur über die definierten Proxys zu kommunizieren.
 
----
+
 
 ## Aufbau & Funktionsweise
 
@@ -31,7 +30,7 @@ Proxychains funktioniert über drei zentrale Komponenten:
 2. **Konfigurationsdatei**: `/etc/proxychains.conf` steuert das Verhalten und die eingesetzten Proxyserver.
 3. **Proxy-Reihenfolge (Kaskadierung)**: einzelne oder mehrere Proxys seriell nutzen (Chain).
 
----
+
 
 ## Installation
 
@@ -42,7 +41,7 @@ sudo apt update
 sudo apt install proxychains
 ```
 
----
+
 
 <div align=right>
 
@@ -88,7 +87,7 @@ socks5 127.0.0.1 9050
 ```
 (Wenn Tor installiert ist und der Dienst läuft, ist Port 9050 der Standard für den lokalen SOCKS5-Zugang.)
 
----
+
 
 <div align=right>
 
@@ -107,7 +106,7 @@ proxychains firefox
 ```
 Wenn alles funktioniert, wird die eigene IP-Adresse nicht die echte sein, sondern die des letzten Proxys (z. B. eines Tor-Exit-Nodes).
 
----
+
 
 ## Beispiel: Konfiguration für Tor
 
@@ -136,7 +135,7 @@ sudo service tor start
 proxychains curl ifconfig.io
 ```
 
----
+
 
 <div align=right>
 
@@ -154,7 +153,7 @@ proxychains curl ifconfig.io
 | Logs prüfen                      | `proxychains -f <config> <tool>` verwenden für benutzerdefinierte Konfig |
 | Parallel mit Wireshark sniffen   | Zur Kontrolle, ob Verkehr wirklich nur durch den Proxy läuft            |
 
----
+
 
 ## Weitere Ressourcen
 
@@ -162,7 +161,7 @@ proxychains curl ifconfig.io
 - 🔐 [Tor Project](https://www.torproject.org/)
 - 📖 `man proxychains`
 
----
+
 
 ## Haftungsausschluss
 

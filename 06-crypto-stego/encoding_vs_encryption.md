@@ -6,7 +6,7 @@ Diese Datei erklärt die Unterschiede und Anwendungsfälle von **Encoding**, **E
 
 Links zu den Tools findest du [hier](#8-nützliche-links)
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -35,22 +35,20 @@ Links zu den Tools findest du [hier](#8-nützliche-links)
 - [8. Nützliche Links](#8-nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## 1. Encoding (Umwandlung)
 
-In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Zahlenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten.
-Die Umwandlung erfolgt mithilfe von Regeln oder Algorithmen. 
+In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Zahlenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten. Die Umwandlung erfolgt mithilfe von Regeln oder Algorithmen.
 
-> kurz gesagt: Encoding ist die Technik, die zur Umwandlung von Informationen von einem Format in ein anders Format genutzt wird. 
+> kurz gesagt: Encoding ist die Technik, die zur Umwandlung von Informationen von einem Format in ein anderes Format genutzt wird.
 
 So ermöglicht es beispielsweise, dass URLs das Leerzeichen nicht falsch interpretieren und mit dem Zeichen `%20` ersetzen oder Texte, die verschiedene Sprachen und Sonderzeichen enthalten, korrekt angezeigt werden. 
 
-Encoding verläuft in den meisten Fälle **verlustfrei**, das heißt, dass nur das Dateiformat umgewandelt wird, der eigentliche Inhalt der Nachricht jedoch gleich.
+Encoding verläuft in den meisten Fälle **verlustfrei**, das heißt, dass nur das Dateiformat umgewandelt wird, der eigentliche Inhalt der Nachricht bleibt jedoch gleich.
 Darüber hinaus ist es nicht für Sicherheit, sondern für die Kompatibiltät gedacht.
 
-**Ziel:** Lesbare Daten in ein bestimmtes Format umwandeln, um Kompatibilität und Transport zu ermöglichen.
-
+- **Ziel:** Lesbare Daten in ein bestimmtes Format umwandeln, um Kompatibilität und Transport zu ermöglichen.
 - **Zweck:** Datenübertragung oder -speicherung (nicht sicherheitsrelevant)
 - **Beispiele:** Base64, URL-Encoding, ASCII, HTML-Entities
 - **Reversibel:** Ja, ohne Schlüssel
@@ -59,8 +57,8 @@ Darüber hinaus ist es nicht für Sicherheit, sondern für die Kompatibiltät ge
 ### Arten des Encodings
 
 - **Zeichenkodierung:** Oder Character Encoding genannt, verarbeitet die erhaltenen Informationen mit genutztem Zeichensatz:
-    - `UTF-8` - sehr verbreitetes Encoding im Internet, das Unicode verwendet, um Zeichen aus fast alles Sprachen der Welt darzustellen.
-    - `ISO 8859-1 (Latin-1)` - ältere Zeichenkodierung, hauptsächlich unterstütz in west-europäischen Sprachen.
+    - `UTF-8` - Sehr verbreitetes Encoding im Internet, das Unicode verwendet, um Zeichen aus fast allen Sprachen der Welt darzustellen.
+    - `ISO 8859-1 (Latin-1)` - Ältere Zeichenkodierung, hauptsächlich unterstützend in westeuropäischen Sprachen.
 - **URL-Encoding:** Oder Prozentkodierung genannt, ersetzt in einer URL bestimmte Zeichen mit speziellen Zeichenfolgen:
     - z. B.: ein `Leerzeichen` wird ersetzt durch `%20`, für korrekte Übertragung.
 
@@ -78,7 +76,7 @@ echo "cGFzc3dvcmQxMjM=" | base64 -d
 # password123
 ```
 
----
+
 
 ## 2. Encryption (Verschlüsselung)
 
@@ -90,12 +88,9 @@ Die Encryption ist die Umwandlung von Informationen (auf seite des Senders), die
 > der nur den befugten Personen bekannt sein darf.
 > *https://de.wikipedia.org/wiki/Verschl%C3%BCsselung*
 
-Der Sender erstellt dazu den passenden Schlüssel, die der Empfänger dann erhalten muss, sodass dieser im Anschluss die Nachricht entschlüsseln kann.
 
-Es gibt mehrere Arten der Verschlüsselung von Informationen: **Symmetrische**, **Asymmetrische-** oder **Hybride-Verschlüsselung** sowie `PKU und digitale Signaturen`.
 
-**Ziel:** Schutz von Vertraulichkeit und Integrität durch Umwandlung von Daten mithilfe eines Schlüssels.
-
+- **Ziel:** Schutz von **Vertraulichkeit** und **Integrität** durch Umwandlung von Daten mithilfe eines Schlüssels.
 - **Zweck:** Vertrauliche Kommunikation oder Datenspeicherung
 - **Reversibel:** Ja, aber nur mit dem richtigen Schlüssel
 - **Sicherheit:** Hoch (je nach Algorithmus und Schlüssellänge)
@@ -106,13 +101,9 @@ Es gibt mehrere Arten der Verschlüsselung von Informationen: **Symmetrische**, 
 
 ### Symmetrisches Verschlüsselung
 
-Symmetrische Verschlüsselung ist ein kryptografisches Verfahren, bei dem derselbe geheime Schlüssel sowohl zum Ver- als auch zum Entschlüsseln von Daten vewendet.
-Das macht sie schnell und effizient, was für Verschlüsselung großer Datenmengen geeignet ist.
+Symmetrische Verschlüsselung ist ein kryptografisches Verfahren, bei dem derselbe geheime Schlüssel sowohl zum Ver- als auch zum Entschlüsseln von Daten verwendet wird. Dies macht sie schnell und effizient, weshalb sie sich gut für die Verschlüsselung großer Datenmengen eignet.
 
-Zu den bekanntesten moderneren Verschlüsselungsverfahren gehören unter anderem `DES (Data Encryption Standard)`, `Triple-DES`,`AES`, `ChaCha20` oder `OTP One-Time-Pad`.
-Zur Verschlüsselung ist es wichtig, dass Sender und Empfänger zuvor den richtigen Schlüssel ausgetauscht haben.
-
-Das Problem von nur einem Schlüssel liegt in der Verteilung an den Empfänger. Angreifer können mit MITM-Attacken den Schlüssel abfangen und Daten manipulieren. Das ist ein Einbruch in die Sicherheit und Vertraulichkeit der Daten.
+Die größte Herausforderung ist die sichere Verteilung des geheimen Schlüssels an den Empfänger. Ein Angreifer könnte den Schlüssel abfangen und alle damit verschlüsselten Daten entschlüsseln.
 
 Die Verarbeitung der Daten zur Verschlüsselung hin erfolgt entweder als **Block-** oder als **Stromchiffren**-Verfahren.
 
@@ -163,7 +154,6 @@ Entschlüsselungsverfahren:
 - **Verarbeitung:** Keystream wird dann mit Daten `XOR` verknüpft, um sie zu verschlüsseln.
 - **Eigenschaften:** 
     - `ChaCha20` oft schneller als `AES`, insbesondere auf Geräten mit eingeschränkten Ressourcen.
-    - Kann größere Datenmengen verarbeiten als `AES`, da Blockgröße von 64 Byte (512 Bit) bei `ChaCha20` höher ist als die 16 Byte bei `AES`.
 
 #### Typische Anwendungsbeispiele 
 - Verschlüsselung von Dateien und Daten auf einer Festplatte (z. B. durch ein Passwort).
@@ -189,8 +179,8 @@ Heißt, dass der Empfänger, der den `public key` hat, eine Nachricht verschlüs
 
 Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet werden, während der `private key` die Information entschlüsselt.
 
-
-**Einziger Nachteil:** Mit Anzahl von verteilten Keys an Menschen, steigt die Anzahl linear der `public key`. Diese müssen dann organisieret werden, da nicht jeder den gleichen Kommunikationsweg hat.
+- **Vorteil:** Schlüsselaustausch ist sicher, da nur der öffentliche Schlüssel geteilt wird.
+- **Nachteil:** Das Verfahren ist deutlich langsamer und rechenintensiver fals die symmetrische Verschlüsselung.
 
 #### Funktionsweise asymmetrischer Verschlüsselung
 1. Ein Paar von mathematisch verbundenen Schlüsseln wird erstellt:
@@ -210,14 +200,34 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 - `RSA` - weit verbreitetes und sicheres System, das sowohl für Versclhüsselung als auch für Signaturen verwendet wird.
 - `ECC` - Elliptische Kurven Kryptografie bitet hohe Sicherheit mit kürzeren Schlüssellängen, was es effizient für mobile Geräte macht.
 
+#### Visualisierung: Asymmetrische Verschlüsselung
+```yaml
++-------------+                             +-------------+
+|    Alice    |                             |     Bob     |
+|  (Sender)   |                             | (Empfänger) |
++-------------+                             +-------------+
+       |                                            ^
+       |   Bobs öffentlicher Schlüssel              |
+       |------------------------------------------->|
+       |                                            |
+       |--[ Verschlüsseln mit Bobs Public Key ]---->|
+       |                                            |
+       |<---(Nur Bob kann entschlüsseln)------------|
+       |                                            |
++------------------+                 +-------------------------+
+|  (Verschlüsselte |                 | Bobs privater Schlüssel |
+|    Nachricht)    |                 | (nur bei Bob)           |
++------------------+                 +-------------------------+
+```
 
 ### hybride Verschlüsselung
 
 Die hybride Verschlüsselung kombiniert die Vorteile der **symmetrischen Verschlüsslung** (schnell, aber schwierige Schlüsselverteilung) und die **asymmetrische Verschlüsselung** (langsame, aber sichere Verschlüsselung).
 
-Es wird ein zufälliger symmetrischer Session-Schlüssel vom Sender generiert und dann mit dem öffentlichen Schlüssel des Empfängers asymmetrisch verschlüsselt und gesendet.. 
+1. Der Sender generiert einen einmaligen, zufälligen **symmetrischen Session-Schlüssel**.
+2. Dieser Session-Schlüssel wird mit dem öffentlichen Schlüssel des Empfängers asymmetrisch verschlüsselt und gesendet.
+3. Die eigentlichen Daten werden mit dem schnellen symmetrischen Session-Schlüssel verschlüsselt und übertragen.
 
-Die eigentlichen Daten werden mit dem symmetrischen Session-Schlüssel verschlüsselt, was eine sichere und effiziente Datenübertragung ermöglicht.
 
 **Beispiele, die hybride Verschlüsselung nutzen:**
 - `HTTPS` - nutzt hybride Verschlüsselung über TLS (ehemals SSL).
@@ -231,7 +241,7 @@ Die eigentlichen Daten werden mit dem symmetrischen Session-Schlüssel verschlü
 echo -n "secrettext" | openssl enc -aes-256-cbc -base64 -pass pass:MyKey
 ```
 
---- 
+ 
 
 <div align=right>
 
@@ -246,7 +256,7 @@ Hashing ist die Umwandlung von Daten beliebiger Größe in eine Zeichenkette fes
 Verwechsle daher das Hashen eines Passworts nicht mit der Verschlüsselung. Die Verschlüsselung ist umkehrbar, der Hash ist eine **Einweg-Funktion**.
 
 
-**Ziel:** Erzeugung eines eindeutigen, festen Ausgabewertes (Digest) zur Überprüfung von Integrität oder Identität.
+- **Ziel:** Erzeugung eines eindeutigen, festen Ausgabewertes (Digest) zur Überprüfung von Integrität oder Identität.
 
 - **Zweck:** Fingerabdruck von Daten, z. B. für Passwörter, Datei-Integritätsprüfung
 - **Reversibel:** Nein (Einweg-Funktion)
@@ -265,7 +275,9 @@ Im Gegenzug dazu sind **langsamere Hashes**, zu denen kryptografische Algorithme
 ### Sicherheit erhöhen durch Salting und Peppering
 Sicherheitstechniken wie Salting oder Peppering werden beim Hashen dafür verwendet, die Sicherheit der Passwörter noch einmal zu erhöhen.
 
-Das **Salting** fügt dem **Passwort** einen zufälligen und einzigartigen Wert hinzu, bevor es gehasht wird. Beim **Peppering** wird dem **Password** eine zusätzliche Zeichenkette. Zusätzich zum Peppering kommt hinzu, dass dieser zufällige und zusätzliche Wert nicht mit dem Passwort-Hash gespeichert wird, sondern getrennt davon. Man bewahrt einen `Pepper` bspw. in einer Konfigurationsdatei oder einem Hardware-Sicherheitsmodul.
+- **Salting:** Ein zufälliger, einzigartiger Wert (`Salt`) wird jedem Passwort vor dem Hashing hinzugefügt. Der Hash wird zusammen mit dem Salt in der Datenbank gespeichert. Dies verhindert, dass Angreifer Rainbow-Tables verwenden können, da dasselbe Passwort für jeden Benutzer einen anderen Hash erzeugt.
+
+- **Peppering:** Ein geheimer, statischer Wert (`Pepper`) wird zu allen Passwörtern vor dem Hashing hinzugefügt. Im Gegensatz zum Salt wird der Pepper nicht in der Datenbank gespeichert, sondern an einem externen, sicheren Ort. Dies schützt die Passwörter auch dann, wenn die gesamte Datenbank gestohlen wird.
 
 Die Kombination von **Hashing**, **Salting** und **Peppering** ist eine sehr wirksame Methode, um Passwörter sicher zu speicher.
 
@@ -284,7 +296,7 @@ echo -n "secrettext" | sha256sum
 # 8b2c99e5c489b9677872f22e51f06c87178d24...
 ```
 
----
+
 
 ## 4. Vergleichstabelle
 
@@ -305,7 +317,7 @@ echo -n "secrettext" | sha256sum
 | Hashing    | Passwort-Datenbank (bcrypt)  |
 
 
----
+
 
 ## 5. Typische Einsatzszenarien
 
@@ -324,7 +336,7 @@ echo -n "secrettext" | sha256sum
     - Digitale Signaturen (Signatur basiert auf Hash)
     - Blockchain (SHA-256 in Bitcoin)
 
---- 
+ 
 
 <div align=right>
 
@@ -342,7 +354,7 @@ echo -n "secrettext" | sha256sum
 - Encryption ohne sichere Schlüsselspeicherung ist nutzlos.
 - Encoding ist keine Sicherheitsschicht – jeder kann es zurückwandeln.
 
----
+
 
 ## 7. Tools und Befehle
 
@@ -362,7 +374,7 @@ echo -n "secrettext" | sha256sum
 gpg --encrypt --recipient user@webseite.com
 ```
 
----
+
 
 ## 8. Nützliche Links
 
@@ -382,7 +394,7 @@ gpg --encrypt --recipient user@webseite.com
 - [GnuPG.org](https://gnupg.org/)
 - [openssl.org](https://www.openssl.org/)
 
----
+
 
 ## Haftungsausschluss
 

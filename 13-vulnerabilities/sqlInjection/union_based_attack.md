@@ -9,13 +9,13 @@
 - [Sicherheitshinweis](#sicherheitshinweis)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Ziel
 
 Datenbankinformationen schrittweise über die `UNION SELECT`-Technik auslesen – insbesondere bei anfälligen Parametern wie z. B. `id`, `search`, `user`, etc.
 
----
+
 
 ## Beispielhafte Schritte zur Datenextraktion mit `GROUP_CONCAT`
 
@@ -52,7 +52,7 @@ Tool für Umwandlung: [Codebeautify – String to Hex](https://codebeautify.org/
 test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 ```
 
----
+
 
 ## Hinweise
 - `group_concat()` ist hilfreich zum Kombinieren mehrerer Ergebnisse in einer Zeile.
@@ -61,13 +61,13 @@ test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 
 - Kommentare wie -- oder --+ beenden den ursprünglichen SQL-Befehl korrekt.
 
----
+
 
 ## Sicherheitshinweis
 
 Dieses Wissen dient ausschließlich der legalen Anwendung im Rahmen von Penetration Tests mit ausdrücklicher Erlaubnis. Der Missbrauch kann strafrechtlich verfolgt werden.
 
----
+
 
 ## Haftungsausschluss
 

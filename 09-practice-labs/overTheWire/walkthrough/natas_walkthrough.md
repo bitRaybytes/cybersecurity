@@ -66,7 +66,7 @@ Finde das Passwort für das nächste Level `natas1`.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -94,7 +94,7 @@ In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -144,7 +144,7 @@ Klick auf die Datei, um das Passwort zu erhalten.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -199,7 +199,7 @@ Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für d
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -289,7 +289,7 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 
 </details>
 
----
+
 
 
 
@@ -334,7 +334,7 @@ Und siehe da, wir erhalten das Passwort im Terminal.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -385,7 +385,7 @@ Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, soll
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -437,7 +437,7 @@ http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -530,7 +530,7 @@ Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Ein
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -638,7 +638,7 @@ Damit solltest du das Passwort für die nächste Challenge erhalten.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -701,7 +701,7 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -731,7 +731,7 @@ URL:        http://natas11.natas.labs.overthewire.org
 
 # Wird fortgesetzt
 
----
+
 
 ## Haftungsausschluss
 

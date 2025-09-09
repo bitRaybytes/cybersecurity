@@ -17,7 +17,7 @@
     - [Frontend und Backend](#frontend-und-backend)
 - [Zusammenspiel – Request → Response](#zusammenspiel--request--response)
 
----
+
 
 ## Grundlagen des Webs
 
@@ -37,7 +37,7 @@ Das Web basiert auf dem **Client-Server-Modell**:
 
 Der Client **fordert** Inhalte an, der Server **liefert** Inhalte aus.
 
----
+
 
 ### DNS - das Telefonbuch des Internets
 
@@ -60,7 +60,7 @@ Hier kommt das **Domain Name System (DNS)** ins Spiel:
 - **DNS-Server:** Übersetzer von Domain → IP
 - **IP-Adresse:** Ziel des Clients (z. B. des Webservers)
 
----
+
 
 ### HTTP/HTTPS
 

@@ -1,6 +1,6 @@
 # 🚪 Port Scanning – Grundlagen, Techniken & Tools
 
----
+
 
 ## Inhaltsverzeichnis
 - [Was ist Port Scanning?](#was-ist-ein-port)
@@ -14,7 +14,6 @@
 - [Checkliste für Port Scanner:](#checkliste-für-port-scanner)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
 
 ## Was ist Port Scanning?
 
@@ -23,7 +22,7 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 - Welche **Ports** offen oder verwundbar sind
 - Welche Sicherheitsmaßnahmen aktiv sind (z. B. Firewalls)
 
----
+
 
 ## Grundlagen: Ports und Protokolle
 
@@ -52,7 +51,7 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 | SMTP        | 25   | TCP       |
 | RDP         | 3389 | TCP       |
 
----
+
 
 <div align=right>
 
@@ -71,7 +70,7 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 | FIN Scan         | Sendet TCP-Paket mit FIN-Flag                        | Ja/Nein             |
 | NULL Scan        | Kein gesetztes TCP-Flag → Fehlerantwort provozieren  | Teilweise           |
 
----
+
 
 ## Tool: Nmap - Der Klassiker
 
@@ -107,7 +106,7 @@ nmap -p 22,80 192.168.1.10
 nmap -sP 192.168.1.0/24
 ```
 
----
+
 
 <div align=right>
 
@@ -125,7 +124,7 @@ nmap -sP 192.168.1.0/24
 | **unfiltered** | Port erreichbar, aber keine klare Aussage möglich |
 
 
----
+
 
 ## Rechtliche Hinweise 
 
@@ -137,7 +136,7 @@ nmap -sP 192.168.1.0/24
 
 In Deutschland kann ein nicht autorisierter Scan gegen §202c StGB ("Vorbereiten des Ausspähens von Daten") verstoßen.
 
----
+
 
 ## Verteidigung gegen Port Scans (Blue Team)
 
@@ -146,7 +145,7 @@ In Deutschland kann ein nicht autorisierter Scan gegen §202c StGB ("Vorbereiten
 - Port-Knocking: Dienste nur nach „geheimer Portfolge“ öffnen
 - Honeypots: Absichtlich offene Ports zur Täuschung von Angreifern
 
----
+
 
 <div align=right>
 
@@ -161,7 +160,7 @@ Empfohlene Ressourcen:
 - YouTube: NetworkChuck – „Nmap Tutorial for Beginners“
 - Bücher: „Nmap Network Scanning“ (Gordon Lyon aka Fyodor)
 
----
+
 
 ## Checkliste für Port Scanner:
 
@@ -171,7 +170,6 @@ Empfohlene Ressourcen:
 - ✅ Firewalls/Filter beachten
 - ✅ Ergebnisse dokumentieren
 
----
 
 ## Haftungsausschluss
 

@@ -12,7 +12,7 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 ## Was ist ein Man-in-the-Middle-Angriff?
-Ein Man-in-the-Middle (MitM)-Angriff ist eine Cyber-Attacke, bei der sich ein Angreifer heimlich zwischen zwei kommunizierende Parteien schaltet. Ziel ist es, den Datenverkehr abzufangen, abzuhören oder zu manipulieren, ohne dass die Opfer dies bemerken. Der Angreifer agiert dabei als unsichtbarer Vermittler.
+Ein **Man-in-the-Middle-Angriff** (**MitM**) ist eine Cyber-Attacke, bei der sich ein Angreifer heimlich zwischen zwei kommunizierende Parteien schaltet. Ziel ist es, den Datenverkehr abzufangen, abzuhören oder zu manipulieren, ohne dass die Opfer dies bemerken. Der Angreifer agiert dabei als unsichtbarer Vermittler.
 
 **Analogie**
 

@@ -8,7 +8,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 > - Zertifikate sind **keine offiziellen Zertifizierungen**, können aber als **Wissensnachweis** dienen.  
 > - Themen reichen von Grundlagen über Tools bis hin zu realistischen Angriffs-Szenarien.
 
----
+
 
 ## Inhaltsverzeichnis:
 - [Ausgewählte Udemy-Kurse](#ausgewählte-udemy-kurse)
@@ -31,7 +31,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 | WiFi Penetration Testing          | [Zum Kurs](https://www.udemy.com/course/wifi-hacking-for-beginners/)                                     |
 | File Path Traversal               | [Zum Kurs](https://www.udemy.com/course/file-path-traversal-mastery-hands-on-from-zero-to-hero/)        |
 
----
+
 
 ## Udemy: Kostenlose Kurskategorien (Englisch)
 
@@ -52,7 +52,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 | [Wireshark](https://www.udemy.com/topic/wireshark/?price=price-free&sort=most-reviewed) | Netzwerk-Analyse |
 | [Alle weiteren Kategorien anzeigen](https://www.udemy.com/courses/it-and-software/network-and-security/?price=price-free) |
 
----
+
 
 ## Linux-Kurse & Trainings
 
@@ -62,7 +62,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 |----------------------|----------------------------------------------------------------------|
 | Linux Foundation (offiziell) | [Kostenlose Trainings](https://training.linuxfoundation.org/resources/?_sft_content_type=free-course) |
 
----
+
 
 ## Coursera-Kurse (kostenfrei zugänglich)
 
@@ -75,7 +75,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 | IT-Systemprüfung            | [Information Systems Audit](https://www.coursera.org/learn/information-systems-audit) |
 | Kryptografie I              | [Cryptography I](https://www.coursera.org/learn/crypto) |
 
----
+
 
 ## Virtuelle Maschinen (VMs) zum Üben
 
@@ -88,7 +88,7 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 > **Fragen zur VM-Einrichtung?**  
 > Tritt unserem [Discord-Server](https://discord.gg/fNcTyYVVb9) bei!
 
----
+
 
 ## Haftungsausschluss
 

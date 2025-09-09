@@ -9,7 +9,7 @@
 - [Empfohlene Reihenfolge für Beginner](#empfohlene-reihenfolge-für-beginner)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Netzwerk Scans (Klassisch)
 
@@ -24,7 +24,7 @@
 | `traceroute` | Zeigt den Weg (Hops) zum Zielhost im Netzwerk                                          |
 | `tracert`    | Windows-Version von `traceroute`                                                       |
 
----
+
 
 ## Netzwerk Scans (Moderne Tools)
 
@@ -34,7 +34,7 @@
 | `ip n` | Zeigt ARP-Nachbarn (wie `arp -a`)                                 |
 | `ip r` | Zeigt Routing-Tabelle (ersetzt `route`)                           |
 
----
+
 
 ## Erweiterte Tools für Netzwerk-Discovery
 
@@ -74,7 +74,7 @@ Ein schneller ARP-basiertes Tool für lokale Netzwerke:
 sudo arp-scan --interface=eth0 192.168.1.0/24
 ```
 
----
+
 
 ## Tipps zur Netzwerkanalyse
 
@@ -83,7 +83,7 @@ sudo arp-scan --interface=eth0 192.168.1.0/24
 - Ziel: Aktive Hosts finden, deren offene Ports identifizieren, Dienste erkennen, Exploits vorbereiten.
 - Kombination aus: **Ping**, **ARP**, **DNS**, **Portscanning**, **Banner-Grabbing** = perfekte Recon.
 
----
+
 
 ## Bonus: Interface-Troubleshooting
 
@@ -98,7 +98,7 @@ sudo ip link set eth0 up
 sudo dhclient eth0
 ```
 
----
+
 
 ## Empfohlene Reihenfolge für Beginner
 
@@ -108,7 +108,7 @@ sudo dhclient eth0
 4. `traceroute` -> Netzwerkstruktur analysieren
 5. `arp -a` oder `ip n` -> MAC-zu-IP-Zuordnung verstehen
 
----
+
 
 ## Haftungsausschluss
 

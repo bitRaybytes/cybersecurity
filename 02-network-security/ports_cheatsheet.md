@@ -1,6 +1,5 @@
 # 🌐 Ports & ihre Funktionsweise – Cheat Sheet
 
----
 
 ## Inhaltsverzeichnis
 - [Einführung](#einführung)
@@ -14,7 +13,7 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einführung
 Ein **Port** ist eine logische Schnittstelle in einem Betriebssystem, die als **Kommunikationsendpunkt** für Anwendungen dient.
@@ -25,7 +24,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 - `192.168.0.10:80` -> HTTP-Webserver
 - `192.168.0.10:22` -> SSH-Verbindung
 
----
+
 
 ## Funktionsweise von Ports
 - Ports sind **16-Bit-Werte** (0–65535).
@@ -34,7 +33,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
   - **TCP-Ports** -> verbindungsorientiert (SYN/ACK-Handshake)
   - **UDP-Ports** -> verbindungslos (schneller, aber unsicherer)
 
----
+
 
 ## Port-Bereiche
 
@@ -46,7 +45,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 **Hinweis:** Ephemere Ports werden vom **Client** automatisch zugewiesen, um eine **Antwort** vom Server empfangen zu können.
 
----
+
 
 <div align=right>
 
@@ -85,7 +84,6 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 [WikiPedia: Liste der Portnummern](https://de.wikipedia.org/wiki/Liste_der_Portnummern)
 
----
 
 ## Ports & Firewalls
 - Firewalls kontrollieren, welche Ports für **eingehenden und ausgehenden** Datenverkehr genutzt werden dürfen.
@@ -96,7 +94,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
   - **Regel:** Alle anderen Ports blockieren (Default-Deny).
   - **Ergebnis:** Das System ist vor unnötigen Angriffsvektoren geschützt.
 
----
+
 
 <div align=right>
 
@@ -114,7 +112,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
   - **Patch-Management:** Halte alle auf den Ports laufenden Dienste und deren Software auf dem neuesten Stand.
   - **Monitoring:** Setze Intrusion Detection/Prevention Systeme (IDS/IPS) ein, um ungewöhnliche Zugriffe zu erkennen.
 
----
+
 
 ## Beispiel: Verbindungsaufbau TCP vs. UDP
 
@@ -160,7 +158,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 (Es gibt keine Bestätigung, dass das Paket ankam)
 ```
 
----
+
 
 ## Zusammenfassung
 - Ports sind **16-Bit-Nummern (0–65535)**, die Anwendungen eindeutige Kommunikationskanäle bereitstellen.  
@@ -169,7 +167,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 - Offene Ports müssen durch Firewalls und Patch-Management abgesichert werden, um Angriffsvektoren zu minimieren.
 
 
-----
+
 
 ## Nützliche Links
 - [firewall_cheatsheet.md](02-network-security/firewall_cheatsheet.md) - Einführung in Firwalls
@@ -177,7 +175,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 - [osi_schichtenmodell.md](osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
 - [ip_adressen_basics.md](ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
 
----
+
 
 ## Haftungsausschluss
 

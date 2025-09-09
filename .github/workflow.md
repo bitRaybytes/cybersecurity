@@ -13,7 +13,7 @@ git config --global user.signingkey ABCDEFGHIJKL1234
 git config --global commit.gpgsign true
 ```
 
----
+
  
 ## 🔁 2. Neues Feature entwickeln
 ```bash
@@ -25,7 +25,7 @@ git pull origin main
 git checkout -b feature/neues-ui-design
 ```
 
----
+
 
 ## 💾 3. Dateien bearbeiten & committen
 ```bash
@@ -36,14 +36,14 @@ git add .
 git commit -S -m "UI überarbeitet und responsive gemacht"
 ```
 
----
+
 
 ## 🚀 4. Neuen Branch pushen
 ```bash
 git push origin feature/neues-ui-design
 ```
 
----
+
 
 ## 📦 5. Pull Request (PR) erstellen
 
@@ -52,13 +52,13 @@ git push origin feature/neues-ui-design
 - Klicke darauf und fülle Titel & Beschreibung aus
 - Bestätige mit: "Create pull request"
 
----
+
 
 ## ✅ 6. Code reviewen und mergen
 
 - Code wird einmal reviewt und dann in den Main Branch übertragen.
 
----
+
 
 ## 🧹 7. Lokal aufräumen (optional)
 ```bash
@@ -67,7 +67,7 @@ git branch -d feature/neues-ui-design
 git pull origin main
 ```
 
----
+
 
 ## 🔒 Branch Protection Regeln (aktiv)
 
@@ -79,7 +79,7 @@ git pull origin main
 | ✅ Restrict deletions/updates | Nur via PR & mit Berechtigung             |
 | ✅ Require linear history     | Keine Merge-Commits, nur Fast-Forward     |
 
----
+
 
 ## 🛠 Typische Fehler & Lösungen
 
@@ -90,7 +90,7 @@ git pull origin main
 | `Updates were rejected`                           | Lokaler Branch ist veraltet oder Konflikte → `git pull --rebase` oder Konflikte manuell lösen        |
 
 
----
+
 
 ## ⚠️ Haftungsausschluss
 

@@ -1,6 +1,6 @@
 # 🕵️ Sniffing & Spoofing – Grundlagen, Techniken & Schutz
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -12,7 +12,7 @@
 - [Lernressourcen](#lernressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -20,7 +20,7 @@
 
 Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und können schwerwiegende Folgen haben, wenn keine geeigneten Schutzmaßnahmen getroffen werden.
 
----
+
 
 ## Begriffe & Definitionen
 
@@ -32,7 +32,7 @@ Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und k�
 | Spoofing         | Vortäuschung einer falschen Identität im Netzwerk                          |
 | MITM             | Angreifer sitzt zwischen Opfer und Ziel und leitet Daten (manipuliert sie ggf.) |
 
----
+
 
 <div align=right>
 
@@ -71,7 +71,7 @@ tcpdump -i eth0 -A port 80
 http.request
 ```
 
-----
+
 
 <div align=right>
 
@@ -101,7 +101,7 @@ Arten von Spoofing
 - `dnsspoof` (DNS-Antworten manipulieren)
 - `responder` (SMB/NetBIOS-Antwort-Fake für Hash Capture)
 
-----
+
 
 ## Beispielangriff: ARP Spoofing mit Ettercap
 
@@ -110,7 +110,7 @@ ettercap -T -M arp:remote /192.168.1.10/ /192.168.1.1/
 ```
 → Der Angreifer täuscht sowohl dem Opfer als auch dem Gateway vor, jeweils das andere zu sein → MITM-Angriff
 
-----
+
 
 <div align=right>
 
@@ -139,7 +139,7 @@ Gegen Sniffing
 | DNSSEC                        | Schützt gegen DNS-Spoofing                 |
 | Zwei-Faktor-Authentifizierung | Schutz bei kompromittierten Verbindungen   |
 
----
+
 
 ## Lernressourcen
 
@@ -149,7 +149,7 @@ Gegen Sniffing
 - YouTube Channels: John Hammond, NetworkChuck – Sniffing Tutorials
 - Buch: „Network Security Assessment“ von Chris McNab
 
---- 
+
 
 ## Haftungsausschluss
 

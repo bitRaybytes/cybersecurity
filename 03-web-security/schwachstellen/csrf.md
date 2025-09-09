@@ -1,6 +1,6 @@
 # 🛡️ CSRF – Cross-Site Request Forgery
 
----
+
 
 ## Inhaltsverzeichnis
 - [Was ist CSRF?](#was-ist-csrf)
@@ -17,7 +17,7 @@
 - [Weiterführende Links](#weiterführende-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Was ist CSRF?
 
@@ -29,7 +29,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 
 ➡️ **Ohne Nutzerinteraktion. Ohne Wissen.**
 
----
+
 
 ## Unterschied zu XSS
 
@@ -39,7 +39,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 | Voraussetzung | Aktive Session & Authentifizierung | Kein Login nötig                 |
 | Gefahr      | Zustand ändert sich (z. B. Überweisung) | Meist Datendiebstahl/Defacing |
 
----
+
 
 <div align=right>
 
@@ -61,7 +61,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 ```
 > Wird der Benutzer zur Seite gelockt, wird ohne sein Zutun die Anfrage ausgeführt – sofern er eingeloggt ist.
 
----
+
 
 ## Bedingungen für CSRF
 
@@ -76,7 +76,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 4. **Angriff:** Die legitime Webseite verarbeitet die Anfrage und führt sie aus, das sie offenbar von einem legitimen Nutzer stammt.
 
 
-----
+
 
 <div align=right>
 
@@ -90,7 +90,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 - Formular-basierte Aktionen (Passwort ändern, Konto löschen, E-Mail ändern)
 - REST-APIs ohne Token
 
----
+
 
 ## CSRF in der Praxis erkennen
 
@@ -100,7 +100,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 | `SameSite=None` Cookies       | CORS-Anfälligkeit prüfen               |
 | Burp Suite Repeater einsetzen | Aktion ohne gültigen CSRF-Token testen |
 
----
+
 
 ## Tools für CSRF-Tests
 
@@ -111,7 +111,7 @@ Ein eingeloggter Nutzer besucht eine manipulierte Website → Diese Seite sendet
 | CSRF PoC Generator | HTML-Payloads erzeugen                     |
 | Postman            | Testen von API-Endpunkten                  |
 
---- 
+
 
 <div align=right>
 
@@ -148,7 +148,7 @@ reject()
 
 Kein `GET` für sensible Änderungen
 
----
+
 
 <div align=right>
 
@@ -165,7 +165,7 @@ Kein `GET` für sensible Änderungen
 | Authentifizierung regelmäßig erneuern | Angreifer verliert Sessionzugriff |
 | Nutze CAPTCHA bei sensiblen Aktionen  | Stoppt Automatisierung            |
 
----
+
 
 ## Angriff vs. Verteidigung
 
@@ -174,7 +174,7 @@ Kein `GET` für sensible Änderungen
 | Angreifer   | Ausnutzen der Authentifizierung                 |
 | Verteidiger | Sitzung absichern, Tokens prüfen, Header prüfen |
 
----
+
 
 <div align=right>
 
@@ -191,7 +191,7 @@ Kein `GET` für sensible Änderungen
 | DVWA             | CSRF-Stufen: Low – High                          |
 | bWAPP            | Simulation echter Angriffe                       |
 
----
+
 
 ## Weiterführende Links
 
@@ -199,7 +199,7 @@ Kein `GET` für sensible Änderungen
 - [PortSwigger CSRF Labs](https://portswigger.net/web-security/csrf)
 - [Mozilla MDN – SameSite Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)
 
----
+
 
 ## Haftungsausschluss
 

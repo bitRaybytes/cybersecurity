@@ -3,7 +3,7 @@
 > Übersicht nützlicher Shortcuts und Tipps für effizientes Arbeiten mit Burp Suite (Community & Pro).  
 > Für Linux/Windows – macOS-User nutzen `Cmd` statt `Ctrl`.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Tastenkombinationen (Default)](#tastenkombinationen-default)
@@ -33,7 +33,7 @@
 | `Ctrl + E`           | Send to Comparer                                    |
 | `Ctrl + Shift + L`   | Send to Logger++ (wenn installiert)                 |
 
----
+
 
 ## Workflow Shortcuts (via Kontextmenü / GUI)
 
@@ -44,7 +44,7 @@
 | Strg + Doppelklick auf Header / Param. | Kopiert Namen/Wert in Zwischenablage       |
 | Doppelklick auf `Param-Wert` im Repeater | Bearbeitung im Inline-Modus                |
 
----
+
 
 ## Nützliche Tools innerhalb von Burp
 
@@ -57,7 +57,7 @@
 | Logger++         | Erweiterter Traffic-Logger (extensibles Plugin) |
 | Collaborator     | Out-of-Band-Angriffe testen                   |
 
----
+
 
 <div align=right>
 
@@ -76,7 +76,7 @@
 | Param Miner      | Versteckte Parameter entdecken               |
 | Turbo Intruder   | Hochperformantes Fuzzing                     |
 
----
+
 
 ## Tipps zur Organisation
 
@@ -84,7 +84,7 @@
 - Setze in **Proxy → Options** gezielte Scope-Filter
 - Verwende "Target → Site Map" zur strukturierten Übersicht der gescannten Seiten
 
----
+
 
 ## Quick Commands für Decoder
 
@@ -95,7 +95,7 @@
 | `Base64 → Decode`    | Base64-Decode im Decoder-Tab       |
 | `Ctrl + Shift + H`   | Wechsel zur Hex-Darstellung         |
 
----
+
 
 ## Weitere Ressourcen
 
@@ -103,7 +103,7 @@
 - [Burp Suite Docs](https://portswigger.net/burp/documentation)
 - [CheatSheetSeries: Burp Suite](https://cheatsheetseries.owasp.org/)
 
----
+
 
 ## Haftungsausschluss
 

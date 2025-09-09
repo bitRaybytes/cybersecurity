@@ -4,7 +4,7 @@
 
 Diese Datei bietet eine Übersicht zum Thema **Log-Analyse** im Bereich Cybersecurity. Sie hilft bei der Erkennung von Angriffsmustern, der forensischen Nachverfolgung von Vorfällen und der allgemeinen Sicherheitsüberwachung von Systemen und Netzwerken.
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -20,7 +20,7 @@ Diese Datei bietet eine Übersicht zum Thema **Log-Analyse** im Bereich Cybersec
 - [Haftungsausschluss](#haftungsausschluss)
 
 
----
+
 
 ## 1. Einführung in Log-Analyse
 
@@ -31,7 +31,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 - Beweissicherung in der Forensik
 - Erfüllung gesetzlicher Anforderungen
 
----
+
 
 ## 2. Wichtige Log-Typen
 
@@ -46,7 +46,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 | **Application Logs** | Fehler und Aktivitäten aus Anwendungen |
 | **SIEM Logs** | Korrelierte Ereignisse aus verschiedenen Quellen |
 
----
+
 
 <div align=right>
 
@@ -63,7 +63,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 - **Logwatch, GoAccess (CLI)**
 - **Linux Tools:** `grep`, `awk`, `cut`, `sed`, `less`, `journalctl`
 
----
+
 
 ## 4. Wichtige Begriffe & Felder
 
@@ -76,7 +76,7 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 - **Username** – Eingeloggter oder angefragter Benutzer
 - **Process/Service** – Dienst oder ausführende Anwendung
 
----
+
 
 ## 5. Beispielhafte Angriffserkennung
 
@@ -96,7 +96,7 @@ grep ".phtml" /var/log/apache2/access.log
 grep -i "curl\|python\|wget" /var/log/apache2/access.log
 ```
 
----
+
 
 <div align=right>
 
@@ -121,7 +121,7 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 - Event ID 4625 – Fehlgeschlagene Anmeldung
 - Event ID 4688 – Prozess erstellt
 
---- 
+ 
 
 ## 7. Best Practices
 - Zentralisierung der Logs mit SIEM
@@ -130,7 +130,7 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 - Log Integrity sicherstellen (Hashing, Audit Logs)
 - Automatisierte Regeln für verdächtige Muster (z. B. mit Sigma oder Splunk-Queries)
 
----
+
 
 ## 8. Nützliche Ressourcen
 - [logcheck.org](https://logcheck.org/)
@@ -143,7 +143,7 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 ## Rechtlicher Hinweis
 Die Analyse und Überwachung von Logs darf nur auf eigenen Systemen oder mit ausdrücklicher Genehmigung erfolgen. Logfiles können personenbezogene Daten enthalten und unterliegen ggf. Datenschutzregelungen.
 
----
+
 
 ## Haftungsausschluss
 

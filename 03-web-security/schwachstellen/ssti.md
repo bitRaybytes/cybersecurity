@@ -1,6 +1,6 @@
 # 🧩 SSTI – Server-Side Template Injection
 
----
+
 
 ## Inhaltsverzeichnis
 - [Was ist SSTI?](#was-ist-ssti)
@@ -16,7 +16,7 @@
 - [Weiterführende Links](#weiterführende-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Was ist SSTI?
 
@@ -24,7 +24,7 @@
 
 > 🔥 In vielen Fällen führt SSTI zu **Remote Code Execution (RCE)** auf dem Server.
 
----
+
 
 ## Typische Template Engines
 
@@ -36,7 +36,6 @@
 | JavaScript | EJS, Handlebars   | `{{7*7}}`                  |
 | Ruby     | ERB, Liquid         | `<%= 7*7 %>`               |
 
----
 
 <div align=right>
 
@@ -58,7 +57,7 @@
    - Wird `49` angezeigt? → **SSTI vorhanden**
    - Wird der Ausdruck als Text zurückgegeben? → vermutlich keine SSTI
 
----
+
 
 ## Typische Test-Payloads
 
@@ -70,7 +69,7 @@
 | `${{7*7}}`     | Freemarker Payload            |
 | `<%= 7*7 %>`   | Ruby ERB                      |
 
----
+
 
 <div align=right>
 
@@ -91,7 +90,7 @@
 {{cycler.__init__.__globals__.os.popen('id').read()}}
 ```
 
----
+
 
 ## SSTI Cheat-Sheet: Template Engines
 
@@ -103,7 +102,7 @@
 | Freemarker | `${7*7}`, `${"freemarker.template.utility.Execute"?new()}` | ✅             |
 | ERB        | `<%= 7*7 %>`                                               | ✅             |
 
----
+
 
 <div align=right>
 
@@ -120,7 +119,7 @@
 | WFuzz      | Fuzzing von Parametern                  |
 | SSTI-Lab   | Eigene Trainingsumgebung (GitHub)       |
 
----
+
 
 ## Schutzmaßnahmen
 
@@ -133,7 +132,7 @@
 | Template Engine sicher konfigurieren | z. B. `sandbox`, kein Zugriff auf eval |
 
 
----
+
 
 ## Beispiele aus der Praxis
 
@@ -143,7 +142,7 @@
 | Benutzername wird ins Template geladen | SSTI         |
 | Fehlermeldungen mit dynamischem Inhalt | SSTI möglich |
 
----
+
 
 <div align=right>
 
@@ -161,7 +160,7 @@
 | DVWA/bWAPP       | Simulierte SSTI-Schwachstellen |
 
 
----
+
 
 ## Weiterführende Links
 
@@ -170,7 +169,7 @@
 - [tplmap Tool](https://github.com/epinna/tplmap)
 - [OWASP SSTI Guide](https://owasp.org/www-community/attacks/Server-Side_Template_Injection)
 
-----
+
 
 ## Haftungsausschluss
 

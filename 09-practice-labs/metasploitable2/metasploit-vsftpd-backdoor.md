@@ -32,7 +32,7 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 3. verschaffe dir Zugriff via `msfconsole` und
 4. erstelle eine persistente Backdoor für künftige Zugriffe.
 
----
+
 
 ## Testumgebung
 
@@ -41,7 +41,7 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 - **Firewall/Gateway:** pfSense (z. B. 192.168.1.1)
 - **Netzbereich:** 192.168.1.0/24
 
----
+
 
 ## 1. Netzwerkerkennung via Nmap
 
@@ -78,7 +78,7 @@ PORT     STATE SERVICE
 ```
 Merke dir die IP, z. B. 192.168.1.102.
 
----
+
 
 <div align=right>
 
@@ -139,7 +139,7 @@ deine IP-Adresse).
 
 In unserem [nmap Guide](/02-network-security/tools/nmap.md) erhältst du mehr Infos.
 
----
+
 ## 3. Exploitation mit Metasploit
 
 Wenn du möchtest, kannst du ab hier mit einem zweiten Terminal starten, um auf msfconsole zuzugreifen.
@@ -284,7 +284,7 @@ Metasploitable2 hingegen zeigt mir, dass ich der Root Nutzer bin.
 
 ![Metasploitable2 whoami](/09-practice-labs/ressources/pictures/metasploit-vsftpd10.png)
 
----
+
 
 <div align=right>
 
@@ -363,7 +363,7 @@ useradd redteam -m -s /bin/bash
 echo 'redteam:redpass' | chpasswd
 echo "redteam ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ```
----
+
 
 ## 5. Cleanup & Hinweise
 
@@ -374,7 +374,7 @@ echo "redteam ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 script pentest_session.log
 ```
 
----
+
 
 <div align=right>
 
@@ -393,7 +393,7 @@ script pentest_session.log
 | 5       | Bash        | Optional: Benutzer anlegen      |
 
 
----
+
 
 ## Tools benötigt
 
@@ -406,14 +406,14 @@ script pentest_session.log
 - `pfSense Gateway/Firewall`
 - `Metasploitable2`
 
----
+
 
 ## Empfehlung
 
 Nutze `iptables` oder `pfSense` Logging, um zu beobachten, wie Angriffe in der Firewall sichtbar werden. 
 Dies ist nützlich für spätere Blue Team-Analysen.
 
----
+
 
 ## Haftungsausschluss
 

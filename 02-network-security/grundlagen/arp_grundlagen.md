@@ -10,24 +10,24 @@
 - [Sicherheitsaspekte & Spoofing](#sicherheitsaspekte--spoofing)
 - [Zusammenfassung](#zusammenfassung)
 
----
+
 
 ## Einleitung
 
 - **ARP (Address Resolution Protocol)** ist ein Protokoll auf **OSI-Schicht 2/3**.  
-- Aufgabe: Übersetzung von **IP-Adressen (Layer 3, logisch)** in **MAC-Adressen (Layer 2, physisch)**.  
+- **Aufgabe:** Übersetzung von **IP-Adressen (Layer 3, logisch)** in **MAC-Adressen (Layer 2, physisch)**.  
 - Nur innerhalb eines lokalen Netzwerks (LAN) relevant – im Internet übernimmt dies Routing und DNS.  
 
----
+
 
 ## Wofür wird ARP gebraucht?
 
-Ein Computer kennt meist nur die **IP-Adresse** des Ziels (z. B. 192.168.0.1).  
+Ein Computer kennt meist nur die **IP-Adresse** des Ziels (z. B. `192.168.0.1`).  
 Damit das Paket im LAN zugestellt werden kann, benötigt er jedoch die **MAC-Adresse** des Zielgeräts.  
 
-👉 Lösung: **ARP-Anfrage („Who has?“)**  
+**Lösung:** **ARP-Anfrage („Who has?“)**  
 
----
+
 
 ## Aufbau von ARP
 
@@ -53,7 +53,7 @@ Mehr zu Protokollen findest du in der Datei [protkoll_header_cheatsheet.md](/02-
 
 ## Beispiel einer ARP-Tabelle
 
-Ein Gerät speichert bekannte IP ↔ MAC-Zuordnungen in einer ARP-Tabelle:
+Ein Gerät speichert bekannte IP <-> MAC-Zuordnungen in einer ARP-Tabelle:
 
 ```yaml
 IP-Adresse     MAC-Adresse
@@ -68,13 +68,13 @@ arp -a
 ```
 
 ## Ablauf einer ARP-Anfrage
-1. Anfrage (Broadcast)
+1. **Anfrage (Broadcast)**
 ```yaml
 PC (192.168.0.10) → LAN-Broadcast:
 "Wer hat 192.168.0.1? Bitte sende mir deine MAC!"
 ```
 
-2. Antwort (Unicast)
+2. **Antwort (Unicast)**
 ```yaml
 Router (192.168.0.1) → PC (192.168.0.10):
 "192.168.0.1 hat MAC 00:1A:2B:3C:4D:5E"
@@ -112,16 +112,16 @@ ip neigh show
 
 Da ARP **keine Authentifizierung** vorsieht:
 - Jeder Host im LAN kann **falsche ARP-Antworten** senden.
-- Diese Schwachstelle ermöglicht **ARP-Spoofing/Poisoning** (→ siehe [arp-spoofing.md](/02-network-security/arp_spoofing.md)).
+- Diese Schwachstelle ermöglicht **ARP-Spoofing/Poisoning** (-> siehe [arp-spoofing.md](/02-network-security/arp_spoofing.md)).
 
 ```yaml
 [Normales ARP]
-- ARP löst IP → MAC innerhalb eines LAN auf
+- ARP löst IP -> MAC innerhalb eines LAN auf
 - Speicherung in einer ARP-Tabelle
 - Kommunikation funktioniert ohne DNS/Internet
 
 [Problem]
-- Keine Authentifizierung → Angriffe durch Spoofing möglich
+- Keine Authentifizierung -> Angriffe durch Spoofing möglich
 ```
 
 

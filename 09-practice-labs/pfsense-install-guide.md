@@ -22,7 +22,7 @@
 
 **pfSense** ist eine kostenlose, auf FreeBSD basierende Open-Source-Firewall- und Router-Distribution. In diesem Guide zeigen wir dir Schritt für Schritt, wie du pfSense in Oracle VirtualBox installierst und als Firewall für dein internes Lab-Netzwerk konfigurierst.
 
----
+
 
 ## Voraussetzungen
 
@@ -31,7 +31,7 @@
 * Mindestens zwei virtuelle Netzwerkkarten (WAN & LAN)
 * Host-System: Windows, Linux oder macOS
 
----
+
 
 ## Schritt 1: Virtuelle Maschine anlegen
 
@@ -40,7 +40,7 @@
 3. RAM: mind. **1024 MB** (besser: 2048 MB)
 4. Festplatte: **VHD** oder **VDI**, dynamisch, **mind. 10 GB**
 
----
+
 
 ## Schritt 2: Netzwerkkarten konfigurieren
 
@@ -55,7 +55,7 @@
 
 > Tipp: Wenn du mehrere VMs im selben Labnet verbinden willst, stelle alle auf das gleiche interne Netzwerk ein.
 
----
+
 
 ## Schritt 3: ISO mounten & pfSense installieren
 
@@ -72,7 +72,7 @@
    * Neustarten
    * ISO **auswerfen**, sonst bootet die Installation erneut
 
----
+
 
 <div align=right>
 
@@ -90,7 +90,7 @@
      * `em1` = LAN
 2. LAN wird automatisch eine IP zugewiesen (z. B. `192.168.1.1`)
 
----
+
 
 ## Schritt 5: Zugriff über Webinterface
 
@@ -110,7 +110,7 @@
    * Hostname, DNS, WAN/LAN konfigurieren
    * Neues Admin-Passwort setzen
 
----
+
 
 ## Schritt 6: Wichtige Grundeinstellungen im WebGUI
 
@@ -121,7 +121,7 @@
 | DHCP für LAN aktivieren | Services > DHCP Server           | Ja, für Labnetzwerk sinnvoll       |
 | Updates durchführen     | System > Update                  | Direkt nach Installation ausführen |
 
----
+
 
 ## Schritt 7: pfSense als Gateway/Firewall nutzen
 
@@ -131,7 +131,7 @@
   * NAT aktiv ist (Standard)
   * Regeln im LAN-Zweig ausgehenden Verkehr zulassen
 
----
+
 
 ## Tipps für dein Cybersecurity Lab
 
@@ -140,14 +140,14 @@
 * VLANs konfigurieren: Netztrennung für Pentesting & Zielsysteme
 * Traffic mitschneiden: Diagnostics > Packet Capture
 
----
+
 
 ## Weitere Infos & Doku
 
 * [Offizielle pfSense-Dokumentation](https://docs.netgate.com/pfsense/en/latest/)
 * [Netgate Forum](https://forum.netgate.com/)
 
----
+
 
 ## Fazit
 
@@ -155,7 +155,7 @@ Mit pfSense hast du eine leistungsstarke und flexible Firewall-Lösung in deinem
 
 > Viel Spaß beim Tüfteln im eigenen Labnet!
 
----
+
 
 ## Haftungsausschluss
 

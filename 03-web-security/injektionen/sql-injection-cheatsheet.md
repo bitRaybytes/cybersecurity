@@ -1,6 +1,6 @@
 # SQL Injection Cheat Sheet
 
----
+
 
 ## Inhaltsverzeichnis
 - [Was ist eine SQL-Injection?](#was-ist-eine-sql-injection)
@@ -13,13 +13,13 @@
 - [Fazit](#fazit)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Was ist eine SQL-Injection?
 
-SQL-Injection (SQLi) ist eine Schwachstelle in Webanwendungen, bei der Angreifer schädlichen SQL-Code einschleusen, um mit der Datenbank zu interagieren. Ziel ist es, Daten zu lesen, ändern oder löschen, ohne Berechtigung zu haben.
+**SQL-Injection** (SQLi) ist eine Schwachstelle in Webanwendungen, bei der Angreifer schädlichen SQL-Code einschleusen, um mit der Datenbank zu interagieren. Ziel ist es, Daten zu lesen, ändern oder löschen, ohne Berechtigung zu haben.
 
----
+
 
 ## Grundlegende Arten von SQL-Injections
 
@@ -31,7 +31,7 @@ SQL-Injection (SQLi) ist eine Schwachstelle in Webanwendungen, bei der Angreifer
 | Union-Based SQLi      | Verwendung von UNION zur Datenabfrage                           |
 | Error-Based SQLi      | Nutzt Fehlermeldungen zur Informationsgewinnung                 |
 
----
+
 
 <div align=right>
 
@@ -67,7 +67,7 @@ admin' --
 ' AND 1=2 -- (wird abgelehnt)
 ```
 
----
+
 
 <div align=right>
 
@@ -91,7 +91,7 @@ Beispiel:
 SELECT table_name FROM information_schema.tables WHERE table_schema=database();
 ```
 
----
+
 
 ## Schutz vor SQL-Injection
 
@@ -101,7 +101,7 @@ SELECT table_name FROM information_schema.tables WHERE table_schema=database();
 * ✅ Fehlerausgaben vermeiden oder loggen
 * ✅ WAF (Web Application Firewall) einsetzen
 
----
+
 
 <div align=right>
 
@@ -118,7 +118,7 @@ SELECT table_name FROM information_schema.tables WHERE table_schema=database();
 | `ZAP`        | Open Source Scanner für Webanwendungen         |
 | `DVWA`       | Testumgebung für Web Security                  |
 
----
+
 
 ## Beispiel: SQL-Injection mit sqlmap
 
@@ -132,7 +132,7 @@ Weitere Beispiele:
 sqlmap -u "http://target.com/login.php" --data="user=admin&pass=admin" --dump
 ```
 
----
+
 
 ## Fazit
 
@@ -140,7 +140,7 @@ SQL-Injections sind eine der ältesten, aber immer noch häufigsten Sicherheitsl
 
 **Ziel:** Erkennen, verstehen und absichern.
 
----
+
 
 ## Haftungsausschluss
 

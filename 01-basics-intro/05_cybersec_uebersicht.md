@@ -1,6 +1,6 @@
 # 🛡️ Überblick: Cybersecurity & Verantwortungsbewusster Umgang
 
----
+
 ## Inhaltsverzeichnis
 - [Was ist Cybersecurity?](#was-ist-cybersecurity)
 - [Wichtige Säulen der Cybersicherheit](#wichtige-säulen-der-cybersicherheit)
@@ -10,13 +10,10 @@
 - [Ziel dieses Repositories](#ziel-dieses-repositories)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
-
 ## Was ist Cybersecurity?
 
 Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologien, die dem Schutz von IT-Systemen, Netzwerken, Programmen und Daten vor unbefugtem Zugriff, Angriffen, Manipulation oder Zerstörung dienen. Sie ist ein unverzichtbarer Bestandteil moderner digitaler Infrastrukturen – ob in Unternehmen, öffentlichen Einrichtungen oder im privaten Bereich.
 
----
 
 ## Wichtige Säulen der Cybersicherheit
 
@@ -52,7 +49,7 @@ Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-
 | **Sicherheits-Tools**  | Einsatz von Tools wie Burp Suite, Nmap, Wireshark, Metasploit, etc. |
 | **Compliance & Recht** | Gesetze, Normen und ethische Grundsätze im Umgang mit IT-Systemen |
 
----
+
 
 ## Verantwortung & Rechtlicher Rahmen
 
@@ -64,7 +61,7 @@ Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-
 - **Niemals absichtlich Schaden verursachen.**
 - **Dokumentiere deine Schritte sorgfältig.**
 
----
+
 
 <div align=right>
 
@@ -80,7 +77,7 @@ Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-
 - Halte dich an lokale Gesetze (z. B. StGB §202a–202d in Deutschland).
 - Baue ethisches Bewusstsein auf: *Just because you can, doesn’t mean you should.*
 
----
+
 
 ## Ziel dieses Repositories
 
@@ -92,7 +89,7 @@ Dieses Repository soll dich dabei unterstützen:
 - Sicherheitsbewusstsein aufzubauen
 - Deinen Weg in die IT-Security beruflich oder hobbymäßig zu beginnen
 
----
+
 
 ## Haftungsausschluss
 

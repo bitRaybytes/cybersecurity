@@ -22,14 +22,14 @@ Dazu wird ein **virtueller Tunnel** erstellt, durch den der gesamte Datenverkehr
 - [Weiterführende Links](#weiterführende-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Visualisierung: VPN-Tunnel
 
 ```yaml
 [ Client / Laptop ] --(verschlüsselt)-- [ Internet ] --(verschlüsselt)-- [ VPN-Server / Firmennetzwerk ]
 ```
----
+
 
 ## Wichtige Sicherheitsaspekte eines VPN
 
@@ -41,7 +41,7 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 
 → Dies sind auch die Kernpunkte von **IPsec**-basierter VPN-Sicherheit.  
 
----
+
 
 ## VPN-Arten
 
@@ -55,7 +55,7 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 [ Standort A LAN ] ⇆ [ VPN Gateway ] ⇆ [ Internet ] ⇆ [ VPN Gateway ] ⇆ [ Standort B LAN ]
 ```
 
----
+
 
 ### 2. **End-to-Site-VPN (Remote Access)**
 - Einzelne Nutzer greifen auf ein internes Firmennetz zu.  
@@ -65,7 +65,7 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 [ Remote Client ] ⇆ [ Internet ] ⇆ [ VPN Gateway / Firmenserver ]
 ```
 
----
+
 
 ### 3. **End-to-End-VPN**
 - Direkte verschlüsselte Verbindung zwischen **zwei Endgeräten**.  
@@ -76,7 +76,7 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 [ Client A ] ⇆ (VPN Tunnel) ⇆ [ Client B ]
 ```
 
----
+
 
 ## Unternehmens-VPNs vs. kommerzielle VPNs
 
@@ -87,7 +87,7 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 | Zielgruppe           | Mitarbeiter, Unternehmen       | Privatnutzer |
 | Hauptzweck           | Remote Work, Netzwerksicherheit | Anonymität, Geoblocking |
 
----
+
 
 ## Proxy vs. VPN
 
@@ -101,7 +101,7 @@ Der entscheidende Unterschied liegt in der **Verschlüsselung und im Schutzumfan
 | **Sicherheit**     | ✅ starke Verschlüsselung (OpenVPN, IPSec, WireGuard) | ❌ unsicher, abhängig vom Protokoll |
 | **Features**       | Kill-Switch, DNS-Leak-Schutz | selten vorhanden |
 
----
+
 
 <div align=right>
 
@@ -121,7 +121,7 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 ❌ Risiken:
 - Nicht-VPN-Verbindungen sind potentiell unsicher  
 
----
+
 
 ## Wichtige VPN-Protokolle
 
@@ -134,7 +134,7 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 | **L2TP/IPSec** | älter, aber oft noch im Einsatz |
 | **SSL-VPN** | basiert auf TLS, häufig für Remote Access |
 
----
+
 
 <div align=right>
 
@@ -150,7 +150,7 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 - Umgehung von Geoblocking  
 - Sicherung öffentlicher WLANs  
 
----
+
 
 ## Nachteile von VPNs
 
@@ -159,7 +159,7 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 - Abhängigkeit von der Stabilität des VPN-Providers  
 - In einigen Ländern verboten oder eingeschränkt  
 
----
+
 
 ## Vergleich: Proxy vs. VPN
 
@@ -173,7 +173,7 @@ VPN:
 (systemweit verschlüsselt)
 ```
 
----
+
 
 ## Weiterführende Links
 
@@ -182,7 +182,7 @@ VPN:
 - [IPSec Grundlagen (RFC 4301)](https://datatracker.ietf.org/doc/html/rfc4301)  
 - [YouTube: VPN Grundlagen erklärt](https://www.youtube.com/watch?v=NL7ySTGXt9w)  
 
----
+
 
 
 ## Haftungsausschluss

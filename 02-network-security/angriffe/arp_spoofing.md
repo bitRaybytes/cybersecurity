@@ -15,7 +15,7 @@ Mehr zum Thema `ARP` erfährst du hier: [arp_grundlagen.md](/02-network-security
 - [Zusammenfassung](#zusammenfassung)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Grundlagen: Was ist ARP?
 
@@ -30,7 +30,7 @@ IP-Adresse MAC-Adresse
 192.168.0.20 AA:BB:CC:DD:EE:FF # Smartphone
 ```
 
----
+
 
 ## Wie funktioniert ARP-Spoofing?
 
@@ -57,7 +57,6 @@ Opfer-PC (192.168.0.10)       Angreifer (192.168.0.66)       Router (192.168.0.1
 ```
 
 
----
 
 ## Ziele von ARP-Spoofing
 
@@ -66,7 +65,7 @@ Opfer-PC (192.168.0.10)       Angreifer (192.168.0.66)       Router (192.168.0.1
 - **Denial of Service (DoS)**: Daten werden einfach verworfen  
 - **Traffic Manipulation**: Opfer auf Fake-Webseiten oder Malware-Server umleiten  
 
----
+
 
 <div align=right>
 

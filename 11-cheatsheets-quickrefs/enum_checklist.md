@@ -16,7 +16,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 - [Checklisten-Snippet zum Mitnehmen](#checklisten-snippet-zum-mitnehmen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Allgemeine Hinweise zur Enumeration
 
@@ -25,7 +25,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 - Immer mit Genehmigung (Legal Boundaries)
 - Alle Informationen dokumentieren (z. B. in Markdown, CherryTree, Obsidian, KeepNote etc.)
 
----
+
 
 ## Netzwerk- & Port-Enumeration
 
@@ -40,7 +40,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | Version Detection                   | `nmap -sV`                               | ☐      |
 | Firewall-Erkennung                  | `nmap -sA`, `hping3`, `traceroute`       | ☐      |
 
----
+
 
 ## System-/Host-Enumeration (Linux/Windows)
 
@@ -57,7 +57,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | Zeitpläne / Cronjobs                 | `crontab -l`, `schtasks /query`           | ☐      |
 | Schwachstellen-Scanner (lokal)       | `linpeas`, `winPEAS`, `les`, `Seatbelt`   | ☐      |
 
----
+
 
 ## Web-Enumeration
 
@@ -73,7 +73,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | Parameter-Fuzzing                   | `ffuf`, `paramspider`, `arjun`           | ☐      |
 | JS-Parsing auf versteckte Daten     | `LinkFinder`, `JSParser`                 | ☐      |
 
----
+
 
 ## Active Directory Enumeration
 
@@ -85,7 +85,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | SID & Token-Auswertung              | `whoami /groups`, `whoami /priv`         | ☐      |
 | Kerberoasting-Möglichkeiten         | `Rubeus`, `impacket-GetUserSPNs`         | ☐      |
 
----
+
 
 ## Cloud- & API-Enumeration (AWS / Azure / GCP)
 
@@ -96,7 +96,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | Public Buckets/Blobs suchen         | `s3scanner`, `gobuster`, `azcopy`        | ☐      |
 | Serverless & API-Gateways           | `APIsec`, Swagger-Parsing, Burp          | ☐      |
 
----
+
 
 ## Auth-Mechanismen & Bruteforce-Punkte
 
@@ -106,7 +106,7 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | SSH/FTP/SMTP                         | `hydra`, `ncrack`, `medusa`              | ☐      |
 | RDP/SMB                              | `crackmapexec`, `xfreerdp`, `hydra`      | ☐      |
 
----
+
 
 ## Checklisten-Snippet zum Mitnehmen
 
@@ -118,7 +118,7 @@ enum4linux -a target
 linpeas.sh (nach Upload)
 ```
 
----
+
 
 ## Haftungsausschluss
 

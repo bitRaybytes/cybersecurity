@@ -1,6 +1,5 @@
 # 📡 Netzwerk-Protokoll Header Cheat Sheet
 
----
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -31,7 +30,7 @@
 - [Vergleichstabelle](#vergleichstabelle)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 ## Einleitung
 
 In der Netzwerksicherheit ist es entscheidend, die Header der verschiedenen Protokolle zu verstehen. Sie enthalten die Kontrollinformationen, die Router, Firewalls und Analysetools wie `Wireshark` oder `tcpdump` zur Verarbeitung von Paketen nutzen.
@@ -40,7 +39,7 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 Weitere technische Informationen und Dokumentationen zu Protokollen findest du unter [https://www.rfc-editor.org/](https://www.rfc-editor.org/).
 
----
+
 
 ## Layer 2 Protokolle
 
@@ -55,7 +54,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +----------------+----------------+----------------+
 ```
 
-----
+
 
 
 ###  ARP Header (Layer 2/3)
@@ -79,7 +78,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +--------------------------------------------------+
 ```
 
-----
+
 
 <div align=right>
 
@@ -112,7 +111,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
----
+
 
 ### IPv6 Header (Layer 3)
 
@@ -135,7 +134,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
----
+
 
 ### ICMP Header (Layer 3)
 
@@ -152,7 +151,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
----
+
 
 <div align=right>
 
@@ -185,7 +184,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
----
+
 
 ### UDP Header (Layer 4)
 
@@ -202,7 +201,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +-------------------------------+-------------------------------+
 ```
 
----
+
 
 
 <div align=right>
@@ -253,7 +252,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
-----
+
 
 ### DNS Header (UDP/TCP Port 53) (Layer 5-7)
 
@@ -271,7 +270,7 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
----
+
 
 ### HTTP/HTTPS (Layer 5-7)
 
@@ -288,7 +287,7 @@ Accept: */*
 
 
 
-----
+
 
 <div align=right>
 
@@ -310,7 +309,7 @@ Accept: */*
 +----------------------------------------------------------+
 ```
 
----
+
 
 ### SSH 
 
@@ -343,7 +342,7 @@ Accept: */*
 +---------------------------------------------------+
 ```
 
----
+
 
 ### Kerberos (Authentication) (Layer 5-7)
 
@@ -356,7 +355,7 @@ Accept: */*
 - TGS-REQ / TGS-REP (Ticket Granting Service)
 - AP-REQ / AP-REP (Application Service)
 
------
+
 
 ### RADIUS (Layer 5-7)
 
@@ -374,7 +373,7 @@ Accept: */*
 +---------------------------------------------------+
 ```
 
-----
+
 
 <div align=right>
 
@@ -422,7 +421,7 @@ Accept: */*
 
 ```
 
-----
+
 
 ### SMB (Server Message Block)
 
@@ -432,7 +431,7 @@ Accept: */*
   - 32 Bytes (SMBv1),
   - 64 Bytes (SMBv2/3)
 
----
+
 
 <div align=right>
 
@@ -446,7 +445,7 @@ Accept: */*
 - **Transport:** UDP 161 (Manager zu Agent), UDP 162 (Traps).
 - **Header:** ASN.1-basiert (daher variabel, min. ca. 20 Bytes).
 
---- 
+ 
 
 ### Syslog
 
@@ -459,7 +458,7 @@ Accept: */*
 ```
 
 
-----
+
 
 ### ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)
 
@@ -467,7 +466,7 @@ Diese Protokolle haben sehr variable Header-Aufbauten (häufig mit ASN.1 oder Bl
 
 Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
----
+
 
 <div align=right>
 
@@ -502,7 +501,6 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 | Syslog      | 514 UDP/TCP   | variabel           | variabel           | Log Manipulation           |
 
 
---- 
 
 ## Haftungsausschluss
 

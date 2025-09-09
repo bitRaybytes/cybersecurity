@@ -5,7 +5,7 @@ das hunderte Funktionen für die Datenanalyse und -bearbeitung ohne lokale Insta
 
 Online: https://gchq.github.io/CyberChef/
 
----
+
 
 ## Inhaltsverzeichnis
 - [Anwendungsgebiete (Use Cases)](#anwendungsgebiete-use-cases)
@@ -15,7 +15,7 @@ Online: https://gchq.github.io/CyberChef/
 - [Nützliche Links & Quellen](#nützliche-links--quellen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Anwendungsgebiete (Use Cases)
 
@@ -28,7 +28,7 @@ Online: https://gchq.github.io/CyberChef/
 - JWT/Token-Analyse
 - Encoding-Ketten (z. B. mehrfach Base64 + URL Encode)
 
----
+
 
 ## Wichtige Funktionen & Operatoren
 
@@ -48,7 +48,7 @@ Online: https://gchq.github.io/CyberChef/
 | **Extract Files**         | Dateien aus Binärdaten extrahieren               |
 | **Magic**                 | Automatisierte Operator-Vorschläge               |
 
----
+
 
 ## Praktische Rezepte (Recipes)
 
@@ -100,7 +100,7 @@ Recipe:
 => CyberChef erkennt häufige Pattern automatisch
 ```
 
----
+
 
 ## Tipps & Best Practices
 - Nutze "Magic" bei unbekannten Inhalten.
@@ -110,7 +110,7 @@ Recipe:
 - Nutze "Regular Expressions" zum Extrahieren von Infos.
 - Nutze die Export-Funktion, um Ergebnisse weiterzuverarbeiten.
 
----
+
 
 ## Nützliche Links & Quellen
 
@@ -118,7 +118,7 @@ Recipe:
 - [CyberChef Cheatsheet (PDF)](https://malicious.link/file/cyberchef.pdf)
 - [CyberChef GitHub Repo](https://drive.google.com/drive/home)
 
----
+
 
 ## Haftungsausschluss
 

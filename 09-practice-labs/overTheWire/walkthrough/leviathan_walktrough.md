@@ -17,7 +17,7 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
-----
+
 
 ## Einführung
 Leviathan ist ein Wargame auf [OverTheWire](https://overthewire.org/wargames/), das sich speziell an Anfänger richtet.  
@@ -25,12 +25,12 @@ Es vermittelt die Grundlagen von **Privilege Escalation** (Rechteausweitung) und
 
 Im Gegensatz zu anderen Wargames (wie [Bandit](/09-practice-labs/overTheWire/walkthrough/bandit_walkthrough.md) oder [Natas](/09-practice-labs/overTheWire/walkthrough/natas_walkthrough.md)) liegt der Fokus hier weniger auf Web-Exploits, sondern auf klassischen **Binary Exploits** und **Dateiberechtigungen** in einer Unix-Umgebung.  
 
----
+
 
 ## Zugang
 Der Einstieg erfolgt über eine **SSH-Verbindung
 
----
+
 
 ## Allgemeine Infos
 - **Host:** leviathan.labs.overthewire.org  
@@ -42,7 +42,7 @@ Der Einstieg erfolgt über eine **SSH-Verbindung
 - **Offizielle Seite:** [OverTheWire - Leviathan](https://overthewire.org/wargames/leviathan/)
 - **Hinweis:** Passwörter können aktualisiert worden sein!
 
----
+
 
 ## Leviathan 0 -> 1
 
@@ -95,7 +95,7 @@ Speichere das Passwort und beende die `SSH`-Sitzung mit `exit`.
 
 </details>
 
----
+
 
 <div align=right>
 
@@ -125,7 +125,7 @@ Im Level eingeloggt kannst du dich wieder auf die Suche nach dem Passwort machen
 
 In deinem `HOME`-Verzeichnis findest du eine `ELF`-Datei.
 
----
+
 
 #### Mehr über ELF-Dateien erhältst du hier in diesem kurzen Exkurs:
 <details><summary>Exkurs: ELF-Dateien</summary>
@@ -164,7 +164,7 @@ Durch Analyse kannst du:
 ***EXKURS ENDE***
 </details>
  
- ---
+ 
 
 Mit dem Befehl `ll` siehst du nun die Datei `check` und eine ausführliche Information über die Berechtigungen.
 
@@ -256,7 +256,7 @@ Logge dich mit `exit` mehrmals aus, bis du in dem Terminal deiner VM bist.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -377,7 +377,7 @@ chmod 777 /tmp/tmp.VerzeichnisName # ändert die Berechtigungen des gesamten Ver
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -490,7 +490,7 @@ Dazu musst du mehrmals den Befehl `exit` eingeben.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -586,7 +586,7 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -672,7 +672,7 @@ Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort 
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -774,7 +774,7 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -813,7 +813,7 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 - `atoi()` -> Funktion, die eine Zeichenkette in einen Ganzzahlwert (Integer) umwandelt.
 - `@plt` -> `Procedure Linkage Table`; Datenstruktur in ELF-Dateien für dynamisches Laden von Funktionen aus gemeinsamen Bibliotheken (Shared Libraries) wärend Laufzeit zu ermöglichen
 
----
+
 
 
 <div align=right>
@@ -830,7 +830,7 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 - [TryHackMe: Windows x64 Assembly](https://tryhackme.com/room/win64assembly)
 - [Wikipedia: Assemblersprache](https://de.wikipedia.org/wiki/Assemblersprache)
 
----
+
 
 ## Haftungsausschluss
 

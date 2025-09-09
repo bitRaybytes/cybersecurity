@@ -54,7 +54,7 @@ Um in das nächste Level zu kommen, müssen bestimmte CTFs (Capture the flags) e
 
 Mehr zu [Over the Wire und dem Level Bandit](https://www.overthewire.org/wargames/bandit) erhältst du hier.
 
----
+
 
 ## Tipps zu Beginn:
 
@@ -97,7 +97,7 @@ man cat
 
 Für jedes weitere Programm ersetzt du das Wort `cat` mit der entsprechenden Bezeichnung des Programmes.
 
----
+
 
 
 <div align=right>
@@ -144,7 +144,7 @@ In den meisten Bandit-Level ist es nötig, mit dem Befehl `exit` die SSH-Verbind
   
 </details>
 
----
+
 
 
 <div align=right>
@@ -190,7 +190,7 @@ echo "lvl1 passwort: {Passwort hier rein}" > ~/Documents/bandits/1
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -223,7 +223,7 @@ Logge dich anschließend wieder aus (`exit`).
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -265,7 +265,7 @@ Speichere das Passwort und beende die Shell.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -301,7 +301,7 @@ cat ./... Hiding-From-You
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -355,7 +355,7 @@ Speicher das Passwort und beende die Shell, um fortzufahren.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -402,7 +402,7 @@ cat ./inhere/maybehere07/.file2
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -432,7 +432,7 @@ cat /var/lib/dpkg/info/bandit7.password
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -461,7 +461,7 @@ cat data.txt | grep millionth
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -492,7 +492,7 @@ cat data.txt | sort data.txt | uniq -u
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -529,7 +529,7 @@ xxd -r data.txt | strings
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -559,7 +559,7 @@ cat data.txt | base64 -d
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -596,7 +596,7 @@ Nach dem Entschlüsseln erhalten wir folgendes Passwort:
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -695,7 +695,7 @@ Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -732,7 +732,7 @@ Sobald du die `SSH`-Verbindung initiiert hast, wirst du gefragt, ob du sicher bi
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -788,7 +788,7 @@ Und solange die SSH-Verbindung des Users `bandit14` existiert, exisitiert die SS
 
 </details>
 
---- 
+ 
 
 
 <div align=right>
@@ -818,7 +818,7 @@ ncat --ssl localhost 30001      # Mit ncat Service verbinden und SSL Verslüssel
 ```
 </details>
 
----
+
 
 
 <div align=right>
@@ -883,7 +883,7 @@ Markiere und kopiere den privaten Key, den du erhalten hast. Erstelle eine neue 
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -953,7 +953,7 @@ diff -d passwords.new passwords.old
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1012,7 +1012,7 @@ Kopiere und speicher das Passwort für die nächste Challenge.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1043,7 +1043,7 @@ Das kannst du verwenden, um beispielsweise das Passsword des Users auszuspähen 
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1124,7 +1124,7 @@ Anschließend kannst du beide Terminals mit `exit` beenden und die nächste Chal
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1160,7 +1160,7 @@ Kopiere und speichere das Passwort für die nächste Challenge.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1234,7 +1234,7 @@ Kopiere und speichere das Password für die nächste Challenge.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1316,7 +1316,7 @@ Du solltest jetzt das Passwort erhalten und kannst mit der nächsten Challenge f
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1381,7 +1381,7 @@ Nun solltest du das Passwort für `bandit25` erhalten haben und kannst mit der n
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1501,7 +1501,7 @@ Bleib gleich eingeloggt und mach in dem Terminal von `bandit26` weiter, aber spe
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1542,7 +1542,7 @@ Anschließend wirst du das Passwort für `bandit27` erhalten. Speichere es und n
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1579,7 +1579,7 @@ Du solltest nun dein Passwort für `bandit28` erhalten haben. Speichere es und n
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1620,7 +1620,7 @@ git show
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1664,7 +1664,7 @@ Du solltest nun das Passwort erhalten und kannst mit der nächsten Challange for
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1728,7 +1728,7 @@ Jetzt solltest du das Passwort für die nächste Challenge ausgegeben bekommen.
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1799,7 +1799,7 @@ Anschließend solltest du dein Passwort erhalten und kannst mit dem nächsten Le
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1838,7 +1838,7 @@ Du solltest nun das Passwort für `bandit33` erhalten und kannst mit der letzten
 
 </details>
 
----
+
 
 
 <div align=right>
@@ -1862,7 +1862,7 @@ Aktuell gibt es kein weiteres Level mehr. Die Entwickler sind jedoch bemüht, we
 
 </details>
 
----
+
 
 
 <div align=right>

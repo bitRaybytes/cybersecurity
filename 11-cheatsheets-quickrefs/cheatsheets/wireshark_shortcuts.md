@@ -2,7 +2,7 @@
 
 >Ein schneller Überblick über die wichtigsten Filter, Shortcuts & Features in Wireshark.
 
----
+
 ## Inhaltsverzeichnis
 - [Grundlagen](#grundlagen)
 - [Capture Filter vs Display Filter](#capture-filter-bpf-syntax)
@@ -28,7 +28,7 @@
 | **PCAP**      | "Packet Capture" – Datei mit Netzwerkdaten |
 | **Interface** | Netzwerkkarte, über die aufgezeichnet wird |
 
----
+
 
 ## Capture Filter vs Display Filter
 
@@ -40,7 +40,7 @@
 > ⚠️ Capture Filter sind in BPF-Syntax geschrieben (wie in tcpdump), 
 Display Filter sind Wireshark-spezifisch.
 
----
+
 
 ## Häufige Display Filter
 
@@ -54,7 +54,7 @@ Display Filter sind Wireshark-spezifisch.
 - smtp
 - dhcp
 
----
+
 
 ## IP & Ports
 
@@ -64,7 +64,7 @@ Display Filter sind Wireshark-spezifisch.
 - tcp.port == 443
 - udp.port == 53
 
----
+
 
 ## Verbindungen & Sessions
 
@@ -72,7 +72,7 @@ Display Filter sind Wireshark-spezifisch.
 - tcp.flags.syn == 1              # SYN-Pakete (Handshake)
 - tcp.analysis.retransmission
 
----
+
 
 ## TLS/SSL
 
@@ -80,7 +80,7 @@ Display Filter sind Wireshark-spezifisch.
 - tls.record.version
 - tls.handshake.type == 1         # Client Hello
 
----
+
 
 ## Capture Filter (BPF Syntax)
 
@@ -92,7 +92,7 @@ Display Filter sind Wireshark-spezifisch.
 - tcp port 443
 - tcp or udp
 
----
+
 
 <div align=right>
 
@@ -113,7 +113,7 @@ Display Filter sind Wireshark-spezifisch.
 | `Ctrl + .`         | Nächstes Paket im Stream   |
 | `Ctrl + ,`         | Vorheriges Paket im Stream |
 
----
+
 
 ## Tools & Extras
 
@@ -124,7 +124,7 @@ Display Filter sind Wireshark-spezifisch.
 | **Name Resolution**   | IP-Adressen in Hostnamen umwandeln               |
 | **Coloring Rules**    | Regeln zur farblichen Hervorhebung definieren    |
 
----
+
 
 ## Exportieren
 
@@ -135,7 +135,7 @@ Display Filter sind Wireshark-spezifisch.
 | `.txt`    | Nur Text                      |
 | `.json`   | Für automatisierte Auswertung |
 
----
+
 
 ## Tipps für Anfänger
 
@@ -145,7 +145,7 @@ Display Filter sind Wireshark-spezifisch.
 - Speicher deine Mitschnitte früh – sie werden schnell groß!
 - Nutze tcp.stream eq X zum Verfolgen einzelner Verbindungen.
 
----
+
 
 ## Nützliche Ressourcen
 
@@ -157,7 +157,7 @@ Display Filter sind Wireshark-spezifisch.
 | Sample Captures (PCAPs) | [https://wiki.wireshark.org/SampleCaptures](https://wiki.wireshark.org/SampleCaptures)                   |
 
 
----
+
 
 ## Haftungsausschluss
 

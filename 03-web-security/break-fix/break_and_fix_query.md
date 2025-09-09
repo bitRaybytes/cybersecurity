@@ -1,6 +1,6 @@
 # 🧩 breakAndFixQuery
 
----
+
 
 ## Inhaltsverzeichnis
 - [Ziel dieser Datei](#ziel-dieser-datei)
@@ -10,14 +10,14 @@
 - [Nützlich in Kombination mit](#nützlich-in-kombination-mit)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Ziel dieser Datei
 
 Diese Datei dient als kompakte Referenz zur **Analyse, Manipulation und Behebung von SQL-Queries** bei Sicherheitsanalysen – insbesondere im Rahmen von **SQL-Injection-Tests**.  
 Sie zeigt typische Zeichen, mit denen eine SQL-Query absichtlich *gebrochen* oder *balanciert* werden kann, um Informationen zu extrahieren oder eine **kontrollierte Ausführung** zu ermöglichen.
 
----
+
 
 ## Wie man eine SQL-Query **bricht**
 
@@ -77,7 +77,7 @@ Beispiel mit Kommentar-Fix:
 
 **Wichtig:** Alles nach --+ wird ignoriert → so kann man z. B. ein ' am Ende aushebeln.
 
----
+
 
 ## Zusammenfassung: Angriffs- & Fix-Phasen
 
@@ -86,7 +86,7 @@ Beispiel mit Kommentar-Fix:
 | Query "brechen" | Fehler provozieren / Injection erzwingen  | `'`, `"`    |
 | Query "fixen"   | Query korrekt beenden & Payload ausführen | `--+`, `/*` |
 
----
+
 
 ## Nützlich in Kombination mit
 
@@ -94,7 +94,7 @@ Beispiel mit Kommentar-Fix:
 - [UnionBasedAttack.md](14-vulnerabilities/sqlInjection/union_based_attack.md) -> enthält Datenextraktion über UNION SELECT
 - [Tools](/09-tools-cheatsheet/) wie: Burp Suite, SQLMap, ZAP Proxy
 
----
+
 
 ## Haftungsausschluss
 

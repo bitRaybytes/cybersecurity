@@ -5,7 +5,7 @@ Diese Datei bietet eine kompakte Übersicht über Techniken zur Erstellung und M
 
 > **Disclaimer:** Diese Inhalte dienen ausschließlich zu Schulungs- und Testzwecken in autorisierten Umgebungen. Die Anwendung in produktiven oder fremden Systemen ohne ausdrückliche Genehmigung ist illegal.
 
----
+
 
 ## Inhaltsverzeichnis
 - [Typische Encoding-Techniken](#typische-encoding-techniken)
@@ -17,7 +17,7 @@ Diese Datei bietet eine kompakte Übersicht über Techniken zur Erstellung und M
 - [Nützliche Tools](#nützliche-tools)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 
 ## Typische Encoding-Techniken
@@ -38,7 +38,7 @@ Wird oft verwendet, um Sonderzeichen zu maskieren.
 > Beispiel:  
 `<script>alert(1)</script>` → `%3Cscript%3Ealert(1)%3C/script%3E`
 
----
+
 
 ### 2. **Base64-Encoding**
 Nützlich bei Befehlseinschleusungen (z. B. in RCEs, SQLi).
@@ -50,7 +50,7 @@ echo base64_decode('ZWNobyAnSGFja2VkIQ==');
 → Ausgabe: echo 'Hacked!'
 ```
 
----
+
 
 ### 3. Hex-Encoding / Char-Bypass
 Alternative Darstellung für Payloads.
@@ -69,7 +69,7 @@ Oder
 <svg /onload=String.fromCharCode(97,108,101,114,116)(1)>
 ```
 
----
+
 
 ## Evasion-Techniken bei WAF / Inputfilter
 ### Zeichen-Splitting / Padding
@@ -88,7 +88,7 @@ Oder
 | **Comments**               | `ec/*x*/ho test`      |
 | **Case Switching**         | `SeLeCt * FrOm users` |
 
----
+
 
 ## Keywords fragmentieren
 ```sql
@@ -98,7 +98,7 @@ UNION/**/SELECT
 ec/*comment*/ho "test";
 ```
 
----
+
 
 <div align=right>
 
@@ -116,7 +116,7 @@ Nützlich bei blind RCE oder SQLi:
 ping -c 5 127.0.0.1
 ```
 
----
+
 
 ## Beispiele nach Angriffsart
 ### SQL Injection
@@ -148,7 +148,7 @@ ping -c 5 127.0.0.1
 php://filter/convert.base64-encode/resource=index.php
 ```
 
----
+
 
 ## Hinweise
 - Unterschiedliche Filter verlangen unterschiedliche Bypässe. Teste iterativ.
@@ -156,7 +156,7 @@ php://filter/convert.base64-encode/resource=index.php
 - Nutze Burp Suite's Repeater oder Tools wie `wfuzz`, `ffuf`, `sqlmap` für Automatisierung.
 - Viele WAFs prüfen nur Signaturen -> ungewöhnliche Kodierungen oder Fragmentierungen helfen oft.
 
----
+
 
 ## Nützliche Tools
 - [🔍 HackBar (Burp Extension)](https://portswigger.net/bappstore/93c19861f4df4e60bd9d4568cdd97ed6)
@@ -165,7 +165,7 @@ php://filter/convert.base64-encode/resource=index.php
 - [🔎 FuzzDB (Web Fuzzing Payloads)](https://github.com/fuzzdb-project/fuzzdb?utm_source=chatgpt.com)
 
 
-----
+
 
 ## Haftungsausschluss
 
