@@ -10,6 +10,7 @@
 - [Layer 3 Protokolle](#layer-3-protokolle)
   - [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
   - [IPv6 Header (Layer 3)](#ipv6-header-layer-3)
+  - [ICMP Header (Layer 3)](#icmp-header-layer-3)
 - [Layer 4 Protokolle](#layer-4-protokolle)
   - [TCP Header (Layer 4)](#tcp-header-layer-4)
   - [UDP Header (Layer 4)](#udp-header-layer-4)
@@ -33,10 +34,11 @@
 ---
 ## Einleitung
 
-In der Netzwerksicherheit ist es wichtig, die Header der verschiedenen Protokolle zu verstehen.
+In der Netzwerksicherheit ist es entscheidend, die Header der verschiedenen Protokolle zu verstehen. Sie enthalten die Kontrollinformationen, die Router, Firewalls und Analysetools wie `Wireshark` oder `tcpdump` zur Verarbeitung von Paketen nutzen.
 
-Sie enthalten die Kontrollinformationen, die Router, Firewalls und Analysetools wie Wireshark oder tcpdump zur Verarbeitung von Paketen nutzen.
 Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit deren Aufbau und Größen.
+
+Weitere technische Informationen und Dokumentationen zu Protokollen findest du unter [https://www.rfc-editor.org/](https://www.rfc-editor.org/).
 
 ---
 
@@ -44,44 +46,37 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ###  Ethernet II (Layer 2)
 
-- Zweck: Transport von Frames innerhalb eines LANs.
-- Header-Größe: 14 Bytes = 112 Bit
+- **Zweck:** Transport von Frames innerhalb eines LANs.
+- **Header-Größe:** 14 Bytes = 112 Bit
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+--------------------+-------------------+----------------------+
-| Ziel-MAC (6b)      | Quell-MAC (6b)    | EtherType  (16b + padding) |
-+--------------------+-------------------+----------------------+
++----------------+----------------+----------------+
+| Ziel-MAC (6B)  | Quell-MAC (6B) | EtherType (2B) |
++----------------+----------------+----------------+
 ```
-
 
 ----
 
 
 ###  ARP Header (Layer 2/3)
 
-- Zweck: Auflösung von IP → MAC-Adressen.
-- Header-Größe: 28 Bytes
+- **Zweck:** Auflösung von IP-Adressen zu MAC-Adressen. Obwohl es die IP-Adresse verwendet, ist ARP ein Layer-2-Protokoll, da es direkt auf der Sicherungsschicht operiert.
+- **Header-Größe:** 28 Bytes
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+------------------------------+--------------+-----------------+
-| Hardware Type 16b / 2B       | Protocol Type (PTYPE 2B / 16b) |
-+------------------------------+--------------------------------+
-| HW Size (1B)   | Prot Size (1B) | Opcode (2B)                 |
-+----------------+----------------+-----------------------------+
-| Sender MAC (8B)                                               |
-|                                                               |
-+---------------------------------------------------------------+
-| Sender IP (4B)                                                |
-+---------------------------------------------------------------+
-| Target MAC (8B)                                               |
-|                                                               |
-+---------------------------------------------------------------+
-| Target IP (4B)                                                |
-+---------------------------------------------------------------+
++----------------------+---------------------------+
+| Hardware Type (2B)   | Protocol Type (2B)        |
++----------------------+---------------------------+
+| HW Size (1B) | Prot Size (1B) | Opcode (2B)      |
++----------------------+---------------------------+
+| Sender MAC Address (6B)                          |
++--------------------------------------------------+
+| Sender IP Address (4B)                           |
++--------------------------------------------------+
+| Target MAC Address (6B)                          |
++--------------------------------------------------+
+| Target IP Address (4B)                           |
++--------------------------------------------------+
 ```
 
 ----
@@ -96,66 +91,65 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ### IPv4 Header (Layer 3)
 
-- Zweck: Routing von Paketen über Netzwerke hinweg.
-- Header-Größe: 20–60 Bytes (20 Bytes ohne Optionen; 5–15 Words à 32 Bit)
+- **Zweck:** Routing von Paketen über Netzwerke hinweg.
+- **Header-Größe:** 20-60 Bytes (Minimum 20 Bytes, da die "Options" optional sind).
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+-------+------+---------------+----------------+---------------+
-| Ver(4b)| IHL(4b)| ToS (8b)   | Total Length (16b)             |
-+-------+-------+-----------------------------------------------+
-| Identification (2 B)         | Flags (3b)|  Fragment Offset (13b)|
-+---------------+--------------+---------------+----------------+
-| TTL (1 B)     | Protocol (1B)| Header Checksum (2 B)           |
-+----------------------------------+---------------+-------------+
-| Source IP (4 B)                                                |
-+----------------------------------------------------------------+
-| Destination IP (4 B)                                           |
-+----------------------------------------------------------------+
-| Options (0-40 B, optional)                                     |
-+----------------------------------------------------------------+
-```
-
-
----
-
-### ICMP Header (Layer 3)
-
-- Zweck: Diagnose & Fehlerberichte (Ping, Traceroute).
-- Header-Größe: min. 8 Bytes (Standard, ohne Zusatzfelder)
-
-```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+--------------+---------------+-----------------+-------------+
-| Type (1B)    | Code (1B)     | Checksum (16b / 2B)           |
-+--------------+---------------+-------------------------------+
-| Rest of Header (4 B)                                         |
-+--------------------------------------------------------------+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Version|  IHL  |   TOS/DSCP    |         Total Length          |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|        Identification         | Flags |    Fragment Offset    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|      TTL      |    Protocol   |        Header Checksum        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                         Source IP Address                     |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                      Destination IP Address                   |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                             Options                           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
 ---
 
 ### IPv6 Header (Layer 3)
 
-- Zweck: Nachfolger von IPv4, 128-Bit Adressen.
-- Header-Größe: Fix 40 Bytes (10 Words à 32 Bit)
+- **Zweck:** Nachfolger von IPv4, 128-Bit Adressen.
+- **Header-Größe:** Fix 40 Bytes (10 Words à 32 Bit)
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+----------------+-------------+--------------------------------+
-| Version (4b)   | Traffic Class (8b)| Flow Label (20b)         |
+0               1               2               3
+0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|Vers.| Traffic Class (8b)| Flow Label (20b)                    |
 +---------------------------------------------------------------+
-| Payload Length (2 B)         | Next Header (1 B) | Hop Limit (8b)|
-+------------------------------+--------------+------------------+
-| Source Address (16 B)                                          |
-+----------------------------------------------------------------+
-| Destination Address (16 B)                                     |
-+----------------------------------------------------------------+
-| Options (0-40 B, optional)                                     |
-+----------------------------------------------------------------+
+| Payload Length (2 B)         | Next Header(1B)| Hop Limit (8b)|
++------------------------------+----------------+---------------+
+| Source Address (16 B)                                         |
++---------------------------------------------------------------+
+| Destination Address (16 B)                                    |
++---------------------------------------------------------------+
+| Options (0-40 B, optional)                                    |
++---------------------------------------------------------------+
+```
+
+---
+
+### ICMP Header (Layer 3)
+
+- **Zweck:** Diagnose & Fehlerberichte (Ping, Traceroute).
+- **Header-Größe:** min. 8 Bytes (Standard, ohne Zusatzfelder)
+
+```text
+0               1               2               3
+0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Type (1B)     | Code (1B)     | Checksum (16b / 2B)           |
++---------------+---------------+-------------------------------+
+| Rest of Header (4 B)                                          |
++---------------------------------------------------------------+
 ```
 
 ---
@@ -170,42 +164,42 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 ## Layer 4 Protokolle
 ### TCP Header (Layer 4)
 
-- Zweck: Verbindungsorientierte Kommunikation.
-- Header-Größe: 20–60 Bytes (5–15 Words à 32 Bit)
+- **Zweck:** Verbindungsorientierte Kommunikation.
+- **Header-Größe:** 20–60 Bytes (5–15 Words à 32 Bit)
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| Source Port (2 B)            | Dest Port (2 B)               |
-+------------------------------+-------------------------------+
-| Sequence Number (4 B)                                        |
-+--------------------------------------------------------------+
-| Acknowledgment Number (4 B)                                  |
-+--------------------------------------------------------------+
-| Data Offset | Res. | Flags  | Window Size    (16 b)          |  => Data Offset 4b; Reserviert 6b; Flags 6b;
-+--------------------------------------------------------------+
-| Checksum (2 B)              | Urgent Pointer                 |
-+-----------------------------+--------------------------------+
-| Options (0-40 B, optional)                                   |
-+--------------------------------------------------------------+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|          Source Port          |       Destination Port        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                        Sequence Number                        |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                     Acknowledgment Number                     |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Data Offset | Reserved  |C|E|U|A|P|R|S|F|     Window Size     |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|         Checksum              |      Urgent Pointer           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                        Options (if any)                       |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
 ---
 
 ### UDP Header (Layer 4)
 
-- Zweck: Verbindungsloser Transport (z. B. DNS, DHCP).
-- Header-Größe: 8 Bytes = 2 Words à 32 Bit
+- **Zweck:** Verbindungsloser Transport (z. B. DNS, DHCP).
+- **Header-Größe:** 8 Bytes = 2 Words à 32 Bit
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| Source Port (2 B)            | Dest Port (2 B)               |
-+------------------------------+-------------------------------+
-| Length (2 B)                 | Checksum (2 B)                |
-+------------------------------+-------------------------------+
+0               1               2               3
+0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| Source Port (2 B)             | Dest Port (2 B)               |
++-------------------------------+-------------------------------+
+| Length (2 B)                  | Checksum (2 B)                |
++-------------------------------+-------------------------------+
 ```
 
 ---
@@ -221,33 +215,42 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 
 ### DHCP (über UDP 67/68) (Layer 5-7)
 
-- Zweck: Automatische Zuweisung von IP, Gateway, DNS.
-- Header-Größe: 236 Bytes + Optionen
-- Transport: UDP 67/68
+- **Zweck:** Automatische Zuweisung von IP-Adressen und Netzwerkkonfiguration.
+- **Header-Größe:** 236 Bytes + Optionen.
+- **Transport:** UDP 67 (Server) und 68 (Client).
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| OP            | HTYPE        | HLEN            | HOPS        |
-+---------------+--------------+-----------------+-------------+
-| Transaction ID (4 B)                                         |
-+--------------------------------------------------------------+
-| Seconds (2 B)                | Flags (2 B)                   |
-+------------------------------+-------------------------------+
-| Client IP (4 B)                                              |
-| Your IP (4 B)                                                |
-| Server IP (4 B)                                              |
-| Gateway IP (4 B)                                             |
-+--------------------------------------------------------------+
-| Client MAC (16 B)                                            |
-+--------------------------------------------------------------+
-| Server Name (64 B)                                           |
-+--------------------------------------------------------------+
-| Boot File (128 B)                                            |
-+--------------------------------------------------------------+
-| Options (variabel) (64 B)                                    |
-+--------------------------------------------------------------+
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     op (1B)   |   htype (1B)  |   hlen (1B)   |   hops (1B)   |
++---------------+---------------+---------------+---------------+
+|                            xid (4B)                           |
++---------------------------------------------------------------+
+|           secs (2B)           |           flags (2B)          |
++---------------------------------------------------------------+
+|                          ciaddr  (4B)                         |
++---------------------------------------------------------------+
+|                          yiaddr  (4B)                         |
++---------------------------------------------------------------+
+|                          siaddr  (4B)                         |
++---------------------------------------------------------------+
+|                          giaddr  (4B)                         |
++---------------------------------------------------------------+
+|                                                               |
+|                          chaddr  (16B)                        |
+|                                                               |
+|                                                               |
++---------------------------------------------------------------+
+|                                                               |
+|                          sname   (64B)                        |
++---------------------------------------------------------------+
+|                                                               |
+|                          file    (128B)                       |
++---------------------------------------------------------------+
+|                                                               |
+|                          options (variabel)                   |
++---------------------------------------------------------------+
 ```
 
 ----
@@ -259,28 +262,27 @@ Dieses Dokument gibt einen Überblick über die wichtigsten Protokoll-Header mit
 - Transport: UDP/TCP 53
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+--------------+---------------+------------------+-------------+
-| Transaction ID (2 B)         | Flags (2 B)                    |
-+------------------------------+--------------------------------+
-| Questions (2 B)              | Answer RRs (2 B)               |
-| Authority RRs (2 B)          | Additional RRs (2 B)           |
-+------------------------------+--------------------------------+
++---------------------------------------------------------------+
+|            Transaction ID (2B)           |       Flags (2B)   |
++---------------------------------------------------------------+
+|            Questions (2B)                |    Answer RRs (2B) |
++---------------------------------------------------------------+
+|           Authority RRs (2B)             | Additional RRs (2B)|
++---------------------------------------------------------------+
 ```
 
 ---
 
 ### HTTP/HTTPS (Layer 5-7)
 
-- Zweck: Web-Kommunikation (Text-basiert).
-- Transport: TCP 80 (HTTP), TCP 443 (HTTPS via TLS/SSL)
-- Header: Variabel (Textzeilen mit Feldern wie Host, User-Agent, Cookie, …)
+- **Zweck:** Web-Kommunikation (Text-basiert).
+- **Transport:** TCP 80 (HTTP), TCP 443 (HTTPS via TLS/SSL)
+- **Header:** Variabel (Textzeilen mit Feldern wie Host, User-Agent, Cookie, …)
 
 ```http
 GET /index.html HTTP/1.1
 Host: example.com
-User-Agent: curl/7.79.1
+User-Agent: Mozilla/5.0
 Accept: */*
 ```
 
@@ -296,55 +298,58 @@ Accept: */*
 
 ### TLS/SSL Record Layer (Layer 5-7)
 
-- Zweck: Verschlüsselte Kommunikation (HTTPS, SMTPS, FTPS).
-- Header-Größe: 5 Bytes + Payload
+- **Zweck:** Verschlüsselte Kommunikation (HTTPS, SMTPS, FTPS).
+- **Header-Größe:** 5 Bytes + Payload
+- **Transport:** Wird über TCP getunnelt, typischerweise auf Port 443.
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| Content Type (1B) | Version (2B) | Length (2B)|
-+---------+---------+---------+---------+---------+
-| Encrypted Payload (variabel)                     |
-+-------------------------------------------------+
++-------------------+----------------+---------------------+
+| Content Type (1B) | Version (2B)   |     Length (2B)     |
++-------------------+----------------+---------------------+
+|                     Encrypted Payload (variabel)         |
++----------------------------------------------------------+
 ```
 
 ---
 
 ### SSH 
 
-- Zweck: Sichere Remote-Verbindungen & Tunnels.
-- Transport: TCP 22
-- Header: Kein fester Standard wie bei IP/TCP → initiale Pakete:
-  - Protokoll-Version-String (SSH-2.0-OpenSSH_8.9)
-  - Key Exchange Init (Algorithmen, Nonces)
-- Payload: Verschlüsselt nach Schlüsselaustausch.
+- **Zweck:** Sichere Remote-Verbindungen und Tunneling.
+- **Transport:** TCP 22
+- **Header:** Kein fester Header wie bei IP oder TCP. Der erste Teil des Protokolls ist ein einfacher Versionsstring (SSH-2.0-OpenSSH_...), gefolgt von einer binären Nachrichtenstruktur, die in der Regel nach dem Schlüsselaustausch verschlüsselt ist.
 
 
-### NTP
+### NTP (Network Time Protocol)
 
-- Zweck: Zeit-Synchronisation.
-- Transport: UDP 123
-- Header-Größe: 48 Bytes
+- **Zweck:** Synchronisation der Systemzeit von Computern.
+- **Transport:** UDP 123
+- **Header-Größe:** 48 Bytes
 
 ```text
-| LI | VN | Mode | Stratum | Poll | Precision |
-| Root Delay (32b) | Root Dispersion (32b)    |
-| Reference ID (32b)                          |
-| Reference Timestamp (64b)                   |
-| Originate Timestamp (64b)                   |
-| Receive Timestamp (64b)                     |
-| Transmit Timestamp (64b)                    |
-
++-----+-----+------+----------+----------+----------+
+| LI  | VN  | Mode | Stratum  |  Poll    | Precision|
++-----+-----+------+----------+----------+----------+
+|        Root Delay (4B)      | Root Dispersion (4B)|
++---------------------------------------------------+
+|               Reference ID (4B)                   |
++---------------------------------------------------+
+|               Reference Timestamp (8B)            |
++---------------------------------------------------+
+|               Originate Timestamp (8B)            |
++---------------------------------------------------+
+|               Receive Timestamp (8B)              |
++---------------------------------------------------+
+|               Transmit Timestamp (8B)             |
++---------------------------------------------------+
 ```
 
-----
+---
 
 ### Kerberos (Authentication) (Layer 5-7)
 
-- Zweck: Netzwerk-Authentifizierung (oft in Windows-AD, SSO).
-- Transport: meist über TCP/UDP Port 88
-- Header-Größe: variabel (ASN.1-codiert, meist 20–200+ Bytes)
+- **Zweck:** Netzwerk-Authentifizierung (oft in Windows-AD, SSO).
+- **Transport:** meist über TCP/UDP Port 88
+- **Header-Größe:** variabel (ASN.1-codiert, meist 20–200+ Bytes)
 
 **Kerberos Messages:**
 - AS-REQ / AS-REP (Authentication Service)
@@ -355,20 +360,18 @@ Accept: */*
 
 ### RADIUS (Layer 5-7)
 
-- Zweck: Authentifizierung, Autorisierung, Accounting (AAA).
-- Transport: UDP 1812 (Auth), UDP 1813 (Accounting).
-- Header-Größe: 20 Bytes + Attribute
+- **Zweck:** Zentrale Authentifizierung, Autorisierung und Accounting (AAA).
+- **Transport:** UDP 1812 (Auth), UDP 1813 (Accounting).
+- **Header-Größe:** 20 Bytes + Attribute
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+--------------+---------------+-----------------+-------------+
-| Code  1B     | ID (1B)       | Length (2B)                    |
-+--------------+---------------+-------------------------------+
-| Authenticator (16B)                                           |
-+---------------------------------------------------------------+
-| Attributes (variabel)                                         |
-+---------------------------------------------------------------+
++--------------+---------------+--------------------+
+| Code (1B)    | ID (1B)       |    Length (2B)     |
++--------------+---------------+--------------------+
+|                    Authenticator (16B)            |
++---------------------------------------------------+
+|                 Attributes (variabel)             |
++---------------------------------------------------+
 ```
 
 ----
@@ -381,62 +384,53 @@ Accept: */*
 
 ### IPSec (Internet Procotol Security) (Layer 5-7)
 
-- Zweck: Sichere VPN-Kommunikation auf IP-Ebene.
-- Header-Typen:
-  - AH (Authentication Header): 24 Bytes
-  - ESP (Encapsulating Security Payload): variabel (mind. 8 Bytes + Payload + Padding + Auth Data)
+- **Zweck:** Bietet Authentifizierung und/oder Verschlüsselung auf IP-Ebene.
+- **Transport:** Integriert in IP (Protokollnummern 50 für ESP und 51 für AH).
+- **Header-Typen:**
+  - **AH (Authentication Header):** 24 Bytes
+  - **ESP (Encapsulating Security Payload):** variabel (mind. 8 Bytes + Payload + Padding + Auth Data)
 
 #### AH Header
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| Next          | Payload Length| Reserviert                   |
-+---------------+--------------+-------------------------------+
-SPI (4 B)                                                      |
-+--------------------------------------------------------------+
-| Sequence Number (4 B)                                        |
-+--------------------------------------------------------------+
-| Authentication Data (variabel)                               |
-+--------------------------------------------------------------+
++---------------+---------------+-------------------+
+| Next Header(1B) | Payload Len(1B) | Reserved (2B) |
++---------------------------------------------------+
+|                 SPI (4B)                          |
++---------------------------------------------------+
+|                 Sequence Number (4B)              |
++---------------------------------------------------+
+|             Authentication Data (variabel)        |
++---------------------------------------------------+
 ```
 
 #### ESP Header
+- **Header-Größe:** Mindestens 8 Bytes + verschlüsselte Nutzdaten + optionale Padding und Authentifizierungsdaten.
 
 ```text
-0              | 1             | 2               | 3
-0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
-+---------------+--------------+-----------------+-------------+
-| SPI Sercurity Parameter Index (4 B)                          |
-+--------------------------------------------------------------+
-| Anit-Replay Sequence Number (4 B)                            |
-+--------------------------------------------------------------+
-| Encrypted Payload (variabel)                                 |
-| Padding                     | PadLen     | Next Header       |
-+-----------------------------+------------+-------------------+
-| Authentication Data (variabel)                               |
-+--------------------------------------------------------------+
++---------------------------------------------------+
+|                SPI (4B)                           |
++---------------------------------------------------+
+|           Sequence Number (4B)                    |
++---------------------------------------------------+
+|                Payload (variabel)                 |
++---------------------------------------------------+
+|           Padding | Pad Len | Next Header (1B)    |
++---------------------------------------------------+
+|           Authentication Data (variabel)          |
++---------------------------------------------------+
+
 ```
 
 ----
 
 ### SMB (Server Message Block)
 
-- Zweck: Datei- und Druckerfreigaben, häufiges Angriffsziel (EternalBlue, WannaCry).
-- Transport: TCP 445.
-- Header-Größe:
+- **Zweck:** Datei- und Druckerfreigaben, häufiges Angriffsziel (EternalBlue, WannaCry).
+- **Transport:** TCP 445.
+- **Header-Größe:**
   - 32 Bytes (SMBv1),
-  - 64 Bytes (SMBv2)
-
-#### SMB-Header Felder (SMBv2):
-- Protocol ID
-- Structure Size
-- Credit Charge
-- Command
-- Flags
-- Message ID
-- Tree ID, Session ID, Signature
+  - 64 Bytes (SMBv2/3)
 
 ---
 
@@ -448,26 +442,20 @@ SPI (4 B)                                                      |
 
 ### SNMP (Simple Network Management Protocol)
 
-- Zweck: Geräteverwaltung, oft Ziel für Enumeration & Angriffe.
-- Transport: UDP 161.
-- Header: ASN.1-basiert (variabel, min. ca. 20 Bytes).
-
-#### Struktur:
-- Version
-- Community String (Passwort)
-- PDU (GetRequest, GetResponse, Trap, etc.)
-
+- **Zweck:** Überwachung und Verwaltung von Netzwerkgeräten.
+- **Transport:** UDP 161 (Manager zu Agent), UDP 162 (Traps).
+- **Header:** ASN.1-basiert (daher variabel, min. ca. 20 Bytes).
 
 --- 
 
 ### Syslog
 
-- Zweck: Zentrale Log-Sammlung.
-- Transport: UDP 514 (traditionell), TCP/TLS möglich
-- Header: variabel, Basisformat:
+- **Zweck:** Standard für die zentrale Übertragung von Log-Nachrichten.
+- **Transport:** UDP 514 (traditionell), TCP/TLS möglich
+- **Header:** Eine einfache Textzeile, variabel.
 
 ```text
-<PRI> TIMESTAMP HOSTNAME TAG MESSAGE
+<PRI> TIMESTAMP HOSTNAME TAG: MESSAGE
 ```
 
 

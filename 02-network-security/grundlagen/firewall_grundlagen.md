@@ -21,18 +21,18 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 
 ## Firewall-Regeln
 
-**Kriterien für Regelwerke:**
-- **Quelladresse / Quellport** -> z. B. IP-Adressen oder Netzwerkbereiche  
-- **Zieladresse / Zielport** -> z. B. Server, Dienste oder Ports (80/443 für HTTP/HTTPS)  
-- **Protokoll** -> TCP, UDP, ICMP usw.  
-- **Richtung** -> eingehend (Inbound) oder ausgehend (Outbound)
-- **Whitelist** -> Nur bekannte Geräte sind berechtigt
-- **Blacklist** -> Alles in der Liste wird geblockt
+- **Kriterien für Regelwerke:**
+  - **Quelladresse / Quellport** -> z. B. IP-Adressen oder Netzwerkbereiche  
+  - **Zieladresse / Zielport** -> z. B. Server, Dienste oder Ports (80/443 für HTTP/HTTPS)  
+  - **Protokoll** -> TCP, UDP, ICMP usw.  
+  - **Richtung** -> eingehend (Inbound) oder ausgehend (Outbound)
+  - **Whitelist** -> Nur bekannte Geräte sind berechtigt
+  - **Blacklist** -> Alles in der Liste wird geblockt
 
-👉 **Best Practice:**  
-- **Default Deny** (alles verbieten, nur explizit erlaubtes zulassen)  
-- Regeln von **spezifisch -> allgemein** ordnen  
-- Dokumentation & regelmäßige Überprüfung  
+- **Best Practice:**  
+  - **Default Deny** (alles verbieten, nur explizit erlaubtes zulassen)  
+  - Regeln von **spezifisch -> allgemein** ordnen  
+  - Dokumentation & regelmäßige Überprüfung  
 
 ---
 
@@ -45,16 +45,16 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 ## Firewall-Arten
 
 ### 1. Paketfilter-Firewall (Stateless Packet Filtering)
-- **Funktionsweise:**  
-  - Analysiert nur **Header-Informationen** eines IP-Pakets  
-  - Kriterien: Quell-/Ziel-IP, Protokoll (TCP/UDP), Port  
-  - Keine Zustandsprüfung (keine Session-Verwaltung)  
-- **Beispiele:** Access Control Lists (ACLs) auf Routern  
-- ✅ Vorteile:  
-  - Sehr schnell, geringer Ressourcenverbrauch  
-- ❌ Nachteile:  
-  - Kennt Verbindungszustände nicht  
-  - Anfällig für Spoofing / Replay-Angriffe  
+- **Funktionsweise:**
+  - Analysiert nur **Header-Informationen** eines IP-Pakets.
+  - Kriterien: Quell-/Ziel-IP, Protokoll (TCP/UDP), Port.
+  - Keine Zustandsprüfung (keine Session-Verwaltung).
+- **Beispiele:** Access Control Lists (ACLs) auf Routern.
+- **Vorteile:** 
+  - Sehr schnell, geringer Ressourcenverbrauch.
+- **Nachteile:**
+  - Kennt Verbindungszustände nicht.
+  - Anfällig für Spoofing / Replay-Angriffe.
 
 ---
 
@@ -63,27 +63,27 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
   - Prüft nicht nur Header, sondern auch den **Verbindungszustand**  
   - Nutzt eine **Connection Table** (Status-Tabelle) mit Zuständen wie `ESTABLISHED`, `NEW`, `RELATED`  
   - Erlaubt Rückantworten nur zu legitimen Verbindungen (z. B. TCP-Handshake)  
-- ✅ Vorteile:  
+- **Vorteile:**
   - Bessere Sicherheit als reine Paketfilter, Schutz vor SYN-Flooding  
   - Erkennt gefälschte / unautorisierte Pakete  
-- ❌ Nachteile:  
+- **Nachteile:**
   - Kein inhaltliches Verständnis (kein Schutz auf Layer 7)  
   - Schwierigkeiten mit verschlüsseltem Traffic  
 
 ---
 
 ### 3. Application Firewall (Proxy-Firewall)
-- **Funktionsweise:**  
+- **Funktionsweise:**
   - Arbeitet auf **OSI-Layer 7 (Anwendungsebene)**  
   - Übernimmt Verbindungsaufbau stellvertretend (Proxy-Funktion)  
   - Kann Inhalte analysieren: z. B. HTTP-Header, FTP-Befehle  
-- **Einsatzbereiche:**  
+- **Einsatzbereiche:**
   - URL-Filterung, Virenscanning, Content-Filter  
   - Unternehmensumgebungen mit granularen Policies  
-- ✅ Vorteile:  
+- **Vorteile:**
   - Tiefere Inhaltskontrolle  
   - Schutz vor Protokoll-Missbrauch  
-- ❌ Nachteile:  
+- **Nachteile:**
   - Höhere Latenz & Ressourcenverbrauch  
   - Komplexere Konfiguration  
 
@@ -93,17 +93,17 @@ Nur **erlaubte Kommunikation** (gemäß Sicherheitsrichtlinien) wird durchgelass
 - **Funktionsweise:**  
   - Kombination klassischer Firewall-Mechanismen + moderne Sicherheitsfeatures  
 - **Typische Merkmale:**  
-  - 🔍 **Deep Packet Inspection (DPI)** -> Analyse über Header hinaus, inkl. SSL-Inspection  
-  - 📡 **Application Awareness** -> erkennt Anwendungen unabhängig von Portnummern  
-  - 🚨 **IDS/IPS** -> erkennt & blockiert Angriffe (SQLi, XSS, Exploits)  
-  - 🛑 **Content Filtering** -> blockiert Malware, Phishing, unerwünschte Webseiten  
-  - 🧪 **Sandboxing** (je nach Hersteller) -> verdächtige Dateien in isolierten Umgebungen ausführen  
+  - **Deep Packet Inspection (DPI)** -> Analyse über Header hinaus, inkl. SSL-Inspection  
+  - **Application Awareness** -> erkennt Anwendungen unabhängig von Portnummern  
+  - **IDS/IPS** -> erkennt & blockiert Angriffe (SQLi, XSS, Exploits)  
+  - **Content Filtering** -> blockiert Malware, Phishing, unerwünschte Webseiten  
+  - **Sandboxing** (je nach Hersteller) -> verdächtige Dateien in isolierten Umgebungen ausführen  
 - **Beispiele:**  
   - Palo Alto, Fortinet, Cisco Firepower, Check Point, Sophos XG  
-- ✅ Vorteile:  
+- **Vorteile:**  
   - Ganzheitlicher Schutz (Netzwerk + Anwendung)  
   - Geeignet für moderne Bedrohungen  
-- ❌ Nachteile:  
+- **Nachteile:** 
   - Teurer & komplexer  
   - SSL-Inspection kann Datenschutzprobleme verursachen  
 

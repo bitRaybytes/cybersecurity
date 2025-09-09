@@ -32,6 +32,8 @@ Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologi
 - Sicherstellung, dass Systeme und Daten bei Bedarf erreichbar sind.
 - Redundanz, Backups, Schutz vor DDoS.
 
+Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-Triade**. Mehr zum Thema erfährst du [hier]().
+
 ---
 
 <div align=right>

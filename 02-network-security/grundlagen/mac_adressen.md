@@ -23,13 +23,13 @@
 
 ## Einleitung
 
-Eine **MAC-Adresse (Media Access Control Address)** ist die weltweit eindeutige, physische Adresse eines Netzwerkadapters.  
-Sie dient zur **Identifikation von Geräten innerhalb eines lokalen Netzwerks (LAN/WLAN)**.  
+Eine **MAC-Adresse (Media Access Control Address)** ist die weltweit eindeutige, physische Adresse eines Netzwerkadapters.
+Sie dient zur **Identifikation von Geräten innerhalb eines lokalen Netzwerks (LAN/WLAN)**.
 
-- Darstellung: Hexadezimal (z. B. `00:1A:2B:3C:4D:5E`)  
-- Länge: **48 Bit (6 Byte)**  
-- OSI-Modell: **Layer 2 (Sicherungsschicht)**  
-- Einzigartigkeit: Jede Netzwerkkarte hat eine eigene, vom Hersteller vergebene Adresse  
+- **Darstellung:** Hexadezimal (z. B. `00:1A:2B:3C:4D:5E`)
+- **Länge:** 48 Bit (6 Byte)
+- **OSI-Modell:** Layer 2 (Sicherungsschicht)
+- **Einzigartigkeit:** Jede Netzwerkkarte hat eine eigene, vom Hersteller vergebene Adresse
 
 ## Aufbau einer MAC-Adresse
 
@@ -50,11 +50,12 @@ Eine MAC-Adresse besteht aus **zwei Hauptteilen**:
 ## Visualisierung
 
 ```yaml
-MAC-Adresse (48 Bit)
-+-------------------+--------------------+
-| OUI (24 Bit)      | Device ID (24 Bit) |
-| Herstellerkennung | Seriennummer       |
-+-------------------+--------------------+
++---------------------------------------+
+|        MAC-Adresse (48 Bit)           |
++-------------------+-------------------+
+| OUI (24 Bit)      | Device ID (24 Bit)|
+| Herstellerkennung | Seriennummer      |
++-------------------+-------------------+
 Beispiel: 00:1A:2B:3C:4D:5E
 ```
 
@@ -63,9 +64,9 @@ Beispiel: 00:1A:2B:3C:4D:5E
 
 ## Wofür wird eine MAC-Adresse verwendet?
 
-- Lokale Identifikation in Netzwerken (Ethernet, WLAN)  
-- Kommunikation über Layer 2 (Frames enthalten Quell- und Ziel-MAC)  
-- Zugriffskontrollen in Netzwerken (z. B. WLAN-MAC-Filter)  
+- **Lokale Identifikation** in Netzwerken (Ethernet, WLAN)  
+- Kommunikation über **Layer 2** (Frames enthalten Quell- und Ziel-MAC)  
+- **Zugriffskontrollen** in Netzwerken (z. B. WLAN-MAC-Filter)  
 
 **Wichtig:** MAC-Adressen werden **nicht im Internet** verwendet!  
 Dort übernimmt die **IP-Adresse** die Adressierung.  
@@ -80,13 +81,13 @@ Dort übernimmt die **IP-Adresse** die Adressierung.
 
 ## MAC-Adressen herausfinden
 
-**Windows:**
+### Windows:
 ```powershell
 ipconfig /all
 ```
 → wird als „Physikalische Adresse“ angezeigt
 
-Linux/macOS:
+### Linux/macOS:
 
 ```bash
 ip a | grep ether
@@ -95,12 +96,12 @@ ifconfig -a
 
 ## MAC-Adressen fälschen (Spoofing)
 
-Beim MAC-Spoofing wird die Adresse manipuliert, um sich als ein anderes Gerät auszugeben.
+Beim **MAC-Spoofing** wird die Adresse manipuliert, um sich als ein anderes Gerät auszugeben.
 
-Gründe:
-- Umgehung von WLAN-MAC-Filtern
-- Anonymität & Tracking-Schutz (z. B. in öffentlichen WLANs)
-- Angriffe wie ARP-Spoofing oder Man-in-the-Middle
+- **Gründe:**
+    - Umgehung von WLAN-MAC-Filtern
+    - Anonymität & Tracking-Schutz (z. B. in öffentlichen WLANs)
+    - Angriffe wie [**ARP-Spoofing**](/02-network-security/angriffe/arp_spoofing.md) oder [**Man-in-the-Middle**](/02-network-security/angriffe/mitm_angriff.md).
 
 
 ## MAC-Adresse ändern (Spoofing)
@@ -109,9 +110,9 @@ Gründe:
 ```powershell
 # Adapterliste anzeigen
 getmac
-
-# In den Adaptereigenschaften (Gerätemanager) -> "Netzwerkadresse" manuell ändern
 ```
+
+Anschließend die MAC-Adresse in den Adaptereigenschaften (Gerätemanager) unter "Netzwerkadresse" manuell ändern.
 
 ### Linux
 ```bash
@@ -134,10 +135,10 @@ sudo ifconfig en0 ether 12:34:56:78:9A:BC
 
 ## MAC-Spoofing verhindern
 
-- Port-Security auf Switches: nur bestimmte MAC-Adressen pro Port zulassen
-- Dynamic ARP Inspection (DAI): blockiert verdächtige Adressen im LAN
-- 802.1X (Network Access Control): Authentifizierung zusätzlich zur MAC-Adresse
-- Monitoring: ungewöhnliche MAC-Wechsel oder Konflikte erkennen
+- **Port-Security auf Switches:** Erlaubt nur eine bestimmte Anzahl oder spezifische MAC-Adressen pro Switch-Port.
+- **Dynamic ARP Inspection (DAI):** Blockiert verdächtige ARP-Pakete und verhindert ARP-Spoofing
+- **802.1X (Network Access Control):** Erfordert eine Authentifizierung (z.B. Benutzername/Passwort) zusätzlich zur MAC-Adresse.
+- **Monitoring:** Erkennung von ungewöhnlichen MAC-Adressen, Wechseln oder Konflikten im Netzwerk.
 
 
 <div align=right>
@@ -148,7 +149,16 @@ sudo ifconfig en0 ether 12:34:56:78:9A:BC
 
 ## Ethernet-Frame und MAC-Adressen
 
-Ein Ethernet-Frame ist die Basiseinheit der LAN-Kommunikation.
+Ein Ethernet-Frame ist die Basiseinheit der Kommunikation auf der Sicherungsschicht (Layer 2) und enthält die MAC-Adressen für die lokale Zustellung.
+### Aufbau eines Ethernet Frames
+
+```text
++----------------+--------------+--------------+---------------+
+| Präambel (7B)  | SFD (1B)     | Ziel-MAC (6B)| Quell-MAC (6B)|
++----------------+--------------+--------------+---------------+
+| EtherType (2B) |     Payload (46-1500B)      |   FCS (4B)    |
++----------------+-----------------------------+---------------+
+```
 
 | Feld              | Beschreibung                  |
 | ----------------- | ----------------------------- |
@@ -160,20 +170,23 @@ Ein Ethernet-Frame ist die Basiseinheit der LAN-Kommunikation.
 | Daten (46–1500 B) | Nutzlast                      |
 | FCS (4 B)         | Fehlerprüfung (CRC)           |
 
-Mehr zu Protokollen und ihren Headern erfährst du [hier](/02-network-security/protokoll_header_cheatsheet.md)
+Mehr zu Protokollen und ihren Headern erfährst du [hier](/02-network-security/protokoll_header_cheatsheet.md).
 
 ## Kommunikationsarten mit MAC-Adressen
 
-- **Unicast** → Frame an genau eine MAC-Adresse
-- **Broadcast** → an alle Geräte (MAC: `FF:FF:FF:FF:FF:FF`)
-- **Multicast** → an eine Gruppe von Geräten (MAC beginnt mit `01:00:5E`)
+- **Unicast:** Ein Frame wird an genau eine spezifische MAC-Adresse gesendet.
+- **Broadcast:** Ein Frame wird an alle Geräte im Netzwerk gesendet. Die Ziel-MAC-Adresse ist `FF:FF:FF:FF:FF:FF`
+- **Multicast:** Ein Frame wird an eine vordefinierte Gruppe von Geräten gesendet. Die MAC-Adresse beginnt mit `01:00:5E`
 
 
 ## Switches und MAC-Tabellen
+Switches speichern die MAC-Adressen der angeschlossenen Geräte in einer **CAM-Tabelle** (**Content Addressable Memory**). Dies ermöglicht eine effiziente Weiterleitung von Frames.
 
-- Switches speichern MAC-Adressen in einer **CAM-Tabelle** (Content Addressable Memory)
-- Frames werden gezielt an den Port weitergeleitet (Unicast)
-- Unbekannte Adressen → **Broadcast**
+- **Lernprozess:** Empfängt ein Switch einen Frame, speichert er die Quell-MAC-Adresse und den dazugehörigen Port in seiner Tabelle.
+- **Weiterleitung:** Ein Frame mit einer bekannten Ziel-MAC wird gezielt an den richtigen Port weitergeleitet (Unicast).
+- **Unbekannte Adressen:** Ein Frame mit einer unbekannten Ziel-MAC wird an alle Ports weitergeleitet (**Flooding**), bis der Empfänger antwortet.
+
+### Beispiel einer MAC-Tabelle (CAM-Tabelle)
 
 ```text
 +---------+-------------------+
@@ -186,8 +199,10 @@ Mehr zu Protokollen und ihren Headern erfährst du [hier](/02-network-security/p
 
 ## Präambel im Ethernet
 
-Die Präambel (7 Bytes) ist ein "**Achtung, gleich geht’s los!**"-Signal für den Empfänger.
-Sie dient zur Synchronisation und stellt sicher, dass Netzwerkkarten die kommenden Bits korrekt lesen.
+Die Präambel (7 Bytes) und der Start Frame Delimiter (1 Byte) sind die ersten 8 Bytes eines Ethernet-Frames.
+
+Sie dienen zur Synchronisation von Absender und Empfänger und stellen sicher, dass die Netzwerkkarte die folgenden Bits korrekt liest.
+
 
 <div align=right>
 
@@ -199,37 +214,48 @@ Sie dient zur Synchronisation und stellt sicher, dass Netzwerkkarten die kommend
 ## White- und Blacklists mit MAC-Adressen
 ### Whitelist
 
-Nur Geräte mit zugelassener MAC-Adresse dürfen ins Netzwerk.
+Nur Geräte mit einer zugelassenen MAC-Adresse dürfen sich mit dem Netzwerk verbinden.
 
-- ✅ Hohe Sicherheit
-- ❌ Hoher Verwaltungsaufwand
-- ❌ Spoofing möglich
+- **Vorteile:** Bietet eine grundlegende Zugriffskontrolle.
+- **Nachteile:** Hoher Verwaltungsaufwand, leicht durch Spoofing zu umgehen.
 
 ### Blacklist
 
-Nur gesperrte Geräte werden blockiert.
+Sperrt nur bestimmte, bekannte MAC-Adressen von der Netzwerkverbindung.
 
-- ✅ Einfach zu pflegen
-- ❌ Keine Sicherheit gegen unbekannte Angreifer
-
+- **Vorteile:** Einfach zu pflegen für die Blockierung bekannter Geräte.
+- **Nachteile:** Bietet keine Sicherheit gegen unbekannte Angreifen oder gespoofte Adressen.
 
 ## Security-Bezug von MAC-Adressen
 
-- **Tracking in WLANs:** Smartphones senden MAC-Adressen bei der Suche nach Netzwerken → Tracking möglich
-- **Randomized MACs:** Moderne Systeme (Android, iOS, Windows) nutzen zufällige MACs in WLANs zum Schutz der Privatsphäre
-- **Angriffe:** ARP-Spoofing, MAC-Flooding, DoS durch MAC-Spoofing
-- **Abwehr:** Port-Security, DAI, 802.1X
-
+- **Tracking in WLANs:** Mobile Geräte senden MAC-Adressen, wenn sie nach WLANs suchen, was von Angreifern oder Unternehmen zum Tracking der Bewegungsprofile genutzt werden kann.
+- **Randomized MACs:** Moderne Betriebssysteme (z. B. Android, iOS, Windows) verwenden zufällige MAC-Adressen, um die Privatsphäre zu schützen und Tracking zu erschweren.
+- **Angriffe:** 
+    - **ARP-Spoofing:** Angreifer manipuliert die ARP-Tabelle, um als Gateway zu agieren und den Datenverkehr umzuleiten (Man-in-the-Middle).
+    - **MAC-Flooding:** Überflutung des Switches mit gefälschten Quell-MAC-Adressen, um seine CAM-Tabelle zu überfüllen. Der Switch fällt in den "Fail-Open"-Modus und leitet alle Frames als Broadcast weiter.
+    - **Gratuitous ARP:** Ein gefälschtes ARP-Paket sendet eine falsche IP-MAC-Zuordnung in das Netzwerk, um die ARP-Tabellen der anderen Geräte zu manipulieren.
+- **Abwehr:** 
+    - **Port-Security:** Schützt vor MAC-Flooding.
+    - **DAI (Dynamic ARP Inspection):** Verhindert ARP-Spoofing.
+    - **802.1X:** Bietet eine robustere Authentifizierung als einfache MAC-Filter.
 
 ## Zusammenfassung
 
 ```less
-Gerät A (MAC: 00:11:22:33:44:55) ---> Switch ---> Gerät B (MAC: 66:77:88:99:AA:BB)
-
-Unicast: direkt an B
-Broadcast: an alle Geräte
-Multicast: an definierte Gruppe
++-------------+      +---------------+      +-------------+
+| Gerät A     |      |     Switch    |      | Gerät B     |
+| MAC: ...A   |----->| (CAM-Tabelle) |----->| MAC: ...B   |
++-------------+      +---------------+      +-------------+
+      ^                      |                 |
+      |                      v                 |
+      |                    Unicast             |
+      +----------------------------------------+
 ```
+- **MAC-Adressen** sind einzigartige Kennungen für Geräte im lokalen Netzwerk.
+- Sie werden auf **Layer 2** verwendet.
+- **Switches** nutzen MAC-Adressen und CAM-Tabellen zur gezielten Weiterleitung von Daten.
+- **MAC-Spoofing** ist eine gängige Technik, die die Sicherheit von MAC-Filtern untergräbt und für verschiedene Angriffe genutzt wird.
+- Der Schut vor MAC-basierten Angriffen erfordert robuste Sicherheitsmaßnahmen wie **Port-Security** und **DAI**.
 
 ---
 

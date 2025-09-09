@@ -17,22 +17,22 @@
 ---
 
 ## Einführung
-Ein **Port** ist eine logische Schnittstelle in einem Betriebssystem, die als **Kommunikationsendpunkt** für Anwendungen dient.  
-Zusammen mit einer IP-Adresse bildet ein Port eine **Socket-Adresse** (`IP:Port`).  
+Ein **Port** ist eine logische Schnittstelle in einem Betriebssystem, die als **Kommunikationsendpunkt** für Anwendungen dient.
+Zusammen mit einer IP-Adresse bildet ein Port eine **Socket-Adresse** (`IP:Port`).
 Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wenn nur eine IP vorhanden ist.
 
-👉 Beispiel:  
-- `192.168.0.10:80` -> HTTP-Webserver  
-- `192.168.0.10:22` -> SSH-Verbindung  
+**Beispiel:**
+- `192.168.0.10:80` -> HTTP-Webserver
+- `192.168.0.10:22` -> SSH-Verbindung
 
 ---
 
 ## Funktionsweise von Ports
-- Ports sind **16-Bit-Werte** (0–65535).  
-- Sie ermöglichen **Multiplexing**, d. h. mehrere Anwendungen können gleichzeitig Netzwerkressourcen nutzen.  
-- Betriebssysteme unterscheiden:  
-  - **TCP-Ports** -> verbindungsorientiert (SYN/ACK-Handshake)  
-  - **UDP-Ports** -> verbindungslos (schneller, aber unsicherer)  
+- Ports sind **16-Bit-Werte** (0–65535).
+- Sie ermöglichen **Multiplexing**, d. h. mehrere Anwendungen können gleichzeitig Netzwerkressourcen nutzen, indem sie über unterschiedliche Ports kommunizieren.
+- Betriebssysteme unterscheiden:
+  - **TCP-Ports** -> verbindungsorientiert (SYN/ACK-Handshake)
+  - **UDP-Ports** -> verbindungslos (schneller, aber unsicherer)
 
 ---
 
@@ -40,11 +40,11 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 | Bereich             | Nummern        | Zweck |
 |---------------------|----------------|-------|
-| **Well-Known Ports** | 0 – 1023       | Standard-Dienste (HTTP, FTP, DNS, SSH) |
+| **Well-Known Ports** | 0 – 1023       | Standard-Dienste (HTTP, FTP, DNS, SSH), oft Root-Rechte erforderlich |
 | **Registered Ports** | 1024 – 49151   | Von Software/Herstellern registriert (z. B. MySQL 3306, RDP 3389) |
 | **Dynamic/Ephemeral Ports** | 49152 – 65535 | Temporär von Clients für ausgehende Verbindungen genutzt |
 
-👉 Hinweis: Ephemere Ports werden vom **Client** geöffnet, um eine **Antwort** vom Server zu ermöglichen.
+**Hinweis:** Ephemere Ports werden vom **Client** automatisch zugewiesen, um eine **Antwort** vom Server empfangen zu können.
 
 ---
 
@@ -63,7 +63,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 | 22 | TCP/UDP | SSH, Secure Shell (Konsolensteuerung verschlüsselt) |
 | 23 | TCP/UDP | Telnet (unsicher) |
 | 25 | TCP | SMTP (E-Mail Versand) |
-| 53 | UDP | DNS |
+| 53 | UDP | DNS (Domain Name System) |
 | 67/68 | UDP | DHCP (Client/Server) |
 | 80 | TCP | HTTP (Webseiten) |
 | 110 | TCP | POP3 (E-Mail Abruf) |
@@ -88,10 +88,13 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 ---
 
 ## Ports & Firewalls
-- Firewalls kontrollieren, welche Ports **eingehend/ausgehend** genutzt werden dürfen.  
-- Beispiel:  
-  - Eingehend auf Port 22 offen -> Remote-Login erlaubt  
-  - Alles andere blockiert (Default-Deny)  
+- Firewalls kontrollieren, welche Ports für **eingehenden und ausgehenden** Datenverkehr genutzt werden dürfen.
+- Eine Firewall kann Ports öffnen (`allow`), schließen (`deny`) oder den Datenverkehr einschränken (`rate-limit`)
+- **Beispiel:**
+  - **Regel:** Eingehender Traffic auf Port 22 ist erlaubt.
+  - **Ergebnis:** Remote-Anmeldungen per SSH sind möglich.
+  - **Regel:** Alle anderen Ports blockieren (Default-Deny).
+  - **Ergebnis:** Das System ist vor unnötigen Angriffsvektoren geschützt.
 
 ---
 
@@ -102,37 +105,69 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 </div>
 
 ## Ports & Sicherheit
-- **Port Scanning** (z. B. mit `nmap`) identifiziert offene Ports und Dienste.  
+- **Port Scanning** (z. B. mit `nmap`) ist eine gängige Technik, um offene Ports auf einem Zielsystem zu identifizieren und die darauf laufenden Dienste zu erkennen.
 - **Gefahren offener Ports:**  
-  - Angriffsvektor (z. B. SMB auf Port 445 → WannaCry)  
-  - Schwachstellen durch alte/unsichere Dienste  
+  - **Angriffsvektor:** Ein offener, unsicherer Dienst (z. B. SMB auf Port 445) kann ausgenutzt werden, wie es bei der Ransomware WannaCry der Fall war.
+  - **Unnötige Exposition:** Jeder offene Port ist ein potenzieller Eintrittspunkt für Angreifer.
 - **Best Practice:**  
-  - Nur benötigte Ports öffnen  
-  - Dienste aktuell halten  
-  - IDS/IPS & Firewall einsetzen  
+  - **Default-Deny:** Schließe alle Ports, die nicht explizit für einen Dienst benötigt werden.
+  - **Patch-Management:** Halte alle auf den Ports laufenden Dienste und deren Software auf dem neuesten Stand.
+  - **Monitoring:** Setze Intrusion Detection/Prevention Systeme (IDS/IPS) ein, um ungewöhnliche Zugriffe zu erkennen.
 
 ---
 
 ## Beispiel: Verbindungsaufbau TCP vs. UDP
 
 ### TCP (z. B. HTTP, SSH)
-1. Client öffnet **ephemeren Port** (z. B. 50000)  
-2. Verbindung zu Zielserver:Port (z. B. 192.168.0.1:80)  
-3. **3-Way-Handshake**: SYN -> SYN/ACK -> ACK  
-4. Datenübertragung  
-5. Verbindung wird geordnet geschlossen  
+- **Verbindungsorientiert** und zuverlässig. Es findet ein "Handshake" statt, um sicherzustellen, dass die Verbindung aufgebaut ist und Daten korrekt ankommen.
+
+#### Der 3-Wege-Handshake
+1. Client sendet ein **SYN-Paket** vom ephemeren Port an den Server-Port.
+2. Server empfängt SYN, antwortet mit **SYN-ACK**.
+3. Client empfängt SYN-ACK und bestätigt mit **ACK**.
+
+```yaml
++-------------+                     +-------------+
+|    Client   |                     |    Server   |
++-------------+                     +-------------+
+      |                                   |
+      |------ SYN (Synchronize) --------->|
+      |                                   |
+      |<---- SYN-ACK (Sync-Acknowledge)---|
+      |                                   |
+      |------ ACK (Acknowledge) --------->|
+      |                                   |
+(Verbindung steht, Datenübertragung kann beginnen)
+```
+
 
 ### UDP (z. B. DNS, VoIP)
-1. Client sendet Paket von **ephemerem Port** (z. B. 55000) an Zielserver:Port (z. B. 8.8.8.8:53)  
-2. Server antwortet direkt zurück -> kein Handshake, keine Zustandsverwaltung  
+- **Verbindungslos** und schnell. Es gibt keinen Handshake oder eine Bestätigung, was die Datenübertragung sehr effizient macht.
+
+1. Client sendet ein UDP-Paket vom ephemeren Port an den Server-Port.
+2. Server empfängt die Anfrage und antwortet direkt mit einem UDP-Paket.
+3. Es gibt keine Garantie, dass das Paket ankommt oder in der richtigen Reihenfolge empfangen wird.
+
+```yaml
++-------------+                     +-------------+
+|    Client   |                     |    Server   |
++-------------+                     +-------------+
+      |                                   |
+      |------ UDP-Paket (Anfrage) ------->|
+      |                                   |
+      |<----- UDP-Paket (Antwort) --------|
+      |                                   |
+(Es gibt keine Bestätigung, dass das Paket ankam)
+```
 
 ---
 
 ## Zusammenfassung
 - Ports sind **16-Bit-Nummern (0–65535)**, die Anwendungen eindeutige Kommunikationskanäle bereitstellen.  
-- Es gibt drei Bereiche: **Well-Known, Registered, Ephemeral**.  
-- TCP = verbindungsorientiert, UDP = verbindungslos.  
-- Offene Ports müssen durch Firewalls und Patch-Management abgesichert werden.  
+- Es gibt drei Bereiche: **Well-Known**, **Registered**, **Ephemeral**.  
+- **TCP** ist zuverlässig und verbindungsorientiert, während **UDP** schnell und verbindungslos ist.  
+- Offene Ports müssen durch Firewalls und Patch-Management abgesichert werden, um Angriffsvektoren zu minimieren.
+
 
 ----
 

@@ -113,6 +113,9 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 | `nmap --script smb* <Ziel>`       | Alle SMB-Related-Skripte               |
 | `nmap --script http-title <Ziel>` | Seitentitel von Webservern extrahieren |
 | `nmap --script default <Ziel>`    | Default-Skripte (häufig nützlich)      |
+| `nmap --script exploit <Ziel>`    | Exploit-Angriffe                       |
+
+Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nmap.org/book/nse-usage.html](https://nmap.org/book/nse-usage.html).
 
 ---
 
@@ -127,13 +130,13 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 **Alle Ports mit Versionsscan:**
 `nmap -sV -p- <Ziel>`
 
-**OS- und Service-Erkennung + aggressive NSE-Skripte**
+**OS- und Service-Erkennung + aggressive NSE-Skripte:**
 `nmap -A <Ziel>`
 
 **UDP und TCP kombiniert:**
 `nmap -sS -sU -p U:53,161,T:22,80 <Ziel>`
 
-**Scan auf CVEs (Vuln Scripts)**
+**Scan auf CVEs (Vuln Scripts):**
 `nmap --script vuln <Ziel>`
 
 ---
