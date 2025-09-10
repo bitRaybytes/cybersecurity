@@ -28,11 +28,16 @@
 
 ## Wichtige Merkmale
 
-- **On-Demand-Zugriff:** Ressourcen können nach Bedarf in Echtzeit bereitgestellt und skaliert werden.
-- **Pay-as-you-go:** Die Abrechnung erfolgt nutzungsbasiert, d. h., du zahlst nur für das, was du wirklich nutzt (z. B. Datenvolumen oder Rechenzeit).
-- **Ortsunabhängigkeit:** Der Zugriff auf die Ressourcen ist von überall mit einer Internetverbindung möglich.
-- **Skalierbarkeit:** Leistungsressourcen lassen sich flexibel und oft automatisiert anpassen, um Lastspitzen abzufangen.
-- **Hohe Verfügbarkeit:** Cloud-Anbieter garantieren in der Regel eine hohe Ausfallsicherheit und bieten integrierte Daten-Backups.
+- **On-Demand-Zugriff:** 
+    - Ressourcen können nach Bedarf in Echtzeit bereitgestellt und skaliert werden.
+- **Pay-as-you-go:** 
+    - Die Abrechnung erfolgt nutzungsbasiert, d. h., du zahlst nur für das, was du wirklich nutzt (z. B. Datenvolumen oder Rechenzeit).
+- **Ortsunabhängigkeit:** 
+    - Der Zugriff auf die Ressourcen ist von überall mit einer Internetverbindung möglich.
+- **Skalierbarkeit:** 
+    - Leistungsressourcen lassen sich flexibel und oft automatisiert anpassen, um Lastspitzen abzufangen.
+- **Hohe Verfügbarkeit:** 
+    - Cloud-Anbieter garantieren in der Regel eine hohe Ausfallsicherheit und bieten integrierte Daten-Backups.
 
 ## Cloud-Dienstmodelle (SaaS, PaaS, IaaS)
 

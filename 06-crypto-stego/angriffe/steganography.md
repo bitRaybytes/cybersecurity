@@ -16,11 +16,11 @@
 Steganografie ist die Kunst des Verbergens von Informationen in einem scheinbar harmlosen Trägermedium wie Bild, Audio, Video oder Text.
 Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbergen.
 
-👉 Unterschied zur Kryptografie:
+👉 **Unterschied zur Kryptografie:**
 - Kryptografie verschlüsselt eine Nachricht → sie ist unlesbar, aber ihre Existenz ist offensichtlich.
 - Steganografie versteckt die Nachricht → niemand soll merken, dass eine Botschaft vorhanden ist.
 
-Moderne Beispiele sind:
+**Moderne Beispiele sind:**
 - Digitale Einbettung von Daten in Bilddateien (z. B. über die LSB-Methode, Least Significant Bit).
 - Unsichtbare Wasserzeichen in Dokumenten oder Druckern.
 
