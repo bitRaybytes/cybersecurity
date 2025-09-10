@@ -1,6 +1,6 @@
 # 🌐 VLAN – Virtual Local Area Network
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -19,7 +19,7 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Einleitung
 Ein **Virtual Local Area Network (VLAN)** unterteilt ein physisches Netzwerk in mehrere **logische Teilnetze**.  
@@ -29,21 +29,21 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - VLANs können sich über mehrere Switches hinweg erstrecken  
 - VLANs arbeiten im **OSI-Modell auf Layer 2 (Sicherungsschicht)**  
 
----
+
 
 ## Grundlagen
 - Ohne VLAN: alle Geräte im LAN sind in derselben Broadcast-Domain.  
 - Mit VLAN: Geräte können logisch getrennt werden, auch wenn sie am selben Switch hängen.  
 - Standard: **IEEE 802.1Q** – definiert VLAN-Tagging (Trunking).  
 
----
+
 
 ## Funktionsweise
 - VLANs „teilen“ einen Switch virtuell in mehrere kleinere Switches.  
 - Geräte im gleichen VLAN können direkt miteinander kommunizieren.  
 - Kommunikation zwischen VLANs erfordert einen **Router oder Layer-3-Switch** („Inter-VLAN Routing“).  
 
----
+
 
 ## VLAN-Typen
 
@@ -78,7 +78,7 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - Vorteil: flexibel und skalierbar.  
 - Einsatz: große Netzwerke, BYOD-Umgebungen.  
 
----
+
 
 <div align=right>
 
@@ -92,7 +92,7 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - **Sicherheit**: Trennung sensibler Systeme (z. B. Server, Gäste-WLAN).
 - **Effizienz**: Reduzierung von Broadcast-Traffic.
 
----
+
 
 ## Schutz & Sicherheit
 - VLANs allein sind **keine vollständige Sicherheitslösung**.  
@@ -104,7 +104,7 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
   - Trunk-Ports **explizit konfigurieren**, nicht automatisch aushandeln (kein DTP nutzen).
   - VLANs für **Management-Traffic** (SSH, SNMP) strikt trennen.
 
----
+
 
 ## Wichtige Protokolle
 - **IEEE 802.1Q** – VLAN-Tagging.
@@ -112,7 +112,7 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - **RSTP / STP (Spanning Tree Protocol)** – verhindert Schleifen, wichtig bei VLANs über mehrere Switches.
 - **Inter-VLAN Routing** – ermöglicht Kommunikation zwischen VLANs (Layer 3).
 
----
+
 
 ## Grafiken
 

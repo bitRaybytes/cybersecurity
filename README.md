@@ -1,7 +1,10 @@
 # 🛡️ Cybersecurity Hub – Dein zentraler Wissensspeicher
 Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools**, **Techniken**, **Notizen** und **Cheatsheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.
 
-Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen.
+Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen. Es behandelt viele wichtige Konzepte in der IT-Sicherheit. Mal weniger, mal mehr im Detail.
+
+Hast du Verbesserungsvorschläge? Lass sie uns unbedingt wissen!
+
 
 
 ## Inhaltsverzeichnis:
@@ -24,7 +27,7 @@ Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien
 ├── 01_basics_intro/
 ├── 02-network-security/
 ├── 03-web-security/
-├── 04-os-enumeration/
+├── 04-host-security/
 ├── 05-offensive_defensive_strategien/
 ├── 06-crypto-stego/
 ├── 07-social-engineering/

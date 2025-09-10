@@ -33,7 +33,7 @@ Damit das Paket im LAN zugestellt werden kann, benötigt er jedoch die **MAC-Adr
 
 Ein ARP-Paket ist im Ethernet-Frame eingebettet und hat folgende Struktur:  
 
-```yaml
+```text
 +------------------------+---------------------------------+
 | Feld                   | Größe                           |
 +------------------------+---------------------------------+
@@ -55,7 +55,7 @@ Mehr zu Protokollen findest du in der Datei [protkoll_header_cheatsheet.md](/02-
 
 Ein Gerät speichert bekannte IP <-> MAC-Zuordnungen in einer ARP-Tabelle:
 
-```yaml
+```text
 IP-Adresse     MAC-Adresse
 192.168.0.1    00:1A:2B:3C:4D:5E   # Router
 192.168.0.10   12:34:56:78:9A:BC   # Laptop
@@ -69,13 +69,13 @@ arp -a
 
 ## Ablauf einer ARP-Anfrage
 1. **Anfrage (Broadcast)**
-```yaml
+```text
 PC (192.168.0.10) → LAN-Broadcast:
 "Wer hat 192.168.0.1? Bitte sende mir deine MAC!"
 ```
 
 2. **Antwort (Unicast)**
-```yaml
+```text
 Router (192.168.0.1) → PC (192.168.0.10):
 "192.168.0.1 hat MAC 00:1A:2B:3C:4D:5E"
 ```
@@ -100,7 +100,7 @@ ip neigh show
 ```
 
 **Typisch Ausgabe:**
-```yaml
+```text
 192.168.0.1   ether 00:1A:2B:3C:4D:5E   C
 192.168.0.20  ether AA:BB:CC:DD:EE:FF   C
 ```
@@ -114,7 +114,7 @@ Da ARP **keine Authentifizierung** vorsieht:
 - Jeder Host im LAN kann **falsche ARP-Antworten** senden.
 - Diese Schwachstelle ermöglicht **ARP-Spoofing/Poisoning** (-> siehe [arp-spoofing.md](/02-network-security/arp_spoofing.md)).
 
-```yaml
+```text
 [Normales ARP]
 - ARP löst IP -> MAC innerhalb eines LAN auf
 - Speicherung in einer ARP-Tabelle
