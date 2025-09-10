@@ -1,11 +1,8 @@
 # 🛡️ Red Team Pentesting Routine: vsftpd Exploitation & Backdoor auf Metasploitable2
 
 Die Metasploitable2 ist eine virtuelle Maschine, die absichtlich verwundbare Stellen aufweist. Mit dieser VM lassen sich Werkzeuge wie Metasploit Framework testen.
-
 Wir wollen genau diese Schwachstellen dieser Maschine herausfinden und uns einen Remote Zugriff verschaffen.
-
 Dazu ist es notwendig, dass du Kali Linux, Metasploitable2 sowie pfSense in einer virtuellen Umgebung nutzen kannst. 
-
 Wir haben unser [Labnet](/09-practice-labs/labnet_infos.md) über Virtualbox eingerichtet. Solltest du dies auch tun, gibt es unzählige Guides im Internet, die dir dabei helfen, ein Labnet einzurichten.
 
 Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Metasploitable2 und pfSense).

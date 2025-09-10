@@ -9,7 +9,7 @@
 
 ## Was ist DVWA? 
 
-Die **Damn Vulnerable Web Application (DVWA)** ist eine bewusst unsichere Webanwendung, die für **Schulungs- und Testzwecke** entwickelt wurde. Ziel ist es, **Sicherheitsexperten, Entwicklern und Studenten** die Möglichkeit zu geben, **verschiedene Webanwendungs-Schwachstellen** in einer kontrollierten Umgebung zu üben und zu verstehen – ohne dabei echte Systeme zu gefährden.
+Die **Damn Vulnerable Web Application (DVWA)** ist eine bewusst unsichere Webanwendung, die für **Schulungs- und Testzwecke** entwickelt wurde. Ziel ist es, **Sicherheitsexperten, Entwicklern und Studenten** die Möglichkeit zu geben, verschiedene Webanwendungs-Schwachstellen in einer kontrollierten Umgebung zu üben und zu verstehen – ohne dabei echte Systeme zu gefährden.
 
 [Was ist die DVWA? - Google-Suche](https://www.google.com/search?q=was+ist+die+dvwa&client=firefox-b-d&sca_esv=45ade08aecea71dd&sxsrf=AE3TifNZWbMyTSVuoLgFF1l0m5ggqQv_Ew%3A1753627769172&ei=eTyGaNOZCt3d7_UP4e2IoQs)
 
@@ -25,6 +25,7 @@ Folgende Schritte zeigen dir, wie du DVWA über Docker auf Kali Linux installier
 
 ```bash
 sudo apt update -y
+### Gib anschließend dein Passwort an, solltest du gefragt werden.
 ```
 
 ![Schritt 1: Update Kali Linux](/09-practice-labs/ressources/pictures/step1UpdateKali.png)
@@ -51,7 +52,7 @@ sudo apt upgrade -y
 
 ### Schritt 3: Docker installieren
 
-Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/09-tools-cheatsheet/docker-infos.md).
+Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/08-tools-cheatsheet/docker-install.md).
 
 Hier die Kurzfassung:
 
@@ -98,7 +99,7 @@ http://<IP-Adresse>
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
-> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/03-web-security/sql-injection/sql-injection-cheatsheet.md)
+> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/03-web-security/injektionen/sql-injection-cheatsheet.md)
 
 
 

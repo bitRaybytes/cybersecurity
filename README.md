@@ -48,7 +48,7 @@ Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behand
 - **Grundlagen:** [Einführung in IT-Sicherheit und rechtliche Rahmenbedingungen](/01-basics-intro/)
 - **Netzwerksicherheit:** [Konzepte, Protokolle und Angriffsarten](/02-network-security/)
 - **Websicherheit:** [Anleitungen zu gängigen Schwachstellen wie SQL-Injections und XSS](/03-web-security/)
-- Betriebssysteme & Enumeration: [Grundlagen zur Aufklärung von Systemen und Privilege Escalation](/04-os-enumeration/)
+- **Host-Sicherheit** [Themen und Techniken zum Hardening von Servern und Systemen](/04-host-security/)
 - **Offensive/Defensive Strategien:** [Strategien, Tools und Methoden für Red-Teaming](/05-offensive_defensive_strategien/)
 - **Kryptographie & Steganografie:** [Verschlüsselungstechniken und das Verbergen von Daten](/06-crypto-stego/)
 - **Social Engineering:** [Techniken, die auf menschlicher Manipulation basieren](/07-social-engineering/)

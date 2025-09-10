@@ -24,7 +24,7 @@ docker run --rm -ir -p 80:80 vulnerables/web-dvwa
 
 ![Docker Containter mit DVWA starten](/09-practice-labs/ressources/pictures/dockerStart.png)
 
-Das lädt die Image-Datei direkt im Docker-Container-
+Das lädt die Image-Datei direkt im Docker-Container.  
 Wenn alles erfolgreich war, dann solltest du nun dieses Terminal vorfinden:
 
 ![DVWA erfogreich im Docker gestartet](/09-practice-labs/ressources/pictures/dockerDvwaRun.png)

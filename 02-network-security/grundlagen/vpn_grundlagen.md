@@ -1,10 +1,11 @@
-# VPN - Virtual Private Network
+# 🛡️ VPN - Virtual Private Network
 
 ## Inhaltsverzeichnis
 - [Einleitung: Was ist ein VPN?](#einleitung-was-ist-ein-vpn)
 - [VPN-Arten](#vpn-arten)
 - [Unterschied zwischen VPN und Proxy](#unterschied-zwischen-vpn-und-proxy)
 - [Split Tunneling](#split-tunneling)
+- [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
 ## Einleitung: Was ist ein VPN?
@@ -39,7 +40,7 @@ Für den Aufbau eines VPN-Tunnels sind sichere Protokolle wie **IPsec**, **OpenV
 
 </div>
 
-Stay curious 
+
 ## VPN-Arten
 
 Es gibt verschiedene Arten von VPNs, die für unterschiedliche Anwendungsfälle genutzt werden. Die drei wichtigsten sind:
@@ -79,7 +80,6 @@ Stellt eine direkte, verschlüsselte Verbindung zwischen zwei Endgeräten her.
 
 </div>
 
-Stay curious 
 ## Unterschied zwischen VPN und Proxy
 
 Auf den ersten Blick scheinen VPNs und Proxys ähnlich zu funktionieren, da beide die IP-Adresse verschleiern und den Datenverkehr über einen externen Server leiten. Es gibt jedoch wesentliche Unterschiede in Bezug auf Sicherheit, Verschlüsselung und Funktionsumfang.
@@ -105,6 +105,10 @@ Mit **Split Tunneling** wird nicht der gesamte Datenverkehr des Geräts durch de
 
 - **Bandbreite:** Die Bandbreite des Firmennetzwerks wird nicht durch private Aktivitäten von Mitarbeitern (z. B. Video-Streaming) beansprucht.
 
+
+## Nützliche Links
+- [https://de.wikipedia.org/wiki/IPsec](https://de.wikipedia.org/wiki/IPsec)
+- [https://de.wikipedia.org/wiki/Virtual_Private_Network](https://de.wikipedia.org/wiki/Virtual_Private_Network)
 
 
 ## Haftungsausschluss
