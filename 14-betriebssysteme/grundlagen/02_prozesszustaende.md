@@ -21,9 +21,9 @@ Während seiner Abarbeitung durchläuft ein Prozess verschiedene Zustände. Für
 * **Blockiert (Blocked):** Der Prozess kann nicht ausgeführt werden, weil er auf das Eintreten eines bestimmten Ereignisses wartet. Zum Beispiel wartet er auf eine Benutzereingabe, das Fertigstellen eines Druckauftrags oder das Laden einer Datei.  
 
 ```text
-                   +-----------+                       +------------+
-                   |   Neu     |                       |   Aktiv    |
-                   +-----------+                       +------------+
+                   +-----------+                         +------------+
+                   |   Neu     |                         |   Aktiv    |
+                   +-----------+                         +------------+
                          |                                    |  ^
                          |                                    |  |
                          v                                    v  |
