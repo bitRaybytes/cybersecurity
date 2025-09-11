@@ -197,6 +197,12 @@ powershell -EncodedCommand $encoded
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -210,12 +216,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

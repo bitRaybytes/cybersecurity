@@ -142,6 +142,14 @@ Manuelles Hardening ist fehleranfällig und zeitaufwändig.  Automatisierung ist
 ## Nützliche Links
 - [https://de.wikipedia.org/wiki/H%C3%A4rten_(Computer)](https://de.wikipedia.org/wiki/H%C3%A4rten_(Computer))
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -154,12 +162,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

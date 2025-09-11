@@ -149,7 +149,7 @@ msfconsole
 
 ![msfconsole starten](/09-practice-labs/ressources/pictures/metasploit-vsftpd3.png)
 
-Nachdem msfconsole erfolgreich gestartet ist, wirst du merken, dass sich die Anzeige geändert hat. Das liegt daran, dass wir nun im der Shell des Programm `msfconsole` sind.
+Nachdem msfconsole erfolgreich gestartet ist, wirst du merken, dass sich die Anzeige geändert hat. Das liegt daran, dass wir nun in der Shell des Programm `msfconsole` sind.
 
 ### 3.2 Nach passendem Exploit-Modul suchen
 
