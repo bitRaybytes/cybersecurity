@@ -280,5 +280,5 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 </div>
 
-📅 **Letzte Aktualisierung:** August 2025  
+📅 **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Ergänzungen & Verbesserungen gern gesehen!  

@@ -65,6 +65,14 @@ Dieses Konzept der Hierarchie ist wichtig für die Organisation und Verwaltung v
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -78,15 +86,9 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Septmeber 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
