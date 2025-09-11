@@ -1,8 +1,6 @@
 # 📚 README - Practice Labs
 
-Hier findest du verschiedene Trainings und Labs zu
-CTF, SQL-Injections, Malware und weitere Themen zum herunterladen
-und selbst ausprobieren.
+Hier findest du verschiedene Trainings und Labs zu CTF, SQL-Injections, Malware und weitere Themen zum herunterladen und selbst ausprobieren.
 
 ## Inhaltsverzeichnis
 

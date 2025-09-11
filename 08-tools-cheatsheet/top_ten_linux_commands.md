@@ -3,7 +3,7 @@
 **Zweck dieser Datei:**  
 Diese Datei enthält eine kompakte Auswahl der nützlichsten Linux-Kommandos für Security-Analysten, Pentester, Systemadministratoren und CTF-Spieler. Sie helfen beim Navigieren, Analysieren und Kontrollieren eines kompromittierten oder fremden Systems – etwa nach erfolgreicher Exploitation oder während der Post-Exploitation-Phase.
 
-> ⚠️ **Disclaimer:** Die hier beschriebenen Techniken und Kommandos sind ausschließlich für Schulungs- und Testzwecke gedacht – z. B. in CTF-Umgebungen oder autorisierten Penetrationstests. Der Missbrauch in realen, nicht autorisierten Systemen ist strafbar.
+> **Disclaimer:** Die hier beschriebenen Techniken und Kommandos sind ausschließlich für Schulungs- und Testzwecke gedacht – z. B. in CTF-Umgebungen oder autorisierten Penetrationstests. Der Missbrauch in realen, nicht autorisierten Systemen ist strafbar.
 
 
 
@@ -139,6 +139,12 @@ grep -r "api_key" /var/www/html
 - [HackTricks Linux – Post-Exploitation Tipps](https://book.hacktricks.xyz/linux-hardening/)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -152,13 +158,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Stay curious – stay secure. 🔐
 
 🗓️ **Letzte Aktualisierung:** August 2025  

@@ -189,6 +189,11 @@ Beide Seiten: Schlüssel für Sitzung aushandeln
 - Einsatz zentraler Benutzerverwaltung in größeren Netzen.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -203,12 +208,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

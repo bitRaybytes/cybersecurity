@@ -7,7 +7,7 @@
 - [Das Prozessmodell](#das-prozessmodell)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
 
 ## Die wichtigsten Begriffe
 Bevor wir uns mit Prozessen befassen, lass uns einige grundlegende Konzepte klären, die oft verwechselt werden:
@@ -16,7 +16,7 @@ Bevor wir uns mit Prozessen befassen, lass uns einige grundlegende Konzepte klä
 - **Prozedur:** Eine Prozedur ist ein Unterprogramm. Sie kehrt nach ihrer Ausführung zum aufrufenden, übergeordneten Programm zurück.
 - **Thread:** Ein **Thread** ist ein Ausführungsstrang innerhalb eines Prozesses. Er ist der kleinste Teil eines Programms, der vom Betriebssystem unabhängig ausgeführt werden kann. Ein Prozess kann einen oder mehrere Threads enthalten.
 
----
+
 
 ## Was ist ein Prozess?
 
@@ -26,7 +26,7 @@ Jeder Prozess hat seinen eigenen Speicherbereich und seine eigenen Ressourcen, d
 
 **Beispiel:** Du öffnest deinen Webbrowser. Das Programm (die Software auf der Festplatte) wird zu einem Prozess im Speicher. Innerhalb dieses Prozesses können mehrere Threads laufen, z. B. ein Thread für das Laden der Webseite, ein anderer für die Wiedergabe eines Videos und ein dritter für das Scrollen.
 
----
+
 
 ## Prozessmerkmale im Überblick
 Um einen Prozess zu identifizieren und zu verwalten, weist das Betriebssystem ihm bestimmte Merkmale zu:
@@ -46,8 +46,11 @@ get-process | sort cpu -descending | select -first 10
 
 Dieser Befehl listet die 10 Prozesse mit dem höchsten CPU-Verbrauch auf.
 
+
+
+
 ## Das Prozessmodell
-Ein Prozess ist die grundlegende Einheit der Ausführung. Es können sich zwar mehrere Prozesse gleichzeitig im Speicher befinden, aber auf einem System mit einer einzigen CPU ist immer nur ein Prozess aktiv. Das Betriebssystem verwaltet die Prozessorzeit und teilt sie den Prozessen zu.
+Ein Prozess ist die grundlegende Einheit der Ausführung. Es können sich zwar mehrere Prozesse gleichzeitig im Speicher befinden, aber auf einem System mit einer einzigen CPU ist immer nur ein Prozess aktiv. Das Betriebssystem verwaltet die Prozessorzeit und teilt sie den Prozessen zu. Auf Multi-Core-Systemen können tatsächlich mehrere Prozesse **parallel** ausgeführt werden.  
 
 - **Eigenschaften von Prozessen:**
     - Jeder Prozess hat eine eigene, vom Betriebssystem verwaltete Umgebung.
@@ -56,8 +59,18 @@ Ein Prozess ist die grundlegende Einheit der Ausführung. Es können sich zwar m
     - Prozessen kann eine **Priorität** zugewiesen werden, die bestimmt, wie schnell sie die CPU erhalten.
     - Das Betriebssystem speichert alle Informationen über die Prozesse in einer **Prozesstabelle**.
 
+
+
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)](https://de.wikipedia.org/wiki/Prozess_(Informatik))
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Haftungsausschluss
 
@@ -72,11 +85,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
 
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

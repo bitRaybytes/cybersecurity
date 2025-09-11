@@ -35,6 +35,8 @@ Während seiner Abarbeitung durchläuft ein Prozess verschiedene Zustände. Für
                        +------------------------------------------+
 ```
 
+**Merke:** Ein Prozess kann nur dann „aktiv“ sein, wenn er die CPU gerade besitzt.
+
 ## Zustandswechsel im Detail
 Der Wechsel zwischen den Zuständen wird von bestimmten Ereignissen ausgelöst.
 
@@ -44,26 +46,85 @@ Der Scheduler wählt einen Prozess aus der Bereit-Warteliste aus und weist ihm d
 ### Timer-Runout (aktiv -> bereit):
 Die zugewiesene Rechenzeit (Zeitscheibe) eines Prozesses ist abgelaufen. Das Betriebssystem entzieht dem Prozess die CPU und setzt ihn wieder auf die Bereit-Liste. Dies ist eine Form des verdrängenden Multitaskings.
 
+Dieses Prinzip heißt **präemptives Multitasking**.
+
 ### Block (aktiv -> blockiert):
-Ein Prozess benötigt eine Ressource, die momentan nicht verfügbar ist (z. B. ein E/A-Gerät). Er fordert die Ressource an und wechselt in den blockierten Zustand, um die CPU für andere Prozesse freizugeben. Dies ist der einzige Zustandswechsel, den ein Prozess selbst auslösen kann.
+Ein Prozess benötigt eine Ressource, die momentan nicht verfügbar ist (z. B. ein I/O-Gerät). Er fordert die Ressource an und wechselt in den blockierten Zustand, um die CPU für andere Prozesse freizugeben. Dies ist der einzige Zustandswechsel, den ein Prozess selbst auslösen kann.
 
 ### Wakeup (blockiert -> bereit):
 Das Ereignis, auf das der blockierte Prozess gewartet hat, ist eingetreten (z. B. die Datei ist geladen, die Benutzereingabe ist erfolgt). Der Prozess wird auf die Bereit-Liste verschoben und kann wieder auf die CPU warten.
 
+**Vereinfachte Darstellung eines Prozess-Lebenszyklus:**  
+```text
+                +-----------+
+                |   Neu     |
+                +-----------+
+                      |
+                      v
+                +-----------+      CPU-Zeit        +-----------+
+                |  Bereit   | ------------------>  |   Aktiv   |
+                +-----------+                      +-----------+
+                      ^                                 |
+                      |                                 |
+             Wakeup   |                                 |   Block
+   (Ereignis fertig)  |                                 | (I/O warten)
+                      |                                 v
+                +-----------+ <------------------- +-----------+
+                | Blockiert |                      |  Aktiv    |
+                +-----------+                      +-----------+
+
+```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Prozesshierarchie
 Wenn du ein Programm startest, erzeugt das Betriebssystem einen Prozess. Dieser Prozess kann wiederum neue Prozesse erstellen, die als Kindprozesse (Child Processes) bezeichnet werden. Der ursprüngliche Prozess ist der Elternprozess (Parent Process).
 
-- Jeder Kindprozess hat genau einen Elternprozess.
+- **Elternprozess (Parent Process):** Der ursprüngliche Prozess.
 
-- Ein Elternprozess kann mehrere Kindprozesse haben.
+- **Kindprozesse (Child Processes):** Prozesse, die vom Elternprozess erzeugt wurden.
+
 
 - Wenn ein Elternprozess beendet wird, werden in der Regel auch alle seine Kindprozesse beendet.
 
+```text
+Systemprozess (PID 1)
+    ├── sshd (PID 102)
+    │      ├── bash (PID 245)
+    │      │     └── vim (PID 301)
+    │      └── bash (PID 260)
+    └── apache2 (PID 120)
+           ├── apache2 worker (PID 200)
+           └── apache2 worker (PID 201)
+
+```
 
 Dieses Konzept der Hierarchie ist wichtig für die Organisation und Verwaltung von Prozessen im Betriebssystem.
 
+**Wichtig:**
+
+- Jeder Kindprozess hat genau einen Elternprozess.
+
+- Ein Elternprozess kann mehrere Kinder haben.
+
+- Beendet sich ein Elternprozess, übernimmt oft **init**/**systemd** (PID 1) als „Adoptivelternteil“ die verwaisten Prozesse.
+
+
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde)
+- [Microsoft Windows Commands - Tasklist: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 <div align=right>

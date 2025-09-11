@@ -113,6 +113,12 @@ Der `icacls`-Befehl ist das moderne und mächtigere Werkzeug zur Verwaltung von 
 - [https://wiki.ubuntuusers.de/Rechte/](https://wiki.ubuntuusers.de/Rechte/)
 - [https://learn.microsoft.com/de-de/windows/win32/fileio/file-security-and-access-rights](https://learn.microsoft.com/de-de/windows/win32/fileio/file-security-and-access-rights)
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -125,12 +131,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

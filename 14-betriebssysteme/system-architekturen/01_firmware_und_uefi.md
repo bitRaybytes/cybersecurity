@@ -48,6 +48,12 @@ Die Hauptaufgabe von UEFI ist es, den Computer vom ausgeschalteten Zustand bis z
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Der Systemstart: Vom Bootloader zum Kernel
 
 Der Bootvorgang ist eine Kette von Ereignissen, die sicherstellen, dass dein System korrekt hochfährt.
@@ -97,6 +103,12 @@ Secure Boot ist eine zentrale Sicherheitsfunktion von UEFI. Sie stellt sicher, d
 
 - **Hinweis für Linux-Nutzer:** Größere Linux-Distributionen lassen ihre Bootloader von Microsoft signieren, um die Kompatibilität mit den meisten Secure Boot-fähigen Systemen zu gewährleisten. Für spezielle Anwendungen oder um bestimmte Sicherheitssysteme zu umgehen, ist es oft notwendig, Secure Boot im UEFI-Setup zu deaktivieren.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Weitere Firmware-Interfaces
 Es ist wichtig zu wissen, dass es neben BIOS und UEFI auch andere Firmware-Schnittstellen gibt:
