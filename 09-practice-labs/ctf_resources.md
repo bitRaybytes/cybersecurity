@@ -36,15 +36,15 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 | Tool           | Zweck                                         |
 |----------------|-----------------------------------------------|
-| Burp Suite     | Web Application Proxy für Tests & Exploits    |
-| Nmap           | Netzwerk-Scanning & Host Discovery            |
-| Nikto / Dirb   | Webserver-Recon, Directory Brute Force        |
-| John / Hashcat | Passwort-Cracking                            |
-| LinPEAS / WinPEAS | Privilege Escalation Scripts für Linux/Windows |
-| Gobuster / ffuf| Fuzzing & Directory Discovery                 |
-| Metasploit     | Exploitation Framework                        |
-| Ghidra         | Reverse Engineering                           |
-| CyberChef      | Encoding/Decoding & Data-Transformation       |
+| [Burp Suite Community Edition](https://portswigger.net/burp/communitydownload)     | Web Application Proxy für Tests & Exploits    |
+| [Nmap](https://nmap.org/)           | Netzwerk-Scanning & Host Discovery            |
+| [Nikto](https://github.com/sullo/nikto) / [Dirb](https://www.kali.org/tools/dirb/)   | Webserver-Recon, Directory Brute Force        |
+| [John](https://www.kali.org/tools/john/) / [Hashcat](https://hashcat.net/hashcat/) | Passwort-Cracking                            |
+| [LinPEAS](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS) / [WinPEAS](https://github.com/peass-ng/PEASS-ng/tree/master/winPEAS) | Privilege Escalation Scripts für Linux/Windows |
+| [Gobuster](https://github.com/OJ/gobuster) / [ffuf](https://github.com/ffuf/ffuf) | Fuzzing & Directory Discovery                 |
+| [Metasploit](https://www.metasploit.com/)     | Exploitation Framework                        |
+| [Ghidra](https://github.com/NationalSecurityAgency/ghidra)         | Reverse Engineering                           |
+| [CyberChef](https://github.com/gchq/CyberChef)      | Encoding/Decoding & Data-Transformation       |
 
 
 
@@ -71,12 +71,12 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 | Name                  | Fokus                            |
 |-----------------------|----------------------------------|
-| TryHackMe Discord     | Anfängerhilfe, Community         |
-| HTB Discord           | Tipps, Lösungen, Networking      |
-| InfoSec Prep Discord  | Unterstützung für OSCP & andere Zertifikate |
+| [TryHackMe Discord](https://discord.com/invite/tryhackme)     | Anfängerhilfe, Community         |
+| [HTB Discord](https://discord.com/invite/hackthebox)           | Tipps, Lösungen, Networking      |
+| [InfoSec Prep Discord](https://discord.com/invite/infosecprep)  | Unterstützung für OSCP & andere Zertifikate |
 | CTFtime Discord       | CTF-Turniere, Organisation       |
-| r/netsec (Reddit)     | Allgemeine IT-Security Themen    |
-| r/AskNetsec           | Fragen zu Tools & Vorgehensweisen|
+| [r/netsec (Reddit)](https://www.reddit.com/r/netsec/)     | Allgemeine IT-Security Themen    |
+| [r/AskNetsec](https://www.reddit.com/r/AskNetsec/)           | Fragen zu Tools & Vorgehensweisen|
 
 
 
