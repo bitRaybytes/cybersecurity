@@ -241,7 +241,7 @@ Sperrt nur bestimmte, bekannte MAC-Adressen von der Netzwerkverbindung.
 
 ## Zusammenfassung
 
-```less
+```text
 +-------------+      +---------------+      +-------------+
 | Gerät A     |      |     Switch    |      | Gerät B     |
 | MAC: ...A   |----->| (CAM-Tabelle) |----->| MAC: ...B   |
