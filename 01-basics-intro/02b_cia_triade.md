@@ -47,6 +47,12 @@ Zusammen bilden diese drei Prinzipien das Fundament für Sicherheitsrichtlinien,
 
 **Beispiel:** Ein verschlüsseltes E-Mail-Archiv kann nur von demjenigen entschlüsselt werden, der den richtigen Schlüssel besitzt.
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Integrität (Integrity)
 **Integrität** stellt sicher, dass Daten korrekt, vollständig und unverändert sind. Sie garantiert, dass Informationen nicht unbefugt oder versehentlich manipuliert wurden.
 
@@ -83,6 +89,12 @@ Die CIA-Triade ist ein essenzieller Rahmen, um die Risiken von Informationssyste
 - [Wikipedia: Verfügbarkeit](https://de.wikipedia.org/wiki/Verf%C3%BCgbarkeit)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -96,11 +108,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

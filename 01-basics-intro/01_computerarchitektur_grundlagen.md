@@ -159,14 +159,13 @@ Die **CPU** (**Central Processing Unit**) ist das Herzstück des Computers. Sie 
 
 **Sicherheitsrelevanz der Caches:** Die **L1-**, **L2-** und **L3-Caches** sind für die Leistung entscheidend. Allerdings können aus der Art, wie sie auf Daten zugreifen, Rückschlüsse auf die verarbeiteten Informationen gezogen werden. Dieses Phänomen wird bei sogenannten **Side-Channel-Angriffen** ausgenutzt, um sensible Daten wie kryptografische Schlüssel zu extrahieren.
 
+## Nützliche Links
 
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
-
-## Nützliche Links
 
 
 ## Haftungsausschluss
