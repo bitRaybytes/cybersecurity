@@ -32,6 +32,7 @@ Diese Plattformen sind ideal für praktische Übungen, da sie dir eine sichere U
 - **Ringzer0ctf:** Bietet CTF-Wettbewerbe mit verschiedenen Challenges unter [ringzer0ctf.com](https://ringzer0ctf.com/).
 - **SmashTheStack:** Eine Wargame-Plattform unter [smashthestack.org](https://www.smashthestack.org/) mit dem Fokus auf Binary Exploitation und Reverse Engineering.
 - **https://deusx64.ai/:** Eine Wargame [https://deusx64.ai/](https://deusx64.ai/). Der Einführungskurs: [https://wargames.ret2.systems/course](https://wargames.ret2.systems/course).
+- **https://boot.dev:** [https://boot.dev/](https://www.boot.dev?bannerlord=justray) ist eine interaktive Plattform, um das Programmieren zu lernen. 
 
 ### Übungsanwendungen und VMS
 
