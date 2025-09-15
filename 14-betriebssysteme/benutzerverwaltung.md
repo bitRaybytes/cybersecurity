@@ -12,7 +12,6 @@ Sie stellt sicher, dass Benutzer, Prozesse und Dateien sauber voneinander getren
 - [ACLs - Access Control Lists](#acls---access-control-lists)
 - [Remote-Zugriff und Verwaltung](#remote-zugriff-und-verwaltung)
 - [Best Practices Benutzerverwaltung](#best-practices-benutzerverwaltung)
-- [Nützliche Links]()
 - [Haftungsausschluss](#haftungsausschluss)
 
 ## Grundprinzipien

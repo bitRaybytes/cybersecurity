@@ -93,6 +93,12 @@ Auf den ersten Blick scheinen VPNs und Proxys ähnlich zu funktionieren, da beid
 | **Protokolle** | Nutzt sichere Protokolle wie **OpenVPN** oder **WireGuard** | Nutzt oft unsicher Protokolle wie HTTP, HTTPS, SOCKS. |
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Split Tunneling
 
 Mit **Split Tunneling** wird nicht der gesamte Datenverkehr des Geräts durch den VPN-Tunnel gesendet. Stattdessen wird nur ein Teil des Datenverkehrs – beispielsweise nur der für das Firmennetzwerk bestimmte Traffic – verschlüsselt, während der restliche Internetverkehr unverschlüsselt über die normale Verbindung läuft.
@@ -106,9 +112,21 @@ Mit **Split Tunneling** wird nicht der gesamte Datenverkehr des Geräts durch de
 - **Bandbreite:** Die Bandbreite des Firmennetzwerks wird nicht durch private Aktivitäten von Mitarbeitern (z. B. Video-Streaming) beansprucht.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
 - [https://de.wikipedia.org/wiki/IPsec](https://de.wikipedia.org/wiki/IPsec)
 - [https://de.wikipedia.org/wiki/Virtual_Private_Network](https://de.wikipedia.org/wiki/Virtual_Private_Network)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -123,12 +141,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

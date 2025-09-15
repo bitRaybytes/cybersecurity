@@ -14,25 +14,84 @@ Die **Topologie** beschreibt die Anordnung der Verbindungen in einem Netzwerk. E
 ## Physikalische Topologien
 
 * **Stern-Topologie:** Alle Geräte sind sternförmig mit einem zentralen Knoten (z. B. Switch oder Hub) verbunden.
-    ```
-                  +-----------+
-                 /             \
-        +---+---+              +---+---+
-        | PC A  |---(Switch)---| PC B  |
-        +-------+              +---+---+
-                \              /
-                 +------------+
+```text
+                    +------+
+                    | PC A |
+                    +------+
+                       |
+                       |
+        +---+---+      |       +---+---+
+        | PC D  |---(Switch)---| PC B  |
+        +-------+      |       +---+---+
+                       | 
                        |
                     +------+
                     | PC C |
                     +------+
-    ```
+```
 
 * **Ring-Topologie:** Jedes Gerät ist mit seinem Vorgänger und Nachfolger verbunden, sodass ein geschlossener Ring entsteht. Daten fließen in der Regel nur in eine Richtung.
+```text
+                    +------+
+        +-----------| PC A |-------+ 
+        |           +------+       |
+        |                          |
+    +------+                    +------+
+    | PC B |                    | PC D |
+    +------+                    +------+              
+        |                          |
+        |         +------+         |
+        +---------| PC C |---------+
+                  +------+
+```
+
 * **Mesh-Topologie:** Geräte sind über mehrere Pfade miteinander verbunden. Ein vollständig vermaschtes Netz hat Verbindungen zwischen allen Knoten, was es sehr ausfallsicher, aber auch teuer macht.
+```text
+       +------+     +------+
+       | PC A |-----| PC B |
+       +------+     +------+
+          |   \     /   |   
+          |    \   /    |
+          |     \ /     |
+          |     / \     |
+          |    /   \    |
+       +------+     +------+
+       | PC C |-----| PC D |
+       +------+     +------+
+```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 * **Bus-Topologie:** Alle Geräte sind über ein einziges, gemeinsames Kabel verbunden.
+```text
 
+         +------+          +------+
+         | PC B |          | PC D |
+         +------+          +------+
+            |                  |
+---+--------+--------+---------+------         
+   |                 |
++------+          +------+
+| PC A |          | PC C |
++------+          +------+
+```
 
+- Es gibt noch weitere Topologien wie bspw.:
+    - Punkt-zu-Punkt-Topologie
+    - Baum-Topologie
+    - Zell-Topologie
+    - Hybride-Topologie
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Zugriffsverfahren
 Zugriffsverfahren regeln, wie Geräte im Netzwerk auf das Übertragungsmedium zugreifen, um Kollisionen zu vermeiden.
@@ -53,6 +112,12 @@ Wird in **drahtlosen WLAN-Netzwerken** verwendet.
 Dieses Verfahren versucht, Kollisionen **im Voraus zu vermeiden**, was in drahtlosen Netzen effektiver ist.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -66,12 +131,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 
