@@ -15,6 +15,12 @@ Die **Damn Vulnerable Web Application (DVWA)** ist eine bewusst unsichere Webanw
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## DVWA im Docker unter Kali Linux installieren 
 
 Folgende Schritte zeigen dir, wie du DVWA über Docker auf Kali Linux installieren kannst:
@@ -30,6 +36,12 @@ sudo apt update -y
 
 ![Schritt 1: Update Kali Linux](/09-practice-labs/ressources/pictures/step1UpdateKali.png)
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Schritt 2: Kali Linux upgraden
 
 Anschließend führst du das Upgrade durch:
@@ -38,21 +50,21 @@ Anschließend führst du das Upgrade durch:
 sudo apt upgrade -y
 ```
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 ![Schritt 2: Upgrade Kali Linux](/09-practice-labs/ressources/pictures/step2UpgradeKali.png)
 
 **Tipp:** Das `-y` steht für "yes" – es bestätigt alle Rückfragen automatisch.
 
 **Hinweis:** Falls du zur Eingabe eines Passworts aufgefordert wirst, gib dein **Root- oder Sudo-Passwort** ein.
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Schritt 3: Docker installieren
 
-Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/08-tools-cheatsheet/docker-install.md).
+Eine ausführliche Anleitung zur Docker-Installation findest du hier: [Docker Guide](/08-tools-cheatsheet/tools-install-guides/docker-install.md).
 
 Hier die Kurzfassung:
 
@@ -63,6 +75,12 @@ Hier die Kurzfassung:
 5. Testlauf mit `hello-world` 
 
 ![Schritt 3: Abhängigkeiten installieren](/09-practice-labs/ressources/pictures/step3installDependencies.png)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Schritt 4: DVWA starten
 
@@ -83,12 +101,6 @@ Dieser Befehl lädt das DVWA-Image (falls noch nicht vorhanden), startet einen C
 http://localhost
 ```
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die entsprechende **IP-Adresse deiner VM**:
 
 ```http
@@ -99,9 +111,15 @@ http://<IP-Adresse>
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
-> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheat Sheet](/03-web-security/injektionen/sql-injection-cheatsheet.md)
+> Um die Installation komplett abzuschließen, müssen wir unsere Datenbank registrieren. Ab hier kannst du die gesamte Seite versuchen zu inspizieren. Brauchst du Hilfe bei dem Them SQL-Injection? [Hier geht es zum SQL-Injection Cheatsheet](/03-web-security/injektionen/sql-injection-cheatsheet.md)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Hinweise
@@ -115,6 +133,12 @@ http://<IP-Adresse>
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Fazit
 
 Mit DVWA kannst du realistische Web-Angriffe wie SQL-Injection, XSS oder Command Injection **risikofrei testen und verstehen**. In Kombination mit Docker auf Kali Linux erhältst du eine flexible, wiederverwendbare Umgebung für dein Cybersecurity-Training. 
@@ -122,6 +146,12 @@ Mit DVWA kannst du realistische Web-Angriffe wie SQL-Injection, XSS oder Command
 > **Nächster Schritt:** Übe mit Tools wie Burp Suite, OWASP ZAP oder Nikto gegen deine DVWA-Instanz!
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -136,12 +166,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

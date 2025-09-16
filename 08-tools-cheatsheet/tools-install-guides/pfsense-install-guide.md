@@ -24,6 +24,13 @@
 **pfSense** ist eine kostenlose, auf FreeBSD basierende Open-Source-Firewall- und Router-Distribution. Sie ist eine der meistgenutzten und leistungsstärksten Lösungen für Heimanwender und Unternehmen. pfSense bitete dir die Möglichkeit, eine realistische Netzwerkumgebung in deiner Virtualisierung zu erstellen und zu steuern. Dieser Guide zeigt dir Schritt für Schritt, wie du pfSense in Oracle VirtualBox installierst und als zentrales Gateway für dein internes Lab-Netzwerk konfigurierst.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Voraussetzungen
 
 - Oracle VirtualBox installiert
@@ -31,6 +38,13 @@
 - Mindestens zwei virtuelle Netzwerkkarten (WAN & LAN)
 - Host-System mit ausreichend Ressourcen (mindestens 2 GB RAM für pfSense)
 - Eine weitere VM, z. B. Kali Linux oder Windows, um das Lab-Netzwerk zu testen.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Grundlagen der Lab-Architektur
 
@@ -75,6 +89,13 @@ Hier ist ein einfaches Schema für eine sichere Lab-Umgebung:
 4. Erstelle eine virtuelle Festplatte. Wähle **VDI** (VirtualBox Disk Image) und lege eine dynamisch allokierte Größe von **mindestens 10 GB** fest.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Schritt 2: Netzwerkkarten konfigurieren
 Dieser Schritt ist entscheidend für die Funktionalität deines Labs. Die erste Netzwerkkarte (WAN) stellt die Verbindung zur Außenwelt her, die zweite (LAN) zum internen Lab-Netzwerk.
@@ -93,6 +114,13 @@ Dieser Schritt ist entscheidend für die Funktionalität deines Labs. Die erste 
 
 > Tipp: Wenn du mehrere VMs im selben Labnet verbinden willst, stelle alle auf das gleiche interne Netzwerk ein.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Schritt 3: ISO mounten & pfSense installieren
@@ -126,6 +154,13 @@ Nach dem Neustart bootet pfSense in die Konsole und fragt nach der Zuweisung der
 3. Bestätige mit y. pfSense weist der LAN-Schnittstelle automatisch die IP-Adresse `192.168.1.1` zu.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Schritt 5: Zugriff über Webinterface
 Um pfSense zu konfigurieren, benötigst du eine weitere VM (z. B. Kali Linux), die mit dem gleichen internen Netzwerk (`Labnet`) verbunden ist. 
 
@@ -141,6 +176,13 @@ Um pfSense zu konfigurieren, benötigst du eine weitere VM (z. B. Kali Linux), d
 
 4. Folge dem Web-Wizard zur Erstkonfiguration, um Hostname, DNS-Server und das Administrator-Passwort zu ändern. **Das Ändern des Standardpassworts ist ein kritischer erster Schritt zur Absicherung!**
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Schritt 6: Wichtige Grundeinstellungen im WebGUI
@@ -171,6 +213,13 @@ Deine pfSense-Instanz agiert nun als Gateway und Firewall für dein internes Net
 - Du kannst nun gezielte Firewall-Regeln erstellen, um den Traffic zwischen deinen Lab-VMs zu steuern oder bestimmten Verkehr zu blockieren.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tipps für dein Cybersecurity Lab
 
 - **Regeln definieren:** `Firewall > Rules` kannst du Traffic zwischen verschiedenen internen Subnetzen blockieren. Blockiere beispielsweise den Traffic zwischen deinem Pentesting-System und deinem Zielsystem.
@@ -181,11 +230,25 @@ Deine pfSense-Instanz agiert nun als Gateway und Firewall für dein internes Net
 - **VPN-Server einrichten:** Erstelle einen VPN-Server in pfSense, um dich von außerhalb sicher mit deinem Lab-Netzwerk zu verbinden.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Weitere Infos & Doku
 
 - [Offizielle pfSense-Dokumentation](https://docs.netgate.com/pfsense/en/latest/)
 - [Netgate Forum](https://forum.netgate.com/)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Fazit

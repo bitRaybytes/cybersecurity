@@ -1,10 +1,13 @@
-# 🛡️ Cybersecurity Hub – Dein zentraler Wissensspeicher
+# 🛡️ Cybersecurity Hub - Angreifen | Verteidigen | Lernen
+
+<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=170&color=0a0a23&text=Cybersecurity%20Hub-nl-%20⚔️%20Angreifen%20|%20🛡️%20Verteidigen%20|%20🧠%20Lernen&fontSize=44&animation=blink&section=header&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=40" /></div>
+
+
 Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools**, **Techniken**, **Notizen** und **Cheatsheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.
 
-Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen. Es behandelt viele wichtige Konzepte in der IT-Sicherheit. Mal weniger, mal mehr im Detail.
+Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen. Es behandelt viele wichtige Konzepte in der IT-Sicherheit.
 
-Hast du Verbesserungsvorschläge? Lass sie uns unbedingt wissen!
-
+Hast du Verbesserungsvorschläge? Lasse es uns unbedingt wissen!
 
 
 ## Inhaltsverzeichnis:
@@ -24,7 +27,7 @@ Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien
 
 ```text
 📦 cybersecurity-hub/
-├── 01_basics_intro/
+├── 01-basics_intro/
 ├── 02-network-security/
 ├── 03-web-security/
 ├── 04-host-security/
@@ -34,11 +37,15 @@ Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien
 ├── 08-tools-cheatsheet/
 ├── 09-practice-labs/
 ├── 10-checklists/
-├── 11-cheatsheets-quickrefs/
-├── 12-kurse/
-├── 13-vulnerabilities/
-└── 14-betriebssysteme/
+├── 11-kurse/
+└── 12-betriebssysteme/
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Themenübersicht
 
@@ -55,18 +62,23 @@ Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behand
 - **Tools & Cheatsheets:** [Tools sowie Cheatsheets](/08-tools-cheatsheet/)
 - **Praxis-Labs:** [Detaillierte Anleitungen für praktische Übungen](/09-practice-labs/)
 - **Checklisten:** [Checklisten für Pentesting, Analysen uvm.](/10-checklists/)
-- **Cheatsheets:** [Schnelle Referenz zu Tools und Befehlen](/11-cheatsheets-quickrefs/)
-- **Kurse:** [Diverse Kurse zu verschiedenen Themen der Cybersecurity](/12-kurse/)
-- **Spezifische Schwachstellen:** [Tiefergehende Analysen einzelner Sicherheitslücken](/13-vulnerabilities/)
+- **Kurse und Zertifizierungen:** [Diverse Kurse zu verschiedenen Themen der Cybersecurity](/11-kurse_und_zertifizierungen/)
+- **Betriebssysteme:** [Betriebssysteme-Grundlagen, System-Architekturen und mehr](/12-betriebssysteme/)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Aktuelle Highlights:
 
 | Thema | Beschreibung |
 |-------|--------------|
-| [`blue_team_tools.md`](06-blue-teaming/blue_team_tools.md) | Sammlung von Tools für Defensive Security, Forensik, Log-Analyse und Incident Response |
-| [`sql_injection_to_shell.md`](03-web-security/sql-injection/sql_injection_to_shell.md) | Vollständiger Ablauf, wie SQLi zur Shell-Übernahme genutzt wird – inkl. Beispiel, Kontext und Cracking |
-| [`union_based_attack.md`](14-vulnerabilities/sqlInjection/union_based_attack.md) | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
-| [`wireshark_shortcuts.md`](12-cheatsheets-quickrefs/cheatsheets/wireshark_shortcuts.md) | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
+| [`blue_team_tools.md`](/05-offensive_defensive_strategien/blue-teaming_defensive/blue_team_tools.md) | Sammlung von Tools für Defensive Security, Forensik, Log-Analyse und Incident Response |
+| [`sql_injection_to_shell.md`](/03-web-security/angriffe/sql-injektionen/sql_injection_to_shell.md) | Vollständiger Ablauf, wie SQLi zur Shell-Übernahme genutzt wird – inkl. Beispiel, Kontext und Cracking |
+| [`union_based_attack.md`](/03-web-security/angriffe/sql-injektionen/union_based_attack.md) | Techniken zur Datenextraktion über UNION-basierte SQL-Injections |
+| [`wireshark_shortcuts.md`](/08-tools-cheatsheet/cheatsheets/wireshark_shortcuts.md) | Schnelle Referenz zu Filtern, Protokollen und Workflows in Wireshark |
 
 
 
@@ -87,7 +99,11 @@ Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behand
 - SOC Analysten, Pentester, Incident Responder
 - Autodidakten & Studenten im Bereich IT-Sicherheit
 
+<div align=right>
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Mitwirken & Beiträge
 
@@ -100,7 +116,11 @@ So kannst du mitmachen:
 2. Erstelle einen Branch mit deinen Änderungen
 3. Erstelle einen Pull Request – wir freuen uns über deinen Beitrag!
 
+<div align=right>
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Lizenz
 
@@ -111,12 +131,29 @@ Credits bei Weiterverwendung wären nett. 😉
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Community Support
+
+<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=100&color=0a0a23&text=Trete%20unserer%20Community%20bei&fontSize=44&animation=blink&section=footer&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=50" /></div>
+
 Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
 
 💬 [Discord Community beitreten](https://discord.com/invite/fNcTyYVVb9)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -130,12 +167,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

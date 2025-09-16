@@ -90,9 +90,9 @@ Beispiel mit Kommentar-Fix:
 
 ## Nützlich in Kombination mit
 
-- [sqlInjectionToShell.md](03-web-security/sql-injection/sql_injection_to_shell.md) -> zeigt komplette Angriffskette
-- [UnionBasedAttack.md](14-vulnerabilities/sqlInjection/union_based_attack.md) -> enthält Datenextraktion über UNION SELECT
-- [Tools](/09-tools-cheatsheet/) wie: Burp Suite, SQLMap, ZAP Proxy
+- [sql_injection_to_shell.md](/03-web-security/angriffe/sql-injektionen/sql_injection_to_shell.md) -> zeigt komplette Angriffskette
+- [union_based_attack.md](/03-web-security/angriffe/sql-injektionen/union_based_attack.md) -> enthält Datenextraktion über UNION SELECT
+- [Tools](/08-tools-cheatsheet/cheatsheets/) wie: Burp Suite, SQLMap, ZAP Proxy
 
 
 

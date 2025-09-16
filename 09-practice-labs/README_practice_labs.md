@@ -1,14 +1,38 @@
 # 📚 README - Practice Labs
 
-Hier findest du verschiedene Trainings und Labs zu CTF, SQL-Injections, Malware und weitere Themen zum herunterladen und selbst ausprobieren.
+```
+██████  ██████   █████   ██████ ████████ ██  ██████ ███████     ██       █████  ██████  ███████ 
+██   ██ ██   ██ ██   ██ ██         ██    ██ ██      ██          ██      ██   ██ ██   ██ ██      
+██████  ██████  ███████ ██         ██    ██ ██      █████       ██      ███████ ██████  ███████ 
+██      ██   ██ ██   ██ ██         ██    ██ ██      ██          ██      ██   ██ ██   ██      ██ 
+██      ██   ██ ██   ██  ██████    ██    ██  ██████ ███████     ███████ ██   ██ ██████  ███████ 
+
+
+                                    ████████
+
+
+██   ██  █████   ██████ ██   ██     ████████ ██   ██ ███████     ██     ██ ███████ ██████  
+██   ██ ██   ██ ██      ██  ██         ██    ██   ██ ██          ██     ██ ██      ██   ██ 
+███████ ███████ ██      █████          ██    ███████ █████       ██  █  ██ █████   ██████  
+██   ██ ██   ██ ██      ██  ██         ██    ██   ██ ██          ██ ███ ██ ██      ██   ██ 
+██   ██ ██   ██  ██████ ██   ██        ██    ██   ██ ███████      ███ ███  ███████ ██████  
+
+```                                                                        
+
+    
+
+
+Hier findest du Links und Anleitungen zu verschiedenen Trainings und Labs zu CTF, SQL-Injections, Malware und weiteren Themen zum herunterladen und selbst ausprobieren.
 
 ## Inhaltsverzeichnis
+- [Übersicht Pentesting-Labs](#übersicht-pentesting-labs)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ## Übersicht Pentesting-Labs
-- [DVWA - Damn Vulnerable Web Application](/09-practice-labs/dvwa-lab/)
-- [Metasploit](/09-practice-labs/metasploitable2/)
-- [Over The Wire](/09-practice-labs/overTheWire/)
-- [OWASP JuiceShop](/09-practice-labs/owasp/juiceShop/)
+- [DVWA - Damn Vulnerable Web Application](/09-practice-labs/dvwa-lab/): Lerne, wie du eine absichtlich verwundbare Webanwendung hackst und absicherst.
+- [Metasploit](/09-practice-labs/metasploitable2/): Ein virtueller PC voller Sicherheitslücken, der ideal für die Nutzung des Metasploit-Frameworks geeignet ist.
+- [Over The Wire](/09-practice-labs/overTheWire/): Verbessere deine Linux- und Shell-Fähigkeiten durch eine Reihe von aufregenden CTF-Challenges.
+- [OWASP JuiceShop](/09-practice-labs/owasp/juiceShop/): Eine der populärsten Übungsplattformen, um Web-Security-Schwachstellen (OWASP Top 10) zu finden und auszunutzen.
 
 
 
