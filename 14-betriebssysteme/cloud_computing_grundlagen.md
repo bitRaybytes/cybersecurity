@@ -12,6 +12,15 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Was ist Cloud Computing?
 
 **Cloud Computing** ermöglicht den Zugriff auf IT-Ressourcen (z. B. Server, Speicher, Datenbanken, Software) über das Internet, anstatt sie lokal zu betreiben. Es handelt sich um eine Verlagerung der Rechenleistung von einem lokalen System in ein entferntes, zentralisiertes Rechenzentrum, die "**Cloud**".
@@ -26,6 +35,15 @@
                                         Speicher, Server, Datenbanken
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Wichtige Merkmale
 
 - **On-Demand-Zugriff:** 
@@ -38,6 +56,16 @@
     - Leistungsressourcen lassen sich flexibel und oft automatisiert anpassen, um Lastspitzen abzufangen.
 - **Hohe Verfügbarkeit:** 
     - Cloud-Anbieter garantieren in der Regel eine hohe Ausfallsicherheit und bieten integrierte Daten-Backups.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Cloud-Dienstmodelle (SaaS, PaaS, IaaS)
 
@@ -93,6 +121,15 @@ Je nachdem, wer die Cloud betreibt und wie sie zugänglich ist, unterscheidet ma
 - **Community Cloud:** Eine Cloud-Infrastruktur, die von mehreren Organisationen mit gemeinsamen Interessen (z. B. Forschung, Regierung) gemeinsam genutzt wird.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Vorteile und Nachteile
 
 | **Vorteile** | **Nachteile** |
@@ -103,6 +140,16 @@ Je nachdem, wer die Cloud betreibt und wie sie zugänglich ist, unterscheidet ma
 | Ortsunabhängiger Zugriff | Anbieter-Abhängigkeit (Vendor Lock-in) |
 | Hohe Verfügbarkeit und Ausfallsicherheit | Fehlende Kontrolle über die physische Hardware |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Edge & Fog Computing: Die Ergänzung der Cloud
 
 **Cloud Computing** stößt bei Anwendungen, die eine extrem niedrige Latenz oder eine schnelle, lokale Datenverarbeitung erfordern (z. B. IoT, Echtzeit-Analyse), an seine Grenzen. Hier kommen **Edge** und **Fog Computing** ins Spiel. Sie verlagern die Datenverarbeitung näher an den Ort der Entstehung.
@@ -110,6 +157,14 @@ Je nachdem, wer die Cloud betreibt und wie sie zugänglich ist, unterscheidet ma
 - **Edge Computing:** Daten werden direkt am "Rand" des Netzwerks verarbeitet – also am Endgerät selbst oder in dessen unmittelbarer Nähe. Dies minimiert die Latenz und reduziert den Bandbreitenbedarf. Typisch für IoT-Geräte.
 
 - **Fog Computing:** Eine Zwischenschicht zwischen den Endgeräten (Edge) und der Cloud. Fog-Nodes verarbeiten Daten teilweise lokal, leiten aber komplexere oder aggregierte Daten zur weiteren Verarbeitung an die zentrale Cloud weiter.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Vergleich Cloud vs. Edge vs. Fog
 
@@ -122,6 +177,14 @@ Je nachdem, wer die Cloud betreibt und wie sie zugänglich ist, unterscheidet ma
 | **Echtzeitfähigkeit** | Eingeschränkt | **Optimal** | Gut für zeitkritische Anwendungen |
 | **Komplexität** | Einfach | Hoch (Hardware nötig) | Mittel (Management von Nodes) |
 | **Szenario** | Speicherung, Big Data | Echtzeit-Analyse, IoT | Smart Grids, Telemedizin |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [Wikipedia: Cloud Computing (https://de.wikipedia.org/wiki/Cloud_Computing)](https://de.wikipedia.org/wiki/Cloud_Computing)

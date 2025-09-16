@@ -29,6 +29,12 @@ Kurz gesagt, TLS baut einen verschlüsselten "Tunnel" auf, durch den der Datenve
 Die beiden Hauptkomponenten, die TLS zum Funktionieren bringen, sind der **TLS-Handshake** und das **TLS-Record-Protokoll**.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Der TLS-Handshake: Herzstück der Verschlüsselung
 
 Der **TLS-Handshake** ist der anfängliche Prozess, bei dem sich Client und Server authentifizieren, die Verschlüsselungsalgorithmen aushandeln und einen gemeinsamen **Session Key** festlegen. Dieser Prozess findet jedes Mal statt, wenn eine neue TLS-Verbindung aufgebaut wird.
@@ -50,12 +56,6 @@ Das ist der Ablauf einer typischen TLS 1.3-Verbindung:
 5. **Finish:** 
     - Client und Server senden eine abschließende Nachricht, die mit dem neuen Session Key verschlüsselt ist. Diese Nachricht bestätigt, dass beide Parteien denselben Session Key abgeleitet haben und die Verbindung nun sicher ist.
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 **Vereinfachte Darstellung des TLS-Handshakes:**
 ```yaml
                         Client                         Server
@@ -75,11 +75,23 @@ Das ist der Ablauf einer typischen TLS 1.3-Verbindung:
                               <======= GESICHERT ======>
 ```
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## TLS-Record-Protokoll: Die Datenübertragung
 Nachdem der Handshake erfolgreich abgeschlossen wurde, übernimmt das **TLS-Record-Protokoll**. Es ist verantwortlich für die eigentliche Übertragung der Anwendungsdaten.
 
 Das Protokoll teilt die zu übertragenden Daten in kleinere Blöcke (**Records**) auf, verschlüsselt diese mithilfe des im Handshake ausgehandelten Session Keys und versieht sie mit einem **Message Authentication Code** (**MAC**), um die Integrität zu gewährleisten. Der MAC stellt sicher, dass die Daten während der Übertragung nicht manipuliert wurden.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Wichtige Begriffe einfach erklärt
 
@@ -108,9 +120,22 @@ Das bekannteste Anwendungsbeispiel für TLS ist **HTTPS** (**Hypertext Transfer 
 
 Immer wenn du `https://` in der Adressleiste siehst und ein kleines Schlosssymbol erscheint, bedeutet das, dass deine Verbindung durch **TLS** abgesichert ist.
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
 - [https://de.wikipedia.org/wiki/Transport_Layer_Security](https://de.wikipedia.org/wiki/Transport_Layer_Security)
 - [https://de.wikipedia.org/wiki/Perfect_Forward_Secrecy](https://de.wikipedia.org/wiki/Perfect_Forward_Secrecy)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -124,12 +149,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

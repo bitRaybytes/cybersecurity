@@ -8,6 +8,13 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Warum ist Kommunikation wichtig?
 In Multitasking-Betriebssystemen müssen Prozesse, die quasi parallel ablaufen, häufig miteinander kommunizieren und sich synchronisieren.  
 Die Gründe dafür sind vielfältig:
@@ -16,6 +23,13 @@ Die Gründe dafür sind vielfältig:
 * **Datenaustausch:** Häufig müssen Daten von einem Prozess zum anderen übertragen werden.
 * **Ressourcen-Management:** Prozesse greifen auf begrenzte Ressourcen wie Drucker oder Dateien zu, was eine Synchronisation erfordert, um Konflikte zu vermeiden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Methoden der Interprozesskommunikation (IPC)
@@ -29,6 +43,13 @@ Das Betriebssystem stellt verschiedene Methoden bereit, damit Prozesse miteinand
 - **Streams & Sockets:** Logisch gesehen haben Streams eine ähnliche Funktion wie Pipes, ermöglichen aber die Kommunikation über Rechnernetze hinweg.
 - **Prozedurfernaufrufe (RPC):** Ein Prozess kann eine Prozedur aufrufen, die sich in einem anderen Prozess befindet, auch über Netzwerkadressgrenzen hinweg. Dies ist besonders nützlich für **Client-Server-Beziehungen** (Microservices).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Das Problem der Prozess-Synchronisation
@@ -64,6 +85,14 @@ Prozess B: schreibt ebenfalls Datei an Position 7
 ```
 
 Um solche Probleme zu vermeiden, müssen Prozesse ihre Zugriffe auf **kritische Abschnitte** – also Codebereiche, die auf gemeinsame Ressourcen zugreifen – synchronisieren.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Interprozesskommunikation](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Interprozesskommunikation)

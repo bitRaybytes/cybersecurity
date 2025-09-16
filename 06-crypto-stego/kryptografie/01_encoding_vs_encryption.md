@@ -37,6 +37,13 @@ Links zu den Tools findest du [hier](#8-nützliche-links)
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Encoding (Umwandlung)
 
 In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Zahlenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten. Die Umwandlung erfolgt mithilfe von Regeln oder Algorithmen.
@@ -77,6 +84,12 @@ echo "cGFzc3dvcmQxMjM=" | base64 -d
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 2. Encryption (Verschlüsselung)
 
@@ -109,11 +122,13 @@ Die Verarbeitung der Daten zur Verschlüsselung hin erfolgt entweder als **Block
 
 Während **Blockchiffren** wie `AES` (Advanced Encryption Standard) Daten im **CBC/GCM-Modus** in festen Blöcken verarbeiten, verarbeiten **Stromchiffren** wie `ChaCha20` Daten Bit für Bit.
 
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
 
 ```text
 Das Verfahren zur Ver- und Entschlüsselung von Informationen vereinfacht dargesetellt:
@@ -199,6 +214,12 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 #### Algorithmen
 - `RSA` - weit verbreitetes und sicheres System, das sowohl für Versclhüsselung als auch für Signaturen verwendet wird.
 - `ECC` - Elliptische Kurven Kryptografie bitet hohe Sicherheit mit kürzeren Schlüssellängen, was es effizient für mobile Geräte macht.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 #### Visualisierung: Asymmetrische Verschlüsselung
 ```yaml
@@ -297,6 +318,12 @@ echo -n "secrettext" | sha256sum
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 4. Vergleichstabelle
 
@@ -317,6 +344,12 @@ echo -n "secrettext" | sha256sum
 | Hashing    | Passwort-Datenbank (bcrypt)  |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 5. Typische Einsatzszenarien
@@ -355,6 +388,12 @@ echo -n "secrettext" | sha256sum
 - Encoding ist keine Sicherheitsschicht – jeder kann es zurückwandeln.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 7. Tools und Befehle
 
@@ -374,6 +413,12 @@ echo -n "secrettext" | sha256sum
 gpg --encrypt --recipient user@webseite.com
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 8. Nützliche Links
@@ -395,6 +440,12 @@ gpg --encrypt --recipient user@webseite.com
 - [openssl.org](https://www.openssl.org/)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -408,12 +459,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

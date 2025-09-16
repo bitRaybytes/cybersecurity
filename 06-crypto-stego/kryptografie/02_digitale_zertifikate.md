@@ -21,6 +21,13 @@ Jeder kann die Gültigkeit deines Ausweises überprüfen, indem er bei der ausst
 
 Das Zertifikat bindet einen **öffentlichen kryptografischen Schlüssel** an die Identität des Besitzers. Dieser öffentliche Schlüssel wird dann verwendet, um die vom Besitzer signierten Daten zu überprüfen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Wichtige Bestandteile
 Jedes digitale Zertifikat enthält mehrere kritische Informationen, um seine Authentizität zu gewährleisten:
 
@@ -40,6 +47,13 @@ Die wichtigsten Komponenten einer PKI sind:
 - **Registrierungsstelle (RA):** Überprüft die Identität des Anfragenden, bevor die CA ein Zertifikat ausstellt.
 - **Zertifikatsspeicher:** Ein Verzeichnis, in dem Zertifikate gespeichert und öffentlich zugänglich gemacht werden.
 - **Sperrliste (CRL):** Eine Liste der ungültigen oder widerrufenen Zertifikate.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Wie funktioniert die Authentifizierung?
 Digitale Zertifikate werden in zahlreichen Szenarien zur Authentifizierung eingesetzt, beispielsweise bei der verschlüsselten Kommunikation über HTTPS.
@@ -62,8 +76,22 @@ Digitale Zertifikate werden in zahlreichen Szenarien zur Authentifizierung einge
 
 Durch diesen Prozess wird sichergestellt, dass der Client tatsächlich mit dem beabsichtigten Server kommuniziert und nicht mit einem Angreifer, der sich als der Server ausgibt.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
 - [https://de.wikipedia.org/wiki/Digitales_Zertifikat](https://de.wikipedia.org/wiki/Digitales_Zertifikat)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -77,12 +105,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

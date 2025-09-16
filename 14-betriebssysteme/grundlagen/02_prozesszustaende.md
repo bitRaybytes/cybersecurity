@@ -13,6 +13,14 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Die drei Hauptzustände
 Während seiner Abarbeitung durchläuft ein Prozess verschiedene Zustände. Für ein System mit einer einzigen CPU sind diese Zustände:
 
@@ -36,6 +44,15 @@ Während seiner Abarbeitung durchläuft ein Prozess verschiedene Zustände. Für
 ```
 
 **Merke:** Ein Prozess kann nur dann „aktiv“ sein, wenn er die CPU gerade besitzt.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Zustandswechsel im Detail
 Der Wechsel zwischen den Zuständen wird von bestimmten Ereignissen ausgelöst.
@@ -115,16 +132,17 @@ Dieses Konzept der Hierarchie ist wichtig für die Organisation und Verwaltung v
 - Beendet sich ein Elternprozess, übernimmt oft **init**/**systemd** (PID 1) als „Adoptivelternteil“ die verwaisten Prozesse.
 
 
-## Nützliche Links
-- [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde)
-- [Microsoft Windows Commands - Tasklist: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist)
-
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
+
+
+## Nützliche Links
+- [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozesszust%C3%A4nde)
+- [Microsoft Windows Commands - Tasklist: https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist)
 
 
 <div align=right>

@@ -20,6 +20,13 @@ Diese Datei bietet eine kompakte Übersicht über Techniken zur Erstellung und M
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Typische Encoding-Techniken
 
 ### 1. **URL-Encoding**
@@ -71,6 +78,13 @@ Oder
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Evasion-Techniken bei WAF / Inputfilter
 ### Zeichen-Splitting / Padding
 ```html
@@ -88,6 +102,13 @@ Oder
 | **Comments**               | `ec/*x*/ho test`      |
 | **Case Switching**         | `SeLeCt * FrOm users` |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Keywords fragmentieren
@@ -116,6 +137,13 @@ Nützlich bei blind RCE oder SQLi:
 ping -c 5 127.0.0.1
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispiele nach Angriffsart
@@ -149,12 +177,26 @@ php://filter/convert.base64-encode/resource=index.php
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Hinweise
 - Unterschiedliche Filter verlangen unterschiedliche Bypässe. Teste iterativ.
 - In CTFs werden häufig Custom-Filter eingebaut – Payload-Crafting ist oft die Lösung.
 - Nutze Burp Suite's Repeater oder Tools wie `wfuzz`, `ffuf`, `sqlmap` für Automatisierung.
 - Viele WAFs prüfen nur Signaturen -> ungewöhnliche Kodierungen oder Fragmentierungen helfen oft.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -166,6 +208,12 @@ php://filter/convert.base64-encode/resource=index.php
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -179,12 +227,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

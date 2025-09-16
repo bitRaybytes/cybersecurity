@@ -13,12 +13,27 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung: Die unsichtbare Software
 **Firmware** ist die erste Software, die auf einem Computer nach dem Einschalten ausgeführt wird. Sie ist fest auf einem Speicherchip auf der Hauptplatine (Mainboard) verankert und hat eine entscheidende Aufgabe: **die Initialisierung der Hardware**.
 
 Ohne sie wären CPU, RAM und Festplatte nur nutzlose Bauteile. Die Firmware agiert als Brücke zwischen der physischen Hardware und dem Betriebssystem. Schwachstellen in dieser Schicht sind besonders kritisch, da sie es einem Angreifer ermöglichen, sich extrem tief im System einzunisten, selbst wenn das Betriebssystem neu installiert wird.
 
 Der Begriff leitet sich davon ab, dass Firmware funktional fest mit der Hardware verbunden ist. Auch außerhalb eines PCs findet man Firmware in nahezu jedem modernen Gerät, von Mobiltelefonen über Drucker bis hin zu Smart-Home-Geräten, wo sie auch oft als Systemfirmware bezeichnet wird.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## UEFI als Nachfolger des BIOS
 Das **UEFI** (**Unified Extensible Firmware Interface**) ist das moderne Firmware-Interface und der Nachfolger des jahrzehntelang dominanten **BIOS** (**Basic Input Output System**). Während das BIOS eine einfache, textbasierte und sehr begrenzte 16-Bit-Umgebung bot, ist UEFI eine leistungsstarke, flexible und erweiterbare 32- oder 64-Bit-Software.
@@ -32,6 +47,13 @@ Das **UEFI** (**Unified Extensible Firmware Interface**) ist das moderne Firmwar
 | **Sicherheit** | Bietet Funktionen wie **Secure Boot**. | Keine integrierten Sicherheitsfunktionen. |
 | **Schnittstelle** | Grafische Benutzeroberfläche (GUI), Mausunterstützung. | Textbasierte, tastaturgesteuerte Oberfläche. |
 | **Funktionalität** | Integrierte Netzwerkfähigkeit, Bootmanager, Multitasking. | Sehr begrenzte Funktionalität. |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Was macht UEFI?
@@ -94,6 +116,12 @@ Prinzipieller Systemstart:
                           +-----------------------------------------------+
 ```
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Secure Boot: Die digitale Signatur des Bootvorgangs
 Secure Boot ist eine zentrale Sicherheitsfunktion von UEFI. Sie stellt sicher, dass nur vertrauenswürdige Bootloader und Betriebssysteme geladen werden.
 
@@ -123,6 +151,12 @@ Es ist wichtig zu wissen, dass es neben BIOS und UEFI auch andere Firmware-Schni
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Informationsgewinnung aus dem System
 Als IT-Experte ist es wichtig zu wissen, wie du die Firmware-Informationen deines Systems abfragen kannst. Einige der folgenden Befehle benötigen Administratorrechte.
@@ -138,6 +172,15 @@ Als IT-Experte ist es wichtig zu wissen, wie du die Firmware-Informationen deine
     - `efibootmgr`: Zeigt die Boot-Einträge und ihre Reihenfolge an.
     - `dmesg | grep -i efi`: Zeigt die UEFI-spezifischen Kernelmeldungen beim Boot an.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Begriffe und Abkürzungen
 - **GPT** (**GUID-Partition Table**): Das neuere Partitionsschema, das große Festplatten und viele Partitionen unterstützt.
 
@@ -148,6 +191,14 @@ Als IT-Experte ist es wichtig zu wissen, wie du die Firmware-Informationen deine
 - **SoC** (**System-on-a-Chip**): Ein einzelner Chip, der fast alle Mainboard-Komponenten integriert.
 
 - **OTPROM**, **EPROM**, **EEPROM**: Verschiedene Typen von Read-Only Memory, die zur Speicherung der Firmware genutzt werden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Links

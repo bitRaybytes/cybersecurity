@@ -32,8 +32,10 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **OWASP Top 10** | OWASP | Web Security, Angriffsvektoren | [owasp.org](https://owasp.org) |
 | **Hack The Box Academy Free Modules** | Hack The Box | Linux, Web, Enumeration | [academy.hackthebox.com](https://academy.hackthebox.com) |
 | **PentesterLab (Free Tracks)** | PentesterLab | Web Exploits, Recon | [pentesterlab.com](https://pentesterlab.com) |
+| **ISC2 FREE Entry-level Cybersecurity Training + Certification Exam2** | ISC2 | Grundlagen Cybesecurity | [https://www.isc2.org/landing/1mcc](https://www.isc2.org/landing/1mcc) |
+| **Cisco U** | cisco | Verschiedene Kurse | [https://u.cisco.com/](https://u.cisco.com/) |
 
-### 💰 Kostenpflichtige Red Team Zertifikate
+### Kostenpflichtige Red Team Zertifikate
 
 | Zertifikat | Anbieter | Kosten | Fokus |
 |-----------|----------|--------|--------|

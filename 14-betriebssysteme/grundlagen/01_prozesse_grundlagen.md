@@ -17,6 +17,13 @@ Bevor wir uns mit Prozessen befassen, lass uns einige grundlegende Konzepte klä
 - **Thread:** Ein **Thread** ist ein Ausführungsstrang innerhalb eines Prozesses. Er ist der kleinste Teil eines Programms, der vom Betriebssystem unabhängig ausgeführt werden kann. Ein Prozess kann einen oder mehrere Threads enthalten.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Was ist ein Prozess?
 
@@ -25,6 +32,13 @@ Ein **Prozess** ist ein **Programm in Ausführung**. Sobald du ein Programm star
 Jeder Prozess hat seinen eigenen Speicherbereich und seine eigenen Ressourcen, die vom Betriebssystem verwaltet werden. Wenn ein Programm mehrere Dinge gleichzeitig erledigen muss (z. B. eine Benutzeroberfläche anzeigen und gleichzeitig Daten verarbeiten), erstellt es mehrere Threads.
 
 **Beispiel:** Du öffnest deinen Webbrowser. Das Programm (die Software auf der Festplatte) wird zu einem Prozess im Speicher. Innerhalb dieses Prozesses können mehrere Threads laufen, z. B. ein Thread für das Laden der Webseite, ein anderer für die Wiedergabe eines Videos und ein dritter für das Scrollen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -47,6 +61,12 @@ get-process | sort cpu -descending | select -first 10
 Dieser Befehl listet die 10 Prozesse mit dem höchsten CPU-Verbrauch auf.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 ## Das Prozessmodell
@@ -60,16 +80,23 @@ Ein Prozess ist die grundlegende Einheit der Ausführung. Es können sich zwar m
     - Das Betriebssystem speichert alle Informationen über die Prozesse in einer **Prozesstabelle**.
 
 
-
-## Nützliche Links
-- [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)](https://de.wikipedia.org/wiki/Prozess_(Informatik))
-
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
+
+
+## Nützliche Links
+- [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)](https://de.wikipedia.org/wiki/Prozess_(Informatik))
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss

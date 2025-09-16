@@ -11,9 +11,24 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Ziel
 
 Datenbankinformationen schrittweise über die `UNION SELECT`-Technik auslesen – insbesondere bei anfälligen Parametern wie z. B. `id`, `search`, `user`, etc.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 
@@ -53,6 +68,13 @@ test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Hinweise
 - `group_concat()` ist hilfreich zum Kombinieren mehrerer Ergebnisse in einer Zeile.
@@ -63,10 +85,24 @@ test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Sicherheitshinweis
 
 Dieses Wissen dient ausschließlich der legalen Anwendung im Rahmen von Penetration Tests mit ausdrücklicher Erlaubnis. Der Missbrauch kann strafrechtlich verfolgt werden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -81,12 +117,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -15,12 +15,25 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 
 **Docker** ist **eine Plattform zur Containerisierung** von Anwendungen. Sie ermöglicht es, Software samt ihrer Abhängigkeiten in sogenannten Containern auszuführen. Diese Container sind leichtgewichtig, portabel und bieten eine isolierte Umgebung für Anwendungen.
 
 In der IT-Sicherheit und im Anwendungsdevelopment ist Docker ein unverzichtbares Werkzeug. Für Pentester bietet es eine saubere und schnelle Möglichkeit, Testumgebungen aufzubauen. Für Entwickler stellt es sicher, dass die Anwendung überall, von der lokalen Maschine bis zur Cloud, in der exakt gleichen Umgebung läuft.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Vorteile von Docker
@@ -30,6 +43,13 @@ In der IT-Sicherheit und im Anwendungsdevelopment ist Docker ein unverzichtbares
 * **Schnelle Bereitstellung:** Images lassen sich schnell laden und Container in Sekunden starten.
 * **Reproduzierbarkeit:** Die gleiche Umgebung kann jederzeit wiederhergestellt werden, was Fehler reduziert und die Zusammenarbeit erleichtert.
 * **Ressourcenschonung:** Container sind wesentlich leichtgewichtiger und effizienter als virtuelle Maschinen (VMs), da sie den Kernel des Host-Betriebssystems mitnutzen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Docker vs. VM
 
@@ -47,6 +67,8 @@ Der grundlegende Unterschied liegt in der Abstraktionsebene. Eine VM virtualisie
     +-------------------------------------+
                 Virtuelle Maschinen
 
+
+
     +----------------------------------------+
     |              HOST-OS                   |
     | +----------+ +----------+ +----------+ |
@@ -56,6 +78,12 @@ Der grundlegende Unterschied liegt in der Abstraktionsebene. Eine VM virtualisie
     +----------------------------------------+
               Containerisierung
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Wichtige Begriffe
@@ -166,6 +194,12 @@ sudo apt install docker-compose
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Praktische Anwendungsfälle
 
 Als Pentester und Entwickler auf Kali Linux wirst du Docker lieben. Hier sind einige typische Szenarien:
@@ -175,6 +209,12 @@ Als Pentester und Entwickler auf Kali Linux wirst du Docker lieben. Hier sind ei
 - **Reproduzierbare Exploits:** Baue eine exakte Umgebung mit einem bestimmten Betriebssystem und einer bestimmten Softwareversion nach, um einen Exploit präzise zu testen.
 - **Multi-Container-Setups:** Mit **Docker Compose** kannst du komplexe Umgebungen, wie eine Webanwendung mit einer Datenbank und einem Redis-Cache, mit einem einzigen Befehl starten.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Docker Befehle für den Einstieg
 
@@ -223,11 +263,25 @@ Lade niemals Images von unbekannten oder nicht vertrauenswürdigen Quellen herun
 Achte darauf, wie du Container konfigurierst. Setze keine unnötigen Privilegien (`--privileged`) und mounte keine sensiblen Host-Verzeichnisse in den Container (`-v /etc:/etc`). Dies könnte es einem Angreifer ermöglichen, auf kritische Systemdateien zuzugreifen.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Fazit
 
 Docker ist ein extrem nützliches Werkzeug, um Anwendungen und Tools **schnell**, **sicher** und **portabel** bereitzustellen. Besonders für **Pentester** und **Entwickler** auf Kali Linux bietet Docker eine Möglichkeit, komplexe Tools oder komplette Lab-Umgebungen in isolierten Containern zu betreiben – ohne das Basissystem zu verunreinigen.
 
 **Tipp:** Verwende Docker in Kombination mit `docker-compose`, um mehrere Container gleichzeitig (z. B. **Web** + **DB**) zu starten und ihre Konfiguration in einer einzigen, reproduzierbaren Datei zu verwalten.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [Docker Website](https://www.docker.com/)

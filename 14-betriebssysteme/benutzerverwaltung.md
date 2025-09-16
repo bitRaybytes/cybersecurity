@@ -14,6 +14,15 @@ Sie stellt sicher, dass Benutzer, Prozesse und Dateien sauber voneinander getren
 - [Best Practices Benutzerverwaltung](#best-practices-benutzerverwaltung)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Grundprinzipien
 
 - **Benutzerauthentifizierung (Login)**
@@ -30,6 +39,14 @@ Sie stellt sicher, dass Benutzer, Prozesse und Dateien sauber voneinander getren
 
 - **Abrechnungsinformationen**
     - → Logfiles erfassen Anmeldezeiten, CPU-Auslastung, Speicherverbrauch.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Arten der Authentifizierung
 
@@ -49,6 +66,13 @@ Sie stellt sicher, dass Benutzer, Prozesse und Dateien sauber voneinander getren
 - **Token** → Smartcards, Hardware-Keys (z. B. YubiKey).
 - **Biometrie** → Fingerprint, FaceID, Schreibdynamik.
 - **MFA** → Kombination von Wissen + Besitz + Inhärenz.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Passwortsicherheit
 
@@ -98,6 +122,14 @@ Beispiel Zentrale Benutzerverwaltung:
   |        |        |
 Client1  Client2  Client3
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Dateizugriff und Rechte
 
@@ -151,6 +183,13 @@ V
 d = Verzeichnis (Directory), kein d, wenn Datei
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## ACLs - Access Control Lists
 
 ACLs erlauben feinere Steuerung:
@@ -158,6 +197,13 @@ ACLs erlauben feinere Steuerung:
 - Rechte für einzelne User statt nur Gruppen.
 - Beispiel: Nur ein bestimmter User darf schreiben, Gruppe aber nicht.
 - Unterstützt z. B. unter EXT4, XFS, Btrfs.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Remote-Zugriff und Verwaltung
@@ -176,6 +222,13 @@ Server -----> Client : Zertifikat senden
 Client -----> Server : Authentifizierung (Passwort/Key)
 Beide Seiten: Schlüssel für Sitzung aushandeln
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Best Practices Benutzerverwaltung

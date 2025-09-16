@@ -9,6 +9,16 @@ Wenn du in die Welt des **ethischen Hackens** eintauchen möchtest, gibt es jede
 - [Spezifische Themen & Dokumentationen](#spezifische-themen--dokumentationen)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Interaktive Lernplattformen & CTFs 
 
 Diese Plattformen sind ideal für praktische Übungen, da sie dir eine sichere Umgebung bieten, in der du deine Hacking-Fähigkeiten testen und verbessern kannst.
@@ -33,6 +43,15 @@ Diese Plattformen sind ideal für praktische Übungen, da sie dir eine sichere U
 - **SmashTheStack:** Eine Wargame-Plattform unter [smashthestack.org](https://www.smashthestack.org/) mit dem Fokus auf Binary Exploitation und Reverse Engineering.
 - **https://deusx64.ai/:** Eine Wargame [https://deusx64.ai/](https://deusx64.ai/). Der Einführungskurs: [https://wargames.ret2.systems/course](https://wargames.ret2.systems/course).
 - **https://boot.dev:** [https://boot.dev/](https://www.boot.dev?bannerlord=justray) ist eine interaktive Plattform, um das Programmieren zu lernen. 
+- **Websploit:** Labs mit verschiedenen Docker Container
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ### Übungsanwendungen und VMS
 
@@ -48,6 +67,14 @@ Diese sind perfekt, um lokale Hacking-Umgebungen aufzubauen und gängige Schwach
 - **ITSecGames:** Bietet verschiedene Lern-VMs, um Sicherheitskonzepte zu verstehen unter [itsecgames.com](http://www.itsecgames.com/).
 - **Netgarage:** Eine Wargame-Plattform mit Fokus auf Reverse Engineering unter [io.netgarage.org](http://io.netgarage.org/).
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Videobasierte Kurse & Bildungsressourcen
 
 Diese Seiten bieten strukturierte Kurse und Video-Tutorials an, oft von Branchenexperten.
@@ -61,6 +88,17 @@ Diese Seiten bieten strukturierte Kurse und Video-Tutorials an, oft von Branchen
 - **YouTube-Kanäle:** Auf YouTube gibt es eine riesige Community. Kanäle wie [LiveOverflow](), [IppSec](https://www.youtube.com/@ippsec) und [John Hammond](https://www.youtube.com/@_JohnHammond) oder [David Bombal](https://www.youtube.com/@davidbombal) bieten exzellente, kostenlose Inhalte.
 - **Udemy:** Obwohl viele Kurse auf [udemy.com](https://www.udemy.com/) kostenpflichtig sind, gibt es immer wieder kostenlose Aktionen. Die Kurse sind oft sehr gut strukturiert.
 - **Cisco Networking Academy:** Auf [netacad.com](https://www.netacad.com/courses/ethical-hacker?courseLang=en-US) findest du oft kostenlose Kurse zur Netzwerksicherheit, die für Cybersicherheit unerlässlich sind.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Spezifische Themen & Dokumentationen
 

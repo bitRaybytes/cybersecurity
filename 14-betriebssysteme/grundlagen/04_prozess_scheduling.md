@@ -27,6 +27,15 @@ Ein guter Scheduler verfolgt mehrere Ziele:
                          (Scheduler)
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Grundsysteme des Schedulings
 Es gibt zwei grundlegende Ansätze, wie die CPU den Prozessen zugeteilt wird:
 
@@ -88,6 +97,15 @@ Queue: [Angreifer:Prio10][Normaler Prozess:Prio1]
 CPU:   Angreifer → Angreifer → Angreifer ...
         (Normaler Prozess kommt nie dran)
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozess-Scheduling](https://de.wikipedia.org/wiki/Prozess_(Informatik)#Prozess-Scheduling)
