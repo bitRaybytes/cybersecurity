@@ -1,6 +1,6 @@
 # 🛡️ Cybersecurity Hub - Angreifen | Verteidigen | Lernen
 
-<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=170&color=0a0a23&text=Cybersecurity%20Hub-nl-%20⚔️%20Angreifen%20|%20🛡️%20Verteidigen%20|%20🧠%20Lernen&fontSize=44&animation=blink&section=header&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=40" /></div>
+<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=170&color=0a0a23&text=Cybersecurity%20Hub-nl-%20⚔️%20Angreifen%20|%20🛡️%20Verteidigen%20|%20🧠%20Lernen&fontSize=40&animation=blink&section=header&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=40" /></div>
 
 
 Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlung aus **Tools**, **Techniken**, **Notizen** und **Cheatsheets** rund um IT-Sicherheit, Penetration Testing, Blue Teaming und mehr.
