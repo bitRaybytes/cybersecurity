@@ -22,7 +22,7 @@ Ein guter Scheduler verfolgt mehrere Ziele:
 
 ```text
 +------------+       +-----------------+       +-------------+
-|   Prozesse | ----> |   Ready Queue   | ----> |    CPU      |
+|  Prozesse  | ----> |   Ready Queue   | ----> |    CPU      |
 +------------+       +-----------------+       +-------------+
                          (Scheduler)
 ```
@@ -74,20 +74,20 @@ Die Auswahl des nächsten Prozesses aus der Bereit-Warteliste basiert auf versch
 ## Sicherheitsaspekte beim Scheduling
 Aus Sicht der IT-Sicherheit spielt Scheduling eine zentrale Rolle:
 
-1. DoS durch CPU-Hogging:
+1. **DoS durch CPU-Hogging:**
 
     - Angreifer können mit vielen Prozessen die CPU blockieren.
     - Round Robin und Prioritätssteuerung können Schutz bieten.
 
-2. Side-Channel-Angriffe:
+2. **Side-Channel-Angriffe:**
 
     - Angreifer nutzen Unterschiede im Scheduling, um geheime Daten auszulesen (z. B. Cache Timing Attacks in Virtualisierungsumgebungen).
 
-3. Prioritätenmissbrauch:
+3. **Prioritätenmissbrauch:**
 
     - Malware versucht, sich höhere Prioritäten zu geben (z. B. `REALTIME_PRIORITY_CLASS` unter Windows).
 
-4. Virtualisierte Umgebungen:
+4. **Virtualisierte Umgebungen:**
     - Scheduler des Hypervisors beeinflusst, wie Gäste-VMs CPU-Zeit erhalten.
     - Angriffe wie VM Starvation können entstehen.
 

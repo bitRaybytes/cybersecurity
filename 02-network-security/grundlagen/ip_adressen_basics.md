@@ -10,10 +10,26 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 
 IP-Adressen (Internet Protocol) sind einzigartige Kennzeichnungen von Geräten in einem Netzwerk. Sie ermöglichen die Kommunikation zwischen Hosts über verschiedene Netzwerke hinweg und bilden das Fundament des Internets.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## IPv4
@@ -27,6 +43,14 @@ Eine IPv4-Adresse ist 32 Bit lang und wird meist in vier Dezimalzahlen (Oktette)
   - **Netzwerkanteil**: Identifiziert das Netzwerk, in dem sich ein Gerät befindet.
   - **Hostanteil**: Identifiziert das spezifische Gerät innerhalb dieses Netzwerks.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Klassen
 
 | Klasse | Bereich           | Anzahl Hosts | Verwendung              |
@@ -38,6 +62,14 @@ Eine IPv4-Adresse ist 32 Bit lang und wird meist in vier Dezimalzahlen (Oktette)
 | E      | 240.0.0.0 – 255.255.255.255 | N/A          | Reserviert (Experimentell) |
 
 **Hinweis:** Das klassenbasierte System ist veraltet und wird heute durch CIDR ersetzt, ist aber für das grundlegende Verständnis wichtig.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Private Adressbereiche (RFC 1918)
 
@@ -53,6 +85,14 @@ Diese Adressen sind für die Verwendung in **lokalen Netzwerken** (**LANs**) res
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Subnetting
 
 Subnetting ist die Aufteilung eines IP-Netzes in kleinere Subnetze durch Erweiterung der Subnetzmaske.
@@ -62,6 +102,14 @@ Subnetting ist die Aufteilung eines IP-Netzes in kleinere Subnetze durch Erweite
 - **Subnetzmaske:** `255.255.255.0` → 256 Adressen
 - **Benötigte Subnetze:** 4
 - **Neue Maske:** `255.255.255.192` (/26) → je 64 Adressen
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### CIDR (Classless Inter-Domain Routing)
 
@@ -91,6 +139,14 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### IPv4 Sicherheit
 
 - IPv4 war nicht für Sicherheit konzipiert.
@@ -105,6 +161,14 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## IPv6
 
 ### Aufbau
@@ -112,6 +176,14 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 - **128 Bit** Adresse in **hexadezimal** Schreibweise.
 - **Beispiel:** `2001:0db8:85a3:0000:0000:8a2e:0370:7334`
 - Die Adressen können gekürzt werden, um führende Nullen zu entfernen oder zusammenhängende Null-Blöcke durch `::` zu ersetzen: `2001:db8:85a3::8a2e:370:7334`
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Arten von IPv6-Adressen
 
@@ -123,12 +195,28 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 | Multicast        | ff00::/8           | Daten an mehrere Hosts gleichzeitig  |
 | Anycast          | -                  | Daten an nächstgelegenen Host        |
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Vorteile gegenüber IPv4
 
 - **Kein NAT mehr nötig:** Jedes Gerät kann eine eindeutige, öffentliche Adresse haben.
 - Automatische Konfiguration (SLAAC)
 - **Eingebaute Sicherheit:** IPSec ist im Standard integriert.
 - Mehr Adressen (**2<sup>128</sup>**) gegenüber IPv4 (**2<sup>32</sup>**)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### IPv6 Sicherheit
 
@@ -188,10 +276,26 @@ CIDR ersetzt die Klassen durch Präfixe wie `/24`, `/16`, etc. und erlaubt flexi
 **Hinweis:** Bei den meisten Subnetzen werden die erste (Netzwerk-) und die letzte (Broadcast-) Adresse nicht für Hosts genutzt, daher **Anzahl Adressen - 2**. Bei `/31` und `/32` gelten Ausnahmen.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Die Rolle von Routern und Firewalls
 - **Router:** Arbeiten auf **OSI-Schicht 3** und nutzen die IP-Adresse, um Datenpakete zwischen verschiedenen Netzwerken zu routen. Sie entscheiden anhand von Routing-Tabellen, wohin ein Paket gesendet werden muss.
 
 - **Firewalls:** Kontrollieren den Datenverkehr basierend auf IP-Adressen, Ports und Protokollen. Eine Firewall kann so konfiguriert werden, dass sie Datenverkehr von oder zu bestimmten IP-Adressen blockiert (Blacklisting) oder nur von bestimmten Adressen zulässt (Whitelisting).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Weitere Hinweise
@@ -211,6 +315,14 @@ Ein tiefes Verständnis von IP-Adressierung, Subnetting und Routing ist unerläs
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -224,16 +336,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
-
 🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
-
-

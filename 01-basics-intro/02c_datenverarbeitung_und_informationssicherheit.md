@@ -9,6 +9,15 @@ Die **Informations- und Telekommunikationstechnik** (**ITK**) bildet das Rückgr
 - [Die drei Grundpfeiler der Informationssicherheit: Die CIA-Triade](#die-drei-grundpfeiler-der-informationssicherheit-die-cia-triade)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Das Ziel der Datenverarbeitung
 
 Das Hauptziel der Datenverarbeitung ist es, aus Rohdaten nützliche Informationen zu gewinnen, um effiziente Kommunikation, Automatisierung und Problemlösungen zu ermöglichen. Für uns in der Cybersicherheit bedeutet dies, dass wir die Prozesse nicht nur vor Angriffen schützen, sondern auch ihre Integrität und Verfügbarkeit sicherstellen müssen.
@@ -19,6 +28,15 @@ Die Datenverarbeitung lässt sich in vier Hauptphasen unterteilen:
 - **Datenverarbeitung:** Anwendung von Algorithmen zur Umwandlung in verwertbare Informationen.
 - **Datenspeicherung:** Lang- oder kurzfristige Ablage auf Speichermedien.
 - **Datenübertragung:** Verschieben von Daten zwischen Systemen oder Netzwerken.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Arten der Datenverarbeitung
 
@@ -31,6 +49,15 @@ Die Art der Verarbeitung hat direkte Auswirkungen auf die Sicherheitsanforderung
 | **Online-Verarbeitung** | Interaktive Verarbeitung von Daten während der Benutzereingabe. Beispiel: Online-Buchungssysteme. | Es besteht eine hohe Gefahr durch **Man-in-the-Middle-Angriffe** oder **Datenlecks** während der Transaktion. |
 | **Verteilte-Verarbeitung** | Verarbeitung über mehrere vernetzte Computer hinweg (z. B. in der Cloud). | Bietet Skalierbarkeit, vergrößert aber die **Angriffsfläche**. Jede Komponente im Netzwerk ist ein potenzielles Ziel. |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Datenschutz vs. Datensicherheit
 
 Diese beiden Begriffe werden oft verwechselt, sind aber klar voneinander abzugrenzen.
@@ -40,6 +67,14 @@ Diese beiden Begriffe werden oft verwechselt, sind aber klar voneinander abzugre
 
 - **Datensicherheit (Security):** Bezieht sich auf den Schutz von Daten vor Verlust, Beschädigung oder Manipulation, unabhängig davon, ob sie personenbezogen sind oder nicht. Es geht um die Frage: "Wie werden die Daten geschützt?"
     - **Beispiel:** Einsatz von Verschlüsselung, Firewalls und Backups.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Die drei Grundpfeiler der Informationssicherheit: Die CIA-Triade
@@ -71,6 +106,8 @@ Das grundlegende Modell, um die Qualität von Informationssystemen zu beurteilen
     - **Gefahr:** Denial-of-Service (DoS)-Angriffe, Hardware-Ausfälle, Naturkatastrophen.
 
 Jede Sicherheitsmaßnahme, die wir implementieren, zielt darauf ab, mindestens eine dieser drei Eigenschaften zu stärken.
+
+
 
 <div align=right>
 

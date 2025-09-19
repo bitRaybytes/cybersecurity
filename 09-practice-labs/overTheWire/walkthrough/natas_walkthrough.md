@@ -19,6 +19,12 @@
 - [natas 10 -> 11](#natas-10--11)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 
 Einleitung zum Wargame Natas (OverTheWire)
@@ -40,6 +46,14 @@ Du lernst dabei unter anderem:
 Die Level werden schrittweise schwieriger und helfen dir dabei, ein gutes Verständnis für Web-Angriffsvektoren und deren Schutzmaßnahmen zu entwickeln.
 
 > Der Name Natas ist "Satan" rückwärts geschrieben – ein Hinweis auf die tiefergehenden Sicherheitsaspekte, die in den Levels behandelt werden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Natas 0 Zugang
 
@@ -733,6 +747,12 @@ URL:        http://natas11.natas.labs.overthewire.org
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -745,12 +765,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -10,6 +10,15 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist DHCP (Dynamic Host Configuration Protocol)
 **DHCP** ist ein Netzwerkprotokoll, das automatisch die Netzwerkkonfiguration an Clients verteilt. Es macht es unnötig, Geräte wie Computer, Smartphones oder IoT-Geräte manuell mit einer **IP-Adresse**, **Subnetzmaske**, **Gateway** und **DNS-Server-Adressen** zu konfigurieren.
 
@@ -19,11 +28,18 @@
 
 Weitere Infos zum Protokoll Header von DHCP und DNS findest du hier: => [protokoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md).
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Das DORA-Prinzip: Der DHCP-Ablauf
 Der Prozess, bei dem ein Client eine IP-Adresse von einem DHCP-Server erhält, folgt dem sogenannten DORA-Prinzip, das aus vier Schritten besteht:
 
 ### Der DORA-Handshake
-```yaml
+```text
 +----------+                           +-------------+
 |  Client  |                           | DHCP-Server |
 +----------+                           +-------------+
@@ -42,6 +58,13 @@ Der Prozess, bei dem ein Client eine IP-Adresse von einem DHCP-Server erhält, f
     |                                        |
     |----------- Netzwerkzugriff ----------->|
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 #### D - Discover:
 
@@ -74,12 +97,29 @@ Die dem Client zugewiesene Adresse gehört ihm nur für eine bestimmte Dauer (Le
 
 - **Lease-Ablauf (100%):** Wenn die Lease-Zeit vollständig abgelaufen ist, gibt der Client seine IP-Adresse frei und beginnt den DORA-Prozess von Neuem, um eine neue IP-Adresse zu erhalten.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### DHCP-Relay
 Ein **DHCP-Relay** ist eine Funktion auf einem Router, die DHCP-Anfragen über Netzwerksegmente hinweg weiterleitet. Dies ist nützlich, wenn ein einziges DHCP-Subnetz für mehrere physische Netzwerke konfiguriert werden soll.
 
 - Der Client sendet eine Broadcast-Anfrage (`DHCP Discover`) im lokalen Netzwerk.
 - Der Router (`DHCP-Relay-Agent`) empfängt die Anfrage und leitet sie als Unicast an den konfigurierten DHCP-Server im entfernten Netzwerk weiter.
 - Der DHCP-Server sendet seine Antwort (`DHCP Offer`) an das DHCP-Relay, das die Antwort dann an den ursprünglichen Client im lokalen Netzwerk weiterleitet.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Vor- und Nachteile DHCP
 
@@ -102,14 +142,38 @@ Die größte Bedrohung für DHCP ist ein **Rogue DHCP-Server**. Ein Angreifer f�
 - Clients falsche IP-Adressen, Gateways und DNS-Server zuweisen.
 - Den Netzwerkverkehr umleiten und einen [Man-in-the-Middle-Angriff](/02-network-security/angriffe/mitm_angriff.md) (**MitM**) durchführen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Maßnahmen
 
 - **DHCP Snooping:** Eine Sicherheitsfunktion auf Switches, die legitime DHCP-Server identifiziert und nur deren Antworten zulässt.
 - **Port-Security:** Begrenzung der Anzahl von MAC-Adressen pro Switch-Port, um unautorisierte Geräte zu verhindern.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
 - [protokoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md)
 - [Wikipedia: DHCP](https://de.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -123,12 +187,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

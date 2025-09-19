@@ -7,6 +7,14 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Was ist OWASP Juice Shop
 
 `OWASP Juice Shop` ist eine Webanwendung mit sehr vielen Sicherheitslücken wie es beispielsweise [DVWA](/09-practice-labs/dvwa-lab/dvwa-lab.md) ist.
@@ -18,6 +26,14 @@ Das Ziel dieser Anwendung ist es, die [OWASP Top 10](https://owasp.org/www-proje
 
 Mehr Informationen zum OWASP Juice Shop erhältst du hier: [OWASP Juice Shop (offizielle Webseite)](https://owasp.org/www-project-juice-shop/)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 2. System Updates vorbereiten und durchführen
 
 Gib im Termial deiner Kali folgenden Befehle ein, um dein System und Programme zu aktualisieren:
@@ -25,6 +41,14 @@ Gib im Termial deiner Kali folgenden Befehle ein, um dein System und Programme z
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 3. Docker mit OWASP Juice Shop starten
 
@@ -45,19 +69,40 @@ Du kannst jetzt dein Docker mit folgendem Container starten und gleichzeitig die
 
 Gib dazu in deinem Kali Linux Terminal folgenden Befehle ein:
 
-### 3.1 OWASP Juice Shop in Docker installieren
-```bash
-docker pull bkimminich/juice-shop
-```
-### 3.2 Docker und OWASP Juice Shop starten
-```bash
-docker run -d -p 3000:3000 --name juice-shop bkimminich/juice-shop
-```
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+
+### 3.1 OWASP Juice Shop in Docker installieren
+```bash
+docker pull bkimminich/juice-shop
+```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 3.2 Docker und OWASP Juice Shop starten
+```bash
+docker run -d -p 3000:3000 --name juice-shop bkimminich/juice-shop
+```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 - `-d`: Startet den Container im Hintergrund (detached mode)
 - `-p 3000:3000`: Öffnet Port 3000 auf deiner Maschine und verknüpft sie mit Port 3000 im Container.
@@ -66,11 +111,27 @@ docker run -d -p 3000:3000 --name juice-shop bkimminich/juice-shop
 
 Eine ausführliche Installationsanleitung erhältst du im [OWASP Juice Shop Companion](https://pwning.owasp-juice.shop/companion-guide/latest/part1/running.html).
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3.3 Docker Container auflisten (optional)
 ```bash
 docker ps
 ```
 Hier sollte `juice-shop` auftauchen. Und vielleicht andere Container, die du am Laufen hast.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3.4 Juice Shop im Webbrowser öffnen
 
@@ -79,6 +140,14 @@ Um auf die OWASP Juice Shop Web Anwendung zuzugreifen öffnest du einfach deinen
 http://localhost:3000
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3.5 Juice Shop Containerisierung beenden
 Gib im Kali Linux Terminal folgenden Befehl ein:
 
@@ -86,10 +155,26 @@ Gib im Kali Linux Terminal folgenden Befehl ein:
 docker stop juice-shop
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3.6 Juice Shop Neustart
 ```bash
 docker start juice-shop
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 
@@ -97,6 +182,14 @@ docker start juice-shop
 - [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
 - [GitHub Juice-Shop](https://github.com/juice-shop/juice-shop)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -111,12 +204,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

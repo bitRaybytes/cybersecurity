@@ -24,12 +24,24 @@ Dazu wird ein **virtueller Tunnel** erstellt, durch den der gesamte Datenverkehr
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Visualisierung: VPN-Tunnel
 
 ```yaml
 [ Client / Laptop ] --(verschlüsselt)-- [ Internet ] --(verschlüsselt)-- [ VPN-Server / Firmennetzwerk ]
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Wichtige Sicherheitsaspekte eines VPN
 
@@ -42,6 +54,12 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 → Dies sind auch die Kernpunkte von **IPsec**-basierter VPN-Sicherheit.  
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## VPN-Arten
 
@@ -57,6 +75,12 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 2. **End-to-Site-VPN (Remote Access)**
 - Einzelne Nutzer greifen auf ein internes Firmennetz zu.  
 - Typisches Szenario für **Homeoffice** oder **Remote-Arbeit**.  
@@ -66,6 +90,12 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 ```
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 3. **End-to-End-VPN**
 - Direkte verschlüsselte Verbindung zwischen **zwei Endgeräten**.  
@@ -78,6 +108,12 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Unternehmens-VPNs vs. kommerzielle VPNs
 
 | Merkmal              | Unternehmens-VPN (End-to-Site) | Kommerzielles VPN (Provider) |
@@ -88,6 +124,12 @@ Ein sicheres VPN muss folgende Punkte gewährleisten:
 | Hauptzweck           | Remote Work, Netzwerksicherheit | Anonymität, Geoblocking |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Proxy vs. VPN
 
@@ -123,6 +165,12 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Wichtige VPN-Protokolle
 
 | Protokoll   | Eigenschaften |
@@ -152,6 +200,12 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nachteile von VPNs
 
 - Performance-Einbußen durch Verschlüsselung  
@@ -160,6 +214,12 @@ Der Rest läuft direkt über den lokalen Internetzugang.
 - In einigen Ländern verboten oder eingeschränkt  
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Vergleich: Proxy vs. VPN
 
@@ -175,6 +235,12 @@ VPN:
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Weiterführende Links
 
 - [OpenVPN Projektseite](https://openvpn.net)  
@@ -184,6 +250,12 @@ VPN:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -197,12 +269,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

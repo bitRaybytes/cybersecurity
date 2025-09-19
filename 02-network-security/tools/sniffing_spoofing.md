@@ -14,12 +14,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 **Sniffing** und **Spoofing** gehören zu den klassischen Angriffstechniken in der Netzwerksicherheit. Während Sniffing das **Abfangen von Netzwerkdaten** beschreibt, steht Spoofing für das **Fälschen von Identitäten** (z. B. IP, MAC oder DNS).
 
 Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und können schwerwiegende Folgen haben, wenn keine geeigneten Schutzmaßnahmen getroffen werden.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Begriffe & Definitionen
@@ -47,6 +63,14 @@ Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und k�
 - Netzwerkkarte im **Promiscuous Mode**
 - Switches verhindern Sniffing → muss aktiv umgangen werden (z. B. ARP-Spoofing)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Gängige Tools
 
 | Tool         | Beschreibung                                  |
@@ -57,6 +81,14 @@ Diese Techniken sind oft **Basis von Man-in-the-Middle (MITM)-Angriffen** und k�
 | Ettercap     | MITM-Angriffe + Sniffing + Spoofing           |
 | Bettercap    | Moderne Alternative zu Ettercap               |
 | MITMf        | Man-In-The-Middle Framework (nicht mehr aktiv gepflegt, aber lehrreich) |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Anwendungsbeispiele
 
@@ -92,6 +124,14 @@ Arten von Spoofing
 | DHCP Spoofing  | Falsche DHCP-Server-Antworten versenden            |
 | Email Spoofing | Absender-Adresse in Mails fälschen                 |
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Tools & Techniken
 
 - `arpspoof` (aus dsniff)
@@ -101,6 +141,14 @@ Arten von Spoofing
 - `dnsspoof` (DNS-Antworten manipulieren)
 - `responder` (SMB/NetBIOS-Antwort-Fake für Hash Capture)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispielangriff: ARP Spoofing mit Ettercap
@@ -129,6 +177,14 @@ Gegen Sniffing
     ip link show eth0
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Gegen Spoofing
 
 | Maßnahme                      | Wirkung                                    |
@@ -141,6 +197,14 @@ Gegen Sniffing
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Lernressourcen
 
 - TryHackMe: „Packet Analysis“, „Wireshark“, „Network Attacks“
@@ -149,6 +213,14 @@ Gegen Sniffing
 - YouTube Channels: John Hammond, NetworkChuck – Sniffing Tutorials
 - Buch: „Network Security Assessment“ von Chris McNab
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -163,12 +235,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

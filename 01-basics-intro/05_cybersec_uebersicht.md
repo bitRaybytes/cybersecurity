@@ -10,10 +10,26 @@
 - [Ziel dieses Repositories](#ziel-dieses-repositories)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist Cybersecurity?
 
 Cybersecurity (IT-Sicherheit) umfasst alle Maßnahmen, Strategien und Technologien, die dem Schutz von IT-Systemen, Netzwerken, Programmen und Daten vor unbefugtem Zugriff, Angriffen, Manipulation oder Zerstörung dienen. Sie ist ein unverzichtbarer Bestandteil moderner digitaler Infrastrukturen – ob in Unternehmen, öffentlichen Einrichtungen oder im privaten Bereich.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Wichtige Säulen der Cybersicherheit
 
@@ -51,6 +67,12 @@ Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Verantwortung & Rechtlicher Rahmen
 
 **Cybersecurity ist kein Freifahrtschein für digitales "Hacken".** Vielmehr liegt die Verantwortung darin, Schwachstellen zu erkennen und **verantwortungsvoll zu melden oder zu beheben.**
@@ -79,6 +101,12 @@ Dieses grundlegende Konzept der Informationssicherheit nenn sich auch die **CIA-
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Ziel dieses Repositories
 
 Dieses Repository soll dich dabei unterstützen:
@@ -90,6 +118,12 @@ Dieses Repository soll dich dabei unterstützen:
 - Deinen Weg in die IT-Security beruflich oder hobbymäßig zu beginnen
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 

@@ -8,6 +8,15 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung: Was ist ein VPN?
 
 Ein **VPN** (**Virtual Private Network**) ermöglicht eine sichere, verschlüsselte Verbindung über unsichere Netzwerke wie das Internet. Es erstellt einen virtuellen, abhörsicheren "**Tunnel**", durch den der gesamte Datenverkehr geleitet wird. Dadurch bleibt die ursprüngliche IP-Adresse des Nutzers verborgen und der physische Standort ist nicht öffentlich einsehbar.
@@ -53,6 +62,15 @@ Auch **LAN-to-LAN **genannt, verbindet es komplette Netzwerke, z. B. verschieden
 - Spart Kosten, da statt teurer Standleitungen eine Internetverbindung genutzt wird.
 - Ermöglicht auch Extranet-VPNs, die die Netzwerke verschiedener Unternehmen sicher verbinden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Remote-Access-VPN
 
 Auch als **End-to-Site-VPN** bekannt, ermöglicht es einzelnen Nutzern eine sichere Verbindung zu einem Firmennetzwerk.
@@ -60,12 +78,28 @@ Auch als **End-to-Site-VPN** bekannt, ermöglicht es einzelnen Nutzern eine sich
 - Wird häufig für Remote-Arbeit genutzt, damit Mitarbeiter von unterwegs auf interne Systeme zugreifen können.
 - Das Endgerät (Laptop, Smartphone) eines Nutzers wird dabei Teil des Unternehmensnetzwerks.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. End-to-End-VPN
 
 Stellt eine direkte, verschlüsselte Verbindung zwischen zwei Endgeräten her.
 
 - Erhöht die Sicherheit, da der gesamte Datenverkehr unabhängig von den genutzten Netzwerken verschlüsselt bleibt.
 - Wird für sichere Kommunikation zwischen zwei Benutzern oder Geräten verwendet.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Unterscheidung: Kommerzielle vs. Unternehmens-VPNs
 

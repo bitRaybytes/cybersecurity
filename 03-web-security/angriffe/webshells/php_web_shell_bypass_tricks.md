@@ -15,6 +15,12 @@
 
  
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 
 In diesem Dokument findest du typische Dateinamen- und Erweiterungstricks, die bei **File Upload Attacks** verwendet werden, um **PHP-Webshells** trotz Dateifilter oder Upload-Validierung auf einen Webserver zu schleusen.
@@ -24,6 +30,12 @@ Solche Techniken sind besonders in **Capture The Flag (CTF)**-Challenges, **Bug 
 > ⚠️ Diese Datei dient ausschließlich zu **Lern- und Testzwecken** in legalen Übungsumgebungen (z. B. TryHackMe, HackTheBox).
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Klassische Upload-Namen für Webshells
 
@@ -59,6 +71,12 @@ cmdshell.jpg.php
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Groß-/Kleinschreibung (Bypass durch Case-Insensitive Filter)
 
 Manche Filter prüfen nur .php in Kleinbuchstaben:
@@ -69,6 +87,12 @@ cmdshell.PHP
 ```
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Weitere gebräuchliche alternative Erweiterungen
 Diese Erweiterungen werden auf manchen falsch konfigurierten Servern ebenfalls als PHP interpretiert:
@@ -100,6 +124,12 @@ http://[IP]/images/cmdshell.php.jpg
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliches Tool: Content-Disposition & MIME-Typ prüfen
 Manche Filter prüfen den MIME-Typ. Tools wie Burp Suite oder curl helfen dir, die Content-Type-Header zu manipulieren:
 
@@ -114,6 +144,12 @@ Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Datei
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Siehe auch:
 
 - [php_web_shell_usage.md](/03-web-security/angriffe/webshells/php_web_whell_usage.md)
@@ -121,6 +157,12 @@ Wissen über Webshell-Uploadtricks hilft auch Defensive Security Teams, um Datei
 - [post_exploitation_tools.md](/04-host-security/post_exploitation_tools.md)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -134,12 +176,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

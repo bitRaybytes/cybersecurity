@@ -15,6 +15,14 @@
 - [Weitere Ressourcen](#weitere-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tastenkombinationen (Default)
 
 | Shortcut             | Beschreibung                                         |
@@ -35,6 +43,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Workflow Shortcuts (via Kontextmenü / GUI)
 
 | Funktion              | Beschreibung                                         |
@@ -44,6 +60,14 @@
 | Strg + Doppelklick auf Header / Param. | Kopiert Namen/Wert in Zwischenablage       |
 | Doppelklick auf `Param-Wert` im Repeater | Bearbeitung im Inline-Modus                |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Tools innerhalb von Burp
@@ -78,12 +102,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tipps zur Organisation
 
 - Nutze `Burp Project Files (.burp)` zur Speicherung kompletter Sessions
 - Setze in **Proxy → Options** gezielte Scope-Filter
 - Verwende "Target → Site Map" zur strukturierten Übersicht der gescannten Seiten
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Quick Commands für Decoder
@@ -97,12 +137,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Weitere Ressourcen
 
 - [PortSwigger Academy](https://portswigger.net/web-security) – Kostenlos lernen!
 - [Burp Suite Docs](https://portswigger.net/burp/documentation)
 - [CheatSheetSeries: Burp Suite](https://cheatsheetseries.owasp.org/)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -117,12 +173,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

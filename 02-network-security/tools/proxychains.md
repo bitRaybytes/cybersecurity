@@ -14,12 +14,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist Proxychains?
 
 **Proxychains** ist ein Unix-basiertes Tool, mit dem du beliebige Programme über eine oder mehrere Proxys (z. B. SOCKS5, HTTP) ins Internet tunneln kannst – etwa über Tor. Dadurch bleibt die eigene **echte IP-Adresse verborgen**, was es ideal für anonymes Scanning, Browsing oder Datenabfragen macht.
 
 Proxychains *hängt sich vor die Netzwerkaufrufe eines Programms* und zwingt es, nur über die definierten Proxys zu kommunizieren.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Aufbau & Funktionsweise
@@ -30,6 +46,14 @@ Proxychains funktioniert über drei zentrale Komponenten:
 2. **Konfigurationsdatei**: `/etc/proxychains.conf` steuert das Verhalten und die eingesetzten Proxyserver.
 3. **Proxy-Reihenfolge (Kaskadierung)**: einzelne oder mehrere Proxys seriell nutzen (Chain).
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Installation
@@ -58,6 +82,14 @@ Um sie zu bearbeiten:
 ```bash
 sudo nano /etc/proxychains.conf
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 🔧 Wichtige Abschnitte:
 1. Chain-Typ
@@ -108,6 +140,14 @@ Wenn alles funktioniert, wird die eigene IP-Adresse nicht die echte sein, sonder
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Beispiel: Konfiguration für Tor
 
 1. Konfigurationen vornehmen:
@@ -155,12 +195,28 @@ proxychains curl ifconfig.io
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Weitere Ressourcen
 
 - 🔗 [Proxychains GitHub](https://github.com/rofl0r/proxychains-ng)
 - 🔐 [Tor Project](https://www.torproject.org/)
 - 📖 `man proxychains`
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -175,12 +231,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

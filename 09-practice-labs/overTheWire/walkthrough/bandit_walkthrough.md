@@ -56,6 +56,12 @@ Mehr zu [Over the Wire und dem Level Bandit](https://www.overthewire.org/wargame
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Tipps zu Beginn:
 
 ### Ordern anlegen und Passwörter organisieren
@@ -84,6 +90,13 @@ Diesen Befehl musst du dann nach einem Exit eingeben, und das Password aus dem L
 
 
 Du kannst zum Speichern von Text-Dateien auch einen Editor wie `nano` nutzen. Ich habe mich für den obigen Weg entschieden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Handbücher der Befehle und Programme in Shell
 

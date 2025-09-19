@@ -17,6 +17,12 @@ Online: https://gchq.github.io/CyberChef/
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Anwendungsgebiete (Use Cases)
 
 - Entschlüsseln und Dekodieren (Base64, XOR, ROT13, etc.)
@@ -29,6 +35,12 @@ Online: https://gchq.github.io/CyberChef/
 - Encoding-Ketten (z. B. mehrfach Base64 + URL Encode)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Wichtige Funktionen & Operatoren
 
@@ -50,9 +62,17 @@ Online: https://gchq.github.io/CyberChef/
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Praktische Rezepte (Recipes)
 
-### 2. Hash-Analyse
+### 1. Hash-Analyse
 ```text
 Input: Hash-Wert
 Recipe:
@@ -60,14 +80,30 @@ Recipe:
 - [ggf. in Crackstation.org oder Hashcat prüfen]
 ```
 
-### 3. JWT-Token entschlüsseln
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 2. JWT-Token entschlüsseln
 ```text
 Input: JWT Token (eyJhbGciOiJIUzI1...)
 Recipe:
 - Parse JWT
 ```
 
-### 4. Obfuscated JavaScript analysieren
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 3. Obfuscated JavaScript analysieren
 ```text
 Recipe:
 - Beautify JavaScript
@@ -76,7 +112,15 @@ Recipe:
 - Find / Replace Pattern (z.B. eval, atob)
 ```
 
-### 5. Reverse Shell erkennen & dekodieren
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 4. Reverse Shell erkennen & dekodieren
 ```text
 Input: encoded payload
 Recipe:
@@ -84,7 +128,15 @@ Recipe:
 - Beautify
 ```
 
-### 6. Dateien extrahieren
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 5. Dateien extrahieren
 ```text
 Input: Binärdump oder Base64-Daten
 Recipe:
@@ -93,13 +145,29 @@ Recipe:
 - Detect File Type
 ```
 
-### 7. Encoding erkennen & automatisieren
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### 6. Encoding erkennen & automatisieren
 ```text
 Recipe:
 - Magic
 => CyberChef erkennt häufige Pattern automatisch
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Tipps & Best Practices
@@ -112,12 +180,28 @@ Recipe:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links & Quellen
 
 - [CyberChef Online Tool](https://gchq.github.io/CyberChef/)
 - [CyberChef Cheatsheet (PDF)](https://malicious.link/file/cyberchef.pdf)
 - [CyberChef GitHub Repo](https://drive.google.com/drive/home)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -132,12 +216,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

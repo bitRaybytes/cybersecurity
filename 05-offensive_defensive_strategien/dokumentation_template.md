@@ -86,7 +86,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 <div align=right>
 
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+[↑ Hoch](#-pentestctf-report-template)
 
 </div>
 

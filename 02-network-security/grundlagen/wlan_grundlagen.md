@@ -1,20 +1,13 @@
 # 🛡️ WLAN-Sicherheit – Grundlagen und Angriffsvektoren
 ## Inhaltsverzeichnis
-WLAN vs. Wi-Fi
-
-WLAN-Betriebsmodi
-
-Die wichtigsten WLAN-Sicherheitsstandards
-
-Grundbegriffe aus der Praxis
-
-Frequenzbänder und ihre Bedeutung
-
-Gefahren und typische Angriffsvektoren
-
-Best Practices für die WLAN-Absicherung
-
-Haftungsausschluss
+- [WLAN vs. Wi-Fi](#wlan-vs-wi-fi)
+- [WLAN-Betriebsmodi](#wlan-betriebsmodi)
+- [Die wichtigsten WLAN-Sicherheitsstandards](#die-wichtigsten-wlan-sicherheitsstandards)
+- [Grundbegriffe aus der Praxis](#grundbegriffe-aus-der-praxis)
+- [Frequenzbänder und ihre Bedeutung](#frequenzbänder-und-ihre-bedeutung)
+- [Gefahren und typische Angriffsvektoren](#gefahren-und-typische-angriffsvektoren)
+- [Best Practices für die WLAN-Absicherung](#best-practices-für-die-wlan-absicherung)
+- [Haftungsausschluss](#haftungsausschluss)
 
 ## WLAN vs. Wi-Fi
 In der Praxis werden die Begriffe **WLAN** (**Wireless Local Area Network**) und **Wi-Fi** oft synonym verwendet. Aus technischer und professioneller Sicht gibt es jedoch einen wichtigen Unterschied:

@@ -13,12 +13,21 @@
 - [Fazit](#fazit)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
 ## Einführung
 
 Die **CPU (Central Processing Unit)** wird häufig als *Gehirn* oder *Herzstück* eines Rechners bezeichnet. Sie ist die zentrale Verarbeitungseinheit, die nahezu alle wichtigen Berechnungen und Steuerungsaufgaben innerhalb eines Computers übernimmt. Ohne sie wäre kein modernes IT-System funktionsfähig.  
 
 Ihre Leistung hängt dabei nicht nur von der reinen **Taktfrequenz** oder Anzahl der Kerne ab, sondern auch von der Architektur, der Cache-Struktur und dem Zusammenspiel mit dem **Chipsatz** des Mainboards.  
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Aufbau und Funktionsweise einer CPU
@@ -35,9 +44,25 @@ Eine CPU besteht aus mehreren funktionalen Einheiten:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Leistungssteigerung: Von Taktfrequenz bis Parallelisierung
 
 In den Anfangsjahren der Computerentwicklung wurde die Leistung einer CPU hauptsächlich durch die Steigerung der Taktfrequenz erhöht. Doch physikalische Grenzen, insbesondere durch Wärmeentwicklung und Energieverbrauch, setzten diesem Ansatz enge Schranken. Aus diesem Grund liegt der Fokus heute verstärkt auf der **Parallelisierung** von Prozessen, um mehrere Aufgaben gleichzeitig zu bearbeiten.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Möglichkeiten der Parallelisierung
 
@@ -51,6 +76,12 @@ In den Anfangsjahren der Computerentwicklung wurde die Leistung einer CPU haupts
 | **Multi-Core-CPU** | Ein Prozessor besteht aus mehreren physischen Kernen, die gleichzeitig Aufgaben verarbeiten können. |
 | **Many-Core-Architektur** | In modernen CPUs für High-Performance-Computing (HPC) finden sich Hunderte bis Tausende von Rechenkernen, die auf massive Parallelität ausgelegt sind. |
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Übertaktung – Mehr Leistung auf Kosten der Effizienz?
@@ -73,6 +104,13 @@ Hersteller bieten eigene Technologien an, um die CPU dynamisch zu übertakten, w
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Multimedia-Erweiterungen
 
 Um Multimedia-Anwendungen und Spiele effizienter zu unterstützen, enthalten CPUs spezielle **Befehlssatzerweiterungen**:  
@@ -83,9 +121,24 @@ Um Multimedia-Anwendungen und Spiele effizienter zu unterstützen, enthalten CPU
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## CPU-Architekturen: RISC vs. CISC
 
 Ein zentrales Unterscheidungsmerkmal von CPUs liegt in ihrer Architektur, die maßgeblich die Art und Weise bestimmt, wie Befehle verarbeitet werden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### CISC (Complex Instruction Set Computing):
 Diese Architekturen verwenden einen sehr umfangreichen und komplexen Befehlssatz. Einzelne Befehle sind sehr leistungsfähig, erfordern aber oft mehrere Taktzyklen zur Ausführung. Die **x86-Architektur**, die in den meisten Desktop-PCs und Servern zum Einsatz kommt, ist das bekannteste Beispiel für CISC. 
@@ -94,12 +147,29 @@ Diese Architekturen verwenden einen sehr umfangreichen und komplexen Befehlssatz
 - Leistungsfähige Einzelbefehle, aber oft langsam (mehrere Takte pro Befehl)  
 - Typisch für **x86-Architektur** (Desktop-PCs, Server)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### RISC (Reduced Instruction Set Computing):  
 RISC-Architekturen setzen auf einen reduzierten, einfachen Befehlssatz, wobei die meisten Befehle in nur einem Taktzyklus ausgeführt werden können. Die **ARM-Architektur**, die in Smartphones, Tablets und Embedded Systems dominant ist, ist ein typisches Beispiel für RISC.
 
   - Reduzierter, effizienter Befehlssatz  
   - Befehle sind einfacher und meist in einem Taktzyklus ausführbar  
   - Typisch für **ARM-Architektur** (Smartphones, Tablets, Embedded Systems)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Vergleich: RISC vs. CISC
 
@@ -109,6 +179,15 @@ RISC-Architekturen setzen auf einen reduzierten, einfachen Befehlssatz, wobei di
 | **Ausführung** | meist 1 Zyklus pro Befehl | mehrere Zyklen pro Befehl |
 | **Effizienz** | sehr hoch, da die Hardware einfach ist | geringer, da oft Microcode zur Befehlsausführung nötig ist |
 | **Einsatzgebiete** | Mobile Geräte, IoT, energieeffiziente Systeme | Desktop, Workstations, Server |
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Sicherheitsrelevanz der CPU
 
@@ -121,14 +200,40 @@ Aus der Perspektive der Cybersicherheit ist die CPU nicht nur eine Recheneinheit
 - **Physische Angriffe:** Direkter physischer Zugang zur CPU kann das Auslesen von Daten aus dem Cache-Speicher ermöglichen, selbst wenn das System ausgeschaltet ist.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Speicherarten: Flüchtig vs. Nichtflüchtig
 
 CPUs arbeiten eng mit verschiedenen Speichertypen zusammen, die sich in ihrer Flüchtigkeit unterscheiden:
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Flüchtiger Speicher (Volatile Memory)
 - **RAM:** Der Hauptspeicher, der seinen Inhalt ohne Stromversorgung verliert.  
 - **Cache:** Der extrem schnelle, in die CPU integrierte Zwischenspeicher.
 - **Register:** Winzige, ultraschnelle Speicherplätze direkt in der CPU.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Nichtflüchtiger Speicher (Non-Volatile Memory)
 - **ROM:** Ein nur lesbarer, robuster und langlebiger Speicher.
@@ -136,10 +241,26 @@ CPUs arbeiten eng mit verschiedenen Speichertypen zusammen, die sich in ihrer Fl
 - **Flash-Speicher:** Die Grundlage moderner SSDs und USB-Sticks.
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## GPGPU – Wenn die Grafikkarte rechnet
 
 Neben der klassischen CPU kommt zunehmend die **GPGPU-Technologie** (General Purpose Computation on Graphics Processing Unit) zum Einsatz. Sie nutzt GPUs, die sich hervorragend für parallele Berechnungen eignen, um allgemeine Aufgaben wie KI-Anwendungen oder wissenschaftliche Simulationen zu bewältigen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Fazit

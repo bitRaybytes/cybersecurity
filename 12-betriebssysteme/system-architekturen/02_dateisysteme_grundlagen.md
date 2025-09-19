@@ -92,6 +92,16 @@ Der Aufbau des Verzeichnisbaums erfüllt die folgenden Anforderungen:
 
 - Zentrale Speicherung aller Benutzerdaten in `/home`.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### Verzeichnisbaum nach FSSTND
 ```text
 /              - Wurzelverzeichnis
@@ -112,6 +122,15 @@ Der Aufbau des Verzeichnisbaums erfüllt die folgenden Anforderungen:
 ├── usr        - Verzeichnisstruktur für systemübergreifende Binärdateien
 └── var        - Verzeichnisstruktur für variable Dateien
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Befehle zur Navigation (Linux)
 
@@ -167,6 +186,14 @@ Der Aufbau des Verzeichnisbaums erfüllt die folgenden Anforderungen:
 └── cores        - Speicherabbilder (Core Dumps) von Programmen, die abstürzen
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Befehle zur Navigation (macOS)
 
 | Befehl | Beschreibung |
@@ -208,6 +235,14 @@ Einige der Hauptordner und ihre Funktionen:
 
 **Anmerkung:** Windows verfügt über Schutzmechanismen für diese Ordner, einschließlich Zugriffsberechtigungen und Funktionen wie dem Windows-Dateischutz, die nicht autorisierte Änderungen an Systemdateien verhindern.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Befehle zur Navigation (Windows)
 
 | Befehl | Beschreibung |
@@ -238,12 +273,28 @@ Einige der Hauptordner und ihre Funktionen:
 
 - **Kompatibilität:** Kompatibel mit allen Windows-Versionen und modernen macOS-Systemen. Ältere Linux-Versionen benötigen zusätzliche Software.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. FAT32
 **FAT32** (**File Allocation Table 32**) wurde 1995 mit Windows 95 eingeführt. Es ist sehr kompatibel, da es der Standard auf vielen USB-Sticks ist.
 
 - **Nachteile:** Nicht geeignet für internen Speicher (da langsam), fehlende Sicherheits-Features und eine Dateigrößenbeschränkung von 4 GB.
 
 - **Idealer Verwendungszweck:** Externe USB-Drives und andere Geräte, die nicht mehr als 4 GB Speicher pro Datei beanspruchen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. NTFS
 **NTFS** (**New Technology File System**) wurde 1993 mit Windows NT 3.1 eingeführt und bietet viele Features, die FAT32 und exFAT nicht haben, wie z. B. Sicherheit mit Zugriffsrechte-Management.

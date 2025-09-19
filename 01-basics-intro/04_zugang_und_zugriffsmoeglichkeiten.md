@@ -17,9 +17,17 @@ Sie ist als **Cheat Sheet** und **Nachschlagewerk** gedacht – für Lernende od
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Authentifizierungsmaßnahmen
 
 Authentifizierung ist der Prozess, durch den ein Benutzer oder ein System nachweist, dass es berechtigt ist, auf bestimmte Ressourcen zuzugreifen.
+
 
 ### Typen der Authentifizierung
 
@@ -34,6 +42,14 @@ Authentifizierung ist der Prozess, durch den ein Benutzer oder ein System nachwe
 - **Adaptive Authentifizierung**
     - Kontextbasiert (Ort, Gerät, Uhrzeit, Risikoanalyse)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 2. Rechtevergabe
 Die Vergabe von Zugriffsrechten ist ein entscheidender Bestandteil der IT-Sicherheit.
 
@@ -41,6 +57,14 @@ Die Vergabe von Zugriffsrechten ist ein entscheidender Bestandteil der IT-Sicher
 
 - Jeder Benutzer erhält nur die Rechte, die für seine Aufgaben erforderlich sind.
 - Reduziert Angriffsfläche und Schadenspotenzial.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Dateirechte (Beispiel Unix/Linux)
 - **Benutzerklassen:** Eigentümer (user), Gruppe (group), Sonstige (others).
@@ -54,6 +78,14 @@ ls -l script.sh
 -rwxr-x---  1 user group 1234 Aug 28 12:00 script.sh
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Best Practices
 - Regelmäßige Überprüfung und Bereinigung von Rechten.
 - Entfernen inaktiver Accounts.
@@ -64,6 +96,14 @@ ls -l script.sh
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 3. Passwortrichtlinien
 Passwörter sind nach wie vor eines der am häufigsten genutzten, aber auch am meisten angegriffenen Sicherheitsmittel.
@@ -76,11 +116,26 @@ Passwörter sind nach wie vor eines der am häufigsten genutzten, aber auch am m
 - **Kein Bezug zu persönlichen Daten** (Name, Geburtsdatum, Haustiere etc.)
 - **Passphrasen bevorzugt:** „Haus!Apfel-99Wolke?“
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Passwortmanager
 
 - Speichern & generieren sicherer Passwörter
 - Verhindern Wiederverwendung schwacher Passwörter
 - **Beispiele:** KeePass, Bitwarden, 1Password
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Zusätzliche Schutzmaßnahmen
 
@@ -89,6 +144,14 @@ Passwörter sind nach wie vor eines der am häufigsten genutzten, aber auch am m
 - CAPTCHAs gegen Brute-Force
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 4. Zugriffskontrollmodelle
 | Modell                                    | Erklärung                                                          | Beispiel                                 |
 | ----------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------- |
@@ -96,6 +159,14 @@ Passwörter sind nach wie vor eines der am häufigsten genutzten, aber auch am m
 | **MAC** (Mandatory Access Control)        | Zugriff durch zentrale Richtlinien, oft in hochsicheren Umgebungen | Militärische Systeme                     |
 | **RBAC** (Role-Based Access Control)      | Rechte nach Rolle zugewiesen                                       | Admin, User, Gast                        |
 | **ABAC** (Attribute-Based Access Control) | Kontextabhängig (Ort, Zeit, Gerät)                                 | Cloud-Zugriff nur aus bestimmtem Land/IP |
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## 5. Verschlüsselung
 Verschlüsselung schützt Daten bei Übertragung und Speicherung.
@@ -128,6 +199,14 @@ openssl rsa -in private.pem -pubout -out public.pem
 
 Mehr zum Thema Verschlüsselung erfährst du [hier](/07-crypto-stego/encoding_vs_encryption.md).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 6. Best Practices
 
 - MFA aktivieren für alle kritischen Konten
@@ -138,12 +217,26 @@ Mehr zum Thema Verschlüsselung erfährst du [hier](/07-crypto-stego/encoding_vs
 - Mitarbeiter schulen (Phishing, Social Engineering)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 7. Nützliche Links
 
 - [BSI: Sichere Passwörter erstellen](https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Informationen-und-Empfehlungen/Cyber-Sicherheitsempfehlungen/Accountschutz/Sichere-Passwoerter-erstellen/sichere-passwoerter-erstellen_node.html)
 - [NIST Guidelines: Digital Identity](https://pages.nist.gov/800-63-3/)
 - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -157,12 +250,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

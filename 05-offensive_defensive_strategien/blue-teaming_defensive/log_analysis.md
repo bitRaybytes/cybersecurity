@@ -22,6 +22,14 @@ Diese Datei bietet eine Übersicht zum Thema **Log-Analyse** im Bereich Cybersec
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Einführung in Log-Analyse
 
 Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse dieser Logs ist essenziell zur:
@@ -31,6 +39,14 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 - Beweissicherung in der Forensik
 - Erfüllung gesetzlicher Anforderungen
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 2. Wichtige Log-Typen
@@ -65,6 +81,14 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 4. Wichtige Begriffe & Felder
 
 - **Timestamp** – Zeitstempel des Events
@@ -76,6 +100,14 @@ Logfiles sind Textdateien, die Systemaktivitäten protokollieren. Die Analyse di
 - **Username** – Eingeloggter oder angefragter Benutzer
 - **Process/Service** – Dienst oder ausführende Anwendung
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 5. Beispielhafte Angriffserkennung
@@ -111,10 +143,26 @@ grep -i "curl\|python\|wget" /var/log/apache2/access.log
 127.0.0.1 - - [10/Jul/2025:14:23:15 +0200] "GET /index.php HTTP/1.1" 200 2326 "-" "Mozilla/5.0"
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Auth Log (Linux)
 ```pgsql
 Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin from 192.168.1.50 port 2222 ssh2
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Windows Security Log (Evt/EVTX)
 - Event ID 4624 – Erfolgreiche Anmeldung
@@ -122,6 +170,14 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 - Event ID 4688 – Prozess erstellt
 
  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 7. Best Practices
 - Zentralisierung der Logs mit SIEM
@@ -132,6 +188,14 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 8. Nützliche Ressourcen
 - [logcheck.org](https://logcheck.org/)
 - [wazuh.com](https://wazuh.com/) (Open Source Security Platform)
@@ -140,9 +204,25 @@ Jul 10 12:42:22 hostname sshd[12345]: Failed password for invalid user admin fro
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Rechtlicher Hinweis
 Die Analyse und Überwachung von Logs darf nur auf eigenen Systemen oder mit ausdrücklicher Genehmigung erfolgen. Logfiles können personenbezogene Daten enthalten und unterliegen ggf. Datenschutzregelungen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -157,12 +237,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

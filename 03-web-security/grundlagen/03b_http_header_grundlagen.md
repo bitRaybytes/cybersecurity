@@ -11,6 +11,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Was sind HTTP Headers?
 
 **HTTP Header** sind ein grundlegender Bestandteil der Hypertext Transfer Protocol (HTTP)-Nachrichten, die zwischen einem Client (z. B. deinem Webbrowser) und einem Server ausgetauscht werden. Sie dienen als Metadaten, die zusätzliche Informationen über die HTTP-Anfrage (Request) oder die HTTP-Antwort (Response) übermitteln.

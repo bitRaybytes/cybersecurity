@@ -23,6 +23,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Informationsbeschaffung (Reconnaissance)
 
 | Tool             | Zweck                                       |
@@ -35,6 +43,14 @@
 | **Amass**        | Subdomain Enumeration                       |
 | **FOCA**         | Metadaten in Dokumenten finden              |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Vulnerability Analyse
@@ -69,6 +85,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Datenbank Assessment
 
 | Tool                        | Zweck                                    |
@@ -79,6 +103,14 @@
 | **Metasploit**              | Datenbankmodule                          |
 
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Password Attacks
@@ -92,6 +124,14 @@
 | **CeWL**            | Passwörter aus Webseiten generieren |
 | **Crunch**          | Passwortlisten generieren           |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Wireless Attacks
@@ -126,6 +166,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Exploitation Tools
 
 | Tool                      | Zweck                               |
@@ -137,6 +185,14 @@
 | **Impacket**              | SMB/NTLM-Tools für Lateral Movement |
 | **PowerSploit / Nishang** | PowerShell-basierte Exploits        |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Sniffing & Spoofing
@@ -171,6 +227,14 @@
 
  
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Forensik & Log-Analyse
 
 | Tool                     | Zweck                     |
@@ -182,6 +246,14 @@
 | **binwalk**              | Binäranalyse von Firmware |
 | **ExifTool**             | Metadaten auslesen        |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Reporting Tools
@@ -214,6 +286,14 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Systemdienste (für Enumeration & Missbrauch)
 
 | Service                | Tools                               |
@@ -224,6 +304,14 @@
 | **SNMP**               | snmpwalk, onesixtyone               |
 | **FTP / SSH / Telnet** | hydra, medusa, netcat               |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -238,12 +326,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

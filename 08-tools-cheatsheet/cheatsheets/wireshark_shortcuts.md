@@ -19,6 +19,14 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Grundlagen
 
 | Begriff       | Beschreibung                               |
@@ -28,6 +36,14 @@
 | **PCAP**      | "Packet Capture" – Datei mit Netzwerkdaten |
 | **Interface** | Netzwerkkarte, über die aufgezeichnet wird |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Capture Filter vs Display Filter
@@ -40,6 +56,14 @@
 > ⚠️ Capture Filter sind in BPF-Syntax geschrieben (wie in tcpdump), 
 Display Filter sind Wireshark-spezifisch.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Häufige Display Filter
@@ -56,6 +80,14 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## IP & Ports
 
 - ip.addr == 192.168.0.1
@@ -66,6 +98,14 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Verbindungen & Sessions
 
 - tcp.stream eq 0                 # Erstverbindung
@@ -74,12 +114,28 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## TLS/SSL
 
 - ssl.handshake
 - tls.record.version
 - tls.handshake.type == 1         # Client Hello
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Capture Filter (BPF Syntax)
@@ -115,6 +171,14 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tools & Extras
 
 | Funktion              | Beschreibung                                     |
@@ -124,6 +188,14 @@ Display Filter sind Wireshark-spezifisch.
 | **Name Resolution**   | IP-Adressen in Hostnamen umwandeln               |
 | **Coloring Rules**    | Regeln zur farblichen Hervorhebung definieren    |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Exportieren
@@ -137,6 +209,14 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tipps für Anfänger
 
 - Beginne mit Display Filter – sicherer & einfacher.
@@ -145,6 +225,14 @@ Display Filter sind Wireshark-spezifisch.
 - Speicher deine Mitschnitte früh – sie werden schnell groß!
 - Nutze tcp.stream eq X zum Verfolgen einzelner Verbindungen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Ressourcen
@@ -159,6 +247,14 @@ Display Filter sind Wireshark-spezifisch.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -171,12 +267,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

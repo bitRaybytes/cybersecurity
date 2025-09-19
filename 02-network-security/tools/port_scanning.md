@@ -15,12 +15,28 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist Port Scanning?
 
 Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports** auf einem Zielsystem zu identifizieren. Ziel ist es herauszufinden:
 - Welche **Dienste** (z. B. Webserver, Datenbank) aktiv sind
 - Welche **Ports** offen oder verwundbar sind
 - Welche Sicherheitsmaßnahmen aktiv sind (z. B. Firewalls)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -31,6 +47,14 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 - Ein **Port** ist eine virtuelle Schnittstelle, über die Netzwerkdienste kommunizieren.
 - Jeder Port hat eine **Portnummer** (0–65535)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Portbereiche
 
 | Bereich              | Nummern          | Beschreibung                       |
@@ -38,6 +62,14 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 | Well-Known Ports     | 0–1023           | Reserviert für Standarddienste     |
 | Registered Ports     | 1024–49151       | Für benutzerdefinierte Dienste     |
 | Dynamic/Private Ports| 49152–65535      | Für temporäre Verbindungen         |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Wichtige Ports
 
@@ -72,6 +104,14 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tool: Nmap - Der Klassiker
 
 **Nmap (Network Mapper)** ist das bekannteste Tool für Netzwerkerkennung und Port Scanning.
@@ -80,6 +120,14 @@ Port Scanning ist eine Methode, um **offene, geschlossene oder gefilterte Ports*
 
 - **Linux/Debian:** `sudo apt install nmap`
 - **Windows:** [nmap.org](https://nmap.org/download.html)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 📋 Beispiele
 
@@ -126,6 +174,14 @@ nmap -sP 192.168.1.0/24
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Rechtliche Hinweise 
 
 > Port Scanning ist in vielen Ländern ohne Erlaubnis illegal!
@@ -136,6 +192,14 @@ nmap -sP 192.168.1.0/24
 
 In Deutschland kann ein nicht autorisierter Scan gegen §202c StGB ("Vorbereiten des Ausspähens von Daten") verstoßen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Verteidigung gegen Port Scans (Blue Team)
@@ -162,6 +226,14 @@ Empfohlene Ressourcen:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Checkliste für Port Scanner:
 
 - ✅ Zielsystem identifizieren
@@ -169,6 +241,14 @@ Empfohlene Ressourcen:
 - ✅ Ports definieren
 - ✅ Firewalls/Filter beachten
 - ✅ Ergebnisse dokumentieren
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -183,12 +263,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 > Erstellt von Ray – für das Cybersecurity Lern- und Pentest-Repository  
 > 🛡️ Stay curious. Stay safe.

@@ -18,6 +18,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 - [Tägliche Lern-Routine (Beispiel)](#tägliche-lern-routine-beispiel)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## CTF-Plattformen & Übungslabore
 
 | Plattform      | Beschreibung                                                   |
@@ -30,6 +38,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 | [CTFtime.org](https://ctftime.org/)        | Kalender & Rankingsystem für aktuelle CTF-Wettbewerbe weltweit |
 | [CyberDefenders](https://cyberdefenders.org/) | DFIR & Blue Team Labs, gute Ergänzung zu Red-Team-Plattformen |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Tools (Pentest & CTF)
@@ -67,6 +83,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Communitys & Discord-Server
 
 | Name                  | Fokus                            |
@@ -80,6 +104,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Lernempfehlungen nach Themengebiet
 
 ### Netzwerk & Recon
@@ -88,11 +120,27 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 - DNS/WHOIS Recon
 - Subdomain-Enumeration (amass, subfinder)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Web Exploitation
 
 - Burp Suite Basics
 - OWASP Top 10
 - SQLi, XSS, SSTI, LFI, RCE
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Binary Exploitation
 
@@ -100,15 +148,39 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 - Format String Attacks
 - pwntools, GDB
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Cryptography
 
 - Caesar, XOR, AES Challenges
 - RSA Crack (small e/n), FactorDB
 - CyberChef zum Testen
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Steganographie
 
 - Analyse mit `binwalk`, `steghide`, `zsteg`, `exiftool`
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Forensik / Blue Team
 
@@ -138,6 +210,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tägliche Lern-Routine (Beispiel)
 
 | Tag | Inhalt                            |
@@ -163,6 +243,14 @@ Sie enthält Links zu Plattformen, Trainings, Tools, Repositories und Communitie
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -175,12 +263,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

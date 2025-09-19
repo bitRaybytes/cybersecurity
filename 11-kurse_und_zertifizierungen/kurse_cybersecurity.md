@@ -19,6 +19,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Ausgewählte Udemy-Kurse
 
 > 👉 Ideal für den schnellen Einstieg in spezifische Pentesting-Themen
@@ -31,6 +39,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 | WiFi Penetration Testing          | [Zum Kurs](https://www.udemy.com/course/wifi-hacking-for-beginners/)                                     |
 | File Path Traversal               | [Zum Kurs](https://www.udemy.com/course/file-path-traversal-mastery-hands-on-from-zero-to-hero/)        |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Udemy: Kostenlose Kurskategorien (Englisch)
@@ -54,6 +70,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Linux-Kurse & Trainings
 
 > 👉 Grundlage für jedes Cybersecurity- oder Pentest-Umfeld
@@ -62,6 +86,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 |----------------------|----------------------------------------------------------------------|
 | Linux Foundation (offiziell) | [Kostenlose Trainings](https://training.linuxfoundation.org/resources/?_sft_content_type=free-course) |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Coursera-Kurse (kostenfrei zugänglich)
@@ -77,6 +109,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Virtuelle Maschinen (VMs) zum Üben
 
 > VM-basierte Labs - eignen sich hervorragend für praktisches Pentesting.  
@@ -88,6 +128,14 @@ Willkommen zur Übersicht kostenloser und empfehlenswerter Cybersecurity-Kurse!
 > **Fragen zur VM-Einrichtung?**  
 > Tritt unserem [Discord-Server](https://discord.gg/fNcTyYVVb9) bei!
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -102,12 +150,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

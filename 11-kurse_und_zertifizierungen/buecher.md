@@ -2,7 +2,7 @@
 
 Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschrittene oder angehende Profis eignen. Ob Grundlagen, Tools, Angriffsanalysen oder strategische Verteidigung – diese Bücher vermitteln fundiertes Wissen für den Bereich der IT-Security.
 
----
+
 
 ## Inhaltsverzeichnis
 
@@ -14,40 +14,90 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 - [Ethical Hacking & Philosophie](#ethical-hacking--philosophie)
 - [Weitere Tipps](#weitere-tipps)
 - [Haftungsausschluss](#️-haftungsausschluss)
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Grundlagen der IT-Sicherheit
 
-### 1. **IT-Sicherheit: Konzepte - Verfahren - Protokolle**  
+### 1. IT-Sicherheit: Konzepte - Verfahren - Protokolle  
 🖊️ *von Rüdiger Grimm*  
 📌 Ideal für Einsteiger, die sich systematisch mit dem Thema vertraut machen wollen.  
 ✔️ Thematisiert Kryptographie, Netzwerksicherheit, Sicherheitsmechanismen & Standards.
 
-### 2. **Computer Security Basics**  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 2. Computer Security Basics  
 🖊️ *von Rick Lehtinen & Deborah Russell (O’Reilly)*  
 📌 Verständlich geschriebene Einführung in Sicherheitskonzepte.  
 ✔️ Ideal als Einstieg ins Thema ohne viel Vorkenntnisse.
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Penetration Testing & Offensive Security
 
-### 3. **The Hacker Playbook 3: Practical Guide To Penetration Testing**  
+### 3. The Hacker Playbook 3: Practical Guide To Penetration Testing  
 🖊️ *von Peter Kim*  
 📌 Eines der bekanntesten Bücher für angehende Pentester.  
 ✔️ Enthält realistische Szenarien, Tools & Strategien.
 
-### 4. **Penetration Testing: A Hands-On Introduction to Hacking**  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 4. Penetration Testing: A Hands-On Introduction to Hacking  
 🖊️ *von Georgia Weidman*  
 📌 Klassiker für Anfänger mit praktischen Übungen und Tools (Kali Linux, Metasploit).  
 ✔️ Deckt Exploits, Bufferoverflows, WiFi-Hacking und mehr ab.
 
-### 5. **Red Team Field Manual (RTFM)**  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 5. Red Team Field Manual (RTFM)  
 🖊️ *von Ben Clark*  
 📌 Kompaktes Taschenbuch mit nützlichen Befehlen, Cheat-Sheets und Windows/Linux-Commandlines.  
 ✔️ Perfekt für den schnellen Zugriff im Einsatz.
 
----
+
 
 <div align=right>
 
@@ -57,31 +107,51 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ## 🔵 Blue Teaming & Defensive Security
 
-### 6. **Blue Team Field Manual (BTFM)**  
+### 6. Blue Team Field Manual (BTFM)  
 🖊️ *von Alan White & Ben Clark*  
 📌 Pendant zum RTFM – nur für das blaue Team.  
 ✔️ Nützliche Tools, Logs, Monitoring- und Analysebefehle.
 
-### 7. **Cybersecurity Blue Team Toolkit**  
+### 7. Cybersecurity Blue Team Toolkit  
 🖊️ *von Nadean H. Tanner*  
 📌 Praktischer Überblick zu Tools & Taktiken zur Abwehr von Angriffen.  
 ✔️ Deckt Threat Hunting, SIEM, Incident Response und Logging ab.
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Exploits & Schwachstellenanalyse
 
-### 8. **The Art of Exploitation (2nd Edition)**  
+### 8. The Art of Exploitation (2nd Edition)  
 🖊️ *von Jon Erickson*  
 📌 Technisch tiefgehendes Buch mit Fokus auf Exploits & Reverse Engineering.  
 ✔️ Enthält C-Code, Debugging, Shellcode-Erzeugung.
 
-### 9. **Rootkits: Subverting the Windows Kernel**  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 9. Rootkits: Subverting the Windows Kernel  
 🖊️ *von Greg Hoglund & James Butler*  
 📌 Für Fortgeschrittene mit Interesse an tiefer Kernel-Manipulation.  
 ⚠️ Nur in legalen Testumgebungen einsetzen.
 
----
+
 
 <div align=right>
 
@@ -91,26 +161,46 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
 
 ## Kryptographie & Datenschutz
 
-### 10. **Crypto: How the Code Rebels Beat the Government—Saving Privacy in the Digital Age**  
+### 10. Crypto: How the Code Rebels Beat the Government—Saving Privacy in the Digital Age  
 🖊️ *von Steven Levy*  
 📌 Spannend geschriebene Geschichte moderner Kryptographie.  
 ✔️ Fokus auf politische & gesellschaftliche Aspekte.
 
-### 11. **Serious Cryptography: A Practical Introduction to Modern Encryption**  
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 11. Serious Cryptography: A Practical Introduction to Modern Encryption  
 🖊️ *von Jean-Philippe Aumasson*  
 📌 Technisch fundiert, aber gut verständlich.  
 ✔️ Ideal für Entwickler und Sicherheitsexperten.
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## Ethical Hacking & Philosophie
 
-### 12. **Hacking: Die Kunst des Exploits (deutsche Ausgabe)**  
+### 12. Hacking: Die Kunst des Exploits (deutsche Ausgabe)  
 🖊️ *von Jon Erickson*  
 📌 Mehr als nur Technik – auch Mindset & Ethik.  
 ✔️ Gute Balance zwischen Theorie und Praxis.
 
----
+
 
 <div align=right>
 
@@ -135,11 +225,21 @@ Diese Liste enthält Bücher, die sich besonders gut für Einsteiger, Fortgeschr
   - BSI & NIST
   auf dem Laufenden.
 
----
+
 
 > 📚 **Hinweis**: Alle empfohlenen Bücher sind rein zu Bildungszwecken aufgelistet. Die Nutzung der Inhalte erfolgt auf eigene Verantwortung. Achte auf Legalität & Ethik.
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ## ⚠️ Haftungsausschluss
 

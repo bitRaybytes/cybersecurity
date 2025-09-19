@@ -11,12 +11,30 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist ein Man-in-the-Middle-Angriff?
 Ein **Man-in-the-Middle-Angriff** (**MitM**) ist eine Cyber-Attacke, bei der sich ein Angreifer heimlich zwischen zwei kommunizierende Parteien schaltet. Ziel ist es, den Datenverkehr abzufangen, abzuhören oder zu manipulieren, ohne dass die Opfer dies bemerken. Der Angreifer agiert dabei als unsichtbarer Vermittler.
 
 **Analogie**
 
 Stell dir vor, du schickst einen Brief an einen Freund. Ein MitM-Angriff wäre, wenn jemand den Brief abfängt, ihn liest, vielleicht sogar umschreibt und ihn dann an den Empfänger weiterleitet. Weder du noch dein Freund würden etwas davon mitbekommen, außer dass der Brief vielleicht leicht verändert ist oder verspätet ankommt.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## So funktioniert ein MitM-Angriff
 Ein Angreifer nutzt verschiedene Techniken, um sich in die Kommunikation einzuschleichen. Hier sind die gängigsten Phasen eines Angriffs:
@@ -31,7 +49,7 @@ Ein Angreifer nutzt verschiedene Techniken, um sich in die Kommunikation einzusc
 
 **Schematische Darstellung**
 
-```yaml
+```text
          +-----------------+             +-----------------+
          |    Opfer A      |             |     Opfer B     |
          +-----------------+             +-----------------+
@@ -69,8 +87,24 @@ Ein Angreifer nutzt verschiedene Techniken, um sich in die Kommunikation einzusc
         |                           |---- Datenfluss ---------->|
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 2. DNS-Spoofing
 Bei DNS-Spoofing manipuliert ein Angreifer die Namensauflösung. Der Angreifer sendet gefälschte DNS-Antworten, um eine Domain mit einer falschen IP-Adresse zu verknüpfen. Das Opfer wird dann auf eine gefälschte Website umgeleitet, die der echten täuschend ähnlich sieht.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. SSL/TLS-Hijacking und Downgrade-Angriffe
 Hierbei schaltet sich der Angreifer in eine HTTPS-Verbindung ein.
@@ -101,10 +135,27 @@ Hierbei schaltet sich der Angreifer in eine HTTPS-Verbindung ein.
 - **Nutze Tools zur Überwachung:** 
     - Für Netzwerkadministratoren gibt es Tools wie Wireshark und ARP-Guard, die verdächtige Aktivitäten wie ARP-Spoofing erkennen können.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - [Wikipedia: Man-in-the-Middle-Angriff](https://de.wikipedia.org/wiki/Man-in-the-Middle-Angriff)
 - [Wikipedia: ARP Spoofing](https://de.wikipedia.org/wiki/ARP-Spoofing)
 - [arp_spoofing.md](/02-network-security/arp_spoofing.md) 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -118,12 +169,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

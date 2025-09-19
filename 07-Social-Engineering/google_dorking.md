@@ -19,6 +19,7 @@ Diese Datei liefert dir ein umfassendes Verständnis von **Google Dorking** als 
 
 
 
+
 ## 1. Was ist Google Dorking?
 
 **Google Dorking** (auch "Google Hacking" genannt) bezeichnet das gezielte Ausnutzen von **Suchoperatoren**, um mit Hilfe von Suchmaschinen (v.a. Google) **sensible Informationen** auf Webseiten zu finden, die fälschlicherweise öffentlich erreichbar sind.
@@ -31,6 +32,7 @@ Dazu gehören unter anderem:
 - Admin-Panels
 - Offene Verzeichnisse (Index of/)
 - PDF-/DOC-/XLS-Dateien mit vertraulichem Inhalt
+
 
 
 
@@ -72,6 +74,7 @@ Beispiele für Informationen, die sich durch Google Dorking finden lassen:
 
 
 
+
 ## 4. Beispiele für gezielte Dorks
 
 ```text
@@ -102,6 +105,7 @@ intext:"Warning: mysql_fetch_array()" site:example.com
 ```
 
  
+
 
 ## 5. Reverse Engineering durch Google Dorking
 
@@ -137,6 +141,7 @@ Beispiele für Reverse Engineering mit Google Dorking:
 
 
 
+
 ## 7. Rechtlicher Hinweis
 
 Achtung:
@@ -146,6 +151,7 @@ Google Dorking kann schnell rechtlich heikel werden, insbesondere wenn du geziel
 
 - Passives Suchen ist oft nicht strafbar – aber das Sammeln und Weiterverarbeiten kann es werden.
 - Bei Missbrauch greift das Computerstrafrecht (§202a StGB, §303b StGB) in Deutschland.
+
 
 
 

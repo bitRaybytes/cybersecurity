@@ -31,6 +31,14 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 In der Netzwerksicherheit ist es entscheidend, die Header der verschiedenen Protokolle zu verstehen. Sie enthalten die Kontrollinformationen, die Router, Firewalls und Analysetools wie `Wireshark` oder `tcpdump` zur Verarbeitung von Paketen nutzen.
@@ -41,7 +49,23 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Layer 2 Protokolle
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ###  Ethernet II (Layer 2)
 
@@ -55,6 +79,14 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 ```
 
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ###  ARP Header (Layer 2/3)
@@ -113,6 +145,14 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### IPv6 Header (Layer 3)
 
 - **Zweck:** Nachfolger von IPv4, 128-Bit Adressen.
@@ -134,6 +174,14 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### ICMP Header (Layer 3)
@@ -161,6 +209,15 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 
 
 ## Layer 4 Protokolle
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### TCP Header (Layer 4)
 
 - **Zweck:** Verbindungsorientierte Kommunikation.
@@ -184,6 +241,14 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### UDP Header (Layer 4)
@@ -211,6 +276,15 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 </div>
 
 ## Layer 5-7 Protokolle
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### DHCP (über UDP 67/68) (Layer 5-7)
 
@@ -253,6 +327,12 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### DNS Header (UDP/TCP Port 53) (Layer 5-7)
 
@@ -270,6 +350,12 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 +---------------------------------------------------------------+
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### HTTP/HTTPS (Layer 5-7)
@@ -311,11 +397,28 @@ Accept: */*
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### SSH 
 
 - **Zweck:** Sichere Remote-Verbindungen und Tunneling.
 - **Transport:** TCP 22
 - **Header:** Kein fester Header wie bei IP oder TCP. Der erste Teil des Protokolls ist ein einfacher Versionsstring (SSH-2.0-OpenSSH_...), gefolgt von einer binären Nachrichtenstruktur, die in der Regel nach dem Schlüsselaustausch verschlüsselt ist.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### NTP (Network Time Protocol)
@@ -344,6 +447,15 @@ Accept: */*
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### Kerberos (Authentication) (Layer 5-7)
 
 - **Zweck:** Netzwerk-Authentifizierung (oft in Windows-AD, SSO).
@@ -356,6 +468,12 @@ Accept: */*
 - AP-REQ / AP-REP (Application Service)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### RADIUS (Layer 5-7)
 
@@ -423,6 +541,15 @@ Accept: */*
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### SMB (Server Message Block)
 
 - **Zweck:** Datei- und Druckerfreigaben, häufiges Angriffsziel (EternalBlue, WannaCry).
@@ -446,6 +573,14 @@ Accept: */*
 - **Header:** ASN.1-basiert (daher variabel, min. ca. 20 Bytes).
 
  
+ 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ### Syslog
 
@@ -458,6 +593,14 @@ Accept: */*
 ```
 
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)
@@ -502,6 +645,12 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -514,12 +663,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

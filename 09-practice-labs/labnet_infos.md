@@ -10,6 +10,14 @@
 - [Weitere Ideen](#weitere-ideen)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Aufbau eines Test-Labnets
 
 Aufbau eines Test-Labs mit **3-virutellen Maschinen und einer Gatewayverbindung über pfSense** (Firewall/NAT/Tor).
@@ -28,6 +36,14 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **Internetzugang via Proxychains & Tor**          | Ideal für anonymisierte Recon & Angriffe.                                                   |
 | **pfSense-Firewall als zentrale Kontrollinstanz** | Zentralisierung der Internetfreigabe erhöht Kontrolle und Logging-Möglichkeiten.            |
 | **Keine Internetverbindung ohne Kontrolle**       | Das verhindert unbemerkte Outbound-Calls.                                                   |
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
  
 ## Architekturübersicht
@@ -81,6 +97,14 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tools & Rollenverteilung
 
 | VM             | Betriebssystem | Rolle                | Tools                              |
@@ -90,6 +114,14 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | Parrot         | Linux          | Dualrolle (Red/Blue) | `wireshark`, `burpsuite`, `splunk` |
 | pfSense        | BSD            | Gateway/Firewall     | DNS Forwarding, NAT, Tor Routing   |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nächste Verbesserungen
@@ -102,12 +134,28 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 | **Bridging für gezielte Angriffe (optional)** | Isolierte „Opfer-VMs“ über anderes Subnetz bridgen (z.B. IoT-VMs)  | Für fortgeschrittene Tests von Netzwerk-Pivoting.                                |
 | **Firmware/BIOS-Zugriff**                     | Host absichern (BIOS-Passwort, USB-Blocking)                       | Wenn Angriffe simuliert werden: Schutz für physischen Layer.                     |
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Monitoring
 
 - ELK oder Security Onion in einer VM für Netzwerk- und Angriffsanalyse installieren.
 - Zeek/Bro für Netzwerk-Traffic nutzen.
 - Tor- & Proxy-Verbindungen, z.B. per torsocks-Integration loggen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Weitere Ideen
@@ -118,6 +166,14 @@ Alle VMs haben eine statische IP-Adresse und sind im gleichen Subnetz.
 - File Server mit SMB für Lateral Movement Tests
 - Integration von Active Directory in Windows VM (für Realismustests)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -132,12 +188,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

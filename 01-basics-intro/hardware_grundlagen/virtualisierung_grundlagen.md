@@ -34,10 +34,26 @@ Der Hypervisor fungiert als Vermittler zwischen den VMs und der physischen Hardw
 ## Typen von Hypervisoren
 Man unterscheidet zwischen zwei Haupttypen von Hypervisoren, die jeweils unterschiedliche Architekturen und Sicherheitsmodelle aufweisen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Typ 1: Bare-Metal-Hypervisor
 Ein **Bare-Metal-Hypervisor** wird direkt auf der physischen Hardware (dem **Bare Metal**) installiert, ohne dass ein separates Host-Betriebssystem erforderlich ist. Er hat direkten Zugriff auf die Hardware-Ressourcen.
 
 - **Sicherheitsvorteil:** Da der Hypervisor direkt auf der Hardware läuft und keine weitere Schicht (Host OS) dazwischen liegt, ist die Angriffsfläche im Vergleich zu Typ-2-Hypervisoren deutlich geringer. Dies macht ihn zur bevorzugten Wahl für Rechenzentren und Cloud-Computing-Umgebungen. Beispiele hierfür sind **VMware ESXi**, **Microsoft Hyper-V** und **KVM**.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Typ 2: Hosted-Hypervisor
 Ein **Hosted-Hypervisor** läuft als Anwendung auf einem bereits installierten Host-Betriebssystem (z. B. Windows, macOS oder Linux). Die VMs laufen somit auf einer weiteren Abstraktionsebene.
@@ -63,6 +79,14 @@ Ein **Hosted-Hypervisor** läuft als Anwendung auf einem bereits installierten H
 |           Physische Hardware (Bare Metal)       |
 +-------------------------------------------------+
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Typ 2: Hosted-Hypervisor Architektur
 ```text
@@ -91,20 +115,55 @@ Ein unkontrolliertes Wachstum der VMs im Netzwerk. Dies führt zu mangelndem Üb
 
 Abwehrmaßnahme: Implementiere eine strenge VM-Governance-Strategie. Führe regelmäßige Audits durch und verwende automatisierte Tools zur Verwaltung und Entfernung nicht benötigter VMs.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. VM-Escaping
 Dies ist der Super-GAU in der Virtualisierung. Ein Angreifer, der die Kontrolle über eine VM erlangt hat, bricht aus der virtuellen Umgebung aus und greift den Hypervisor oder andere VMs an.
 
 - **Abwehrmaßnahme:** Halte den Hypervisor, das Host OS und die VMs stets mit den neuesten Patches auf dem aktuellen Stand. Implementiere eine strikte Netzwerktrennung und verwende Sicherheitslösungen, die speziell für virtuelle Umgebungen entwickelt wurden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. Kompromittierung des Hypervisors
 Wenn der Hypervisor selbst Schwachstellen aufweist, kann ein Angreifer die vollständige Kontrolle über alle darauf laufenden VMs erlangen.
 
 - **Abwehrmaßnahme:** Setze auf eine "**Hardening**"-Strategie für den Hypervisor. Deaktiviere alle unnötigen Dienste und Schnittstellen und sorge für eine minimale Konfiguration.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 4. Netzwerk-Isolation
 Der Datenverkehr zwischen VMs auf demselben Host wird oft nicht von herkömmlichen Firewalls überwacht, da er intern abgewickelt wird.
 
 - **Abwehrmaßnahme:** Verwende **virtuelle Firewalls** und **Netzwerk-Mikrosegmentierung**, um den Datenverkehr zwischen VMs zu kontrollieren und zu protokollieren.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 5. Sichere Konfiguration
 Eine unsachgemäße Konfiguration, z. B. zu viele Administrator-Rechte oder Standard-Passwörter, kann die gesamte Umgebung gefährden.

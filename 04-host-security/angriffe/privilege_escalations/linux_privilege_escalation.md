@@ -28,6 +28,13 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 Diese Datei dient als strukturiertes Cheat Sheet zur **Privilege Escalation** auf Linux-Systemen im Rahmen von Post-Exploitation. Sie hilft Pentestern und Sicherheitsanalysten, systematisch nach Wegen zu suchen, um aus eingeschränkten Benutzerrechten Root-Rechte zu erlangen. **Ausschließlich für legale Schulungszwecke gedacht.**

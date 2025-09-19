@@ -9,6 +9,13 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist ein digitales Zertifikat?
 Ein **digitales Zertifikat** ist ein elektronischer Nachweis, der die Identität einer Person, eines Servers oder einer Organisation in einem Netzwerk bestätigt. Es dient als digitaler Ausweis und wird von einer vertrauenswürdigen Stelle, der sogenannten **Zertifizierungsstelle** (**Certificate Authority - CA**), ausgestellt.
 
@@ -37,6 +44,14 @@ Jedes digitale Zertifikat enthält mehrere kritische Informationen, um seine Aut
 - **Aussteller:** Die Zertifizierungsstelle (CA), die das Zertifikat ausgestellt hat.
 - **Betreff:** Der Name der Person, des Geräts oder der Organisation, für das das Zertifikat ausgestellt wurde.
 - **Digitale Signatur:** Eine von der CA mit ihrem privaten Schlüssel erstellte Signatur, die die Integrität des Zertifikats bestätigt und eine Manipulation verhindert.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Die Rolle der PKI
 Die **Public Key Infrastructure** (**PKI**) ist das umfassende System, das für die Erstellung, Verwaltung, Verteilung und den Widerruf von digitalen Zertifikaten verantwortlich ist. Die PKI bildet die Vertrauenskette, die es ermöglicht, die Echtheit eines Zertifikats zu überprüfen.

@@ -9,6 +9,13 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Docker mit DVWA starten
 
 **Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/09-tools-cheatsheet/docker-infos.md). 
@@ -52,6 +59,14 @@ Wenn alles erfolgreich war, hast du nun Zugriff auf diese Seite:
 
 ![DVWA Login-Page](/09-practice-labs/ressources/pictures/dvwa-localhost-login.png)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 3. Kleines DVWA Setup
@@ -99,9 +114,27 @@ Klicke auf der linken Navigationsleiste auf den Reiter `SQL-Injection`:
 
 ![Challenge starten](/09-practice-labs/ressources/pictures/dvwa-sqi-injection-info.png)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### View Help Page
 
 Über den Button `View Help` erhältst du nähere Infos zu dieser Challenge. Hier erfährst du unter anderem, dass diese Challenge 5 User in der Datenbank hat, mit IDs von 1 bis 5 und deine Mission ist es, die Passwörter via SQL-Injection zu stehlen.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### Erste Abfragen starten
@@ -141,10 +174,28 @@ Nichts - denn letztlich haben wir mit einer solchen Abfrage eine ganz normale un
 
 Machen wir weiter!
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Beginnen wir mit der SQL-Injection
 
 > Solltest du noch nicht wissen, was SQL-Injection sind, dann sieh dir bitte unseren kurzen Leitfaden zu diesem Thema an:
 [SQL-Injection Cheat Sheet](/03-web-security/sql-injection/sql-injection-cheatsheet.md).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Ein einfacher Payload
 
@@ -170,6 +221,15 @@ SELECT Id, username, lastname FROM users WHERE ID=($id);
 ```
 Wobei `$id` nur der Platzhalter für die Eingabevariable ist, die das Programm nach Übermittlung erhält und ihr den Wert zuweist.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Schauen wir uns einmal den Source 
 
 Solltest du noch die Fehlermeldung der letzte Grafik sehen, gehe bitte eine Seite in deinem Browser zurück und lade die SQL-Injection-Seite.
@@ -186,12 +246,30 @@ Klicke anschließend unten rechts auf `View Source`, um dir den Source Code anzu
 
 Wir wir sehen, hatte wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richtige Syntax siehst du im Bild oben.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Iterieren wir bekannte SQL-Injections
 
 Eine bekannte Abfrage ist `1' OR '1'='1`. Gib diese Abfrage in das Eingabefeld ein und submitte deine Anfrage. Was ist passiert?
 ![SQL-Injection ERfolgreicher Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-6.png)
 
 Erste Iteration, direkter Erfolg! Das ist Glück. In der Praxis sollte das natürlich kein Standard sein, da dies zu erheblichen Sicherheitseinbußen führen kann, wenn Angreifen durch Angriffe sensible Daten stehlen und sie ggfs. im Internet offenlegen bzw. verkaufen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Herausfinden, wie viele Entitäten die Datenbank hat.
 
@@ -287,6 +365,15 @@ Und siehe da, bei `'Order By 3#` ist Schluss und wir erhalten folgende Fehlermel
 
 **Das heißt:** Unsere Datenbank-Abfrage hat also 2 Spalten, da die letzte Abfrage mit der `3#` eine Fehlermeldung erzeugt hat.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### SQL-Injection UNION-Based-Attack
 
 Hier findest du mehr zum Thema [UNION-BASED-ATTACKS](/14-vulnerabilities/sqlInjection/union_based_attack.md)
@@ -350,6 +437,15 @@ Fallen dir interesante Spaltennamen auf?
 
 Probieren wir es direkt aus und beenden unsere SQL-Injection.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Der entscheidende Payloud
 
 Was passiert, wenn wir die Spaltennamen nutzen und die im Befehl vorhandene Zahl `1` sowie `group_concat(column_name)` ersetzen mit folgendem Befehl:
@@ -372,6 +468,15 @@ Folgende Schritte kannst du nun umsetzen:
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -384,12 +489,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

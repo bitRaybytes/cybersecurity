@@ -14,10 +14,30 @@
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Ziel dieser Datei
 
 Diese Datei bietet einen vollständigen Überblick über empfehlenswerte Zertifizierungen im Bereich Cybersecurity – sowohl **offensiv (Red Team)** als auch **defensiv (Blue Team)**.  
 Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachhaltig in der IT-Sicherheit weiterbilden wollen – mit Fokus auf **technischem Know-how**, **praktischer Relevanz** und **Karrierewirkung**.
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -34,6 +54,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **PentesterLab (Free Tracks)** | PentesterLab | Web Exploits, Recon | [pentesterlab.com](https://pentesterlab.com) |
 | **ISC2 FREE Entry-level Cybersecurity Training + Certification Exam2** | ISC2 | Grundlagen Cybesecurity | [https://www.isc2.org/landing/1mcc](https://www.isc2.org/landing/1mcc) |
 | **Cisco U** | cisco | Verschiedene Kurse | [https://u.cisco.com/](https://u.cisco.com/) |
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ### Kostenpflichtige Red Team Zertifikate
 
@@ -66,6 +96,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **DFIR Training (YouTube)** | SANS DFIR | Forensik, Memory, Logs | [YouTube](https://www.youtube.com/@SANSDFIR) |
 | **Wireshark University** | Wireshark | Traffic-Analyse, Netzwerkforensik | [wireshark.org](https://www.wireshark.org/) |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### 💰 Kostenpflichtige Blue Team Zertifikate
 
 | Zertifikat | Anbieter | Kosten | Fokus |
@@ -76,6 +116,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | **CompTIA Security+** | CompTIA | $$ | Grundlagen: Netzwerk, IAM, Malware |
 | **CompTIA CySA+** | CompTIA | $$ | Threat Detection, SIEM |
 | **Microsoft SC-200** | Microsoft | $$ | Cloud Detection & Response |
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -109,6 +159,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Tools & Skills – Was man lernen sollte
 
 | Bereich      | Wichtige Tools                                                                                        |
@@ -116,6 +176,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 | 🔴 Red Team  | `nmap`, `burpsuite`, `metasploit`, `gobuster`, `linpeas`, `BloodHound`, `Cobalt Strike`, `Ghidra`     |
 | 🔵 Blue Team | `Wireshark`, `Splunk`, `ELK`, `Velociraptor`, `Sysmon`, `Sigma`, `OSQuery`, `TheHive`                 |
 | 🔄 Gemeinsam | `Kali`, `Security Onion`, `CyberChef`, `MITRE ATT&CK`, `Sigma`, `YARA`, `Shodan`, `WHOIS`, `Recon-ng` |
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -144,6 +214,16 @@ Sie richtet sich an Einsteiger und Fortgeschrittene, die sich gezielt und nachha
 - [r/cybersecurity – Austauschplattform](https://www.reddit.com/r/cybersecurity/)
 - [HackTricks – Exploit-Cheatsheets für Red/Blue](https://book.hacktricks.wiki/en/index.html)
 - [Malware Unicorn Labs – Reverse Engineering Training](https://malwareunicorn.org/workshops/re101.html#0)
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 

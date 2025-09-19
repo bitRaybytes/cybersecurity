@@ -19,6 +19,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 
 Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Penetration Test, CTF oder bei Red/Blue-Team-Analysen effizient zu identifizieren, zu kartieren und zu analysieren. Die Befehle decken sowohl **aktive als auch passive Recon-Techniken** ab.
@@ -27,6 +33,13 @@ Diese Datei enthält **wichtige Reconnaissance-Kommandos**, um Ziele in einem Pe
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 1. DNS & Domain Recon
@@ -40,6 +53,13 @@ host -t mx domain.com                   # Mailserver prüfen
 # crt.sh/?q=domain.com (Zertifikate auslesen)
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 2. WHOIS & Zertifikatsinfos
@@ -67,6 +87,13 @@ crt.sh/?q=%.domain.com
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 4. Port & Service Scanning
 ```bash
 nmap -sC -sV -oA fullscan domain.com
@@ -79,6 +106,13 @@ nmap -p 21 --script ftp-anon,ftp-bounce <target>
 nmap -p 80,443 --script http-title,http-enum <target>
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 5. Web Recon & Fingerprinting
@@ -110,6 +144,13 @@ dirsearch -u https://domain.com
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 7. E-Mail & Benutzerrecherche
 ```bash
 theharvester -d domain.com -b google,bing,linkedin
@@ -117,6 +158,13 @@ hunter.io (manuell)
 emailrep.io API (E-Mail Reputation)
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 8. OSINT & Tools
@@ -157,6 +205,13 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 10. Nützliche Ressourcen
 - [nmap.org](https://nmap.org/)
 - [github.com/OWASP/Amass](https://github.com/owasp-amass/amass)
@@ -166,6 +221,13 @@ ldapsearch -x -h <dc-ip> -b "dc=domain,dc=local"
 - [red_team_tools.md](/05-red-teaming/red_team_tools.md)
 
  
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 

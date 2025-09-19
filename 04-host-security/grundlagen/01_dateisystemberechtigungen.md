@@ -15,13 +15,40 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 **Dateisystemberechtigungen** sind ein essenzieller Bestandteil der Host-Sicherheit. Sie kontrollieren, wer auf Dateien und Verzeichnisse zugreifen kann und welche Aktionen (Lesen, Schreiben, Ausführen) erlaubt sind. Eine korrekte Konfiguration verhindert, dass unbefugte Benutzer oder Programme auf sensible Daten zugreifen, diese ändern oder löschen.
 
 Stell dir Berechtigungen wie die Schlüssel zu einem Safe vor. Nur wer den richtigen Schlüssel hat, kann den Safe öffnen und auf seinen Inhalt zugreifen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Linux-Dateisystemberechtigungen (chmod, chown)
 In Linux werden Berechtigungen über eine Kombination aus Benutzern, Gruppen und anderen kontrolliert. Jede Datei und jedes Verzeichnis hat spezifische Rechte für diese drei Kategorien, die über die Befehle `chmod` und `chown` verwaltet werden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Die drei Berechtigungsklassen
 
@@ -43,6 +70,15 @@ Die Berechtigungen werden in einer 10-stelligen Zeichenkette dargestellt (z. B. 
 4. Andere-Berechtigungen: Rechte für alle anderen Benutzer.
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### `chmod` (Change Mode)
 
 Der `chmod`-Befehl ändert die Dateiberechtigungen. Die Rechte können numerisch (Oktal) oder symbolisch zugewiesen werden.
@@ -58,12 +94,30 @@ Der `chmod`-Befehl ändert die Dateiberechtigungen. Die Rechte können numerisch
         - `g-w` (Gruppe entfernt => Schreiben)
         - `o=r` (Andere => nur Lesen)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### `chown` (Change Owner)
 
 Der `chown`-Befehl ändert den Eigentümer (`user`) und die Gruppe (`group`) einer Datei.
 
 - `chown user:group datei.txt`
 - `chown root:webdev /var/www/html`
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Wichtige Sicherheitsaspekte in Linux
 
@@ -81,6 +135,15 @@ Der `chown`-Befehl ändert den Eigentümer (`user`) und die Gruppe (`group`) ein
 
 In Windows werden Berechtigungen über **Access Control Lists** (**ACLs**) verwaltet. Eine ACL besteht aus mehreren **Access Control Entries** (**ACEs**), die festlegen, welche Benutzer oder Gruppen welche Berechtigungen für eine bestimmte Ressource haben.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Grundlegende Konzepte
 - **Prinzipal:** Ein Benutzer, eine Gruppe oder ein Computer, dem Berechtigungen zugewiesen werden.
 - **Berechtigungen:**
@@ -88,9 +151,27 @@ In Windows werden Berechtigungen über **Access Control Lists** (**ACLs**) verwa
     - **Spezialberechtigungen:** Fein granulierte Berechtigungen, z. B. nur das Löschen einer Datei erlauben.
 - **Vererbung:** Berechtigungen können von übergeordneten Ordnern auf untergeordnete Dateien und Ordner vererbt werden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Verwaltung von ACLs
 
 ACLs werden hauptsächlich über die grafische Benutzeroberfläche (Rechtsklick > Eigenschaften > Sicherheit) oder über die Kommandozeilen-Tools `icacls` und `cacls` verwaltet.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### `icacls` (Command-Line)
 Der `icacls`-Befehl ist das moderne und mächtigere Werkzeug zur Verwaltung von ACLs.
@@ -102,11 +183,26 @@ Der `icacls`-Befehl ist das moderne und mächtigere Werkzeug zur Verwaltung von 
 - **Vollzugriff für einen bestimmten Benutzer gewähren:**
     - `icacls C:\webserver /grant:r administrator:(F)`
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Wichtige Sicherheitsaspekte in Windows
 
 - **Standard-Konten:** Schränke die Berechtigungen von Standard-Benutzern ein und verwenden keine Administratorkonten für alltägliche Aufgaben.
 - **"Jeder"-Gruppe:** Achte darauf, dass die Gruppe "**Jeder**" (`Everyone`) keine unnötig weitreichenden Berechtigungen hat.
 - **Vererbung:** Sei dir der Vererbung von Berechtigungen bewusst. Unsichere Berechtigungen auf einem übergeordneten Ordner können die Sicherheit aller untergeordneten Dateien gefährden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Links

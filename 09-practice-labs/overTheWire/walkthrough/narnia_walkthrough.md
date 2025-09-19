@@ -7,8 +7,26 @@
 - [Allgemeine Infos](#allgemeine-infos)
 - [Zugang](#zugang)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 In `Narnia` geht es darum, dich von einem niedrigeren Benutzerkonto auf ein höheres zu "erheben" (**Privilege Escalation**), indem du Schwachstellen in ausführbaren Dateien ausnutzt. Jedes Level stellt dir eine neue Herausforderung, die auf den Konzepten des vorherigen aufbaut. Du wirst dich in die Lage eines Angreifers versetzen und lernen, wie du die Umgebung eines Programms manipulierst, um unerwartete Aktionen auszuführen.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Allgemeine Infos
@@ -22,6 +40,15 @@ In `Narnia` geht es darum, dich von einem niedrigeren Benutzerkonto auf ein höh
 - **Datenverzeichnis:** Die Level-spezifischen Dateien, die du knacken musst, befinden sich im Verzeichnis `/narnia/`.
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Zugang
 
 Den Zugang zu den einzelnen Level erhältst du über eine `SSH`-Verbindung.
@@ -33,6 +60,15 @@ Melde dich mit folgenden Benutzerdaten an:
 ```bash
 ssh -l narnia0 narnia.labs.overthewire.org -p 2226
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Krypton 0 -> 1
 <details>

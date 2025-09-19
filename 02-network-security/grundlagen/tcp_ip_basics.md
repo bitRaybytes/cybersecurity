@@ -1,6 +1,6 @@
 # 🌐 TCP/IP Basics – Grundlagen der Netzwerkkommunikation
 
----
+
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -12,13 +12,26 @@
 - [TCP-Verbindungsaufbau: Der 3-Way Handshake](#tcp-verbindungsaufbau-der-3-way-handshake)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Einleitung
 
 TCP/IP ist das Rückgrat der modernen digitalen Kommunikation – es ermöglicht den Austausch von Daten über das Internet und private Netzwerke. Es handelt sich dabei um ein Protokoll-Stack, also ein Schichtenmodell aus mehreren Netzwerkprotokollen, die zusammenarbeiten.
 
----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Das TCP/IP-Modell - Schichtenüberblick
 
@@ -31,7 +44,7 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 | 3. Internetschicht   | 3             | Routing und IP-Adressen (IP, ICMP)           |
 | 4. Netzzugangsschicht| 2–1           | Physikalischer Zugang zum Netzwerk           |
 
----
+
 
 <div align=right>
 
@@ -45,9 +58,25 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 - Protokolle: HTTP, FTP, SMTP, DNS, DHCP, SSH
 - Stellt Netzfunktionen für Benutzeranwendungen bereit
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Transportschicht
 - **TCP (Transmission Control Protocol)**: Verbindungsorientiert, zuverlässig (z. B. Web, E-Mail)
 - **UDP (User Datagram Protocol)**: Verbindungsfrei, schneller, aber unsicherer (z. B. VoIP, DNS)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### TCP Merkmale:
 - 3-Way Handshake (SYN → SYN/ACK → ACK)
@@ -55,16 +84,32 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 - Flusskontrolle (Windowing)
 - Fehlererkennung & Wiederholung
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Internetschicht
 - **IP (Internet Protocol)**: Routing der Datenpakete über Netzwerke hinweg
 - **ICMP**: Diagnose (z. B. Ping, Traceroute)
 - IPv4 (32 Bit) & IPv6 (128 Bit)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 4. Netzzugangsschicht
 - MAC-Adressen, Switches, ARP
 - Standards: Ethernet, WLAN, PPP
 
----
+
 
 <div align=right>
 
@@ -80,12 +125,28 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
   - **Hostanteil**: Identifiziert das Gerät im Subnetz
 - **Subnetzmaske:** Definiert, wie viele Bits für das Netz verwendet werden (`255.255.255.0` = /24)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### IP-Klassen (veraltet, aber grundlegend)
 | Klasse | Bereich           | Standard-Subnetzmaske | Verwendung        |
 |--------|-------------------|------------------------|--------------------|
 | A      | 1.0.0.0 – 126.255.255.255 | 255.0.0.0 (/8)         | Große Netzwerke     |
 | B      | 128.0.0.0 – 191.255.255.255 | 255.255.0.0 (/16)      | Mittlere Netze      |
 | C      | 192.0.0.0 – 223.255.255.255 | 255.255.255.0 (/24)    | Kleine Netze        |
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Private IPv4-Bereiche
 - Klasse A: `10.0.0.0/8`
@@ -94,7 +155,14 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 
 > [Mehr zum Thema IP-Adressen findest du hier](/02-network-security/ip_adressen_basics.md)
 
----
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## CIDR (Classless Inter-Domain Routing)
 
@@ -102,7 +170,7 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 - Beispiel: `192.168.1.0/24` → 256 Adressen (254 nutzbar)
 - `/30`, `/29`, `/28`, ... = kleinere Subnetze
 
----
+
 
 <div align=right>
 
@@ -121,7 +189,14 @@ Das TCP/IP-Modell besteht aus **4 Schichten**, die dem OSI-Modell ähnlich sind:
 | **Wireshark**    | Netzwerk-Traffic analysieren        |
 | **Nmap**         | Portscanning und Netzwerkerkennung  |
 
----
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## TCP-Verbindungsaufbau: Der 3-Way Handshake
 
@@ -134,7 +209,13 @@ Client                    Server
       Verbindung steht!
 ```
 
----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 

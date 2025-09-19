@@ -18,6 +18,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Allgemeine Hinweise zur Enumeration
 
 - Enumeration erfolgt nach der Reconnaissance-Phase
@@ -25,6 +33,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 - Immer mit Genehmigung (Legal Boundaries)
 - Alle Informationen dokumentieren (z. B. in Markdown, CherryTree, Obsidian, KeepNote etc.)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Netzwerk- & Port-Enumeration
@@ -40,6 +56,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | Version Detection                   | `nmap -sV`                               | ☐      |
 | Firewall-Erkennung                  | `nmap -sA`, `hping3`, `traceroute`       | ☐      |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## System-/Host-Enumeration (Linux/Windows)
@@ -59,6 +83,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Web-Enumeration
 
 ### Ziel: Services, APIs, CMS, Parameter und Schwachstellen erkennen
@@ -75,6 +107,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Active Directory Enumeration
 
 | Aufgabe                              | Tools/Techniken                         | Check? |
@@ -85,6 +125,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | SID & Token-Auswertung              | `whoami /groups`, `whoami /priv`         | ☐      |
 | Kerberoasting-Möglichkeiten         | `Rubeus`, `impacket-GetUserSPNs`         | ☐      |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Cloud- & API-Enumeration (AWS / Azure / GCP)
@@ -98,6 +146,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Auth-Mechanismen & Bruteforce-Punkte
 
 | Ziel                                 | Tools/Techniken                          | Check? |
@@ -106,6 +162,14 @@ Diese Datei dient als umfassende Checkliste für die **Enumeration-Phase** in Pe
 | SSH/FTP/SMTP                         | `hydra`, `ncrack`, `medusa`              | ☐      |
 | RDP/SMB                              | `crackmapexec`, `xfreerdp`, `hydra`      | ☐      |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Checklisten-Snippet zum Mitnehmen
@@ -120,6 +184,14 @@ linpeas.sh (nach Upload)
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -132,12 +204,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

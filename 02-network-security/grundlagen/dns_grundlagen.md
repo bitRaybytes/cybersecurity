@@ -9,14 +9,41 @@
 - [Nützliche Links](#nützliche-befehle)
 - [Haftungsausschluss]()
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist DNS (Domain Name System)
 DNS ist ein essenzieller Dienst, der Domain-Namen in IP-Adressen umwandelt. Es funktioniert wie ein "Telefonbuch" des Internets, da es für Menschen einfacher ist, sich Namen wie google.com zu merken, als deren zugehörige IP-Adresse (`142.250.187.142`).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Funktionsweise und Hierarchie des DNS
 Die Namensauflösung im DNS ist ein hierarchischer und verteilter Prozess. Wenn du eine Webseite besuchst, erfolgt die Auflösung in mehreren Schritten:
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Der DNS-Auflösungsprozess
-```yaml
+```text
 +-----------+                                   +----------------------+
 |   Client  | 1. Frage: "Wer ist google.com?"   |  Lokaler DNS-Server  |
 +-----------+                                   +----------------------+
@@ -68,8 +95,26 @@ DNS-Einträge (**Records**) enthalten die Informationen, die vom Nameserver bere
 | **NS-Record (Nameserver):** | Verweist auf die autoritativen Nameserver der Subdomains. | **Beispiel:** `example.com` -> `ns1.example.com` |
 | **TXT-Record (Text Record):** | Speichert beliebigen Text, oft für Verifizierungszwecke oder zur Absenderauthentifizierung von E-Mails | **Beispiel:** `SPF`, `DKIM` |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Dynamisches DNS (DDNS)
 Dynamisches DNS ist ein Dienst, der den DNS-Eintrag einer Domain automatisch aktualisiert, wenn sich die öffentliche IP-Adresse ändert. Dies ist besonders nützlich für Heimnetzwerke, bei denen der Internetanbieter die öffentliche IP regelmäßig ändert. So bleibt deine Domain (`meinserver.dyndns.org`) immer erreichbar.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Befehle
 Um DNS-Einträge zu überprüfen, kannst du folgende Befehle im Terminal verwenden:
@@ -87,8 +132,26 @@ Beispiel mit `nslookup`:
 nslookup google.com
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Sicherheitsaspekte
 Die häufigste Bedrohung für DNS ist **DNS-Poisoning** (auch **Cache-Poisoning** genannt). Hierbei manipuliert ein Angreifer den Cache eines DNS-Servers, indem er falsche IP-Adressen für legitime Domain-Namen einträgt. Dadurch werden Nutzer auf eine vom Angreifer kontrollierte Website umgeleitet, was für Phishing-Angriffe genutzt werden kann.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Maßnahmen:
 
@@ -96,9 +159,27 @@ Die häufigste Bedrohung für DNS ist **DNS-Poisoning** (auch **Cache-Poisoning*
 
 - **Validierung:** DNS-Resolver validieren die Signaturen, um manipulierte Einträge zu erkennen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - [protokoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md)
 - [Wikipedia: DNS](https://de.wikipedia.org/wiki/Domain_Name_System)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 

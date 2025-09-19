@@ -17,6 +17,13 @@ Mehr zum Thema `ARP` erfährst du hier: [arp_grundlagen.md](/02-network-security
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Grundlagen: Was ist ARP?
 
 - **ARP (Address Resolution Protocol)** ordnet **IP-Adressen (Layer 3)** den **MAC-Adressen (Layer 2)** zu.  
@@ -32,6 +39,13 @@ IP-Adresse MAC-Adresse
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Wie funktioniert ARP-Spoofing?
 
 Der Angreifer sendet **gefälschte ARP-Antworten** ins Netzwerk:  
@@ -40,7 +54,7 @@ Der Angreifer sendet **gefälschte ARP-Antworten** ins Netzwerk:
 
 ### Visualisierung
 
-```yaml
+```text
 Opfer-PC (192.168.0.10)       Angreifer (192.168.0.66)       Router (192.168.0.1)
          |                             |                            |
          | ----> gefälschte ARP ------>|                            |
@@ -56,6 +70,13 @@ Opfer-PC (192.168.0.10)       Angreifer (192.168.0.66)       Router (192.168.0.1
 192.168.0.10  →   MAC: Angreifer
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Ziele von ARP-Spoofing
@@ -84,6 +105,14 @@ sudo arpspoof -i eth0 -t 192.168.0.1 192.168.0.10
 
 Damit sitzt der Angreifer „in der Mitte“ und kann den gesamten Traffic mitschneiden.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Erkennen von ARP-Spoofing
 
 Doppelte MAC-Adressen in der ARP-Tabelle
@@ -95,6 +124,15 @@ arp -a
 - Tools wie `arpwatch` oder `Wireshark`:
     - ungewöhnlich viele ARP-Replies
     - sich ständig ändernde Zuordnungen
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Schutzmaßnahmen gegen ARP-Spoofing
 
@@ -110,6 +148,15 @@ arp -a
 - Monitoring:
     - IDS/IPS-Systeme (z. B. Snort, Suricata) erkennen ARP-Anomalien.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Zusammenfassung
 
 ```css
@@ -124,6 +171,12 @@ Angreifer kann lesen, manipulieren, blockieren
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -136,12 +189,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -61,6 +61,14 @@ Darüber hinaus ist es nicht für Sicherheit, sondern für die Kompatibiltät ge
 - **Reversibel:** Ja, ohne Schlüssel
 - **Sicherheit:** **Keine**
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Arten des Encodings
 
 - **Zeichenkodierung:** Oder Character Encoding genannt, verarbeitet die erhaltenen Informationen mit genutztem Zeichensatz:
@@ -68,6 +76,14 @@ Darüber hinaus ist es nicht für Sicherheit, sondern für die Kompatibiltät ge
     - `ISO 8859-1 (Latin-1)` - Ältere Zeichenkodierung, hauptsächlich unterstützend in westeuropäischen Sprachen.
 - **URL-Encoding:** Oder Prozentkodierung genannt, ersetzt in einer URL bestimmte Zeichen mit speziellen Zeichenfolgen:
     - z. B.: ein `Leerzeichen` wird ersetzt durch `%20`, für korrekte Übertragung.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### Beispiele
@@ -111,6 +127,14 @@ Die Encryption ist die Umwandlung von Informationen (auf seite des Senders), die
     - **Symmetrisch:** Gleicher Schlüssel zum Ver- und Entschlüsseln (z. B. AES, ChaCha20)
     - **Asymmetrisch:** Öffentlich/privat Schlüsselpaar (z. B. RSA)
     - **Hybrid:** Praxis: asymmetrisch zum Schlüsselaustausch, symmetrisch für die eigentlichen Daten → z. B. TLS.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Symmetrisches Verschlüsselung
 
@@ -157,6 +181,14 @@ Entschlüsselungsverfahren:
 |___________/                           |_______________/ 
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Blockchiffre
 - **Prinzip:** `AES` verarbeitet Daten Blockweise und in festen Größen 16 Byte (128 Bit).
 - **Betriebsmodi:** Um mit beliebigen Datenmengen umzugehen, wird `AES` in verschiedenen Betriebsmodi eingesetzt:
@@ -164,11 +196,27 @@ Entschlüsselungsverfahren:
     - **GCM (Galois/Counter Mode):** Eine sicherere und oft perfomantere Variante, die parallele Verarbeitung ermöglicht.
 - **Eigenschaften:** `AES` ist ein etablierter, weiter verbreiteter Standard.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Stromchiffre
 - **Prinzip:** `ChaCha20` ist eine Stromchiffre, die einen Keystrem aus zufälligen Bytes generiert.
 - **Verarbeitung:** Keystream wird dann mit Daten `XOR` verknüpft, um sie zu verschlüsseln.
 - **Eigenschaften:** 
     - `ChaCha20` oft schneller als `AES`, insbesondere auf Geräten mit eingeschränkten Ressourcen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Typische Anwendungsbeispiele 
 - Verschlüsselung von Dateien und Daten auf einer Festplatte (z. B. durch ein Passwort).
@@ -197,6 +245,14 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 - **Vorteil:** Schlüsselaustausch ist sicher, da nur der öffentliche Schlüssel geteilt wird.
 - **Nachteil:** Das Verfahren ist deutlich langsamer und rechenintensiver fals die symmetrische Verschlüsselung.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Funktionsweise asymmetrischer Verschlüsselung
 1. Ein Paar von mathematisch verbundenen Schlüsseln wird erstellt:
     - Ein `public key` - kann frei verteilt werden, z.B. über einen Webserver.
@@ -206,10 +262,26 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 4. Entschlüsselung mit passendem privaten Schlüssel.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Anwendungsbereich:
 - **Sichere Online-Kommunikation:** sichert Verbindungen zwischen Webbrowsern und Servern via `SSL/TLS`-Protokollen.
 - **Authentifizierung:** Bestätigt die Identität eines Absenders.
 - **Datenintegrität:** Stellt sicher, dass Daten nach Übertragung nicht manipuliert wurden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Algorithmen
 - `RSA` - weit verbreitetes und sicheres System, das sowohl für Versclhüsselung als auch für Signaturen verwendet wird.
@@ -222,7 +294,7 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 </div>
 
 #### Visualisierung: Asymmetrische Verschlüsselung
-```yaml
+```text
 +-------------+                             +-------------+
 |    Alice    |                             |     Bob     |
 |  (Sender)   |                             | (Empfänger) |
@@ -240,6 +312,14 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 |    Nachricht)    |                 | (nur bei Bob)           |
 +------------------+                 +-------------------------+
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### hybride Verschlüsselung
 
@@ -293,6 +373,14 @@ Im Gegenzug dazu sind **langsamere Hashes**, zu denen kryptografische Algorithme
 > Nicht-kryptografische Algorithem werden dafür genutzt, um große Datenmengen schnell zu indizieren und zu vergleichen.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Sicherheit erhöhen durch Salting und Peppering
 Sicherheitstechniken wie Salting oder Peppering werden beim Hashen dafür verwendet, die Sicherheit der Passwörter noch einmal zu erhöhen.
 
@@ -301,6 +389,14 @@ Sicherheitstechniken wie Salting oder Peppering werden beim Hashen dafür verwen
 - **Peppering:** Ein geheimer, statischer Wert (`Pepper`) wird zu allen Passwörtern vor dem Hashing hinzugefügt. Im Gegensatz zum Salt wird der Pepper nicht in der Datenbank gespeichert, sondern an einem externen, sicheren Ort. Dies schützt die Passwörter auch dann, wenn die gesamte Datenbank gestohlen wird.
 
 Die Kombination von **Hashing**, **Salting** und **Peppering** ist eine sehr wirksame Methode, um Passwörter sicher zu speicher.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Salting vs. Peppering
 
@@ -334,6 +430,14 @@ echo -n "secrettext" | sha256sum
 | Sicherheitsrelevant    | ❌ Nein      | ✅ Ja                 | ✅ Ja               |
 | Schlüssel erforderlich | ❌ Nein      | ✅ Ja                 | ❌ Nein             |
 | Beispiele              | Base64, URL | AES, RSA             | SHA-256, bcrypt    |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Praktische Beispiele
 

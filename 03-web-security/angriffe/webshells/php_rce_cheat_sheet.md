@@ -15,11 +15,27 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung: Remote Command Execution in PHP
 
 Diese Datei beschreibt ein typisches Beispiel für **Remote Command Execution (RCE)** durch eine unsichere PHP-Webanwendung.  
 Der Code ermöglicht es Angreifern, über einen GET-Parameter (`?cmd=`) beliebige Shell-Befehle auf dem Zielsystem auszuführen – **ein schwerwiegender Sicherheitsfehler**.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispiel: Verwundbarer PHP-Code
@@ -67,6 +83,14 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 `http`
 ```http://target.local/rce.php?cmd=whoami```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 🛠️ Besser wäre:
 
 - Verwendung vorbereiteter Kommandos ohne Benutzereingaben.
@@ -74,6 +98,14 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - Nutzung von `escapeshellcmd()` und `escapeshellarg()` (nur bedingt sicher).
 - Oder: Verzicht auf Shell-Zugriffe aus Webanwendungen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typische Post-Exploitation-Befehle
@@ -111,6 +143,14 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 
  
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Verteidigung (Blue Team)
 
 - Verwende niemals Benutzereingaben direkt in `exec()`, `system()`, `passthru()` etc.
@@ -121,6 +161,14 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Siehe auch
 
 - [sql_injection_to_shell.md](/03-web-security/angriffe/sql-injektionen/sql_injection_to_shell.md)
@@ -128,6 +176,14 @@ Die Funktion `exec($_GET["cmd"])` erlaubt die ungefilterte Ausführung von Syste
 - [union_based_attack.md](/03-web-security/angriffe/sql-injektionen/union_based_attack.md)
 - [post_exploitation_tools.md](/04-host-security/post_exploitation_tools.md)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -142,12 +198,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -17,9 +17,23 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Der **Chipsatz** ist das unbesungene Herz des Mainboards und das zentrale Steuerungssystem, das den gesamten Datenfluss im Computer reguliert. Früher oft als ein Satz von zwei separaten Chips (Northbridge und Southbridge) implementiert, sind die meisten modernen Systeme mittlerweile auf eine effizientere Architektur mit einem einzigen **Platform Controller Hub** (**PCH**) umgestiegen. Unabhängig von der Architektur bleibt die Aufgabe des Chipsatzes dieselbe: Er stellt sicher, dass alle Komponenten reibungslos miteinander kommunizieren. Für uns als IT-Sicherheitsexperten ist der Chipsatz von besonderer Bedeutung, da er eine tief liegende und somit kritische Angriffsoberfläche darstellt. 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Aufgaben des Chipsatzes
@@ -34,8 +48,23 @@ Die Rolle des Chipsatzes geht weit über die bloße Datenübertragung hinaus. Er
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Northbridge und Southbridge
 In der traditionellen Chipsatz-Architektur wurden die Aufgaben klar zwischen zwei Komponenten aufgeteilt:
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Northbridge
 Die Northbridge war für die Verwaltung der **leistungsintensiven Kommunikation** zuständig. Sie stellte die direkte Verbindung zwischen der CPU, dem **Arbeitsspeicher** (**RAM**) und der **Grafikkarte** (**GPU**) über einen **PCIe-x16-Anschluss** her. Aufgrund ihrer Nähe zu diesen Hochgeschwindigkeitskomponenten war sie für die schnelle Versorgung mit Daten unerlässlich und gewährleistete eine flexible Kompatibilität der Hardware.
@@ -59,8 +88,25 @@ Die Southbridge, auch als **I/O-Controller Hub** bekannt, hatte die Aufgabe, die
 - Nachteile: Begrenzte Leistung bei hoher Last, da nicht direkt für Hochgeschwindigkeits-Kommunikation ausgelegt  
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## CPU-Verbindungsarten
 Um die Datenübertragung zwischen der CPU und dem Chipsatz zu optimieren, wurden verschiedene Bus-Architekturen entwickelt, die sich grundlegend in ihrer Funktionsweise unterscheiden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Front Side Bus (FSB)  
 Der FSB war eine ältere, parallele Verbindungstechnologie, die als Hauptverbindung zwischen der CPU und dem Chipsatz (Northbridge) diente. Trotz seiner weiten Verbreitung war er im Vergleich zu modernen seriellen Verbindungen relativ langsam und ineffizient.
@@ -68,6 +114,15 @@ Der FSB war eine ältere, parallele Verbindungstechnologie, die als Hauptverbind
 - Hauptverbindung CPU <-> Chipsatz  
 - Zugriff auf RAM, GPU, Laufwerke  
 - Beispiel: ~200 MHz, ~800 MT/s  
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### HyperTransport (HT)  
 Als Nachfolger des FSB etablierte sich HyperTransport, insbesondere in AMD-Systemen. Er wechselte von einer parallelen zu einer **seriellen Datenübertragung** und nutzte eine **Point-to-Point-Topologie**. Dadurch konnte eine skalierbare Bandbreite und eine deutlich niedrigere Latenz erreicht werden.
@@ -89,6 +144,15 @@ Intel führte QPI als Konkurrenz zu HyperTransport ein. Auch QPI setzte auf eine
 - Nutzung mehrerer Kanäle  
 - **Vollduplex-Kommunikation** (gleichzeitiges Senden & Empfangen)  
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Direct Media Interface (DMI)  
 DMI wird von Intel als eine Art „Datenautobahn“ zur Verbindung zwischen CPU und Chipsatz (Northbridge/PCH) genutzt. Es ist eine Hochgeschwindigkeits-Schnittstelle, die einen schnellen Datentransfer und eine direkte Kommunikation zwischen der CPU und den angeschlossenen Komponenten ermöglicht.
 
@@ -96,6 +160,13 @@ DMI wird von Intel als eine Art „Datenautobahn“ zur Verbindung zwischen CPU 
 - Hoher Datendurchsatz  
 - Direkte Kommunikation von CPU und Komponenten  
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Sicherheitsrelevanz des Chipsatzes
@@ -139,6 +210,14 @@ Aus der Perspektive der Cybersicherheit ist der Chipsatz ein höchst sensibles B
        |      |       |       |    
      SATA    USB     LAN    Audio
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Fazit
 

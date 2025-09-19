@@ -15,6 +15,13 @@ Diese Datei enthält eine kompakte Auswahl der nützlichsten Linux-Kommandos fü
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Die 10 wichtigsten Linux-Kommandos
 
 ### 1. `grep` – Textsuche in Dateien
@@ -25,6 +32,15 @@ grep -R 'password' /var/www/
 ```
 ➡️ Durchsuche Dateien nach bestimmten Strings, Passwörtern oder Konfigurationen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. find – Dateien nach Kriterien suchen
 
 ```bash
@@ -33,12 +49,30 @@ find / -perm -4000 2>/dev/null
 ```
 ➡️ Suche nach konfigurationsrelevanten Dateien oder SUID-Binaries.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. awk – Text extrahieren, Spaltenweise analysieren
 
 ```bash
 cat /etc/passwd | awk -F ':' '{print $1}'
 ```
 ➡️ Extrahiere Benutzernamen aus Systemdateien.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. chmod – Berechtigungen ändern
 
@@ -54,6 +88,15 @@ chmod 777 shell.php
 
 </div>
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 5. scp – Dateien über SSH übertragen
 
 ```bash
@@ -62,12 +105,30 @@ scp root@target:/etc/shadow .
 ```
 ➡️ Ziehe Dateien vom oder auf das Zielsystem (Reverse Shells, Loot, etc.).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 6. rsync – Synchronisiere Dateien oder ziehe ganze Verzeichnisse
 
 ```bash
 rsync -avz /var/www/html user@host:/backup/
 ```
 ➡️ Ideal, um Dateien schnell und rekursiv zu sichern oder zu extrahieren.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 7. tar – Packen und Entpacken von Archiven
 
@@ -77,6 +138,15 @@ tar -xvf backup.tar
 ```
 ➡️ Packe komplette Webroots zur Analyse oder übertrage sie effizient.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 8. netstat oder ss – Netzwerke analysieren
 
 ```bash
@@ -84,6 +154,15 @@ netstat -tuln
 ss -tuln
 ```
 ➡️ Welche Dienste lauschen auf welchen Ports?
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 9. whoami, id, hostname, uname – Systeminformationen
 
@@ -95,6 +174,15 @@ hostname
 ```
 ➡️ Ermittle User- und Systemkontext für Rechteeskalation.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 10. ps, top, pstree – Prozesse beobachten
 
 ```bash
@@ -103,6 +191,15 @@ top
 pstree
 ```
 ➡️ Finde laufende Prozesse oder potenzielle Schwachstellen in Services.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Bonus: Praktische Kombinationen
 
@@ -131,6 +228,15 @@ grep -r "api_key" /var/www/html
 | `crontab -l`    | Geplante Tasks analysieren                |
 
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Quellen & Empfehlungen

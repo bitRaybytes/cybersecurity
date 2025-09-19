@@ -26,6 +26,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Asset Discovery & Network Mapping
 
 | Tool              | Zweck                                      |
@@ -37,6 +43,12 @@
 | **Open-AudIT**    | Automatische Inventarisierung              |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Vulnerability Management
 
@@ -66,6 +78,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Endpoint Detection & Response (EDR)
 
 | Tool              | Zweck                                      |
@@ -76,6 +94,12 @@
 | **SentinelOne**   | KI-gestützte Bedrohungserkennung           |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Security Information & Event Management (SIEM)
 
@@ -105,6 +129,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Log Management & Monitoring
 
 | Tool              | Zweck                                      |
@@ -115,6 +145,12 @@
 | **Fluentd / Logstash** | Logaggregation                       |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Threat Intelligence
 
@@ -127,6 +163,12 @@
 | **AbuseIPDB**     | IP-Reputationsdatenbank                    |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Vulnerability Intelligence & Attack Surface Management
 
@@ -156,6 +198,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Malware Analysis
 
 | Tool              | Zweck                                      |
@@ -166,6 +214,12 @@
 | **IDA Free / Ghidra** | Reverse Engineering                    |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Email Security & Phishing Defense
 
@@ -194,6 +248,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Awareness & Simulation
 
 | Tool              | Zweck                                      |
@@ -203,6 +263,12 @@
 | **PhishSim**      | Benutzer-Schulung                          |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Backup & Recovery
 
@@ -228,6 +294,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -240,12 +312,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

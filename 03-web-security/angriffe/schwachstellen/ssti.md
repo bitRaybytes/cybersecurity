@@ -18,12 +18,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist SSTI?
 
 **Server-Side Template Injection (SSTI)** bezeichnet eine Schwachstelle, bei der ein Angreifer serverseitige Template-Engines manipulieren kann, um beliebige Ausdrücke auszuführen. Das passiert, wenn Benutzereingaben ohne Filterung in Templates eingebunden werden.
 
 > 🔥 In vielen Fällen führt SSTI zu **Remote Code Execution (RCE)** auf dem Server.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Typische Template Engines
@@ -59,6 +75,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Typische Test-Payloads
 
 | Payload       | Bedeutung                      |
@@ -84,12 +108,28 @@
 ```
 → Führt id-Befehl aus!
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Kürzer über cycler, joiner:
 
 ```jinja2
 {{cycler.__init__.__globals__.os.popen('id').read()}}
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## SSTI Cheat-Sheet: Template Engines
@@ -121,6 +161,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Schutzmaßnahmen
 
 | Maßnahme                             | Beschreibung                           |
@@ -132,6 +180,14 @@
 | Template Engine sicher konfigurieren | z. B. `sandbox`, kein Zugriff auf eval |
 
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispiele aus der Praxis
@@ -162,6 +218,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Weiterführende Links
 
 - [PayloadsAllTheThings – SSTI](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Server%20Side%20Template%20Injection)
@@ -169,6 +233,14 @@
 - [tplmap Tool](https://github.com/epinna/tplmap)
 - [OWASP SSTI Guide](https://owasp.org/www-community/attacks/Server-Side_Template_Injection)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -183,12 +255,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -18,6 +18,14 @@ Angreifern oft den Fernzugriff auf Server – und sind daher eine kritische Bedr
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Typische Auffälligkeiten
 
 Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet werden:
@@ -30,6 +38,14 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
   `.phtml`, `.php4`, `.php5`, `.pht`, `.inc`, `.phar`
 - Dateinamen mit `cmd`, `shell`, `eval`, `upload`, `backdoor`
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### Verdächtiger Code innerhalb von Dateien
 
 - Verwendung gefährlicher PHP-Funktionen:
@@ -39,11 +55,27 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - Dynamisch generierte Funktionennamen:  
   z. B. `($func = 'sys'.'tem')($cmd);`
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### Log-/Verhaltensauffälligkeiten
 
 - GET-Parameter mit Shell-Befehlen (z. B. `?cmd=ls`)
 - Unerwartete POST- oder GET-Anfragen auf verdächtige Dateien
 - Anfragen mit `curl`, `wget`, `whoami`, `id`, `cat /etc/passwd` in den Parametern
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -60,6 +92,14 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
   - Suchen nach `eval\(base64_decode\(`, `assert\(` etc.
 - **Diff-Tools**
   - Änderungen in Web-Verzeichnissen erkennen (z. B. mit `inotify`, `ossec`)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ### Laufzeitanalyse & Logüberwachung
 
@@ -85,20 +125,60 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - Ladeverzeichnis (z. B. `/uploads`) darf keine `.php`-Dateien ausführen
 - Webserver-Config: `php_admin_flag engine off` für Upload-Pfade
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### 2. Whitelisting statt Blacklisting
 - Nur bestimmte Dateitypen zulassen (`.jpg`, `.png`, `.pdf`)
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 
 ### 3. Input validieren & filtern
 - Keine Dateiumbenennungen oder Erweiterungen auf Serverseite übernehmen
 - MIME-Type-Prüfung, Magic-Bytes-Check
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### 4. Rechte & Isolation
 - Webserver unter Low-Privilege-User laufen lassen (z. B. `www-data`)
 - Dateiberechtigungen restriktiv setzen (z. B. 640)
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ### 5. Monitoring & Alerting
 - Dateisystemmonitoring (z. B. `tripwire`, `ossec`)
 - Logs rotieren, zentralisieren und auswerten (z. B. mit `logwatch`, `ELK`)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -107,6 +187,14 @@ Bei forensischen Analysen oder Monitoring sollten folgende Indikatoren beachtet 
 - [OWASP Web Shell Detection](https://owasp.org/www-community/attacks/Web_Shell)
 - [YARA Rule Database (GitHub)](https://github.com/Yara-Rules/rules)
 - [MITRE ATT&CK - T1505.003: Web Shell](https://attack.mitre.org/techniques/T1505/003/)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -122,13 +210,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Stay curious – stay secure. 🔐
 
 🗓️ **Letzte Aktualisierung:** August 2025  

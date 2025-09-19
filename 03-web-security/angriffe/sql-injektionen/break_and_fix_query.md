@@ -79,6 +79,13 @@ Beispiel mit Kommentar-Fix:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Zusammenfassung: Angriffs- & Fix-Phasen
 
 | Phase           | Ziel                                      | Beispiel    |
@@ -88,6 +95,13 @@ Beispiel mit Kommentar-Fix:
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützlich in Kombination mit
 
 - [sql_injection_to_shell.md](/03-web-security/angriffe/sql-injektionen/sql_injection_to_shell.md) -> zeigt komplette Angriffskette
@@ -95,6 +109,13 @@ Beispiel mit Kommentar-Fix:
 - [Tools](/08-tools-cheatsheet/cheatsheets/) wie: Burp Suite, SQLMap, ZAP Proxy
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 

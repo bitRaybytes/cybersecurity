@@ -19,9 +19,27 @@ Das Mainboard, auch Haupt- oder Motherboard genannt, ist die zentrale Steuerplat
 - [Forensik & Erkennung - was prüfen?](#forensik--erkennung---was-prüfen)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 
 Das Mainboard (Motherboard) ist die zentrale Hardware-Plattform eines Rechners: CPU-Sockel, RAM-Steckplätze, Firmware-Chip, Interconnects (PCIe) und I/O-Anschlüsse. Viele Sicherheitsentscheidungen und -mechanismen sitzen hier entweder physisch (TPM, Jumper, Hardware-Switches) oder firmwareseitig (BIOS/UEFI, ACPI). Ein kompromittiertes Mainboard/UEFI kann ein System vollständig unter Kontrolle bringen — vor dem OS-Start.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Das Mainboard - warum es sicherheitsrelevant ist
 
@@ -30,6 +48,15 @@ Das Mainboard (Motherboard) ist die zentrale Hardware-Plattform eines Rechners: 
 - **Firmware läuft vor dem OS:** Manipulation ermöglicht persistente, schwer entdeckbare Malware (Firmware-Rootkits).
 
 - Physischer Zugriff (z. B. auf JTAG, SPI-Flash, M.2/PCIe) ermöglicht Auslesen/Verändern sensitiver Daten.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Stark vereinfachte Mainboard-Topologie
 ```text
@@ -48,10 +75,28 @@ Das Mainboard (Motherboard) ist die zentrale Hardware-Plattform eines Rechners: 
 
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Firmware: BIOS, UEFI — Angriffsfläche & Schutzmaßnahmen
 ### Warum Firmware kritisch ist
 
 **Firmware** (BIOS/UEFI) startet zuerst, initialisiert Hardware und lädt das Betriebssystem. Eine kompromittierte Firmware läuft vor Anti-Malware, Kernel-TLS und Host-Monitoring.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Typische Firmware-Angriffe
 
@@ -60,6 +105,15 @@ Das Mainboard (Motherboard) ist die zentrale Hardware-Plattform eines Rechners: 
 - **SPI/Flash-Manipulation:** direktes Schreiben in den Flash-Chip (z. B. via physischem SPI-Programmer).
 
 - **Bootkit / Measured Boot-Bypass:** Manipulieren des UEFI, um den gemessenen Start/sicheren Start zu untergraben.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 ### Schutzmaßnahmen (Firmware-Hardening)
@@ -83,14 +137,41 @@ Das Mainboard (Motherboard) ist die zentrale Hardware-Plattform eines Rechners: 
 ### Jumper & CMOS/Battery-Reset
 Jumper zum Zurücksetzen des BIOS/UEFI oder CMOS können Sicherheitskonfigurationen (passwortgeschütztes BIOS) umgehen. Physischer Zugriff erlaubt häufig sofortiges Umgehen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Trusted Platform Module (TPM)
 TPM speichert kryptografische Schlüssel und ermöglicht Measured Boot, Full Disk Encryption Schutz (z. B. BitLocker). TPM erhöht Sicherheit erheblich, ist aber nur wirksam bei korrekt konfigurierter Integritätskette (Secure Boot + Measured Boot).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Steckplätze (PCIe, M.2, SATA)
 Interne Steckplätze können missbraucht werden:
 
 - M.2/PCIe-NVMe SSDs auslesen oder manipulieren.
 - bösartige PCIe-Peripherie (z. B. rogue NIC mit DMA) kann direkten RAM-Zugriff (DMA) ermöglichen → **IOMMU/VT-d** Schutz nötig.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Anschlüsse & Schnittstellen — Einfallstore
 
@@ -103,6 +184,14 @@ Interne Steckplätze können missbraucht werden:
 - **Network Interfaces:** kompromittierte Netzwerkkarten (Firmware) können Man-in-the-Firmware-Angriffe ausführen.
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Empfehlungen
 
 - Physische Ports absichern (abdecken, abschalten im BIOS).
@@ -110,15 +199,39 @@ Interne Steckplätze können missbraucht werden:
 - IOMMU (Intel VT-d / AMD-VI) aktivieren, Kernel-DMA-Filters konfigurieren.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## ACPI: Funktionsweise, S-States/C-States und Sicherheitsprobleme
 ### Was ist ACPI?
 ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS erlaubt, Energie- und Konfigurations-Policies zu steuern (z. B. Sleep, Hibernate, CPU-C-States). ACPI enthält eine Firmware-kompilierte Ausgabesprache (AML/ASL), die das Betriebssystem interpretiert.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Wichtige Konzepte
 
 - **S-States (System):** **S0** (running), **S1**/**S2** (low power), **S3** (suspend to RAM), **S4** (hibernate — suspend to disk), **S5** (soft off).
 - **C-States (CPU):** **C0**..**Cn** — CPU Idle-States mit unterschiedlichem Stromverbrauch.
 - **AML/ASL:** Code im UEFI/BIOS, den OS interpretiert — *Turing-vollständig genug*, um Logik auszuführen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Sicherheitsrelevanz von ACPI
 
@@ -161,6 +274,15 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 +-------------------------------------------+
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Angriffe & Exploits — Beispiele und Erkennungsmerkmale
 ### Firmware-Rootkit
 
@@ -168,17 +290,44 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 
 - **Erkennung:** Abweichende Firmware-Checksums, Nichtübereinstimmung von UEFI-Signaturen, verdächtige Boot-Messwerte im TPM.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### BadUSB / USB-Firmware Malware
 
 - **Symptom:** Gerät verhält sich plötzlich als Tastatur/Network Adapter.
 
 - **Erkennung:** Unerwartete HID-Events, neue Netzwerkschnittstellen nach USB-Plug.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### DMA-Angriffe (Thunderbolt/PCIe)
 
 - **Symptom:** Unauthorisierte Memory Reads/Writes, Instabile Prozesse.
 
 - **Schutz:** IOMMU aktivieren; Thunderbolt security level / Kernel config prüfen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### ACPI-/AML-Exploits
 
@@ -193,6 +342,15 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 </div>
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Hardening-Checklist — Sofortmaßnahmen & Best Practices
 
 ### Firmware & Boot
@@ -203,6 +361,14 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 - Write-Protect für SPI/BIOS-Flash aktivieren (sofern Hardware unterstützt).
 - Measured Boot / TPM-Attestation einrichten.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### OS & Kernel
 
 - IOMMU (VT-d/AMD-VI) aktivieren, DMA-Protection konfigurieren.
@@ -211,6 +377,15 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 - Hibernation (S4) sicher konfigurieren: Hiberfile mit Full Disk Encryption oder deaktivieren.
 - USB Device Control: Only allow known device classes / use endpoint whitelisting.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Physisch
 
 - Gehäuse mit Chassis-Intrusion detection / verschließbare Gehäuse.
@@ -218,11 +393,26 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 - SPI / JTAG / UART Header nach Produktion abdecken.
 - TPM-Modul verwenden und korrekt provisionieren.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Netzwerk & Peripherie
 
 - Netzwerk-Boot/Remote-Management (iLO, iDRAC) absichern (starke Passwörter, 2FA, Management-VLAN).
 
 - Keine unkontrollierten Thunderbolt/USB-Ports in sensiblen Umgebungen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Monitoring & Detection
 
@@ -230,6 +420,14 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 
 - TPM-Based attestation logs überwachen.
 - EDR/Host-Monitoring auf ungewöhnliche Boot-Sequenzen oder persistente Rootkit-Indikatoren.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Forensik & Erkennung - was prüfen?
 
@@ -240,6 +438,15 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
 - **USB Audit:** Welche USB-Geräte wurden wann verbunden (Auditd/USBGuard).
 - **Memory Forensics:** Bei S3/S4 prüfen, ob sensible Daten unverschlüsselt sind.
 - **Bootloader/Bootsektor:** Verifikation von GRUB/Bootloader-Integrität.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Nützliche Kommando-Snippets (Linux, Prüfung & Hardening)
 

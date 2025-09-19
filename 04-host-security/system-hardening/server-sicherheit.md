@@ -18,6 +18,14 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 System-Hardening ist ein proaktiver Prozess zur Verbesserung der Sicherheit eines Servers, indem Angriffsflächen reduziert werden. Es geht darum, das System so zu konfigurieren, dass es weniger anfällig für Cyberangriffe ist. Ein gehärtetes System entfernt unnötige Funktionen und Dienste, schließt bekannte Schwachstellen und implementiert strenge Sicherheitsrichtlinien.
 
@@ -40,6 +48,14 @@ Ein Server im Standardzustand ist wie eine offene Tür. Hardening macht daraus e
        +-------------------+
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Grundlegende Prinzipien des Hardening
 System-Hardening basiert auf dem **Prinzip des geringsten Privilegs**. Das bedeutet, einem Benutzer, Dienst oder System nur die minimal notwendigen Berechtigungen zu geben, die für seine Funktion erforderlich sind.
 
@@ -48,6 +64,15 @@ System-Hardening basiert auf dem **Prinzip des geringsten Privilegs**. Das bedeu
 - **Sichere Konfiguration:** Anpassung von System- und Anwendungseinstellungen an die sichersten verfügbaren Optionen.
 - **Zugriffskontrolle:** Implementierung von starken Authentifizierungsmechanismen und Zugriffsrichtlinien.
 - **Monitoring und Auditing:** Ständige Überwachung des Systems auf ungewöhnliche Aktivitäten und Speicherung von Protokollen (Logs) für die forensische Analyse.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Linux Server-Hardening
 ### 1. Benutzerverwaltung und Berechtigungen
@@ -61,15 +86,42 @@ System-Hardening basiert auf dem **Prinzip des geringsten Privilegs**. Das bedeu
     - Setzen strenger Berechtigungen (`chmod`, `chown`).
     - Verwendung von `sticky bits` und `setuid`/`setgid` mit Vorsicht.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Netzwerk- und Firewall-Konfiguration
 - **Dienste:** Deaktivierung nicht benötigter Dienste (`systemctl disable`).
 - **Firewall:** Konfiguration von `iptables` oder `ufw`.
     - `ufw default deny incoming`
     - Erlauben nur benötigter Ports (z. B. 22/TCP für SSH).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Paket- und System-Updates
 - **Automatische Updates:** Konfiguration von Unattended-Upgrades.
 - **Verifizierung:** Nutzung von `gpg` und Paket-Signaturen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. Auditing und Logging
 - **auditd:** Überwachung von Systemaktivitäten.
@@ -95,6 +147,15 @@ System-Hardening basiert auf dem **Prinzip des geringsten Privilegs**. Das bedeu
 - **Lokale Administrator-Konten:**
     - Umbenennung oder Deaktivierung des Standard-Administratorkontos.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Dienste und Systemkonfiguration
 - **Dienstemanager:** Deaktivieren von unnötigen Diensten.
 
@@ -106,9 +167,27 @@ System-Hardening basiert auf dem **Prinzip des geringsten Privilegs**. Das bedeu
     - Absicherung von RDP durch Ändern des Standardports.
     - Erzwingen von Network Level Authentication (NLA).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Patch-Management und Software-Hygiene
 - **Windows Update:** Sicherstellen, dass automatische Updates aktiv sind und zuverlässig installiert werden.
 - **Anwendungssteuerung:** Nutzung von AppLocker oder Windows Defender Application Control (WDAC).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 
 ### 4. Auditing und Logging
@@ -134,9 +213,22 @@ Manuelles Hardening ist fehleranfällig und zeitaufwändig.  Automatisierung ist
 - **Skripte:** Einsatz von Shell-Skripten (Bash, PowerShell) zur Automatisierung einfacher Hardening-Aufgaben.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Praktische Beispiele
 - **Linux:** Ein Bash-Skript, das alle nicht benötigten Pakete deinstalliert und die UFW-Firewall mit Standardregeln aktiviert.
 - **Windows:** Ein PowerShell-Skript, das die RDP-Portnummer ändert und eine neue Firewall-Regel erstellt.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Links

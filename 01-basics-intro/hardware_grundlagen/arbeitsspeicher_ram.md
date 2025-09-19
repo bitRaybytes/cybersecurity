@@ -18,6 +18,13 @@ Während Daten auf der **Festplatte** (**HDD**/**SSD**) dauerhaft gespeichert bl
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Funktionsweise des RAM
 
 Die zentrale Aufgabe des Arbeitsspeichers ist es, als ultraschnelle Zwischenschicht zwischen der CPU und dem deutlich langsameren Massenspeicher (HDD/SSD) zu agieren. Wenn ein Programm oder eine Datei geöffnet wird, wird es von der Festplatte in den RAM geladen. Von dort aus kann die CPU extrem schnell auf die benötigten Daten zugreifen, um die Befehle zu verarbeiten.
@@ -34,6 +41,14 @@ Ein einfacher Datenfluss sieht also so aus, dass Programme von der Festplatte in
 - Die CPU kann dann direkt mit diesen Daten arbeiten.
 
 - RAM ist deutlich schneller als SSDs oder HDDs, jedoch kleiner in der Gesamtkapazität.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Speicherkapazität und Kennzahlen
 
@@ -72,6 +87,15 @@ RAM-Module gibt es in verschiedenen physischen Bauformen, die für unterschiedli
 | Einsatz | Mainboards im PC/Server        | Laptops, Notebooks                |
 | Vorteil | Leistungsstark, hohe Kapazität | Kompakt, energieeffizient         |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## UDIMM vs. RDIMM
 Die Speichermodule werden zusätzlich in ungepufferte (**UDIMM**) und gepufferte (**RDIMM**) Module unterteilt. Der Unterschied liegt in der Art, wie sie mit dem Speichercontroller der CPU kommunizieren, und hat große Auswirkungen auf Stabilität und Einsatzgebiet.
 
@@ -82,6 +106,14 @@ Die Speichermodule werden zusätzlich in ungepufferte (**UDIMM**) und gepufferte
 | Geschwindigkeit   | schneller, günstiger  | stabiler, aber etwas langsamer     |
 | ECC-Unterstützung | nein                  | ja                                 |
 | Einsatzgebiet     | Desktop-PCs           | Server                             |
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## RAM-Generationen
@@ -103,6 +135,13 @@ Die am häufigsten verwendete RAM-Technologie ist **DDR** (**Double Data Rate**)
 ## RAM-Technologien im Detail
 Es gibt grundlegende Unterschiede in der Art, wie RAM-Zellen Daten speichern.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### SRAM (Static RAM)
 SRAM speichert Daten in sogenannten Flip-Flop-Schaltungen, die sehr stabil sind und keinen ständigen Refresh benötigen. Dies macht SRAM extrem schnell und energieeffizient, aber auch sehr teuer. Aus diesem Grund wird SRAM hauptsächlich für kleine, extrem schnelle Speicher wie den CPU-Cache oder Puffer verwendet.
 
@@ -110,12 +149,26 @@ SRAM speichert Daten in sogenannten Flip-Flop-Schaltungen, die sehr stabil sind 
 - Kein Refresh notwendig -> sehr schnell, stromsparend, aber teuer.
 - Anwendung: Cache, Puffer.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### DRAM (Dynamic RAM)
 DRAM speichert Daten in Kondensatoren, die ihre Ladung schnell verlieren. Aus diesem Grund müssen die Daten ständig durch einen "Refresh-Zyklus" aufgefrischt werden, was DRAM langsamer und stromintensiver macht. Dank seiner deutlich höheren Speicherdichte und geringeren Kosten ist DRAM die Standardtechnologie für den Hauptarbeitsspeicher.
 
 - Speicherung in Kondensatoren -> regelmäßiger Refresh notwendig.
 - Günstig, aber langsamer und stromintensiver.
 - Anwendung: PCs, Laptops, Server.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### SDRAM (Synchronous DRAM)
 SDRAM ist eine Weiterentwicklung von DRAM, die sich mit dem CPU-Takt synchronisiert. Dadurch können Daten präziser und effizienter verarbeitet werden.
@@ -135,14 +188,41 @@ Durch den Einsatz von zwei identischen RAM-Riegeln im sogenannten **Dual-Channel
 
 **Voraussetzung:** Beide Module sollten in **Taktfrequenz**, **Größe** und **Hersteller** übereinstimmen, um volle Kompatibilität zu gewährleisten.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## ECC (Error Correcting Code)
 Gerade in **Server-Umgebungen** ist die Stabilität und Korrektheit der Daten entscheidend. **ECC-RAM** kann in der Regel einen **Single-Bit-Fehler** automatisch korrigieren und einen **Multi-Bit-Fehler** zumindest erkennen. Während die Fehlerkorrektur mit Kosten und einer minimalen Leistungseinbuße einhergeht, ist ECC für kritische Systeme, die maximale Datenintegrität benötigen, unerlässlich.
 
 - **Vorteil:** Höhere Zuverlässigkeit.
 - **Nachteile:** Teuerer und minimal langsamer.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Sicherheitsrelevanz von RAM
 Aus der Sicht eines IT-Sicherheitsexperten ist RAM nicht nur eine Rechenressource, sondern auch ein potenzielles Angriffsziel. Physischer Zugriff auf den Arbeitsspeicher kann es Angreifern ermöglichen, sensible Daten wie Verschlüsselungsschlüssel oder Passwörter zu extrahieren, selbst nachdem das System heruntergefahren wurde (Cold Boot Attack). Zudem können Angreifer über Schnittstellen mit **Direct Memory Access** (**DMA**) den Arbeitsspeicher direkt manipulieren, ohne dass das Betriebssystem dies bemerkt.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Zusammenfassung
 RAM ist weit mehr als nur „Speicherplatz“ im PC. Er beeinflusst maßgeblich:

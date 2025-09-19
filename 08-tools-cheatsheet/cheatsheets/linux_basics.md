@@ -18,6 +18,14 @@
 - [Bonus: Nützliche Tastenkürzel im Terminal](#bonus-nützliche-tastenkürzel-im-terminal)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Navigation im Dateisystem
 
 | Befehl                       | Beschreibung                          |
@@ -29,6 +37,14 @@
 | `cd ~` oder `cd`             | Zum Home-Verzeichnis wechseln         |
 | `cd ..`                      | Ein Verzeichnis höher                 |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Datei- & Ordneroperationen
@@ -48,6 +64,14 @@
 | `nano datei.txt`             | Datei im Editor öffnen                    |
 | `chmod +x script.sh`         | Datei ausführbar machen                   |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Suchen
@@ -80,6 +104,14 @@
 | `sudo apt install paketname`   | Paket installieren                     |
 | `sudo apt remove paketname`    | Paket entfernen                        |
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Arch (Pacman)
 
 | Befehl                         | Beschreibung                           |
@@ -87,6 +119,14 @@
 | `sudo pacman -Syu`             | Systemupdate                           |
 | `sudo pacman -S paketname`     | Paket installieren                     |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Benutzer & Rechte
@@ -103,6 +143,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Systemüberwachung
 
 | Befehl                 | Beschreibung                          |
@@ -117,6 +165,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Netzwerk
 
 | Befehl                       | Beschreibung                            |
@@ -129,6 +185,14 @@
 | `wget http://seite.de/datei` | Datei herunterladen                     |
 | `nmap -sS 192.168.0.1`       | Portscan (mit nmap)                     |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Tools (falls installiert)
@@ -159,6 +223,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Cleanup & Logins
 
 | Befehl                  | Beschreibung                         |
@@ -169,6 +241,14 @@
 | `last`                 | Letzte Logins anzeigen               |
 | `who`                  | Wer ist eingeloggt?                  |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Bonus: Nützliche Tastenkürzel im Terminal
@@ -189,6 +269,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -201,12 +289,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

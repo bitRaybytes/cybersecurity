@@ -111,6 +111,15 @@ Aktualisiere dein System, um sicherzustellen, dass alle Pakete aktuell sind.
 sudo apt update && sudo apt upgrade -y
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Benötigte Abhängigkeiten installieren 
 Installiere die benötigten Abhängigkeiten (optional).
 ```bash
@@ -141,6 +150,14 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 5. Docker installieren
 Aktualisiere die Paketliste und installiere die Docker Engine, CLI und Containerd.  
   
@@ -156,6 +173,12 @@ sudo apt-get install -y docker.io
 
 ![Docker installieren](/09-practice-labs/ressources/pictures/step4installDocker.png)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 6. Docker testen
@@ -180,6 +203,15 @@ newgrp docker
 ```
 
 > Danach ab- und wieder anmelden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Weitere nützliche Docker Add-Ons (optional)
 
@@ -247,6 +279,14 @@ Als Pentester und Entwickler auf Kali Linux wirst du Docker lieben. Hier sind ei
 Docker benötigt standardmäßig Root-Rechte, um die Container-Engine zu verwalten. Dies ist ein großes Sicherheitsrisiko, da ein Fehler in Docker oder ein Missbrauch durch einen kompromittierten Benutzer weitreichende Folgen für das Host-System haben kann.
 - **Empfehlung:** Verwende immer einen dedizierten, nicht-privilegierten Benutzer und füge ihn der `docker`-Gruppe hinzu, um `sudo` bei Docker-Befehlen zu vermeiden.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Container-Isolation: 
 Stark, aber nicht so sicher wie echte VMs.  
 Obwohl die Isolation von Containern robust ist, ist sie nicht so absolut wie bei einer VM. Wenn eine Schwachstelle im Linux-Kernel selbst existiert, könnte ein Angreifer aus dem Container ausbrechen (**Container Escape**) und auf das Host-System zugreifen.
@@ -254,9 +294,25 @@ Obwohl die Isolation von Containern robust ist, ist sie nicht so absolut wie bei
 - **Netzwerkzugriff:** Container können auf das Netzwerk zugreifen -> Firewall wichtig.
 - **Image-Vertrauen:** Nur Images aus vertrauenswürdigen Quellen verwenden.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3 Images vertrauen
 Lade niemals Images von unbekannten oder nicht vertrauenswürdigen Quellen herunter. Solche Images könnten bösartigen Code enthalten, der dein System kompromittiert, sobald du den Container startest.
 - **Empfehlung:** Verwende Images von offiziellen Repositories auf Docker Hub oder erstelle deine eigenen Images.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. Konfiguration und Zugriffsrechte
 

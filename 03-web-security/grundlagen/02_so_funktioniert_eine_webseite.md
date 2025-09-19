@@ -19,6 +19,14 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Grundlagen des Webs
 
 ### Client-Server-Modell
@@ -27,7 +35,7 @@ Das Web basiert auf dem **Client-Server-Modell**:
 - **Client:** Dein Browser (Chrome, Firefox, Edge) → stellt Anfragen.
 - **Server:** Hostet die Website → sendet Antworten zurück.
 
-```yaml
+```text
 +------------+                  +-----------+
 |   Client   | --- Anfrage ---> |  Server   |
 |  (Browser) |                  | (Website) |
@@ -39,12 +47,19 @@ Der Client **fordert** Inhalte an, der Server **liefert** Inhalte aus.
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### DNS - das Telefonbuch des Internets
 
 Der Browser versteht keine Domainnamen wie `example.com`, sondern nur **IP-Adressen**.  
 Hier kommt das **Domain Name System (DNS)** ins Spiel:
 
-```yaml
+```text
 +----------+      "example.com?"         +----------+
 |  Browser | --------------------------> | DNS-Server |
 +----------+                             +----------+
@@ -62,16 +77,30 @@ Hier kommt das **Domain Name System (DNS)** ins Spiel:
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### HTTP/HTTPS
 
 - **HTTP (HyperText Transfer Protocol):** Basisprotokoll für Webseiten.
 - **HTTPS (HTTP Secure):** HTTP + **TLS/SSL-Verschlüsselung** → schützt vor Mitlesen & Manipulation.
 
 
-```yaml
+```text
 Browser <--- HTTP (unverschlüsselt) ---> Server
 Browser <--- HTTPS (verschlüsselt) ----> Server
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Webserver-Grundlagen
 
@@ -81,12 +110,19 @@ Ein **Webserver** ist eine Software, die eingehende Anfragen empfängt und Webse
 
 Ein Webserver liefert Dateien aus seinem **Stammverzeichnis** (**root directory**). Wenn du beispielsweise `http://www.beispiel.com/bild.jpg` anfragst, sendet der Server die lokale Datei `/var/www/html/bild.jpg` von seiner Festplatte an dich zurück.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Virtuelle Hosts
 Webserver können über **virtuelle Hosts** mehrere Websites mit unterschiedlichen Domainnamen hosten. Der Server prüft den Hostnamen in der Anfrage und gleicht ihn mit den virtuellen Hosts ab, die in Konfigurationsdateien definiert sind.
 
 Findet er eine Übereinstimmung, liefert er die entsprechende Website aus; andernfalls wird die Standard-Website angezeigt. Virtuelle Hosts ermöglichen es, jede Website in einem eigenen Verzeichnis auf der Festplatte abzulegen.
 
-```yaml
+```text
 +------------+ Host Anfrage: example.com
 |  Browser   | ----------------------> +------------------------+
 +------------+                         | Webserver mit mehreren |
@@ -118,7 +154,7 @@ Wenn eine Website zu viel Traffic hat, um von einem einzigen Server bewältigt z
     - verteilt Anfragen auf mehrere Server  
     - erhöht Geschwindigkeit & Ausfallsicherheit
 
-```yaml
+```text
             +-----------------+
             |  Load Balancer  |
 +---------+ |                 |
@@ -131,16 +167,30 @@ Wenn eine Website zu viel Traffic hat, um von einem einzigen Server bewältigt z
 ```
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 2. CDN (Content Delivery Networks)
 Ein **CDN** speichert statische Dateien wie Bilder, Videos, CSS und JavaScript auf Tausenden von Servern weltweit.
 
 - **Funktion:** Wenn ein Nutzer eine dieser Dateien anfordert, wird die Anfrage zum geografisch nächsten CDN-Server geleitet, um die Ladezeiten zu verkürzen und den Traffic zum Hauptserver zu reduzieren.
 - **Zusammenfassend:** schnellerer Zugriff, weniger Last auf Hauptserver  
 
-```yaml
+```text
 User in Berlin    ------> CDN-Server in Frankfurt
 User in New York  ------> CDN-Server in New Jersey
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 3. Datenbanken
 Datenbanken sind unerlässlich für Websites, die Nutzerinformationen speichern müssen. Webserver kommunizieren mit ihnen, um Daten zu speichern und abzurufen.
@@ -149,7 +199,7 @@ Datenbanken sind unerlässlich für Websites, die Nutzerinformationen speichern 
 - Speichern von dynamischen Inhalten (z. B. Userdaten, Posts, Produkte).
 - Kommunikation über SQL oder API-Abfragen.
 
-```yaml
+```text
 +-----------+      +------------+      +------------+
 |  Client   | ---> | Webserver  | ---> | Datenbank  |
 +-----------+      +------------+      +------------+
@@ -158,6 +208,13 @@ Datenbanken sind unerlässlich für Websites, die Nutzerinformationen speichern 
                           v
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 4. WAF (Web Application Firewall)
 Eine WAF agiert als Schutzschild zwischen einer Webanfrage und dem Webserver.
 
@@ -165,7 +222,7 @@ Eine WAF agiert als Schutzschild zwischen einer Webanfrage und dem Webserver.
 
 - **Schutz:** Verdächtige Anfragen werden blockiert, bevor sie den Webserver erreichen können.
 
-```yaml
+```text
 +---------+       +-----+       +-----------+
 | Client  | ----> | WAF | ----> | Webserver |
 +---------+       +-----+       +-----------+
@@ -185,12 +242,19 @@ Eine WAF agiert als Schutzschild zwischen einer Webanfrage und dem Webserver.
 
 - **Dynamischer Inhalt:** Dies sind Inhalte, die sich je nach Nutzeranfrage oder Daten ändern. Beispiele sind Suchergebnisse oder eine Homepage, die die neuesten Blogeinträge anzeigt.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Frontend und Backend
 Die Website, die du in deinem Browser siehst (HTML, CSS, JavaScript), ist das Frontend.
 
 Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier werden Programmier- und Skriptsprachen wie PHP, Python oder Node.js verwendet, um dynamische Inhalte zu erstellen und mit Datenbanken zu interagieren.
 
-```yaml
+```text
 +-----------------+
 |  User (Browser) |
 +-----------------+
@@ -209,6 +273,13 @@ Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier 
 
 **Wichtig:** Du siehst im Quellcode einer Webseite niemals den Backend-Code. Das, was du siehst, ist das Ergebnis der Backend-Verarbeitung. Diese Interaktion eröffnet, wenn nicht korrekt implementiert, viele Sicherheitslücken.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Zusammenspiel – Request → Response
 
 1. Ablauf einer Webseiten-Anfrage:
@@ -220,7 +291,7 @@ Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier 
     - Dynamischer Inhalt? --> Backend + Datenbank
 6. Antwort zurück an den Browser
 
-```yaml
+```text
       +-----------+
       |  Browser  |
       +-----------+
@@ -261,6 +332,14 @@ Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier 
       +-----------+
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -273,12 +352,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 📅 **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Ergänzungen & Verbesserungen gern gesehen!  

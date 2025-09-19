@@ -1,6 +1,5 @@
 # 🛰️ OSI-Schichtenmodell – Cheat Sheet
 
----
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
@@ -17,7 +16,14 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ##  Einleitung
 
 Das OSI-Modell (Open Systems Interconnection) ist ein Referenzmodell für Netzwerkprotokolle, das von der ISO (International Organization for Standardization) entwickelt wurde.
@@ -25,7 +31,13 @@ Es teilt die Netzwerkkommunikation in 7 Schichten auf, die jeweils bestimmte Auf
 
 Jede Schicht baut auf den darunterliegenden Schichten auf und stellt der nächsthöheren Schicht Dienste bereit. Das Modell beschreibt den Weg von Daten von einer Anwendung auf einem Host zu einer Anwendung auf einem anderen Host.
 
----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Übersicht der 7 Schichten
 
@@ -49,7 +61,7 @@ Jede Schicht baut auf den darunterliegenden Schichten auf und stellt der nächst
 +-------------------------------------+--------------------------------+--------------------+--------------------------+-------------------------------------+
 ```
 
-----
+
 
 <div align=right>
 
@@ -73,7 +85,13 @@ Jede Schicht baut auf den darunterliegenden Schichten auf und stellt der nächst
 Signalübertragung → Elektrisch, Optisch oder Funk
 ```
 
-----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Schicht 2 - Sicherungsschicht (Data Link Layer)
 
@@ -92,7 +110,7 @@ Ein Frame besteht aus Header (Ziel-MAC, Quell-MAC), den Daten und einem Trailer 
 +----------------------------------------+
 ```
  
-----
+
 
 <div align=right>
 
@@ -117,7 +135,14 @@ Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 +----------------------------------------+
 ```
 
------
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Schicht 4 - Transportschicht (Transport Layer)
 
@@ -135,7 +160,7 @@ Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 
 ```
 
-----
+
 
 <div align=right>
 
@@ -156,7 +181,13 @@ Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 Anmeldungen, Sitzungen und Logins zwischen Hosts
 ```
 
------
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Schicht 6 - Darstellungsschicht (Presentation Layer)
 
@@ -171,7 +202,13 @@ Anmeldungen, Sitzungen und Logins zwischen Hosts
 Rohdaten <--> Verstehbare Information
 ```
 
-----
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Schicht 7 - Anwendungsschicht (Application Layer)
 
@@ -187,7 +224,7 @@ Rohdaten <--> Verstehbare Information
 Browser, Mail-Client, Chat-Apps <--> Netzwerk
 ```
 
----
+
 
 <div align=right>
 
@@ -200,6 +237,15 @@ Browser, Mail-Client, Chat-Apps <--> Netzwerk
 Der Datenfluss im OSI-Modell folgt dem Prinzip der **Kapselung (Encapsulation)** und **Entkapselung (Decapsulation)**.
 - **Kapselung (Sender):** Jede Schicht fügt den Daten, die sie von der oberen Schicht empfängt, einen Header (und ggf. Trailer) hinzu und übergibt die neue Daten-Einheit an die darunterliegende Schicht.
 - **Entkapselung (Empfänger):** Der Empfänger entfernt in umgekehrter Reihenfolge die Header jeder Schicht, bis die ursprünglichen Anwendungsdaten übrig bleiben.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 📥 Kapselung (Sender)
 
@@ -249,6 +295,14 @@ Die Daten werden von oben nach unten durch die Schichten geleitet. Jede Schicht 
 
 **Anmerkung:** Schicht 2 (Data Link) fügt zusätzlich zum Header (H2) auch einen Trailer (T2) hinzu.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 📤 Entkapselung (Empfänger)
 
 Am Empfänger werden die Bits wieder in die ursprüngliche Form zurückverwandelt, indem die Header von unten nach oben Schicht für Schicht entfernt werden.
@@ -296,7 +350,7 @@ Am Empfänger werden die Bits wieder in die ursprüngliche Form zurückverwandel
        (ursprüngliche Daten)
 ```
 
----
+
 
 <div align=right>
 
@@ -326,7 +380,14 @@ In der Praxis wird häufig das **TCP/IP-Modell** verwendet, das eine vereinfacht
 |------------------------------|----------------------------------|
 ```
 
----
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 
@@ -335,7 +396,14 @@ In der Praxis wird häufig das **TCP/IP-Modell** verwendet, das eine vereinfacht
 - [Elektronik Kompendium: OSI-Schichtenmodell in der Netzwerktechnik](https://www.elektronik-kompendium.de/sites/net/0706101.htm)
 - [Wikipedia: OSI-Model](https://de.wikipedia.org/wiki/OSI-Modell)
 
----
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -349,12 +417,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 > Erstellt von Ray – für das Cybersecurity Lern- und Pentest-Repository  
 > 🛡️ Stay curious. Stay safe.

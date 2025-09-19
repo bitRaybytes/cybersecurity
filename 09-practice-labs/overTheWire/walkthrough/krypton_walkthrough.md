@@ -18,6 +18,15 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Im Gegensatz zu anderen Wargames (wie [Leviathan](/09-practice-labs/overTheWire/walkthrough/leviathan_walktrough.md) oder [Bandit](/09-practice-labs/overTheWire/walkthrough/bandit_walkthrough.md)) liegt der Fokus hier nicht auf System- oder Web-Exploits, sondern auf der **Entschlüsselung** von Informationen. Krypton ist ideal für Anfänger, die ihre ersten Schritte in der Kryptanalyse machen wollen. 
 
@@ -27,9 +36,27 @@ Mehr zum Thema Verschlüsselung findest du [hier in der Repo](/06-crypto-stego/e
 
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Zugang
 Der Einstieg erfolgt über eine **SSH-Verbindung
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Allgemeine Infos
@@ -42,6 +69,15 @@ Der Einstieg erfolgt über eine **SSH-Verbindung
 - **Offizielle Seite:** [OverTheWire - Krypton](https://overthewire.org/wargames/krypton/)
 - **Hinweis:** Passwörter können aktualisiert worden sein!
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Krypton 0 -> 1
@@ -97,6 +133,15 @@ ssh -l krypton1 krypton.labs.overthewire.org -p 2231
 
 
 </details>
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Krypton 1 -> 2
 
@@ -162,6 +207,15 @@ echo "Dein ROT13 Code" | tr 'N-ZA-M' '[A-Z]'    # Datei entschlüsseln mit ROT13
 ![krypton2 Password](/09-practice-labs/ressources/pictures/krypton2c.png)
 
 </details>
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Krypton 2 -> 3
 
@@ -247,6 +301,15 @@ Herzlichen Glückwunsch! Du hast das Passwort erfolgreich entschlüsselt und kan
 
 </details>
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Krypton 3 -> 4
 
 <details>
@@ -322,6 +385,15 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 
 </details>
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Krypton 4 -> 5
 
 <details>
@@ -331,12 +403,30 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 
 </details>
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Krypton 5 -> 6
 
 <details>
     <summary>Lösung</summary>
 
 </details>
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Krypton 6 -> 7
 
@@ -345,6 +435,15 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 
 </details>
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Erkenntnisse
@@ -356,11 +455,29 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 - `cat:` Zeigt den Inhalt von Dateien an.
 - `ln -s:` Erstellt symbolische Links (Symlinks), also Verknüpfungen zu anderen Dateien.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 
 - [Wikipedia: ROT13-Verschlüsselung](https://de.wikipedia.org/wiki/ROT13)
 - [Linux Manual: `tr`](https://man7.org/linux/man-pages/man1/tr.1.html) 
 - [https://quipqiup.com/](https://quipqiup.com/)
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss

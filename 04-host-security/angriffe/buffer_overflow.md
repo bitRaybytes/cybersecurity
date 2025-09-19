@@ -9,12 +9,29 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#nützliche-links)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist ein Buffer-Overflow?
 
 Ein **Buffer-Overflow** (deutsch: Pufferüberlauf) ist eine Schwachstelle in einem Programm, die auftritt, wenn ein Programm versucht, mehr Daten in einen reservierten Speicherbereich (den **Puffer** oder **Buffer**) zu schreiben, als dieser aufnehmen kann.  
 Die überschüssigen Daten "laufen über" und überschreiben benachbarte Speicherbereiche, was zu unvorhersehbarem Verhalten, Programmabstürzen oder im schlimmsten Fall zur Ausführung von bösartigem Code führt.
 
 Diese Schwachstelle tritt meistens in Programmiersprachen wie `C` und `C++` auf, da sie keine automatische Überprüfung der Puffergröße während des Schreibvorgangs vornehmen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Wie funktioniert ein Buffer-Overflow?
@@ -26,6 +43,14 @@ Stell dir einen Puffer wie einen kleinen Eimer vor, der nur eine bestimmte Menge
 - **Buffer-Overflow:** Wenn du zu viel Wasser einfüllst, läuft es über den Rand und benetzt den Boden oder benachbarte Gegenstände.
 
 In der Informatik sind diese "benachbarten Gegenstände" wichtige Speicherbereiche wie der **Stack** oder der **Heap**, die das Verhalten eines Programms steuern.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Der Angriff auf den Stack
 Ein klassischer Buffer-Overflow-Angriff zielt auf den **Stack** ab. Der Stack ist ein Bereich im Speicher, in dem u. a.  lokale Variablen und Funktionsaufrufe gespeichert werden.
@@ -70,6 +95,15 @@ Ein Angreifer sendet mehr Daten an den Puffer, als dieser fassen kann. Diese üb
 
 Wenn die Funktion, die den Puffer verwendet, beendet wird, springt das Programm nicht zur ursprünglichen Rücksprungadresse, sondern zu der neuen, vom Angreifer definierten Adresse. Dies führt zur Ausführung des bösartigen Codes (**Shellcode**), was dem Angreifer oft volle Kontrolle über das System gibt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Heap-Overflows
 
 Neben dem Stack existiert der **Heap** – ein Speicherbereich für dynamische Allokationen (`malloc`, `new`).
@@ -100,10 +134,28 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 - **Ziel:** Rücksprungadresse wird vom Angreifen überschrieben.
 - Anfälligkeit typisch in älteren Systemen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Return-to-libc
 
 - Statt Shellcode einzuschleusen, wird die Rücksprungadresse auf vorhandene Bibliotheksfunktionen (z. B. `system("/bin/sh")`) gesetzt.
 - **Vorteil:** Funktioniert auch bei aktivem **DEP**.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. ROP (Return-Oriented Programming)
 
@@ -111,9 +163,27 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
 - Umgeht Schutzmechanismen wie **DEP** und **ASLR** teilweise.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 4. Heap Spraying
 
 - Angreifer füllt den Heap mit bekannten Mustern und Shellcode, um die Trefferwahrscheinlichkeit bei Sprüngen zu erhöhen.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Auswirkungen eines Buffer-Overflow
@@ -124,6 +194,15 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 - **Datenkorruption:** Wichtige Datenstrukturen werden durch die überlaufenden Daten beschädigt, was zu inkonsistenten oder falschen Programmergebnissen führt.
 
 - **Privilege Escalation:** Angreifen nutzen bestimmte Mechanismen aus, um die Rechte zu erhöhen und damit zum `root`-Benutzer werden. Damit fällt es Angreifern einfacher, an Daten zu kommen, die für normale Anwender nicht bestimmt sind.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Schutzmaßnahmen
 
@@ -144,6 +223,14 @@ Entwickler und Systemadministratoren können verschiedene Techniken einsetzen, u
 - **Zusätzliche Schutzmechanismen:**
     - **WAF / IDS:** Für Webanwendungen, die unsicheren Code abfangen.
     - **Code Reviews & Fuzzing:** Frühes Erkennen von Überläufen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Nützliche Links

@@ -9,6 +9,15 @@ Der Schutz von Informationen und IT-Systemen wird in Deutschland und der EU durc
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Gesetze und Verordnungen
 Die wichtigsten rechtlichen Grundlagen, die den Schutz personenbezogener Daten und die IT-Sicherheit im Allgemeinen regeln, sind auf europäischer und nationaler Ebene verankert:
 
@@ -36,6 +45,15 @@ Die Beziehung zwischen diesen Gesetzen kann wie folgt dargestellt werden:
          +-------------------------------------------------+
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 2. Das Bundesamt für Sicherheit in der Informationstechnik (BSI)
 Das BSI ist die zentrale Behörde für Cybersicherheit in Deutschland. Seine Aufgaben sind im BSI-Gesetz sowie im IT-Sicherheitsgesetz festgelegt, das sich speziell auf kritische Infrastrukturen (KRITIS) bezieht.
 
@@ -49,6 +67,15 @@ Wichtige Veröffentlichungen des BSI:
 - **IT-Grundschutzkompendium:** Ein jährlich aktualisiertes Werk, das Gefährdungen und Bausteine zur Erstellung eines **Informationssicherheitsmanagementsystems (ISMS)** beschreibt.
 
 - **BSI-Standards:** Spezifikationen für Methoden und Prozesse.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Was ist ein ISMS?
 
@@ -75,6 +102,15 @@ Ein **Information Security Management System (ISMS)** ist ein Satz von Verfahren
 - **Do (ausführen):** Maßnahmen umsetzen, Schulungen, Prozesse einführen.
 - **Check (prüfen):** Audits, Überwachung, Reports, Wirksamkeit der Maßnahmen prüfen.
 - **Act (handeln):** Verbesserungen vornehmen, aus den Fehlern lernen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 3. Wichtige Prinzipien der DSGVO
 Artikel 5 Absatz 1 der DSGVO legt die grundlegenden Prinzipien fest, die bei der Verarbeitung personenbezogener Daten zu beachten sind:
@@ -106,22 +142,66 @@ Artikel 5 Absatz 1 der DSGVO legt die grundlegenden Prinzipien fest, die bei der
 
 - **Integrität und Vertraulichkeit:** Durch geeignete technische und organisatorische Maßnahmen (**TOMs**) müssen die Daten vor unbefugter oder versehentlicher Änderung und Offenlegung geschützt werden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 4. Technische und organisatorische Maßnahmen (TOMs)
 Artikel 32 DSGVO fordert die Umsetzung von **TOMs**, um ein dem Risiko angemessenes Schutzniveau zu gewährleisten. Die Maßnahmen sollen die Vertraulichkeit, Integrität, Verfügbarkeit und Belastbarkeit der Systeme sicherstellen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### **Technische Maßnahmen:**
 - **Verschlüsselung:** Absicherung von Daten im Ruhezustand (Data at rest) und bei der Übertragung (Data in transit).
 - **Firewalls und IDS/IPS:** Schutz von Netzwerken und Systemen.
 - **Zugriffskontrollen:** Einsatz von starken Passwörtern, Multi-Faktor-Authentifizierung (MFA) und Least-Privilege-Prinzip.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Organisatorische Maßnahmen:
 - **Datenschutz-Schulungen:** Sensibilisierung der Mitarbeiter für Datensicherheitsrisiken.
 - **Sicherheitsrichtlinien:** Klare Regeln für den Umgang mit Daten und IT-Systemen.
 - **Notfallpläne:** Strategien für den Umgang mit Datenpannen und Sicherheitsvorfällen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - [Grundlagen der IT-sicherheit](/01-basics-intro/it_sicherheit_grundlagen.md)
 - [Mehr zum Thema Cyberangriffe](/02-network-security/angriffe/cyberangriffe_grundlagen.md)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -135,12 +215,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

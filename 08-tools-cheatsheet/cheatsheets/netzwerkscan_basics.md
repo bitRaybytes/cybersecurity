@@ -11,6 +11,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Netzwerk Scans (Klassisch)
 
 | Befehl       | Beschreibung                                                                           |
@@ -26,6 +34,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Netzwerk Scans (Moderne Tools)
 
 | Befehl | Beschreibung                                                      |
@@ -34,6 +50,14 @@
 | `ip n` | Zeigt ARP-Nachbarn (wie `arp -a`)                                 |
 | `ip r` | Zeigt Routing-Tabelle (ersetzt `route`)                           |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Erweiterte Tools für Netzwerk-Discovery
@@ -45,6 +69,14 @@ Automatischer ARP-Scan im lokalen Netzwerk zur Erkennung aktiver Hosts.
 ```bash
 netdiscover -i eth0
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### `nmap`
 
@@ -66,6 +98,14 @@ nmap -O 192.168.1.102
 
 -> [Mehr Infos zu `nmap` hier](/02-network-security/tools/nmap.md)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### `arp-scan`
 
 Ein schneller ARP-basiertes Tool für lokale Netzwerke:
@@ -76,6 +116,14 @@ sudo arp-scan --interface=eth0 192.168.1.0/24
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Tipps zur Netzwerkanalyse
 
 - Stelle sicher, dass du Root-Rechte hast (`sudo`) bei Tools wie `nmap`, `arp-scan` oder `netdiscover`.
@@ -83,6 +131,14 @@ sudo arp-scan --interface=eth0 192.168.1.0/24
 - Ziel: Aktive Hosts finden, deren offene Ports identifizieren, Dienste erkennen, Exploits vorbereiten.
 - Kombination aus: **Ping**, **ARP**, **DNS**, **Portscanning**, **Banner-Grabbing** = perfekte Recon.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Bonus: Interface-Troubleshooting
@@ -100,6 +156,14 @@ sudo dhclient eth0
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Empfohlene Reihenfolge für Beginner
 
 1. `ip a` -> Eigene IP & Subnetz erkennen
@@ -108,6 +172,14 @@ sudo dhclient eth0
 4. `traceroute` -> Netzwerkstruktur analysieren
 5. `arp -a` oder `ip n` -> MAC-zu-IP-Zuordnung verstehen
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -122,12 +194,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

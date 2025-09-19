@@ -8,6 +8,15 @@
 - [Die CIA-Triade in der Praxis](#die-cia-triade-in-der-praxis)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Die CIA-Triade ist ein grundlegendes Konzept der Informationssicherheit. Sie stellt die drei Hauptziele dar, die beim Schutz von Daten und Systemen verfolgt werden: **Vertraulichkeit** (**Confidentiality**), **Integrität** (**Integrity**) und **Verfügbarkeit** (**Availability**)
 
@@ -34,6 +43,14 @@ Zusammen bilden diese drei Prinzipien das Fundament für Sicherheitsrichtlinien,
 |    - Backups, Redundanz, DoS-Schutz      |
 +------------------------------------------+
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Vertraulichkeit (Confidentiality)
 **Vertraulichkeit** bedeutet, dass Daten nur für Personen zugänglich sind, die dazu autorisiert wurden. Es geht darum, Informationen vor neugierigen Blicken oder unbefugter Offenlegung zu schützen.
@@ -77,10 +94,28 @@ Zusammen bilden diese drei Prinzipien das Fundament für Sicherheitsrichtlinien,
 
 **Beispiel:** Ein Unternehmen betreibt einen Webserver redundant, um sicherzustellen, dass die Webseite auch dann online bleibt, wenn ein Server ausfällt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Die CIA-Triade in der Praxis
 Die drei Prinzipien sind voneinander abhängig. Ein Angriff auf die Integrität (z. B. die Manipulation einer Konfigurationsdatei) kann auch die Verfügbarkeit eines Dienstes beeinträchtigen. Ein Angriff auf die Verfügbarkeit (z. B. ein DDoS) könnte die Vertraulichkeit oder Integrität indirekt gefährden, indem er die Reaktionszeit der Sicherheitsteams verlangsamt.
 
 Die CIA-Triade ist ein essenzieller Rahmen, um die Risiken von Informationssystemen zu bewerten und ganzheitliche Sicherheitsstrategien zu entwickeln. Sie erinnert daran, dass der Schutz von Daten mehr ist, als nur eine Firewall einzurichten.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [Wikipedia: Informationssicherheit](https://de.wikipedia.org/wiki/Informationssicherheit)

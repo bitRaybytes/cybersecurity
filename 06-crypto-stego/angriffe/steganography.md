@@ -11,6 +11,13 @@
 - [Nützliche Tools und Links](#nützliche-tools-und-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 
 Steganografie ist die Kunst des Verbergens von Informationen in einem scheinbar harmlosen Trägermedium wie Bild, Audio, Video oder Text.
@@ -24,6 +31,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 - Digitale Einbettung von Daten in Bilddateien (z. B. über die LSB-Methode, Least Significant Bit).
 - Unsichtbare Wasserzeichen in Dokumenten oder Druckern.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Funktionsweise von Steganografie
 
 - **Container (Trägermedium):** Datei, in der die geheime Nachricht versteckt wird (Bild, Audio, Text …)
@@ -32,6 +46,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 
 > Angreifer nutzen Steganografie oft, um schadhafte Payloads unauffällig in Medien zu verstecken.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Arten der Steganografie
 | Art der Steganografie | Erläuterung                                                                  |
@@ -43,6 +64,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 | **Netzwerk**          | Versteckte Daten in Protokoll-Headern oder anderen Teilen von Netzwerkpaketen (selten genutzten Flags). |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Bekannte Methoden
 
 - **Least Significant Bit (LSB):** Austausch der letzten Bits eines Pixels/Samples.
@@ -51,6 +79,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 - **Linguistische Steganografie:** Wörterwahl, Satzstruktur oder Tippfehler als Code.
 - **Whitespace-Steganografie:** Nutzung von Leerzeichen, Tabs oder unsichtbaren Unicode-Zeichen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Vergleich mit Kryptografie
 | Steganografie                                        | Kryptografie                                        |
@@ -61,6 +96,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Anwendungsbereiche
 
 1. **Malware / Cybercrime:** Kriminielle nutzen Steganografie, um Schadsoftware oder andere bösartige Codes unauffällig zu übertragen.
@@ -68,6 +110,13 @@ Das Ziel: nicht nur den Inhalt, sondern auch die Existenz der Nachricht zu verbe
 3. **Wasserzeichen & Copyright:** Moderne Drucker können unsichtbare Codes auf Ausdrucke drucken, die durch Steganografie Daten enthalten.
 4. **CTFs / Pentesting:** Beliebtes Thema in CTF-Challenges.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Steganalyse
 
@@ -82,6 +131,13 @@ Typische Ansätze sind:
 - **Visuelle Analyse:** Bilder in anderen Farbkanälen betrachten (z. B. RGB-Splitting).
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Tools und Links
 
 - [Exif-Tool by Phil Harvey](https://exiftool.org/) - Metadaten-Analyse
@@ -93,6 +149,13 @@ Typische Ansätze sind:
 - [WikiPedia: Steganografie](https://de.wikipedia.org/wiki/Steganographie#Open_Code)
 - [kaspersky: What is Steganography?](https://www.kaspersky.de/resource-center/definitions/what-is-steganography)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -106,12 +169,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

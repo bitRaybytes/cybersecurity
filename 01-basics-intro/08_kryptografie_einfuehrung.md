@@ -7,13 +7,39 @@
 - [Zusammenfassung: Die Rolle der Kryptografie](#zusammenfassung-die-rolle-der-kryptografie)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Kryptografie ist die Wissenschaft der sicheren Kommunikation in Anwesenheit von Gegnern. Im Kern geht es darum, Informationen so zu verbergen, dass nur autorisierte Parteien sie verstehen können. Sie ist ein fundamentales Werkzeug, um die **Vertraulichkeit** und **Integrität** von Daten zu gewährleisten, zwei Schlüsselprinzipien der CIA-Triade.
 
 Die modernen Methoden der Kryptografie lassen sich in zwei Hauptkategorien unterteilen: symmetrische und asymmetrische Verschlüsselung, ergänzt durch die wichtigen Hashing-Algorithmen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Symmetrische Verschlüsselung
 Bei der **symmetrischen Verschlüsselung** wird derselbe geheime Schlüssel sowohl für die Ver- als auch für die Entschlüsselung von Daten verwendet. Es ist, als ob zwei Personen ein Vorhängeschloss und einen einzigen, identischen Schlüssel teilen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Funktionsweise:
 
@@ -25,8 +51,17 @@ Bei der **symmetrischen Verschlüsselung** wird derselbe geheime Schlüssel sowo
 
 - **Nachteile:** Der sichere Austausch des Schlüssels ist eine große Herausforderung. Wenn der Schlüssel kompromittiert wird, können alle damit verschlüsselten Nachrichten entschlüsselt werden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Visualisierung: Symmetrische Verschlüsselung
-```yaml
+```text
 +-------------+         (Geheimer Schlüssel)           +-------------+
 |    Alice    | <------------------------------------> |     Bob     |
 | (Sender)    |                                        | (Empfänger) |
@@ -51,6 +86,14 @@ Bei der **symmetrischen Verschlüsselung** wird derselbe geheime Schlüssel sowo
 
 Die **asymmetrische Verschlüsselung** verwendet ein Schlüsselpaar: einen **öffentlichen Schlüssel** (Public Key) und einen **privaten Schlüssel** (Private Key). Der öffentliche Schlüssel kann mit jedem geteilt werden, der private Schlüssel muss streng geheim gehalten werden.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Funktionsweise
 
 1. Jede Person hat ein Schlüsselpaar. Bob möchte, dass Alice ihm eine Nachricht schickt.
@@ -62,8 +105,16 @@ Die **asymmetrische Verschlüsselung** verwendet ein Schlüsselpaar: einen **öf
 
 - **Nachteile:** Es ist deutlich langsamer und rechenintensiver als die symmetrische Verschlüsselung.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Visualisierung: Asymmetrische Verschlüsselung
-```yaml
+```text
 +-------------+                             +-------------+
 |    Alice    |                             |     Bob     |
 | (Sender)    |                             | (Empfänger) |
@@ -87,6 +138,7 @@ Die **asymmetrische Verschlüsselung** verwendet ein Schlüsselpaar: einen **öf
 
 </div>
 
+
 ## 3. Hashing-Algorithmen
 Hashing ist eine Einwegfunktion. Ein Hashing-Algorithmus nimmt Daten beliebiger Größe entgegen und erzeugt daraus einen eindeutigen, festen Wert, den Hash-Wert oder Prüfsumme. Aus dem Hash-Wert kann nicht auf die ursprünglichen Daten geschlossen werden.
 
@@ -100,6 +152,13 @@ Hashing ist eine Einwegfunktion. Ein Hashing-Algorithmus nimmt Daten beliebiger 
 
 Gängige Hashing-Algorithmen sind **SHA-256** und **SHA-3**.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Zusammenfassung: Die Rolle der Kryptografie
 
 - **Vertraulichkeit:** Wird durch symmetrische und asymmetrische Verschlüsselung erreicht. Die **TLS/SSL-Verbindung** (HTTPS) auf Webseiten ist eine Kombination aus beiden: Asymmetrie für den sicheren Schlüsselaustausch, Symmetrie für die schnelle Datenübertragung.
@@ -107,6 +166,13 @@ Gängige Hashing-Algorithmen sind **SHA-256** und **SHA-3**.
 - **Integrität:** Wird primär durch Hashing und digitale Signaturen sichergestellt.
 
 Diese Konzepte sind das Rückgrat der modernen Cybersicherheit und essenziell, um Daten vor unerlaubtem Zugriff und Manipulation zu schützen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -120,12 +186,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

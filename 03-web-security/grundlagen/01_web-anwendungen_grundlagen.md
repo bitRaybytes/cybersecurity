@@ -14,6 +14,15 @@
 - [Fazit: Sicherheitsrelevanz der Grundlagen](#fazit-sicherheitsrelevanz-der-grundlagen)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 **Web-Anwendungen** sind heute die Basis für fast jede dynamische Webseite, die Nutzer erleben. Sie unterscheiden sich grundlegend von statischen Webseiten, indem sie interaktive Funktionen, Benutzerkonten und die Verarbeitung von Daten ermöglichen. Dabei wird jedem Webseiten-Besucher das **Frontend** dargestellt, während das **Backend** unsichtbar im Hintergrund arbeitet und die notwendige Logik ausführt.
 
@@ -26,8 +35,26 @@
 ## Komponenten einer Web-Anwendung
 Web-Anwendungen basieren auf einer **Client-Server-Architektur**. Der Client, also der Browser des Nutzers, sendet Anfragen an den Server, der diese verarbeitet und eine Antwort zurückschickt.  Dieses Modell ist für die Web-Sicherheit von zentraler Bedeutung, da die Kommunikation zwischen beiden Seiten die Hauptangriffsfläche darstellt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Frontend
 Das **Frontend** ist die Benutzeroberfläche, die direkt im Webbrowser des Nutzers gerendert wird. Es ist das, was der Nutzer sieht und mit dem er interagiert. Typischerweise wird das Frontend mit einer Kombination aus drei Schlüsseltechnologien entwickelt:
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### HTML (Hypertext Markup Language)
 **HTML** ist die Grundlage und das Gerüst jeder Webseite. Es ist eine Auszeichnungssprache, die dem Browser die Struktur der Inhalte vorgibt.
@@ -35,6 +62,14 @@ Das **Frontend** ist die Benutzeroberfläche, die direkt im Webbrowser des Nutze
 Mit sogenannten Tags wie `<header>`, `<body>`, `<div>` werden Elemente wie Text, Bilder oder Formulare semantisch markiert und angeordnet. Aus Sicherheitssicht ist HTML wichtig, da hier oft die ersten Schwachstellen wie fehlerhafte Formulardefinitionen oder unsichere Links (`<a>` mit `target="_blank"`) zu finden sind.
 
 Mit Tags wie `<p>` können bspw. Text-Inhalte auf die Webseite hinzugefügt werden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### CSS (Cascading Style Sheets)
 **CSS** ist für die Formatierung und das Layout der Webseite zuständig. Es bestimmt das Aussehen von HTML-Elementen, also Farben, Schriftarten, Abstände und die Positionierung. Während CSS selbst keine Logik enthält, können Angreifer auch hier Schadcode einschleusen, um zum Beispiel Benutzeroberflächen zu manipulieren oder Daten über das Auslesen von Stilen zu exfiltrieren.
@@ -47,12 +82,30 @@ Mit Tags wie `<p>` können bspw. Text-Inhalte auf die Webseite hinzugefügt werd
 </div>
 
 
+
+
 #### JS (JavaScript)
 **JavaScript** ist die Programmiersprache des Webs, die Webseiten dynamisch und interaktiv macht. Während HTML und CSS statische Anweisungen sind, ermöglicht JavaScript logische Abläufe, wie die Validierung von Formularen, die Anzeige von Pop-ups oder das asynchrone Laden von Inhalten. Angreifer nutzen JavaScript, um Angriffe wie **Cross-Site Scripting** ([**XSS**](/03-web-security/schwachstellen/xss.md)) auszuführen, bei denen schädlicher Code im Browser des Opfers ausgeführt wird.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Backend
 
 Das **Backend** einer Web-Anwendung ist das, was der User nicht sieht, doch entscheidend ist, damit die Anwendung überhaupt laufen kann. Es ist die serverseitige Logik, die sich um die Verarbeitung von Anfragen, die Kommunikation mit Datenbanken und die Authentifizierung von Nutzern kümmert. Oftmals sind mehrere Backend-Systeme miteinander verbunden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 #### Backend-Sprachen und Frameworks
 Das Backend kann mit einer Vielzahl von Sprachen und Frameworks umgesetzt werden, darunter:
@@ -61,8 +114,25 @@ Das Backend kann mit einer Vielzahl von Sprachen und Frameworks umgesetzt werden
 
 - **Kompilierte Sprachen:** Java, C#, Go
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Datenbanken
 Mit **Datenkbanken** wie `MySQL`, `NoSQL`, `PostgreSQL` oder `MongoDB` werden Informationen dauerhaft gespeichert, modifiziert und abgerufen. Datenbanken können somit sensible Informationen wie Benutzernamen, E-Mail-Adressen, Passwörter und private Daten enthalten. Aus sicherheitstechnischer Sicht sind sie ein primäres Angriffsziel, und Schwachstellen wie [**SQL-Injection**](/03-web-security/injektionen/sql-injection-cheatsheet.md) gehören zu den gefährlichsten.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Infrastruktur
 Verschiedene Infrastruktur-Komponenten arbeiten zusammen, damit Web-Anwendungen reibungslos laufen können. Diese umfassen:
@@ -84,6 +154,12 @@ Verschiedene Infrastruktur-Komponenten arbeiten zusammen, damit Web-Anwendungen 
 #### WAF (Web Application Firewall)
 Eine **WAF** ist eine optionale, doch bei Gebrauch sehr nützliche Komponente für Web-Anwendungen. Sie ist eine spezielle Art von Firewall, die den HTTP/S-Verkehr analysiert und schädliche Anfragen wie SQL-Injections, XSS oder CSRF-Angriffe blockiert, noch bevor sie den Web-Server erreichen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Die URL
 
@@ -140,6 +216,14 @@ Kennzeichnend für HTTP-Messages sind bspw. die **Methode** (GET/POST/...), Head
 - **Body:**
     - Der Hauptteil der Nachricht, der die Nutzlast enthält, wie z. B. Formulardaten im Request oder HTML-Inhalt im Response. 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## HTTP Request
 Ein **HTTP Request** wird von einem Client an den Server übermittelt. 
 
@@ -174,6 +258,15 @@ HTTP-Methoden definieren, welche Aktion mit der angeforderten Ressource durchgef
 | **HEAD**     | Ist wie GET, aber es wird nur der Header der Antwort geliefert, nicht der Body. | Wird zur schnellen Überprüfung von Meta-Informationen genutzt, ohne große Datenmengen zu laden. |
 | **OPTIONS**     | Fordert Informationen über die Kommunikationsoptionen der Zielressource an. | Kann Aufschluss über erlaubte Methoden geben. |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## HTTP Versionen
 Die HTTP-Versionen beschreiben die Entwicklung des Protokolls und die damit verbundenen Leistungs- und Sicherheitsverbesserungen.
 
@@ -201,6 +294,13 @@ Ein **Status-Code** ist eine dreistellige Nummer, die im HTTP-Response gesendet 
 | **300-399** | Der Client muss weitere Schritte unternehmen, um die Anfrage abzuschließen. |
 | **400-499** | Die Anfrage enthält einen Fehler und kann nicht verarbeitet werden. |
 | **500-599** | Der Server konnte die Anfrage nicht erfüllen. |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Fazit: Sicherheitsrelevanz der Grundlagen

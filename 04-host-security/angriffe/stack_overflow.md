@@ -8,10 +8,28 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Stack oder Buffer Overflow?
 In der Welt der Cybersicherheit werden die Begriffe **Buffer Overflow** und **Stack Overflow** oft synonym verwendet, was aber technisch nicht korrekt ist. Um es einfach zu sagen: Ein **Buffer Overflow** ist ein Angriff oder eine Schwachstelle, während ein **Stack Overflow** das Symptom oder die Folge einer solchen Schwachstelle sein kann.
 
 Ein **Buffer Overflow** kann an verschiedenen Stellen im Speicher auftreten, zum Beispiel auf dem **Stack** oder dem **Heap**. Ein **Stack Overflow** hingegen ist immer eine spezifische Art von Speicherüberlauf, die ausschließlich auf dem Stack stattfindet.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Was ist ein Stack Overflow?
 Der Stack ist ein spezieller Bereich im Speicher, der für lokale Variablen, Parameter und Rücksprungadressen von Funktionen genutzt wird. Er wächst und schrumpft dynamisch mit jedem Funktionsaufruf.
@@ -24,6 +42,15 @@ Ein **Stack Overflow** tritt ein, wenn mehr Speicher benötigt wird, als für de
 
 In beiden Fällen wird der zugewiesene Speicher auf dem Stack überschritten, was einen Programmabsturz oder, bei einem gezielten Angriff, die Ausführung von bösartigem Code zur Folge hat.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Beispiel (Pseudo-C):
 ```c
 void recurse() {
@@ -35,9 +62,20 @@ int main() {
     return 0;
 }
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Wie sieht das im Speicher aus?
 
 Ein Stack ist in Schichten organisiert – wie ein Stapel Teller. Jeder neue Funktionsaufruf legt einen neuen „Teller“ oben drauf.
+
+
 
 ### Normaler Stack-Aufbau:
 ```text
@@ -50,6 +88,12 @@ Ein Stack ist in Schichten organisiert – wie ein Stapel Teller. Jeder neue Fun
 +-------------------+
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Stack mit Überlauf (zu viele Aufrufe/Daten)
 ```text
@@ -66,6 +110,12 @@ Ein Stack ist in Schichten organisiert – wie ein Stapel Teller. Jeder neue Fun
 In so einem Fall kann das Programm entweder abstürzen (**Segmentation Fault**) oder – bei einem gezielten Angriff – fremden Code ausführen.
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Unterschiede & Zusammenhänge
 Um die Beziehung zwischen den beiden Konzepten zu verdeutlichen, betrachte die folgende Tabelle:
 
@@ -76,11 +126,29 @@ Um die Beziehung zwischen den beiden Konzepten zu verdeutlichen, betrachte die f
 | **Ort** | Kann auf dem **Stack**, **Heap** oder in anderen Speichern auftreten. | Tritt ausschließlich auf dem **Stack** auf. |
 | **Klassifikation** | Ist ein **Angriffsvektor** oder einen Schwachstelle. | Ist ein **Fehlerzustand** oder das Sympton eines Angriffs. |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Zusammenfassung
 
 - Ein **Buffer Overflow** ist ein Angriffsvektor – ein gezieltes Überschreiben eines Puffers.
 - Ein **Stack Overflow** ist ein Fehlerzustand, der fast immer zum Programmabsturz führt – entweder durch Angriffe oder durch fehlerhafte Programmierung.
 - Während Buffer Overflows gezielt ausgenutzt werden können, sind Stack Overflows oft „Nebenwirkungen“ davon.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [Wikipedia: https://de.wikipedia.org/wiki/Stapel%C3%BCberlauf](https://de.wikipedia.org/wiki/Stapel%C3%BCberlauf)

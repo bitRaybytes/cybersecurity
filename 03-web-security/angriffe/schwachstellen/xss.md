@@ -33,7 +33,7 @@
 
 ## Einleitung
 
-**Cross-Site Scripting (XSS)** ist eine Web-Sicherheitslücke, bei der Angreifer **schädlichen JavaScript-Code** in Webseiten einschleusen, der im Browser anderer Benutzer ausgeführt wird.
+**Cross-Site Scripting (XSS)** ist eine Web-Sicherheitslücke, bei der Angreifer **schädlichen JavaScript-Code** in Webseiten einschleusen, der im Browser anderer Benutzer ausgeführt wird. Dies ermöglicht Angreifern, auf sensible Nutzerdaten wie Anmeldeinformationen zuzugreifen, Aktionen im Namen des Benutzers auszuführen oder die Webseite zu manipulieren.
 
 💡 XSS zählt laut [OWASP Top 10](https://owasp.org/www-project-top-ten/) seit Jahren zu den **häufigsten Sicherheitslücken** in Webanwendungen.
 
@@ -74,11 +74,11 @@ XSS zählt zu den Client-seitigen Injection-Angriffen. Der Angreifer manipuliert
 
 **Ziel von XSS:** Ausführen von JavaScript im Kontext des Opfers, z. B. um:
 
-- Cookies zu stehlen (document.cookie)
+- Cookies zu stehlen (`document.cookie`)
 
 - Session-Tokens zu exfiltrieren
 
-- Inhalte zu verändern (defacement)
+- Inhalte zu verändern (`defacement`)
 
 - Phishing-Popups anzuzeigen
 
@@ -196,7 +196,7 @@ Bei Stored XSS wird der bösartige Code dauerhaft auf dem Server gespeichert (z.
 </div>
 
 ### 3. DOM-based XSS
-DOM-based XSS ist die gefährlichste Form, da der Angriff rein im Browser des Opfers stattfindet. Der Server ist nicht beteiligt, da die Schwachstelle im clientseitigen JavaScript-Code liegt. Der Angreifer manipuliert das Document Object Model (DOM), um den schädlichen Code auszuführen.
+DOM-based XSS ist die gefährlichste Form, da der Angriff rein im Browser des Opfers stattfindet. Der Server ist nicht beteiligt, da die Schwachstelle im clientseitigen JavaScript-Code liegt. Der Angreifer manipuliert das **Document Object Model** (**DOM**), um den schädlichen Code auszuführen.
 
 - **Typisch:** Client-seitige Formulare, die URL-Fragmente (`#`) oder andere Quellen nutzen, um Inhalte dynamisch in die Seite zu laden.
 
@@ -361,6 +361,7 @@ Content-Security-Policy: default-src 'none'; script-src 'self'; img-src 'self'; 
 
 - **HTTPOnly-Flag bei Cookies:** Ein Cookie mit dem `HttpOnly`-Flag kann nicht über JavaScript (`document.cookie`) ausgelesen werden. Dies schützt Session-Cookies vor XSS-Angriffen, bei denen Angreifer sie stehlen wollen.
 
+- **Mitarbeiterschulungen:** Entwickler und Wartungspersonal sollten für XSS-Risiken sensibilisiert und geschult werden.
 
 
 <div align=right>
@@ -396,6 +397,8 @@ Diese Funktionen sollten nur dann verwendet werden, wenn du die Eingabedaten vor
 - [PortSwigger XSS Academy](https://portswigger.net/web-security/cross-site-scripting)
 - [XSS Cheat Sheet (OWASP)](https://owasp.org/www-community/xss-filter-evasion-cheatsheet)
 - [PayloadsAllTheThings: XSS](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection)
+- [Wikipedia: XSS](https://de.wikipedia.org/wiki/Cross-Site-Scripting)
+
 
 
 
@@ -420,7 +423,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

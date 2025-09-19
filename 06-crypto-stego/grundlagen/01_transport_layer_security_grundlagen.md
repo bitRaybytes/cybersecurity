@@ -56,14 +56,16 @@ Das ist der Ablauf einer typischen TLS 1.3-Verbindung:
 5. **Finish:** 
     - Client und Server senden eine abschließende Nachricht, die mit dem neuen Session Key verschlüsselt ist. Diese Nachricht bestätigt, dass beide Parteien denselben Session Key abgeleitet haben und die Verbindung nun sicher ist.
 
+
 **Vereinfachte Darstellung des TLS-Handshakes:**
-```yaml
+```text
                         Client                         Server
                               |                        |
                Client Hello   |----------------------->|
     (Version, Suites, Random) |                        |
                               |                        |
                               |<-----------------------| Server Hello
+                              |                        |
 (Auswahl, Random, Zertifikat) |                        |
                               |                        |
                               |----------------------->| Schlüsselmaterial

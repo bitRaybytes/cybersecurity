@@ -22,6 +22,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Installation
 
 **Linux (Debian/Ubuntu):**
@@ -38,6 +46,14 @@ brew install nmap
 **Windows:**
 ➡ [Download von der offiziellen Webseite](https://nmap.org/download.html)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Grundlagen
@@ -75,6 +91,14 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Service & OS-Erkennung
 
 | Befehl            | Beschreibung                                    |
@@ -102,6 +126,14 @@ Weitere [Nmap Port Scan Techniken](https://nmap.org/book/man-port-scanning-techn
 | `nmap -sN <Ziel>` | Null-Scan (keine Flags)                      |
 | `nmap -sX <Ziel>` | Xmas-Scan (alle Flags)                       |
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## NSE (Nmap Scripting Engine)
@@ -141,6 +173,14 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Output speichern
 
 | Befehl            | Beschreibung                                  |
@@ -168,11 +208,27 @@ Weitere NSE-Befehle gibt es auf der offiziellen Homepage von `nmap`: [https://nm
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Ressourcen
 
 - 🔗 [NMAP Manpage](https://nmap.org/book/man.html)
 - 🌐 [NMAP Offizielle Webseite](https://nmap.org/)
 - [YouTube: NMAP Full Guide, Hacker Joe](https://www.youtube.com/watch?v=JHAMj2vN2oU)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -188,12 +244,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

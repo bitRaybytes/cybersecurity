@@ -16,6 +16,15 @@ Der Angreifer nutzt die immense Rechenleistung moderner Computer oder Botnets, u
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Funktionsweise
 
 Das Prinzip ist einfach:
@@ -26,7 +35,7 @@ Das Prinzip ist einfach:
 
 **Beispiel:** Ein Passwort mit nur **zwei Kleinbuchstaben** (`a–z`):
 
-```yaml
+```text
 aa
 ab
 ac
@@ -41,6 +50,15 @@ zz
     - Länge des Passworts
     - Zeichenraum (Alphabetgröße)
     - Geschwindigkeit der Hash- oder Login-Prüfung
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Arten von Brute-Force-Angriffen
 
@@ -71,6 +89,14 @@ zz
     - **Beschreibung:** Nutzung gestohlener Login-Daten aus Leaks (z. B. von „Have I Been Pwned?“).
     - **Effektiv bei:** Benutzern, die Passwörter mehrfach verwenden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Gängige Tools
 
 - **`Hydra` (THC-Hydra):** Login-Bruteforcer für viele Protokolle (SSH, FTP, HTTP).
@@ -88,11 +114,14 @@ john --wordlist=rockyou.txt hashfile.txt
 hascat -a 3 -m 0 hash.txt ?a?a?a?a?a
 ```
 
+
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
 
 ## Schutzmaßnahmen
 
@@ -121,9 +150,26 @@ Die wichtigste Maßnahme ist die Begrenzung der Anmeldeversuche. Nach einer best
 +-------------------------------------+
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Multi-Faktor-Authentifizierung (MFA)
 
 Selbst wenn ein Angreifer das Passwort errät, kann er sich ohne den zweiten Faktor (z.B. ein Code von einer App oder SMS) nicht anmelden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. Komplexität von Passwörtern
 
@@ -133,7 +179,7 @@ Längere und komplexere Passwörter mit einer Mischung aus Groß- und Kleinbuchs
 - Ein Passwort mit 8 Zeichen (`a-z` (26), `A-Z` (26), `0-9`, Sonderzeichen) hat 94^8 ≈ 6,1 * 10^15 Möglichkeiten.
 - Nicht das gleiche Passwort nutzen.
 
-```yaml
+```text
                                                     +-----------------------------+
 6 Kleinbuchstaben (a-z):    26^6  ≈ 3,1 * 10^8      | Ergebnisse gerundet nach    |
 8 gemischte Zeichen (~94):  94^8  ≈ 6,1 * 10^15     | wissenschaftlicher Notation |
@@ -148,24 +194,65 @@ a-zA-Z0-9!$% → sehr stark
 
 Hier erfährst du mehr zur wissenschaftlichen Notation: [google: Was ist wissenschaftliche Notation?](https://www.google.com/search?client=firefox-b-d&q=Was+ist+wissenschaftliche+Notation%3F)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 4. Passwort-Hashing + Salting
 
 Passwörter **niemals** im Klartext speichern.
 
 - Hashing-Algorithmen wie `bcrypt`, `scrypt`, `Argon2`.
+
 - `Salt` schützt vor Rainbow-Tables.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 5. Captcha
 
 Eine Herausforderung, die nur von Menschen gelöst werden kann, stoppt automatisierte Skripte von Brute-Force-Angriffen.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 6. Monitoring & Logging
 
 - **IDS/IPS-Systeme** → erkennen Login-Anomalien.
 - **Brute-Force-Versuche** → Security-Alert.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -179,12 +266,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

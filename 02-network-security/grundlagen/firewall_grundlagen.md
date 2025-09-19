@@ -13,10 +13,18 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Firewall-Definition
 Eine **Firewall** schützt Netzwerke und Systeme vor unautorisierten Zugriffen, indem sie den Datenverkehr nach definierten Regeln filtert. Sie agiert als Barriere und erlaubt nur die **erlaubte Kommunikation** (gemäß den Sicherheitsrichtlinien).
 
-```yaml
+```text
      Internet              |        Internes Netzwerk
      (Unsichere Zone)      |        (Sichere Zone)
                            |
@@ -35,6 +43,14 @@ Eine **Firewall** schützt Netzwerke und Systeme vor unautorisierten Zugriffen, 
 
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Firewall-Regeln
 Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverkehr basierend auf bestimmten Kriterien zugelassen (`ALLOW`) oder blockiert (`DENY`) wird.
 
@@ -45,6 +61,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
   - **Richtung:** Ist der Verkehr eingehend (`Inbound`) oder ausgehend (`Outbound`)?
   - **Whitelist:** Nur bekannte Geräte sind berechtigt.
   - **Blacklist:** Alles in der Liste wird geblockt.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Wichtige Practice
   - **Default Deny:** Standardmäßig wird **alles verboten**, was nicht explizit in einer Regel erlaubt ist. Dies ist das sicherste Vorgehen.
@@ -75,6 +99,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Stateful Packet Inspection (SPI)
 - **Funktionsweise:**  
   - Prüft nicht nur Header, sondern auch den **Verbindungszustand**.  
@@ -84,6 +116,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
   - Bessere Sicherheit als reine Paketfilter, Schutz vor Angriffen wie SYN-Flooding   
 - **Nachteile:**
   - Kein inhaltliche Analyse des Datenstroms (kein Schutz auf Layer 7).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 3. Application Firewall (Proxy-Firewall)
@@ -101,6 +141,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
   - Höhere Latenz & Ressourcenverbrauch  
   - Komplexere Konfiguration  
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 4. Next Generation Firewall (NGFW)
@@ -130,7 +178,7 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
 
 ## Vergleich nach Schichten
 
-```yaml
+```text
 +----------------+--------------------+--------------------------+
 | OSI-Layer      | Firewall-Typ       | Beispiel                 |
 +================+====================+==========================+
@@ -153,6 +201,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Wichtige Hinweise und Tools
 - **Layer 3–4 Firewalls** sind schnell, aber bieten nur grundlegenden Schutz. 
 - **Layer 7 Firewalls** sind granular, aber langsamer und komplexer.
@@ -161,6 +217,14 @@ Regelwerke sind das Herzstück jeder Firewall. Sie bestimmen, welcher Datenverke
 - **Praktische Tools:**
   - `iptables`/`nftables` (Linux) zur Konfiguration der netfiler-Firewall.
   - `ufw` (Uncomplicated Firewall) für eine einfachere Verwaltung.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -175,12 +239,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 📅 **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Ergänzungen & Verbesserungen gern gesehen!  

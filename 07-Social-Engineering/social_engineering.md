@@ -9,11 +9,27 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist Social Engineering?
 
 **Social Engineering** ist eine Methode, die Angreifer verwenden, um Menschen zu manipulieren und sie dazu zu bringen, sensible Informationen preiszugeben oder Handlungen auszuführen, die ihre Sicherheit gefährden. Im Gegensatz zu technischen Angriffen, die Schwachstellen in Software oder Hardware ausnutzen, zielt Social Engineering auf die **Schwachstelle Mensch** ab.
 
 Angreifer nutzen dabei psychologische Tricks, menschliche Neugier und Hilfsbereitschaft, um an ihr Ziel zu kommen. Sie geben sich oft als vertrauenswürdige Personen aus, wie Mitarbeiter, Techniker oder Vorgesetzte, um das Vertrauen des Opfers zu gewinnen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### Psychologische Prinzipien
@@ -28,6 +44,14 @@ Social Engineers stützen sich oft auf diese psychologischen Prinzipien:
     - Angreifer setzen das Opfer unter Zeitdruck, indem sie eine dringende Situation vortäuschen (z. B. ein sofortiges Sicherheitsupdate ist erforderlich), um eine rationale Überprüfung zu verhindern.
 - **Neugier/Verlockung:** 
     - Sie wecken die Neugier des Opfers, indem sie beispielsweise verlockende Angebote oder falsche Gewinnbenachrichtigungen nutzen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Gängige Social-Engineering-Angriffe
@@ -66,6 +90,14 @@ Einige Angriffe gehen über klassische Methoden hinaus und kombinieren Social En
 - **Shoulder Surfing & Eavesdropping:** 
     - Informationen werden durch einfaches Beobachten oder Mithören gewonnen, etwa wenn ein Mitarbeiter am öffentlichen Arbeitsplatz sein Passwort eintippt.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Schutz und Prävention
 
 Der beste Schutz vor Social Engineering ist Aufklärung und Bewusstsein.
@@ -80,6 +112,14 @@ Der beste Schutz vor Social Engineering ist Aufklärung und Bewusstsein.
     - Klicke nie auf Links in verdächtigen Nachrichten und öffne keine unbekannten Dateianhänge.
 - **Recherchiere im Zweifelsfall:** 
     - Nutze deine Recherche-Skills, um die Echtheit einer Anfrage zu überprüfen, [Google Dorking google_dorking.md](/07-Social-Engineering/google_dorking.md)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [BSI: Informationsblatt "Schutz vor Social Engineering - Hinweise für Beschäftigte"](https://www.verfassungsschutz.de/SharedDocs/publikationen/DE/wirtschafts-wissenschaftsschutz/2022-08-infoblatt-social-engineering-beschaeftigte.html#:~:text=Social%20Engineering%20ist%20eine%20der,umfassendes%20Wissen%20und%20gesundes%20Misstrauen.)

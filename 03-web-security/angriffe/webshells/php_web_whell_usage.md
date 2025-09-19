@@ -15,6 +15,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 Eine **PHP-Webshell** ist eine serverseitige Datei (z. B. `.php`), die einem Angreifer erlaubt, über den Browser Befehle auf dem Zielsystem auszuführen. Sie werden häufig in Penetration Tests, Capture-the-Flag (CTF)-Challenges oder Sicherheitsanalysen eingesetzt, um **Remote Code Execution (RCE)** nach einem erfolgreichen Upload-Angriff zu ermöglichen.
@@ -22,6 +30,14 @@ Eine **PHP-Webshell** ist eine serverseitige Datei (z. B. `.php`), die einem A
 > ⚠️ **Wichtiger Hinweis:**  
 > Dieses Wissen dient ausschließlich der **legalen Sicherheitsforschung**, für **CTFs**, **Testumgebungen** (wie HackTheBox/TryHackMe) oder autorisierte Penetration Tests. Jegliche nicht autorisierte Anwendung ist strafbar.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispiel einer einfachen PHP Webshell
@@ -66,12 +82,28 @@ pwd                      # Aktuelles Verzeichnis
 whoami                   # Benutzername
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 🗂️ Verzeichnisstruktur erkunden
 ```bash
 ls -la /home             # Benutzerverzeichnisse
 ls -la /root             # Root-Verzeichnis (Zugriff nur bei root)
 ls -la /var/www          # Webserver-Verzeichnis
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 📝 Systemdateien lesen
 
@@ -80,6 +112,14 @@ cat /etc/passwd
 cat /etc/shadow
 cat /etc/sudoers
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 🌐 Netzwerk-Check
 ```bash
@@ -103,6 +143,14 @@ which python
 ```
 Mit einem gefundenen Tool kann eine Reverse Shell aufgebaut werden.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Daten exfiltrieren oder Reverse Shell starten
@@ -138,12 +186,28 @@ Oder über eine PHP-gestützte Reverse Shell:
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Siehe auch:
 
 - [php_web_shell_bypass_tricks.md](/03-web-security/angriffe/webshells/php_web_shell_bypass_tricks.md)
 - [post_exploitation_tools.md](/04-host-security/post_exploitation_tools.md)
 - [cmd_examples_from_shell.md](/03-web-security/angriffe/webshells/cmd_examples_from_shell.md)
 - [php_rce_cheat_sheet.md](/03-web-security/angriffe/webshells/php_rce_cheat_sheet.md)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -159,11 +223,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

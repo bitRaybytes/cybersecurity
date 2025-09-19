@@ -20,11 +20,27 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist CSRF?
 
 **CSRF (Cross-Site Request Forgery)**, auch bekannt als „Session Riding“, ist eine Web-Sicherheitslücke, bei der ein Angreifer den Browser eines bereits authentifizierten Nutzers dazu bringt, unbeabsichtigt eine schädliche Anfrage an eine Webanwendung zu senden. Die Gefahr liegt darin, dass der Angreifer keine direkten Informationen des Opfers stehlen muss, sondern lediglich dessen gültige Sitzung ausnutzt. Er erzwingt eine Aktion, die scheinbar vom legitimen Nutzer selbst stammt.
 
 > **Merke:** CSRF zielt darauf ab, den **Zustand** der Webanwendung zu verändern (z. B. Geldüberweisung, Passwortänderung, Datenlöschung) und nutzt die im Browser gespeicherten Sitzungscookies aus.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Beispiel-Szenario:
 
@@ -93,6 +109,14 @@ Diese Art von CSRF-Attacke fokussiert sich auf die Status-Veränderung Maßnahme
 2. Die E-Mail wird voraussichtlich vom Opfer im selben Browser geöffnet.
 3. Sobald der Link angeklickt wurde, überträgt der schadhafte Code die Daten zum Angreifer oder überweist Beträge an Konten des Angreifers.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### XMLHttpRequest CSRF
 
 Asynchrone CSRF-Attacken passieren, wenn keine kompletten `Page Request-Response-Cycle` eingegangen sind. Diese Art von Angriffsmöglichkeit findet sich oft in modenernen Webanwendungen wider, die asynchrone Serverkommunikation (über `XMLHttpRequest` oder `Fetch API`) und JavaScript verwenden, um dymische Benutzeroberflächen zur Verfügung zu stellen.
@@ -102,6 +126,12 @@ Asynchrone CSRF-Attacken passieren, wenn keine kompletten `Page Request-Response
 **Beispiel:**
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Unterschied zu XSS
 
@@ -135,6 +165,12 @@ Asynchrone CSRF-Attacken passieren, wenn keine kompletten `Page Request-Response
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Bedingungen für CSRF
 
 - Der Nutzer ist bereits authentifiziert (eingeloggt)
@@ -164,6 +200,12 @@ Asynchrone CSRF-Attacken passieren, wenn keine kompletten `Page Request-Response
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## CSRF in der Praxis erkennen
 
 | Methode                       | Beispiel                               |
@@ -173,6 +215,12 @@ Asynchrone CSRF-Attacken passieren, wenn keine kompletten `Page Request-Response
 | Burp Suite Repeater | Teste eine kritische Anfrage im Burp Suite Repeater. Entferne den CSRF-Token (falls vorhanden) und sende die Anfrage erneut. Wenn die Aktion erfolgreich ausgeführt wird, ist die Seite anfällig. |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Tools für CSRF-Tests
 
@@ -206,6 +254,13 @@ Der CSRF-Token ist die Standardmethode zur Abwehr von Cross-Site Request Forgery
 </form>
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### 2. SameSite Cookie Attribut
 Mit dem `SameSite`-Attribut können Browser gesteuert werden, ob ein Cookie bei Cross-Site-Anfragen mitgesendet wird.
 
@@ -224,6 +279,7 @@ Verhindert automatisches Mitsenden bei Cross-Origin-Requests
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
 ### 3. Origin/Referer Header prüfen
 Viele Webanwendungen prüfen, ob die Anfrage von einer vertrauenswürdigen Domäne stammt. Dies geschieht durch die Überprüfung der HTTP-Header `Origin` und `Referer`. Dies ist jedoch keine absolute Sicherheit, da diese Header manipulierbar sein können.
 
@@ -235,17 +291,52 @@ if request.headers.get('Referer') != "[https://legitime-website.com](https://leg
 
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 4. Nur POST für kritische Aktionen
 
 Kein `GET` für sensible Änderungen
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### 5. Content Security Policy (CSP)
 
 Mit **CSP** definieren, welche Inhalte vertrauenswürdig sind.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 6. CAPTCHAS implementieren
 
 CAPTCHAS bauen eine zusätzliche Sicherheitsschicht auf, da User diese zunächst lösen müssen (Angreifer kann sie remote nur schwer lösen).
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 7. Double Submit Cookie
 Bei dieser Methode wird ein CSRF-Token in ein Cookie und in ein verstecktes Formularfeld geschrieben. Der Angreifer kann das Cookie zwar nicht lesen, da es durch die **Same-Origin-Policy** geschützt ist, aber er könnte es für seine gefälschte Anfrage nutzen. Da er das zweite Feld nicht kennt, kann er keine Übereinstimmung herstellen.
@@ -269,6 +360,12 @@ Bei dieser Methode wird ein CSRF-Token in ein Cookie und in ein verstecktes Form
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Übungsplattformen
 
@@ -280,6 +377,12 @@ Bei dieser Methode wird ein CSRF-Token in ein Cookie und in ein verstecktes Form
 | bWAPP            | Simulation echter Angriffe                       |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Weiterführende Links
 

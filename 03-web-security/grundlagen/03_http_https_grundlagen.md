@@ -8,6 +8,18 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist HTTP?
 **HTTP** (**Hypertext Transfer Protocol**) ist das grundlegende Protokoll, das die Kommunikation zwischen deinem Webbrowser (Client) und einem Webserver regelt. Wenn du eine Webseite aufrufst, sendet dein Browser eine HTTP-Anfrage an den Server, und dieser antwortet mit den Daten der Webseite.
 
@@ -21,6 +33,15 @@ Stell dir `HTTP` wie eine Postkarte vor:
 ```
 
 Die Übertragung erfolgt im Klartext. Das bedeutet, dass jeder, der den Datenverkehr mitschneiden kann (z. B. in einem öffentlichen WLAN), die gesendeten Informationen lesen kann. Dies ist für sensible Daten wie Passwörter, Kreditkarteninformationen oder persönliche Nachrichten ein enormes Sicherheitsrisiko.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Warum HTTPS?
 
@@ -39,11 +60,6 @@ HTTPS funktioniert, indem es vor dem eigentlichen Datenaustausch einen **TLS-Han
 
 Das Ergebnis ist eine sichere Verbindung, die den Schutz deiner Daten gewährleistet.
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 **Vereinfachte Darstellung vom HTTP-Protokoll:**
 
@@ -60,6 +76,15 @@ Das Ergebnis ist eine sichere Verbindung, die den Schutz deiner Daten gewährlei
 Ein [**digitales Zertifikat**](/06-crypto-stego/kryptografie/02_digitale_zertifikate.md) ist ein elektronischer Ausweis, der von einer vertrauenswürdigen Stelle (einer Zertifizierungsstelle oder CA) ausgestellt wird. Es enthält den öffentlichen Schlüssel des Servers und bestätigt dessen Identität. **Ohne** ein gültiges Zertifikat kann **keine** HTTPS-Verbindung aufgebaut werden.
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Der "Schlosseffekt"
 
 Wenn du eine Website mit HTTPS besuchst, siehst du in der Adressleiste deines Browsers ein kleines Schlosssymbol. Das ist das Zeichen dafür, dass die Verbindung sicher ist.
@@ -70,10 +95,28 @@ Wenn du eine Website mit HTTPS besuchst, siehst du in der Adressleiste deines Br
 
 Immer wenn du sensible Daten wie Passwörter, Finanzinformationen oder persönliche Nachrichten eingibst, solltest du sicherstellen, dass die Verbindung über HTTPS läuft.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - Wikipedia: [https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure)
 - RFC 9110: [https://datatracker.ietf.org/doc/html/rfc9110](https://datatracker.ietf.org/doc/html/rfc9110)
 - RFC 2818: [https://datatracker.ietf.org/doc/html/rfc2818](https://datatracker.ietf.org/doc/html/rfc2818)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -87,12 +130,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -16,6 +16,12 @@ Cyber-Angriffe sind absichtliche Handlungen, die darauf abzielen, Netzwerke, Sys
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Grundbegriffe des Cyber-Angriffs
 Cyber-Kriminelle verfolgen unterschiedliche Ziele, von finanziellen bis hin zu politischen Motiven. Der Angriffsvektor ist die Kombination aus **Angriffsweg** und **Angriffstechnik**, die beschreibt, wie ein Angreifer in ein System eindringt.
 
@@ -26,6 +32,14 @@ Cyber-Kriminelle verfolgen unterschiedliche Ziele, von finanziellen bis hin zu p
 - **Angriffstechniken:** 
     - Das Ausnutzen von Schwachstellen, Code-Injection, Malware, Spam oder physische Manipulation.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Schadsoftware (Malware)
 Malware (Malicious Software) ist ein Überbegriff für alle schädlichen Programme. Sie befallen IT-Systeme unbemerkt und können Daten ausspionieren, Systeme lahmlegen oder eine unbefugte Hintertür öffnen.
 
@@ -35,6 +49,15 @@ Malware (Malicious Software) ist ein Überbegriff für alle schädlichen Program
 - **Adware:** Zeigt unerwünschte Werbung an.
 - **Scareware:** Täuscht Warnmeldungen vor, um Nutzer zur Installation schädlicher Software zu verleiten.
 - **PUA (Potentially Unwanted Application):** Programme, die oft unerwünschte Zusatzfunktionen mit sich bringen und heimlich mit anderer Software installiert werden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Verbreitungswege von Malware
 Die Infektion eines Systems kann auf verschiedene Weisen erfolgen:
@@ -59,7 +82,7 @@ Die Infektion eines Systems kann auf verschiedene Weisen erfolgen:
 Denial-of-Service (DoS)-Angriffe zielen darauf ab, einen Dienst oder Server durch Überlastung unerreichbar zu machen. Ein DDoS (Distributed Denial-of-Service)-Angriff ist eine erweiterte Form, bei der der Angriff von vielen über das Internet verteilten Geräten („Bots“) gleichzeitig ausgeführt wird.
 
 Für DDoS-Angriffe werden oft Botnets genutzt. Ein Botnet ist ein Netzwerk infizierter Computer, die von einem Angreifer über einen zentralen Command-and-Control-Server (C&C) ferngesteuert werden.
-```yaml
+```text
        +------------+
        | Angreifer  |
        +------------+
@@ -86,6 +109,14 @@ Für DDoS-Angriffe werden oft Botnets genutzt. Ein Botnet ist ein Netzwerk infiz
 |             Ziel-Webserver (wird überlastet)         |
 +------------------------------------------------------+
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 2. Social Engineering & Identitätsdiebstahl
 Social Engineering bezeichnet die Manipulation von Menschen, um an vertrauliche Informationen zu gelangen.
@@ -121,6 +152,15 @@ Social Engineering bezeichnet die Manipulation von Menschen, um an vertrauliche 
 - **Jailbreak und Rooting:** 
     - Das Entfernen von Sicherheitseinschränkungen auf mobilen Geräten, was diese anfälliger für Angriffe macht.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Prävention und Schutz
 Der Schutz vor Cyber-Angriffen erfordert eine Kombination aus technischen Maßnahmen und bewusstem Verhalten.
 
@@ -130,9 +170,29 @@ Der Schutz vor Cyber-Angriffen erfordert eine Kombination aus technischen Maßna
 - **Bewusstes Verhalten:** 
     - Sei immer misstrauisch gegenüber unbekannten E-Mails, Links und Anhängen. Überprüfe die Seriosität des Absenders. Lösche Spam-Mails sofort und gib niemals vertrauliche Informationen über unsichere Kanäle preis.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - [Man-in-the-Middle (MitM) Angriffe](/02-network-security/angriffe/mitm_angriff.md)
 - [Protokoll Header Cheatsheet](/02-network-security/protokoll_header_cheatsheet.md)
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -146,12 +206,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

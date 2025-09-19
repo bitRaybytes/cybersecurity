@@ -8,8 +8,23 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist eine Netzwerktopologie?
 Die **Topologie** beschreibt die Anordnung der Verbindungen in einem Netzwerk. Es ist sozusagen die "Landkarte", die den physischen oder logischen Aufbau des Netzwerks darstellt.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Physikalische Topologien
 
@@ -60,12 +75,6 @@ Die **Topologie** beschreibt die Anordnung der Verbindungen in einem Netzwerk. E
        +------+     +------+
 ```
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 
 * **Bus-Topologie:** Alle Geräte sind über ein einziges, gemeinsames Kabel verbunden.
 ```text
@@ -96,12 +105,30 @@ Die **Topologie** beschreibt die Anordnung der Verbindungen in einem Netzwerk. E
 ## Zugriffsverfahren
 Zugriffsverfahren regeln, wie Geräte im Netzwerk auf das Übertragungsmedium zugreifen, um Kollisionen zu vermeiden.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
 Wird in **kabelgebundenen Ethernet-Netzwerken** verwendet.
 1.  **Abhören:** Bevor ein Gerät sendet, horcht es, ob das Kabel frei ist.
 2.  **Senden:** Ist das Kabel frei, beginnt die Übertragung.
 3.  **Kollisionserkennung:** Kommt es trotzdem zu einer Kollision, stoppen alle beteiligten Geräte die Übertragung.
 4.  **Warten & Wiederholen:** Jedes Gerät wartet eine zufällige Zeit, bevor es erneut versucht zu senden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance)
 Wird in **drahtlosen WLAN-Netzwerken** verwendet.

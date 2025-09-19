@@ -19,6 +19,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Leviathan ist ein Wargame auf [OverTheWire](https://overthewire.org/wargames/), das sich speziell an Anfänger richtet.  
 Es vermittelt die Grundlagen von **Privilege Escalation** (Rechteausweitung) und einfachen **Security Misconfigurations** in Linux-Systemen.  
@@ -27,10 +35,22 @@ Im Gegensatz zu anderen Wargames (wie [Bandit](/09-practice-labs/overTheWire/wal
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Zugang
 Der Einstieg erfolgt über eine **SSH-Verbindung
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Allgemeine Infos
 - **Host:** leviathan.labs.overthewire.org  
@@ -43,6 +63,12 @@ Der Einstieg erfolgt über eine **SSH-Verbindung
 - **Hinweis:** Passwörter können aktualisiert worden sein!
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Leviathan 0 -> 1
 
@@ -102,6 +128,9 @@ Speichere das Passwort und beende die `SSH`-Sitzung mit `exit`.
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+
+
 
 ## Leviathan 1 -> 2
 
@@ -675,6 +704,7 @@ Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort 
 
 
 
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
@@ -794,6 +824,12 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 - `SETUID`-Bit für die Vererbung der Berechtigung auf Group/Others.
 - `ln` Verlinkungen von Dateien, um Rechte zu umgehen (`-h` Hardlink; `-s` Softlink).
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Funktionen aus Sprachen wie PHP, C, C++
 - `__libc_start_main()` -> Hauptfunkton, um das Programm ausführbar zu machen.
 - `access()` -> Prüft, ob Prozess Zugriff auf eine Datei hat und welche Berechtigungen dafür nötig sind.
@@ -832,6 +868,14 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -844,12 +888,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

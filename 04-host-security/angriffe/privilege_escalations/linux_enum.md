@@ -22,12 +22,26 @@
 
  
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Ziel der Linux-Enumeration
 
 Die Linux-Enumeration dient dazu, Informationen über ein kompromittiertes System zu sammeln, um Schwachstellen zu identifizieren und eventuell höhere Rechte (z. B. root) zu erlangen.
 
 > 🎯 Ziel: Zugang, Persistenz, Privilege Escalation, lateral Movement
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 1. Allgemeine Systeminfos
@@ -43,6 +57,13 @@ uptime                   # Systemlaufzeit
 ```
 > Achte auf alte Kernel oder nicht gepatchte Versionen!
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 2. Benutzer & Rechte
@@ -79,6 +100,13 @@ groups                  # Gruppen des Benutzers
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 4. Prozesse & laufende Dienste
 
 ```bash
@@ -91,6 +119,13 @@ ss -tuln
 - Gibt es verdächtige Prozesse?
 - Welche Dienste laufen lokal (`127.0.0.1`)?
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 5. Cronjobs & zeitgesteuerte Tasks
@@ -129,6 +164,13 @@ Wichtige SUID-Binaries z. B.:
 
  
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 7. Interessante Dateien & Pfade
 
 ```bash
@@ -141,6 +183,13 @@ find / -name 'id_rsa' 2>/dev/null
 - `.bash_history` enthält häufig verwendete Befehle (evtl. Passwörter)
 - `id_rsa` = private SSH-Schlüssel
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 8. SSH-Keys und Zugangsdaten
@@ -175,6 +224,13 @@ netstat -antup
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 10. Installierte Pakete & Schwachstellen
 
 ```bash
@@ -184,6 +240,13 @@ rpm -qa       # CentOS/RHEL
 
 > Abgleich mit CVE-Datenbanken → Alte Pakete = Exploit-Möglichkeit
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 11. Passwort & Konfig-Dateien
@@ -216,6 +279,13 @@ iptables -L
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 13. Mounts & Dateisysteme
 
 ```bash
@@ -227,6 +297,13 @@ cat /etc/fstab
 - Eingehängte Netzlaufwerke?
 - Fremde Dateisysteme (z. B. NFS)?
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Automatisierte Enumeration
@@ -242,6 +319,13 @@ cat /etc/fstab
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -254,12 +338,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
  
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

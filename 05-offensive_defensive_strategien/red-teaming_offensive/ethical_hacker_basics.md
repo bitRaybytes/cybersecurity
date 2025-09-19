@@ -13,6 +13,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## 1. Basic Skills
 
 ### Technische Skills
@@ -25,6 +31,14 @@
 6. Umgang mit VMs (z. B. VirtualBox, VMware, Proxmox)
 7. Kenntnisse in Webtechnologien (HTML, JavaScript, HTTP/HTTPS, Cookies, Sessions)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Soft Skills
 
 1. Wissendurstig
@@ -34,6 +48,12 @@
 5. Kritisches und analytisches Denken
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## 2. Dokumentation
 
@@ -66,6 +86,15 @@ Ein Ethical Hacker muss im Begriff der folgenden Themen sein.
 6. Subnetting
 7. DNS, DHCP, ARP, NAT und VPNs
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### IP Adressen
 
 * Es gibt 2 Arten von IP Adressen:
@@ -85,6 +114,15 @@ Ein Ethical Hacker muss im Begriff der folgenden Themen sein.
   * **Loopback:** (Localhost) 127.0.0.0 - 127.255.255.255
 * IP werden im Layer 3 OSI-Modell benötigt und vergeben/angesprochen
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Bit Liste einer v4 Adresse
 
 Mit Bits werden die Netzwerke und IP Adressen berechnet.
@@ -99,6 +137,15 @@ Eine Übersicht über die Bits eines IPv4-Adresse findest du hier:
 
 In diesem Beispiel sind alle Bits auf 1 gesetzt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### MAC Adressen
 
 * MAC Adressen sind gerätespezifische, einmalige Identifikationsnummern.
@@ -106,6 +153,15 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 
   * Beispiel: 1A:2B:3C:4D:5E:6F
 * MAC Adressen sind im Layer 2 des OSI-Modell
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### TCP/UDP
 
@@ -153,22 +209,67 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 2. Informationssammlung (Reconnaissance)
 3. Aktive und passive Erkundung
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Tools für Reconnaissance
 
 * `whois`, `dig`, `nslookup`, `theHarvester`, `Shodan`
 * `nmap`, `masscan`, `netcat`, `nikto`
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Schwachstellenscans
 
 * `Nessus`, `OpenVAS`, `Nmap Scripts`, `Burp Suite`
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Exploitation
 
 * `Metasploit`, `sqlmap`, `hydra`, `john`, `crackmapexec`
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Privilege Escalation
 
 * `LinPEAS`, `WinPEAS`, `GTFOBins`, `sudo -l`, `SUID`
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Post Exploitation
 
@@ -176,6 +277,15 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 * Data Exfiltration
 * Lateral Movement (Pivoting)
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 5. Rechtliches (DE/AT/CH)
@@ -206,11 +316,29 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 * [PortSwigger Web Security Academy](https://portswigger.net/web-security)
 * [CTFtime.org](https://ctftime.org/)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Bücher
 
 * "The Hacker Playbook" (1–3)
 * "Red Team Field Manual (RTFM)"
 * "Web Hacking 101"
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### YouTube-Kanäle
 
@@ -219,6 +347,15 @@ In diesem Beispiel sind alle Bits auf 1 gesetzt.
 * LiveOverflow
 * John Hammond
 
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -233,12 +370,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

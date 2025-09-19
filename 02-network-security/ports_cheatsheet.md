@@ -15,6 +15,12 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einführung
 Ein **Port** ist eine logische Schnittstelle in einem Betriebssystem, die als **Kommunikationsendpunkt** für Anwendungen dient.
 Zusammen mit einer IP-Adresse bildet ein Port eine **Socket-Adresse** (`IP:Port`).
@@ -26,6 +32,12 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Funktionsweise von Ports
 - Ports sind **16-Bit-Werte** (0–65535).
 - Sie ermöglichen **Multiplexing**, d. h. mehrere Anwendungen können gleichzeitig Netzwerkressourcen nutzen, indem sie über unterschiedliche Ports kommunizieren.
@@ -33,6 +45,13 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
   - **TCP-Ports** -> verbindungsorientiert (SYN/ACK-Handshake)
   - **UDP-Ports** -> verbindungslos (schneller, aber unsicherer)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Port-Bereiche
@@ -85,6 +104,13 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 [WikiPedia: Liste der Portnummern](https://de.wikipedia.org/wiki/Liste_der_Portnummern)
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Ports & Firewalls
 - Firewalls kontrollieren, welche Ports für **eingehenden und ausgehenden** Datenverkehr genutzt werden dürfen.
 - Eine Firewall kann Ports öffnen (`allow`), schließen (`deny`) oder den Datenverkehr einschränken (`rate-limit`)
@@ -114,17 +140,31 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Beispiel: Verbindungsaufbau TCP vs. UDP
 
 ### TCP (z. B. HTTP, SSH)
 - **Verbindungsorientiert** und zuverlässig. Es findet ein "Handshake" statt, um sicherzustellen, dass die Verbindung aufgebaut ist und Daten korrekt ankommen.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 #### Der 3-Wege-Handshake
 1. Client sendet ein **SYN-Paket** vom ephemeren Port an den Server-Port.
 2. Server empfängt SYN, antwortet mit **SYN-ACK**.
 3. Client empfängt SYN-ACK und bestätigt mit **ACK**.
 
-```yaml
+```text
 +-------------+                     +-------------+
 |    Client   |                     |    Server   |
 +-------------+                     +-------------+
@@ -139,6 +179,12 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### UDP (z. B. DNS, VoIP)
 - **Verbindungslos** und schnell. Es gibt keinen Handshake oder eine Bestätigung, was die Datenübertragung sehr effizient macht.
 
@@ -146,7 +192,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 2. Server empfängt die Anfrage und antwortet direkt mit einem UDP-Paket.
 3. Es gibt keine Garantie, dass das Paket ankommt oder in der richtigen Reihenfolge empfangen wird.
 
-```yaml
+```text
 +-------------+                     +-------------+
 |    Client   |                     |    Server   |
 +-------------+                     +-------------+
@@ -160,6 +206,12 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Zusammenfassung
 - Ports sind **16-Bit-Nummern (0–65535)**, die Anwendungen eindeutige Kommunikationskanäle bereitstellen.  
 - Es gibt drei Bereiche: **Well-Known**, **Registered**, **Ephemeral**.  
@@ -168,6 +220,12 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 - [firewall_cheatsheet.md](02-network-security/firewall_cheatsheet.md) - Einführung in Firwalls
@@ -175,6 +233,12 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 - [osi_schichtenmodell.md](osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
 - [ip_adressen_basics.md](ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -189,12 +253,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 📅 **Letzte Aktualisierung:** August 2025  
 🤝 Ergänzungen und Pull Requests sind willkommen!

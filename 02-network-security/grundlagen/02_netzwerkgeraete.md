@@ -11,11 +11,34 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Hub
 Ein **Hub** ist ein einfaches Netzwerkgerät, das Datenpakete an **alle** angeschlossenen Geräte sendet. Es agiert nach dem Motto: „Es wird schon das richtige Gerät dabei sein!“ Hubs sind weniger effizient und veraltet, da sie die Netzwerkleistung durch unnötigen Traffic (Broadcast) reduzieren.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Switch
 Ein **Switch** ist ein intelligenteres Netzwerkgerät, das Datenpakete nur an das **spezifische Zielgerät** weiterleitet. Er lernt die MAC-Adressen der angeschlossenen Geräte und speichert sie in einer Tabelle. Dies macht die Kommunikation effizienter und sicherer als bei einem Hub.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Router
 Ein **Router** ist das zentrale Gerät in einem Heim- oder Unternehmensnetzwerk. Er verbindet verschiedene Netzwerke (z.B. dein lokales LAN mit dem Internet). Anhand der IP-Adressen in den Datenpaketen entscheidet der Router, wie die Daten am effizientesten weitergeleitet werden.
@@ -53,6 +76,14 @@ Der entscheidende Unterschied liegt in der Art, wie sie Datenpakete weiterleiten
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Spezialgeräte
 - **VLAN Switch (Managed Switch):** Ein Switch, der VLANs (Virtual Local Area Networks) unterstützt. Er ermöglicht es, ein physisches Netzwerk in mehrere logische Teilnetze zu unterteilen, was die Sicherheit und Organisation verbessert. Managed Switches haben eine eigene IP-Adresse und können konfiguriert werden.
 - **Access Point (AP):** Ein Gerät, das ein drahtloses Netzwerk (WLAN) aufbaut und Geräte kabellos mit einem kabelgebundenen Netzwerk (LAN) verbindet.
@@ -60,9 +91,25 @@ Der entscheidende Unterschied liegt in der Art, wie sie Datenpakete weiterleiten
 - **Patchfeld:** Ein Panel mit Ports, das die fest verlegten Netzwerkkabel eines Gebäudes an einem zentralen Ort zusammenführt. Es vereinfacht die Verwaltung und Neuverbindung von Netzwerksegmenten.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Aktive vs. Passive Komponenten
 - **Aktive Komponenten:** Benötigen eine Stromversorgung, um Signale zu verstärken oder zu verarbeiten. Beispiele sind **Hubs**, **Switches**, **Router**, **Repeater** und **Access Points**.
 - **Passive Komponenten:** Benötigen keine Stromversorgung und dienen nur der Übertragung und Verbindung. Beispiele sind **Netzwerkkabel**, **Patchfelder** und **Anschlussdosen**.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -77,12 +124,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

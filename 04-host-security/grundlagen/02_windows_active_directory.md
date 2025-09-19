@@ -58,10 +58,28 @@ Ohne den Domain Controller könnten sich Benutzer nicht am Netzwerk anmelden und
 ## Aufbau des Active Directory
 Die Struktur des Active Directory ist sowohl **logisch** als auch **hierarchisch** aufgebaut. Dies ermöglicht eine flexible Organisation, die sich an der Struktur eines Unternehmens orientiert.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 1. Organisationseinheiten (OUs)
 Eine **Organisationseinheit** (**OU**) ist eine logische Unterteilung innerhalb einer Domäne. Sie dient als Container für Benutzer, Gruppen und andere OUs. OUs spiegeln oft die Abteilungs- oder geografische Struktur eines Unternehmens wider (z. B. eine OU für die „Marketing-Abteilung“ oder den „Standort Hamburg“).
 
 - **Sicherheitsrelevanz:** Berechtigungen und Gruppenrichtlinien können direkt auf eine OU angewendet werden und gelten automatisch für alle enthaltenen Objekte. Dies macht die Verwaltung von Berechtigungen deutlich sicherer und effizienter.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ### 2. Domäne (Domain)
@@ -69,8 +87,26 @@ Eine Domäne ist die grundlegende Verwaltungseinheit im Active Directory. Sie bi
 
 - Der **FQDN** (**Fully Qualified Domain Name**), z. B. `firma.local`, ist der eindeutige Name der Domäne.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 3. Domänenbaum (Domain Tree)
 Ein **Domänenbaum** ist eine Sammlung von Domänen, die eine zusammenhängende, hierarchische Namensstruktur teilen. Beispielsweise gehören die Domänen `hamburg.firma.local` und `berlin.firma.local` zum selben Domänenbaum, da sie die gemeinsame Stamm-Domäne (`firma.local`) haben.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 4. Gesamtstruktur (Forest)
 Die **Gesamtstruktur** (**Forest**) ist die oberste Hierarchieebene. Sie ist eine Sammlung von einem oder mehreren Domänenbäumen, die keine gemeinsame Namensstruktur haben müssen, aber über eine gemeinsame Konfiguration und ein Schema verfügen.
@@ -120,8 +156,26 @@ Die **Gesamtstruktur** (**Forest**) ist die oberste Hierarchieebene. Sie ist ein
 ### 1. Authentifizierung (Wer bist du?)
 Der Prozess, bei dem die Identität eines Benutzers überprüft wird. Im Active Directory geschieht dies primär durch das **Kerberos-Protokoll**, das eine sichere Überprüfung mittels kryptografischer Tickets durchführt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Autorisierung (Was darfst du?)
 Der Prozess, der festlegt, welche Aktionen ein authentifizierter Benutzer ausführen darf. Autorisierung basiert auf den Berechtigungen, die einem Benutzer oder einer Gruppe zugewiesen sind. Hierbei sind vor allem die **Security Identifiers** (**SIDs**) von Objekten relevant, die in den Zugriffssteuerungslisten (ACLs) von Ressourcen verwendet werden.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Gruppenrichtlinien (Group Policy Objects - GPOs)
 **GPOs** sind die mächtigsten Werkzeuge zur zentralen Konfiguration und Absicherung von AD-Umgebungen. Sie ermöglichen es Administratoren, nahezu jeden Aspekt von Benutzern und Computern zu steuern – von der Passwortrichtlinie über die Sperrung von USB-Anschlüssen bis hin zur Installation von Software.
@@ -138,8 +192,26 @@ Der Prozess, der festlegt, welche Aktionen ein authentifizierter Benutzer ausfü
 ### 1. Least Privilege (Prinzip der geringsten Rechte)
 Gewähre Benutzern nur die absolut notwendigen Berechtigungen, um ihre Aufgaben zu erfüllen. Dies minimiert die Angriffsfläche erheblich.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### 2. Strenge Passwortrichtlinien
 Setze GPOs ein, um die Komplexität, Länge und den Ablauf von Passwörtern durchzusetzen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### 3. Multifaktor-Authentifizierung (MFA)
 Eine zusätzliche Sicherheitsebene, die die Gefahr von gestohlenen Anmeldeinformationen reduziert.

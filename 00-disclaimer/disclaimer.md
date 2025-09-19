@@ -6,9 +6,25 @@
 - [Rechtliche Verantwortung](#rechtliche-verantwortung)
 - [Empfehlung zur sicheren Nutzung](#empfehlung-zur-sicheren-nutzung)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Allgemeine Hinweise
 
 Dieses Repository dient **ausschließlich zu Bildungs- und Schulungszwecken** im Bereich der IT-Sicherheit. Die enthaltenen Inhalte, Skripte, Tools, Techniken und Beschreibungen sollen das **Verständnis von Sicherheitslücken, Angriffsmethoden und Schutzmaßnahmen** fördern.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Keine Aufforderung zu illegalem Verhalten
 
@@ -21,6 +37,14 @@ Die Nutzung, Verbreitung oder Anwendung der hier bereitgestellten Informationen 
 - Teilnehmer an Capture-the-Flag-Wettbewerben (CTFs)
 - Systemadministratoren & Penetration Tester
 - Teilnehmer an offiziellen Cybersecurity-Trainings (z. B. OSCP, CEH, Pentest+)
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Rechtliche Verantwortung
 
@@ -44,8 +68,28 @@ Die Nutzung, Verbreitung oder Anwendung der hier bereitgestellten Informationen 
 
 
 
-<div align="right">
+<div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+## Haftungsausschluss
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** September 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---

@@ -19,7 +19,16 @@
 - [Zusammenfassung](#zusammenfassung)
 - [Haftungsausschluss](#haftungsausschluss)
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Einleitung
 
@@ -30,6 +39,15 @@ Sie dient zur **Identifikation von Geräten innerhalb eines lokalen Netzwerks (L
 - **Länge:** 48 Bit (6 Byte)
 - **OSI-Modell:** Layer 2 (Sicherungsschicht)
 - **Einzigartigkeit:** Jede Netzwerkkarte hat eine eigene, vom Hersteller vergebene Adresse
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Aufbau einer MAC-Adresse
 
@@ -45,11 +63,20 @@ Eine MAC-Adresse besteht aus **zwei Hauptteilen**:
 - `00:1A:2B` → Hersteller (OUI)  
 - `3C:4D:5E` → Individuelle Gerätekennung  
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Visualisierung
 
-```yaml
+```text
 +---------------------------------------+
 |        MAC-Adresse (48 Bit)           |
 +-------------------+-------------------+
@@ -60,7 +87,16 @@ Beispiel: 00:1A:2B:3C:4D:5E
 ```
 
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Wofür wird eine MAC-Adresse verwendet?
 
@@ -71,7 +107,7 @@ Beispiel: 00:1A:2B:3C:4D:5E
 **Wichtig:** MAC-Adressen werden **nicht im Internet** verwendet!  
 Dort übernimmt die **IP-Adresse** die Adressierung.  
 
----
+
 
 <div align=right>
 
@@ -94,6 +130,15 @@ ip a | grep ether
 ifconfig -a
 ```
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## MAC-Adressen fälschen (Spoofing)
 
 Beim **MAC-Spoofing** wird die Adresse manipuliert, um sich als ein anderes Gerät auszugeben.
@@ -102,6 +147,15 @@ Beim **MAC-Spoofing** wird die Adresse manipuliert, um sich als ein anderes Ger�
     - Umgehung von WLAN-MAC-Filtern
     - Anonymität & Tracking-Schutz (z. B. in öffentlichen WLANs)
     - Angriffe wie [**ARP-Spoofing**](/02-network-security/angriffe/arp_spoofing.md) oder [**Man-in-the-Middle**](/02-network-security/angriffe/mitm_angriff.md).
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## MAC-Adresse ändern (Spoofing)
@@ -131,6 +185,15 @@ sudo macchanger -r eth0
 ```bash
 sudo ifconfig en0 ether 12:34:56:78:9A:BC
 ```
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## MAC-Spoofing verhindern
@@ -172,11 +235,29 @@ Ein Ethernet-Frame ist die Basiseinheit der Kommunikation auf der Sicherungsschi
 
 Mehr zu Protokollen und ihren Headern erfährst du [hier](/02-network-security/protokoll_header_cheatsheet.md).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Kommunikationsarten mit MAC-Adressen
 
 - **Unicast:** Ein Frame wird an genau eine spezifische MAC-Adresse gesendet.
 - **Broadcast:** Ein Frame wird an alle Geräte im Netzwerk gesendet. Die Ziel-MAC-Adresse ist `FF:FF:FF:FF:FF:FF`
 - **Multicast:** Ein Frame wird an eine vordefinierte Gruppe von Geräten gesendet. Die MAC-Adresse beginnt mit `01:00:5E`
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Switches und MAC-Tabellen
@@ -196,6 +277,15 @@ Switches speichern die MAC-Adressen der angeschlossenen Geräte in einer **CAM-T
 | Fa0/2   | 12:34:56:78:9A:BC |
 +---------+-------------------+
 ```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Präambel im Ethernet
 
@@ -226,6 +316,15 @@ Sperrt nur bestimmte, bekannte MAC-Adressen von der Netzwerkverbindung.
 - **Vorteile:** Einfach zu pflegen für die Blockierung bekannter Geräte.
 - **Nachteile:** Bietet keine Sicherheit gegen unbekannte Angreifen oder gespoofte Adressen.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Security-Bezug von MAC-Adressen
 
 - **Tracking in WLANs:** Mobile Geräte senden MAC-Adressen, wenn sie nach WLANs suchen, was von Angreifern oder Unternehmen zum Tracking der Bewegungsprofile genutzt werden kann.
@@ -238,6 +337,15 @@ Sperrt nur bestimmte, bekannte MAC-Adressen von der Netzwerkverbindung.
     - **Port-Security:** Schützt vor MAC-Flooding.
     - **DAI (Dynamic ARP Inspection):** Verhindert ARP-Spoofing.
     - **802.1X:** Bietet eine robustere Authentifizierung als einfache MAC-Filter.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Zusammenfassung
 
@@ -257,7 +365,16 @@ Sperrt nur bestimmte, bekannte MAC-Adressen von der Netzwerkverbindung.
 - **MAC-Spoofing** ist eine gängige Technik, die die Sicherheit von MAC-Filtern untergräbt und für verschiedene Angriffe genutzt wird.
 - Der Schut vor MAC-basierten Angriffen erfordert robuste Sicherheitsmaßnahmen wie **Port-Security** und **DAI**.
 
----
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 

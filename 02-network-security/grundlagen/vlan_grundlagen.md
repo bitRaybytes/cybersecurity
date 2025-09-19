@@ -21,6 +21,13 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Einleitung
 Ein **Virtual Local Area Network (VLAN)** unterteilt ein physisches Netzwerk in mehrere **logische Teilnetze**.  
 Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme optimieren.  
@@ -31,6 +38,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Grundlagen
 - Ohne VLAN: alle Geräte im LAN sind in derselben Broadcast-Domain.  
 - Mit VLAN: Geräte können logisch getrennt werden, auch wenn sie am selben Switch hängen.  
@@ -38,12 +52,26 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Funktionsweise
 - VLANs „teilen“ einen Switch virtuell in mehrere kleinere Switches.  
 - Geräte im gleichen VLAN können direkt miteinander kommunizieren.  
 - Kommunikation zwischen VLANs erfordert einen **Router oder Layer-3-Switch** („Inter-VLAN Routing“).  
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## VLAN-Typen
 
@@ -57,6 +85,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Tagged VLANs (Trunk-Ports)
 - Ein **Trunk-Port** kann mehrere VLANs gleichzeitig übertragen.  
 - VLANs werden durch einen **802.1Q-Tag** im Ethernet-Frame unterschieden.  
@@ -64,11 +99,25 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ### Statische VLANs
 - VLAN wird **fest** einem Switch-Port zugewiesen.  
 - Unabhängig davon, welches Gerät angeschlossen wird.  
 - Vorteil: stabil, sicher, einfach.  
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Dynamische VLANs
 - VLAN-Zuordnung erfolgt automatisch anhand von Attributen:  
@@ -94,6 +143,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Schutz & Sicherheit
 - VLANs allein sind **keine vollständige Sicherheitslösung**.  
 - Angriffsvektoren:  
@@ -106,6 +162,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Wichtige Protokolle
 - **IEEE 802.1Q** – VLAN-Tagging.
 - **VTP (VLAN Trunking Protocol, Cisco)** – automatisiert VLAN-Verteilung (Achtung: oft unsicher!).
@@ -113,6 +176,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - **Inter-VLAN Routing** – ermöglicht Kommunikation zwischen VLANs (Layer 3).
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Grafiken
 
@@ -146,6 +216,13 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 => Ein Kabel, mehrere VLANs über 802.1Q Tags
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Fazit
 
 - VLANs sind ein zentraler Baustein moderner Netzwerke.
@@ -154,12 +231,26 @@ Dadurch lassen sich Netzwerke segmentieren, Sicherheit erhöhen und Datenströme
 - Achtung: VLANs ersetzten keine Firewalls – sie sind ein Sicherheits- und Management-Werkzeug, aber kein Schutz vor allen Angriffen.
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 ## Nützliche Links
 
 - [OSI-Schichtenmodell](/02-network-security/osi_schichtenmodell.md)
 - [Protokoll Header Cheatsheet](/02-network-security/protokoll_header_cheatsheet.md)
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ## Haftungsausschluss
 
@@ -173,12 +264,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

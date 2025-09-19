@@ -9,6 +9,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist ein Netzwerk?
 Ein Netzwerk verbindet zwei oder mehr Geräte, um Daten auszutauschen und gemeinsame Ressourcen zu nutzen. Geräte in einem Netzwerk sind nicht nur Computer, sondern können auch Sensoren, Drucker, Scanner und sogar Aktoren sein.
 
@@ -29,6 +37,14 @@ Ein Netzwerk verbindet zwei oder mehr Geräte, um Daten auszutauschen und gemein
 ```
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Abgrenzung von Netzen
 Netzwerke werden oft nach ihrer geografischen Reichweite kategorisiert. Für Fachinformatiker sind **LAN** und **WAN** die wichtigsten Konzepte.
 
@@ -42,6 +58,14 @@ Netzwerke werden oft nach ihrer geografischen Reichweite kategorisiert. Für Fac
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Was ist ein Server / Client?
 ### Server
 Ein **Server** ist ein leistungsstarker Computer oder eine Software, die Ressourcen für andere Computer im Netzwerk bereitstellt. Er ermöglicht verschiedene Dienste und speichert Daten, auf die mehrere Nutzer zugreifen können.
@@ -52,9 +76,25 @@ Ein **Server** ist ein leistungsstarker Computer oder eine Software, die Ressour
 * **Dateiserver:** Speichert und verwaltet Dateien (z.B. über FTP oder SMB).
 * **Druckserver:** Verwaltet Druckaufträge im Netzwerk.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Client
 Ein **Client** ist ein Computer oder eine Software, der mit einem Server kommuniziert, um dessen Daten und Dienste zu nutzen. Dein Webbrowser ist ein Client, der eine Webseite von einem Webserver anfordert.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Peer-to-Peer-Netzwerk
@@ -78,6 +118,13 @@ In einem **Peer-to-Peer (P2P)-Netzwerk** haben alle Teilnehmer die gleichen Rech
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -91,11 +138,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

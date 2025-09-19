@@ -14,6 +14,15 @@
 - [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 1. Informationssicherheit
 
 - **Definition:** Informationssicherheit befasst sich mit dem Schutz aller Arten von Informationen, ob digital oder physisch, um deren Vertraulichkeit, Integrität und Verfügbarkeit zu gewährleisten.
@@ -32,6 +41,15 @@
 **Beispiel für physische Sicherheitsmaßnahmen bei kritischen Infrastrukturen:**
 
 Bei Banken oder in Rechenzentren werden die Zugangskontrollen durch den Einsatz biometrischer Verfahren (Fingerabdrücke, Iris-Scans), PIN-Codes und Schlüsselkarten verschärft. Zusätzlich kommen oft Schleusen, Kameras und Wachpersonal zum Einsatz. Datenträger werden inventarisiert und ihr Zugang wird streng kontrolliert.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## 2. IT-Sicherheit (IT-Security)
 - **Definition:** IT-Sicherheit konzentriert sich auf den technischen Schutz von IT-Systemen wie Hardware, Software und Netzwerken vor Bedrohungen wie Malware, Hackerangriffen und physischem Diebstahl.
@@ -56,6 +74,14 @@ Software-Updates sind entscheidend, da sie Sicherheitslücken schließen, die vo
 **Sind mehrere Antiviren-Programme sinnvoll?**
 
 Nein. Das gleichzeitige Betreiben mehrerer Antiviren-Programme auf einem System kann zu Konflikten, Fehlern und einer starken Verlangsamung des Geräts führen. Es wird empfohlen, sich für eine zuverlässige Lösung zu entscheiden und diese regelmäßig zu aktualisieren.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## 3. Cybersicherheit (Cybersecurity)
@@ -100,8 +126,25 @@ Die IT-Sicherheit lässt sich in verschiedene Aspekte unterteilen, die sich teil
 | Das System stürzt nicht ab und führt nur die vorgesehenen Aufgaben aus. | Ich kann mich darauf verlassen, dass das System seine Aufgaben heute, morgen und in einem Monat gleichermaßen gut erfüllt. |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## 5. Schutzziele (CIA)
 Die Informationssicherheit basiert auf den drei Hauptschutzzielen, die oft als CIA-Triade bezeichnet werden: Confidentiality, Integrity und Availability.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Vertraulichkeit (Confidentiality)
 - **Definition:** Informationen dürfen nur von autorisierten Personen oder Systemen eingesehen werden.
@@ -123,6 +166,15 @@ Die Informationssicherheit basiert auf den drei Hauptschutzzielen, die oft als C
 - Passwörter oder PINs.
 - Tokenisierung: Ersetzung sensibler Daten durch unkritische Token.
 - Biometrische Merkmale wie Fingerabdruck oder Iris-Scan.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Integrität (Integrity)
 - **Definition:** Integrität stellt sicher, dass Informationen korrekt, vollständig und unverändert bleiben.
@@ -153,6 +205,15 @@ Die Informationssicherheit basiert auf den drei Hauptschutzzielen, die oft als C
     - SHA-Familie (SHA-256, SHA-512)
     - CRC32 (einfache Prüfsumme)
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Verfügbarkeit (Availability)
 - **Definition:** Die Verfügbarkeit gewährleistet, dass Systeme und Informationen bei Bedarf für autorisierte Nutzer zugänglich sind.
 
@@ -170,9 +231,26 @@ Notfall- und Wiederherstellungspläne.
 - Server, die in einem Rechenzentrum gespiegelt sind, um bei einem Ausfall die Dienste sofort zu übernehmen.
 - Ein Notstromaggregat, das bei einem Stromausfall die Server am Laufen hält.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Nützliche Links
 - [Mehr zum Thema Cyberangriffe](/02-network-security/angriffe/cyberangriffe_grundlagen.md)
 - [Mehr zum Thema Verschlüsselung](/07-crypto-stego/encoding_vs_encryption.md)
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Haftungsausschluss
 
@@ -186,12 +264,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

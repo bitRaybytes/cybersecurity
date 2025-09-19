@@ -12,12 +12,28 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung
 
 - **ARP (Address Resolution Protocol)** ist ein Protokoll auf **OSI-Schicht 2/3**.  
 - **Aufgabe:** Übersetzung von **IP-Adressen (Layer 3, logisch)** in **MAC-Adressen (Layer 2, physisch)**.  
 - Nur innerhalb eines lokalen Netzwerks (LAN) relevant – im Internet übernimmt dies Routing und DNS.  
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Wofür wird ARP gebraucht?
@@ -27,6 +43,14 @@ Damit das Paket im LAN zugestellt werden kann, benötigt er jedoch die **MAC-Adr
 
 **Lösung:** **ARP-Anfrage („Who has?“)**  
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Aufbau von ARP
@@ -51,6 +75,14 @@ Ein ARP-Paket ist im Ethernet-Frame eingebettet und hat folgende Struktur:
 
 Mehr zu Protokollen findest du in der Datei [protkoll_header_cheatsheet.md](/02-network-security/protokoll_header_cheatsheet.md)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Beispiel einer ARP-Tabelle
 
 Ein Gerät speichert bekannte IP <-> MAC-Zuordnungen in einer ARP-Tabelle:
@@ -66,6 +98,14 @@ IP-Adresse     MAC-Adresse
 ```bash
 arp -a
 ```
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Ablauf einer ARP-Anfrage
 1. **Anfrage (Broadcast)**
@@ -108,6 +148,14 @@ ip neigh show
 (`C` = complete, gültiger Eintrag)
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Sicherheitsaspekte & Spoofing
 
 Da ARP **keine Authentifizierung** vorsieht:
@@ -125,6 +173,14 @@ Da ARP **keine Authentifizierung** vorsieht:
 ```
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -137,12 +193,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

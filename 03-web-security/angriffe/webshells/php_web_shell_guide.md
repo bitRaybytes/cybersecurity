@@ -14,6 +14,14 @@
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Einleitung
 
 Diese Datei dokumentiert typische **Post-Exploitation-Kommandos**, die nach erfolgreicher Platzierung einer PHP-Webshell (`cmdshell.php3`) ([mehr zu cmdshell](/03-web-security/phpWebShell/php_rce_cheat_sheet.md)) auf einem Zielsystem ausgeführt werden können.  
@@ -21,6 +29,14 @@ Der Zugriff erfolgt über einen GET-Parameter `cmd`, der Systembefehle auf dem S
 
 > ⚠️ Hinweis: Diese Vorgehensweise dient ausschließlich Schulungs- und Testzwecken innerhalb legaler Testumgebungen oder CTF-Szenarien.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Beispielhafte Webshell-Aufrufe
@@ -73,6 +89,14 @@ whoami          # aktueller Benutzer
 
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Netzwerküberblick
 
 ### Netstat-Befehle zur Analyse aktiver Verbindungen:
@@ -111,11 +135,27 @@ netstat -lp     # mit Prozessinfos (sofern verfügbar)
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Siehe auch
 - [php_rce_cheat_sheet.md](/03-web-security/angriffe/webshells/php_rce_cheat_sheet.md)
 - [sql_injection_to_shell.md](/03-web-security/angriffe/sql-injektionen/sql_injection_to_shell.md)
 - [post_exploitation_tools.md](/04-host-security/post_exploitation_tools.md)
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Haftungsausschluss
@@ -130,12 +170,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

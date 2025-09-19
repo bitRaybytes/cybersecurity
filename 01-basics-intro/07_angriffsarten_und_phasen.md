@@ -13,8 +13,24 @@
 - [Praktische Anwendung](#praktische-anwendung)
 - [Haftungsausschluss](#haftungsausschluss)
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einführung
 Um sich effektiv gegen Cyberangriffe zu verteidigen, muss man verstehen, wie Angreifer vorgehen. Ein Angriff ist selten ein einzelner, zufälliger Akt, sondern folgt meist einem strukturierten Prozess. Modelle wie die **Cyber Kill Chain** helfen, diese Phasen zu visualisieren und ermöglichen es Verteidigern, an jedem Punkt gezielte Gegenmaßnahmen zu ergreifen.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Häufige Angriffsvektoren
 Ein **Angriffsvektor** ist die Methode oder der Pfad, den ein Angreifer nutzt, um in ein System einzudringen oder es zu schädigen.
@@ -33,8 +49,16 @@ Ein **Angriffsvektor** ist die Methode oder der Pfad, den ein Angreifer nutzt, u
 
 </div>
 
+
 ## Der Ablauf eines Angriffs: Die Cyber Kill Chain
 Das **Cyber Kill Chain-Modell** von Lockheed Martin beschreibt die sieben Phasen eines zielgerichteten Cyberangriffs. Jede Phase ist ein potenzieller Punkt, an dem der Angreifer aufgehalten werden kann.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ### Phase 1: Aufklärung (Reconnaissance)
 Der Angreifer sammelt Informationen über das Ziel. Dies kann passiv (z. B. durch die Suche im Internet oder in sozialen Medien) oder aktiv (z. B. durch Port-Scanning oder das Senden von Pings) geschehen.
@@ -43,12 +67,28 @@ Der Angreifer sammelt Informationen über das Ziel. Dies kann passiv (z. B. durc
 
 - **Verteidigung:** Überwachung von externen Diensten und Netzwerken, um ungewöhnliche Aktivitäten zu erkennen.
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Phase 2: Bewaffnung (Weaponization)
 Der Angreifer kombiniert einen **Exploit** (z. B. ein Skript) mit einer **Malware** (z. B. ein Trojaner) zu einer ausführbaren "Waffe", die per E-Mail oder auf einem USB-Stick bereitgestellt werden kann.
 
 - **Ziel des Angreifers:** Ein Paket schnüren, das bereit zur Auslieferung ist.
 
 - **Verteidigung:** Einsatz von Antiviren-Software und E-Mail-Filtern.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Phase 3: Auslieferung (Delivery)
 Die Waffe wird an das Zielsystem gesendet. Gängige Methoden sind E-Mail-Anhänge, bösartige Websites oder infizierte USB-Sticks.
@@ -57,6 +97,15 @@ Die Waffe wird an das Zielsystem gesendet. Gängige Methoden sind E-Mail-Anhäng
 
 - **Verteidigung:** Netzwerk-Monitoring, Firewalls und Intrusion Prevention Systeme (IPS).
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Phase 4: Ausnutzung (Exploitation)
 Der Exploit-Code wird auf dem Zielsystem ausgeführt, indem eine Schwachstelle ausgenutzt wird (z. B. durch einen Buffer-Overflow).
 
@@ -64,11 +113,13 @@ Der Exploit-Code wird auf dem Zielsystem ausgeführt, indem eine Schwachstelle a
 
 - **Verteidigung:** Schnelles Patch-Management, um bekannte Schwachstellen zu schließen.
 
+
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
 
 ### Phase 5: Installation (Installation)
 Nach der erfolgreichen Ausnutzung installiert der Angreifer die Malware, um sich eine dauerhafte Präsenz im System zu sichern.
@@ -77,12 +128,30 @@ Nach der erfolgreichen Ausnutzung installiert der Angreifer die Malware, um sich
 
 **Verteidigung:** Ständige Überwachung von Systemen auf unerwartete Prozesse und Dateien.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Phase 6: Befehls- & Kontroll-Kommunikation (Command & Control / C2)
 Die installierte Malware kommuniziert mit dem Server des Angreifers, um Anweisungen zu empfangen und gestohlene Daten zu senden.
 
 - **Ziel des Angreifers:** Das System fernsteuern.
 
 - **Verteidigung:** Überwachung des Netzwerkverkehrs, um verdächtige Kommunikationsmuster zu erkennen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Phase 7: Ziele auf dem System (Actions on Objectives)
 In dieser letzten Phase führt der Angreifer seine eigentlichen Ziele aus, wie Datendiebstahl, Datenverschlüsselung, Manipulation oder die Zerstörung des Systems.
@@ -91,7 +160,7 @@ In dieser letzten Phase führt der Angreifer seine eigentlichen Ziele aus, wie D
 
 - **Verteidigung:** Datensicherung (Backups) und schnelle Reaktion auf Vorfälle.
 
-```yaml
+```text
        Angreifer                                      Zielsystem
 
        1. Aufklärung  --->  2. Bewaffnung  --->  3. Auslieferung
@@ -130,6 +199,15 @@ Das Verständnis der **Cyber Kill Chain** ermöglicht es, effektive Gegenmaßnah
 - **In Phase 3:** Starke E-Mail-Filter und Web-Filter, um die Auslieferung von Malware zu blockieren.
 - **In Phase 6:** Firewalls und Intrusion Detection Systeme, die den C2-Verkehr erkennen und blockieren
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -142,12 +220,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

@@ -8,6 +8,14 @@
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Ethernet Standards
 Ethernet ist der am häufigsten verwendete Standard für kabelgebundene Netzwerke.
 
@@ -21,6 +29,14 @@ Ethernet ist der am häufigsten verwendete Standard für kabelgebundene Netzwerk
     * Ermöglicht eine Übertragungsgeschwindigkeit von bis zu 1 Gbit/s.
     * Nutzt den **Burst-Modus**, um mehrere kleine Datenpakete zu einem großen zusammenzufassen.
 
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Kupferkabel-Varianten
@@ -40,6 +56,14 @@ Kupferkabel werden nach ihrer Leistung in Kategorien (`Cat`) unterteilt. Je höh
 | Cat 8     | bis zu 40 Gbit/s        | 30 Meter |
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Unterscheidung der Schirmung
 
 | Schirmung    | Beschreibung             |
@@ -55,10 +79,26 @@ Kupferkabel werden nach ihrer Leistung in Kategorien (`Cat`) unterteilt. Je höh
     - **F/FTP:** Folienabschirmung mit verdrehten Paaren 
     - **U/FTP:** ungeschirmt mit Folienarbschirmung von verdrehten Paaren
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### Kupferkabel Kenngrößen:
 - **Dämpfung:** Abnahme des Signalpegels bei zunehmender Länge
 - **Übertragungsgeschwindigkeit:** Anzahl der Datenpakete, die in einer bestimmten Zeiteinheit übertragen werden können
 - **Reichweite:** bis zu welcher Länge können Daten ohne Verlust übermittelt werden?
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Lichtwellenleiter (Glasfaserkabel)
@@ -75,6 +115,14 @@ Kupferkabel werden nach ihrer Leistung in Kategorien (`Cat`) unterteilt. Je höh
 
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
@@ -87,12 +135,6 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 [Disclaimer](/00-disclaimer/disclaimer.md)
 
 --- 
-
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 Stay curious – stay secure. 🔐
 

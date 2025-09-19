@@ -15,8 +15,25 @@
 - [Haftungsausschluss](#haftungsausschluss)
 
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ## Einleitung: Der Blick unter die Haube
 Um Cyber-Sicherheit auf einem professionellen Niveau zu betreiben, ist es unerlässlich, die fundamentalen Bausteine eines Computers zu verstehen. Dieser Guide erklärt die **grundlegenden Prinzipien der Datenverarbeitung** und die **Architektur der Hauptprozessoren (CPUs)**, die das Herzstück jedes Systems bilden. Schwachstellen auf dieser fundamentalen Ebene können die gesamte Sicherheit eines Systems gefährden.
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Das EVA-Prinzip
 Das **EVA-Prinzip** (**E**ingabe-**V**erarbeitung-**A**usgabe), auch bekannt als IPO-Modell, ist ein grundlegendes Modell der Datenverarbeitung. Es beschreibt, wie Daten durch ein Computersystem fließen.
@@ -28,6 +45,15 @@ Das **EVA-Prinzip** (**E**ingabe-**V**erarbeitung-**A**usgabe), auch bekannt als
 - **Ausgabe (Output):** Die verarbeiteten Daten werden über Ausgabegeräte (z. B. Monitor, Drucker) dargestellt.
 
 Dieses einfache Prinzip gilt für jeden Computer, von der einfachen Fernbedienung bis zum Supercomputer.
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
 ## Die Von-Neumann-Architektur
@@ -74,6 +100,15 @@ Bisherige Systeme mussten für ein Problem hergestellt werden. Von-Neumann-Archi
 - **Rechenwerk:** Operanden und das Addierwerk (sequentielle Bearbeitung der Anweisungen/Befehle).
 
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
 ## Der Fetch-Decode-Execute-Zyklus (FDEC)
 Der **FDEC** ist der grundlegende Arbeitsprozess einer CPU. Er beschreibt, wie die CPU Befehle aus dem Speicher holt, interpretiert und ausführt.
 
@@ -84,6 +119,15 @@ Der **FDEC** ist der grundlegende Arbeitsprozess einer CPU. Er beschreibt, wie d
 - **Execute (Ausführen):** Die Operation wird vom Rechenwerk (ALU) ausgeführt.
 
 Dieser sequenzielle Zyklus ist für die korrekte Ausführung von Programmen unerlässlich. Schwachstellen auf dieser Ebene, wie z.B. bei der spekulativen Ausführung von Befehlen, führten zu kritischen Angriffen wie **Spectre** und **Meltdown**.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Die CPU und ihre Komponenten
 Die **CPU** (**Central Processing Unit**) ist das Herzstück des Computers. Sie besteht aus mehreren Kernkomponenten, die die Datenverarbeitung und -speicherung steuern.
@@ -134,6 +178,14 @@ Die **CPU** (**Central Processing Unit**) ist das Herzstück des Computers. Sie 
                                 +---------+     
 ```
 
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 ### CPU Komponenten im Detail
 #### Steuerwerk (Control Unit)
 | Komponenten | Definition |
@@ -145,6 +197,15 @@ Die **CPU** (**Central Processing Unit**) ist das Herzstück des Computers. Sie 
 | **Interface Logic** | **Steuereinheit**; Steuert und überwacht die internen Verbindungen der CPU. |
 | **Interface Unit** | **Schnittstelle**; Bindeglied zwischen den internen CPU-Verbindungen und dem Chipsatz. |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Rechenwerk (Processing Unit)
 | Komponenten | Definition |
 |-------------|------------|
@@ -152,12 +213,30 @@ Die **CPU** (**Central Processing Unit**) ist das Herzstück des Computers. Sie 
 | **Floating Point Unit (FPU)** | **Gleitkomma-Rechner**; Führt Berechnungen mit Gleitkommazahlen aus. |
 | **Register** | **Register-Speicher**; Spezieller und extrem schneller Speicher für Zwischenergebnisse und Operanden. |
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
 #### Data und Cache Unit
 | Komponenten | Definition |
 |-------------|------------|
 | **Data und Code Cache** | **Cache-Speicher**; Ein extrem schneller Zwischenspeicher für Daten und Befehle, um die Zugriffszeit auf den Hauptspeicher zu verkürzen. |
 
 **Sicherheitsrelevanz der Caches:** Die **L1-**, **L2-** und **L3-Caches** sind für die Leistung entscheidend. Allerdings können aus der Art, wie sie auf Daten zugreifen, Rückschlüsse auf die verarbeiteten Informationen gezogen werden. Dieses Phänomen wird bei sogenannten **Side-Channel-Angriffen** ausgenutzt, um sensible Daten wie kryptografische Schlüssel zu extrahieren.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Nützliche Links
 
