@@ -1,7 +1,5 @@
 # ⚠️ Cross-Site Scripting (XSS) – Überblick, Typen, Schutz
 
-
-
 ## Inhaltsverzeichnis
 
 - [Einleitung](#einleitung)

@@ -1,4 +1,4 @@
-# OWASP - Juice Shop Walktrough
+# OWASP - Juice Shop Walkthrough
 
 > **Vorsicht: Spoiler Gefahr!**
 
@@ -107,7 +107,7 @@ Sobald du die Aufgabe erfolgreich ausgeführt hast, wird eine Benachrichtigung i
 
 ## Die erste XSS Herausforderung lösen
 
-**Cross-Site Scripting** (**XSS**) ist eine Methode, bei der Angreifer schadhaften Code in eine Webanwendung einschleusen. Der Code wird nicht vom Server ausgeführt, sondern an den Browser des Opfers ausgeliefert, wo er ausgeführt wird. Das Ziel ist es, sensible Informationen vom Client abzugreifen (z. B. Session-Cookies) oder den Nutzer auf eine bösartige Seite umzuleiten.
+[**Cross-Site Scripting**](/03-web-security/angriffe/schwachstellen/xss.md) (**XSS**) ist eine Methode, bei der Angreifer schadhaften Code in eine Webanwendung einschleusen. Der Code wird nicht vom Server ausgeführt, sondern an den Browser des Opfers ausgeliefert, wo er ausgeführt wird. Das Ziel ist es, sensible Informationen vom Client abzugreifen (z. B. Session-Cookies) oder den Nutzer auf eine bösartige Seite umzuleiten.
 
 Um eine XSS-Schwachstelle in einer Webanwendung zu finden, musst du herausfinden, ob die Seite Eingaben korrekt validiert und filtert. Ein einfacher Test genügt oft, um zu sehen, ob die Anwendung anfällig ist. Dazu versuchen wir, einen einfachen JavaScript-Befehl zu injizieren, der ein Pop-up-Fenster erzeugt.
 

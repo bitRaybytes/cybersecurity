@@ -1,14 +1,23 @@
 # 💥 Buffer-Overflow: Grundlagen und Angriffsvektoren
-## Inhaltsverzeichnis
-- [Was ist ein Buffer-Overflow?](#was-ist-ein-buffer-overflow)
-- [Wie funktioniert ein Buffer-Overflow?](#wie-funktioniert-ein-buffer-overflow)
-- [Heap-Overflows](#heap-overflows)
-- [Angriffsarten](#angriffsarten)
-- [Auswirkungen eines Buffer-Overflow](#auswirkungen-eines-buffer-overflow)
-- [Schutzmaßnahmen](#schutzmaßnahmen)
-- [Nützliche Links](#nützliche-links)
-- [Haftungsausschluss](#nützliche-links)
 
+
+## Inhaltsverzeichnis
+-  [Was ist ein Buffer-Overflow?](#was-ist-ein-buffer-overflow)
+-  [Speicheranordnung eines Programms](#speicheranordnung-eines-programms)
+-  [Wie funktioniert ein Buffer-Overflow?](#wie-funktioniert-ein-buffer-overflow)
+    -  [Der Angriff auf den Stack](#der-angriff-auf-den-stack)
+-  [Endianness: Die Byte-Reihenfolge](#endianness-die-byte-reihenfolge)
+-  [Heap-Overflows](#heap-overflows)
+-  [Angriffsarten](#angriffsarten)
+    -  [1. Classic Stack Smashing](#1-classic-stack-smashing)
+    -  [2. Return-to-libc](#2-return-to-libc)
+    -  [3. ROP (Return-Oriented Programming)](#3-rop-return-oriented-programming)
+    -  [4. Heap Spraying](#4-heap-spraying)
+    -  [5. NOP Sled](#5-nop-sled)
+-  [Auswirkungen eines Buffer-Overflow](#auswirkungen-eines-buffer-overflow)
+-  [Schutzmaßnahmen](#schutzmaßnahmen)
+-  [Nützliche Links](#nützliche-links)
+-  [Haftungsausschluss](#haftungsausschluss)
 
 
 <div align=right>
@@ -24,6 +33,48 @@ Ein **Buffer-Overflow** (deutsch: Pufferüberlauf) ist eine Schwachstelle in ein
 Die überschüssigen Daten "laufen über" und überschreiben benachbarte Speicherbereiche, was zu unvorhersehbarem Verhalten, Programmabstürzen oder im schlimmsten Fall zur Ausführung von bösartigem Code führt.
 
 Diese Schwachstelle tritt meistens in Programmiersprachen wie `C` und `C++` auf, da sie keine automatische Überprüfung der Puffergröße während des Schreibvorgangs vornehmen.
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+## Speicheranordnung eines Programms
+
+Um einen Buffer-Overflow zu verstehen, muss man die grundlegende Speicheranordnung eines laufenden Programms kennen. Diese ist in verschiedene Segmente unterteilt:
+
+```text
+       Hohe Adressen
++-----------------------+ <- Stack (wächst nach unten)
+|  Stack (LIFO)         |
+|                       |
+|  - Lokale Variablen   |
+|  - Rücksprungadressen |
++-----------------------+
+|                       |
+|         Frei          |
+|                       |
++-----------------------+ <- Heap (wächst nach oben)
+|  Heap (dynamische)    |
+|                       |
+|  - Speicherallokation |
+|  (malloc, new)        |
++-----------------------+
+|  .BSS                 | <- Globale, nicht-initialisierte Variablen
+|-----------------------|
+|  .DATA                | <- Globale, initialisierte Variablen
+|-----------------------|
+|  .TEXT                | <- Programmcode
++-----------------------+
+    Niedrige Adressen
+```
+
+Der **Stack** ist der primäre Angriffsvektor für klassische Buffer-Overflows. Er wird für temporäre Daten wie lokale Variablen und Funktionsaufrufe genutzt. Der `Stack` wächst von hohen zu niedrigen Speicheradressen.
 
 
 
@@ -53,19 +104,28 @@ In der Informatik sind diese "benachbarten Gegenstände" wichtige Speicherbereic
 
 
 ### Der Angriff auf den Stack
-Ein klassischer Buffer-Overflow-Angriff zielt auf den **Stack** ab. Der Stack ist ein Bereich im Speicher, in dem u. a.  lokale Variablen und Funktionsaufrufe gespeichert werden.
+Der Stack-basierte Buffer-Overflow ist die häufigste und am besten verstandene Art des Überlaufs. Er zielt darauf ab, die Rücksprungadresse (`Return Address`) einer Funktion zu überschreiben.
+
 
 **Normaler Stack-Aufbau:**  
+
+Wenn eine Funktion aufgerufen wird, wird ein sogenannter Stack Frame erstellt. Dieser Frame enthält unter anderem die Rücksprungadresse, die dem Programm sagt, wohin es nach Beendigung der Funktion zurückkehren soll.
+
 ```text
-+-----------------------+
-|      ... Daten ...    |
-|-----------------------|
-|     Rücksprungadresse |   <- Wichtige Anweisung, wohin das Programm zurückkehren soll
-|-----------------------|
-|    Lokale Variable    |   <- Dein Puffer z. B. char buffer[16]
-|-----------------------|
-|       ... Daten ...   |
-+-----------------------+
+       Hohe Adressen
++------------------------+
+|   Funktions-Parameter  |
+|------------------------|
+|   Rücksprungadresse    | <- Die entscheidende Adresse!
+|------------------------|
+|   EBP (Base Pointer)   |
+|------------------------|
+|   Puffer               | <- Unsere anfällige Variable (z.B. char buffer[16])
+|------------------------|
+|   Weitere lokale Daten |
++------------------------+
+    Niedrige Adressen
+
 ```
 
 <div align=right>
@@ -74,27 +134,50 @@ Ein klassischer Buffer-Overflow-Angriff zielt auf den **Stack** ab. Der Stack is
 
 </div>
 
-### Overflow / Angriff
+**Der Overflow Angriff**
 
-Ein Angreifer sendet mehr Daten an den Puffer, als dieser fassen kann. Diese überschreiben die Rücksprungadresse auf dem Stack.
+Ein Angreifer sendet eine Eingabe, die länger ist als der Puffer. Diese überschüssigen Daten fließen über und überschreiben die benachbarten Speicherbereiche, einschließlich der Rücksprungadresse.
 
 ```text
-+-----------------------------+
-|   ... weitere Daten ...     |
-|-----------------------------|
-|  Überschriebene Adresse --> | <- Rücksprungadresse wird manipuliert
-|-----------------------------|
-|  Böser Code (Shellcode)     | <- Eingeschleust vom Angreifer
-|-----------------------------|
-|   sehr langer Input         | 
-+-----------------------------+
+       Hohe Adressen
++-------------------------+
+|  Funktions-Parameter    |
+|-------------------------|
+|  Überschriebene Adresse | -> (Adresse unseres Shellcodes)
+|-------------------------|
+|  Manipulierter EBP      |
+|-------------------------|
+|  sehr langer Input      | <- Unser bösartiger Input überschreibt den Puffer
+|-------------------------|
+|  ... weitere Daten ...  |
++-------------------------+
+    Niedrige Adressen
 
 ```
 
-**Ergebnis:** Das Programm springt nicht mehr zurück in sauberen Code, sondern direkt in den vom Angreifer eingeschleusten **Shellcode**.
+**Ergebnis:** Wenn die Funktion beendet wird, springt das Programm nicht mehr zur ursprünglichen Rücksprungadresse, sondern zu der neuen, vom Angreifer definierten Adresse. Dies führt zur Ausführung des bösartigen Codes (**Shellcode**), was dem Angreifer oft volle Kontrolle über das System gibt.
 
-Wenn die Funktion, die den Puffer verwendet, beendet wird, springt das Programm nicht zur ursprünglichen Rücksprungadresse, sondern zu der neuen, vom Angreifer definierten Adresse. Dies führt zur Ausführung des bösartigen Codes (**Shellcode**), was dem Angreifer oft volle Kontrolle über das System gibt.
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+## Endianness: Die Byte-Reihenfolge
+
+Die **Endianness** beschreibt die Reihenfolge, in der Bytes im Arbeitsspeicher gespeichert werden. Sie ist entscheidend, um Speicheradressen korrekt zu manipulieren.
+
+- **Little-Endian:** Das am wenigsten signifikante Byte (**Least Significant Byte**, **LSB**) wird an der niedrigsten Speicheradresse gespeichert. Die meisten modernen CPUs (Intel, AMD) verwenden Little-Endian.
+
+    - **Beispiel:** Die Adresse 0x01234567 wird im Speicher als 67 45 23 01 abgelegt.
+
+- **Big-Endian:** Das am meisten signifikante Byte (**Most Significant Byte**, **MSB**) wird an der niedrigsten Speicheradresse gespeichert. Wird oft in Netzwerken und bei älteren Systemen verwendet (z. B. PowerPC).
+
+    - **Beispiel:** Die Adresse 0x01234567 wird im Speicher als 01 23 45 67 abgelegt.
+
+Beim Buffer-Overflow muss der Angreifer die Rücksprungadresse in der korrekten Endianness schreiben, um den Exploit erfolgreich zu machen.
 
 
 <div align=right>
@@ -108,7 +191,7 @@ Wenn die Funktion, die den Puffer verwendet, beendet wird, springt das Programm 
 
 Neben dem Stack existiert der **Heap** – ein Speicherbereich für dynamische Allokationen (`malloc`, `new`).
 
-Ein **Heap-Overflow** überschreibt Metadaten von Speicherblöcken im Heap und kann so Speicherverwaltungsstrukturen kompromittieren.
+Ein **Heap-Overflow** überschreibt Metadaten von Speicherblöcken im Heap und kann so Speicherverwaltungsstrukturen kompromittieren. Dies ermöglicht es einem Angreifer, eine Kette von Aktionen auszulösen, die letztlich zur Codeausführung führen.
 
 Schema:
 ```text
@@ -117,7 +200,7 @@ Heap-Speicher:
 | Block A   | Block B   | Block C   |
 +-----------+-----------+-----------+
 
-Heap-Overflow überschreibt Block B -> Manipulation möglich
+Überlauf von Block A überschreibt Metadaten von Block B.
 ```
 Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
@@ -131,8 +214,8 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
 ### 1. Classic Stack Smashing
 
-- **Ziel:** Rücksprungadresse wird vom Angreifen überschrieben.
-- Anfälligkeit typisch in älteren Systemen.
+- **Ziel:** Die Rücksprungadresse wird vom Angreifer überschrieben.
+- **Anfälligkeit:** Typisch in älteren Systemen ohne moderne Schutzmechanismen.
 
 
 
@@ -145,8 +228,8 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
 ### 2. Return-to-libc
 
-- Statt Shellcode einzuschleusen, wird die Rücksprungadresse auf vorhandene Bibliotheksfunktionen (z. B. `system("/bin/sh")`) gesetzt.
-- **Vorteil:** Funktioniert auch bei aktivem **DEP**.
+- **Methode:** Statt eigenen Shellcode einzuschleusen, wird die Rücksprungadresse auf eine bereits existierende Bibliotheksfunktion (z. B. `system("/bin/sh")`) gesetzt.
+- **Vorteil:** Funktioniert auch bei aktivem **Data Execution Prevention** (**DEP**).
 
 
 
@@ -159,9 +242,9 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
 ### 3. ROP (Return-Oriented Programming)
 
-- Baut Ketten aus kleinen Code-Schnipseln („Gadgets“), die bereits im Speicher existieren.
+- **Methode:** Baut Ketten aus kleinen, existierenden Code-Schnipseln („**Gadgets**“) zusammen, die im Speicher bereits vorhanden sind.
 
-- Umgeht Schutzmechanismen wie **DEP** und **ASLR** teilweise.
+- **Vorteil:** Umgeht Schutzmechanismen wie **DEP** und **ASLR** teilweise oder vollständig.
 
 
 
@@ -174,8 +257,23 @@ Heap-Overflows sind oft komplexer, bieten aber mächtige Angriffsmöglichkeiten.
 
 ### 4. Heap Spraying
 
-- Angreifer füllt den Heap mit bekannten Mustern und Shellcode, um die Trefferwahrscheinlichkeit bei Sprüngen zu erhöhen.
+- **Methode:** Angreifer füllt den Heap mit großen Mengen an Shellcode, um die Trefferwahrscheinlichkeit zu erhöhen, wenn er eine bestimmte Adresse anspringt.
 
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+### 5. NOP Sled
+
+- **Methode:** Eine Kette von **NOP-Anweisungen** (`\x90`, No-Operation), die dem Prozessor sagen, er soll "nichts tun" und zur nächsten Anweisung springen.
+
+- **Nutzen:** Platziert man einen NOP Sled vor dem Shellcode, muss der Angreifer die Rücksprungadresse nicht exakt treffen. Jeder Sprung innerhalb des NOP Sleds führt den Programmfluss zum Shellcode. Dies erhöht die Zuverlässigkeit des Exploits bei aktiviertem ASLR.
 
 
 
