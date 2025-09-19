@@ -142,7 +142,7 @@ Credits bei Weiterverwendung wären nett. 😉
 
 ## Community Support
 
-<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=100&color=0a0a23&text=Trete%20unserer%20Community%20bei&fontSize=44&animation=blink&section=footer&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=50" /></div>
+<div align=center><img src="https://capsule-render.vercel.app/api?type=soft&height=100&color=0a0a23&text=💬%20Trete%20unserer%20Community%20bei&fontSize=44&animation=blink&section=footer&textBg=false&descAlign=0&descAlignY=0&fontColor=00ff88&fontAlign=50&fontAlignY=50" /></div>
 
 Bei Fragen zur Einrichtung von VMs, Tools oder zur Nutzung unserer Inhalte:
 
