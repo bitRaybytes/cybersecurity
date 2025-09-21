@@ -41,6 +41,7 @@ Bitte halte dich an diese Namens- und Formatregeln:
 
 ## 📁 Beispielstruktur:
 
+```text
 /cheatsheets
 ├─ linux_commands.md
 ├─ nmap.md
@@ -50,7 +51,7 @@ Bitte halte dich an diese Namens- und Formatregeln:
 ├─ sql_injection/
 ├─ readme.md
 ├─ example_1.txt
-
+```
 
 ---
 
@@ -89,7 +90,7 @@ Gemeinsam machen wir Cybersecurity verständlicher für alle!
 
 ---
 
-## 1️⃣5️⃣ ⚠️ Haftungsausschluss
+## ⚠️ Haftungsausschluss
 
 Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
 

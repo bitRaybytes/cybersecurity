@@ -78,13 +78,13 @@ Außerdem ergibt es Sinn, seine Aufschriebe in Themen zu kategoriesieren und je 
 
 Ein Ethical Hacker muss im Begriff der folgenden Themen sein.
 
-1. IP Adressen (v4, v6)
-2. MAC Adressen
-3. TCP, UDP und der Three-Way-Handshake
-4. Generelle Ports und Protokolle
-5. Das OSI-Modell
+1. [IP Adressen (v4, v6)](/02-network-security/grundlagen/ip_adressen_basics.md)
+2. [MAC Adressen](/02-network-security/grundlagen/mac_adressen.md)
+3. [TCP, UDP und der Three-Way-Handshake](/02-network-security/grundlagen/tcp_ip_basics.md)
+4. Generelle [Ports](/02-network-security/ports_cheatsheet.md) und [Protokolle](/02-network-security/protokoll_header_cheatsheet.md)
+5. [Das OSI-Modell](/02-network-security/grundlagen/osi_schichtenmodell.md)
 6. Subnetting
-7. DNS, DHCP, ARP, NAT und VPNs
+7. [DNS](/02-network-security/grundlagen/dns_grundlagen.md), [DHCP](/02-network-security/grundlagen/dchp_grundlagen.md), [ARP](/02-network-security/grundlagen/arp_grundlagen.md), NAT und [VPNs](/02-network-security/grundlagen/vpn_grundlagen.md)
 
 
 
@@ -132,6 +132,7 @@ Eine Übersicht über die Bits eines IPv4-Adresse findest du hier:
 
 | Bits |    |    |    |   |   |   |   |
 | :--- | -- | -- | -- | - | - | - | - |
+| 2<sup>7  | 2<sup>06 | 2<sup>5 | 2<sup>4 | 2<sup>3 | 2<sup>2 | 2<sup>1 | 2<sup>0 |
 | 128  | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 | 1    | 1  | 1  | 1  | 1 | 1 | 1 | 1 |
 
