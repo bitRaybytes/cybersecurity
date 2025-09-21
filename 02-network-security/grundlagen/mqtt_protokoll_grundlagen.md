@@ -102,7 +102,7 @@ Die Kommunikation zwischen IoT-Geräten und dem Broker kann über verschiedene W
 
 
 ### Topic Wildcards – einstufig
-Mit dem `+`-Zeichen können Sie ein beliebiges einzelnes Topic-Level ersetzen.
+Mit dem `+`-Zeichen kannst du ein beliebiges einzelnes Topic-Level ersetzen.
 
 - **Beispiel-Topic:** `Buerogebaeude/Erdgeschoss/+/Temperatur`
 

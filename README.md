@@ -50,7 +50,7 @@ Das Repository ist in nummerierte, thematisch sortierte Ordner und `.md`-Dateien
 ## Themenübersicht
 
 Themenübersicht
-Hier finden Sie eine Übersicht der wichtigsten Themen, die im Repository behandelt werden:
+Hier findest du eine Übersicht der wichtigsten Themen, die im Repository behandelt werden:
 
 - **Grundlagen:** [Einführung in IT-Sicherheit und rechtliche Rahmenbedingungen](/01-basics-intro/)
 - **Netzwerksicherheit:** [Konzepte, Protokolle und Angriffsarten](/02-network-security/)
