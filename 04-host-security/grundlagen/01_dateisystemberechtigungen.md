@@ -123,7 +123,7 @@ Der `chown`-Befehl ändert den Eigentümer (`user`) und die Gruppe (`group`) ein
 
 - **Prinzip des geringsten Privilegs:** Gewähre nur die minimal notwendigen Berechtigungen.
 - **Vorsicht bei `777`:** Das Setzen von `chmod 777` macht eine Datei oder ein Verzeichnis für jeden uneingeschränkt les-, schreib- und ausführbar. Das ist ein erhebliches Sicherheitsrisiko.
-- **Das `sudo`-Privileg:** Beschränken Sie die Anzahl der Benutzer mit `sudo`-Rechten auf ein absolutes Minimum.
+- **Das `sudo`-Privileg:** Beschränke die Anzahl der Benutzer mit `sudo`-Rechten auf ein absolutes Minimum.
 
 <div align=right>
 

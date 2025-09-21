@@ -238,12 +238,6 @@ Klicke anschließend unten rechts auf `View Source`, um dir den Source Code anzu
 
 ![SQL-Injection Source Code](/09-practice-labs/ressources/pictures/dvwa-sqli-5.png)
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Wir wir sehen, hatte wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richtige Syntax siehst du im Bild oben.
 
 
@@ -385,12 +379,6 @@ Wir wissen bereits, dass die Abfrage in `php` folgendermaßen aufgebaut ist:
 $query = "Select first_name, last_name FROM users WHERE user_id = '$id';"
 ```
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
 Dabei ist das Abfrage-Statement in eine Variable namens `$query` gesetzt worden (vereinfacht Arbeiten am Code).
 
 In dieser SQL-Injection Phase nutzen wir den `UNION`-Befehl, um über unsere Paylouds Zugriff auf die Datenbank zu erhalten oder direkt mehr Informationen herauszuholen.
@@ -414,6 +402,12 @@ Mit nachfolgendem Befehl findest du heraus, wie die Datenbanktabellen in der Dat
 ```sql
 test' UNION SELECT 1, group_concat(schema_name) FROM information_schema.schemata #
 ```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 ![UNION Based Attack Payload](/09-practice-labs/ressources/pictures/dvwa-sqli-10.png)
 

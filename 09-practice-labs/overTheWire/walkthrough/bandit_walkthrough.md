@@ -64,7 +64,7 @@ Mehr zu [Over the Wire und dem Level Bandit](https://www.overthewire.org/wargame
 
 ## Tipps zu Beginn:
 
-### Ordern anlegen und Passwörter organisieren
+### Ordner anlegen und Passwörter organisieren
 Optional kannst du deine Bandit-Passwörter organisieren, indem du sie in einem Ordner speicherst, der für jedes einzelne Level eine Datei hat, oder du erstellst eine einzige Datei dafür. Es ist dir überlassen.
 
 Falls du bspw. einen Ordner erstellen willst:
@@ -108,7 +108,7 @@ Du willst wissen, was das Programm `cat` machen kann? Gib dazu folgeden Befehl i
 man cat
 ```
 
-Für jedes weitere Programm ersetzt du das Wort `cat` mit der entsprechenden Bezeichnung des Programmes.
+Für jedes weitere Programm ersetzt du das Wort `cat` mit der entsprechenden Bezeichnung des Programms.
 
 
 
@@ -301,7 +301,7 @@ Wenn du eingeloggt bist, gib folgende Befehle ein, um das Passwort für `bandit3
 
 ```bash
 ls -la
-cat inhere/
+cd inhere/
 ll
 cat ./... Hiding-From-You
 ```
@@ -720,7 +720,7 @@ Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
 
 ## Bandit 13 -> 14
 
-**Aufgabe:** Das Passwort ist in einem Datei, welche nur vom User `bandit14` betrachtet werden kann. Es gibt jedoch einen privaten SSH-Key, der genutzt werden kann.
+**Aufgabe:** Das Passwort ist in einer Datei, welche nur vom User `bandit14` betrachtet werden kann. Es gibt jedoch einen privaten SSH-Key.
 <details>
     <summary>Lösung</summary>
 
@@ -827,7 +827,7 @@ Gib im Terminal anschließend folgenden Befehl ein:
 
 ```bash
 cat /etc/bandit_pass/bandit15   # kopiere das Passwort, falls nicht schon gesehen
-ncat --ssl localhost 30001      # Mit ncat Service verbinden und SSL Verslüsselung nutzen.
+ncat --ssl localhost 30001      # Mit ncat Service verbinden und SSL Verschlüsselung nutzen.
 ```
 </details>
 
@@ -868,9 +868,9 @@ Dann sollte deine Shell folgendes ausgeben:
 
 Dein Nmap Scan sollte auch ungefähr so aussehen.
 Du siest 5 Ports, mit offenem State und unterschiedlichen Services, die darauf laufen.
-    - `echo`: kein Standard State wie `open, closed, filtered` usw. Ganz normaler `echo` Befehl (RFC 862). Gibt erhaltene Eingaben wieder zurück.
-    - `ssl/echo`: referenziert eine spezielle `nmap-Scripting Enginge (NSE)` und ist kein Standard für einen Port State.
-        - `ssl-enum-ciphers`-Scripts, falls du mehr erfahren willst.
+- `echo`: kein Standard State wie `open, closed, filtered` usw. Ganz normaler `echo` Befehl (RFC 862). Gibt erhaltene Eingaben wieder zurück.
+- `ssl/echo`: referenziert eine spezielle `nmap-Scripting Enginge (NSE)` und ist kein Standard für einen Port State.
+- `ssl-enum-ciphers`-Scripts, falls du mehr erfahren willst.
 
 In der Aufgabe wird erläutert, dass einige Server die deine Ausgabe zurückgeben und nur ein Server dir genau das Passwort gibt. 
 
@@ -1618,7 +1618,7 @@ mkdir /tmp/DeinOrderName    # Erstellt deinen Ornder im /tmp-Verzeichnis
 cd /tmp/DeinOrdnerName      # navigiert in deinen erstellen Ordner
 git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
 
-# Wenn du nach einem Passwort gefargst wirst, dann gib das des aktuellen Levels ein
+# Wenn du nach einem Passwort gefragt wirst, dann gib das des aktuellen Levels ein
 ```
 
 Anschließend sollte die Repository in deinen Ordner geklont werden.
@@ -1658,7 +1658,7 @@ Dazu gibst du folgende Befehle ein:
 mkdir /tmp/DeinOrderName    # Erstellt deinen Ornder im /tmp-Verzeichnis
 cd /tmp/DeinOrdnerName      # navigiert in deinen erstellen Ordner
 git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
-# Wenn du nach einem Passwort gefargst wirst, dann gib das des aktuellen Levels ein
+# Wenn du nach einem Passwort gefragt wirst, dann gib das des aktuellen Levels ein
 cd repo     # wechselt in die GitHub-Repo
 ```
 
@@ -1705,10 +1705,11 @@ Gib dazu folgende Befehle ein:
 mkdir /tmp/DeinOrderName    # Erstellt deinen Ornder im /tmp-Verzeichnis
 cd /tmp/DeinOrdnerName      # navigiert in deinen erstellen Ordner
 git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
-# Wenn du nach einem Passwort gefargst wirst, dann gib das des aktuellen Levels ein
+# Wenn du nach einem Passwort gefragt wirst, dann gib das des aktuellen Levels ein
 cd repo     # wechselt in die GitHub-Repo
 ```
 ![Bandit31 GitHub-Repo klonen](/09-practice-labs/ressources/pictures/otw-31.png)
+
 2. An das Passwort kommen
 
 Jetzt, nach dem die Git-Repo geklont wurde, gibst du folgende Befehle ein, um herauszufinden, was es für Branches gibt. 
@@ -1727,7 +1728,7 @@ Mir ist direkt einer aufgefallen: `secret`.
 ![Bandit31 git submodul](/09-practice-labs/ressources/pictures/otw-31b.png)
 
 Allerdings gibt es ein Problem. `secret` ist kein Branch in den du wechseln kannst, sondern ein Submodul.
-Es wird in der Repo als `blob` - ein `binary large object` - gehandelt . Was du tun hier tun kannst, ist, das Submodul `secret` zu "entpacken".
+Es wird in der Repo als `blob` - ein `binary large object` - gehandelt . Was du hier tun kannst, ist, das Submodul `secret` zu "entpacken".
 
 Gib dazu folgende Befehl ein, um das Passwort zu erhalten:
 ```bash
@@ -1786,7 +1787,7 @@ Die Hälfte ist geschafft.
 
 **Wichtig:** `.gitignore` ist eine Datei, die als "Konfiguration" verwendet wird, die es Entwickler ermöglicht, Dateien und/oder Informationen auszuschließen, die dann beim Hochladen übersprungen werden.
 
-Beim Auslesen der Datei ist dir vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien nicht hochladen würde. Das müssen wir laut der `README.md` jedoch tun, um das Passwort zu erhalten.
+Beim Auslesen der Datei ist dir vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien überspringen würde. Jedoch müssen wir diese Dateien laut der `README.md` hochladen, um das Passwort zu erhalten.
 
 Die Zeile in `.gitignore` kannst du einfach auskommentieren, was dieses Problem damit löst.
 
@@ -1835,7 +1836,7 @@ In diesem Level kannst du das Terminal nicht mit gewohnten Befehlsabfolgen steue
 
 Außerdem wirst du beim Herumprobieren feststellen, dass du nicht viele Befehle hast, die du aufrufen kannst, da deine Rechte sehr eingeschränkt sind.
 
-Normale Befehle wie `cat` oder `ls` funktionieren in dieser Shell nicht.
+Befehle wie `whoami` oder `clear` funktionieren in dieser Shell nicht.
 
 Um aber an das Passwort zu kommen, gibst du folgende Befehle ein:
 

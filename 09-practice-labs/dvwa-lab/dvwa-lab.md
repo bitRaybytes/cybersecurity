@@ -98,16 +98,16 @@ Dieser Befehl lädt das DVWA-Image (falls noch nicht vorhanden), startet einen C
 Öffne jetzt deinen Browser und rufe auf:
 
 ```http
-http://localhost
+http://localhost:80
 ```
 
 Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die entsprechende **IP-Adresse deiner VM**:
 
 ```http
-http://<IP-Adresse>
+http://<IP-Adresse>:80
 ```
 
-![DVWA starten](/09-practice-labs/ressources/pictures/step4installDocker.png)
+![DVWA starten](/09-practice-labs/ressources/pictures/dvwa-localhost-login.png)
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
