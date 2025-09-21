@@ -76,7 +76,7 @@ Finde das Passwort für das nächste Level `natas1`.
 
 Öffne den Inspector und inspiziere die Webseite. Drücke entweder die `rechte Maustaste` und wähle `untersuchen` aus oder drücke auf der Tastatur `Strg` + `Umschalt` + `c` auf Windows und Linux/Mac `Cmd` + `Umschalt` + `c`.
 
-![Natas1 Passwort](/09-practice-labs/ressources/pictures/natas1.png)
+![Natas1 Passwort](/09-practice-labs/ressourcen/pictures/natas1.png)
 
 </details>
 
@@ -103,7 +103,7 @@ URL:        http://natas1.natas.labs.overthewire.org
 
 In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu öffnen. Allerdings kennst du bereits ein Shortcut. Verwende ihn und untersuche die Webseite.
 
-![Natas2 Passwort](/09-practice-labs/ressources/pictures/natas2.png)
+![Natas2 Passwort](/09-practice-labs/ressourcen/pictures/natas2.png)
 
 
 </details>
@@ -134,7 +134,7 @@ Wenn also das Passwort nicht auf dieser Seite zu finden ist, gibt es vielleicht 
 
 Inspiziere den HTML-Code. Es gibt eine interessante Sache.
 
-![Natas3 Source Code inspizieren](/09-practice-labs/ressources/pictures/natas3.png)
+![Natas3 Source Code inspizieren](/09-practice-labs/ressourcen/pictures/natas3.png)
 
 ```html
 <img src="files/pixel.png">
@@ -148,12 +148,12 @@ Um das herauszufinden, gib folgendes in die URL-Zeile deines Browsers ein:
 http://natas2.natas.labs.overthewire.org/files
 ```
 
-![Natas3 neue URL untersuchen](/09-practice-labs/ressources/pictures/natas3b.png)
+![Natas3 neue URL untersuchen](/09-practice-labs/ressourcen/pictures/natas3b.png)
 
 Sieh an! Neben dem Bild, welches sich im Source Code befindet, gibt es eine Datei mit der Bezeichung `Users.txt`.
 Klick auf die Datei, um das Passwort zu erhalten.
 
-![Natas3 Passwort](/09-practice-labs/ressources/pictures/natas3c.png)
+![Natas3 Passwort](/09-practice-labs/ressourcen/pictures/natas3c.png)
 
 
 </details>
@@ -195,7 +195,7 @@ Gib im Browser die folgende URL ein:
 http://natas3.natas.labs.overthewire.org/robots.txt
 ```
 
-![Natas4 robots.txt Information](/09-practice-labs/ressources/pictures/natas4.png)
+![Natas4 robots.txt Information](/09-practice-labs/ressourcen/pictures/natas4.png)
 
 In der `robots.txt` ist also zu sehen, dass der Webseitenbetreiber nicht möchte, dass das Verzeichnis `/s3cr3t/` von einem Webcrawler indexiert wird.
 
@@ -204,11 +204,11 @@ Verändere nun deine URL so, dass du zu diesem Verzeichnis navigierst.
 ```http
 http://natas3.natas.labs.overthewire.org/s3cr3t/
 ```
-![Natas4 /file Zugang](/09-practice-labs/ressources/pictures/natas4b.png)
+![Natas4 /file Zugang](/09-practice-labs/ressourcen/pictures/natas4b.png)
 
 Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für das nächste Level.
 
-![Natas4 Password](/09-practice-labs/ressources/pictures/natas4c.png)
+![Natas4 Password](/09-practice-labs/ressourcen/pictures/natas4c.png)
 
 
 </details>
@@ -249,7 +249,7 @@ Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. K
 
 Wenn du mehr über das Thema `headers` in HTML-Request erfahren willst, kannst du bei den [Mozilla Developer Dokumentation für Header](https://developer.mozilla.org/de/docs/Web/API/Headers) vorbeischauen.
 
-![Natas5 Header inspizieren](/09-practice-labs/ressources/pictures/natas5.png)
+![Natas5 Header inspizieren](/09-practice-labs/ressourcen/pictures/natas5.png)
 
 Sobald du auf die Aufzeichnung klickst, tauchen rechts weitere Informationen dazu auf.
 Es gibt zwei Möglichkeiten für dich nun vorzugehen.
@@ -298,7 +298,7 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 - `http://natas4.natas.labs.overthewire.org`: Ziel-URL
 
 
-![Natas5 Passwort](/09-practice-labs/ressources/pictures/natas5c.png)
+![Natas5 Passwort](/09-practice-labs/ressourcen/pictures/natas5c.png)
 
 
 </details>
@@ -333,7 +333,7 @@ Begib dich direkt in den `DevTools` deines Browser zum Reiter `Network`. Lade, s
 
 Beim Analysieren des Headers der Challenge-Webseite sollte dir ein `Response`-Parameter im Header besonders ins Auge fallen: `Set-Cookie: loggedin=0`.
 
-![Natas6 Header analysieren](/09-practice-labs/ressources/pictures/natas6.png)
+![Natas6 Header analysieren](/09-practice-labs/ressourcen/pictures/natas6.png)
 
 Mit dieser Information kannst du versuchen, den Header so zu manipulieren, dass du dem Server surgerierst, eingeloggt zu sein.
 
@@ -344,7 +344,7 @@ curl -u natas5:deinNatasPassword -H "Cookie: loggedin=1" http://natas5.natas.lab
 
 Und siehe da, wir erhalten das Passwort im Terminal.
 
-![Natas6 Passwort](/09-practice-labs/ressources/pictures/natas6b.png)
+![Natas6 Passwort](/09-practice-labs/ressourcen/pictures/natas6b.png)
 
 </details>
 
@@ -378,7 +378,7 @@ Du kommst dann auf den Sourcecode der Seite, die die `POST`-Methode und die Date
 
 Schau dir den Code an. Fällt dir etwas auf?
 
-![Natas7 Sourcecode analysieren](/09-practice-labs/ressources/pictures/natas7.png)
+![Natas7 Sourcecode analysieren](/09-practice-labs/ressourcen/pictures/natas7.png)
 
 Im PHP-Code findest du die Zeile `include "includes/sercret.inc"` ganz zu Beginn des Codes.
 
@@ -391,11 +391,11 @@ Falls du eine leere Seite angezeigt bekommst, bist du schon mal richtig. Inspizi
 
 Kopiere den Schlüssel ohne die Anführungsstriche. Du musst vermutlich einen Doppelklick auf den Wert der Variable machen. Kopiere den Inhalt und begib dich wieder auf die "Hauptseite", wo du diesen `Secret-Key` über `POST` an den Server übermittels.
 
-![Natas7 Secret Key](/09-practice-labs/ressources/pictures/natas7b.png)
+![Natas7 Secret Key](/09-practice-labs/ressourcen/pictures/natas7b.png)
 
 Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, solltest du das Passwort für die nächste Challenge erhalten.
 
-![Natas7 Secret Key](/09-practice-labs/ressources/pictures/natas7c.png)
+![Natas7 Secret Key](/09-practice-labs/ressourcen/pictures/natas7c.png)
 
 </details>
 
@@ -425,7 +425,7 @@ Wenn du beide Links klickst, dann wirst du nicht viel im Frontend zu sehen bekom
 
 Inspiziere den Code auf der `Home`-Seite und schau dir an, was du finden kannst:
 
-![Natas8 Code inspizieren](/09-practice-labs/ressources/pictures/natas8.png)
+![Natas8 Code inspizieren](/09-practice-labs/ressourcen/pictures/natas8.png)
 
 Im Code findest du einen Hinweis darauf, wo das Passwort für `natas8` zu finden ist. Die Frage ist nur, was du mit dieser Information unternehmen kannst?
 
@@ -447,7 +447,7 @@ Gib im Browser folgende URL ein und du solltest das Passwort erhalten:
 http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 ```
 
-![Natas8 Passwort](/09-practice-labs/ressources/pictures/natas8b.png)
+![Natas8 Passwort](/09-practice-labs/ressourcen/pictures/natas8b.png)
 
 </details>
 
@@ -486,7 +486,7 @@ curl -u natas8:password http://natas8.natas.labs.overthewire.org
 Damit solltest du wenigstens sehen, wie die Seite aufgebaut ist.
 Und tatsächlich haben wir Erfolg, da unser Benutzername und das Passwort in erster Linie stimmen und nur der Browser die Daten nicht übermitteln wollte.
 
-![Natas9 curl für mehr Infos zur Webseite](/09-practice-labs/ressources/pictures/natas9.png)
+![Natas9 curl für mehr Infos zur Webseite](/09-practice-labs/ressourcen/pictures/natas9.png)
 
 Im roten Rechteck ist die Nummer `1` und die `2` zu sehen. `1` zeigt dir, dass die Internetseite ein Formular hat, welches Daten übermittelt.
 
@@ -500,7 +500,7 @@ Gib im Terminal folgenden Befehl ein:
 curl -u natas8:passwort -o html.html http://natas8.natas.labs.overthewire.org/index-source.html
 ``` 
 
-![Natas9 Webseite in eigene Datei speichern](/09-practice-labs/ressources/pictures/natas9b.png)
+![Natas9 Webseite in eigene Datei speichern](/09-practice-labs/ressourcen/pictures/natas9b.png)
 
 
 Falls du keinen Pfad angegeben hast, schau in Linux in deinem `home`-Verzeichnis nach. Da bewegst du dich als User standardmäßig, wenn du das Terminal öffnest und eine Shell-Session startest.
@@ -513,7 +513,7 @@ firefox html.html # startet die Datei in Firefox (ich nutze Firefox hier)
 
 In der Variable `$encodedSecret = ...` findest du dann das Passwort für die nächste Challenge. Allerdings musst du dieses Passwort noch entschlüsseln. Jedoch hast du dafür bereits einen weiteren Tipp im Source Code:
 
-![Natas9 Passwort entschlüsseln](/09-practice-labs/ressources/pictures/natas9c.png)
+![Natas9 Passwort entschlüsseln](/09-practice-labs/ressourcen/pictures/natas9c.png)
 
 Gehen wir kurz auf die Funktion ein:
 
@@ -536,11 +536,11 @@ echo "b4ViV1lmMmtCcQ==" | base64 -d
 # du solltest dann sowas erhalten:      oubWYf2kBq
 ```
 
-![Natas9 Passwort entschlüsseln](/09-practice-labs/ressources/pictures/natas9d.png)
+![Natas9 Passwort entschlüsseln](/09-practice-labs/ressourcen/pictures/natas9d.png)
 
 Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Eingabfeld einfügen kannst. Submitte es und erhalte das Passwort für die nächste Challange.
 
-![Natas9 Passwort](/09-practice-labs/ressources/pictures/natas9e.png)
+![Natas9 Passwort](/09-practice-labs/ressourcen/pictures/natas9e.png)
 
 </details>
 
@@ -567,7 +567,7 @@ URL:        http://natas9.natas.labs.overthewire.org
 
  Nach dem Login, kannst du direkt den `Sourcecode` anschauen.
 
-![Natas10 Hauptseite](/09-practice-labs/ressources/pictures/natas10.png)
+![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10.png)
 
 Es handelt sich dabei um die `php`-Syntax. Das siehst du daran, dass der Code mit`<?` eingeleitet und `?>` beendet wird.
 
@@ -579,7 +579,7 @@ if(array_key_exists("needle", $_REQUEST)){      // überprüft Superglobal-Array
     }
 ```
 
-![Natas10 Hauptseite](/09-practice-labs/ressources/pictures/natas10b.png)
+![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10b.png)
 
 
 Die **erste** `if`-Kondition `array_key_exists("needle", $_REQUEST)` überprüft, ob der Parameter `$_REQUEST` im `Superglobal-Array` (php), also die Daten im GET, POST und der COOKIEs, richtig enthalten sind. 
@@ -631,13 +631,13 @@ Gib in der Suchleiste also folgendes ein:
 
 Dieser Befehl sollte dir das `/etc/`-Verzeichnis auflisten.
 
-![Natas10 Hauptseite](/09-practice-labs/ressources/pictures/natas10c.png)
+![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10c.png)
 
 Nun wissen wir, dass durch die Fehlverarbeitung des Codes (ohne Prüfung auf Command Injections)
 
 Drücke `Strg` + `F` (Windows) bzw `Cmd` + `F` (Mac/Linux) und suche nach `natas`. Das sollte dir die vorhandenen Verzeichnisse auflisten, die in deren Bezeichnung "natas" vorkommt.
 
-![Natas10 Hauptseite](/09-practice-labs/ressources/pictures/natas10d.png)
+![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10d.png)
 
 Du kannst mit `; ls /etc/XY` dich durch die Verzeichnisse probieren, aber der richtige Befehl ist:
 
@@ -647,7 +647,7 @@ Du kannst mit `; ls /etc/XY` dich durch die Verzeichnisse probieren, aber der ri
 
 Damit solltest du das Passwort für die nächste Challenge erhalten.
 
-![Natas10 Hauptseite](/09-practice-labs/ressources/pictures/natas10e.png)
+![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10e.png)
 
 
 </details>
@@ -680,13 +680,13 @@ Wenn du diesmal den Sourcode betrachtest, dann erkennst du, dass eine Validierun
 
 Es wird diesmal überprüft, ob illegale Zeichen verwendet werden:
 
-![Natas11 Password](/09-practice-labs/ressources/pictures/natas11.png)
+![Natas11 Password](/09-practice-labs/ressourcen/pictures/natas11.png)
 
 Das bedeutet, dass du keines dieser Zeichen `;`, `|` und `&` im Eingabefeld verwendet kannst, weil es im Backend überprüft wird.
 
 Es gibt jedoch noch die Möglichkeit mit `$` den Code zu "escapen". Du könntest beispielweise `$(ls)` verwenden, um die `index-source.html` auszugeben.
 
-![Natas11 Password](/09-practice-labs/ressources/pictures/natas11b.png)
+![Natas11 Password](/09-practice-labs/ressourcen/pictures/natas11b.png)
 
 Allerdings scheint es so, dass der Befehl `$(cat /etc/natas_webpass/natas11)` nicht ausgeführt wird. 
 
@@ -711,7 +711,7 @@ cat natas11.txt | grep natas11
 
 Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 
-![Natas11 Password](/09-practice-labs/ressources/pictures/natas11c.png)
+![Natas11 Password](/09-practice-labs/ressourcen/pictures/natas11c.png)
 
 </details>
 

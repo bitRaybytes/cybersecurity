@@ -34,7 +34,7 @@ sudo apt update -y
 ### Gib anschließend dein Passwort an, solltest du gefragt werden.
 ```
 
-![Schritt 1: Update Kali Linux](/09-practice-labs/ressources/pictures/step1UpdateKali.png)
+![Schritt 1: Update Kali Linux](/09-practice-labs/ressourcen/pictures/step1UpdateKali.png)
 
 <div align=right>
 
@@ -50,7 +50,7 @@ Anschließend führst du das Upgrade durch:
 sudo apt upgrade -y
 ```
 
-![Schritt 2: Upgrade Kali Linux](/09-practice-labs/ressources/pictures/step2UpgradeKali.png)
+![Schritt 2: Upgrade Kali Linux](/09-practice-labs/ressourcen/pictures/step2UpgradeKali.png)
 
 **Tipp:** Das `-y` steht für "yes" – es bestätigt alle Rückfragen automatisch.
 
@@ -74,7 +74,7 @@ Hier die Kurzfassung:
 4. Docker installieren 
 5. Testlauf mit `hello-world` 
 
-![Schritt 3: Abhängigkeiten installieren](/09-practice-labs/ressources/pictures/step3installDependencies.png)
+![Schritt 3: Abhängigkeiten installieren](/09-practice-labs/ressourcen/pictures/step3installDependencies.png)
 
 <div align=right>
 
@@ -107,7 +107,7 @@ Oder – falls du DVWA auf einer virtuellen Maschine nutzt – verwende die ents
 http://<IP-Adresse>:80
 ```
 
-![DVWA starten](/09-practice-labs/ressources/pictures/dvwa-localhost-login.png)
+![DVWA starten](/09-practice-labs/ressourcen/pictures/dvwa-localhost-login.png)
 
 > Wenn wir erfolgreich gewesen sind, dann sollten wir nun genau diese Seite (links) vorfinden. Das heißt, wir haben die DVWA erfolgreich installiert.
 
@@ -131,9 +131,7 @@ http://<IP-Adresse>:80
   * **Passwort:** `password`
 * In DVWA musst du unter `DVWA Security` eventuell zuerst die Sicherheitsstufe auf **low** stellen, um alle Tests zu ermöglichen.
 
-
-
-<div align=right>
+en<div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
