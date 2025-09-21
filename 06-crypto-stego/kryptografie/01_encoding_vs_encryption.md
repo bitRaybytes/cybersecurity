@@ -323,7 +323,7 @@ Der `public key` kann ebenso zur Verifizierung digitaler Signaturen verwendet we
 
 ### hybride Verschlüsselung
 
-Die hybride Verschlüsselung kombiniert die Vorteile der **symmetrischen Verschlüsslung** (schnell, aber schwierige Schlüsselverteilung) und die **asymmetrische Verschlüsselung** (langsame, aber sichere Verschlüsselung).
+Die hybride Verschlüsselung kombiniert die Vorteile der **symmetrischen Verschlüsselung** (schnell, aber schwierige Schlüsselverteilung) und die **asymmetrische Verschlüsselung** (langsame, aber sichere Verschlüsselung).
 
 1. Der Sender generiert einen einmaligen, zufälligen **symmetrischen Session-Schlüssel**.
 2. Dieser Session-Schlüssel wird mit dem öffentlichen Schlüssel des Empfängers asymmetrisch verschlüsselt und gesendet.

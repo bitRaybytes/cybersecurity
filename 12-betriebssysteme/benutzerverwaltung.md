@@ -208,15 +208,17 @@ ACLs erlauben feinere Steuerung:
 
 ## Remote-Zugriff und Verwaltung
 
--RAS (Remote Access Server) → klassisch über Einwahl + RADIUS.
--SSH → Standard für sichere Fernzugriffe, basiert auf Public-Key-Verfahren.
--RDP (Remote Desktop, Windows) → GUI-Zugriff, Auth. über Windows-Konten.
--RSAT → Admin-Tools für Windows-Domänen.
--Teamviewer / AnyDesk → Drittanbieter-Lösungen.
+- RAS (Remote Access Server) → klassisch über Einwahl + RADIUS.
+- SSH → Standard für sichere Fernzugriffe, basiert auf Public-Key-Verfahren.
+- RDP (Remote Desktop, Windows) → GUI-Zugriff, Auth. über Windows-Konten.
+- RSAT → Admin-Tools für Windows-Domänen.
+- Teamviewer / AnyDesk → Drittanbieter-Lösungen.
 
-ASCII: SSH-Handshake (vereinfacht)
 
-```arduino
+
+```text
+SSH-Handshake (vereinfacht):
+
 Client -----> Server : Verbindung anfordern
 Server -----> Client : Zertifikat senden
 Client -----> Server : Authentifizierung (Passwort/Key)

@@ -33,7 +33,7 @@ Hier findest du Links und Anleitungen zu verschiedenen Trainings und Labs zu CTF
 - [Metasploit](/09-practice-labs/metasploitable2/): Ein virtueller PC voller Sicherheitslücken, der ideal für die Nutzung des Metasploit-Frameworks geeignet ist.
 - [Over The Wire](/09-practice-labs/overTheWire/): Verbessere deine Linux- und Shell-Fähigkeiten durch eine Reihe von aufregenden CTF-Challenges.
 - [OWASP JuiceShop](/09-practice-labs/owasp/juiceShop/): Eine der populärsten Übungsplattformen, um Web-Security-Schwachstellen (OWASP Top 10) zu finden und auszunutzen.
-
+- weitere Themen folgen...
 
 
 

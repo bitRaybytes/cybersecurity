@@ -82,13 +82,6 @@ chmod 777 shell.php
 ```
 ➡️ Setze ausführbare Rechte oder öffne Berechtigungen für Datei-Uploads.
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
-
-
 
 <div align=right>
 
