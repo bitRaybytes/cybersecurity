@@ -56,7 +56,7 @@ Es gibt verschiedene Arten von VPNs, die für unterschiedliche Anwendungsfälle 
 
 ### 1. Site-to-Site-VPN
 
-Auch **LAN-to-LAN **genannt, verbindet es komplette Netzwerke, z. B. verschiedene Firmenstandorte oder Niederlassungen.
+Auch **LAN-to-LAN** genannt, verbindet es komplette Netzwerke, z. B. verschiedene Firmenstandorte oder Niederlassungen.
 
 - Die Kommunikation erfolgt über eine verschlüsselte Verbindung zwischen zwei VPN-Routern.
 - Spart Kosten, da statt teurer Standleitungen eine Internetverbindung genutzt wird.

@@ -23,7 +23,7 @@
 
 ## Einleitung
 
-TCP/IP ist das Rückgrat der modernen digitalen Kommunikation – es ermöglicht den Austausch von Daten über das Internet und private Netzwerke. Es handelt sich dabei um ein Protokoll-Stack, also ein Schichtenmodell aus mehreren Netzwerkprotokollen, die zusammenarbeiten.
+**TCP/IP** ist das Rückgrat der modernen digitalen Kommunikation – es ermöglicht den Austausch von Daten über das Internet und private Netzwerke. Es handelt sich dabei um ein Protokoll-Stack, also ein Schichtenmodell aus mehreren Netzwerkprotokollen, die zusammenarbeiten.
 
 
 <div align=right>

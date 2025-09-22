@@ -18,7 +18,7 @@
 
 ## 1. Docker mit DVWA starten
 
-**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/09-tools-cheatsheet/docker-infos.md). 
+**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/08-tools-cheatsheet/tools-install-guides/docker-install.md). 
 
 Wir arbeiten mit Docker, um DVWA in einer sicherer Umgebung zu testen.
 Für die Applikation wählen wir den Port 80. Sollte dieser nicht funktioniere, probiere 8080
@@ -26,7 +26,7 @@ Für die Applikation wählen wir den Port 80. Sollte dieser nicht funktioniere, 
 Gehe hierzu in dein Kali Linux Terminal und gib folgenden Befehl ein:
 
 ```bash
-docker run --rm -ir -p 80:80 vulnerables/web-dvwa
+docker run --rm -it -p 80:80 vulnerables/web-dvwa
 ```
 
 ![Docker Containter mit DVWA starten](/09-practice-labs/ressourcen/pictures/dockerStart.png)
@@ -78,11 +78,12 @@ Klicke hierzu auf der `/login.php`-Seite auf den Button `login`
 Das ist einfacher als es klingt. Klicke dazu einfach auf Login und du kommst auf die `setup.php`-Webseite.
 Scrolle hier einfach bis ganz nach unten und klicke anschließend auf den Butten `Create / Reset Database`.
 
+> **Hinweis:** DVWA nutzt eine Docker Umgebung, die den "Cache" quasi löscht. Das heißt, dass du stets nach Beenden der Web-Anwendung den Login- und Datenbankprozess wiederholen musst.
 
 ![DVWA Datenbank initialisieren](/09-practice-labs/ressourcen/pictures/dvwa-createDb.png)
 
 
-Nachdem du auf den Button `Create / Reset Database`geklickt hast, kannst du die `http://localhost/login.php` erneut laden und dich mit Benutzernamen und Passwort anmelden.
+Nachdem du auf den Button `Create / Reset Database` geklickt hast, kannst du die `http://localhost/login.php` erneut laden und dich mit Benutzernamen und Passwort anmelden.
 
 Hier noch einmal der Benutzername und das Passwort: `admin`:`password`.
 
@@ -167,7 +168,7 @@ Wie du siehst, verändert sich die URL, doch eine Fehlermeldung? Fehlanzeige. Al
 Interessant!
 
 Also mit der Zahl `1` haben wir ein Ergebnis erhalten.
-Das Ergebnis, welches wir erhalten habt zeigt, dass in der Datenbank ein Datensatz mit der Zahl 1 die `ID: 1`, der `First Name: admin` und der `Surname: admin` verknüpft sind.
+Das Ergebnis, welches wir erhalten haben zeigt, dass in der Datenbank ein Datensatz mit der Zahl 1 die `ID: 1`, der `First Name: admin` und der `Surname: admin` verknüpft sind.
 
 **Was heißt das jetzt?** 
 Nichts - denn letztlich haben wir mit einer solchen Abfrage eine ganz normale und für die Anwendung vorgesehene Abfrage durchgeführt. Wir haben einfach eine ID verwendet und haben sogar herausgefunden, dass dieser Datensatz entpsrechend vorhanden ist.
@@ -186,7 +187,7 @@ Machen wir weiter!
 ### Beginnen wir mit der SQL-Injection
 
 > Solltest du noch nicht wissen, was SQL-Injection sind, dann sieh dir bitte unseren kurzen Leitfaden zu diesem Thema an:
-[SQL-Injection Cheat Sheet](/03-web-security/sql-injection/sql-injection-cheatsheet.md).
+[SQL-Injection Cheat Sheet](/03-web-security/angriffe/sql-injektionen/sql-injection-cheatsheet.md).
 
 
 
@@ -203,7 +204,7 @@ Ein Apostroph `'` ist ein einfacher Payload. In der Syntax beendet ein Apostroph
 
 Dadurch können wir vielleicht einen Fehler erzeugen und herausfinden, welche Syntax-Sprache für diese Art von SQL-Abfrage genutzt wird.
 
-Hier erfährst du mehr über den [Break von SQLi](03-web-security/break-fix/break_and_fix_query.md)
+Hier erfährst du mehr über den [Break aus SQL-Queries](/03-web-security/angriffe/sql-injektionen/break_and_fix_query.md)
 
 Probieren wir es aus. Schreib ein `'` (Apostroph) in das Eingabefeld und drück auf `Submit`.
 
@@ -238,7 +239,7 @@ Klicke anschließend unten rechts auf `View Source`, um dir den Source Code anzu
 
 ![SQL-Injection Source Code](/09-practice-labs/ressourcen/pictures/dvwa-sqli-5.png)
 
-Wir wir sehen, hatte wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richtige Syntax siehst du im Bild oben.
+Wir wir sehen, hatten wir mit unserer SQL-Syntax nicht so ganz unrecht. Die richtige Syntax siehst du im Bild oben.
 
 
 
@@ -256,7 +257,7 @@ Eine bekannte Abfrage ist `1' OR '1'='1`. Gib diese Abfrage in das Eingabefeld e
 
 Erste Iteration, direkter Erfolg! Das ist Glück. In der Praxis sollte das natürlich kein Standard sein, da dies zu erheblichen Sicherheitseinbußen führen kann, wenn Angreifen durch Angriffe sensible Daten stehlen und sie ggfs. im Internet offenlegen bzw. verkaufen.
 
-
+Aber warum ist das passiert? Du musst verstehen, dass die Logik hinter dem Befehl `' OR '1'='1` immer wahr, also `true` ist. Denn `1` ist gleich `1`. Somit erhalten wir immer Ergebnisse, sofern das Sanitizing im Code nicht richtig durchgeführt wird.
 
 <div align=right>
 
@@ -335,11 +336,11 @@ Nach dem `Order By` iterieren wir mit Zahlen weiter. Also zum Beispiel`Order By 
 
 **Beachte:** Je nach Syntax der bevorzugten Datenbank, musst du `#` (wie MariaDB) oder `--` (MySQL) probieren, um einen Kommentar nach deiner SQL-Injection einzuleiten.
 
-Beispiel:
+Beispiel anhand SQL-Syntax:
 ```sql
-SELECT * From User Where user.name LIKE "Admin%" #AND user.password = "test";
+SELECT * From User Where user.name LIKE "Admin%" -- AND user.password = "test";
 ```
-Alles, in dieser Abfrage nach dem "Hashtag" kommt, wird im Interpreter ignoriert.
+Alles, was in dieser Abfrage nach `--` kommt, wird im Interpreter ignoriert.
 
 Hast du bemerkt, wie sich die URL verändert hat?
 
@@ -452,8 +453,11 @@ Sieh an, was wir herausgefunden haben:
 
 ![UNION Based Attack Payload](/09-practice-labs/ressourcen/pictures/dvwa-sqli-12.png)
 
+(Die Passwörter sind noch verschlüsselt und du müsstest sie in Klartext noch umwandeln.)
+
 Wir haben nun die 5 Datensätze herausgefunden und die Challenge damit erfolgreich bestanden.
 Herzlichen Glückwunsch zu deiner ersten erfolgreichen SQL-Injection.
+
 
 Folgende Schritte kannst du nun umsetzen:
 - Weitermachen, mit dem, was du bisher an Erfahrung gesammelt hast.
@@ -486,7 +490,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

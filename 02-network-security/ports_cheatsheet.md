@@ -150,7 +150,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 ## Beispiel: Verbindungsaufbau TCP vs. UDP
 
 ### TCP (z. B. HTTP, SSH)
-- **Verbindungsorientiert** und zuverlässig. Es findet ein "Handshake" statt, um sicherzustellen, dass die Verbindung aufgebaut ist und Daten korrekt ankommen.
+- **Verbindungsorientiert** und zuverlässig. Es findet ein "**Handshake**" statt, um sicherzustellen, dass die Verbindung aufgebaut ist und Daten korrekt ankommen.
 
 <div align=right>
 

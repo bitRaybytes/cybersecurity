@@ -90,7 +90,7 @@ Finde das Passwort für das nächste Level `natas1`.
 </div>
 
 
-## Natas 0 ➝ 1
+## Natas 1 ➝ 2
 
 Username:   natas1
 
@@ -118,7 +118,7 @@ In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu
 </div>
 
 
-## Natas 1 ➝ 2
+## Natas 2 ➝ 3
 
 Username:   natas2
 
@@ -168,7 +168,7 @@ Klick auf die Datei, um das Passwort zu erhalten.
 </div>
 
 
-## Natas 2 ➝ 3
+## Natas 3 ➝ 4
 
 Username:   natas3
 
@@ -223,7 +223,7 @@ Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für d
 </div>
 
 
-## Natas 3 ➝ 4
+## Natas 4 ➝ 5
 
 Username:   natas4
 
@@ -254,7 +254,7 @@ Wenn du mehr über das Thema `headers` in HTML-Request erfahren willst, kannst d
 Sobald du auf die Aufzeichnung klickst, tauchen rechts weitere Informationen dazu auf.
 Es gibt zwei Möglichkeiten für dich nun vorzugehen.
 
-Entweder du drückst auf bei `Request Headers` auf den Button `Raw` und siehst die rohe Fassung. Das hat den Vorteil, dass du beispielsweise im Reiter `Console` die in `JavaScript` vorhandene WebAPI `fetch` verwenden kannst, die die Daten einer Webseite `fetchen` also anfordern kann.
+Entweder du drückst im `Request Headers` auf den Button `Raw` und siehst die rohe Fassung. Das hat den Vorteil, dass du beispielsweise im Reiter `Console` die in `JavaScript` vorhandene WebAPI `fetch` verwenden kannst, die die Daten einer Webseite `fetchen` also anfordern kann.
 
 Falls du den Header über die `fetch`-API nutzen willst, kopierst du die `Raw`-Fassung des Request-Headers, klickst du auf den Reiter `Console`, und gibst folgenden Befehl ein:
 
@@ -315,7 +315,7 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 
 
 
-## Natas 4 ➝ 5
+## Natas 5 ➝ 6
 
 Username:   natas5
 
@@ -358,7 +358,7 @@ Und siehe da, wir erhalten das Passwort im Terminal.
 </div>
 
 
-## Natas 5 ➝ 6
+## Natas 6 ➝ 7
 
 Username:   natas6
 
@@ -409,7 +409,7 @@ Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, soll
 </div>
 
 
-## Natas 6 ➝ 7
+## Natas 7 ➝ 8
 
 Username:   natas7
 
@@ -439,7 +439,7 @@ Es sagt also folgendes im URL Browser:
 
 Um es einfach auszudrücken :).
 
-Versuche nun mit Tipp aus der Homepage, ob du an das Passwort kommst.
+Versuche nun mit dem Tipp der Homepage, ob du an das Passwort kommst.
 
 Gib im Browser folgende URL ein und du solltest das Passwort erhalten:
 
@@ -461,7 +461,7 @@ http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 </div>
 
 
-## Natas 7 ➝ 8
+## Natas 8 ➝ 9
 
 Username:   natas8
 
@@ -505,7 +505,7 @@ curl -u natas8:passwort -o html.html http://natas8.natas.labs.overthewire.org/in
 
 Falls du keinen Pfad angegeben hast, schau in Linux in deinem `home`-Verzeichnis nach. Da bewegst du dich als User standardmäßig, wenn du das Terminal öffnest und eine Shell-Session startest.
 
-Wenn du die `index-source.html` erfolgreich in `html.html` heruntergeladen hast, kannst die Datei per Doppeklick oder über den Terminal-Befehl öffnen:
+Wenn du die `index-source.html` erfolgreich in `html.html` heruntergeladen hast, kannst du die Datei per Doppeklick oder über den Terminal-Befehl öffnen:
 
 ```bash
 firefox html.html # startet die Datei in Firefox (ich nutze Firefox hier)
@@ -525,7 +525,7 @@ function encodeSecret($secret) {                    // function mit Parameter ($
 ```
 Ausschlaggebend ist, wie das Passwort mit dieser Funktion verschlüsselt wird. Also solltest du das gleiche tun.
 
-Kopiere den Wert der Variabel `$encodedSecret` und gib im Terminal folgenden Befehle ein:
+Kopiere den Wert der Variable `$encodedSecret` und gib im Terminal folgenden Befehle ein:
 
 ```bash
 echo "3d3d516343746d4d6d66c315669563362" | xxd -r -p   
@@ -554,7 +554,7 @@ Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Ein
 </div>
 
 
-## Natas 8 ➝ 9
+## Natas 9 ➝ 10
 
 Username:   natas9
 
@@ -608,7 +608,7 @@ Du musst diesen Code "escapen" indem du ein `;` eingibst und anschließend deine
 
 Stell dir mit dem `passthru()`-Code so vor:
 Angenommen unsere Eingabe lautet "test"
-Dann kannst du dasvon ausgehen, dass der Code folgendermaßen übergeben wird:
+Dann kannst du davon ausgehen, dass der Code folgendermaßen übergeben wird:
 
 ```php
 passthru("grep -i test dictionary.txt"); // Funktion würde nun nach test in der dictionary.txt suchen und dir alles ausgeben.
@@ -633,7 +633,7 @@ Dieser Befehl sollte dir das `/etc/`-Verzeichnis auflisten.
 
 ![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/natas10c.png)
 
-Nun wissen wir, dass durch die Fehlverarbeitung des Codes (ohne Prüfung auf Command Injections)
+Nun wissen wir, dass durch die Fehlverarbeitung des Codes (ohne Prüfung auf Command Injections), Befehle eingegeben werden können, die auf dem Server verarbeitet werden.
 
 Drücke `Strg` + `F` (Windows) bzw `Cmd` + `F` (Mac/Linux) und suche nach `natas`. Das sollte dir die vorhandenen Verzeichnisse auflisten, die in deren Bezeichnung "natas" vorkommt.
 
@@ -662,7 +662,7 @@ Damit solltest du das Passwort für die nächste Challenge erhalten.
 </div>
 
 
-## Natas 9 ➝ 10
+## Natas 10 ➝ 11
 
 Username:   natas10
 
@@ -676,7 +676,7 @@ URL:        http://natas10.natas.labs.overthewire.org
 
 Selbes Spiel, wie das Level zuvor.
 
-Wenn du diesmal den Sourcode betrachtest, dann erkennst du, dass eine Validierung vorgenommen wurde.
+Wenn du diesmal den Sourcode betrachtest, dann erkennst du, dass eine Validierung vorgenommen wird.
 
 Es wird diesmal überprüft, ob illegale Zeichen verwendet werden:
 
@@ -725,7 +725,7 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 </div>
 
 
-## Natas 10 ➝ 11
+## Natas 11 ➝ 12
 
 Username:   natas11
 

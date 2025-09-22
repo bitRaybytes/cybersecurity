@@ -1,4 +1,4 @@
-# OWASP Juice Shop Installation
+# OWASP Juice Shop Installation auf Kali
 
 ## Inhaltsverzeichnis
 - [1. Was ist OWASP Juice Shop](#1-was-ist-owasp-juice-shop)
@@ -42,6 +42,7 @@ Gib im Termial deiner Kali folgenden Befehle ein, um dein System und Programme z
 sudo apt update && sudo apt upgrade -y
 ```
 
+Ich habe auch ein Update Script mit Log-Dateien, welches du dir ansehen kannst. Das Script findest du hier: [https://github.com/bitRaybytes/bashscripts/blob/main/tools/SystemTools/update.sh](https://github.com/bitRaybytes/bashscripts/blob/main/tools/SystemTools/update.sh)
 
 <div align=right>
 

@@ -121,7 +121,7 @@ nmap -sS -sV 192.168.1.102
 - **`-sS`:** Dieser Switch scannt tausende Ports in kurzer Zeit und nutzt dabei SYN-Pakete um die Server zu erreichen. Wird auch als `half-open scan` bezeichnet, weil keine ACK stattfindet.
 - **`-sV`:** findet heraus, welche Programme den Port belauschen.
 
-Mehr zu SYN und ACK findest du in unserem [TCP-Guide](/02-network-security/tcp_ip_basics.md).
+Mehr zu SYN und ACK findest du in unserem [TCP-Guide](/02-network-security/grundlagen/tcp_ip_basics.md).
 
 **ODER**
 
