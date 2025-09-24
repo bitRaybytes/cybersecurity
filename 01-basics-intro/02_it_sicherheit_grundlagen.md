@@ -188,11 +188,6 @@ Die Informationssicherheit basiert auf den drei Hauptschutzzielen, die oft als C
     - **Zugriffsberechtigungen:** Beschränkung von Schreib- und Änderungsrechten.
     - Fehlerkorrektur-Mechanismen.
 
-<div align=right>
-
-[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
-
-</div>
 
 **Beispiele für Fehlerkorrektur:**
 

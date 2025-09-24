@@ -1,7 +1,6 @@
-# 📊 Log Analysis Guide
+# 📊 Log Analysen Guide
 
-## Ziel dieser Datei
-
+## Ziel
 Diese Datei bietet eine Übersicht zum Thema **Log-Analyse** im Bereich Cybersecurity. Sie hilft bei der Erkennung von Angriffsmustern, der forensischen Nachverfolgung von Vorfällen und der allgemeinen Sicherheitsüberwachung von Systemen und Netzwerken.
 
 
