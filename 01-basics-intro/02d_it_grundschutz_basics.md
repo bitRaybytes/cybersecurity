@@ -49,11 +49,10 @@ Die IT-Grundschutz-Methode ist darauf ausgelegt, ein angemessenes und umsetzbare
 ## BSI-Standard 200-2: IT-Grundschutz Methodik
 Der BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau eines ISMS. Zur Umsetzung dieser Absicherung gibt es drei Vorgehensweisen:
 
-- BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau eines ISMS.
-- Zur Umsetzung dieser Absicherung gibt es drei Vorgehensweisen:
-    - **Basis-Absicherung:** Ein ISMS wird mit einem reduzierten Aufwand implementiert, um schnell ein grundlegendes Sicherheitsniveau zu erreichen.
-    - **Standard-Absicherung:** Diese Vorgehensweise implementiert einen kompletten Sicherheitsprozess auf Basis der im Kompendium definierten Bausteine.
-    - **Kern-Absicherung:** Wie die Basis-Absicherung, aber mit Fokus auf besonders schützenswerte Kerndaten oder -prozesse.
+
+- **Basis-Absicherung:** Ein ISMS wird mit einem reduzierten Aufwand implementiert, um schnell ein grundlegendes Sicherheitsniveau zu erreichen.
+- **Standard-Absicherung:** Diese Vorgehensweise implementiert einen kompletten Sicherheitsprozess auf Basis der im Kompendium definierten Bausteine.
+- **Kern-Absicherung:** Wie die Basis-Absicherung, aber mit Fokus auf besonders schützenswerte Kerndaten oder -prozesse.
 
 
 <div align=right>
