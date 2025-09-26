@@ -52,26 +52,26 @@ Bevor du mit der Installation beginnst, solltest du die grundlegende Netzwerkarc
 
 Hier ist ein einfaches Schema für eine sichere Lab-Umgebung:
 ```text
-                           +-----------------------+
-                           |      Host-System      |
-                           |    (Windows/Linux)    |
-                           +-----------+-----------+
+                            +-----------------------+
+                            |      Host-System      |
+                            |    (Windows/Linux)    |
+                            +----------+------------+
                                        |
                                        |  Virtuelle Netzwerkbrücke
                                        |
                             +----------+-----------+
                             |      pfSense VM      |
                             +----------+-----------+
-                                  | WAN (Adapter 1)
-                                  |
-                            +-----+-----------------+
+                                       |  WAN (Adapter 1)
+                                       |
+                            +----------+------------+
                             |    Internes Netzwerk  |
                             |     (z.B. Labnet)     |
-                            +--------+--------------+
-                                     |
-                            +--------+-----+-------------+------------+
-                            |  Lab-VM 1    |  Lab-VM 2   |  Lab-VM 3  |
-                            +--------------+-------------+------------+
+                            +----------+------------+
+                                       |
+                 +--------------+------+------+------------+
+                 |  Lab-VM 1    |  Lab-VM 2   |  Lab-VM 3  |
+                 +--------------+-------------+------------+
 ```
 
 <div align=right>

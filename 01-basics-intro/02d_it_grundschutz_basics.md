@@ -2,15 +2,16 @@
 
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
-- [BSI-Standard 200-1 Managementsysteme für Informationssicherheit (ISMS)](#bsi-standard-200-1-managementsysteme-für-informationssicherheit-isms)
-- [BSI-Standard 200-2: IT-Grundschutz Methodik](#bsi-standard-200-2-it-grundschutz-methodik)
-- [BSI-Standard 200-3: Risikoanalyse](#bsi-standard-200-3-risikoanalyse)
-- [BSI-Standards 200-4: Business Continuity Management (BCM)](#bsi-standards-200-4-business-continuity-management-bcm)
+- [BSI-Standards](#bsi-standards)
+    - [BSI-Standard 200-1 Managementsysteme für Informationssicherheit (ISMS)](#bsi-standard-200-1-managementsysteme-für-informationssicherheit-isms)
+    - [BSI-Standard 200-2: IT-Grundschutz Methodik](#bsi-standard-200-2-it-grundschutz-methodik)
+    - [BSI-Standard 200-3: Risikoanalyse](#bsi-standard-200-3-risikoanalyse)
+    - [BSI-Standards 200-4: Business Continuity Management (BCM)](#bsi-standards-200-4-business-continuity-management-bcm)
 - [IT-Grundschutz-Kompendium](#it-grundschutz-kompendium)
-- [Die Baustein-Typen](#die-baustein-typen)
-- [Die Anforderungen](#die-anforderungen)
-- [Der Muster-Prozess im Überblick](#der-muster-prozess-im-überblick)
-- [Nützliche Links]()
+    - [Die Baustein-Typen](#die-baustein-typen)
+    - [Die Anforderungen](#die-anforderungen)
+    - [Der Muster-Prozess im Überblick](#der-muster-prozess-im-überblick)
+- [Nützliche Links](#nützliche-links)
 - [Haftungsausschluss](#haftungsausschluss)
 
 
@@ -34,7 +35,12 @@ Die IT-Grundschutz-Methode ist darauf ausgelegt, ein angemessenes und umsetzbare
 
 </div>
 
-## BSI-Standard 200-1 Managementsysteme für Informationssicherheit (ISMS)
+## BSI-Standards
+Ein elementarer Bestandteil des IT-Grundschutzes bilden die BSI-Standards, die die Methoden, Prozesse, Verfahren sowie Empfehlungen beinhalten, die im Rahmen unterschiedlicher Aspekte der Informationssicherheit beachtet werden sollten, damit ein ganzheitlicher Schutz der IT-Systeme gewährleistet werden kann.
+
+Die BSI-Standards hat das BSI auf seiner Homepage, welche du [hier findest](https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Standards-und-Zertifizierung/IT-Grundschutz/BSI-Standards/bsi-standards_node.html).
+
+### BSI-Standard 200-1 Managementsysteme für Informationssicherheit (ISMS)
 
 - Beschreibt, welche grundlegenden Anforderungen ein ISMS erfüllen muss.
 - Erläutert, welche Komponenten ein ISMS enthalten sollte und welche Aufgaben Leitungsebenen übernehmen müssen.
@@ -46,7 +52,7 @@ Die IT-Grundschutz-Methode ist darauf ausgelegt, ein angemessenes und umsetzbare
 
 </div>
 
-## BSI-Standard 200-2: IT-Grundschutz Methodik
+### BSI-Standard 200-2: IT-Grundschutz Methodik
 Der BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau eines ISMS. Zur Umsetzung dieser Absicherung gibt es drei Vorgehensweisen:
 
 - BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau eines ISMS.
@@ -62,7 +68,7 @@ Der BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau ei
 
 </div>
 
-## BSI-Standard 200-3: Risikoanalyse
+### BSI-Standard 200-3: Risikoanalyse
 
 - Der BSI-Standard 200-3 beschreibt die Methodik der Risikoanalyse auf Basis des IT-Grundschutzes.
 - Der Vorteil liegt hier im deutlich reduzierten Aufwand, da Risiken nur für Bereiche bewertet werden, in denen der Standard-Schutz nicht ausreicht oder spezielle Bedrohungen bestehen.
@@ -75,7 +81,7 @@ Der BSI-Standard 200-2 bildet die Basis der notwendigen Maßnahmen zum Aufbau ei
 
 </div>
 
-## BSI-Standards 200-4: Business Continuity Management (BCM)
+### BSI-Standards 200-4: Business Continuity Management (BCM)
 
 - BSI-Standard 200-4 beinhaltet eine praxisnahe Anleitung, um ein BCM-System (BCMS) in der eigenen Institution aufzubauen.
 - Es geht auf potentielle Synergiemöglichkeiten mit Themen der IT-Sicherheit und des Krisenmanagements ein.
@@ -131,13 +137,13 @@ Jeder Baustein gehört einem Themenbereich an, die mit einem spezifischen Präfi
 
     - **Aufgabe:** Behandelt allgemeine Systemkomponenten, die in der Organisation verwendet werden.
 
-    - **Beispiel:** SYS.1 Allgemeine Server, SYS.2 Clients, SYS.3 Mobile Endgeräte.
+    - **Beispiel:** SYS.1 `Allgemeine Server`, SYS.2 `Clients`, SYS.3 `Mobile Endgeräte`.
 
 - **NET (Netzwerke und Infrastruktur):**
 
     - **Aufgabe:** Behandelt alle Aspekte der Netzwerksicherheit.
 
-    - **Beispiel:** NET.1 Netzwerkmanagement, NET.2 Wireless LAN, NET.3 Fernzugriff.
+    - **Beispiel:** NET.1 `Netzwerkmanagement`, NET.2 `Wireless` `LAN`, NET.3 `Fernzugriff`.
 
 - **APP (Anwendungen):**
 
@@ -173,7 +179,7 @@ Die Anforderungen sind die konkreten Sicherheitsmaßnahmen, die umgesetzt werden
 
 </div>
 
-## Der Muster-Prozess im Überblick
+### Der Muster-Prozess im Überblick
 Die Umsetzung des IT-Grundschutzes folgt einem klaren, iterativen Prozess, der in der Praxis angewendet wird.
 
 ```text

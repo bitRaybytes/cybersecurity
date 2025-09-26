@@ -265,7 +265,7 @@ ACPI (Advanced Configuration and Power Interface) ist ein Standard, der dem OS e
           |
           v
 +-------------------------------------------+
-| S4 (Hibernate)  -- RAM => Disk (hiberfil)|
+| S4 (Hibernate)  -- RAM => Disk (hiberfil) |
 +-------------------------------------------+
           |
           v

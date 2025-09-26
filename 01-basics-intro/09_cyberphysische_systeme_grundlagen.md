@@ -39,6 +39,8 @@ Ein **Cyber-Physisches System** (**CPS**) ist ein System, das physische Komponen
 
 - **Energie- & Wassermanagement:** Systeme zur automatisierten Einsparung von Energie und Wasser.
 
+- und viele mehr...
+
 
 <div align=right>
 

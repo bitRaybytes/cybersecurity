@@ -213,7 +213,7 @@ Gerade in **Server-Umgebungen** ist die Stabilität und Korrektheit der Daten en
 
 
 ## Sicherheitsrelevanz von RAM
-Aus der Sicht eines IT-Sicherheitsexperten ist RAM nicht nur eine Rechenressource, sondern auch ein potenzielles Angriffsziel. Physischer Zugriff auf den Arbeitsspeicher kann es Angreifern ermöglichen, sensible Daten wie Verschlüsselungsschlüssel oder Passwörter zu extrahieren, selbst nachdem das System heruntergefahren wurde (Cold Boot Attack). Zudem können Angreifer über Schnittstellen mit **Direct Memory Access** (**DMA**) den Arbeitsspeicher direkt manipulieren, ohne dass das Betriebssystem dies bemerkt.
+Aus der Sicht eines IT-Sicherheitsexperten ist RAM nicht nur eine Rechenressource, sondern auch ein potenzielles Angriffsziel. Physischer Zugriff auf den Arbeitsspeicher kann es Angreifern ermöglichen, sensible Daten wie Verschlüsselungsschlüssel oder Passwörter zu extrahieren, selbst nachdem das System heruntergefahren wurde (Cold Boot Attack). Zudem können Angreifer über Schnittstellen mit **Direct Memory Access** (**DMA**) den Arbeitsspeicher direkt manipulieren, ohne, dass das Betriebssystem dies bemerkt.
 
 
 
