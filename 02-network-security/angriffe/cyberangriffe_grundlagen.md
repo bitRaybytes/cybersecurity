@@ -122,7 +122,7 @@ Für DDoS-Angriffe werden oft Botnets genutzt. Ein Botnet ist ein Netzwerk infiz
 Social Engineering bezeichnet die Manipulation von Menschen, um an vertrauliche Informationen zu gelangen.
 
 - **Phishing:** 
-    - Massenhaft versendete E-E-Mails, die vorgeben, von einer seriösen Quelle zu stammen (z. B. einer Bank), um Zugangsdaten oder andere sensible Informationen abzufischen.
+    - Massenhaft versendete E-Mails, die vorgeben, von einer seriösen Quelle zu stammen (z. B. einer Bank), um Zugangsdaten oder andere sensible Informationen abzufischen.
 
 - **Spear-Phishing:** 
     - Ein gezielter Phishing-Angriff auf eine bestimmte Person oder Organisation.

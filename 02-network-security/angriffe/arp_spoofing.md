@@ -3,7 +3,7 @@
 **ARP-Spoofing (auch ARP-Poisoning)** ist ein Angriff auf die **Adress Resolution Protocol (ARP)-Tabelle** in einem lokalen Netzwerk (LAN).  
 Der Angreifer manipuliert ARP-Antworten, sodass Datenverkehr zwischen zwei Geräten über ihn selbst umgeleitet wird.  
 
-Mehr zum Thema `ARP` erfährst du hier: [arp_grundlagen.md](/02-network-security/arp_grundlagen.md)
+Mehr zum Thema `ARP` erfährst du hier: [arp_grundlagen.md](/02-network-security/grundlagen/arp_grundlagen.md)
 
 ## Inhaltsverzeichnis
 - [Grundlagen: Was ist ARP?](#grundlagen-was-ist-arp)

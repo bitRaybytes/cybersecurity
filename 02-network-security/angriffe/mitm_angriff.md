@@ -146,7 +146,7 @@ Hierbei schaltet sich der Angreifer in eine HTTPS-Verbindung ein.
 ## Nützliche Links
 - [Wikipedia: Man-in-the-Middle-Angriff](https://de.wikipedia.org/wiki/Man-in-the-Middle-Angriff)
 - [Wikipedia: ARP Spoofing](https://de.wikipedia.org/wiki/ARP-Spoofing)
-- [arp_spoofing.md](/02-network-security/arp_spoofing.md) 
+- [arp_spoofing.md](/02-network-security/angriffe/arp_spoofing.md) 
 
 
 

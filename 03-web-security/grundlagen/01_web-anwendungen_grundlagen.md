@@ -172,9 +172,9 @@ Eine **URL** (**Uniform Resource Locator**) ist die eindeutige Adresse, die im B
                                 |         |            |
                          |------v----|  |-v--|    |----v----|
  http://benutzer:password@beispiel.de:80/seite?id=1#aufgabe2
-|-^-|  |--------^--------|            |^|     |-^-|
-  |             |                      |        |
-Schema      Benutzer                  Port    Query 
+ |-^-| |--------^--------|            |^|     |-^-|
+   |             |                      |        |
+Schema       Benutzer                  Port    Query 
                                               String
 ```
 
@@ -202,7 +202,7 @@ Schema      Benutzer                  Port    Query
 
 **HTTP-Nachrichten** sind die fundamentalen Datenpakete, die zwischen dem Browser (Client) und dem Web-Server ausgetauscht werden. Sie bestehen aus einem **Request** (Anfrage) vom Client und einem **Response** (Antwort) vom Server.
 
-Kennzeichnend für HTTP-Messages sind bspw. die **Methode** (GET/POST/...), Header und Status-Codes (z.B. `404`).
+Kennzeichnend für HTTP-Messages sind bspw. die **Methode** (`GET`/`POST`/...), Header und Status-Codes (z.B. `404`).
 
 **Jede HTTP-Nachricht folgt einem festen Format:**
 
@@ -257,6 +257,10 @@ HTTP-Methoden definieren, welche Aktion mit der angeforderten Ressource durchgef
 | **PATCH**     | Führt eine teilweise Aktualisierung einer Ressource durch. | Dient zur Modifikation von Ressourcen. |
 | **HEAD**     | Ist wie GET, aber es wird nur der Header der Antwort geliefert, nicht der Body. | Wird zur schnellen Überprüfung von Meta-Informationen genutzt, ohne große Datenmengen zu laden. |
 | **OPTIONS**     | Fordert Informationen über die Kommunikationsoptionen der Zielressource an. | Kann Aufschluss über erlaubte Methoden geben. |
+
+***Idempotenz*** beschreibt in der Informatik, dass selbst bei mehrfacher Ausführung eines API-Aufrufs derselbe Zustand erreicht wird, wie bei einmaliger Ausführung.
+
+**Beispiel:** Ein Status auf wird "Fertig" gesetzt. Beim erneutem Aufruf der API bleibt der Status auf "Fertig", statt ihn mehrmals zu setzen.
 
 
 

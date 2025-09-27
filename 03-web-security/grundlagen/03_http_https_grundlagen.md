@@ -89,9 +89,9 @@ Ein [**digitales Zertifikat**](/06-crypto-stego/kryptografie/02_digitale_zertifi
 
 Wenn du eine Website mit HTTPS besuchst, siehst du in der Adressleiste deines Browsers ein kleines Schlosssymbol. Das ist das Zeichen dafür, dass die Verbindung sicher ist.
 
-- **Grünes Schloss:** Die Verbindung ist sicher und das Zertifikat ist gültig.
+- **Verschlossenes Schloss:** Die Verbindung ist sicher und das Zertifikat ist gültig.
 
-- **Rotes Schloss oder Warnsymbol:** Es gibt ein Problem mit der Sicherheit der Verbindung, z. B. ein abgelaufenes Zertifikat oder eine unsichere Konfiguration.
+- **Offenes Schloss oder Warnsymbol:** Es gibt ein Problem mit der Sicherheit der Verbindung, z. B. ein abgelaufenes Zertifikat oder eine unsichere Konfiguration.
 
 Immer wenn du sensible Daten wie Passwörter, Finanzinformationen oder persönliche Nachrichten eingibst, solltest du sicherstellen, dass die Verbindung über HTTPS läuft.
 

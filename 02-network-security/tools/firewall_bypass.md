@@ -42,14 +42,14 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 ## Arten von Firewalls
 
-| Firewall-Typ            | Beschreibung                                         |
-|--------------------------|------------------------------------------------------|
-| Paketfilter (Stateless)  | Analysiert nur Header (z. B. IP, Port, Protokoll)   |
-| Stateful Firewall        | Erkennt Verbindungskontexte (SYN → ACK etc.)        |
-| Application Firewall     | Analysiert Inhalte auf Anwendungsebene (HTTP, FTP)  |
-| Web Application Firewall (WAF) | Schutz vor typischen Web-Angriffen (SQLi, XSS)     |
-| Host-Based Firewall      | Lokal auf Systemen (z. B. Windows Defender Firewall) |
-| Next-Gen Firewalls       | Kombinieren mehrere Funktionen inkl. IDS/IPS        |
+| Firewall-Typ            | Beschreibung                                        |
+|-------------------------|-----------------------------------------------------|
+| Paketfilter (Stateless) | Analysiert nur Header (z. B. IP, Port, Protokoll)   |
+| Stateful Firewall       | Erkennt Verbindungskontexte (SYN → ACK etc.)        |
+| Application Firewall    | Analysiert Inhalte auf Anwendungsebene (HTTP, FTP)  |
+| Web Application Firewall (WAF)| Schutz vor typischen Web-Angriffen (SQLi, XSS)|
+| Host-Based Firewall     | Lokal auf Systemen (z. B. Windows Defender Firewall)|
+| Next-Gen Firewalls      | Kombinieren mehrere Funktionen inkl. IDS/IPS        |
 
 
 
@@ -78,7 +78,7 @@ Ein **Firewall Bypass** bezeichnet die **Umgehung dieser Filtermechanismen**, z.
 
 ## Häufige Techniken zur Umgehung
 
-### 1. **Tarnung über erlaubte Ports**
+### 1. Tarnung über erlaubte Ports
 > Firewalls blockieren oft alles außer HTTP (80), HTTPS (443), DNS (53), usw.
 
 Beispiel:
@@ -101,8 +101,7 @@ Oder:
 
 
 ### 2. Payload Obfuscation
-
-    Inhalte verschleiern, um Signaturen zu umgehen (z. B. bei WAFs)
+Inhalte verschleiern, um Signaturen zu umgehen (z. B. bei WAFs)
 
 Beispiele:
 ```bash
@@ -112,7 +111,7 @@ Beispiele:
 # Unicode-Encoding
 ?id=1%u002f%u002aUNION%u002f%u002aSELECT...
 
-# Hex oder Base64 verschlüsselt
+# Hex oder Base64 verschlüsselt sind auch noch weitere Verfahren einer PO
 ```
 
 
@@ -141,7 +140,7 @@ nmap -f target.com      # Fragmentierter Scan
 
 ### 4. Protocol Tunneling (DNS, ICMP, HTTP)
 
-    Verbotene Protokolle über erlaubte Protokolle transportieren
+Verbotene Protokolle über erlaubte Protokolle transportieren.
 
 Tools:
 

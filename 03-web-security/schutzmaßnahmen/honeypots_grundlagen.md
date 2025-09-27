@@ -264,7 +264,7 @@ Honeypots sind ein mächtiges Werkzeug, aber sie bergen auch Risiken, die unbedi
 
 ## Nützliche Links
 
-- [Tryhackme: Introduction to Honepots](https://tryhackme.com/room/introductiontohoneypots)
+- [Tryhackme: Introduction to Honeypots](https://tryhackme.com/room/introductiontohoneypots)
 - [Kaspersky What is a Honeypot](https://www.kaspersky.de/resource-center/threats/what-is-a-honeypot)
 - [Wikipedia: Honeypot](https://de.wikipedia.org/wiki/Honeypot)
 - [https://www.msxfaq.de/windows/sicherheit/honeypot.htm](https://www.msxfaq.de/windows/sicherheit/honeypot.htm)

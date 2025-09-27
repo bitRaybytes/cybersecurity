@@ -15,8 +15,8 @@
     - [4. WAF (Web-application-firewall)](#4-waf-web-application-firewall)
 - [Statische vs. Dynamische Inhalte](#statische-vs-dynamische-inhalte)
     - [Frontend und Backend](#frontend-und-backend)
-- [Zusammenspiel – Request → Response](#zusammenspiel--request--response)
-
+- [Zusammenspiel – Request → Response](#zusammenspiel---request---response)
+- [Haftungsausschluss](#haftungsausschluss)
 
 
 <div align=right>
@@ -265,9 +265,9 @@ Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier 
 +------------------------+
         |
         v
-+---------------------------+       +-------------+
-| Backend (PHP, Python, ...) | ---> | Datenbank   |
-+---------------------------+       +-------------+
++---------------------------+       +-----------+
+| Backend (PHP, Python, ...)| ----> | Datenbank |
++---------------------------+       +-----------+
 ```
 
 
@@ -280,7 +280,7 @@ Die Logik und Verarbeitung, die im Hintergrund ablaufen, sind das Backend. Hier 
 
 </div>
 
-## Zusammenspiel – Request → Response
+## Zusammenspiel - Request -> Response
 
 1. Ablauf einer Webseiten-Anfrage:
 2. User gibt Domain ein (`www.example.com`)

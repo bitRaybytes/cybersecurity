@@ -160,7 +160,7 @@ ip neigh show
 
 Da ARP **keine Authentifizierung** vorsieht:
 - Jeder Host im LAN kann **falsche ARP-Antworten** senden.
-- Diese Schwachstelle ermöglicht **ARP-Spoofing/Poisoning** (-> siehe [arp-spoofing.md](/02-network-security/arp_spoofing.md)).
+- Diese Schwachstelle ermöglicht **ARP-Spoofing/Poisoning** (-> siehe [arp-spoofing.md](/02-network-security/angriffe/arp_spoofing.md)).
 
 ```text
 [Normales ARP]

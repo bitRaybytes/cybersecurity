@@ -133,21 +133,21 @@ Die wichtigste Maßnahme ist die Begrenzung der Anmeldeversuche. Nach einer best
 - Zeitverzögerung einbauen.
 
 ```text
-+--------------------------+
-|  Benutzer meldet sich an |
-+--------------------------+
-          |
-          V
++-------------------------+
+| Benutzer meldet sich an |
++-------------------------+
+             |
+             V
 +---------------------------------+
 |  1. Versuch (falsches PW)       |
 |  2. Versuch (falsches PW)       |
 |  3. Versuch (falsches PW)       |
 +---------------------------------+
-          |
-          V
-+-------------------------------------+
-|  ❌ Zugriff gesperrt für 30 Minuten |
-+-------------------------------------+
+             |
+             V
++---------------------------------+
+| Zugriff gesperrt für 30 Minuten |
++---------------------------------+
 ```
 
 

@@ -131,7 +131,7 @@ Ein Frame besteht aus Header (Ziel-MAC, Quell-MAC), den Daten und einem Trailer 
 ```text
 Ein Paket-Header enthält die IP-Adressen von Sender und Empfänger.
 +----------------------------------------+
-| Ziel-IP  | Quell-IP  | Daten            |
+| Ziel-IP  | Quell-IP  | Daten           |
 +----------------------------------------+
 ```
 
@@ -247,7 +247,7 @@ Der Datenfluss im OSI-Modell folgt dem Prinzip der **Kapselung (Encapsulation)**
 </div>
 
 
-### 📥 Kapselung (Sender)
+### Kapselung (Sender)
 
 Die Daten werden von oben nach unten durch die Schichten geleitet. Jede Schicht fügt den Daten einen eigenen Header (H) hinzu, bis die Bits zur Übertragung bereit sind.
 
@@ -290,7 +290,7 @@ Die Daten werden von oben nach unten durch die Schichten geleitet. Jede Schicht 
 +----------+-----------------------------------------+
               |
               V
-              B I T S
+            B I T S
 ```              
 
 **Anmerkung:** Schicht 2 (Data Link) fügt zusätzlich zum Header (H2) auch einen Trailer (T2) hinzu.
@@ -303,12 +303,12 @@ Die Daten werden von oben nach unten durch die Schichten geleitet. Jede Schicht 
 </div>
 
 
-### 📤 Entkapselung (Empfänger)
+### Entkapselung (Empfänger)
 
 Am Empfänger werden die Bits wieder in die ursprüngliche Form zurückverwandelt, indem die Header von unten nach oben Schicht für Schicht entfernt werden.
 
 ```text
-              B I T S
+            B I T S
               ^
               |
 +----------+-----------------------------------------+
