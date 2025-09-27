@@ -167,10 +167,10 @@ In dieser letzten Phase führt der Angreifer seine eigentlichen Ziele aus, wie D
        (Info sammeln)       (Waffe erstellen)     (Waffe senden)
               |                      |                    |
               V                      V                    V
-        |-----+-----|          |-----+-----|        |-----+-----|
+        +-----+-----+          +-----+-----+        +-----+-----+
         |  Scanner  |          |  Exploit  |        | Phishing- |
         |  & OSINT  |          | & Malware |        | E-Mail    |
-        |-----+-----|          |-----+-----|        |-----+-----|
+        +-----+-----+          +-----+-----+        +-----+-----+
                                                           |
                                                           V
                                                 +----------------+
