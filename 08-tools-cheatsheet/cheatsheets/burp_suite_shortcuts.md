@@ -72,7 +72,7 @@
 
 ## Nützliche Tools innerhalb von Burp
 
-| Tool            | Zweck                                         |
+| Tool             | Zweck                                         |
 |------------------|-----------------------------------------------|
 | Repeater         | Manuelle Tests / Payload-Variationen          |
 | Intruder         | Automatisiertes Fuzzing                       |
@@ -93,12 +93,12 @@
 
 | Extension        | Funktion                                     |
 |------------------|----------------------------------------------|
-| Logger++         | Erweiterte Protokollierung                   |
-| Autorize         | Zugriffskontrolle testen                     |
-| Retire.js        | Veraltete JS-Bibliotheken erkennen           |
-| Active Scan++    | Erweiterter aktiver Scan (nur Pro)           |
-| Param Miner      | Versteckte Parameter entdecken               |
-| Turbo Intruder   | Hochperformantes Fuzzing                     |
+| [Logger++](https://github.com/nccgroup/LoggerPlusPlus) | Erweiterte Protokollierung |
+| [Autorize](https://github.com/PortSwigger/autorize) | Zugriffskontrolle testen |
+| [Retire.js](https://github.com/PortSwigger/retire-js) | Veraltete JS-Bibliotheken erkennen |
+| [Active Scan++](https://github.com/PortSwigger/active-scan-plus-plus) | Erweiterter aktiver Scan (nur Pro) |
+| [Param Miner](https://github.com/PortSwigger/param-miner) | Versteckte Parameter entdecken |
+| [Turbo Intruder](https://github.com/PortSwigger/turbo-intruder) | Hochperformantes Fuzzing |
 
 
 
@@ -129,11 +129,11 @@
 ## Quick Commands für Decoder
 
 | Eingabe              | Ergebnis                           |
-|----------------------|-------------------------------------|
-| `Ctrl + U`           | URL-Decodierung                     |
-| `Ctrl + Shift + U`   | URL-Encoding                        |
+|----------------------|------------------------------------|
+| `Ctrl + U`           | URL-Decodierung                    |
+| `Ctrl + Shift + U`   | URL-Encoding                       |
 | `Base64 → Decode`    | Base64-Decode im Decoder-Tab       |
-| `Ctrl + Shift + H`   | Wechsel zur Hex-Darstellung         |
+| `Ctrl + Shift + H`   | Wechsel zur Hex-Darstellung        |
 
 
 
@@ -176,7 +176,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

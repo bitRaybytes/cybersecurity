@@ -12,10 +12,37 @@
 ## Die wichtigsten Begriffe
 Bevor wir uns mit Prozessen befassen, lass uns einige grundlegende Konzepte klären, die oft verwechselt werden:
 
-- **Programm:** Ein Programm ist die statische Lösung einer Programmieraufgabe, also der Algorithmus und die Befehle, die auf der Festplatte gespeichert sind. Es ist ein passiver Satz von Anweisungen.
-- **Prozedur:** Eine Prozedur ist ein Unterprogramm. Sie kehrt nach ihrer Ausführung zum aufrufenden, übergeordneten Programm zurück.
-- **Thread:** Ein **Thread** ist ein Ausführungsstrang innerhalb eines Prozesses. Er ist der kleinste Teil eines Programms, der vom Betriebssystem unabhängig ausgeführt werden kann. Ein Prozess kann einen oder mehrere Threads enthalten.
+- **Programm:** Ein Programm ist die statische Lösung einer Programmieraufgabe, also der Algorithmus und die Befehle, die auf der Festplatte gespeichert sind (z. B. `firefox.exe`). Es ist ein passiver Satz von Anweisungen.
+- **Prozedur:** Eine Prozedur (oder Funktion) ist ein Unterprogramm bzw. ein Block von Anweisungen. Sie kehrt nach ihrer Ausführung zum aufrufenden, übergeordneten Programm zurück.
+- **Thread:** Ein **Thread** ist ein Ausführungsstrang innerhalb eines Prozesses. Er ist der kleinste Teil eines Programms, der vom Betriebssystem unabhängig ausgeführt werden kann. Alle Threads innerhalb eines Prozesses teilen sich den Speicher und die Ressourcen des Prozesses.
 
+**Vereinfachte Darstellung:**
+```text
++------------------------------------------+
+|  PROGRAMM (Statische Datei)              |
+|  - Passiver Satz an Anweisungen          |
+|  - Bsp.: C:\Programme\firefox.exe        |
++-----------------+------------------------+
+                  |
+[In den Speicher laden (Laden, Initialisieren) ]
+                  V
++-----------------+------------------------+
+|  PROZESS (Aktive Instanz)                |
+|  - Isolierter, eigener Speicherbereich   |
+|  - Verwaltet Ressourcen (Handle, Ports)  |
++-----------------+------------------------+
+                  |
+    [ Enthält 1 bis N Ausführungsstränge ]
+            +-----+---------------------+----> usw...
+            |                           |
+            V                           V
++-----------+------------+  +-----------+------------+
+|      THREAD 1          |  |      THREAD N          |
+| - kleinste Einheit     |  | - kleinste Einheit     |
+| - teilt Speicherbereich|  | - teilt Speicherbereich|
+|   des Prozesses        |  |   des Prozesses        |
++------------------------+  +------------------------+
+```
 
 <div align=right>
 

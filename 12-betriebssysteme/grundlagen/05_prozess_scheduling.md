@@ -19,6 +19,8 @@ Ein guter Scheduler verfolgt mehrere Ziele:
 * **Effizienz:** Die CPU soll möglichst keine Leerlaufzeiten haben, wenn Prozesse bereitstehen.
 * **Antwortzeit:** Interaktive Prozesse sollen schnell reagieren, um eine gute Benutzererfahrung zu gewährleisten.
 * **Durchsatz:** Das System soll so viele Aufträge wie möglich in einem bestimmten Zeitraum abarbeiten.
+* **Verweilzeit:** Batch-Aufträge sollen eine angemessene kurze Verweilzeit für die Verarbeitung erhalten.
+* **Terminerfüllung:** Bereitstellung bestimmter Ereignisse zu festgelegten Zeitpunkten.
 
 ```text
 +------------+       +-----------------+       +-------------+
@@ -69,7 +71,7 @@ Die Auswahl des nächsten Prozesses aus der Bereit-Warteliste basiert auf versch
 - **Zeitscheibenverfahren (Round Robin):** Jeder Prozess erhält eine feste, kurze Zeitspanne (Zeitscheibe). Nach Ablauf dieser Zeitspanne wird er verdrängt und in die Warteschlange zurückgestellt, sodass der nächste Prozess an der Reihe ist. Dies sorgt für eine gute Antwortzeit.
 - **Prioritätssteuerung:** Jeder bereite Prozess hat eine Priorität. Die CPU wird dem Prozess mit der höchsten Priorität zugeteilt. Ein neuer Prozess mit höherer Priorität kann einen aktiven Prozess mit niedrigerer Priorität sofort verdrängen.
 
-**Dynamische Prioritätsvergabe:** Die Priorität eines Prozesses kann sich während seiner Laufzeit ändern. Zum Beispiel kann die Priorität eines Prozesses, der lange auf die CPU gewartet hat, erhöht werden, um ihn schneller zu bedienen.
+- **Dynamische Prioritätsvergabe:** Die Priorität eines Prozesses kann sich während seiner Laufzeit ändern. Zum Beispiel kann die Priorität eines Prozesses, der lange auf die CPU gewartet hat, erhöht werden, um ihn schneller zu bedienen.
 
 ## Sicherheitsaspekte beim Scheduling
 Aus Sicht der IT-Sicherheit spielt Scheduling eine zentrale Rolle:
@@ -134,7 +136,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Septmeber 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

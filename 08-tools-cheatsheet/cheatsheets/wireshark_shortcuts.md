@@ -1,6 +1,6 @@
 # 🦈 Wireshark Cheat Sheet
 
->Ein schneller Überblick über die wichtigsten Filter, Shortcuts & Features in Wireshark.
+> Ein schneller Überblick über die wichtigsten Filter, Shortcuts & Features in Wireshark.
 
 
 ## Inhaltsverzeichnis
@@ -270,7 +270,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** September 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

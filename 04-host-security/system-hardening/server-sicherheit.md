@@ -33,9 +33,9 @@ Ein Server im Standardzustand ist wie eine offene Tür. Hardening macht daraus e
 
 ```text
        +-------------------+
-       |   Standard-Server |
+       |  Standard-Server  |
        |  (Viele offene    |
-       |   Ports, Dienste) |
+       |  Ports, Dienste)  |
        +-------------------+
                |
         (Hardening-Prozess)
