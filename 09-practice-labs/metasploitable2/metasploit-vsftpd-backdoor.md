@@ -219,7 +219,7 @@ search vsftpd
 
 ### 3.3 Exploit nutzen
 
-Du siehst 1 verfügbare Module, die unserem Suchbegriff enstprechen.
+Du siehst ein verfügbares Module, das unserem Suchbegriff entspricht.
 Für unsere Backdoor nutzen wir das zweite Exploit-Modul. Um darauf zuzugreifen gibst du einfach folgendes in die `msfconsole`:
 
 ```bash
