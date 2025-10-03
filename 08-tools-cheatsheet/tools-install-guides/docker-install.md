@@ -56,27 +56,27 @@ In der IT-Sicherheit und im Anwendungsdevelopment ist Docker ein unverzichtbares
 Der grundlegende Unterschied liegt in der Abstraktionsebene. Eine VM virtualisiert die gesamte Hardware, einschließlich des Betriebssystems. Ein Container virtualisiert nur die Laufzeitumgebung der Anwendung und teilt sich den Kernel des Host-Systems.
 
 ```text
-    +-------------------------------------+
-    |              HOST-OS                |
-    | +----------------+ +----------------+
-    | |  VM (Guest-OS) | |  VM (Guest-OS) |
-    | | +------------+ | | +------------+ |
-    | | | Applikation| | | | Applikation| |
-    | | +------------+ | | +------------+ |
-    | +----------------+ +----------------+
-    +-------------------------------------+
-                Virtuelle Maschinen
+    +---------------------------------------+
+    |                HOST-OS                |
+    | +----------------+ +----------------+ |
+    | |  VM (Guest-OS) | |  VM (Guest-OS) | |
+    | | +------------+ | | +------------+ | |
+    | | | Applikation| | | | Applikation| | |
+    | | +------------+ | | +------------+ | |
+    | +----------------+ +----------------+ |
+    +---------------------------------------+
+               Virtuelle Maschinen
 
 
 
     +----------------------------------------+
-    |              HOST-OS                   |
+    |                 HOST-OS                |
     | +----------+ +----------+ +----------+ |
     | | Container| | Container| | Container| |
     | | (App)    | | (App)    | | (App)    | |
     | +----------+ +----------+ +----------+ |
     +----------------------------------------+
-              Containerisierung
+                Containerisierung
 ```
 
 <div align=right>
