@@ -157,7 +157,7 @@ Diese Version ist bekannt verwundbar für eine Backdoor-Shell über speziell for
 Hier erfährst du mehr zu den einzelnen States und wie du mit ihnen umgehen kannst: [nmap Offizielle Webseite](https://nmap.org/book/man-port-scanning-basics.html).
 
 **Tipp:** Offene Ports sind angreifbar. Bei offenen/gefilterten Ports musst du einen expliziten Scandurchlauf auf den Port starten. Nur so kannst du herausfinden, 
-ob der Port offen oder tatsächlich geschlossen ist. Sollte eine Firewall hinter diesem Port sei, dann wirst du geblockt und kommst nicht mehr rein (Firewall blockiert 
+ob der Port offen oder tatsächlich geschlossen ist. Sollte eine Firewall hinter diesem Port sein, dann wirst du geblockt und kommst nicht mehr rein (Firewall blockiert 
 deine IP-Adresse).
 
 
@@ -219,7 +219,7 @@ search vsftpd
 
 ### 3.3 Exploit nutzen
 
-Du siehst 1 verfügbare Module, die unserem Suchbegriff enstprechen.
+Du siehst ein verfügbares Module, das unserem Suchbegriff entspricht.
 Für unsere Backdoor nutzen wir das zweite Exploit-Modul. Um darauf zuzugreifen gibst du einfach folgendes in die `msfconsole`:
 
 ```bash
