@@ -88,7 +88,7 @@ ssh leviathan0@leviathan.labs.overthewire.org -p 2223
 
 Nach dem Befehl wirst du gefragt, ob du die Verbindung bestätigen willst. Tippe `yes` ein, um fortzufahren.
 
-![leviathan1 Zugang](/09-practice-labs/ressourcen/pictures/leviathan1.png)
+![leviathan1 Zugang](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan1.png)
 
 
 Erfolgreich eingeloggt, sehen wir die Shell des Users `leviathan0` auf dem Host `@leviathan`.
@@ -105,7 +105,7 @@ ll           # listet die Dateien und Verzeichnisse im .backup/-Verzeichnis
 cat bookmarks.html | grep passw
 ```
 
-![leviathan1 Passwort](/09-practice-labs/ressourcen/pictures/leviathan1b.png)
+![leviathan1 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan1b.png)
 
 **Erklärung der Befehle:** 
 - `ll`: Verzeichnis auflisten, auch versteckte Dateien/Verzeichnisse, sowie Berechtigungen.
@@ -201,7 +201,7 @@ Mit dem Befehl `ll` siehst du nun die Datei `check` und eine ausführliche Infor
 -r-sr-x---  1   leviathan2 leviathan1 15084 Aug 13 13:17 check*
 ```
 
-![Leviathan2 Elf Datei](/09-practice-labs/ressourcen/pictures/leviathan2.png)
+![Leviathan2 Elf Datei](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan2.png)
 
 
 Folgendes ist speziell an dieser Datei:
@@ -235,7 +235,7 @@ Vereinfacht gesagt, kannst du mit `ltrace` beobachten, was mit deiner Eingabe pa
 
 Gib einfach irgendein Passwort ein.
 
-![Leviathan2 Privilege Escalation](/09-practice-labs/ressourcen/pictures/leviathan2b.png)
+![Leviathan2 Privilege Escalation](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan2b.png)
 
 ### Privilege Escalation
 - `Schritt 1`: Passwort erraten => Eingabe eines x-beliebigen Wortes.
@@ -269,7 +269,7 @@ whoami          # nun solltest du aufgrund der Privilege Escalation leviathan2 s
 cat /etc/leviathan_pass/leviathan2
 ```
 
-![Leviathan2 Password](/09-practice-labs/ressourcen/pictures/leviathan2c.png)
+![Leviathan2 Password](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan2c.png)
 
 
 
@@ -324,7 +324,7 @@ Die Aufgabe besteht also darin, die **Art der Eingabeprüfung** zu verstehen und
 Verschaffe dir mit `ls` oder `ll` einen Überblick über dein `HOME`-Verzeichnis.
 Eine Datei namens `printfile` vom User `leviathan3` ist für uns ausführbar. 
 
-![Leviathan3 Home-Verzeichnis](/09-practice-labs/ressourcen/pictures/leviathan3.png)
+![Leviathan3 Home-Verzeichnis](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3.png)
 
 Ich habe `file printfile` nicht eingeben, doch kann sagen, dass es auch eine `ELF 32 Bit Executable" Datei ist, wie im Level zuvor.
 
@@ -340,7 +340,7 @@ Versuchen wir direkt die Datei mit dem Passwort auszulesen. Gib dazu folgende Be
 
 Schade! Wir haben keine Vererbung der Berechtigung des Users erhalten, um an das Passwort zu kommen.
 
-![Leviathan3 Datei ausführen](/09-practice-labs/ressourcen/pictures/leviathan3b.png)
+![Leviathan3 Datei ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3b.png)
 
 Schauen wir uns das Ganze mit dem `ltrace`-Befehl an und finden heraus, wie das Programm die Benutzereingabe verarbeitet. 
 Teste es mit einer Datei deiner Wahl (wir nutzen die `.bashrc`-Datei)
@@ -350,7 +350,7 @@ Gib dazu im Terminal folgenden Befehl ein
 ltrace ./printfile .bashrc
 ```
 
-![Leviathan3 ltrace Befehl mit einer Datei](/09-practice-labs/ressourcen/pictures/leviathan3c.png)
+![Leviathan3 ltrace Befehl mit einer Datei](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3c.png)
 
 Das Programm erhält als erstes die Funktions `access()`. Diese Funktion überprüft, ob der Benutzer (hier leviathan2) berechtigt ist, diese Datei auszuführen.
 Die UserID wird über `geteuid()` erhalten und später mit `setreuid` neu gesetzt. Außerdem kannst du erkennen, dass das Programm `/bin/cat` gecallt wird, welche die Datei ausgeben soll.
@@ -363,7 +363,7 @@ Gib im Terminal folgende Befehl ein, damit du mehr als eine Datei ausgibst:
 ltrace ./printfile .bashrc .bash_logout
 ```
 
-![Leviathan3 zwei Dateien testen](/09-practice-labs/ressourcen/pictures/leviathan3d.png)
+![Leviathan3 zwei Dateien testen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3d.png)
 
 Die Antwort auf die Frage, ob mehr als eine Datei ausgeführt werden kann, lautet also: Nein!
 
@@ -380,7 +380,7 @@ touch /tmp/tmp.VerzeichnisName/"test datei.txt" # erstellt die Datei
 ltrace ./printfile /tmp/tmp.VerzeichnisName/"test datei.txt"
 ```
 
-![Leviathan3 Datei mit Leerzeichen ausführen](/09-practice-labs/ressourcen/pictures/leviathan3e.png)
+![Leviathan3 Datei mit Leerzeichen ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3e.png)
 
 Leerzeichen scheint das Programm nicht zu lesen. Wie können wir das nun für uns nutzen, ist die Frage?
 
@@ -401,7 +401,7 @@ chmod 777 /tmp/tmp.VerzeichnisName # ändert die Berechtigungen des gesamten Ver
 ./printfile /tmp/tmp.VerzeichnisName/"test datei.txt"   # Aufgrund der Verarbeitung wird nicht "test datei.txt" ausgegeben, sondern die verlinkte Datei "test"
 ```
 
-![Leviathan3 Datei Link erstellen](/09-practice-labs/ressourcen/pictures/leviathan3f.png)
+![Leviathan3 Datei Link erstellen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan3f.png)
 
 
 </details>
@@ -453,7 +453,7 @@ ltrace ./level3
 # gib auch hier irgendein Passwort ein
 ```
 
-![Leviathan4 ELF Datei testen](/09-practice-labs/ressourcen/pictures/leviathan4.png)
+![Leviathan4 ELF Datei testen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan4.png)
 
 Im ersten, normalen Durchlauf des Programms konnten wir nicht viel feststellen. Wir wissen, dass das Programm ein Passwort abfragt. Weil das Passwort falsch war, gibt das Programm die Fehlermeldung `bzzzzzzzzap. WRONG` aus.
 
@@ -495,7 +495,7 @@ cat /etc/leviathan_pass/leviathan4
 Du solltest das Passwort über die Privilege Escalation nun erhalten und kannst anschließend die Shell-Sitzungen beenden.
 Dazu musst du mehrmals den Befehl `exit` eingeben.
 
-![Leviathan4 ELF Datei testen](/09-practice-labs/ressourcen/pictures/leviathan4b.png)
+![Leviathan4 ELF Datei testen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan4b.png)
 
 ### Infografik
 
@@ -569,11 +569,11 @@ file bin     #optional
 ltrace ./bin #optional
 ```
 
-![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/leviathan5.png)
+![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan5.png)
 
 Kopiere die binäre Zahlenfolge und suche im Internet nach `binary to ascii`. Du solltest schnell fündig werden. Wähle eine Webseite aus und kopiere den Inhalt deiner Zwischenablage in das Eingabefeld und konvertiere sie in das ASCII-Format.
 
-![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/leviathan5b.png)
+![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan5b.png)
 
 
 ### Methode mit dem Befehl perl
@@ -609,7 +609,7 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
         - `$_=`: überscreibt die Eingabezeile mit der konvertierten Zeichenfolge.
 
 
-![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/leviathan5c.png)
+![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan5c.png)
 
 
 
@@ -672,7 +672,7 @@ ltrace ./leviathan6 /tmp/file.log   # startet das Programm mit ltrace und der Da
 # Die Datei wird im Anschluss gelöscht!
 ```
 
-![Leviathan6 Programm erkunden](/09-practice-labs/ressourcen/pictures/leviathan6.png)
+![Leviathan6 Programm erkunden](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan6.png)
 
 Die Datei ist nun gelöscht, doch wir haben eine Menge an Informationen erhalten, die du bereits vorab in der Einleitung erfahren konntest.
 
@@ -683,9 +683,9 @@ ln -s /etc/leviathan_pass/leviathan6 /tmp/file.log
 ll /tmp/file.log
 ```
 
-![Leviathan6 Passwort-Datei verlinken](/09-practice-labs/ressourcen/pictures/leviathan6b.png)
+![Leviathan6 Passwort-Datei verlinken](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan6b.png)
 
-![Leviathan6 File auflisten](/09-practice-labs/ressourcen/pictures/leviathan6c.png)
+![Leviathan6 File auflisten](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan6c.png)
 
 Die Datei ist erfoglreich verlinkt worden. Probiere die Datei mit dem Programm auszuführen und schau, was passiert.
 
@@ -695,7 +695,7 @@ Gib dazu folgenden Befehl im Termianl ein:
 ./leviathan5 /tmp/file.log
 ```
 
-![Leviathan6 Passwort](/09-practice-labs/ressourcen/pictures/leviathan6d.png)
+![Leviathan6 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan6d.png)
 
 Herzlichen Glückwunsch! Der String, der dir ausgegeben wurde, ist das Passwort für `leviathan6`. Du kannst mit `exit` die Verbindung trennen und mit dem nächsten Level weitermachen. 
 
@@ -725,7 +725,7 @@ In diesem aktuell letzten Level findest du eine Datei namens `leviathan6`. Nach 
 
 Mit `ltrace` habe ich bspw. herausgefunden, dass es eine Funktion der Standard-Bibliothek aus der Programmiersprache `C` namens `atoi()` gibt. Die Funktion wandelt `String` bzw. `ASCII` in `Integer` um und steht eigentlich für `ASCII to Integer`.
 
-![Leviathan7 Programm ausführen](/09-practice-labs/ressourcen/pictures/leviathan7b.png)
+![Leviathan7 Programm ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7b.png)
 
 **Bedeutung der `ltrace`-Ausgabe**
 
@@ -735,7 +735,7 @@ Die `ltrace`-Ausgabe `atoi(0xffffd5cd, 0, 0, 0)` zeigt die Werte, die an die Fun
 
 - `0, 0, 0`: Die zusätzlichen Nullen sind **irrelevant** für die atoi() Funktion selbst. `ltrace` zeigt oft mehr Argumente an, als tatsächlich von der aufgerufenen Funktion erwartet werden, da es einfach die nächsten Werte vom Stack liest. Für atoi() ist nur der erste Parameter (die Adresse des Strings) von Bedeutung.
 
-![Leviathan7 ltrace-Befehl](/09-practice-labs/ressourcen/pictures/leviathan7c.png)
+![Leviathan7 ltrace-Befehl](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7c.png)
 
 Für die Lösung ist das nicht wirklich von Bedeutung, zumal wir nichts damit anfangen können. Selbst ein Buffer-Overflow (Puffer-Überfluss) bringt uns nicht zum Ziel.
 
@@ -745,7 +745,7 @@ Die zweite Möglichkeit, die ich dir nicht vorenthalten möchte, ist, indem du R
 
 **Ein Beispiel, wie ein *disassembled* Code aussieht:**
 
-![Leviathan7 zerlegter Code](/09-practice-labs/ressourcen/pictures/leviathan7i.png)
+![Leviathan7 zerlegter Code](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7i.png)
 
 Ich selbst bin nicht gut in der Assembly-Sprache. Wenn du dich jedoch etwas mit der Syntax befasst, dann wirst du schnell dahinter kommen.
 
@@ -773,7 +773,7 @@ Gib im Terminal folgenden Befehl ein, um eine `for`-Schleife zu realisieren, die
 for i in {0000.9999}; do ./leviathan6 $i ; done
 ```
 
-![Leviathan For-Schleife](/09-practice-labs/ressourcen/pictures/leviathan7e.png)
+![Leviathan For-Schleife](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7e.png)
 
 Das wird dafür sorgen, dass die Schleife, die du erzeugt hst, die Range 0000 bis 9999 durchprobiert und uns später eine Shell ausgibt. 
 Nach dem du den Befehl mit der Enter-Taste bestätigt hast, werden dir sehr viele `Wrong` angezeigt. Lass das Programm einfach durchlaufen. Am Ende wirst du aus der Shell von Leviathan6 ausbrechen und in der Shell von Leviathan7 sein.
@@ -787,7 +787,7 @@ cat /etc/leviathan_pass/leviathan7
 ```
 
 
-![Leviathan Password](/09-practice-labs/ressourcen/pictures/leviathan7f.png)
+![Leviathan Password](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7f.png)
 
 
 **Herzlichen Glückwunsch**, das Wargame ist vorbei. Aktuell.
@@ -797,7 +797,7 @@ Nach der `ssh`-Verbindung mit `leviathan7` zu `leviathan.labs.overthewire.org` k
 
 Darin ist eine Datei names `CONGRATULATIONS`. Lies sie aus:
 
-![Leviathan Endgame](/09-practice-labs/ressourcen/pictures/leviathan7g.png)
+![Leviathan Endgame](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7g.png)
 
 
 P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den einzelnen Wargames auf Overthewire.org. 

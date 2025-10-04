@@ -53,7 +53,7 @@ Ich habe auch ein Update Script mit Log-Dateien, welches du dir ansehen kannst. 
 
 ## 3. Docker mit OWASP Juice Shop starten
 
-**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/08-tools-cheatsheet/docker-install.md) (Debian basierte Installation)
+**Hinweis:** Um Docker zu starten, ist es notwendig, das Programm herunterzuladen und zu installieren. Wie du Docker und alle Abhängigkeiten auf Kali Linux herunterlädts, [erfährst du hier](/08-tools-cheatsheet/tools-install-guides/docker-install.md) (Debian basierte Installation)
 
 Wir arbeiten mit Docker, um `OWASP Juice Shop` in einer sicherer Umgebung zu testen.
 

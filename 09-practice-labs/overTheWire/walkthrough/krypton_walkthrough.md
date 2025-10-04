@@ -93,7 +93,7 @@ Auf der Webseite erhältst du schon die ersten Hinweise zur Verschlüsselungstec
 
 Kopiere den String, der dir auf der Webseite [overthewire.org/wargames/krypton/krypton0.html](https://overthewire.org/wargames/krypton/krypton.html) angezeigt wird.
 
-![Krypton1 base64 Passwort Verschlüsselung](/09-practice-labs/ressourcen/pictures/krypton1.png)
+![Krypton1 base64 Passwort Verschlüsselung](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton1.png)
 
 Öffne anschließend ein Terminalfenster und gib folgenden Befehl ein, um die base64 verschlüsselte Nachricht zu entschlüsseln:
 
@@ -120,7 +120,7 @@ Im Beispiel `S1JZUFRPTklTR1JFQVQ=` wandelt der Befehl `base64 -d` diese ASCII-Ze
 
 Das Ergebnis der Dekodierung lautet: `KRYPTONISGREAT`.
 
-![Krypton1 base64 Entschlüsselung](/09-practice-labs/ressourcen/pictures/krypton1b.png)
+![Krypton1 base64 Entschlüsselung](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton1b.png)
 
 Wenn du möchtest, kannst du das Passwort auch speichern. 
 
@@ -204,7 +204,7 @@ echo "Dein ROT13 Code" | tr 'N-ZA-M' '[A-Z]'    # Datei entschlüsseln mit ROT13
 
 > **weitere Möglichkeit:** Du könntest auch mit cyberchef.io das Passwort knacken.
 
-![krypton2 Password](/09-practice-labs/ressourcen/pictures/krypton2c.png)
+![krypton2 Password](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton2c.png)
 
 </details>
 
@@ -245,7 +245,7 @@ ll /krypton/krypton2/
 mkdir /tmp/DeinOrdnerName        
 ```
 
-![Krypton3 Datei finden](/09-practice-labs/ressourcen/pictures/krypton3.png)
+![Krypton3 Datei finden](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3.png)
 
 Mit dem Befehl `find / -type f -name "krypton3"` wird nach der Datei in allen Verzeichnissen des System gesucht. `/` steht hier für das System-Verzeichnis, quasi der aller erste Ordner.
 Der Switch `-type f` definiert dabei den Typ als `f`, also einer File/Datei. `-name` nutzt du, wenn dir der Name der Datei bekannt ist. Du kannst selbstverständlich auch nach bestimmten Dateigrößen suchen. Dazu musst du dann die Switches anpassen.
@@ -265,7 +265,7 @@ ls                                    # listet Inhalt des Verzeichnisses auf
 cat ciphertext                        # liest den Ciphertext für das Entschlüsseln aus
 ```
 
-![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/krypton3b.png)
+![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3b.png)
 
 Du bist nun in deinem Ordner im `/tmp/`-Verzeichnis. Mit `ln -s /krypton/krypton2/keyfile.dat` hast du einen Symbol-Link darin erstellst. Normalerweise kannst du das auch machen, wenn du in anderen Verzeichnissen bist. Dazu musst du dann noch das Zielverzeichnis angeben, in das die Datei verlinkt werden soll.
 
@@ -273,7 +273,7 @@ Nach dem die Datei `keyfile.dat` mit dem Programm `encrypt` entschlüsselt wurde
 
 Die Ausgabe über `cat ciphertext` zeigt den eigentlichen Entschlüsselungscode `YZABCD...`. Das heißt, dass du mit dem Programm `tr` den Inhalt aus `krypton3` genau nach dem Format im `ciphertext` entschüsseln musst.
 
-![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/krypton3c.png)
+![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3c.png)
 
 Gib im Terminal folgende Befehle ein, um die Datei `krypton3` auszugeben und die Entschlüsselung nach dem Format durchzuführen:
 
@@ -282,7 +282,7 @@ cat /krypton/krypton2/krypton3          # OMQEMDUEQMEK ist aktuell der Inhalt vo
 echo OMQEMDUEQMEK | tr 'Y-ZA-X' '[A-Z]' # entschlüsselt den String aus echo.
 ```
 
-![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/krypton3d.png)
+![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3d.png)
 
 
 Der Befehl `echo "..." | tr  'Y-ZA-X' '[A-Z]'` gibt den Befehl zunächst aus und entschlüsselt ihn mit `tr 'Y-ZA-X' '[A-Z]'` nach dem Pattern der Datei aus `ciphertext`.
@@ -295,7 +295,7 @@ Gib im Terminal zum Abschluss folgenden Befehl ein, um den neuen Inhalt zu entsc
 echo PNRFNEVFRNFL | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 
-![Krypton3 krypton3 Password](/09-practice-labs/ressourcen/pictures/krypton3e.png)
+![Krypton3 krypton3 Password](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3e.png)
 
 Herzlichen Glückwunsch! Du hast das Passwort erfolgreich entschlüsselt und kannst mit `exit` die `SSH`-Verbindung beenden und mit dem nächsten Level fortfahren.
 
@@ -338,7 +338,7 @@ find / -type f -name "krypton4" 2>/dev/null # Finde die Datei und unterdrücke F
 ls /krypton/krypton3/                       # listet das angegebene Verzeichnis auf
 ```
 
-![Krypton4 Datei suchen](/09-practice-labs/ressourcen/pictures/krypton4.png)
+![Krypton4 Datei suchen](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton4.png)
 
 Du weißt bereits, dass die Dateien alle den gleichen Schlüssel haben, mit dem sie verschlüsselt wurden. Das heißt, dass du den gleichen Schlüssel nehmen musst, um die Dateien zu entschlüsseln.
 Das ist wichtig zu wissen. Denn ohne den richtigen Schlüssel, erhältst du nicht die korrekte entschlüsselte Nachricht.
@@ -365,19 +365,19 @@ cat /krypton/krypton3/krypton4  # Ausgabe der Datei krypton4
 
 Kopiere den ausgegebenen Inhalt aus der Datei `found1` und füge ihn im Online-Tool ein:
 
-![Krypton4 found1 ausgeben und kopieren](/09-practice-labs/ressourcen/pictures/krypton4b.png)
+![Krypton4 found1 ausgeben und kopieren](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton4b.png)
 
 Kopiere den ausgegebenen Inhalt der Datei `krypton4` und füge ihn im Online-Tool ein:
 
-![Krypton4 krypton4 ausgeben und kopieren](/09-practice-labs/ressourcen/pictures/krypton4b2.png)
+![Krypton4 krypton4 ausgeben und kopieren](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton4b2.png)
 
 Nach dem Einfügen der beiden Inhalte solltest du auf QuipQuip folgenden Ansicht erhalten:
 
-![Krypton4 Online-Tool QuipQuip](/09-practice-labs/ressourcen/pictures/krypton4c.png)
+![Krypton4 Online-Tool QuipQuip](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton4c.png)
 
 Drücke jetzt auf den Button `Solve` und lass das Tool die Nachrichten entschlüsseln. Sobald es fertig mit dem `bruteforcen` ist, wirst du die Nachricht entschlüsselt vorfinden und kannst am Ende des Textes das Passwort zum nächsten Level herauslesen.
 
-![Krypton4 Passwort](/09-practice-labs/ressourcen/pictures/krypton4d.png)
+![Krypton4 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton4d.png)
 
 Das aktuelle Passwort zum nächsten Level ist: `brute`.
 

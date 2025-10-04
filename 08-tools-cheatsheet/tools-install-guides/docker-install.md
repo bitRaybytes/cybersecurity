@@ -125,7 +125,7 @@ Installiere die benötigten Abhängigkeiten (optional).
 ```bash
 sudo apt install apt-transport-https ca-certificates curl gnupg lsb-release -y
 ```
-![Docker Installation testen](/09-practice-labs/ressources/pictures/step3installDependencies.png)
+![Docker Installation testen](/09-practice-labs/ressourcen/pictures/dvwa/installguide/step3installDependencies.png)
 
 ### 3. Docker GPG-Schlüssel hinzufügen 
 Lade den offiziellen GPG-Schlüssel von Docker herunter und füge ihn deinem System hinzu, um die Echtheit der Pakete zu verifizieren (optional, wenn 2 installiert wurde).
@@ -171,7 +171,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 sudo apt-get install -y docker.io
 ```
 
-![Docker installieren](/09-practice-labs/ressources/pictures/step4installDocker.png)
+![Docker installieren](/09-practice-labs/ressourcen/pictures/dvwa/installguide/step4installDocker.png)
 
 
 <div align=right>
@@ -187,7 +187,7 @@ sudo apt-get install -y docker.io
 sudo docker run hello-world
 ```
 
-![Docker Installation testen](/09-practice-labs/ressources/pictures/step5dockerTest.png)
+![Docker Installation testen](/09-practice-labs/ressourcen/pictures/dvwa/installguide/step5dockerTest.png)
 
 <div align=right>
 

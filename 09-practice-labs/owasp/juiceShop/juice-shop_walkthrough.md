@@ -56,12 +56,12 @@ docker run -d -p 3000:3000 bkimminich/juice-shop
 docker ps
 ```
 
-![Docker Image starten](/09-practice-labs/ressourcen/pictures/juiceshop.png)
+![Docker Image starten](/09-practice-labs/ressourcen/pictures/owasp/juiceshop/juiceshop.png)
 
 
 Nachdem du den Befehl zum Starten des Docker Images eingegeben hast, kannst du in deinem Browser über `http://localhost:3000` auf den OWASP-Juice-Shop zugreifen. Zum Analysieren der Webanwendung sind die Developer Tools deines Browsers sehr hilfreich. Für komplexere Angriffe empfiehlt sich ein Proxy wie die Burp Suite oder OWASP ZAP.
 
-![OWASP Juice Shop über den Browser starten](/09-practice-labs/ressourcen/pictures/juiceshop2.png)
+![OWASP Juice Shop über den Browser starten](/09-practice-labs/ressourcen/pictures/owasp/juiceshop/juiceshop2.png)
 
 
 <div align=right>
@@ -119,7 +119,7 @@ Gehe auf die Suche nach einem Eingabefeld (zum Beispiel in der Suchfunktion) und
 
 Wenn die Webseite angreifbar ist (was der OWASP-Juice Shop ist), dann erhältst du ein PopUp mit dem Text `XSS`.
 
-![XSS-Angriff auf OWASP-Juice Shop zeigt PopUp wie erwartet](/09-practice-labs/ressourcen/pictures/juiceshop3.png)
+![XSS-Angriff auf OWASP-Juice Shop zeigt PopUp wie erwartet](/09-practice-labs/ressourcen/pictures/owasp/juiceshop/juiceshop3.png)
 
 
 **Herzlichen Glückwunsch**, du hast die erste XSS-Herausforderung gemeistert!
