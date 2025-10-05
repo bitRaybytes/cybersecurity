@@ -31,7 +31,7 @@ Einleitung zum Wargame Natas (OverTheWire)
 
 `Natas` ist ein webbasiertes Wargame, das vom Projekt `OverTheWire.org` angeboten wird. Es richtet sich an alle, die sich mit Web-Sicherheit und Web-Hacking beschäftigen möchten.
 
-Das Spiel besteht aus mehreren Leveln, die jeweils eine Webseite mit einer spezifischen Schwachstelle darstellen. Ziel ist es, den Zugang zum nächsten Level zu erhalten, indem du das Passwort findest, das irgendwo in der Anwendung versteckt ist – oft durch Ausnutzung klassischer Web-Sicherheitslücken.
+Das Spiel besteht aus mehreren Leveln, die jeweils eine Webseite mit einer spezifischen Schwachstelle darstellen. Ziel ist es, den Zugang zum nächsten Level zu erhalten, indem du das Passwort findest, das irgendwo in der Anwendung versteckt ist - oft durch Ausnutzung klassischer Web-Sicherheitslücken.
 
 Du lernst dabei unter anderem:
 - HTML & JavaScript-Analyse
@@ -45,7 +45,7 @@ Du lernst dabei unter anderem:
 
 Die Level werden schrittweise schwieriger und helfen dir dabei, ein gutes Verständnis für Web-Angriffsvektoren und deren Schutzmaßnahmen zu entwickeln.
 
-> Der Name Natas ist "Satan" rückwärts geschrieben – ein Hinweis auf die tiefergehenden Sicherheitsaspekte, die in den Levels behandelt werden.
+> Der Name Natas ist "Satan" rückwärts geschrieben - ein Hinweis auf die tiefergehenden Sicherheitsaspekte, die in den Levels behandelt werden? Wer weiß!
 
 
 
@@ -78,6 +78,16 @@ Finde das Passwort für das nächste Level `natas1`.
 
 ![Natas1 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas1.png)
 
+Du solltest das Passwort innerhalb des HTML-Codes sehen. Aus sicherheitstechnischer Sicht ein kompletter fail! Solche sensiblen Informationen gehören nicht in Codes, die von der Öffentlichkeit eingesehen werden können. 
+
+Kopiere das Passwort und fahre mit der nächsten Challenge fort.
+
+### Erkenntnisse - HTML-Quellcode Analyse
+
+- **Informationslecks im Client-Code:** Das Passwort ist direkt im HTML-Quellcode der Seite eingebettet.
+
+- **Basis-Analyse-Tool:** Die Browser-Entwickler-Tools (Inspector) sind das primäre Werkzeug zur Untersuchung von Web-Anwendungen.
+
 </details>
 
 
@@ -103,7 +113,16 @@ URL:        http://natas1.natas.labs.overthewire.org
 
 In diesem Level ist es nicht möglich, das Kontextmenü per rechter Maustaste zu öffnen. Allerdings kennst du bereits ein Shortcut. Verwende ihn und untersuche die Webseite.
 
+Hier noch einmal der Shortcut: `Strg` + `Umschalt` + `C` auf Windows oder `CMD` + `Umschalt` + `C` auf macOS.
+
 ![Natas2 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas2.png)
+
+
+### Erkenntnisse - Client-seitiger Schutz-Bypass
+
+- **Client-Side Security ist Illusion:** Das Deaktivieren der rechten Maustaste (Kontextmenü) bietet keinerlei echten Schutz.
+
+- **Hardcore-Bypass:** Client-seitige Einschränkungen können immer durch direkte Tastenkürzel (`Strg`+`Umschalt`+`C`) oder den direkten Zugriff auf den Quellcode umgangen werden.
 
 
 </details>
@@ -140,7 +159,7 @@ Inspiziere den HTML-Code. Es gibt eine interessante Sache.
 <img src="files/pixel.png">
 ```
 
-Interessant ist vor allem eine Sache: `files/". Das lässt daraufschließen, dass es einen Verzeichnis gibt, in dem dieses Bild zu finden ist. Vielleicht auch mehr?
+Interessant ist vor allem eine Sache: `files/". Das lässt daraufschließen, dass es ein Verzeichnis gibt, in dem dieses Bild zu finden ist. Vielleicht auch mehr?
 
 Um das herauszufinden, gib folgendes in die URL-Zeile deines Browsers ein:
 
@@ -154,6 +173,13 @@ Sieh an! Neben dem Bild, welches sich im Source Code befindet, gibt es eine Date
 Klick auf die Datei, um das Passwort zu erhalten.
 
 ![Natas3 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas3c.png)
+
+
+### Erkenntnisse - Directory Traversal und Verzeichnis-Enumeration
+
+- **Hinweise im Code:** Der HTML-Code enthält oft versteckte Hinweise auf Verzeichnisstrukturen (z.B. `<img src="files/...")`).
+
+- **Directory Traversal:** Die Navigation zu bekannten oder aus dem Code abgeleiteten Verzeichnissen (`/files/`) kann zur Offenlegung sensibler Dateien (`Users.txt`) führen.
 
 
 </details>
@@ -186,7 +212,7 @@ Du kannst den Source-Code analyisieren, doch das ist nur Zeitverschwendung.
 
 Es gibt eine Alternative, die es uns ermöglicht, die Konfigurationen einer Webseite bzw. eines Webservers anzusehen.
 
-Bei dieser `robots.txt`-Datei handelt es sich um eine Textdatei, die Webseitenbetreiber konfigurieren, wenn sie nicht wollen, dass ihre Webseite(n) indexiert werden sollen. Webcrawler erhalten von dieser Datei ihre Anweisungen, damit sie wissen, wie sie mit den Inhalten umzugehen haben.
+Bei dieser Alternative handelt es sich um die `robots.txt`-Datei - eine Textdatei, die Webseitenbetreiber konfigurieren, wenn sie nicht wollen, dass ihre Webseite(n) indexiert werden sollen. Webcrawler erhalten von dieser Datei ihre Anweisungen, damit sie wissen, wie sie mit den Inhalten umzugehen haben.
 
 Es kann zum Beispiel dafür genutzt werden, dass sensible Bereiche einer Webseite wie es der `admin`-Bereich ist, nicht auf Google oder sonstigen Suchmaschinen anzeigen zu lassen.
 
@@ -197,9 +223,9 @@ http://natas3.natas.labs.overthewire.org/robots.txt
 
 ![Natas4 robots.txt Information](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas4.png)
 
-In der `robots.txt` ist also zu sehen, dass der Webseitenbetreiber nicht möchte, dass das Verzeichnis `/s3cr3t/` von einem Webcrawler indexiert wird.
+In der `robots.txt` ist zu sehen, dass der Webseitenbetreiber nicht möchte, dass das Verzeichnis `/s3cr3t/` von einem Webcrawler indexiert wird.
 
-Verändere nun deine URL so, dass du zu diesem Verzeichnis navigierst.
+Verändere deine URL so, dass du zu diesem Verzeichnis navigierst.
 
 ```http
 http://natas3.natas.labs.overthewire.org/s3cr3t/
@@ -209,6 +235,13 @@ http://natas3.natas.labs.overthewire.org/s3cr3t/
 Schon wieder eine `user.txt`-Datei. Klick sie an und erhalte das Passwort für das nächste Level.
 
 ![Natas4 Password](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas4c.png)
+
+
+### Erkenntnisse - robots.txt als Informationsquelle
+
+- **Überprüfung von Standard-Dateien:** Entwickler vergessen oft, dass `robots.txt` für jeden zugänglich ist und nicht nur für Webcrawler.
+
+- **Verstecken durch Ausschluss:** Die Datei wird zur Offenlegung sensibler Verzeichnisse (`/s3cr3t/`) missbraucht, die eigentlich vor Suchmaschinen versteckt werden sollten.
 
 
 </details>
@@ -237,24 +270,30 @@ URL:        http://natas4.natas.labs.overthewire.org
 Gib im Browser deiner Wahl die URL für dieses Level ein und bestätige mit der `Enter`-Taste.
 Melde dich mit `natas4` und dem Passwort aus dem zuvorherigen Level an.
 
-Wenn du eingeloggt bist, siehst du eine Nachricht, die so viel sagt wie, dass du nicht berechtigt bist, über den Host auf die Seite zu kommen.
+Wenn du eingeloggt bist, siehst du eine Nachricht, die so viel sagt wie, dass du nicht berechtigt bist, über den `Referer` auf die Seite zu kommen.
 
-Das einfachste, was du versuchen kannst, ist es, den Request-Header so zu modifizieren, dass du einer `GET`-Methode einen weiteren Parameter hinzufügst und probierst, ob es funktioniert. 
+Das einfachste, was du versuchen kannst, ist es, den Request-Header so zu modifizieren, dass du einer `GET`-Methode einen weiteren Parameter hinzufügst und probierst, ob es funktioniert. In unserem Fall benötigen wir den `Referer`-Wert, damit wir der Hauptseite von `natas4` eine Umleitung von `natas5` suggerieren können.
 
-1. Analysiere die Header der Webseite
+- **Analysiere die Header der Webseite**
 
-Inspiziere die Webseite und klicke auch den Reiter `Network`. Es wird vermutlich so sein, dass du auf `Reload` klicken musst, damit die Aufzeichnung neu geladen wird.
+Inspiziere die Webseite und klicke auf den Reiter `Network`. Es wird vermutlich so sein, dass du auf `Reload` klicken musst, damit die Aufzeichnung neu geladen wird.
 
-Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. Klicke auf die Datei, die den Source-Code für die Webseite beinhaltet. Das sollte die erste Aufzeichnung sein.
+**Achtung:** Browser erlauben in der Regel keine Manipulation von sicherheitsrelevanten Headern wie Referer in JavaScript-Code aus Sicherheitsgründen. Dies funktioniert oft nur mit Proxies oder `curl`. Die folgende Darstellung zeigt, wie der korrekte `fetch`-Befehl technisch aussehen müsste, um die Header zu senden.
 
-Wenn du mehr über das Thema `headers` in HTML-Request erfahren willst, kannst du bei den [Mozilla Developer Dokumentation für Header](https://developer.mozilla.org/de/docs/Web/API/Headers) vorbeischauen.
+Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. Klicke auf die Datei, die den Source-Code für die Webseite beinhaltet. Das sollte die Aufzeichnung sein, die in ein der Spalten als `document` oder als `html` gekennzeichnet ist.
+
+
+> Wenn du mehr über das Thema `Header` im HTML-Request erfahren willst, kannst du bei den [Mozilla Developer Dokumentation für Header](https://developer.mozilla.org/de/docs/Web/API/Headers) vorbeischauen.
+
 
 ![Natas5 Header inspizieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas5.png)
 
-Sobald du auf die Aufzeichnung klickst, tauchen rechts weitere Informationen dazu auf.
+Sobald du auf die Aufzeichnung klickst, tauchen rechts weitere Informationen dazu auf. Die gesamte HTTP-Anfrage um genau zu sein. Sie besteht aus der Methode (hier `GET`) und dem `Response` sowie `Request` Reitern. Response ist die Antwort vom Server mit seinen Header-Informationen. Der Request wird seitens des Browsers, also des Clients gesendet.   
 Es gibt zwei Möglichkeiten für dich nun vorzugehen.
 
-Entweder du drückst im `Request Headers` auf den Button `Raw` und siehst die rohe Fassung. Das hat den Vorteil, dass du beispielsweise im Reiter `Console` die in `JavaScript` vorhandene WebAPI `fetch` verwenden kannst, die die Daten einer Webseite `fetchen` also anfordern kann.
+Entweder du drückst im `Request Headers` auf den Button `Raw` und siehst die rohe Fassung. Das hat den Vorteil, dass du die Daten einfach markieren und kopieren kannst. Die kannst du dann im Reiter `Console` mit der in `JavaScript` vorhandenen WebAPI `fetch` verwenden, die die Daten einer Webseite `fetchen` also anfordern kann. 
+
+Jetzt ist gerade die Verwirrung groß. JA du holst Daten mit `fetch`, doch du kannst auch welche senden.
 
 Falls du den Header über die `fetch`-API nutzen willst, kopierst du die `Raw`-Fassung des Request-Headers, klickst du auf den Reiter `Console`, und gibst folgenden Befehl ein:
 
@@ -263,11 +302,16 @@ fetch("http://natas4.natas.labs.overthewire.org", {
     method: "GET" // optional, da bei fetch() GET standard
     headers: 
     {
-        'Host': 'natas4.natas.labs.overthewire.org',
-        'Authorization': 'Basic deinKey',
+        // 'Host' und 'Authorization' werden meist vom Browser/fetch korrekt gesetzt
+        // Hier nur das Wichtige: Referer fälschen
         'Referer': 'http://natas5.natas.labs.overthewire.org'
+        // Den kopierten Authorization Header einfügen, falls fetch ihn nicht automatisch setzt:
+        'Authorization': 'Basic deinKey',
     }
-}).then(response => response.text()).then(console.log(response))
+})
+.then(response => response.text())  // Antwort als Text verarbeiten
+.then(text => console.log(text))        // Text (HTML-Seite) in der Konsole ausgeben
+.catch(error => console.error('Fehler beim Fetch:', error)); // Fehlerbehandlung
 ```
 
 **Erklärung:**
@@ -276,13 +320,14 @@ fetch("http://natas4.natas.labs.overthewire.org", {
 - `headers`:
 - `.then(response => response.text())`: Dann die Ausgabe in eine Text-Datei speichern und
 - `.then(console.log(response))`: die Datei in der Console ausgeben.
+- `.catch(error => console.error...)`: Gibt eine Fehlermeldung aus, wenn die Eingabe nicht übermittelt werden kann.
 
 Mehr zur `WebAPI - fetch()` erhältst du hier: [Mozilla Developer - Verwendung der fetch API](https://developer.mozilla.org/de/docs/Web/API/Fetch_API/Using_Fetch).
 
 
 ### **Oder**
 
-Wenn die Methode oben nicht funktioniert, dann liegt das vermutlich daran, dass der Browser beim Senden die Daten beim Senden überschreibt und sie somit wieder wahrheitsgemäß an den Server übermittelt.
+Wenn die Methode oben nicht funktioniert, dann liegt das vermutlich daran, dass der Browser die Daten beim Senden überschreibt und sie somit wieder wahrheitsgemäß an den Server übermittelt.
 
 Eine weitere Alternative, wie du an das Passwort kommen kannst ist mit dem `curl`-Befehl. `curl` ist ein Programm, mit dem HTTP(S)-Request gesendet werden können. Ein sehr mächtiges Werkzeug.
 
@@ -300,6 +345,14 @@ curl -u natas4:deinPasswort -H "Referer: http://natas5.natas.labs.overthewire.or
 
 ![Natas5 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas5c.png)
 
+
+### Erkenntnisse - HTTP-Header-Manipulation (Referer)
+
+- **Header-Abhängigkeit / Referer Header Schutz:** Manche Webanwendungen verwenden den HTTP Referer Header als einfache Zugriffskontrolle, um sicherzustellen, dass Anfragen nur von einer erwarteten Quelle (Domain) stammen. Dies soll beispielsweise Cross−Site Request Forgeries (CSRF) oder Hotlinking verhindern.
+
+- **Fälschen des Ursprungs:** Der Referer Header ist Client-steuerbar. Da es sich lediglich um einen Textwert handelt, der vom Client (Browser, `curl`) an den Server gesendet wird, kann dieser leicht gefälscht (spoofed) werden.
+
+- **Sicherere Kontrollen:** Diese Art der Zugriffskontrolle ist leicht zu umgehen und gilt als unsicher. Eine robustere Authentifizierung und Autorisierung sollte auf Sessions, Tokens oder richtigen ACLs (Access Control Lists) basieren.
 
 </details>
 
@@ -327,7 +380,7 @@ URL:        http://natas5.natas.labs.overthewire.org
     <summary>Lösung</summary>
 
 Beim Einloggen auf die Webseite erhältst du die Nachricht `Access disallowed. You are not logged in`.
-Das kann darauf schließen, dass in unserem Header ein Cookie gesetzt sein könnte. Das kannst du folgednermaßen überprüfen.
+Das kann darauf schließen, dass in unserem Header ein Cookie gesetzt sein könnte. Das kannst du folgendermaßen überprüfen:
 
 Begib dich direkt in den `DevTools` deines Browser zum Reiter `Network`. Lade, sofern nötig die `Network`-Daten neu mit `reload` (Firefox).
 
@@ -335,16 +388,24 @@ Beim Analysieren des Headers der Challenge-Webseite sollte dir ein `Response`-Pa
 
 ![Natas6 Header analysieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas6.png)
 
-Mit dieser Information kannst du versuchen, den Header so zu manipulieren, dass du dem Server surgerierst, eingeloggt zu sein.
+Mit dieser Information kannst du versuchen, den Header so zu manipulieren, dass du dem Server suggerierst, eingeloggt zu sein.
 
 Öffne dein Terminal und gib folgenden Befehl ein:
 ```bash
 curl -u natas5:deinNatasPassword -H "Cookie: loggedin=1" http://natas5.natas.labs.overthewire.org
 ```
 
-Und siehe da, du hast das Passwort im Terminal erhatlten.
+Und siehe da, du hast das Passwort im Terminal erhalten.
 
 ![Natas6 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas6b.png)
+
+
+### Erkenntnisse - HTTP-Cookie-Manipulation
+
+- **Zustand im Cookie:** Die Login-Information wird in einem einfach manipulierbaren Cookie (`loggedin=0`) auf Client-Seite gespeichert.
+
+- **Erhöhen der Rechte:** Durch Ändern des Cookie-Werts (`loggedin=1`) per `curl -H "Cookie:..."` kann der Zugriff auf die geschützte Ressource erlangt werden.
+
 
 </details>
 
@@ -397,6 +458,14 @@ Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, soll
 
 ![Natas7 Secret Key](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas7c.png)
 
+
+### Erkenntnisse - File Inclusion (Lokale Datei-Inklusion)
+
+- **Code-Analyse ist Pflicht:** Die Überprüfung des Sourcecodes ist unerlässlich, um versteckte include-Befehle (`include "includes/secret.inc"`) zu finden.
+
+- **Exposed Assets:** Die inkludierte Datei (`secret.inc`) ist direkt über die URL aufrufbar und enthält den benötigten geheimen Schlüssel ($secret).
+
+
 </details>
 
 
@@ -448,6 +517,14 @@ http://natas7.natas.labs.overthewire.org/index.php?etc/natas_pass/natas8
 ```
 
 ![Natas8 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas8b.png)
+
+
+### Erkenntnisse - Local File Inclusion (LFI) via URL-Parameter
+
+- **LFI-Muster in URLs:** URLs, die Dateinamen oder Pfade als Parameter verwenden (`?page=home`), sind anfällig für Local File Inclusion (`LFI`).
+
+- **Pfad-Traversal zum Passwort:** Durch das Einfügen eines absoluten Pfads (`/etc/natas_pass/natas8`) in den page-Parameter kann der Server dazu gebracht werden, lokale Systemdateien anzuzeigen.
+
 
 </details>
 
@@ -541,6 +618,16 @@ echo "b4ViV1lmMmtCcQ==" | base64 -d
 Nun Kopiere das Passwort `oubWYf2kBq`, damit du es auf der Hauptseite in das Eingabfeld einfügen kannst. Submitte es und erhalte das Passwort für die nächste Challange.
 
 ![Natas9 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas9e.png)
+
+
+### Erkenntnisse - Multi-Layer-Kodierung und Terminal-Tools
+
+- **Authentifizierung via cURL:** Wenn der Browser Probleme mit der HTTP-Basic-Authentifizierung hat, ist `curl -u` das zuverlässigere Werkzeug.
+
+- **Reverse-Engineering der Kodierung:** Das Passwort ist mehrfach kodiert (Base64 → Reverse → Hex). Der PHP-Sourcecode liefert die exakte Reihenfolge der Verschlüsselungsfunktionen (`bin2hex(strrev(base64_encode(...)))`), die für die Entschlüsselung umgekehrt werden muss.
+
+- **Unix-Werkzeuge:** Tools wie `xxd -r -p` (Hex-Dekodierung), `rev` (String-Reverse) und `base64 -d` (Base64-Dekodierung) sind für das Reverse-Engineering im Terminal essenziell.
+
 
 </details>
 
@@ -650,6 +737,15 @@ Damit solltest du das Passwort für die nächste Challenge erhalten.
 ![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas10e.png)
 
 
+### Erkenntnisse - Command Injection (Fehlende Sanitization)
+
+- **Gefährliche PHP-Funktionen:** Die Funktion `passthru()` übergibt Benutzereingaben direkt an die Shell, was ohne Prüfung zur **Remote Code Execution** (**RCE**) führt.
+
+- **Aus dem Befehl ausbrechen:** Mit dem Trennzeichen Semikolon (`;`) kann der ursprüngliche Befehl beendet und ein neuer, beliebiger Shell-Befehl eingeschleust werden (z.B. `test; ls /etc/`).
+
+- **Ausnutzung des grep Verhaltens:** Der Angriff basiert auf der fehlenden Validierung des $key-Werts.
+
+
 </details>
 
 
@@ -713,6 +809,13 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 
 ![Natas11 Password](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas11c.png)
 
+
+### Erkenntnisse - Command Injection-Bypass (Logik-Fehler)
+
+- **Schwache Blacklist-Filter:** Das Filtern von gefährlichen Zeichen (`;`, `|`, `&`) ist unzureichend, wenn andere **Shell-Konstrukte** verwendet werden können.
+
+- **Ausnutzung des `grep`-Befehls:** Die Schwachstelle liegt nicht im Befehls-Trennen, sondern im **Ausnutzen** der `grep`-Syntax: Durch das Einfügen eines Leerzeichens vor einem neuen Pfad kann `grep` dazu gebracht werden, die **Ausgabe einer Systemdatei** anzuzeigen (`grep -i a /etc/...`).
+
 </details>
 
 
@@ -738,7 +841,7 @@ URL:        http://natas11.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
-Mit dem Zugang zu `natas11` bekommst du eine komplett neue Challenge. Du erhältst bereits im Vorfeld einen Hinweis darauf, wie die Cookies geschützt sind, nämlich mit eine `XOR`-Verschlüsselung.
+Mit dem Zugang zu `natas11` bekommst du eine komplett neue Challenge. Du erhältst bereits im Vorfeld einen Hinweis darauf, wie die Cookies geschützt sind, nämlich mit einer `XOR`-Verschlüsselung.
 
 ![Natas12 Startseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12.png)
 
@@ -762,26 +865,49 @@ Die `xor_encrypt`-Funktion scheint interessant zu sein, da du darüber die Entsc
 
 Es ist jedoch wichtig, den exakten Schlüssel zu kennen, damit der Klartext korrekt ausgegeben werden kann. Leider wird er im Code zensiert (`<censored>`).
 
-Der Sourcecode verrät jedoch auch, dass eine neue Variable `$data` mit dem Wert aus der Funktion `loadData($defaultdata)` initialisiert wird. Daraufhin wird geprüft, ob sich in diesem Array ein Parameter mit besonderem Wert `preg_match('/^#?:[a-f\d]{6})...`, was auf den Inhalt des Eingabfelds auf der Hauptseite von `natas11` hindeutet. 
+Der Sourcecode verrät, dass eine neue Variable `$data` mit dem Wert aus der Funktion `loadData($defaultdata)` initialisiert wird. Daraufhin wird geprüft, ob sich in diesem Array ein Parameter mit besonderem Wert `preg_match('/^#?:[a-f\d]{6})...` befindet, was auf den Inhalt des Eingabfelds (`#ffffff`) auf der Hauptseite von `natas11` hindeutet. 
 
-Also verarbeitet die Funktion `loadData()` den gesamten Inhalt der Variable `$defaultdata = array( "showpassword"=>"no", "bgcolor"=>"#ffffff");`. 
+In dieser Funktion ist auch eine sogenannten *Superglobal* aus der `PHP`-Syntax, nämlich `$_COOKIE`. Ein Superglobal (`$_COOKIE`, `$_REQUEST`, usw.) ist ein vordefinierter Array, der vom PHP-Interpreter gefüllt wird und dir Zugriff auf Daten gibt, die von einem Client (dem Browser) an den Server gesendet werden.
 
-Die 3. Funktion `saveData()` übermittelt den eingebenen Wert aus dem Cookie und übergibt ihn an den Server. Also muust du versuchen den Cookie so zu modifizieren, dass der Server die Nachricht erhält, den Parameter auf `"showpassword":"yes"` zu setzen.
+Die Variable `$_Cookie` enthält also die Daten, die der Browser im `Cookie`-Header der HTTP-Anfrage an den Server sendet.
 
-Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins JSON gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
+Die Funktion `loadData()` verarbeitet somit den gesamten Inhalt der Variable `$_COOKIE`, insbesondere `['data']`.   
+Gleichzeitig ist diese Funktion für die Logik der Seite zuständig, was bedeutet, dass die Manipulation des Cookies den ursprünglichen Aufbau der Hauptseite verändern könnte (sofern keine weiteren besonderen Sicherheitsmaßnahmen vorhanden sind - was bei `natas11` der Fall ist). 
 
-Geh in die Dev-Tools deines Browser in den Reiter Netzwerk und lade ggfs. die Seite über den Button `reload` neu.
+Die 3. Funktion `saveData()` speichert den eingegebenen Wert aus dem Cookie und übergibt ihn an den Server, um ihn zu speichern.   
+Also musst du versuchen, den Cookie so zu modifizieren, dass der Server die Nachricht erhält, den Parameter auf `"showpassword":"yes"` zu setzen.
+
+Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
+
+In der letzten `if`-Bedingung wird überprüft, ob der Parameter `"bgcolor"` existiert. Dies geschieht über den Superglobal-Array `$_REQUEST`. 
+
+`$_REQUEST` ist eine Kombination aus aller Eingabedaten, die ein Benutzer an den Server schicken kann. Es ist quasi ein *Super-Superglobal*, da es normalerweise die Inhalte von drei anderen Superglobals enthält (`$_GET`+`$_POST`+`$_COOKIE`=`$_REQUEST`).
+
+```text
+$_REQUEST = $_GET + $_POST + $_COOKIE
+```
+
+`$_GET`sind die Daten aus der URL-Abfragezeichenkette (z.B. `?bgcolor=%23ffffff`).   
+`$_POST` sind Daten aus dem Body einer HTTP-Post-Anfrage (z.B. nach dem Absenden eines Formulars).   
+`$_COOKIE` sind die bereits erwähnten Cookie-Daten.
+
+**Sicherheitsrisiko des Superglobal `$_REQUEST`:**   
+
+Aus Sicht der IT-Sicherheit deutet ein `$_REQUEST` Superglobal im Code daraufhin, dass die Entwickler keine gute Arbeit geleistet haben. Das Problem liegt darin, dass in einem `$_REQUEST` nicht unterschieden wird, ob die Daten per URL, Cookie oder Formular übermittelt werden. In einem Sicherheitskontext kann die Verwendung von `$_REQUEST` bedeuten, dass du eine Schwachstelle auf verschiedene Wege ausnutzen kannst (z.B. eine Cookie-basierte Schwachstelle kann plötzlich auch über einen einfachen URL-Parameter ausgelöst werden).
+
+Schau dir als jetzt einmal den Cookie an.   
+Geh in den Dev-Tools deines Browser in den Reiter Netzwerk und lade ggfs. die Seite über den Button `reload` neu.
 
 ![Natas12 DevTools Netzwerk Cookie Analyse](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12c.png)
 
 Klicke auf die Datei mit dem `Initiator` `document` bzw. dem `Type` `html`. Das ist die Hauptseite.   
 Schau dir den Cookie an. Neben den Google Analytics Parametern (`_ga_`), die für einen Payload unbedeutend sind, steht der Cookie Wert `data` mit einem, so wie es aussieht Base64 kodiertem Inhalt.
 
-Mir kam dann die Idee, chatGPT anzuleiten ein Skript zu schreiben welches mir den potenziellen XOR-Schlüssel ausgibt. 
+Mir kam dann die Idee, eine KI anzuleiten ein Skript zu schreiben welches mir den potenziellen XOR-Schlüssel ausgibt. 
 
 Du kennst zwar nicht den korrekten Schlüssel, doch in einer einfachen binären Logik kannst du den Klartext, den du über den Sourcecode erhältst, mit dem verschlüsselten Wert vergleichen und so vielleicht auf den richtigen Schlüssel kommen (du wirst in der realen Welt nicht so einfach an den Klartext kommen).
 
-ChatGPT half mir daraufhin einen Code zu entwickeln, der den Klartext aus dem Sourcecode nimmt und mit dem Base64-Wert aus dem Cookie vergleicht.
+Die KI half mir daraufhin einen Code zu entwickeln, der den Klartext aus dem Sourcecode nimmt und mit dem Base64-Wert aus dem Cookie vergleicht.
 
 **Wichtig:** Der Inhalt aus der Variable des Sourcecodes muss im standardmäßigen, kompakten JSON-Format sein. Achte also darauf, dass du keine unnötigen Leerzeichen verwendest, da diese die Byte-Anzahl verändern und die XOR-Entschlüsselung auf Serverseite fehlschlagen lassen.
 
@@ -856,7 +982,7 @@ print(key_bytes[:16])
 
 
 
-Wenn du diese Skript ausführst, dann solltest du den XOR-Schlüssel erhalten haben.   
+Wenn du dieses Skript ausführst, dann solltest du den XOR-Schlüssel erhalten haben.   
 
 > Es kann sein, dass die Passwörter aktualisiert worden sind.
 
@@ -865,9 +991,9 @@ Wenn du diese Skript ausführst, dann solltest du den XOR-Schlüssel erhalten ha
 Nun hast du den Schlüssel und kannst damit versuchen den manipulierten JSON-String an den Server zu übermitteln.
 
 Wichtig ist dabei, dass du die Reihenfolge zum Verschlüsseln richtig einhältst.   
-Zuerst den String ins JSON-Format bringen, dann mit dem richtigen Schlüssel die XORen und zum Schluss den gesamten String Base64 verschlüsseln.
+Zuerst den String ins JSON-Format bringen, dann mit dem richtigen Schlüssel XOR verschlüssel und zum Schluss den gesamten String Base64 kodieren.
 
-Dazu gehen du auf [cyberchef.io](https://cyberchef.io). Hier kannst du dein eigenes Verschlüsselungsrezept einstellen. Du benötigst nur 2 Methoden, da du den String so eingibst, dass er bereits im standardmäßigen JSON-Format ist, sodass du ihn direkt XOR verschlüsseln und Base64 kodieren kannst.
+Dazu gehst du auf [cyberchef.io](https://cyberchef.io). Hier kannst du dein eigenes Verschlüsselungsrezept einstellen. Du benötigst nur 2 Methoden, da du den String so eingibst, dass er bereits im standardmäßigen JSON-Format ist, sodass du ihn direkt XOR verschlüsseln und Base64 kodieren kannst.
 
 ![Natas12 Cyberchef Verschlüsselung](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12e.png)
 
@@ -908,9 +1034,24 @@ Sobald du diesen Befehl ausführst, solltest du das Passwort inmitten der HTML-A
 
 Herzlichen Glückwunsch, du hast das Passwort zu `natas12` erfolgreich herausgefunden und kannst mit dem nächsten Level weitermachen.
 
+
+### Erkenntnisse - Known-Plaintext-Angriff (XOR)
+
+- **Sicherheit durch Obskurität:** Das Cookie wird mit **XOR-Verschlüsselung** geschützt, was eine sehr schwache Methode darstellt.
+
+- **Known-Plaintext-Angriff (KPA):** Da der Klartext (`{"showpassword":"no", "bgcolor":"#ffffff"}`) und der Chiffretext (das Cookie) bekannt sind, kann der kurze XOR-Schlüssel durch einfache XOR-Operation (`Chiffretext + Klartext = Schlüssel`) ermittelt werden.
+
+- **Wichtigkeit der kompakten JSON-Struktur:** Leerzeichen im Payload führen zu falschen Byte-Größen und **falschen XOR-Berechnungen**, was die genaue Einhaltung des **kompakten JSON-Formats** (`{"key":"value","key2":"value2"}`) erfordert.
+
 </details>
 
------
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ## Natas 12 -> 13
 
@@ -923,8 +1064,9 @@ URL:        http://natas12.natas.labs.overthewire.org
 
 </details>
 
-# Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
+----
 
+# Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
 
 <div align=right>
