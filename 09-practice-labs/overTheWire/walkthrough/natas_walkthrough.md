@@ -857,7 +857,7 @@ Schau auf den Sourcecode, um näheres darüber zu erfahren, was im Backend mit d
 
 Wenn du dich durch den Sourcecode liest, dann erkennst du 3 Funktionen.
 
-1. `xor_ecrypt($in)` - die für die XOR-Verschlüsselung zuständig ist.
+1. `xor_encrypt($in)` - die für die XOR-Verschlüsselung zuständig ist.
 2. `loadData($def)` - die für das laden des Default-Werts ist.
 3. `saveData($d)` - die für das Speichern der Daten ist.
 
@@ -877,7 +877,7 @@ Gleichzeitig ist diese Funktion für die Logik der Seite zuständig, was bedeute
 Die 3. Funktion `saveData()` speichert den eingegebenen Wert aus dem Cookie und übergibt ihn an den Server, um ihn zu speichern.   
 Also musst du versuchen, den Cookie so zu modifizieren, dass der Server die Nachricht erhält, den Parameter auf `"showpassword":"yes"` zu setzen.
 
-Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
+Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert wird.
 
 In der letzten `if`-Bedingung wird überprüft, ob der Parameter `"bgcolor"` existiert. Dies geschieht über den Superglobal-Array `$_REQUEST`. 
 
@@ -895,7 +895,7 @@ $_REQUEST = $_GET + $_POST + $_COOKIE
 
 Aus Sicht der IT-Sicherheit deutet ein `$_REQUEST` Superglobal im Code daraufhin, dass die Entwickler keine gute Arbeit geleistet haben. Das Problem liegt darin, dass in einem `$_REQUEST` nicht unterschieden wird, ob die Daten per URL, Cookie oder Formular übermittelt werden. In einem Sicherheitskontext kann die Verwendung von `$_REQUEST` bedeuten, dass du eine Schwachstelle auf verschiedene Wege ausnutzen kannst (z.B. eine Cookie-basierte Schwachstelle kann plötzlich auch über einen einfachen URL-Parameter ausgelöst werden).
 
-Schau dir als jetzt einmal den Cookie an.   
+Schau dir jetzt einmal den Cookie an.   
 Geh in den Dev-Tools deines Browser in den Reiter Netzwerk und lade ggfs. die Seite über den Button `reload` neu.
 
 ![Natas12 DevTools Netzwerk Cookie Analyse](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12c.png)
