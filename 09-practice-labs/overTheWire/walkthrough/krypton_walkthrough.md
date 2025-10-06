@@ -184,15 +184,15 @@ echo "Dein ROT13 Code" | tr 'N-ZA-M' '[A-Z]'    # Datei entschlüsseln mit ROT13
             - `2>`: Umleitungsoperator mit Dateideskriptor `2`. Es gibt 3 Arten von Datenströmen:
                 - `0`: `stdin` (Standardeingabe) - von hier liest ein Befehl Daten.
                 - `1`: `stdout` (Standardausgabe) - hierin schreibt ein Befehl seine normalen Ausgaben.
-                - `2`: `stderr` (Standard-Fehlerausgabe) - hier schreib ein Befehl Fehlermeldungen oder Diagnoseinformationen.
+                - `2`: `stderr` (Standard-Fehlerausgabe) - hier schreibt ein Befehl Fehlermeldungen oder Diagnoseinformationen.
             - `/dev/null`: spezielle Gerätedatei in Unix-ähnlichen Systemen. Alles, was in diese Datei geschrieben wird, wird sofort verworfen (akzeptiert Daten, keine Speicherung).
 
 2. `cat /krypton/krypton1/krypton2`
-    - `cat <Pfad/evtl/Unterpfad/Dateiname>`: Programm, welches wie ein Pager den Inhalt der Dateien ausgibt. Funktioniert wie ein Pager.
+    - `cat <Pfad/evtl/Unterpfad/Dateiname>`: Programm, welches wie ein Pager den Inhalt der Dateien im Konsolenfenster ausgibt.
 
 3. `echo "Dein ROT13 Code" | tr 'N-ZA-M' '[A-Z]'`
     - `echo "..."`: Einfache Standardausgabe des Strings
-    - `|`: (Pipe) Unix-Befehl, das Standardausgaben eines BEfehls mit der Standardeingabe eines anderen BEfehles verbindet. `echo` gibt den Text aus und wird als Eingabe für den nächsten Befehl, hier `tr` genutzt.
+    - `|`: (Pipe) Unix-Befehl, das Standardausgaben eines Befehls mit der Standardeingabe eines anderen Befehles verbindet. `echo` gibt den Text aus und wird als Eingabe für den nächsten Befehl, hier `tr` genutzt.
     - `tr`: (translate/transliterate) Ersetzt bestimmte Zeichen, indem es zwei Zeichensätze (Quell- und Zielzeichensatz) ersetzt. Dabei wird jede Positon des Quellzeichensatz (bsp: "ABCD") durch das entsprechende Zeichen an derselben Positon im Zielzeichensatz ersetzt.
         - `'N-ZA-M'`: ist der **Quellzeichensatz**
             - `N-Z`: umfasst alle Großbuchstaben von N bis Z.
@@ -200,7 +200,7 @@ echo "Dein ROT13 Code" | tr 'N-ZA-M' '[A-Z]'    # Datei entschlüsseln mit ROT13
                 - zusammen bilden sie das lateinische Alphabet, jedoch um 13. Stellen verschoben.
         - `[A-Z]`: ist der **Zielzeichensatz** und umfasst alle Großbuchstaben von A bis Z in normaler Reihenfolge.
 
-`tr` such also nach jedem Zeichen, das in der verschlüsselten Nachricht vorkommt. Wenn es dann bspw. ein `N` findet, erstezt es das Zeichen mit einem `A` und so weiter.
+`tr` such also nach jedem Zeichen, das in der verschlüsselten Nachricht vorkommt. Wenn es dann bspw. ein `N` findet, ersetzt es das Zeichen mit einem `A` und so weiter.
 
 > **weitere Möglichkeit:** Du könntest auch mit cyberchef.io das Passwort knacken.
 
@@ -267,7 +267,7 @@ cat ciphertext                        # liest den Ciphertext für das Entschlüs
 
 ![Krypton3 krypton3 entschlüsseln](/09-practice-labs/ressourcen/pictures/overthewire/krypton/krypton3b.png)
 
-Du bist nun in deinem Ordner im `/tmp/`-Verzeichnis. Mit `ln -s /krypton/krypton2/keyfile.dat` hast du einen Symbol-Link darin erstellst. Normalerweise kannst du das auch machen, wenn du in anderen Verzeichnissen bist. Dazu musst du dann noch das Zielverzeichnis angeben, in das die Datei verlinkt werden soll.
+Du bist nun in deinem Ordner im `/tmp/`-Verzeichnis. Mit `ln -s /krypton/krypton2/keyfile.dat` hast du einen Symbol-Link darin erstellt. Normalerweise kannst du das auch machen, wenn du in anderen Verzeichnissen bist. Dazu musst du dann noch das Zielverzeichnis angeben, in das die Datei verlinkt werden soll.
 
 Nach dem die Datei `keyfile.dat` mit dem Programm `encrypt` entschlüsselt wurde, erhältst du eine weitere Datei ins `/tmp/`-Verzeichnis, die dir die Entschlüsselung für die Datei `krypton3` gibt.
 
@@ -343,8 +343,7 @@ ls /krypton/krypton3/                       # listet das angegebene Verzeichnis 
 Du weißt bereits, dass die Dateien alle den gleichen Schlüssel haben, mit dem sie verschlüsselt wurden. Das heißt, dass du den gleichen Schlüssel nehmen musst, um die Dateien zu entschlüsseln.
 Das ist wichtig zu wissen. Denn ohne den richtigen Schlüssel, erhältst du nicht die korrekte entschlüsselte Nachricht.
 
-Viel wichtiger ist zu wissen, dass du keinerlei wissen darüber hast, wie der Schlüssel aufgebaut ist. Das heißt, dass du den Schlüssel `bruteforcen` musst. ressourcen
-Du kannst entweder ein `python`-Script schreiben, dass dir hilft, den Schlüssel zu `bruteforcen` oder du bedienst die den mannigfaltigen Online-Tools.
+Viel wichtiger ist zu wissen, dass du keinerlei wissen darüber hast, wie der Schlüssel aufgebaut ist. Das heißt, dass du den Schlüssel `bruteforcen` musst. Du kannst entweder ein `python`-Script schreiben, dass dir hilft, den Schlüssel zu `bruteforcen` oder du bedienst dich den mannigfaltigen Online-Tools.
 
 Ich nutze `QuipQuip`, das ein automatisierter Kryptogrammlöser ist und einfache `Substitution-Cipher` lösen kann.
 
@@ -393,6 +392,8 @@ Nutze es, um dich mit `krypton4` in das nächste Level einzuloggen.
 
 </div>
 
+
+# Fortsetzung folgt!
 
 ## Krypton 4 -> 5
 

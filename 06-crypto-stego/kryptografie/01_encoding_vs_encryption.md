@@ -99,6 +99,10 @@ echo "cGFzc3dvcmQxMjM=" | base64 -d
 # password123
 ```
 
+**Was ist Base64?**
+
+Base64 ist eine Kodierungsmethode, die binäre Daten in eine Zeichenfolge umwandelt, die nur aus druckbaren ASCII-Zeichen besteht. Dies ist nützlich, um Daten sicher über Systeme zu übertragen, die nur Text verarbeiten können, wie z.B. in E-Mails oder URLs. Ein Base64-String besteht aus Groß- und Kleinbuchstaben (`A-Z`, `a-z`), Ziffern (`0-9`), dem Pluszeichen (`+`) und dem Schrägstrich (`/`). Das Gleichheitszeichen (`=`) wird am Ende als Padding-Zeichen verwendet, um sicherzustellen, dass die ursprünglichen Daten ein Vielfaches von 3 Bytes sind.
+
 
 <div align=right>
 

@@ -559,7 +559,7 @@ xxd -r data.txt | strings
     <summary>Lösung</summary>
 
 
-Base64 ist ein Algorithmus, der zur Verschlüsselung von Nachrichten verwendet werden kann. 
+Base64 ist ein Algorithmus, der zur Kodierung von Nachrichten verwendet werden kann. 
 
 ```bash
 ls
@@ -680,7 +680,7 @@ file data
     - der Switch `-d` steht für Dekomprimieren.
 
 Jetzt wurde aus einer `gzip`-Datei eine `bzip2`-Datei.
-- `bzip2` ist ein genau wie `gzip` ein Tool, um Dateien zu komprimieren und dekomprimieren.
+- `bzip2` ist wie `gzip` ein Tool, um Dateien zu komprimieren und dekomprimieren.
 
 6. Mach so weiter, bis zum Passwort:
 
@@ -725,7 +725,7 @@ Dies machst du so lange, bist du zum Passwort für das nächste Level kommst.
     <summary>Lösung</summary>
 
 
-Schon einmal eine SSH-Verbindung über eine SSH-Verbindung aufgebaut? 
+Schon einmal eine SSH-Verbindung in einer SSH-Verbindung aufgebaut? 
 Los gehts:
 Gib im Terminal folgenden Befehle ein:
 ```bash
@@ -783,7 +783,7 @@ nc localhost 30000
 Dass du mit dem `netcat`-Service verbunden bist, siehst du daran, dass deine Shell nun einen blinkenden Zeiger hat.
 Hier kannst du nicht viel machen und jeder Befehl wird dich aus der Session werfen, nachdem es dich noch einmal nach dem Passwort auffordert.
 
-Füge hier einfach das kopierte Passwort aus den Befehlen aus Punkt 1. hier ein und bestätige anschließend mit `Enter`.
+Füge hier einfach das kopierte Passwort aus den Befehlen aus Punkt 1. ein und bestätige anschließend mit `Enter`.
 
 **Erklärung:** 
 
@@ -795,7 +795,7 @@ Füge hier einfach das kopierte Passwort aus den Befehlen aus Punkt 1. hier ein 
 Um die `netcat`-Session zu beenden, drücke auf Windows `Strg` + `c` und auf Linux/Mac `Control` + `c`.
 
 **Hinweis:**
-In diesem Level musst du einmal die `bandit14` SSH-Verbindung mit `exit` beenden und anschließend die SSH-Verbindung zu `bandit13`, da wir über die SSH-Verbindung aus bandit13 eine SSH-Verbindung zu bandit14 geöffnet haben.
+In diesem Level musst du einmal die `bandit14` SSH-Verbindung mit `exit` beenden und anschließend die SSH-Verbindung zu `bandit13`, da wir in der SSH-Verbindung aus bandit13 eine SSH-Verbindung zu bandit14 geöffnet haben.
 
 Und solange die SSH-Verbindung des Users `bandit14` existiert, exisitiert die SSH-Verbindung zu `bandit13`. 
 
@@ -867,12 +867,12 @@ Dann sollte deine Shell folgendes ausgeben:
 - `SERVICE`: Zeigt, was für ein Service darauf läuft.
 
 Dein Nmap Scan sollte auch ungefähr so aussehen.
-Du siest 5 Ports, mit offenem State und unterschiedlichen Services, die darauf laufen.
+Du siehst 5 Ports, mit offenem State und unterschiedlichen Services, die darauf laufen:
 - `echo`: kein Standard State wie `open, closed, filtered` usw. Ganz normaler `echo` Befehl (RFC 862). Gibt erhaltene Eingaben wieder zurück.
 - `ssl/echo`: referenziert eine spezielle `nmap-Scripting Enginge (NSE)` und ist kein Standard für einen Port State.
 - `ssl-enum-ciphers`-Scripts, falls du mehr erfahren willst.
 
-In der Aufgabe wird erläutert, dass einige Server die deine Ausgabe zurückgeben und nur ein Server dir genau das Passwort gibt. 
+In der Aufgabe wird erläutert, dass es einige Server gibt, die deine Ausgabe zurückgeben und nur ein Server exisitiert, der dir das Passwort zurückgibt. 
 
 Wo glaubst du, wirst du erfolgreich sein, wenn du eine Verbindung aufbaust?
 
@@ -892,7 +892,7 @@ ncat --ssl localhost 31790
 
 3. Kopiere den RSA Private Key:
 
-Markiere und kopiere den privaten Key, den du erhalten hast. Erstelle eine neue Datei und füge den kopierten private Key in diese Datei.
+Markiere und kopiere den privaten Key, den du erhalten hast. Erstelle eine neue Datei und füge den kopierten private Key in diese Datei ein. Das ist der Zugang zu `bandit17`.
 
 </details>
 
@@ -927,11 +927,11 @@ cat /etc/bandit_pass/bandit17
 ```
 ![Bandit17 Passwort herausfinden](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-18d.png)
 
-Solltest du wie nachfolgend eine Fehlermeldung erhalten, dann liegt das daran, dass die Datei, die den private Key hält, von anderen Usern auch zugänglich ist. Das beudetet für dich, dass du die Berechtigungen für die Datei entziehen musst, sodass nur du Zugriff auf diese hast.
+Solltest du wie nachfolgend eine Fehlermeldung erhalten, dann liegt das daran, dass die Datei, die den private Key hält, von anderen Usern auch zugänglich ist. Das bedeutet für dich, dass du die Berechtigungen für die Datei entziehen musst, sodass nur du Zugriff auf diese hast.
 
 ![Bandit18 Verbindung zum Server](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-18.png)
 
-Um dies zu tun, gib folgende Befehl ein:
+Um dies zu tun, gib folgende Befehle ein:
 ```bash
 ll      # optional um noch einmal eine Liste der Dateien zu haben
 chmod 400 rsa.key
@@ -952,7 +952,7 @@ Nun solltest du erfolgreich mit der Shell des Benutzers `bandi17` verbunden sein
 
 3. Passwort für Bandit18 herausfinden:
 
-Jetz haben wir noch das Password für `bandit18`, welches sich in der Datei `password.new` befindet. 
+Jetz haben wir noch das Passwort für `bandit18`, welches sich in der Datei `password.new` befindet. 
 In dieser Datei gibt es 100 Wörter - das kannst du herausfinden, wenn du den Befehl `wc -w Datei` eingibst. 
 
 Diese Dateien unterscheiden sich nur um eine Zeile.
@@ -1008,7 +1008,7 @@ ssh -t -l bandit18 bandit.labs.overthewire.org -p 2220 bash --norc --noprofile
 - `bash --norc`: Nach erfolgreichem Login wird eine neue Bash-Shell gestartet, jedoch wird die userspezifische Datei `~/.bashrc` nicht geladen. 
 - `--noprofile`: Die Dateien `~/.profile`, `~/.bash_profile` und `~/.bash_login` werden ebenfalls ignoriert.
 
-Die letzten beiden Switche sorgen dafür, dass die Shell keine Konfigurationen lädt, was nützlich sit, um saubere und kontrollierte Umgebungen zu starten.
+Die letzten beiden Switche sorgen dafür, dass die Shell keine Konfigurationen lädt, was nützlich ist, um saubere und kontrollierte Umgebungen zu starten.
 
 - Oder ohne `-t`:
 ```bash
@@ -1021,7 +1021,7 @@ ssh -l bandit18 bandit.labs.overthewire.org -p 2220 bash --norc --noprofile
 
 Du kannst in diesem Befehl `bash` mit `dash` oder einer anderen Shell ersetzen und versuchen, ob du dich einloggen kannst.
 
-Kopiere und speicher das Passwort für die nächste Challenge.
+Kopiere und speichere das Passwort für die nächste Challenge.
 
 </details>
 
@@ -1049,7 +1049,7 @@ ls           # listet alle Dateien im aktuellen Verzeichnis auf
 ```
 
 `bandit20.do*` ist ein ausführbares Programm. Es lässt zu, dass du Dateien des Users `bandit20` nutzen kannst. 
-Das kannst du verwenden, um beispielsweise das Passsword des Users auszuspähen (`cat /etc/bandit_pass/bandit20`).
+Das kannst du verwenden, um beispielsweise das Passwort des Users auszuspähen (`cat /etc/bandit_pass/bandit20`).
 
 
 ![Bandit20 Password ausspähen](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-20.png)
@@ -1095,7 +1095,7 @@ Gib im Terminal folgenden Befehl ein:
 nmap -sV localhost
 ```
 
-Das sollte dir die Ports auflisten und die dazugehörigen `STATES` und den `SERVICE`.
+Das sollte dir die Ports auflisten, die dazugehörigen `STATES` und den `SERVICE`.
 Wir haben **8 Ports** verfügbar, von dem ein Port ein Standard-Port ist (`22/tcp` für `ssh`).
 
 ![Bandit21 Nmap Scan](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-21b.png)
@@ -1154,7 +1154,7 @@ Anschließend kannst du beide Terminals mit `exit` beenden und die nächste Chal
     <summary>Lösung</summary>
 
 
-Logg dich mit `bandit21` über `ssh` ein und gib das Passwort des letztes Levels hier ein.
+Logg dich mit `bandit21` über `ssh` ein und gib das Passwort des letzten Levels ein.
 
 Anschließend solltest du mit `bandit21` verbunden sein.
 Nun gibst du folgende Befehle in das Terminal:
@@ -1208,7 +1208,7 @@ Deine Ausgabe sollte dann folgendermaßen aussehen:
 
 2. Verzeichnis in `/tmp/ erstellen
 
-Erstelle für diese Challenge einen vorrübergehenden Ordner im `/tmp`-Verzeichnis, kopiere die `cronjob_bandit23.sh`-Datei, bennene sie um und wechsle in deinen neuen Ordner:
+Erstelle für diese Challenge einen vorrübergehenden Ordner im `/tmp`-Verzeichnis, kopiere die `cronjob_bandit23.sh`-Datei, benenne sie um und wechsle in deinen neuen Ordner:
 
 ```bash
 mkdir /tmp/DeinOrdnerName       # erstelle einen Ordner im /tmp-Verzeichnis
@@ -1221,7 +1221,7 @@ ls      # optional
 
 3. `nano`-Editor oder `cat` eine Zeile herauskopieren
 
-Wir brauchen nur einen einzige Zeile aus der kopierten Datei. Lies sie entweder mit dem `nano`-Editr aus oder nutze den `cat`-Befehl dafür.
+Wir brauchen nur einen einzige Zeile aus der kopierten Datei. Lies sie entweder mit dem `nano`-Editor aus oder nutze den `cat`-Befehl dafür.
 
 Als Beispiel nutze ich meinen Dateinamen. Deinen solltest du anpassen.
 
@@ -1230,7 +1230,7 @@ nano newcron.sh     # öffnet im Nano Editor die newcron.sh Datei
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 ```
 
-![Bandit23 Code-Zeile kopieren](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-23c.png)
+![Bandit23 Code-Zeile kopieren](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-23b.png)
 
 Du erhältst anschließend eine sehr lange Buchstaben- und Zahlenreihenfolge. Kopiere es und gib folgenden Befehl ein, um die Challenge abzuschließen:
 
@@ -1238,11 +1238,7 @@ Du erhältst anschließend eine sehr lange Buchstaben- und Zahlenreihenfolge. Ko
 cat /tmp/foo # foo mit deinem "Code" ersetzen
 ```
 
-Nach dem Auslesen der Datei erhältst du das Passwort für `bandit23`.
-
-![Bandit21 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-23b.png)
-
-
+Nach dem Auslesen der Datei erhältst du das Passwort für `bandit23`.   
 Kopiere und speichere das Password für die nächste Challenge.
 
 </details>
@@ -1282,11 +1278,11 @@ Anschließend solltest du das Skript sehen, welches alle Dateien nach Ausführun
 
 Das Programm löscht alle Dateien und somit auch das Passwort. Schreibe ein Skript, welches genau dieses Passwort in das `/tmp/`-Verzeichnis kopiert. 
 
-**Hinweis:** Du musst zusätzlich die Rechte ändern, damit der User `bandit24` die Datei ausführen darf, auch, wenn du sie als `bandit23` erstellt hast. Genauso ist das der Grund, warum wir eine Datei im `/tmp/`-Verzeichnis erstellen, um die Root-Rechte etwas umgehen zu können. Kein harmloser Exploit also!
+**Hinweis:** Du musst zusätzlich die Rechte ändern, damit der User `bandit24` die Datei ausführen darf, auch, wenn du sie als `bandit23` erstellt hast. Das ist der Grund, warum wir eine Datei im `/tmp/`-Verzeichnis erstellen, um die Root-Rechte etwas umgehen zu können. Kein harmloser Exploit also!
 
 Gib im Terminal folgende Befehle ein, um eine Datei im `/tmp/`-Verzeichnis zu erstellen, ihr Rechte zu vergeben und sie anschließend in das Verzeichnis für den `cronjob` zu kopieren:
 
-Beachte: Zum erstellen dieser Datei nutze ich den `nano`-Editor. Du kannst aber jeden anderen Editor dafür verwenden.
+**Beachte:** Zum erstellen dieser Datei nutze ich den `nano`-Editor. Du kannst aber jeden anderen Editor dafür verwenden.
 
 ```bash
 nano /tmp/deinDateiName.sh  # eine ausführbare Datei mit .sh erstellen
@@ -1300,8 +1296,8 @@ cat /etc/bandit_pass/bandit24 > /tmp/passwort
 ```
 
 **Was passiert hier?**
-Wenn du ein Skript erstellen willst, welches ausührbar ist, dann musst du einen Compiler angeben.
-In diesem Fall leitest du das mit einem `Sheband`, also der Zeile `#!/bin/bash`, ein. 
+Wenn du ein Skript erstellen willst, welches ausführbar ist, dann musst du einen Compiler angeben.
+In diesem Fall leitest du das mit einem `Shebang`, also der Zeile `#!/bin/bash`, ein. 
 Das sagt dem Compiler, dass es sich um ein `Bash`-Skript handelt und es wird dementsprechend kompiliert.
 
 Die Zeile `cat /etc/bandit_pass/bandit24 > /tmp/passwort` liest das Passwort aus dem Verzeichnis `/etc/bandit...` und fügt es mit `/tmp/passwort` im Verzeichnis `/tmp/` in eine neue Datei names `passwort`.
@@ -1317,13 +1313,13 @@ cp /tmp/deinDateiName.sh /var/spool/bandit24/foo
 
 4. Warten, bis der Cronjob ausgeführt wird
 
-Das Programm `cronjob_bandit24.sh` führt sich zu regulären Intervallen selbst aus. In diesem Skript sind es alle 60 Sekunden. Nach einer gewissen Zeit kannst du mit folgenden Befehl die Datei auslesen:
+Das Programm `cronjob_bandit24.sh` führt sich zu regulären Intervallen selbst aus. In diesem Skript sind es alle 60 Sekunden. Nach dieser Zeit kannst du mit folgenden Befehl die Datei auslesen:
 
 ```bash
 cat /tmp/password # die Datei aus dem erstellten Skript ausgeben
 ```
 
-Solltest du das Passwort aus dem aktuellen Level erhalten, probieren den letzten Befehl noch einmal aus.
+Solltest du das Passwort aus dem aktuellen Level nicht erhalten, probieren den letzten Befehl noch einmal aus.
 
 Du solltest jetzt das Passwort erhalten und kannst mit der nächsten Challenge fortfahren.
 
@@ -1348,7 +1344,7 @@ Du solltest jetzt das Passwort erhalten und kannst mit der nächsten Challenge f
 
 1. Ein Skript im `/tmp/`-Verzeichnis erstellen:
 
-Um das Passwort knacken zu vereifachen, erstellst du ein Skript, welches die Bedingung erfüllt (Passwort und 4-Stelliger Pin).
+Um das Passwort knacken zu vereinfachen, erstellst du ein Skript, welches die Bedingung erfüllt (Passwort und 4-Stelliger Pin).
 Gib im Terminal folgenden Befehle ein:
 
 ```bash
@@ -1374,7 +1370,7 @@ done
 
 **Was passiert hier?**
 
-- `passwort=....`: Variable Passwort mit dem Passwort des aktuellen Levels `bandit24`.
+- `passwort=....`: Variable mit dem Passwort des aktuellen Levels `bandit24`.
 - `for pin in $(seq -w 0000 9999) ; do`: Start einer Schleife.
     - `seq -w`: gibt führende Nullen mit aus.
     - `0000 - 9999`: alle vier Stellen werden getestet.
@@ -1386,7 +1382,7 @@ done
     - Wenn beides zutrifft, geht das Skript davon aus, dass die richtige PIN gefunden wurde.
     - `echo "Korrekte PIN: $pin"`: Gibt die gefunden korrekte PIN aus.
     - `echo "$ergebnis"`: Gibt die Server Antwort aus.
-    - `break`: Beendet die den Prozess
+    - `break`: Beendet den Prozess
 - `fi`: Beendet If-Schleife.
 - `done`: Beendet die For-Schleife.
 
@@ -1441,11 +1437,11 @@ Nutze die Datei in deinem Home-Verzeichnis und gib folgenden Befehl ein:
 ```bash
 ssh -l bandit26 -p 2220 -i bandit26.sshkey bandit.labs.overthewire.org
 ```
-Du wirst jedoch leider rausgeschmissen ohne, dass du etwas machen kannst.
+Du wirst jedoch leider rausgeschmissen, ohne, dass du etwas machen kannst.
 
 Nützlich zu wissen, wie das Programm `more` funktioniert.
 Kurz gesagt:
-`more` Filter einen Text zum bildschirmweise Blättern. "Primitiver" als Less. Wenn du mehr über `more` erfahren willst, dann lies dazu die [manpage](https://linux.die.net/man/1/more) dazu.
+`more` Filter einen Text zum bildschirmweise Blättern. "Primitiver" als Less. Wenn du mehr über `more` erfahren willst, dann lies dazu die [manpage](https://linux.die.net/man/1/more).
 
 4. Verkleinere dein Terminalfenster:
 
@@ -1462,7 +1458,7 @@ Das sollte nun funktionieren und du solltest im Terminal so etwas sehen wie `Mor
 
 Das ist "Out-of-the-box" par excellance und ich muss gestehen, dass ich hier googlen musste. 
 
-**Hinweis:** Solltest du wieder keine Verbindung haben, dann verkleiner dein Fenster ein wenig mehr. Dabei ist es nicht wichtig ob du die Breite veränderst, sondern vielmehr die Höhe des Fensters.
+**Hinweis:** Solltest du wieder keine Verbindung haben, dann verkleinere dein Fenster ein wenig mehr. Dabei ist es nicht wichtig ob du die Breite veränderst, sondern vielmehr die Höhe des Fensters.
 
 Ob du erfolgreich bist, siehst du daran, dass unten links in deinem Terminalfenster das Wort `More XY%` steht. Dabei ist XY% der Inhalt, die more bereits gescrollt ist.
 
@@ -1483,12 +1479,12 @@ ESC     # Drücke ESC, wenn du im Vi-Editor etwas schreiben willst
 :e /etc/bandit_pass/bandit26   # wie der cat-Befehl.
 #ENTER // wenn du erfolgreich bist, sollte das Passwort ausgegeben werden.
 ```
-Hier hast du bereits das Passwort erhalten. Du könntest du einen anderen Weg wählen und eine Shell erzeugen.
+Hier hast du bereits das Passwort erhalten. Du könntest einen anderen Weg wählen und eine Shell erzeugen.
 
 Angenommen, du hast den ersten Schritt nicht gemacht und das Passwort nicht erhalten.
 Wir können über den `Vi`-Editor versuchen, eine Shell zu erhalten.
 
-Dazu legen wir mit `:set shell=/bin/bash` die Shell fest die wir dann mit `:shell` aufrufen.
+Dazu legen wir mit `:set shell=/bin/bash` die Shell fest, die wir dann mit `:shell` aufrufen.
 Gib im `Vi`-Editor dazu folgenden Befehle ein:
 
 ```bash
@@ -1572,7 +1568,7 @@ Anschließend wirst du das Passwort für `bandit27` erhalten. Speichere es und n
 <details>
     <summary>Lösung</summary>
 
-Sobald du als `bandit27` eingelogt bist, erstellst du ein Verzeichnis im `/tmp`-Verzeichnis, klonst die Repository aus `GitHub` und liest die darin befindliche Datei aus.
+Sobald du als `bandit27` eingeloggt bist, erstellst du ein Verzeichnis im `/tmp`-Verzeichnis, klonst die Repository aus `GitHub` und liest die darin befindliche Datei aus.
 
 Gib im Terminal folgenden Befehle ein:
 ```bash
@@ -1722,13 +1718,13 @@ git branch -a   # listet alle lokalen und remote Branches auf
 git checkout    # drücke die Tab-Taste zwei Mal
 ```
 
-Wenn alles richtig ist, dann solltest du nun branches sehen, in die du wechseln kannst. 
+Wenn alles richtig ist, dann solltest du nun Branches sehen, in die du wechseln kannst. 
 Mir ist direkt einer aufgefallen: `secret`.
 
 ![Bandit31 git submodul](/09-practice-labs/ressourcen/pictures/overthewire/bandit/otw-31b.png)
 
 Allerdings gibt es ein Problem. `secret` ist kein Branch in den du wechseln kannst, sondern ein Submodul.
-Es wird in der Repo als `blob` - ein `binary large object` - gehandelt . Was du hier tun kannst, ist, das Submodul `secret` zu "entpacken".
+Es wird in der Repo als `blob` - ein `binary large object` - gehandelt. Was du hier tun kannst, ist, das Submodul `secret` zu "entpacken".
 
 Gib dazu folgende Befehl ein, um das Passwort zu erhalten:
 ```bash
@@ -1787,7 +1783,7 @@ Die Hälfte ist geschafft.
 
 **Wichtig:** `.gitignore` ist eine Datei, die als "Konfiguration" verwendet wird, die es Entwickler ermöglicht, Dateien und/oder Informationen auszuschließen, die dann beim Hochladen übersprungen werden.
 
-Beim Auslesen der Datei ist dir vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien überspringen würde. Jedoch müssen wir diese Dateien laut der `README.md` hochladen, um das Passwort zu erhalten.
+Beim Auslesen der Datei ist dir vermutlich aufgefallen, dass der Inhalt der `.gitignore`-Datei alle `.txt`-Dateien beim Hochladen auf die Repository überspringt. Jedoch müssen wir diese Dateien laut der `README.md` hochladen, um das Passwort zu erhalten.
 
 Die Zeile in `.gitignore` kannst du einfach auskommentieren, was dieses Problem damit löst.
 

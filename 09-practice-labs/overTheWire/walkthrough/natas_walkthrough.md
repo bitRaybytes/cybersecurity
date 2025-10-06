@@ -272,7 +272,7 @@ Melde dich mit `natas4` und dem Passwort aus dem zuvorherigen Level an.
 
 Wenn du eingeloggt bist, siehst du eine Nachricht, die so viel sagt wie, dass du nicht berechtigt bist, über den `Referer` auf die Seite zu kommen.
 
-Das einfachste, was du versuchen kannst, ist es, den Request-Header so zu modifizieren, dass du einer `GET`-Methode einen weiteren Parameter hinzufügst und probierst, ob es funktioniert. In unserem Fall benötigen wir den `Referer`-Wert, damit wir der Hauptseite von `natas4` eine Umleitung von `natas5` suggerieren können.
+Das einfachste, was du versuchen kannst, ist es, den Request-Header so zu modifizieren, dass du einer `GET`-Methode einen weiteren Parameter hinzufügst und probierst, ob es funktioniert. In diesem Fall benötigst du den `Referer`-Header, damit du der Hauptseite von `natas4` eine Umleitung von `natas5` suggerieren kannst.
 
 - **Analysiere die Header der Webseite**
 
@@ -291,11 +291,11 @@ Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. K
 Sobald du auf die Aufzeichnung klickst, tauchen rechts weitere Informationen dazu auf. Die gesamte HTTP-Anfrage um genau zu sein. Sie besteht aus der Methode (hier `GET`) und dem `Response` sowie `Request` Reitern. Response ist die Antwort vom Server mit seinen Header-Informationen. Der Request wird seitens des Browsers, also des Clients gesendet.   
 Es gibt zwei Möglichkeiten für dich nun vorzugehen.
 
-Entweder du drückst im `Request Headers` auf den Button `Raw` und siehst die rohe Fassung. Das hat den Vorteil, dass du die Daten einfach markieren und kopieren kannst. Die kannst du dann im Reiter `Console` mit der in `JavaScript` vorhandenen WebAPI `fetch` verwenden, die die Daten einer Webseite `fetchen` also anfordern kann. 
+Drücke im `Request Headers` auf den Button `Raw` und für die Rohfassung. Das hat den Vorteil, dass du die Daten einfach markieren und kopieren kannst. Die kannst du dann im Reiter `Console` mit der in `JavaScript` vorhandenen WebAPI `fetch` verwenden, die die Daten einer Webseite `fetchen` also anfordern kann. 
 
-Jetzt ist gerade die Verwirrung groß. JA du holst Daten mit `fetch`, doch du kannst auch welche senden.
+Jetzt ist gerade die Verwirrung groß. JA, du holst Daten mit `fetch`, doch du kannst auch welche senden.
 
-Falls du den Header über die `fetch`-API nutzen willst, kopierst du die `Raw`-Fassung des Request-Headers, klickst du auf den Reiter `Console`, und gibst folgenden Befehl ein:
+Falls du den Header über die `fetch`-API nutzen willst, kopiere sicherheitshalber den `Authorization`-Header, die dein Username und Passwort beinhaltet. Danach klickst du auf den Reiter `Console`, und gibst folgenden Befehl ein:
 
 ```JavaScript
 fetch("http://natas4.natas.labs.overthewire.org", {
@@ -306,7 +306,7 @@ fetch("http://natas4.natas.labs.overthewire.org", {
         // Hier nur das Wichtige: Referer fälschen
         'Referer': 'http://natas5.natas.labs.overthewire.org'
         // Den kopierten Authorization Header einfügen, falls fetch ihn nicht automatisch setzt:
-        'Authorization': 'Basic deinKey',
+        'Authorization': 'Basic deinKey' // <- Dein Authorization Header
     }
 })
 .then(response => response.text())  // Antwort als Text verarbeiten
@@ -441,7 +441,7 @@ Schau dir den Code an. Fällt dir etwas auf?
 
 ![Natas7 Sourcecode analysieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas7.png)
 
-Im PHP-Code findest du die Zeile `include "includes/sercret.inc"` ganz zu Beginn des Codes.
+Im PHP-Code findest du die Zeile `include "includes/sercret.inc"` ganz zu Beginn des Codes. Daras kannst du schließen, dass es eine Datei (`secret.inc`) in einem Verzeichnis (`include/`) liegt, von der du im Frontend nichts mitbekommen hast. Finde heraus, ob die Datei tatsächlich mit dem Dateiverzeichnis des Servers übereinstimmt (vielleicht könnte sie dich auch weiterleiten) und existiert. Sollte das der Fall sein, dann wirst du irgendwo einen weiteren Anhaltspunkt oder sogar das Passwort finden.  
 
 Gib folgendes nun in die Browser URL ein:
 ```http
@@ -450,11 +450,11 @@ http://natas6.natas.labs.overthewire.org/includes/secret.inc
 
 Falls du eine leere Seite angezeigt bekommst, bist du schon mal richtig. Inspiziere die Seite und du erhältst den richtigen Inhalt der `$secret`-Variable für das Eingabefeld auf der "Hauptseite".
 
-Kopiere den Schlüssel ohne die Anführungsstriche. Du musst vermutlich einen Doppelklick auf den Wert der Variable machen. Kopiere den Inhalt und begib dich wieder auf die "Hauptseite", wo du diesen `Secret-Key` über `POST` an den Server übermittels.
+Kopiere den Schlüssel ohne die Anführungsstriche. Du musst vermutlich einen Doppelklick auf den Wert der Variable machen. Begib dich anschließend wieder auf die "Hauptseite" zurück, wo du dann den `Secret-Key` über `POST` an den Server übermittelst.
 
 ![Natas7 Secret Key](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas7b.png)
 
-Nach dem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, solltest du das Passwort für die nächste Challenge erhalten.
+Nachdem du diesen versteckten Inhalt per `Submit Query` übermittelt hast, solltest du das Passwort für die nächste Challenge erhalten.
 
 ![Natas7 Secret Key](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas7c.png)
 
@@ -489,7 +489,7 @@ URL:        http://natas7.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
-Diesmal gibt es ein kleines Navigationsmenü, wie du es bspw. von gewöhnlichen Webseiten kennst.
+Diesmal gibt es ein kleines Navigationsmenü, wie du es bspw. von gewöhnlichen Webseiten gewöhnt bist.
 Wenn du beide Links klickst, dann wirst du nicht viel im Frontend zu sehen bekommen.
 
 Inspiziere den Code auf der `Home`-Seite und schau dir an, was du finden kannst:
@@ -500,11 +500,11 @@ Im Code findest du einen Hinweis darauf, wo das Passwort für `natas8` zu finden
 
 Wenn du auf einen der Links auf der Homepage (`home` / `about`) nicht geklickt hast, dann solltest du die Seite einmal über einen dieser Links laden und beobachten, wie die URL sich verändert.
 
-Deine URL sollte ungefähr so aussehen `....org/index.php?page=home`. Da du nicht nur die Home, sondern auch die About-Seite habst, steht in der URL nun ein `?page=`. 
+Deine URL sollte ungefähr so aussehen `....org/index.php?page=home`. Da du nicht nur die Home, sondern auch die About-Seite hast, steht in der URL nun ein `?page=`. 
 
 Es sagt also folgendes im URL Browser:
 
-> "Ich habe eine Variable nach `index.php` gestellt, aber ich weiß nicht, welcher Wert als nächstes kommt. Dazu warte ich einfach ab, was mein User mir mitteilt und übergebe ihn die anschließend. Warte du bis dahin."
+> "Ich habe eine Variable nach `index.php` gestellt, aber ich weiß nicht, welcher Wert als nächstes kommt. Dazu warte ich einfach ab, was mein User mir mitteilt und übergebe ihn dir anschließend. Warte du bis dahin."
 
 Um es einfach auszudrücken :).
 
@@ -580,7 +580,7 @@ curl -u natas8:passwort -o html.html http://natas8.natas.labs.overthewire.org/in
 ![Natas9 Webseite in eigene Datei speichern](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas9b.png)
 
 
-Falls du keinen Pfad angegeben hast, schau in Linux in deinem `home`-Verzeichnis nach. Da bewegst du dich als User standardmäßig, wenn du das Terminal öffnest und eine Shell-Session startest.
+Falls du keinen Pfad angegeben hast, schau unter Linux in deinem `home`-Verzeichnis nach. Da bewegst du dich als User standardmäßig, wenn du das Terminal öffnest und eine Shell-Session startest.
 
 Wenn du die `index-source.html` erfolgreich in `html.html` heruntergeladen hast, kannst du die Datei per Doppeklick oder über den Terminal-Befehl öffnen:
 
@@ -652,7 +652,7 @@ URL:        http://natas9.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
- Nach dem Login, kannst du direkt den `Sourcecode` anschauen.
+Nach dem Login, kannst du direkt den `Sourcecode` anschauen.
 
 ![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas10.png)
 
@@ -677,7 +677,7 @@ Wenn du bspw. das Suchwort `test` in das Eingabefeld der Seite eingibst, dann er
 http://natas9.natas.labs.overthewire.org/?needle=test...
 ```
 
-Somit bekommt `$_REQUEST['needle']` der Wert `test`.
+Somit bekommt `$_REQUEST['needle']` den Wert `test`.
 
 Falls du dich fragst, was `needle` bedeutet: Das ist nur der Name des `input`-Feldes, der über `php` im Backend ausgelesen wird.
 
@@ -693,8 +693,8 @@ Wie kannst du das für dich nutzen?
 
 Du musst diesen Code "escapen" indem du ein `;` eingibst und anschließend deine Terminal-Befehle.
 
-Stell dir mit dem `passthru()`-Code so vor:
-Angenommen unsere Eingabe lautet "test"
+Stell dir das mit dem `passthru()`-Code so vor:   
+Angenommen unsere Eingabe lautet "test"   
 Dann kannst du davon ausgehen, dass der Code folgendermaßen übergeben wird:
 
 ```php
@@ -720,7 +720,7 @@ Dieser Befehl sollte dir das `/etc/`-Verzeichnis auflisten.
 
 ![Natas10 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas10c.png)
 
-Nun weißt du, dass durch die Fehlverarbeitung des Codes (ohne Prüfung auf Command Injections), Befehle eingegeben werden können, die auf dem Server verarbeitet werden.
+Nun weißt du, dass durch die Fehlverarbeitung des Codes (ohne Prüfung auf Command Injections) Befehle eingegeben werden können, die auf dem Server verarbeitet werden.
 
 Drücke `Strg` + `F` (Windows) bzw `Cmd` + `F` (Mac/Linux) und suche nach `natas`. Das sollte dir die vorhandenen Verzeichnisse auflisten, die in deren Bezeichnung "natas" vorkommt.
 
@@ -788,7 +788,7 @@ Allerdings scheint es so, dass der Befehl `$(cat /etc/natas_webpass/natas11)` ni
 
 Dazu musst du wissen, was `passthru("grep -i $key dictionary.txt") macht.
 
-`grep` gibt Inhalte aus, die mit dem Suchbegriff übereinstimmen. `-i` ignoriert dabei  Groß- und Kleinschreibung in den Patterns. Anschließend wird der Suchbegriff übergeben und mit der Datei `dictionary.txt` verglichen.
+`grep` gibt Inhalte aus, die mit dem Suchbegriff übereinstimmen. `-i` ignoriert dabei Groß- und Kleinschreibung in den Patterns. Zuletzt wird der Suchbegriff übergeben und mit der Datei `dictionary.txt` verglichen.
 
 
 Gib im Eingabefeld folgenden Suchbegriff ein:
@@ -877,7 +877,7 @@ Gleichzeitig ist diese Funktion für die Logik der Seite zuständig, was bedeute
 Die 3. Funktion `saveData()` speichert den eingegebenen Wert aus dem Cookie und übergibt ihn an den Server, um ihn zu speichern.   
 Also musst du versuchen, den Cookie so zu modifizieren, dass der Server die Nachricht erhält, den Parameter auf `"showpassword":"yes"` zu setzen.
 
-Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
+Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, in der der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
 
 In der letzten `if`-Bedingung wird überprüft, ob der Parameter `"bgcolor"` existiert. Dies geschieht über den Superglobal-Array `$_REQUEST`. 
 
@@ -887,9 +887,9 @@ In der letzten `if`-Bedingung wird überprüft, ob der Parameter `"bgcolor"` exi
 $_REQUEST = $_GET + $_POST + $_COOKIE
 ```
 
-`$_GET`sind die Daten aus der URL-Abfragezeichenkette (z.B. `?bgcolor=%23ffffff`).   
-`$_POST` sind Daten aus dem Body einer HTTP-Post-Anfrage (z.B. nach dem Absenden eines Formulars).   
-`$_COOKIE` sind die bereits erwähnten Cookie-Daten.
+- `$_GET`sind die Daten aus der URL-Abfragezeichenkette (z.B. `?bgcolor=%23ffffff`).   
+- `$_POST` sind Daten aus dem Body einer HTTP-Post-Anfrage (z.B. nach dem Absenden eines Formulars).   
+- `$_COOKIE` sind die bereits erwähnten Cookie-Daten.
 
 **Sicherheitsrisiko des Superglobal `$_REQUEST`:**   
 
@@ -909,7 +909,7 @@ Du kennst zwar nicht den korrekten Schlüssel, doch in einer einfachen binären 
 
 Die KI half mir daraufhin einen Code zu entwickeln, der den Klartext aus dem Sourcecode nimmt und mit dem Base64-Wert aus dem Cookie vergleicht.
 
-**Wichtig:** Der Inhalt aus der Variable des Sourcecodes muss im standardmäßigen, kompakten JSON-Format sein. Achte also darauf, dass du keine unnötigen Leerzeichen verwendest, da diese die Byte-Anzahl verändern und die XOR-Entschlüsselung auf Serverseite fehlschlagen lassen.
+**Wichtig:** Der Inhalt aus der Variablen des Sourcecodes muss im standardmäßigen, kompakten JSON-Format sein. Achte also darauf, dass du keine unnötigen Leerzeichen verwendest, da diese die Byte-Anzahl verändern und die XOR-Entschlüsselung auf Serverseite fehlschlagen lassen.
 
 Das korrekte, kompakte JSON-Format sieht wie folgt aus: `{"showpassword":"yes", "bgcolor":"#ffffff"}`.
 
@@ -928,6 +928,7 @@ from itertools import cycle
 KNOWN_PLAINTEXT_STR = '{"showpassword":"no", "bgcolor":"#ffffff"}'
 
 # Der verschlüsselte Cookie-Inhalt (Chiffretext)
+# Aktualisiere den Inhalt wenn nötig
 ENCRYPTED_COOKIE = "HmYKbwozJw4WNYAAFyB1VUcqOE1JZUIBis7ABdmbU1GlJjEJAyIXTrg="
 
 # --- Datentransformation ---
@@ -991,9 +992,9 @@ Wenn du dieses Skript ausführst, dann solltest du den XOR-Schlüssel erhalten h
 Nun hast du den Schlüssel und kannst damit versuchen den manipulierten JSON-String an den Server zu übermitteln.
 
 Wichtig ist dabei, dass du die Reihenfolge zum Verschlüsseln richtig einhältst.   
-Zuerst den String ins JSON-Format bringen, dann mit dem richtigen Schlüssel XOR verschlüssel und zum Schluss den gesamten String Base64 kodieren.
+Zuerst den String ins kompakte JSON-Format bringen, dann mit dem richtigen Schlüssel XOR verschlüsseln und zum Schluss den gesamten String Base64 kodieren.
 
-Dazu gehst du auf [cyberchef.io](https://cyberchef.io). Hier kannst du dein eigenes Verschlüsselungsrezept einstellen. Du benötigst nur 2 Methoden, da du den String so eingibst, dass er bereits im standardmäßigen JSON-Format ist, sodass du ihn direkt XOR verschlüsseln und Base64 kodieren kannst.
+Dazu gehst du auf [cyberchef.io](https://cyberchef.io). Hier kannst du dein eigenes Verschlüsselungsrezept einstellen. Du benötigst nur 2 Methoden, da du den String so eingibst, dass er bereits im kompakten JSON-Format ist, sodass du ihn direkt XOR verschlüsseln und Base64 kodieren kannst.
 
 ![Natas12 Cyberchef Verschlüsselung](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12e.png)
 

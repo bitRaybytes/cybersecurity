@@ -31,7 +31,7 @@
 Leviathan ist ein Wargame auf [OverTheWire](https://overthewire.org/wargames/), das sich speziell an Anfänger richtet.  
 Es vermittelt die Grundlagen von **Privilege Escalation** (Rechteausweitung) und einfachen **Security Misconfigurations** in Linux-Systemen.  
 
-Im Gegensatz zu anderen Wargames (wie [Bandit](/09-practice-labs/overTheWire/walkthrough/bandit_walkthrough.md) oder [Natas](/09-practice-labs/overTheWire/walkthrough/natas_walkthrough.md)) liegt der Fokus hier weniger auf Web-Exploits, sondern auf klassischen **Binary Exploits** und **Dateiberechtigungen** in einer Unix-Umgebung.  
+Im Gegensatz zu anderen Wargames (wie [Natas](/09-practice-labs/overTheWire/walkthrough/natas_walkthrough.md)) liegt der Fokus hier weniger auf Web-Exploits, sondern auf klassischen **Binary Exploits** und **Dateiberechtigungen** (wie [Bandit](/09-practice-labs/overTheWire/walkthrough/bandit_walkthrough.md)) in einer Unix-Umgebung.  
 
 
 
@@ -42,7 +42,7 @@ Im Gegensatz zu anderen Wargames (wie [Bandit](/09-practice-labs/overTheWire/wal
 </div>
 
 ## Zugang
-Der Einstieg erfolgt über eine **SSH-Verbindung
+Der Einstieg erfolgt über eine **SSH**-Verbindung
 
 
 
@@ -386,11 +386,11 @@ Leerzeichen scheint das Programm nicht zu lesen. Wie können wir das nun für un
 
 Wenn also die `test datei.txt` mit Leerzeichen nach test nicht mehr liest, könnten wir dann nicht eine Datei (z.B. `/etc/leviathan_pass/leviathan3`) mit einer Datei im `/tmp/tmp.VerzeichnisName` verlinken? 
 
-Probierne wir es aus und erstellen einen sogenannten `Softlink` (symbolische Links), die wir eine Verknüpfung auf dem Desktop agieren. Ein Softlink enthält einen Pfad zu einer anderen Datei oder einem Verzeichniss, statt direkt auf die Daten zuzugreifen. Die Funktionsweise ist einfach: Doppelklick auf die Verknüpfung leitet dich systemseitig direkt zur Zieldatei weiter.
+Probieren wir es aus und erstellen einen sogenannten `Softlink` (symbolische Links), die wie Verknüpfungen auf dem Desktop agieren. Ein Softlink enthält einen Pfad zu einer anderen Datei oder einem Verzeichniss, statt direkt auf die Daten zuzugreifen. Die Funktionsweise ist einfach: Doppelklick auf die Verknüpfung leitet dich systemseitig direkt zur Zieldatei weiter.
 
 Verlinke die `/etc/leviathan_pass/leviathan3`-Datei im `/tmp/tmp.VerzeichnisName`, verändere die Berechtigungen des Verzeichnisses und führe die Datei `test datei.txt` im Anschluss aus.
 
-**Hinweis:** Das Bild zeigt dir den `touch`-Befehl. Den brauchst du nicht erneut eingeben, da du die Datei bereits erstellt hast.
+**Hinweis:** Das untere Bild zeigt dir den `touch`-Befehl. Den brauchst du nicht erneut eingeben, da du die Datei bereits erstellt hast.
 
 Gib dazu im Terminal folgende Befehle ein:
 
@@ -594,19 +594,19 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 - `perl`: startet den Perl-Interpreter.
     - `-l`: aktiviert ***line-end-processing***:
         - Entfernt automatisch `\n` am Ende der Eingabezeilen.
-        - Hängt nach de rVerarbeitung wieder ein `\n` ab die Ausgabe dran.
+        - Hängt nach der Verarbeitung wieder ein `\n` an die Ausgabe dran.
     - `-p`: bedeutet ***read-process-print loop***
-        - Perl liest jede Eingabzeile in die spezielle Variable `$_`,
-        - führt den angegeben Code darauf aus und
+        - Perl liest jede Eingabezeile in die spezielle Variable `$_`,
+        - führt den angegebenen Code darauf aus und
         - gibt das Ergebnis automatisch wieder aus.
     - `-e`: führt den angegebenen Perl-Code direkt aus (kein Skript nötig).
     - `$_=pack"B*",$_`:
-        - `$_`: Standardvariable in Perl, in der jede Eingabzeile steckt.
-        - `pack`: wandlet Daten nach einem bestimmten Template in Binär-/Textform um.
+        - `$_=`: überschreibt die Eingabezeile mit der konvertierten Zeichenfolge.
+        - `pack`: wandelt Daten nach einem bestimmten Template in Binär-/Textform um.
         - `"B*"`: Template für pack. Bedeutet:
             - interpretiere die Eingabe als **Bit-String**, bei dem das **höchstwertige Bit zuerst** gelesen wird (im Gegensatz zu `"b*"`).
             - Beispiel: `"01000001"` wird als **ASCII-Code 65** interpretiert.
-        - `$_=`: überscreibt die Eingabezeile mit der konvertierten Zeichenfolge.
+        - `$_`: Standardvariable in Perl, in der jede Eingabzeile steckt.
 
 
 ![Leviathan5 bin-Datei ausführen](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan5c.png)
@@ -614,8 +614,6 @@ echo 01100100HierWeiterDeineZahlenfolge | perl -lpe '$_=pack"B*",$_'
 
 
 </details>
-
-ressourcen
 
 
 <div align=right>
@@ -647,7 +645,7 @@ Mit dem `ltrace`-Befehl habe ich bspw. erfahren, dass das Programm folgendermaß
 - `feof()` -> prüft, ob das Ende einer Datei erreicht ist und gibt einen Wert ungleich Null (`true`), wenn Dateiende erreicht (EOF, End-of-File) oder Null (`false`), wenn nicht.
 - `fclose()` -> wird verwendet, um einen zuvor geöffneten Datei-Stream zu schließen (leert gleichzeitig den Puffer).
 - `getuid()` -> POSIX-Aufruf, der reale Benuter-ID des aufrufenden Prozesses zurückgibt. Ermittelt, ob Benutzer Programm ausführen darf.
-- `setuid()` -> Systemaufruf, der Prozessen ermöglicht, die Benutzer-ID (EUID) auf eine andere ID zu setzen (was temporär erhöhte Berechitungen verleiht).
+- `setuid()` -> Systemaufruf, der Prozessen ermöglicht, die Benutzer-ID (EUID) auf eine andere ID zu setzen (was temporär erhöhte Berechtigungen verleiht).
 - `unlink()` -> Funktion, um einen Link zu einer Datei zu entfernen, nicht die Original-Datei an sich.
 
 
@@ -663,7 +661,7 @@ Gib im Terminal folgende Befehle ein, um an das Passwort zu kommen:
 
 ```bash
 
-ll                  # listet das Verzeichnis aus, in dem du bist (wir starten im Home-Verzeichnis)
+ll                  # listet das Verzeichnis auf, in dem du bist (wir starten im Home-Verzeichnis)
 ./leviathan5        # startet das Programm normal, ohne die Datei /tmp/file.log => Fehler!
 ltrace ./leviathan5 # Startet das Programm mit dem ltrace Befehl
 touch /tmp/file.log # erstellt die Datei file.log im /tmp/-Verzeichnis
@@ -741,7 +739,7 @@ Für die Lösung ist das nicht wirklich von Bedeutung, zumal wir nichts damit an
 
 Es gibt jedoch zwei Wege, wie du an das Passwort von `leviathan7` kommst. Ich zeige dir den einfacheren Weg mit einer `for`-Schleife, die einen `bruteforce` initiiert.
 
-Die zweite Möglichkeit, die ich dir nicht vorenthalten möchte, ist, indem du Reverse-Engineering anwendest und den `Assembly` code analysierst. So kannst du herausfinden, wie die **Pointer** verarbeitet werden. Das kannst du mit Tools wie `gdb` (`The GNU Project Debugger`) oder `pwndgb` (Erweitegung von `gdb`, speziell für Exploit konzipiert) bewerkstelligen.
+Die zweite Möglichkeit, die ich dir nicht vorenthalten möchte, ist, indem du Reverse-Engineering anwendest und den `Assembly` code analysierst. So kannst du herausfinden, wie die **Pointer** verarbeitet werden. Das kannst du mit Tools wie `gdb` (`The GNU Project Debugger`) oder `pwndgb` (Erweiterung von `gdb`, speziell für Exploit konzipiert) bewerkstelligen.
 
 **Ein Beispiel, wie ein *disassembled* Code aussieht:**
 
@@ -749,16 +747,16 @@ Die zweite Möglichkeit, die ich dir nicht vorenthalten möchte, ist, indem du R
 
 Ich selbst bin nicht gut in der Assembly-Sprache. Wenn du dich jedoch etwas mit der Syntax befasst, dann wirst du schnell dahinter kommen.
 
-Im Bild oben siehst du beispielsweise, dass in Zeile `<+106>` die Funktion `setreuid()` und in Zeile `<+122>` die "Funktion" `system@plt` aufgerufen wird.
+Im Bild oben siehst du beispielsweise, dass im Offset `<+106>` die Funktion `setreuid()` und im Offset `<+122>` die "Funktion" `system@plt` aufgerufen wird.
 
 `system@plt` ist keine Funktion. Es ist vielmehr ein technischer Ausdruck, der bei der dynamischen Verknüpfung von ELF-Programmen verwendet wird. `plt` steht hier für die `Procedure Linkage Table` und ist eine Datenstruktur in ELF-Dateien. Sie wird verwendet, um Adressen aus gemeinsam genutzten Funktionen erst zur Laufzeit aufzulösen (`lazy linking`). Für den Programmierer ist es letztlich ein Aufruf der system-Funktion, aber auf der Maschinenebene wird der Umweg über das PLT genommen. Weitere Informationen zum `PLT` erhältst du hier: [Google: Was ist Procedure Linkage Table](https://www.google.com/search?q=was+ist+Procedure+Linkage+Table&client=firefox-b-d&sca_esv=e3cd531e34091613&cs=0&sxsrf=AE3TifOPNC0R3gjt-EaYGyxHyBCqC9XYYg%3A1757083404211&ei=DPe6aPe7DL-Fxc8P6rKJyA4&ved=0ahUKEwj38Zfh7cGPAxW_QvEDHWpZAukQ4dUDCBA&uact=5&oq=was+ist+Procedure+Linkage+Table&gs_lp=Egxnd3Mtd2l6LXNlcnAiH3dhcyBpc3QgUHJvY2VkdXJlIExpbmthZ2UgVGFibGUyCBAhGKABGMMESPQcUIYXWO4bcAR4AJABAJgBlgGgAdcHqgEDMS43uAEDyAEA-AEBmAIGoALNAsICDRAAGIAEGLADGEMYigXCAggQABiABBiwA8ICCRAAGLADGAcYHsICBxAAGLADGB7CAggQABiwAxjvBcICChAhGKABGMMEGAqYAwCIBgGQBgqSBwM0LjKgB9chsgcDMC4yuAeKAsIHBzMuMy0yLjHIB0I&sclient=gws-wiz-serp)
 
 
-Die Anweisung `sub $0xc,%esp` in Zeile `<+123>` verringert den Wert des Stack Pointers (`%esp`) um `0xc` (dezimal 12). Dies ist eine sehr häufige Operation in Assembler, um Platz auf dem Stack für neue Argumente oder lokale Variablen zu schaffen. Das Programm bereitet hier den Stack für den nächsten Funktionsaufruf (`push $0x804a022` und `call 0x8049080 <system@plt>`) vor.
+Die Anweisung `sub $0xc,%esp` im Offset `<+123>` verringert den Wert des Stack Pointers (`%esp`) um `0xc` (dezimal 12). Dies ist eine sehr häufige Operation in Assembler, um Platz auf dem Stack für neue Argumente oder lokale Variablen zu schaffen. Das Programm bereitet hier den Stack für den nächsten Funktionsaufruf (`push $0x804a022` und `call 0x8049080 <system@plt>`) vor.
 
-`cmp %eax,-0xc(%ebp)` in Zeile `<+84>` vergleicht den Inhalt der Speicheradresse `%eax` mit der Speicheradresse `%ebp`. `%eax` erhält dabei den Rückgabewert der Funktion `atoi()`, also den Wert der Benutzereingabe und verweist auf die lokale Variable auf dem Stack, die den richtigen Code enthält (`0x1bd3` in Hexadezimal oder `7123` in Dezimal).
+`cmp %eax,-0xc(%ebp)` im Offset `<+84>` vergleicht den Inhalt der Speicheradresse `%eax` mit der Speicheradresse `%ebp`. `%eax` erhält dabei den Rückgabewert der Funktion `atoi()`, also den Wert der Benutzereingabe und verweist auf die lokale Variable auf dem Stack, die den richtigen Code enthält (`0x1bd3` in Hexadezimal oder `7123` in Dezimal).
 
-Den Wert `0x1bd3` kannst du auch in Zeile `<+20>` in der Anweisung `movl $0x1b3d, -0xc(%ebp)` sehen. Hier wird der Wert `0x1bd3` in eine lokale Variable auf dem Stack (`-0xc(%ebp)`) geladen.
+Den Wert `0x1bd3` kannst du auch im Offset `<+20>` in der Anweisung `movl $0x1b3d, -0xc(%ebp)` sehen. Hier wird der Wert `0x1bd3` in eine lokale Variable auf dem Stack (`-0xc(%ebp)`) geladen.
 
 
 Die einfachste Möglichkeit jedoch, an das Passwort zu kommen, ist die `bruteforce`-Variante. 
@@ -775,7 +773,7 @@ for i in {0000.9999}; do ./leviathan6 $i ; done
 
 ![Leviathan For-Schleife](/09-practice-labs/ressourcen/pictures/overthewire/leviathan/leviathan7e.png)
 
-Das wird dafür sorgen, dass die Schleife, die du erzeugt hst, die Range 0000 bis 9999 durchprobiert und uns später eine Shell ausgibt. 
+Das wird dafür sorgen, dass die Schleife, die du erzeugt hast, die Range 0000 bis 9999 durchprobiert und dir später eine Shell ausgibt. 
 Nach dem du den Befehl mit der Enter-Taste bestätigt hast, werden dir sehr viele `Wrong` angezeigt. Lass das Programm einfach durchlaufen. Am Ende wirst du aus der Shell von Leviathan6 ausbrechen und in der Shell von Leviathan7 sein.
 
 Mit dem Befehl `whoami` siehst du, dass du der User `leviathan7` bist.
@@ -830,7 +828,7 @@ P.S.: Zum Thema Spoiler... Naja, es gibt bereits sehr viele Lösungen zu den ein
 
 </div>
 
-### Funktionen aus Sprachen wie PHP, C, C++
+### Funktionen aus Sprachen wie C, C++
 - `__libc_start_main()` -> Hauptfunkton, um das Programm ausführbar zu machen.
 - `access()` -> Prüft, ob Prozess Zugriff auf eine Datei hat und welche Berechtigungen dafür nötig sind.
 - `strcmp()` -> Vergleicht Strings miteinander. Kann auch Eingabewerte erhalten.
