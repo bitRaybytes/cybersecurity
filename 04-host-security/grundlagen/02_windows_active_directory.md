@@ -1,5 +1,9 @@
 # 💻 Active Directory – Grundlagen und Sicherheit
 
+![Windows OS](https://img.shields.io/badge/Windows%20OS-%23334155.svg?style=for-the-badge&logo=windows&logoColor=white)
+![Active Directory](https://img.shields.io/badge/Active%20Directory-%2300A86B.svg?style=for-the-badge&logo=microsoft&logoColor=white)
+
+
 ## Inhaltsverzeichnis
 - [Was ist Active Directory?](#was-ist-active-directory)
 - [Grundkonzepte: Objekte und Attribute](#grundkonzepte-objekte-und-attribute)
@@ -178,7 +182,7 @@ Der Prozess, der festlegt, welche Aktionen ein authentifizierter Benutzer ausfü
 
 
 ### Gruppenrichtlinien (Group Policy Objects - GPOs)
-**GPOs** sind die mächtigsten Werkzeuge zur zentralen Konfiguration und Absicherung von AD-Umgebungen. Sie ermöglichen es Administratoren, nahezu jeden Aspekt von Benutzern und Computern zu steuern – von der Passwortrichtlinie über die Sperrung von USB-Anschlüssen bis hin zur Installation von Software.
+**GPOs** sind die mächtigsten Werkzeuge zur zentralen Konfiguration und Absicherung von AD-Umgebungen. Sie ermöglichen es Administratoren, nahezu jeden Aspekt von Benutzern und Computern zu steuern – von der Passwortrichtlinie über die Sperrung von USB-Anschlüssen bis hin zur Installation von Software. Hier erfährst du [mehr zum Thema GPO](/04-host-security/grundlagen/03_windows_group_policy_object_gpo_grundlagen.md)
 
 
 <div align=right>
