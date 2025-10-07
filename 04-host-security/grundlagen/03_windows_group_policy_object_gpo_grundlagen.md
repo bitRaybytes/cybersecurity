@@ -1,7 +1,7 @@
 # 🔐 Gruppenrichtlinien (Group Policy Objects - GPOs)
    
 ![Windows OS](https://img.shields.io/badge/Windows%20OS-%23334155.svg?style=for-the-badge&logo=windows&logoColor=white)
-![Active Directory](https://img.shields.io/badge/Active%20Directory-%2300A86B.svg?style=for-the-badge&logo=microsoft&logoColor=white)
+![Group Policy Objects](https://img.shields.io/badge/Group%20Policy%20Objects-%2300A86B.svg?style=for-the-badge&logo=microsoft&logoColor=white)
 
 
 
@@ -169,8 +169,8 @@ Das **LSDOU-Prinzip** beschreibt die Hierarchie der Anwendung (von der höchsten
 </div>
 
 ### Wichtige Prinzipien der Vererbung
-**Enforced (Erzwingen):** Eine GPO kann auf der übergeordneten Ebene als "erzwungen" (`Enforced`) markiert werden. Dies verhindert, dass untergeordnete GPOs diese Einstellungen überschreiben können.
-**Block Inheritance (Vererbung blockieren):** Eine OU kann die Vererbung von Richtlinien der übergeordneten Domäne blockieren. Allerdings kann eine erzwungene (`Enforced`) GPO diese Blockierung ignorieren.
+- **Enforced (Erzwingen):** Eine GPO kann auf der übergeordneten Ebene als "erzwungen" (`Enforced`) markiert werden. Dies verhindert, dass untergeordnete GPOs diese Einstellungen überschreiben können.
+- **Block Inheritance (Vererbung blockieren):** Eine OU kann die Vererbung von Richtlinien der übergeordneten Domäne blockieren. Allerdings kann eine erzwungene (`Enforced`) GPO diese Blockierung ignorieren.
 
 <div align=right>
 
@@ -181,9 +181,10 @@ Das **LSDOU-Prinzip** beschreibt die Hierarchie der Anwendung (von der höchsten
 ### Erweiterte GPO-Komponenten
 #### Administrative Vorlagen (ADMX/ADML)
 Der Großteil der konfigurierbaren GPO-Einstellungen wird durch administrative Vorlagen definiert:
-**ADMX-Dateien:** Die sprachneutrale XML-Datei, die die eigentlichen Einstellungen und die Struktur der GPO-Ebenen definiert.
-**ADML-Dateien:** Die sprachspezifische XML-Datei, die die Beschreibungstexte der Einstellungen enthält (z. B. Deutsch oder Englisch).
-**Zentraler Speicher (Central Store):**
+- **ADMX-Dateien:** Die sprachneutrale XML-Datei, die die eigentlichen Einstellungen und die Struktur der GPO-Ebenen definiert.
+- **ADML-Dateien:** Die sprachspezifische XML-Datei, die die Beschreibungstexte der Einstellungen enthält (z. B. Deutsch oder Englisch).
+
+**Zentraler Speicher (Central Store):**   
 Um inkonsistente GPO-Verwaltung zu verhindern, werden die ADMX/ADML-Dateien im **Central Store** auf dem Domänencontroller (innerhalb von `SYSVOL`) gespeichert. Dies stellt sicher, dass alle Administratoren immer die gleiche, aktuelle Ansicht der verfügbaren GPO-Einstellungen haben.
 
 <div align=right>
@@ -194,7 +195,7 @@ Um inkonsistente GPO-Verwaltung zu verhindern, werden die ADMX/ADML-Dateien im *
 
 #### Gruppenrichtlinien-Einstellungen (Group Policy Preferences - GPP)
 Die GPPs sind eine modernere Erweiterung der GPOs und dienen zur Konfiguration von Einstellungen, die *nicht* zwingend "Richtlinien" im engeren Sinne sind.
-**Verwendungszweck:** Verteilen von Netzlaufwerken, Druckern, lokalen **Benutzerkonten, Registry-Einstellungen oder Kopieren von Dateien.
+- **Verwendungszweck:** Verteilen von Netzlaufwerken, Druckern, lokalen **Benutzerkonten, Registry-Einstellungen oder Kopieren von Dateien.
 Sicherheitsrisiko:** Historisch enthielten GPPs Passwörter in leicht entschlüsselbarer Form (siehe unten). Dies muss vermieden werden.
 
 <div align=right>
@@ -206,11 +207,11 @@ Sicherheitsrisiko:** Historisch enthielten GPPs Passwörter in leicht entschlüs
 ## Präzise Zuweisung durch Filterung
 Obwohl GPOs an OUs, Domänen oder Sites verknüpft werden, kann die tatsächliche Anwendung weiter eingeschränkt werden.
 1. **Sicherheitsfilterung**
-**Funktion:** Steuert, welche **Benutzer oder Gruppen** die GPO überhaupt lesen und anwenden dürfen.
-**Sicherheitsrelevanz:** Eine GPO sollte nur für die Objekte zugänglich sein, die sie tatsächlich betreffen (Prinzip des **Least Privilege**). Standardmäßig wird die GPO auf die Gruppe "Authentifizierte Benutzer" angewendet.
+    - **Funktion:** Steuert, welche **Benutzer oder Gruppen** die GPO überhaupt lesen und anwenden dürfen.
+    - **Sicherheitsrelevanz:** Eine GPO sollte nur für die Objekte zugänglich sein, die sie tatsächlich betreffen (Prinzip des **Least Privilege**). Standardmäßig wird die GPO auf die Gruppe "Authentifizierte Benutzer" angewendet.
 2. **WMI-Filter (Windows Management Instrumentation)**
-**Funktion:** Stellt sicher, dass eine GPO nur auf Clients angewendet wird, die bestimmte Kriterien erfüllen (z. B. nur Laptops, nur Windows 10, nur Systeme mit einem bestimmten CPU-Typ).
-**Syntax:** Basierend auf SQL-ähnlichen Abfragen.
+    - **Funktion:** Stellt sicher, dass eine GPO nur auf Clients angewendet wird, die bestimmte Kriterien erfüllen (z. B. nur Laptops, nur Windows 10, nur Systeme mit einem bestimmten CPU-Typ).
+    - **Syntax:** Basierend auf SQL-ähnlichen Abfragen.
 
 <div align=right>
 
@@ -220,11 +221,11 @@ Obwohl GPOs an OUs, Domänen oder Sites verknüpft werden, kann die tatsächlich
 
 ## Anwendungsfälle für die IT-Sicherheit
 GPOs sind ein unverzichtbares Werkzeug für die defensive IT-Sicherheit:
-**Passwortrichtlinien (Domänen-Ebene):** Festlegung von Komplexitätsanforderungen, Mindestlänge (z. B. 14 Zeichen) und maximalem Alter von Passwörtern.
-**Kontosperrungsrichtlinien:** Definieren, nach wie vielen fehlgeschlagenen Anmeldeversuchen ein Konto gesperrt wird (Schutz vor Brute-Force-Angriffen).
-**Software-Einschränkungsrichtlinien (SRP/AppLocker):** Verhindert die Ausführung von unsignierter oder unbekannter Software (wichtig gegen Malware).
-**Sicherheitsvorlagen (Security Templates):** Härtung von Betriebssystemen, indem z. B. unnötige Dienste deaktiviert oder Protokollierungsfunktionen aktiviert werden.
-**Überwachungsrichtlinien (Auditing):** Protokollierung von Anmeldeversuchen, Dateizugriffen und administrativen Änderungen (wichtig für die forensische Analyse).
+- **Passwortrichtlinien (Domänen-Ebene):** Festlegung von Komplexitätsanforderungen, Mindestlänge (z. B. 14 Zeichen) und maximalem Alter von Passwörtern.
+- **Kontosperrungsrichtlinien:** Definieren, nach wie vielen fehlgeschlagenen Anmeldeversuchen ein Konto gesperrt wird (Schutz vor Brute-Force-Angriffen).
+- **Software-Einschränkungsrichtlinien (SRP/AppLocker):** Verhindert die Ausführung von unsignierter oder unbekannter Software (wichtig gegen Malware).
+- **Sicherheitsvorlagen (Security Templates):** Härtung von Betriebssystemen, indem z. B. unnötige Dienste deaktiviert oder Protokollierungsfunktionen aktiviert werden.
+- **Überwachungsrichtlinien (Auditing):** Protokollierung von Anmeldeversuchen, Dateizugriffen und administrativen Änderungen (wichtig für die forensische Analyse).
 
 
 <div align=right>
@@ -236,7 +237,7 @@ GPOs sind ein unverzichtbares Werkzeug für die defensive IT-Sicherheit:
 
 ## Sicherheitsrisiken und Angriffe auf GPOs
 GPOs sind ein **mächtiges Ziel** – sie bieten zentrale Kontrolle über alle Systeme.
- Ein kompromittiertes Konto mit GPO-Schreibrechten = **Domänenweiter Angriff**.
+Ein kompromittiertes Konto mit GPO-Schreibrechten = **Domänenweiter Angriff**.
 
 <div align=right>
 
@@ -352,10 +353,9 @@ Der Befehl `gpresult /h` ist das wichtigste Werkzeug für die Fehlerbehebung, da
 ## Fazit
 GPOs sind ein mächtiges, aber zweischneidiges Werkzeug:
 
-Sie ermöglichen systemweite Härtung,
-stellen aber bei Fehlkonfiguration oder Kompromittierung ein enormes Risiko dar.
+- Sie ermöglichen systemweite Härtung, stellen aber bei Fehlkonfiguration oder Kompromittierung ein enormes Risiko dar.
 
-Eine kompromittierte GPO ist gleichbedeutend mit einer kompromittierten Domäne. Daher müssen GPOs wie kritische Infrastruktur behandelt werden – mit Auditing, striktem Least Privilege und klaren Change-Prozessen.
+- Eine kompromittierte GPO ist gleichbedeutend mit einer kompromittierten Domäne. Daher müssen GPOs wie kritische Infrastruktur behandelt werden – mit Auditing, striktem Least Privilege und klaren Change-Prozessen.
 
 
 
