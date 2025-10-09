@@ -291,6 +291,8 @@ Sie dienen als letzte Verteidigungslinie auf dem Betriebssystem, falls alle vorg
 ## Nützliche Links
 
 - [TryHackMe: Web Security Essentials](https://tryhackme.com/room/websecurityessentials)
+- [TryHackMe: Web Applications Basics](https://tryhackme.com/room/webapplicationbasics)
+- [TryHackMe: HTTP in Detail](https://tryhackme.com/room/httpindetail)
 - [OWASP TOP 10 (Aktuelle Liste)](https://owasp.org/www-project-top-ten/)
 - [PortSwigger Web Security Academe](https://portswigger.net/web-security)
 
