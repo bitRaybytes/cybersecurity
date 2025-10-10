@@ -255,7 +255,7 @@ Die Funktionalität basiert auf einem Regelwerk, das typische Angriffsmuster (Si
 |---------|--------------|------------------------|
 | **Signatur-basiert** | Sucht nach bekannten Mustern oder Strings, die typisch für Angriffe sind. | Der String `UNION SELECT` oder `<script>` im Request-Body. |
 | **Regelbasiert (Positiv/Negativ)** | **Negativ:** Blockiert alles außer bekannten, sicheren Anfragen (Whitelist). **Positiv:** Blockiert alle bekannten böswilligen Muster (Blacklist). | Blockiert alle Anfragen, deren Query-Parameter nicht ausschließlich aus alphanumerischen Zeichen bestehen (Positiv-Modell). |
-| **Heurisitisch/Behavioral** | Basiert auf maschinellem Lernen und identifiziert Anomalien oder ungewöhnliches Benutzerverhalten. | Ein Benutzer führ in 5 Sekdungen 50 fehlgeschlagene Login-Versuche durch (Brute-Force).
+| **Heuristisch/Behavioral** | Basiert auf maschinellem Lernen und identifiziert Anomalien oder ungewöhnliches Benutzerverhalten. | Ein Benutzer führ in 5 Sekdungen 50 fehlgeschlagene Login-Versuche durch (Brute-Force).
 
 
 
