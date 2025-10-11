@@ -296,9 +296,9 @@ powershell -EncodedCommand $encoded
 
 
 ## Verknüpfte Dateien im Repository
-- [windows_privilege_escalation.md](/04-os-enumeration/windows_privilege_escalation.md)
-- [linux_privilege_escalation.md](/04-os-enumeration/linux_privilege_escalation.md)
-- [red_team_tools.md](/05-red-teaming/red_team_tools.md)
+- [windows_privilege_escalation.md](/04-host-security/angriffe/privilege_escalations/windows_privilege_escalation.md)
+- [linux_privilege_escalation.md](/04-host-security/angriffe/privilege_escalations/linux_privilege_escalation.md)
+- [red_team_tools.md](/05-offensive_defensive_strategien/red-teaming_offensive/red_team_tools.md)
 
 
 <div align=right>
@@ -323,7 +323,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---

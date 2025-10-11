@@ -67,17 +67,17 @@ Display Filter sind Wireshark-spezifisch.
 
 
 ## Häufige Display Filter
-
-- http
-- tcp
-- udp
-- dns
-- icmp
-- ssl || tls
-- ftp
-- smtp
-- dhcp
-
+```bash
+http
+tcp
+udp
+dns
+icmp
+ssl || tls
+ftp
+smtp
+dhcp
+```
 
 
 
@@ -89,13 +89,13 @@ Display Filter sind Wireshark-spezifisch.
 
 
 ## IP & Ports
-
-- ip.addr == 192.168.0.1
-- ip.src == 10.0.0.1
-- ip.dst == 8.8.8.8
-- tcp.port == 443
-- udp.port == 53
-
+```bash
+ip.addr == 192.168.0.1
+ip.src == 10.0.0.1
+ip.dst == 8.8.8.8
+tcp.port == 443
+udp.port == 53
+```
 
 
 
@@ -107,11 +107,11 @@ Display Filter sind Wireshark-spezifisch.
 
 
 ## Verbindungen & Sessions
-
-- tcp.stream eq 0                 # Erstverbindung
-- tcp.flags.syn == 1              # SYN-Pakete (Handshake)
-- tcp.analysis.retransmission
-
+```bash
+tcp.stream eq 0                 # Erstverbindung
+tcp.flags.syn == 1              # SYN-Pakete (Handshake)
+tcp.analysis.retransmission
+```
 
 
 
@@ -124,10 +124,11 @@ Display Filter sind Wireshark-spezifisch.
 
 ## TLS/SSL
 
-- ssl.handshake
-- tls.record.version
-- tls.handshake.type == 1         # Client Hello
-
+```bash
+ssl.handshake
+tls.record.version
+tls.handshake.type == 1         # Client Hello
+```
 
 
 
@@ -139,15 +140,15 @@ Display Filter sind Wireshark-spezifisch.
 
 
 ## Capture Filter (BPF Syntax)
-
-- host 192.168.0.1
-- net 192.168.0.0/24
-- port 80
-- tcp
-- udp
-- tcp port 443
-- tcp or udp
-
+```bash
+host 192.168.0.1
+net 192.168.0.0/24
+port 80
+tcp
+udp
+tcp port 443
+tcp or udp
+```
 
 
 <div align=right>
@@ -270,7 +271,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** September 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
