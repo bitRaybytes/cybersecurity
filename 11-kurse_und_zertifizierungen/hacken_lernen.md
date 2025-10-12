@@ -1,14 +1,14 @@
-# 📚 Ressourcen zum ethischen Hacken
+# 📚 Ressourcen-Repository zum ethischen Hacken
 
-Wenn du in die Welt des **ethischen Hackens** eintauchen möchtest, gibt es jede Menge von großartigen und oft kostenlosen Ressourcen. Hier ist eine Liste, die dir den Einstieg erleichtern wird, egal ob du ganz neu bist oder deine Fähigkeiten vertiefen willst.
+Der Weg zum IT-Sicherheitsexperten ist ein fortlaufender Lernprozess, der eine Kombination aus theoretischem Wissen, praktischer Anwendung und dem Verständnis von Industriestandards erfordert. Dieses Dokument kategorisiert die besten kostenlosen und kostenpflichtigen Ressourcen, um deine Fähigkeiten im Ethical Hacking und Penetration Testing aufzubauen und zu vertiefen.
 
 ## Inhaltsverzeichnis
 - [Interaktive Lernplattformen & CTFs](#interaktive-lernplattformen--ctfs)
-- [Übungsanwendungen & VMS](#übungsanwendungen-und-vms)
+- [Wargames & Binary Exploitation](#wargames--binary-exploitation)
+- [Target-Anwendungen & VMs (Lokale Übungsumgebung)](#target-anwendungen--vms-lokale-übungsumgebung)
 - [Videobasierte Kurse & Bildungsressourcen](#videobasierte-kurse--bildungsressourcen)
-- [Spezifische Themen & Dokumentationen](#spezifische-themen--dokumentationen)
+- [Referenzwerke & Sicherheitsstandards](#referenzwerke--sicherheitsstandards)
 - [Haftungsausschluss](#haftungsausschluss)
-
 
 
 <div align=right>
@@ -23,27 +23,22 @@ Wenn du in die Welt des **ethischen Hackens** eintauchen möchtest, gibt es jede
 
 Diese Plattformen sind ideal für praktische Übungen, da sie dir eine sichere Umgebung bieten, in der du deine Hacking-Fähigkeiten testen und verbessern kannst.
 
-- **TryHackMe:** Auf [tryhackme.com](https://tryhackme.com/) findest du geführte Kurse und Labs, die dich Schritt für Schritt durch reale Angriffsszenarien führen. Die Plattform ist perfekt für Anfänger, und viele Inhalte sind kostenfrei zugänglich.
+| Plattform | Fokus | Link |
+|-----------|-------|------|
+| TryHackMe | Geführte Kurse, Roadmaps (Anfänger-freundlich) | [tryhackme.com](https://tryhackme.com/) |
+| Hack The Box | Realistische Hacking-Szenarien (Machines/Challenges) | [hackthebox.com](https://www.hackthebox.com/) |
+| PortSwigger Web Security Academy | Web-Schwachstellen (SQLi, XSS, SSRF) mit Burp Suite | [portswigger.net/web-security/all-labs](https://portswigger.net/web-security/all-labs) |
+| picoCTF | CTF-Lernprogramm für Schüler & Studenten | [picoctf.org](https://picoctf.org/) |
+| Root-Me | Große Challenge-Bibliothek (400+ Aufgaben) | [root-me.org](https://www.root-me.org/) |
+| Hacksplaining | Animierte Erklärungen von Web-Schwachstellen | [hacksplaining.com](https://hacksplaining.com/) |
+| Hacking-Lab | CTF-Wettbewerbe und Online-Labs | [hacking-lab.com](https://hacking-lab.com/) |
+| CTFtime | Zentraler Kalender und Übersicht aller globalen CTFs | [ctftime.org](https://ctftime.org/) |
+| CyberTalents | Kostenlose Kurse, CTFs und Talentförderung | [cybertalents.com](https://cybertalents.com/) |
+| LabEx | Interaktive Labs (Linux, DevOps, Cybersecurity) | [LabEx](https://labex.io/de) |
+| W3Challs | Vielfalt von Challenges in verschiedenen Kategorien | [w3challs.com](https://w3challs.com/) |
+| Ringzer0ctf | CTF-Wettbewerbe mit verschiedenen Challenges | [ringzer0ctf.com](https://ringzer0ctf.com/) |
+| Hack This Site! | Community-Plattform mit realistischen Hacking-Szenarien | [hackthissite.org/](https://www.hackthissite.org/) |
 
-- **Hack The Box:** Eine der bekanntesten Plattformen der Branche, zu finden unter [hackthebox.com](https://www.hackthebox.com/). Hier gibt es eine große Auswahl an "Machines" und "Challenges" (Hacking-Szenarien) für alle Schwierigkeitsgrade.
-- **picoCTF:** Ein kostenloses, CTF-basiertes Lernprogramm, das speziell für Schüler und Studenten entwickelt wurde. Die Website [picoctf.org](https://picoctf.org/) ist der perfekte Ort, um die Grundlagen von der Kryptografie bis zur Web-Sicherheit zu erlernen.
-- **Hacksplaining:**  Diese Plattform fokussiert sich auf Web-Anwendungen. Unter [hacksplaining.com](https://hacksplaining.com/) findest du kurze, animierte Erklärungen und interaktive Beispiele, die ideal für Einsteiger sind.
-- **PortSwigger Web Security Academy:** Die Macher des beliebten Tools Burp Suite bieten unter [portswigger.net/web-security/all-labs](https://portswigger.net/web-security/all-labs) eine kostenlose und sehr detaillierte Web Security Academy mit interaktiven Labs an. Hier lernst du Schwachstellen wie SQL-Injection und XSS.
-- **OverTheWire:**  Bietet eine Reihe von sogenannten "Wargames". Auf [overthewire.org](https://overthewire.org/wargames/) hackst du dich von einem Level zum nächsten, um Konzepte wie SSH und Linux-Befehlszeile zu verinnerlichen.
-- **Root-Me**: Eine Plattform mit über 400 Challenges in verschiedenen Kategorien. Auf [root-me.org](https://www.root-me.org/) kannst du dein Profil verfolgen und dich in Rankings mit anderen messen.
-- **CyberTalents:** Findest du unter [cybertalents.com](https://cybertalents.com/). Bietet kostenlose Kurse, CTFs und Wettbewerbe an, um Talente in der Cybersicherheit zu fördern.
-- **CTFtime:** Eine zentrale Übersichtsplattform unter [ctftime.org](https://ctftime.org/) für alle aktuellen und kommenden CTF-Wettbewerbe weltweit. Perfekt, um sich mit anderen zu messen.
-- **VulnHub:** Stellt verwundbare virtuelle Maschinen zur Verfügung, die du herunterladen und lokal in einer sicheren Umgebung auf [vulnhub.com](https://www.vulnhub.com/) hacken kannst.
-- **Hacking-Lab:** Eine Online-Lernplattform für Hacker und Sicherheitsexperten unter [hacking-lab.com](https://hacking-lab.com/). Hier findest du CTF-Wettbewerbe und Online-Labs.
-- **Master of Project Academy:** Unter [masterofproject.com/p/ethical-hacking-overview](https://masterofproject.com/p/ethical-hacking-overview?srsltid=AfmBOopWVFVQQYFDX7CimX4ydb_gZqoYMYtKxeL2twYGFpUPGcTg4MbZ) findest du einen kostenlosen Überblick über ethisches Hacken.
-- **Try2hack:** Eine der ältesten Hacking-Challenge-Seiten unter [try2hack.nl](https://www.try2hack.nl/).
-- **Microcorruption:** Ein interaktives, auf Hardware-Hacking fokussiertes Wargame unter [microcorruption.com](https://microcorruption.com/login). Hier lernst du die Grundlagen von Embedded-Systemen.
-- **W3Challs:** Eine weitere Plattform mit einer Vielzahl von Challenges in verschiedenen Kategorien unter [w3challs.com](https://w3challs.com/).
-- **Ringzer0ctf:** Bietet CTF-Wettbewerbe mit verschiedenen Challenges unter [ringzer0ctf.com](https://ringzer0ctf.com/).
-- **SmashTheStack:** Eine Wargame-Plattform unter [smashthestack.org](https://www.smashthestack.org/) mit dem Fokus auf Binary Exploitation und Reverse Engineering.
-- **https://deusx64.ai/:** Eine Wargame [https://deusx64.ai/](https://deusx64.ai/). Der Einführungskurs: [https://wargames.ret2.systems/course](https://wargames.ret2.systems/course).
-- **https://boot.dev:** [https://boot.dev/](https://www.boot.dev?bannerlord=justray) ist eine interaktive Plattform, um das Programmieren zu lernen. 
-- **Websploit:** Labs mit verschiedenen Docker Container
 
 <div align=right>
 
@@ -52,20 +47,44 @@ Diese Plattformen sind ideal für praktische Übungen, da sie dir eine sichere U
 </div>
 
 
+## Wargames & Binary Exploitation
 
-### Übungsanwendungen und VMS
+Diese Kategorie fokussiert sich auf das Hacken über die Kommandozeile (SSH) und das Ausnutzen von Schwachstellen in Software-Binaries.
 
-Diese sind perfekt, um lokale Hacking-Umgebungen aufzubauen und gängige Schwachstellen in einer kontrollierten Umgebung zu testen.
+| Plattform | Fokus | Zielsystem | Link |
+|-----------|-------|------------|------|
+| OverTheWire | Unix/Linux Basics, Networking, Exploitation | SSH / Wargames | [overthewire.org](https://overthewire.org/wargames/) |
+| SmashTheStack | Binary Exploitation, Reverse Engineering | SSH / Wargames | [smashthestack.org](https://www.smashthestack.org/) |
+| Microcorruption | Embedded Systems, Hardware Hacking, Assembler | Interaktives Interface | [microcorruption.com](https://microcorruption.com/login) |
+| Try2hack | Älteste Web- und Binary Challenges | Diverse | [try2hack.nl](https://www.try2hack.nl/) |
+| Deusx64 - Einführungskurs | Wargame-Einführungskurs | Browser / Wargame | [https://wargames.ret2.systems/course](https://wargames.ret2.systems/course) |
+| Deusx64 | Wargame | Browser / Wargame | [https://deusx64.ai/](https://deusx64.ai/) |
+| Netgarage | Fokus auf Reverse Engineering | Wargame | [io.netgarage.org](http://io.netgarage.org/) |
 
-- **Mutillidae:** Eine unsichere Webanwendung zum Ausprobieren gängiger Schwachstellen unter [github.com/webpwnized/mutillidae](https://github.com/webpwnized/mutillidae).
 
-- **WebGoat:** Eine Lernanwendung von OWASP, die dich durch eine Reihe von Web-Schwachstellen führt. Du findest sie auf [github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat).
-- **Damn Vulnerable iOS App (DVIA):** Eine iOS-Anwendung mit bekannten Schwachstellen für das mobile Hacking-Lernen unter [github.com/prateek147/DVIA-v2](https://github.com/prateek147/DVIA-v2).
-- **Google Gruyere:** Eine absichtlich verwundbare Webanwendung von Google, um Sicherheitskonzepte zu lernen unter [google-gruyere.appspot.com](https://google-gruyere.appspot.com/).
-- **Hacker's Home:** Bietet verwundbare VMs und eine Reihe von Hacking-Challenges unter [hbh.sh/home](https://hbh.sh/home).
-- **Hack This Site!:** Eine weitere Community-Plattform mit realistischen Hacking-Szenarien unter [hackthissite.org](https://www.hackthissite.org/).
-- **ITSecGames:** Bietet verschiedene Lern-VMs, um Sicherheitskonzepte zu verstehen unter [itsecgames.com](http://www.itsecgames.com/).
-- **Netgarage:** Eine Wargame-Plattform mit Fokus auf Reverse Engineering unter [io.netgarage.org](http://io.netgarage.org/).
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+## Target-Anwendungen & VMs (Lokale Übungsumgebung)
+Diese Anwendungen und VMs sind absichtlich verwundbar. Sie ermöglichen es dir, eine kontrollierte Testumgebung lokal aufzubauen, um gängige Schwachstellen ohne Gefahr für reale Systeme zu testen.
+
+| Ziel | Typ | Primäre Schwachstellen | Link |
+|------|-----|------------------------|------|
+| VulnHub | Virtuelle Maschinen (VMs) | System-Exploits, Privilege Escalation | [vulnhub.com](https://www.vulnhub.com/) | 
+| WebGoat | Webanwendung (von OWASP) | OWASP Top 10 (SQLi, XSS, XXE) | [github.com/WebGoat/WebGoat](https://github.com/WebGoat/WebGoat) | 
+| Mutillidae | Webanwendung (PHP/MySQL) | Allgemeine Web-Schwachstellen, Data Exposure | [github.com/webpwnized/mutillidae](https://github.com/webpwnized/mutillidae) | 
+| Google Gruyere | Webanwendung (von Google) | XSS, CSRF, Path Traversal | [google-gruyere.appspot.com](https://google-gruyere.appspot.com/) | 
+| Damn Vulnerable iOS App (DVIA) | Mobile Anwendung (iOS) | Mobile Security (Insecure Storage, Jailbreak Detection) | [github.com/prateek147/DVIA-v2](https://github.com/prateek147/DVIA-v2) | 
+| Websploit | Containerisierte Labs (Docker) | Container Security, diverse Exploits | Verschiedene Docker Images | 
+| Hacker's Home | Verwundbare VMs und Hacking-Challenges | Diverse System- und Web-Schwachstellen | [hbh.sh/home](https://hbh.sh/home) | 
+| ITSecGames | Verschiedene Lern-VMs | Allgemeine Sicherheitskonzepte | [itsecgames.com](http://www.itsecgames.com/) | 
+
+
 
 
 <div align=right>
@@ -77,17 +96,40 @@ Diese sind perfekt, um lokale Hacking-Umgebungen aufzubauen und gängige Schwach
 
 ## Videobasierte Kurse & Bildungsressourcen
 
-Diese Seiten bieten strukturierte Kurse und Video-Tutorials an, oft von Branchenexperten.
+Diese Ressourcen bieten strukturierte Kurse und Video-Tutorials von Branchenexperten und Universitäten.
 
-- **Cybrary:** Auf [cybrary.it](https://www.cybrary.it/) findest du eine Fülle von kostenlosen Kursen in Cybersicherheit, einschließlich ethischem Hacken.
 
-- **The Cyber Mentor (TCM) Academy:** Unter [academy.tcm-sec.com](https://academy.tcm-sec.com/) gibt es sehr angesehene Kurse und viele kostenlose YouTube-Videos von Heath Adams.
-- **freeCodeCamp:** Bietet unter [freecodecamp.org](https://www.freecodecamp.org/learn/information-security/) einen kostenlosen, strukturierten Lehrplan zur Informationssicherheit, der Videos und interaktive Übungen enthält.
-- **HackerOne Hacker101:** Auf [hackerone.com/hacker101](https://www.hackerone.com/hackers/hacker101) findest du kostenlose Videos und Kurse für Einsteiger, die sich für Bug-Bounty-Programme interessieren.
-- **EC-Council CyberSecurity Exchange:** Das EC-Council bietet unter [eccouncil.org/cybersecurity-exchange/ethical-hacking/free-ethical-hacking-courses/](https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/free-ethical-hacking-courses/) einige kostenlose Kurse und Schulungen für angehende ethische Hacker an.
-- **YouTube-Kanäle:** Auf YouTube gibt es eine riesige Community. Kanäle wie [LiveOverflow](), [IppSec](https://www.youtube.com/@ippsec) und [John Hammond](https://www.youtube.com/@_JohnHammond) oder [David Bombal](https://www.youtube.com/@davidbombal) bieten exzellente, kostenlose Inhalte.
-- **Udemy:** Obwohl viele Kurse auf [udemy.com](https://www.udemy.com/) kostenpflichtig sind, gibt es immer wieder kostenlose Aktionen. Die Kurse sind oft sehr gut strukturiert.
-- **Cisco Networking Academy:** Auf [netacad.com](https://www.netacad.com/courses/ethical-hacker?courseLang=en-US) findest du oft kostenlose Kurse zur Netzwerksicherheit, die für Cybersicherheit unerlässlich sind.
+| Ressource | Format | Fokus |Link |
+|-----------|--------|-------|-----|
+| The Cyber Mentor (TCM) Academy| Kurse (Video) | Praxisnahe Pentesterschulungen (sehr angesehen) | [academy.tcm-sec.com](https://academy.tcm-sec.com/) |
+| Cybrary | Kurse (Video/Text) | Breites Spektrum (Netzwerk, Compliance, Hacking) | [cybrary.it](https://www.cybrary.it/) |
+| freeCodeCamp | Kurse (Video/Text) | Strukturierter Lehrplan zur Informationssicherheit | [freecodecamp.org/learn/information-security/](https://www.freecodecamp.org/learn/information-security/) |
+| HackerOne Hacker101 | Videos/Kurse | Einführung in Bug-Bounty-Programme | [hackerone.com/hacker101](https://www.hackerone.com/hackers/hacker101) |
+| EC-Council CyberSecurity Exchange | Kurse | Kostenlose Schulungen für angehende ethische Hacker | [eccouncil.org/cybersecurity-exchange/ethical-hacking/free-ethical-hacking-courses/](https://www.eccouncil.org/cybersecurity-exchange/ethical-hacking/free-ethical-hacking-courses/) |
+| Udemy / Coursera / edX | MOOCs (Video) | Akademische und zertifizierte Kurse, oft auditierbar | [udemy.com](https://www.udemy.com/) / [coursera.org](https://www.coursera.org/) / [edx.org](https://www.edx.org/) |
+| Cisco Networking Academy | Kurse | Netzwerksicherheit und Grundlagen (CCNA Security) | [netacad.com](https://www.netacad.com/courses/ethical-hacker?courseLang=en-US) |
+| Master of Project Academy | Überblick (Video/Text) | Kostenloser Überblick über ethisches Hacken | [masterofproject.com/p/ethical-hacking-overview](https://masterofproject.com/p/ethical-hacking-overview?srsltid=AfmBOopWVFVQQYFDX7CimX4ydb_gZqoYMYtKxeL2twYGFpUPGcTg4MbZ) |
+| boot.dev | Interaktive Plattform | Programmieren lernen mit Fokus auf Entwicklungssicherheit | [https://boot.dev/](https://www.boot.dev) |
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### Empfohlene YouTube-Kanäle
+Diese Kanäle bieten tiefe technische Einblicke, Walkthroughs und Erklärungen komplexer Schwachstellen:
+
+| Kanal | Format |
+|-------|--------|
+| [LiveOverflow](https://www.youtube.com/@liveoverflow) | Fokus auf Binary Exploitation, CTF-Lösung und tiefgehende technische Erklärungen. |
+| [IppSec](https://www.youtube.com/@ippsec) | Hochwertige Walkthroughs von Hack The Box Machines. |
+| [John Hammond](https://www.youtube.com/@_JohnHammond) | CTFs, Malware-Analyse und Security-Tipps. |
+| [David Bombal](https://www.youtube.com/@davidbombal) | Netzwerke, Cloud Security und Zertifizierungsvorbereitung. |
+| [Professor Messer](https://www.youtube.com/@professormesser/) | Netzwerke und Co - Zertifizierungsvorbereitung. |
+| [Network Chuck](https://www.youtube.com/@NetworkChuck/) | Professionelle Videos zu Netzwerken, Frameworks und Zertifizierungsvorbereitung. |
 
 
 
@@ -99,20 +141,18 @@ Diese Seiten bieten strukturierte Kurse und Video-Tutorials an, oft von Branchen
 </div>
 
 
+## Referenzwerke & Sicherheitsstandards
 
-## Spezifische Themen & Dokumentationen
+Diese Referenzwerke und Standards sind unerlässlich für die Analyse, Dokumentation und Verteidigung von Systemen.
 
-Wenn du dich in bestimmte Themen vertiefen möchtest, sind diese Seiten ideal.
-
-- **OWASP (Open Web Application Security Project):** Als Non-Profit-Organisation stellt OWASP unter [owasp.org](https://owasp.org/) kostenlose Ressourcen und Tools zur Web-Sicherheit bereit. Der OWASP Top 10 ist eine unverzichtbare Liste der kritischsten Web-Schwachstellen.
-
-- **Hackerone Bug-Bounty-Liste:** Auch wenn du keinen Bug finden solltest, ist es eine super Möglichkeit sich durch die Berichte von anderen Hackern zu lesen um zu verstehen wie so etwas funktioniert. Die Liste findest du unter [hackerone.com/bugs](https://hackerone.com/bugs) (logging nötig).
-- **Google Hacking Database (GHDB)** von Exploit Database: Unter [exploit-db.com/google-hacking-database](https://www.exploit-db.com/google-hacking-database) findest du eine Sammlung von [Google-Dorks](/07-Social-Engineering/google_dorking.md). Es ist eine wichtige Ressource, um fortgeschrittene Suchtechniken zu erlernen.
-- **MITRE ATT&CK:** Eine Wissensdatenbank mit den Taktiken und Techniken, die von Angreifern verwendet werden. Du findest sie unter [attack.mitre.org.](https://attack.mitre.org/) Unverzichtbar für Red- und Blue-Team-Übungen.
-- **Coursera & edX**: Bieten Kurse von renommierten Universitäten wie der Stanford oder dem Georgia Tech an. Viele Kurse können kostenlos auditiert werden. Du findest sie unter [coursera.org](https://www.coursera.org/) und [edx.org](https://www.edx.org/).
-- **Cybrary:** (Siehe oben) Bietet neben allgemeinen Kursen auch spezielle Kurse für bestimmte Zertifizierungen an.
-- **Hackernoon:** Ein Blog unter [hackernoon.com](https://hackernoon.com/), der Artikel und Tutorials von echten Hackern zu einer Vielzahl von Sicherheitsthemen veröffentlicht.
-- **TutorialsPoint:** Bietet einfache und leicht verständliche Anleitungen zu vielen Themen, auch zu ethischem Hacking, unter [tutorialspoint.com](https://www.tutorialspoint.com/ethical_hacking/index.htm).
+| Ressource | Fokus | Relevanz | Link |
+|-----------|-------|----------|------|
+| OWASP Foundation | Web Application Security Standards| Die Grundlage für alle Web-Sicherheitstests. OWASP Top 10 ist Pflichtlektüre. | [owasp.org](https://owasp.org/) |
+| MITRE ATT&CK | Taktiken, Techniken & Prozeduren (TTPs) | Das Standard-Framework zur Modellierung und Verteidigung gegen reale Angriffe (Red/Blue Team). | [attack.mitre.org.](https://attack.mitre.org/) |
+| Google Hacking Database (GHDB) | Suchmaschinen-Hacking (Dorks) |Finden von exponierten Informationen und verwundbaren Servern über Google. | [exploit-db.com/google-hacking-database](https://www.exploit-db.com/google-hacking-database) |
+| HackerOne Bug-Bounty-Liste | Real-World Vulnerability Reports | Lernen Sie aus dokumentierten Fehlern anderer Hacker. | [hackerone.com/bugs](https://hackerone.com/bugs) |
+| Hackernoon | Fachblog & Tutorials | Aktuelle Artikel und Analysen zu neuen Exploits und Techniken. | [hackernoon.com](https://hackernoon.com/) |
+| TutorialsPoint | Einfache, verständliche Anleitungen |Grundlagenwissen zu vielen IT- und Hacking-Themen | [tutorialspoint.com](https://www.tutorialspoint.com/ethical_hacking/index.htm) |
 
 
 <div align=right>
@@ -137,7 +177,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** September 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
