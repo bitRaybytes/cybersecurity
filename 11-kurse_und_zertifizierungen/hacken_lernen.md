@@ -7,6 +7,7 @@ Der Weg zum IT-Sicherheitsexperten ist ein fortlaufender Lernprozess, der eine K
 - [Wargames & Binary Exploitation](#wargames--binary-exploitation)
 - [Target-Anwendungen & VMs (Lokale Übungsumgebung)](#target-anwendungen--vms-lokale-übungsumgebung)
 - [Videobasierte Kurse & Bildungsressourcen](#videobasierte-kurse--bildungsressourcen)
+    - [Empfohlene YouTube-Kanäle](#empfohlene-youtube-kanäle)
 - [Referenzwerke & Sicherheitsstandards](#referenzwerke--sicherheitsstandards)
 - [Haftungsausschluss](#haftungsausschluss)
 
