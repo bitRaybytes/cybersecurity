@@ -43,39 +43,29 @@ Diese Datei dient als strukturiertes Cheat Sheet zur **Privilege Escalation** au
 ```text
 Grafik: Der Prozess der Privilege Escalation:
 
-                                        +-------------------+
-                                        |                   |
-                                        |  Angreifer erhält |
-                                        |  eingeschränkten  |
-                                        |     Zugriff       |
-                                        |                   |
-                                        +----------+--------+
-                                                   |
-                                                   |
-                             +---------------------+---------------------+
-                             |                                           |
-                             |                                           |
-+----------------------------v------+                    +---------------v------------------+
-|                                   |                    |                                  |
-|   **Phase 1: Enumeration**        |                    |  **Phase 2: Exploitation**       |
-|  - System & User Info             |                    |  - SUID Binaries                 |
-|  - Dateisystem-Checks             |                    |  - Schwache Dateiberechtigungen  |
-|  - Netzwerk & Services            |                    |  - Cronjobs                      |
-|  - Prozesse & Cronjobs            |                    |  - Kernel Exploits               |
-|  - Vertrauliche Daten suchen      |                    |  - uvm.                          |
-|                                   |                    |                                  |
-+----------------------------^------+                    +---------------v------------------+
-                             |                                           |
-                             |                                           |
-                             +---------------------+---------------------+
-                                                   |
-                                                   |
-                                        +----------+--------+
-                                        |                   |
-                                        |  **Root-Rechte**  |
-                                        |    erlangt?       |
-                                        |                   |
-                                        +-------------------+
+                                      +-------------------+
+                                      |  Angreifer erhält |
+                                      |  eingeschränkten  |
+                                      |     Zugriff       |
+                                      +--------+----------+
+                                               |
+                             +-----------------+---------------------+
+                             |                                       |
++----------------------------v--+                    +---------------v------------------+
+|   **Phase 1: Enumeration**    |                    |  **Phase 2: Exploitation**       |
+|  - System & User Info         |                    |  - SUID Binaries                 |
+|  - Dateisystem-Checks         |                    |  - Schwache Dateiberechtigungen  |
+|  - Netzwerk & Services        |                    |  - Cronjobs                      |
+|  - Prozesse & Cronjobs        |                    |  - Kernel Exploits               |
+|  - Vertrauliche Daten suchen  |                    |  - uvm.                          |
++----------------------------^--+                    +---------------v------------------+
+                             |                                       |
+                             +-----------------+---------------------+
+                                               |
+                                     +---------+---------+
+                                     |  **Root-Rechte**  |
+                                     |    erlangt?       |
+                                     +-------------------+
 ```
 
 <div align=right>
@@ -87,6 +77,8 @@ Grafik: Der Prozess der Privilege Escalation:
 
 ## Phase 1. System Checks & Enumeration
 Eine gründliche Aufklärung des Systems ist die wichtigste Phase. Ohne umfassende Informationen sind die Erfolgsaussichten auf eine Privilege Escalation gering.
+
+> Es ist essentiell zu wissen: **Wer bin ich? Wo bin ich? Was läuft hier?**
 
 ### System- und Benutzerinformationen
 Sammle grundlegende Fakten über das System und deine aktuelle Benutzerumgebung.
