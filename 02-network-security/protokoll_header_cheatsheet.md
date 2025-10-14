@@ -4,8 +4,8 @@
 ## Inhaltsverzeichnis
 - [Einleitung](#einleitung)
 - [Layer 2 Protokolle](#layer-2-protokolle)
-  - [ARP Header (Layer 2/3)](#arp-header-layer-23)
   - [Ethernet II (Layer 2)](#ethernet-ii-layer-2)
+  - [ARP Header (Layer 2/3)](#arp-header-layer-23)
 - [Layer 3 Protokolle](#layer-3-protokolle)
   - [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
   - [IPv6 Header (Layer 3)](#ipv6-header-layer-3)
