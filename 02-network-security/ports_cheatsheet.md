@@ -228,10 +228,10 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 
 ## Nützliche Links
-- [firewall_cheatsheet.md](02-network-security/firewall_cheatsheet.md) - Einführung in Firwalls
-- [tcp_ip_basics.md](tcp_ip_basics.md) - Einführung in TCP/IP
-- [osi_schichtenmodell.md](osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
-- [ip_adressen_basics.md](ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
+- [firewall_cheatsheet.md](https://github.com/bitRaybytes/cybersecurity/blob/main/02-network-security/grundlagen/firewall_grundlagen.md) - Einführung in Firwalls
+- [tcp_ip_basics.md](https://github.com/bitRaybytes/cybersecurity/blob/main/02-network-security/grundlagen/tcp_ip_basics.md) - Einführung in TCP/IP
+- [osi_schichtenmodell.md](https://github.com/bitRaybytes/cybersecurity/blob/main/02-network-security/grundlagen/osi_schichtenmodell.md) - Einführung in das OSI-Schichtenmodell
+- [ip_adressen_basics.md](https://github.com/bitRaybytes/cybersecurity/blob/main/02-network-security/grundlagen/ip_adressen_basics.md) - Einführung in das Thema IP-Adressen
 
 
 <div align=right>
