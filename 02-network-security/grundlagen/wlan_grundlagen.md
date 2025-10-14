@@ -3,7 +3,7 @@
 - [WLAN vs. Wi-Fi](#wlan-vs-wi-fi)
 - [WLAN-Betriebsmodi](#wlan-betriebsmodi)
 - [Die wichtigsten WLAN-Sicherheitsstandards](#die-wichtigsten-wlan-sicherheitsstandards)
-- [Technische Evolution: Die IEEE 802.11 Spezifikationen](#-technische-evolution-die-ieee-80211-spezifikation)
+- [Technische Evolution: Die IEEE 802.11 Spezifikationen](#technische-evolution-die-ieee-80211-spezifikationen)
 - [Grundbegriffe aus der Praxis](#grundbegriffe-aus-der-praxis)
 - [Frequenzbänder und ihre Bedeutung](#frequenzbänder-und-ihre-bedeutung)
 - [Gefahren und typische Angriffsvektoren](#gefahren-und-typische-angriffsvektoren)
