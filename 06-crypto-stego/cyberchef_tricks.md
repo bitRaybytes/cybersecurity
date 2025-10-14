@@ -174,7 +174,7 @@ Recipe:
 - Nutze "Magic" bei unbekannten Inhalten.
 - Kombiniere mehrere Dekodierungsmethoden.
 - Überprüfe mehrfach codierte Daten manuell.
-- Achte auf Nullbytes (%00) und Obfuskationstricks.
+- Achte auf Nullbytes (%00) und Obfuskationstricks (Verschleierung).
 - Nutze "Regular Expressions" zum Extrahieren von Infos.
 - Nutze die Export-Funktion, um Ergebnisse weiterzuverarbeiten.
 
@@ -192,8 +192,8 @@ Recipe:
 
 - [CyberChef Online Tool](https://gchq.github.io/CyberChef/)
 - [CyberChef Cheatsheet (PDF)](https://malicious.link/file/cyberchef.pdf)
-- [CyberChef GitHub Repo](https://drive.google.com/drive/home)
-
+- [CyberChef GitHub Repo](https://github.com/gchq/CyberChef)
+- [Youtube@Embee Research: Advanced CyberChef Operations for Malware Analysis and Deobfuscation](https://www.youtube.com/watch?v=CIg4TXFJRK0)
 
 
 
