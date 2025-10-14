@@ -13,7 +13,7 @@
 - [6. Directory & File Brute Forcing](#6-directory--file-brute-forcing)
 - [7. E-Mail & Benutzerrecherche](#7-e-mail--benutzerrecherche)
 - [8. OSINT & Tools](#8-osint--tools)
-- [9. Active Directory Recon](#9-active-directory-decon--intern-)
+- [9. Active Directory Recon](#9-active-directory-recon--intern-)
 - [10. Nützliche Ressourcen](#10-nützliche-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
