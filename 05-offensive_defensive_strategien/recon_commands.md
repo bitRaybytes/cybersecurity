@@ -13,7 +13,7 @@
 - [6. Directory & File Brute Forcing](#6-directory--file-brute-forcing)
 - [7. E-Mail & Benutzerrecherche](#7-e-mail--benutzerrecherche)
 - [8. OSINT & Tools](#8-osint--tools)
-- [9. Active Directory Recon](#9-Active-Directory-Recon-(intern))
+- [9. Active Directory Recon](#9-active-directory-decon--intern-)
 - [10. Nützliche Ressourcen](#10-nützliche-ressourcen)
 - [Haftungsausschluss](#haftungsausschluss)
 
@@ -250,7 +250,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** August 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
