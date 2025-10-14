@@ -48,7 +48,7 @@ Links zu den Tools findest du [hier](#8-nützliche-links)
 
 In der Informatik werden Zeichen und Symbole durch eine Zeichenkodierung in Zahlenwerte übersetzt. Diese sind die Grundlage für die Speicherung und Übertragung von Daten. Die Umwandlung erfolgt mithilfe von Regeln oder Algorithmen.
 
-> kurz gesagt: Encoding ist die Technik, die zur Umwandlung von Informationen von einem Format in ein anderes Format genutzt wird.
+> Kurz gesagt: Encoding ist die Technik, die zur Umwandlung von Informationen von einem Format in ein anderes Format genutzt wird.
 
 So ermöglicht es beispielsweise, dass URLs das Leerzeichen nicht falsch interpretieren und mit dem Zeichen `%20` ersetzen oder Texte, die verschiedene Sprachen und Sonderzeichen enthalten, korrekt angezeigt werden. 
 
