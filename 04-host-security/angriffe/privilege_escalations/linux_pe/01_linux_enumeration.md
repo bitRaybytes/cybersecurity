@@ -374,15 +374,15 @@ Obwohl manuelle Enumeration das Verständnis fördert, sparen automatisierte Too
 
 | Tool               | Beschreibung                       |
 | ------------------ | ---------------------------------- |
-| `LinPEAS.sh`       | Vollautomatische Enumeration       |
-| `Linux Smart Enum` | Minimalistisches Bash-Tool         |
-| `LinEnum.sh`       | Klassisches Linux-Enum-Tool        |
-| `pspy`             | Prozess- und Cronwatcher ohne Root |
-| `GTFOBins`         | Exploitable Binaries mit SUID/Sudo |
+| [`LinPEAS`](https://github.com/peass-ng/PEASS-ng/tree/master/linPEAS) | Vollautomatische Enumeration |
+| [`Linux Smart Enum`](https://github.com/diego-treitos/linux-smart-enumeration) | Minimalistisches Bash-Tool |
+| [`LinEnum`](https://github.com/rebootuser/LinEnum) | Klassisches Linux-Enum-Tool |
+| [`pspy`](https://github.com/DominicBreuker/pspy) | Prozess- und Cronwatcher ohne Root |
+| [`GTFOBins`](https://gtfobins.github.io/) | Exploitable Binaries mit SUID/Sudo |
 
 ```bash
 # Beispiel für LinPEAS.sh Download und Ausführung
-wget [https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh](https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh)
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 chmod +x linpeas.sh
 ./linpeas.sh
 ```
