@@ -5,7 +5,12 @@ Dieses Dokument beschreibt die Methodik und Durchführung einer **Union-Based SQ
 
 ## Inhaltsverzeichnis
 - [Ziel](#ziel)
-- [Beispielhafte Schritte zur Datenextraktion mit `GROUP_CONCAT`](#beispielhafte-schritte-zur-datenextraktion-mit-group_concat)
+- [1. Konzeptionelle Erläuterung der `UNION SELECT`-Technik](#1-konzeptionelle-erläuterung-der-union-select-technik)
+- [2. Schritt 1: Ermittlung der Spaltenanzahl (`ORDER BY`)](#2-schritt-1-ermittlung-der-spaltenanzahl-order-by)
+- [3. Schritt 2: Ermittlung der verwundbaren Spalten (`NULL` Payload)](#3-schritt-2-ermittlung-der-verwundbaren-spalten-null-payload)
+- [4. Schritt 3: Datenextraktion mit `GROUP_CONCAT`](#4-schritt-3-datenextraktion-mit-group_concat)
+  - [Beispielhafte Schritte zur Datenextraktion mit `GROUP_CONCAT`](#beispielhafte-schritte-zur-datenextraktion-mit-group_concat)
+- [Hinweise für Ethical Hacker](#hinweise-für-ethical-hacker)
 - [Hinweise](#hinweise)
 - [Sicherheitshinweis](#sicherheitshinweis)
 - [Haftungsausschluss](#haftungsausschluss)
@@ -46,7 +51,7 @@ Dies bedeutet:
 </div>
 
 
-## 1. Konzeptionelle Erläuterung der UNION `SELECT`-Technik
+## 1. Konzeptionelle Erläuterung der `UNION SELECT`-Technik
 
 Die `UNION`-Operation in SQL kombiniert die Ergebnismengen von zwei oder mehr separaten `SELECT`-Anweisungen in einer einzigen Ergebnismenge.
 
@@ -184,9 +189,9 @@ test' UNION SELECT 1,group_concat(username,0x3a3a,password),3 FROM users --
 
 1. **Fehlerbasierte Abfrage:** Wenn eine Union-Based Injection nicht sofort funktioniert, kann eine Error-Based SQL Injection (z.B. durch `EXTRACTVALUE` oder `UPDATEXML`-Funktionen in MySQL) oft schneller die Datenbankversion und den aktuellen Benutzer verraten.
 
-- **Blinde Abfragen:** Wenn die Ergebnisse der `UNION SELECT` nicht direkt auf der Seite erscheinen (`Blind SQLi`), müssen Techniken wie Time-Based oder Boolean-Based Injections angewendet werden (z.B. mit `IF` und `SLEEP`).
+2. **Blinde Abfragen:** Wenn die Ergebnisse der `UNION SELECT` nicht direkt auf der Seite erscheinen (`Blind SQLi`), müssen Techniken wie Time-Based oder Boolean-Based Injections angewendet werden (z.B. mit `IF` und `SLEEP`).
 
-- **Filtrations-Bypässe:** Bei komplexen Filtern sollten zusätzliche Bypässe in Betracht gezogen werden: Groß-/Kleinschreibung, Kommentare (`/**/)`, URL-Kodierung oder String-Manipulationen (`CONCAT`).
+3. **Filtrations-Bypässe:** Bei komplexen Filtern sollten zusätzliche Bypässe in Betracht gezogen werden: Groß-/Kleinschreibung, Kommentare (`/**/)`, URL-Kodierung oder String-Manipulationen (`CONCAT`).
 
 
 <div align=right>
