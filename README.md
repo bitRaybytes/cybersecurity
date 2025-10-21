@@ -7,7 +7,7 @@ Willkommen im **Cybersecurity Hub** – einer strukturierten, wachsenden Sammlun
 
 Dieses Repository ist gedacht für Einsteiger, Fortgeschrittene und alle, die sich intensiv und praxisorientiert mit **Cybersecurity** beschäftigen wollen. Es behandelt viele wichtige Konzepte in der IT-Sicherheit.
 
-Hast du Verbesserungsvorschläge? Lasse es uns unbedingt wissen!
+Hast du Verbesserungsvorschläge? Lass es uns unbedingt wissen!
 
 
 ## Inhaltsverzeichnis:
