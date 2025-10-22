@@ -363,10 +363,30 @@ HRS-Angriffe werden nach der unterschiedlichen Header-Priorität des Frontend- u
 
 
 ### CL.TE: Content-Length gewinnt vorne, Transfer-Encoding gewinnt hinten
+Das **CL.TE Request Smuggling** bezieht sich auf die mutmaßliche Diskrepanz zwischen Frontend und Backend. Wenn die Header Content-Length und Transfer-Encoding gleichzeitig in einem Request genutzt werden, dann interpretiert das Frontend den Content-Length Header und sendet genau die X-Bytes an das Backend, die es soll. Das Backend erhält dann den gesamten Message Body, wobei an dieser Stelle der Rest der Nachricht im Backend-Buffer liegt und als Anfang der nächsten Nachricht interpretiert.
+
+> Es ist wichtig, die korrekte Größe der Nachricht des Messages Bodies im Content-Length Header anzugeben, da das Frontend sonst inkorrekte Daten übermittelt.
 
 - **Frontend:** Priorisiert den Header `Content-Length` (CL).
 
 - **Backend:** Priorisiert den Header `Transfer-Encoding: chunked` (TE).
+
+
+**Visualisierung des Angriffs in CL.TE Reihenfolge:**
+```text
+                               (Content-Length)                     (Transfer-Encoding)
++-----------+                    +----------+                          +---------+
+| Angreifer |                    | Frontend |                          | Backend |
++-----------+                    +----+-----+                          +----+----+
+      | Request mit beiden Headern    | (CL.TE Reihenfolge)                 |
+      |------------------------------>|------------------------------------>|
+      |                               |                                     |
+      |<------------------------------|<------------------------------------|
+      |  Sendet regulären Response    | Prozessiert geschmuggelten Request  |        
++-----------+                    +----+-----+                          +----+----+
+| Angreifer |                    | Frontend |                          | Backend |
++-----------+                    +----------+                          +---------+
+```
 
 
 **Ablauf des Angriffs:**
@@ -374,9 +394,10 @@ HRS-Angriffe werden nach der unterschiedlichen Header-Priorität des Frontend- u
 
 2. **Frontend (CL):** Liest den Wert von `Content-Length` (z.B. X Bytes) und leitet genau diesen gesamten Body an das Backend weiter.
 
-3. **Backend (TE):** Ignoriert `Content-Length`. Es sucht nach dem `Transfer-Encoding: chunked`-Muster. Es sieht den ersten Chunk (Größe A), verarbeitet diesen und beendet den Request, wenn es den `0` Chunk sieht, der das Ende signalisiert.
+3. **Backend (TE):** Ignoriert `Content-Length`. Es sucht nach dem `Transfer-Encoding: chunked`-Muster. Es sieht den ersten Chunk, verarbeitet diesen und beendet den Request, wenn es den `0` Chunk sieht, der das Ende signalisiert.
 
 4. **Desync:** Da der Body, den das Frontend gesendet hat, länger ist als das, was das Backend als Ende interpretiert hat, bleibt der Rest des Payloads im Backend-Buffer zurück. Dieser Rest wird als der Anfang der nächsten Anfrage behandelt.
+
 
 
 **CL.TE Payload-Beispiel**
@@ -393,7 +414,7 @@ SMUGGLED
 GET /admin HTTP/1.1
 Host: example.com
 Foo: x
-``` 
+```
 
 **Ergebnis:**
 
@@ -411,21 +432,42 @@ Foo: x
 
 
 ### TE.CL: Transfer-Encoding gewinnt vorne, Content-Length gewinnt hinten
+Der **TE.CL Request Smuggling** basiert darauf, dass der Angreifer beide Header in einem Request sendet. Ähnlich dem CL.TE Angriff erhält das Frontend den ersten Transfer-Encoding Header und das Backend erwartet den Content-Length.
+
 
 - **Frontend:** Priorisiert den Header `Transfer-Encoding: chunked` (TE).
 
 - **Backend:** Priorisiert den Header `Content-Length` (CL).
 
 
+
+**Visualisierung des Angriffs in TE.CL Reihenfolge:**
+```text
+                              (Transfer-Encoding)                    (Content-Length)
++-----------+                    +----------+                          +---------+
+| Angreifer |                    | Frontend |                          | Backend |
++-----------+                    +----+-----+                          +----+----+
+      | Request mit beiden Headern    | (TE.CE Reihenfolge)                 |
+      |------------------------------>|------------------------------------>|
+      |                               |                                     |
+      |<------------------------------|<------------------------------------|
+      |  Sendet regulären Response    | Prozessiert geschmuggelten Request  |        
++-----------+                    +----+-----+                          +----+----+
+| Angreifer |                    | Frontend |                          | Backend |
++-----------+                    +----------+                          +---------+
+```
+
+
 **Ablauf des Angriffs:**
 
 1. Der Angreifer sendet einen Request, der beide Header enthält. Der `Transfer-Encoding`-Header ist dabei so manipuliert, dass das Frontend ihn akzeptiert.
 
-2. **Frontend (TE):** Liest `Transfer-Encoding` und interpretiert den Body als Chunks. Es liest alle Chunks bis zum 0-Chunk und beendet den Request (z.B. X Bytes).
+2. **Frontend (TE):** Liest `Transfer-Encoding` und interpretiert den Body als Chunks. Es liest alle Chunks bis zum `0`-Chunk und beendet den Request (z.B. X Bytes).
 
 3. **Backend (CL):** Ignoriert `Transfer-Encoding`. Es liest den Wert von `Content-Length` (z.B. Y Bytes).
 
 4. **Desync:** Der Angreifer setzt `Content-Length` auf einen kleineren Wert (Y) als der gesamte Payload, den das Frontend sendet (X). Das Backend hört nach Y Bytes auf zu lesen. Der Rest des Payloads (der geschmuggelte Request) wird für die nächste Anfrage als Body im Buffer zurückgelassen.
+
 
 **TE.CL Payload-Beispiel:**
 ```text
@@ -434,7 +476,7 @@ Host: example.com
 Content-Length: 15          <-- Backend liest 15 Bytes Body
 Transfer-Encoding: chunked  <-- Frontend interpretiert Chunking
 
-e                           <-- Chunk-Größe (e Hex = 14 Bytes)
+78                           <-- Chunk-Größe (78 Hex für 120 Dezimal)
 GET /admin HTTP/1.1
 0                           <-- Ende des Requests für Frontend
 <CRLF>                      <-- Der Rest des Payloads, der durch Content-Length nicht beachtet wurde
@@ -457,6 +499,7 @@ GET /admin HTTP/1.1
 
 
 ## Transfer-Encoding Obfuscation
+Die **TE.TE Request Smuggling** Methode geschieht, wenn beide Parteien (Front- und Backend) den Transfer-Encoding Header nutzen. Anders als bei dem CL.TE oder dem TE.CL Angriff werden an das Front- und an das Backend der Transfer-Encoding Header gesendet.
 
 Die Ambivalenz bei der Request-Längenbestimmung ist die Wurzel der Schwachstelle. Angreifer nutzen Header-Obfuscation (Verschleierung), um sicherzustellen, dass nur einer der beiden Server den Header akzeptiert.
 
@@ -471,6 +514,33 @@ Da Firewalls (WAF) oft nach den Headern `Content-Length` und `Transfer-Encoding`
 | **Ungültige Zeichen** | `Content-Length: 10\r\n\t` | Einbindung von horizontalen Tabs (`\t`) oder anderen Zeichen, die von einem Server ignoriert, vom anderen jedoch akzeptiert werden. |
 
 
+**TE.CL Payload-Beispiel:**
+```text
+POST / HTTP/1.1
+Host: example.com
+Content-length: 4
+Transfer-Encoding: chunked   <-- Wird vom Frontend gelesen
+Transfer-Encoding: chunked1  
+
+4e
+POST /update HTTP/1.1
+Host: example.com
+Content-length: 15
+
+isadmin=true
+0        
+```
+
+
+**Ablauf des Angriffs:**
+
+1. Der Angreifer sendet einen Request, der den `Transfer-Encoding`-Header enthält. Der `Transfer-Encoding`-Header ist dabei so manipuliert, dass das Frontend ihn akzeptiert.
+
+2. **Frontend (TE):** Liest `Transfer-Encoding` und interpretiert den Body als Chunks. Er ignoriert dabei den `Transfer-Encoding: chunked1`, liest alle Chunks bis zum `0`-Chunk und beendet den Request (z.B. X Bytes).
+
+3. **Backend (CL):** Interpretiert den `Transfer-Encoding: chunked1`, indem es entweder diese Form ignoriert und den Part wie das Frontend verarbeitet oder er verarbeitet den Prozess aufgrund des vorhandenen `non-standard` komplett andersartig. Wenn es dabei nur die $4 Bytes$ der ursprünglichen Content-Length interpretiert, dann wird `POST /update HTTP/1.1/` als ein neuer Request behandelt.
+
+Der geschmuggelte Request mit dem `isadmin=true` Parameter wird vom Backend verarbeitet als wäre es eine neue legitime und separate Anfrage. Mit diesem Angriff kann so der Zugriff auf nicht authorisierte Bereiche erlangt werden, die für Endnutzer nicht bestimmt sind.
 
 
 
@@ -509,7 +579,7 @@ Die erfolgreiche Desynchronisation ermöglicht es dem Angreifer, beliebige HTTP-
 
 Die Behebung von HTTP Request Smuggling erfordert eine konsequente und gleichmäßige Request-Verarbeitung über alle Komponenten hinweg.
 
-1. **Uniformität der Parser:** Stelle sicher, dass alle Komponenten (Proxy, Load Balancer, Webserver) denselben HTTP-Parser verwenden oder so konfiguriert sind, dass sie dieselben Regeln zur Bestimmung der Request-Länge anwenden.
+- **Uniform Header Handling:** Stelle sicher, dass alle Komponenten (Proxy, Load Balancer, Webserver) denselben HTTP-Parser verwenden oder so konfiguriert sind, dass sie dieselben Regeln zur Bestimmung der Request-Länge anwenden.
 
 - **Transfer-Encoding verbieten:** Deaktiviere die Unterstützung für `Transfer-Encoding: chunked` im Frontend-Proxy, wenn es nicht zwingend erforderlich ist. Oder entferne den Header explizit, bevor er an das Backend weitergeleitet wird.
 
@@ -518,6 +588,11 @@ Die Behebung von HTTP Request Smuggling erfordert eine konsequente und gleichmä
 - **Härten des Headers:** Verwerfen alle Requests, die ungewöhnliche oder obfuskierte Header-Syntax enthalten (z.B. ungewöhnliche Whitespaces, doppelte Header).
 
 - **HTTP/2:** Der Wechsel zu `HTTP/2` (oder idealerweise `HTTP/3`) löst das Problem des Request Smuggling, da `HTTP/2` Frames für die Länge verwendet und das Parsen des Headers irrelevant wird.
+
+- **Schulung der Teams:** Lass Development- und Operations-Teams wissen, welche Gefahren das Request Smuggling hat und zeige ihnen, wie sie diese Risiken minimieren können.
+
+- **Netzwerkanalysen:** Beobachte den Datenverkehr im Netzwerk regelmäßig, damit du Anzeichen von Request Smugglings erkennst.
+
 
 
 
