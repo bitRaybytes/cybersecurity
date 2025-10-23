@@ -585,7 +585,7 @@ Die Behebung von HTTP Request Smuggling erfordert eine konsequente und gleichmä
 
 - **Klarheit bei Konflikten:** Konfiguriere den Frontend-Proxy so, dass er die Verbindung sofort schließt oder einen Fehler zurückgibt, wenn sowohl `Content-Length` als auch `Transfer-Encoding` in einem Request vorhanden sind.
 
-- **Härten des Headers:** Verwerfen alle Requests, die ungewöhnliche oder obfuskierte Header-Syntax enthalten (z.B. ungewöhnliche Whitespaces, doppelte Header).
+- **Härten des Headers:** Verwerfe alle Requests, die ungewöhnliche oder obfuskierte Header-Syntax enthalten (z.B. ungewöhnliche Whitespaces, doppelte Header).
 
 - **HTTP/2:** Der Wechsel zu `HTTP/2` (oder idealerweise `HTTP/3`) löst das Problem des Request Smuggling, da `HTTP/2` Frames für die Länge verwendet und das Parsen des Headers irrelevant wird.
 
