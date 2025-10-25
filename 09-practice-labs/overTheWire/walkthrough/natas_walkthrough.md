@@ -877,11 +877,7 @@ Gleichzeitig ist diese Funktion für die Logik der Seite zuständig, was bedeute
 Die 3. Funktion `saveData()` speichert den eingegebenen Wert aus dem Cookie und übergibt ihn an den Server, um ihn zu speichern.   
 Also musst du versuchen, den Cookie so zu modifizieren, dass der Server die Nachricht erhält, den Parameter auf `"showpassword":"yes"` zu setzen.
 
-<<<<<<< HEAD
-Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, in der der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht wird (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert.
-=======
 Wie der Inhalt formatiert und verschlüsselt wird, ist am einfachsten in der Funktion `safeData()` zu sehen, wo der gesamte String (hier `$defaultdata`) zuerst ins kompakte JSON-Format gebracht (`json_encode()`), dann mit der Funktion `xor_encrypt()` XOR verschlüsselt und anschließend mit Base64 kodiert wird.
->>>>>>> 48f9e4351ed7fa50ee1986717ef9a95c3ab00303
 
 In der letzten `if`-Bedingung wird überprüft, ob der Parameter `"bgcolor"` existiert. Dies geschieht über den Superglobal-Array `$_REQUEST`. 
 
@@ -1095,7 +1091,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** September 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
