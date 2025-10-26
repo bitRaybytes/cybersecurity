@@ -1,5 +1,5 @@
 # HTTP Request Smuggling (HRS)
-Dieses Dokument beschreibt die Schwachstelle HTTP Request Smuggling (HRS) – oft als HTTP Desynchronisation bezeichnet. Es konzentriert sich auf die technischen Mechanismen, die es Angreifern ermöglichen, die Grenzen von HTTP-Anfragen zu manipulieren.
+Dieses Dokument beschreibt die Schwachstelle **HTTP Request Smuggling** (**HRS**) – oft als **HTTP Desynchronisation** bezeichnet. Es konzentriert sich auf die technischen Mechanismen, die es Angreifern ermöglichen, die Grenzen von HTTP-Anfragen zu manipulieren.
 
 
 ## Inhaltsverzeichnis
@@ -35,14 +35,14 @@ Dieses Dokument beschreibt die Schwachstelle HTTP Request Smuggling (HRS) – of
 
 ## Einleitung
 
-**HTTP Request Smuggling** ist eine Schwachstelle im HTTP-Header, bei dem der Angreifer schadhafte HTTP-Request sendet, damit diese vom Backend ausgeführt werden.
+**HTTP Request Smuggling** ist eine Schwachstelle im HTTP-Header, bei dem der Angreifer schadhafte HTTP-Requests sendet, damit diese vom Backend ausgeführt werden.
 
 
 In Webanwendungen werden HTTP Request Smuggling im `Content-Length`- und `Transfer-Encoding`-Header ausgenutzt, die den Ende eines Request-Body definieren, um durch schadhafte Anfragen Zugriff auf die Produktionsumgebung zu erhalten.
 
 `Request Splitting` oder `HTTP desync` sind Angriffe, die möglich werden durch die `keep-alive connections` und das `HTTP Pipelining`. Diese Angriffe erlauben mehrere Anfragen über eine TCP-Connection zu senden. 
 
-Bei der Kalkulation der `Content-Length` und des `Transfer-Encoding` ist es wichtig, die Anwesenheit des `\r` (**Carriage Return**) und der `\n` (**NewLine**) zu berücksichtigen. Diese Zeichen haben nicht nur einen formatierenden Aspekt des HTTP-Protokolls, sondern spielen auch für den Wert es kalkulierenden Ergebnisses eine große Rolle.
+Bei der Kalkulation der `Content-Length` und des `Transfer-Encoding` ist es wichtig, die Anwesenheit des `\r` (**Carriage Return**) und der `\n` (**NewLine**) zu berücksichtigen. Diese Zeichen haben nicht nur einen formatierenden Aspekt des HTTP-Protokolls, sondern spielen auch für den Wert des kalkulierenden Ergebnisses eine große Rolle.
 
 
 
@@ -219,7 +219,7 @@ Jede HTTP Anfrage umfasst zwei Hauptteile: den **Header** und den **Body**.
 ### Header und ihre Rolle
 Header spielen eine wichtige Rolle, wenn Daten über Web Anwendungen zum Verarbeiten an den Server übermittelt werden. Sie geben an, wie die Daten vom Server verarbeitet werden sollen. Das passiert durch das Parsen des Requests und Einflussnahme auf das Caching Verhalten.
 
-Das korumpieren von HTTP-Header wie den Content-Length und den Transfer-Encoding können Schwachstellen der Web Anwendung hervorrufen. Wenn beispielsweise ein Proxy Server durch die Manipulation die Daten nicht mehr richtig verarbeiten kann, wird es im schwer fallen herauszufinden, wo die Daten enden und andere Daten anfangen.
+Das korrumpieren von HTTP-Header wie den Content-Length und den Transfer-Encoding können Schwachstellen der Web Anwendung hervorrufen. Wenn beispielsweise ein Proxy Server durch die Manipulation die Daten nicht mehr richtig verarbeiten kann, wird es ihm schwer fallen herauszufinden, wo die Daten enden und andere Daten anfangen.
 
 ```text             
                                          +--------------------+
@@ -259,7 +259,7 @@ Content-Type: application/x-www-form-urlencoded
 username=attacker&password=password
 ```
 
-Dieser Request zeigt, dass die Content-Length **35 Bytes** beträgt. Dies erfährst du, wenn du jeden Buchstaben der Message `username=attacker&password=password` zählst.
+Dieser Request zeigt, dass die Content-Length **35 Bytes** beträgt. Dies erfährst du, wenn du jedes Zeichen (inkl. Leerzeichen) der Message `username=attacker&password=password` zählst.
 
 
 <div align=right>
@@ -270,7 +270,7 @@ Dieser Request zeigt, dass die Content-Length **35 Bytes** beträgt. Dies erfäh
 
 
 ### Transfer-Encoding Header
-Der **Transfer-Encoding**-Header wird für dafür genutzt, um zu definieren, welche Verschlüsselung (Encoding) für den Message-Body genutzt wird. `chunked` ist der gewöhnlichste und am häufigsten in Anspruch genommen Wert. Er sagt aus, dass die Nachricht in Segmente im Hexadecimal-Format geteilt wird.
+Der **Transfer-Encoding**-Header wird für dafür genutzt, um zu definieren, welche Verschlüsselung (Encoding) für den Message-Body genutzt wird. `chunked` ist der gewöhnlichste und am häufigsten in Anspruch genommene Wert. Er sagt aus, dass die Nachricht in Segmente geteilt und in Hexadecimal formatiert wird.
 
 Es gibt weitere Werte für den Transfer-Encoding-Header wie `compress`, `deflate` und `gzip`, von denen jeder seinen eigenen Typ von Verschlüsselung bietet.
 
