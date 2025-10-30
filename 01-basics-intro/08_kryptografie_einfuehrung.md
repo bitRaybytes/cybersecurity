@@ -150,9 +150,9 @@ Hashing ist eine Einwegfunktion. Ein Hashing-Algorithmus nimmt Daten beliebiger 
 
 - **Beispiel:**
 
-    - Du lädst eine Datei herunter und der Anbieter stellt eine Prüfsumme bereit.
-    - Du berechnest den Hash-Wert der heruntergeladenen Datei selbst.
-    - Stimmen beide Werte überein, ist die Integrität der Datei gewährleistet – sie wurde nicht manipuliert.
+  - Du lädst eine Datei herunter und der Anbieter stellt eine Prüfsumme bereit.
+  - Du berechnest den Hash-Wert der heruntergeladenen Datei selbst.
+  - Stimmen beide Werte überein, ist die Integrität der Datei gewährleistet – sie wurde nicht manipuliert.
 
 Gängige Hashing-Algorithmen sind **SHA-256** und **SHA-3**.
 
@@ -193,7 +193,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** September 2025  
+🗓️ **Letzte Aktualisierung:** Oktober 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
