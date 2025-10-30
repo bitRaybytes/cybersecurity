@@ -73,12 +73,12 @@ q=blablabla                       |
 
 Der HTTP/2 Request hat folgende Eigenschaften:
 
-- **Pseudo-Header:** Header, die mit einem `:` beginnen, sind die minimalste Anforderung, die für einen gültigen HTTP/2 Request benötigt werden. Im Beispiel oben werden `:method`, `:path`, `:scheme` und `:authority` als Pseudo-Header verwendet.
-- **Header:** Nach den Pseudo-Headern kommen die regulären Header wie `user-agent` und `content-length` (**beachte lower-case Muster in HTTP/2**).
+- **Pseudo-Header:** Header, die mit einem `:` beginnen, sind die minimalsten Anforderungen, die für einen gültigen HTTP/2 Request benötigt werden. Im Beispiel oben werden `:method`, `:path`, `:scheme` und `:authority` als Pseudo-Header verwendet.
+- **Header:** Nach den Pseudo-Headern kommen die regulären Header wie `user-agent` und `content-length` wie du sie aus den "normalen" HTTP-Request Headern gewohnt bist (**beachte das lower-case Muster in HTTP/2**).
 - **Request Body:** Genau wie HTTP/1.1, beinhaltet der HTTP/2 Request Body die ursprünglichen Daten (`GET`, `POST` usw.) 
 
 
-**Wichtig:** Auch, wenn `Content-Length` und `Transfer-Encoding` in einem HTTP/2-Request Header ignoriert werden, senden moderne Browser diese Header dennoch aus Gründen des HTTP-Downgrades mit.
+> **Hinweis:** Auch, wenn `Content-Length` und `Transfer-Encoding` in einem HTTP/2-Request Header ignoriert werden, senden moderne Browser diese Header dennoch aus Gründen des HTTP-Downgrades mit.
 
 
 
@@ -117,7 +117,7 @@ z.B. Chrome Browser
 
 - Beim Übersetzen in HTTP/1.1 muss das Frontend den Body als zusammenhängende Byte-Sequenz an das Backend übergeben und dabei typischerweise einen `Content-Length`-Header setzen.
 
-- **Fehlerquellen:** falsche Berechnung der Länge, doppelte/konfliktbehaftete `Content-Length`-Header, oder unterschiedliche Prioritätensetzung beim Handhaben von mehrfachen Length-Angaben.
+- **Fehlerquellen:** Falsche Berechnung der Länge, doppelte/konfliktbehaftete `Content-Length`-Header, oder unterschiedliche Prioritätensetzung beim Handhaben von mehrfachen Length-Angaben.
 
 - **Ergebnis:** Backend liest N Bytes (laut CL) und sieht danach zusätzlich Bytes im Socket - diese werden als neue Request interpretiert.
 
@@ -183,7 +183,7 @@ Client (HTTP/2, te: trailers?) -> Frontend (konvertiert fehlerhaft) -> Backend (
 
 **Konkretes Beispiel (Textform):**
 
-- Angreifer sendet HTTP/2 HEADERS inklusive:
+- Angreifer sendet HTTP/2 HEADER inklusive:
 ```makefile
 :method: POST
 :path: /upload
@@ -465,7 +465,7 @@ HTTP2-Settings: <base64url(HTTP2 SETTINGS frame)>
 ### Tunneling Requests via h2c Smuggling
 Bei h2c kann durch unsaubere Übergabe an einen Backend-Parser ein Angreifer zusätzliche HTTP/1.1 Request-Zeilen in die Verbindung schreiben, welche dann vom Backend ausgeführt werden - dadurch „tunnelt“ er Requests durch die Upgrade-Sequenz.
 
-**Beispielablauf (vereinfachend):**
+**Beispielablauf (vereinfacht):**
 
 - Angreifer initiiert h2c Upgrade und fügt in den letzten Bytes vor Protokollwechsel eine weitere HTTP/1.1 Request-Zeile ein.
 
@@ -483,51 +483,19 @@ Bei h2c kann durch unsaubere Übergabe an einen Backend-Parser ein Angreifer zus
 
 
 ## Schutzmaßnahmen
-**1. HTTP/2-aware Komponenten einsetzen (Grundprinzip)**
-- Verwende Proxies und Load-Balancer, die vollständig HTTP/2-aware sind und die Übersetzung H2 → H1 korrekt und sicher implementieren (z. B. geprüfte Versionen von nginx, Envoy, HAProxy mit aktuellen Patches).
-- Stelle sicher, dass Frontend und Backend dieselbe Interpretation von `CL/TE` und Header-Normalisierung teilen.
 
-**2. Strikte Header-Normalisierung & Canonicalization**
 
-- Normalisiere Header (kleinbuchstabig) und entferne/ablehne doppelte oder widersprüchliche `Content-Length`-Header (RFC7230: multiple `Content-Length` nur akzeptieren wenn alle Werte identisch).
-- Entferne oder normalisiere TE Header - akzeptiere nur `te: trailers` in HTTP/2 und mappe niemals te auf `Transfer-Encoding` ohne Validation.
-
-**3. Keine CRLF in Header-Werten erlauben**
-
-- Auf allen Ebenen: serverseitige/Proxy-seitige Validierung, die CR (`\r`) oder LF (`\n`) in Header-Namen/-Werten ablehnt (RFC konform: Header-values dürfen keine raw CRLF enthalten).
-
-- Reject oder sanitize Header-Werte mit `%0d/%0a` Sequenzen.
-
-4. Konsistente Längenberechnung beim Übersetzen
-
-- Aggregiere DATA-Frames korrekt und berechne `Content-Length` anhand der tatsächlichen Byteanzahl.
-
-- Vermeide es, `Transfer-Encoding` zu setzen, wenn nicht wirklich `chunked` encoding benutzt wird.
-
-**5. Logging, Monitoring, Canary-Requests**
-- Setze Canary-Requests/unique tokens, die dir zeigen, ob Backend unerwartete Requests erhält.
-
-- Logge Roh-Socket-Ereignisse und beobachte unerwartete Post-Body Bytes / mehrere Requests in Folge auf einem Socket.
-
-**6. Defense in Depth (WAF / ACLs / Auth)**
-
-- WAF-Regeln gegen typische Smuggling-Pattern (z. B. unterschiedliche CL-Angaben, `te: chunked` in HTTP/2 Kontext, CRLF sequences).
-
-- Interne Ressourcen sollten zusätzliche Authentifizierungs-/Autorisierungsstufen besitzen (nicht nur auf Frontend/Path-Filter vertrauen).
-
-**7. H2C / Upgrade einschränken**
-- Deaktiviere h2c (cleartext HTTP/2) in produktiven Umgebungen, sofern nicht zwingend benötigt. Erlaube HTTP/2 nur über TLS+ALPN.
-
-- Wenn h2c unvermeidbar ist, betreibe strikte Prüfungen der Upgrade-Sequenz.
-
-**8. Regelmäßige Updates und CVE-Monitoring**
-
-- Betreibe Upgrades der eingesetzten HTTP/2 Implementationen; implementiere Patches, die bekannte Bugs im Frame-Parser oder HPACK beheben.
-
-**9. Backend hart konfigurieren**
-
-- Backend-Server sollten robust gegen unaufgeräumte Sockets sein: bspw. Zeitüberschreitungen für Idle-Bytes, Limits für Anzahl/Größe pipelined requests, strikte Header-Validation.
-
+| Schutzmaßnahme | Beispiel |
+|----------------|----------|
+| **HTTP/2-aware Komponenten einsetzen (Grundprinzip)** | <ul><li>Verwende Proxies und Load-Balancer, die vollständig HTTP/2-aware sind und die Übersetzung H2 → H1 korrekt und sicher implementieren (z. B. geprüfte Versionen von nginx, Envoy, HAProxy mit aktuellen Patches).</li><li>Stelle sicher, dass Frontend und Backend dieselbe Interpretation von `CL/TE` und Header-Normalisierung teilen.</li></ul> |
+| **Strikte Header-Normalisierung & Canonicalization** | <ul><li>Normalisiere Header (kleinbuchstabig) und entferne/ablehne doppelte oder widersprüchliche `Content-Length`-Header (RFC7230: multiple `Content-Length` nur akzeptieren wenn alle Werte identisch).</li><li>Entferne oder normalisiere TE Header - akzeptiere nur `te: trailers` in HTTP/2 und mappe niemals te auf `Transfer-Encoding` ohne Validation.</li></ul> |
+| **Keine CRLF in Header-Werten erlauben** | <ul><li>Auf allen Ebenen: serverseitige/Proxy-seitige Validierung, die CR (`\r`) oder LF (`\n`) in Header-Namen/-Werten ablehnt (RFC konform: Header-values dürfen keine raw CRLF enthalten).</li><li>Reject oder sanitize Header-Werte mit `%0d/%0a` Sequenzen.</li></ul> |
+| **Konsistente Längenberechnung beim Übersetzen** | <ul><li>Aggregiere DATA-Frames korrekt und berechne `Content-Length` anhand der tatsächlichen Byteanzahl.</li><li>Vermeide es, `Transfer-Encoding` zu setzen, wenn nicht wirklich `chunked` encoding benutzt wird.</li></ul> | 
+| **Logging, Monitoring, Canary-Requests** | <ul><li>Setze Canary-Requests/unique tokens, die dir zeigen, ob Backend unerwartete Requests erhält.</li><li>Logge Roh-Socket-Ereignisse und beobachte unerwartete Post-Body Bytes / mehrere Requests in Folge auf einem Socket.</li></ul> |
+| **Defense in Depth (WAF / ACLs / Auth)** | <ul><li>WAF-Regeln gegen typische Smuggling-Pattern (z. B. unterschiedliche CL-Angaben, `te: chunked` in HTTP/2 Kontext, CRLF sequences).</li><li>Interne Ressourcen sollten zusätzliche Authentifizierungs-/Autorisierungsstufen besitzen (nicht nur auf Frontend/Path-Filter vertrauen).</li></ul> |
+| **H2C / Upgrade einschränken** | <ul><li>Deaktiviere h2c (cleartext HTTP/2) in produktiven Umgebungen, sofern nicht zwingend benötigt. Erlaube HTTP/2 nur über TLS+ALPN.</li><li>Wenn h2c unvermeidbar ist, betreibe strikte Prüfungen der Upgrade-Sequenz.</li></ul> |
+| **Regelmäßige Updates und CVE-Monitoring** | <ul><li>Betreibe Upgrades der eingesetzten HTTP/2 Implementationen; implementiere Patches, die bekannte Bugs im Frame-Parser oder HPACK beheben.</li></ul> |
+| **Backend hart konfigurieren** | <ul><li>Backend-Server sollten robust gegen unaufgeräumte Sockets sein: bspw. Zeitüberschreitungen für Idle-Bytes, Limits für Anzahl/Größe pipelined requests, strikte Header-Validation.</li></ul> |
 
 
 <div align=right>
@@ -540,17 +508,17 @@ Bei h2c kann durch unsaubere Übergabe an einen Backend-Parser ein Angreifer zus
 
 ## Prüfmethoden für Penetrationstester (konkret, reproduzierbar)
 
-**1. `Content-Length` Manipulation (H2.CL test)**
+**1. `Content-Length` Manipulation (H2.CL Test)**
 
-- Sende per HTTP/2 einen Request mit Body N Bytes, beobachte welcher `Content-Length` der Proxy an das Backend sendet; variiere N und vergleiche Backend-Logs.
+- Sende per HTTP/2 einen Request mit Body N Bytes, beobachte welcher `Content-Length` der Proxy an das Backend sendet; variiere N und vergleiche die Backend-Logs.
 
-- Instrumentiere eine zweite „canary“ Request-Line im Body (z. B. `GET /canary/<token> HTTP/1.1`) und prüfe Backend Logging.
+- Instrumentiere eine zweite „canary“ Request-Line im Body (z. B. `GET /canary/<token> HTTP/1.1`) und prüfe das Backend Logging.
 
-**2. TE / Transfer-Encoding Tests (H2.TE test)**
+**2. TE / Transfer-Encoding Tests (H2.TE Test)**
 
-- Sende `te: trailers`, `te: chunked` und beobachte Header, die der Proxy an Backend schreibt.
+- Sende `te: trailers`, `te: chunked` und beobachte die Header, die der Proxy an das Backend schreibt.
 
-- Teste Folgen mit `chunked` terminator Bytes und kontrolliere, ob Backend weitere Requests interpretiert.
+- Teste Folgen mit `chunked` terminator Bytes und kontrolliere, ob das Backend weitere Requests interpretiert.
 
 **3. CRLF Injection Tests**
 
@@ -564,7 +532,7 @@ Bei h2c kann durch unsaubere Übergabe an einen Backend-Parser ein Angreifer zus
 
 - Verwende einzigartige tokens in Anfragen (z. B. Query `?t=xyz`) und beobachte, ob Antwort im Cache für andere Keys landet.
 
-> **Hinweis für Tests:** Führe nur in autorisierten Testumgebungen und mit Zustimmung durch. Dokumentiere reproduzierbare Testcases (Requests, erwartete Backend-Logs, Ergebnisse).
+> **Hinweis für Tests:** Führe die Tests nur in autorisierten Umgebungen und mit Zustimmung durch. Dokumentiere reproduzierbare Testfälle (Requests, erwartete Backend-Logs, Ergebnisse).
 
 
 
@@ -578,9 +546,9 @@ Bei h2c kann durch unsaubere Übergabe an einen Backend-Parser ein Angreifer zus
 
 ## Zusammenfassung (short checklist)
 
-- Definiere die Angriffsvektoren: H2.CL, H2.TE, CRLF, h2c Upgrade, Tunneling → erkläre jeweils Mechanik + Beispiel.
+- Definiere die Angriffsvektoren: H2.CL, H2.TE, CRLF, h2c Upgrade, Tunneling
 
-- Liefern reproduzierbare Testschritte (siehe Prüfmethoden).
+- Liefern von reproduzierbaren Testschritten (siehe Prüfmethoden).
 
 - Gebe konkrete Hardening-Maßnahmen (Header-Normalisierung, TE/CL Regeln, CRLF-Filter, ALPN only, h2c deaktivieren).
 
