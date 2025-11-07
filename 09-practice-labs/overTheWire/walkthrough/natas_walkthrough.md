@@ -845,10 +845,9 @@ Mit dem Zugang zu `natas11` bekommst du eine komplett neue Challenge. Du erhält
 
 ![Natas12 Startseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12.png)
 
-Ich gehe nicht all zu sehr darauf ein, wie die XOR-Verschlüsselung funktioniert. Es handelt sich hierbei jedoch um eine sehr einfache kryptografische Operation, die auf binärer Exklusiv-Oder Logik basiert.
+Es handelt sich hierbei jedoch um eine sehr einfache kryptografische Operation, die auf binärer Exklusiv-Oder (XOR) Logik basiert.
 
 Schau auf den Sourcecode, um näheres darüber zu erfahren, was im Backend mit den Daten geschieht.
-
 
 
 ![Natas12 Sourcecode Analyse](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas12b.png)
