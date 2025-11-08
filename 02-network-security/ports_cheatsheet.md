@@ -76,7 +76,7 @@ Dadurch können mehrere Dienste gleichzeitig auf einer Maschine laufen, auch wen
 
 | Port | Protokoll | Dienst |
 |------|-----------|--------|
-| 20 | TCP | FTP-Datenpbertragung |
+| 20 | TCP | FTP-Datenübertragung |
 | 21 | TCP/UDP | FTP-Steuerkanal |
 | 22 | TCP/UDP | SSH, Secure Shell (Konsolensteuerung verschlüsselt) |
 | 23 | TCP/UDP | Telnet (unsicher) |
@@ -254,5 +254,5 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 --- 
 
-📅 **Letzte Aktualisierung:** August 2025  
+📅 **Letzte Aktualisierung:** November 2025  
 🤝 Ergänzungen und Pull Requests sind willkommen!
