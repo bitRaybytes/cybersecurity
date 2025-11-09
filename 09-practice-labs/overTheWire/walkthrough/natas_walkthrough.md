@@ -1304,13 +1304,23 @@ URL:        http://natas14.natas.labs.overthewire.org
 <details>
    <summary>Lösung</summary>
 
-Im `natas14` Level geht es darum, per richtiger Authentifizierung das Passwort für die nächste Challenge zu erhalten, indem du eine SQL-Injection durchführst.
+Im `natas14` Level geht es darum, per **SQL Injection** (**SQLi**) die Authentifizierungsprüfung der Webanwendung zu umgehen, um das Passwort für die nächste Challenge (`natas15`) zu erhalten.
 
-Bei SQL-Injections ist es wichtig zu wissen, welche Datenbank sich hinter der Webanwendung befindet. Dementsprechend musst du mit dem "Bruch in der Abfrage" umgehen.
+Bei SQL-Injections ist es entscheidend, die verwendete Datenbank-Engine und die genaue **Syntax der Query-Konstruktion** zu kennen. In diesem Fall handelt es sich um eine **MySQL**/**MariaDB-Datenbank** (erkennbar an der `mysqli_connect()`-Funktion).
 
-In diesem Fall ist es eine `mysql`-Datenbank.
+**1. Analyse der Schwachstelle**
 
-Über den Source-Code erhältst du Einblick darüber, wie die Abfrage deine Daten behandelt. Viel wichtiger noch: Du hast Einblick in die exakte Syntax (zumindest für die in der Syntax angegebene(n) Datenbanktabelle(n)). 
+Über den Source-Code hast du Einblick in die kritische, unsichere SQL-Abfrage (vereinfacht dargestellt):
+
+```php
+$query = "SELECT * from users where username=\"".$_REQUEST["username"]."\" and password=\"".$_REQUEST["password"]."\"";
+```
+Das Problem ist die **fehlende Sanitization** (Bereinigung) der Benutzereingaben, wodurch diese direkt in die SQL-Zeichenkette eingefügt werden.
+
+Der Ausbruch mit dem doppelten Anführungszeichen (`"`) ist **zwingend notwendig** und liegt allein an der unsicheren Syntax der PHP-Konstruktion der SQL-Abfrage, die `$_REQUEST["username"]` mit **doppelten Anführungszeichen** (`"`) umschließt.
+
+
+**2. Der Erfolgreiche Bypass: Boolesche Logik**
 
 Um die Story zu vereinfachen:
 Ich habe viele unterschiedliche Befehle probiert. Darunter ` Or 1=1 #`, `And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten.
@@ -1321,6 +1331,14 @@ Gib im Eingabefeld für das Username folgenden Befehl ein und bestätige mit Ent
 ```sql
 " or 1=1 #
 ```
+
+- `"`: Schließt das einleitende Anführungszeichen der `username`-Zeichenkette.
+
+- `OR 1=1`: Eine **boolesche Bedingung**, die immer zu `TRUE` ausgewertet wird. In SQL führt `TRUE` (wahr) in einer `WHERE`-Klausel dazu, dass alle Zeilen der Tabelle zurückgegeben werden. Da die `OR`-Verknüpfung eine höhere Priorität hat als die `AND`-Verknüpfung mit dem Passwort, ist die gesamte `WHERE`-Klausel erfolgreich.
+
+- `#`: Das MySQL-**Kommentarzeichen** (oft in der URL als %23 kodiert) kommentiert den Rest der ursprünglichen Abfrage (`" AND password="...`) aus.
+
+
 
 ![Natas15 SQL-Injection](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas15.png)
 
