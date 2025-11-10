@@ -1080,6 +1080,8 @@ Herzlichen Glückwunsch, du hast das Passwort zu `natas12` erfolgreich herausgef
 
 ## Natas 12 -> 13
 
+**Aufgabe:** Unrestricted File Upload
+
 ```text
 Username:   natas12
 
@@ -1226,6 +1228,8 @@ Damit hast du das Passwort für `natas13` und kannst mit dem nächsten Level for
 
 ## Natas 13 -> 14
 
+**Aufgabe:** Unrestricted File Upload
+
 ```text
 Username:   natas13
 
@@ -1314,8 +1318,29 @@ Bei SQL-Injections ist es entscheidend, die verwendete Datenbank-Engine und die 
 
 ```php
 $query = "SELECT * from users where username=\"".$_REQUEST["username"]."\" and password=\"".$_REQUEST["password"]."\"";
+
+# Resulitierende SQL Query sieht im Prinzip so aus:
+"SELECT * from users where username="UserEingabe" and password="PasswortEingabe";
 ```
 Das Problem ist die **fehlende Sanitization** (Bereinigung) der Benutzereingaben, wodurch diese direkt in die SQL-Zeichenkette eingefügt werden.
+
+**Wenn PHP die `$query`-Variable erstellt, interpretiert es die Escapesequenzen:**
+
+- `\"` wird zu einem einzigen doppelten Anführungszeichen (`"`) in der finalen SQL-Abfrage.
+
+Um die SQL-Zeichenkette vorzeitig zu schließen und eigenen Code einzufügen, musst du das Zeichen verwenden, das PHP in die Abfrage eingefügt hat, nämlich das doppelte Anführungszeichen (`"`).
+
+- Deine Eingabe (Username): `"`
+
+- Die Abfrage wird zu (Start des Ausbruchs): `... username="" ...`
+
+**Dein Payload `" OR 1=1 #` funktioniert perfekt, weil:**
+
+- `"`: Schließt das Anführungszeichen von `username="`.
+
+- `OR 1=1`: Injiziert die immer wahre Logik, um die Bedingung zu erfüllen.
+
+- `#`: Kommentiert den Rest der Abfrage (`" AND password="["password"]"`) aus.
 
 Der Ausbruch mit dem doppelten Anführungszeichen (`"`) ist **zwingend notwendig** und liegt allein an der unsicheren Syntax der PHP-Konstruktion der SQL-Abfrage, die `$_REQUEST["username"]` mit **doppelten Anführungszeichen** (`"`) umschließt.
 
@@ -1323,7 +1348,7 @@ Der Ausbruch mit dem doppelten Anführungszeichen (`"`) ist **zwingend notwendig
 **2. Der Erfolgreiche Bypass: Boolesche Logik**
 
 Um die Story zu vereinfachen:
-Ich habe viele unterschiedliche Befehle probiert. Darunter ` Or 1=1 #`, `And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten.
+Ich habe viele unterschiedliche Befehle probiert. Darunter `' Or 1=1 #`, `' And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten. Alle, aufgrund fehlendem `"` im Eingabefeld **Username**.
 
 **So kommst du an das Passwort:**
 Gib im Eingabefeld für das Username folgenden Befehl ein und bestätige mit Enter:
@@ -1332,11 +1357,12 @@ Gib im Eingabefeld für das Username folgenden Befehl ein und bestätige mit Ent
 " or 1=1 #
 ```
 
+**Erläuterung des SQL-Befehls:**
 - `"`: Schließt das einleitende Anführungszeichen der `username`-Zeichenkette.
 
 - `OR 1=1`: Eine **boolesche Bedingung**, die immer zu `TRUE` ausgewertet wird. In SQL führt `TRUE` (wahr) in einer `WHERE`-Klausel dazu, dass alle Zeilen der Tabelle zurückgegeben werden. Da die `OR`-Verknüpfung eine höhere Priorität hat als die `AND`-Verknüpfung mit dem Passwort, ist die gesamte `WHERE`-Klausel erfolgreich.
 
-- `#`: Das MySQL-**Kommentarzeichen** (oft in der URL als %23 kodiert) kommentiert den Rest der ursprünglichen Abfrage (`" AND password="...`) aus.
+- `#`: Das MySQL-**Kommentarzeichen** (oft in der URL als `%23` kodiert) kommentiert den Rest der ursprünglichen Abfrage (`" AND password="...`) aus.
 
 
 
@@ -1367,6 +1393,8 @@ Mit der SQL-Injection solltest du auf der nächsten Seite (`/index.php`) das Pas
 
 
 ## Natas 15 -> 16
+
+**Aufgabe:** 
 
 ```text
 Username:   natas15
