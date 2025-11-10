@@ -1348,7 +1348,7 @@ Der Ausbruch mit dem doppelten Anführungszeichen (`"`) ist **zwingend notwendig
 **2. Der Erfolgreiche Bypass: Boolesche Logik**
 
 Um die Story zu vereinfachen:
-Ich habe viele unterschiedliche Befehle probiert. Darunter `' Or 1=1 #`, `' And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten. Alle, aufgrund fehlendem `"` im Eingabefeld **Username**.
+Ich habe viele unterschiedliche Befehle probiert. Darunter `' Or 1=1 #`, `' And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten.
 
 **So kommst du an das Passwort:**
 Gib im Eingabefeld für das Username folgenden Befehl ein und bestätige mit Enter:
