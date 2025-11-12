@@ -22,6 +22,9 @@
 - [natas 13 -> 14](#natas-13---14)
 - [natas 14 -> 15](#natas-14---15)
 - [natas 15 -> 16](#natas-15---16)
+- [natas 16 -> 17](#natas-16---17)
+
+
 
 <div align=right>
 
@@ -838,7 +841,7 @@ Anschließend solltest du das Passwort für die nächste Challenge erhalten.
 
 - **Schwache Blacklist-Filter:** Das Filtern von gefährlichen Zeichen (`;`, `|`, `&`) ist unzureichend, wenn andere **Shell-Konstrukte** verwendet werden können.
 
-- **Ausnutzung des `grep`-Befehls:** Die Schwachstelle liegt nicht im Befehls-Trennen, sondern im **Ausnutzen** der `grep`-Syntax: Durch das Einfügen eines Leerzeichens vor einem neuen Pfad kann `grep` dazu gebracht werden, die **Ausgabe einer Systemdatei** anzuzeigen (`grep -i a /etc/...`).
+- **Ausnutzung des `grep`-Befehls:** Die Schwachstelle liegt nicht im Trennen des Befehls, sondern im **Ausnutzen** der `grep`-Syntax: Durch das Einfügen eines Leerzeichens vor einem neuen Pfad kann `grep` dazu gebracht werden, die **Ausgabe einer Systemdatei** anzuzeigen (`grep -i a /etc/...`).
 
 </details>
 
@@ -1559,9 +1562,9 @@ Wenn das Programm erfolgreich war, dann erhälst du das Passwort und kannst mit 
 ## Natas 16 -> 17
 
 ```text
-Username:   natas15
+Username:   natas16
 
-URL:        http://natas15.natas.labs.overthewire.org
+URL:        http://natas16.natas.labs.overthewire.org
 ```
 
 <details>
