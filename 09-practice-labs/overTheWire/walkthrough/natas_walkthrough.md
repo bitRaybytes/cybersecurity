@@ -23,6 +23,7 @@
 - [natas 14 -> 15](#natas-14---15)
 - [natas 15 -> 16](#natas-15---16)
 - [natas 16 -> 17](#natas-16---17)
+- [natas 17 -> 18](#natas-17---18)
 
 
 
@@ -1572,9 +1573,103 @@ URL:        http://natas16.natas.labs.overthewire.org
     <summary>Lösung</summary>
 
 
+In `natas16` ist die Challenge über eine **Blind Command Injection** (via Side-Channel) oder Size-Based Side-Channel Attacke das Password zu extrahieren.    
+Über den Source-Code (üblicherweise über die Entwickleroptionen erreichbar) gibt dir Aufschluss über den Code und was darin passiert.
+
+![Natas16 SourceCode](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17.png)
+
+In `natas16` wird ein `$_REQUEST` über das Eingabefeld an den Server übermittelt, um die Wörter aus einer Datei (`dictionary.txt`) auszugeben.
+Der Befehl `grep` wird dafür genutzt, um den Inhalt aus der Datei zu lesen.
+
+Wenn du Eingaben in das "Suchfeld" machst, dann erhält die Variable `$key` den Wert aus dieser und `grep` sucht `dictionary.txt` danach. 
+
+![Natas16 SourceCode](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17e.png)
+
+Allerdings werden bestimmte Zeichen über die `PHP`-Funktion `preg_match()` gefiltert. Es werden jedoch nicht alle Zeichen gefilter. Das `^` oder die Command Substitution `$()` sind möglich. Deshalb kannst du nur über eine Command Substitution mit `$()` das Passwort mit einer Boolean-Based-Logik überprüfen.
+
+Die Blacklist (`preg_match('/[;|&'"]/', $key)`) ist auf typische Shell−Steuerzeichen beschränkt.Entscheidend ist, dass die ∗∗CommandSubstitution∗∗ über die `()`-Syntax (Dollar-Klammern) **nicht gefiltert** wird, während die historische **Backtick-Substitution** (`` ... ``) blockiert ist. Da die Benutzereingabe (`$key`)in **doppelten Anführungszeichen** (`"..."`)an `passthru()` übergeben wird,führt die Unix−Shell die `()`-Substitution **vor** der Ausführung des äußeren `grep`-Befehls durch.
+
+Boolean-Based deshalb, weil die korrekte Annahme den inneren Befehl (`grep`) einen Ausgabewert liefern lässt, der die Logik des äußeren Befehls (`grep`) umkehrt. Die Besonderheit an den Fehlermeldungen von `natas16` ist die die Ausgabe der gesamten Liste.
+
+> **Technischer Kern:** "Der Angriff nutzt eine Time-Difference/Size-Difference Side-Channel-Logik, die auf der Ausgabe des inneren `grep`-Befehls basiert."   
+> Die Boolean-Based SQL Injection prüft wahr/falsch über die Datenbank. Hier wird die Shell-Substitutionslogik genutzt, um die Ausgabe des inneren Befehls als Input für den äußeren grep zu missbrauchen.
+
+**1. Starte den Angriff über BurpSuite**
+Die Software `Burp` ist bereits auf der Kali Linux Umgebung vorhanden und das hilft dabei, die Angriffe zu automatisieren.
+
+Außerdem ist es hilfreich, die Firefox Extension `foxyproxy` zu installieren, mit dem du eine Verbindung zu Burp herstellen kannst, damit der **Proxy** die Inhalte empfangen kann. Dazu klickst du auf den Reiter `Proxy` und stellst den **Interceptor** aktiv.   
+Lade die Seite einmal neu, damit die Datenverbindung über den Proxy laufen.
+
+Sende den Inhalt an den **Intruder**, damit du den boolean-based Payload automatisieren kannst.
+
+![Natas16 Intruder Konfiguration für Payload](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17f.png)
+
+Im linken Feld gibst du nach dem `GET`-Parameter den URL Pfad mit dem Payload `grep ^a /etc/natas_webpass/natas17`. Achte darauf, dass du die Eingabe umwandelst, da in URLs grundsätzlich URL-Encoding stattfindet.
+
+Der umgewandelte **Payload** lautet:
+```text
+?needle=%24%28grep+%5E+%2Fetc%2Fnatas_webpass%2Fnatas17%29&submit=Search
+```
+
+Wähle auf der rechten Seite in den **Payloads** den Payload type `Simple list` und leg in den **Payload configuration** die Liste der Strings für den Payload fest. Für das Passwort sind es die Zeichen `a-z`, `A-Z` und `0-9`. Gib in das Feld rechts neben dem `Add`-Button die Zeichen nacheinander ein und bestätige mit der Enter-Taste.
+
+![Natas16 Intruder Konfiguration für Payload](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17c.png)
+
+Konfiguriere im nächsten Schritt die Variable, die du suchst. Klicke im Intruder über dem Request-Header mit dem Payload auf `Add §` um eine Variable hinzuzufügen - in meinem Beispiel ist es `§char§`.
+
+Die Variable iteriert die 62 Zeichen aus der Payload-Liste und gibt dir als Feedback die Hauptseite von `natas16` zurück. Bevor du mit dem Payload beginnst, solltest du folgendes wissen:
+
+- Es wird etwas Zeit in Anspruch nehmen, weil die Prozedur bedingt automatisch ist, da sie dein Eingreifen bei erfolgreichem Ergebnis erfordert.
+- Nachdem dein Payload erfolgreich war, fügst du das jeweilige Zeichen an die Stelle ein, wo du den Payload gestartet hast und schiebst damit die Variable ein Zeichen weiter.
+
+Um den Payload zu senden klickst du auf den orangenen Button **Start attack**. 
+
+
+
+Im unteren Screenshot siehst du einen Auszug aus dem Paylod. 
+Das dein Payload erfolgreich war, erkennst du daran, dass die **Length** der Hauptseite `1334` Bytes beträgt (nur HTML-Gerüst), während die Anfragen, die nicht erfolgreich waren, eine Length von über `40.000` Bytes liefern. 
+
+Die Länge von ca. 40.000 Bytes (FAIL) tritt auf, weil der innere `grep` nichts findet, einen leeren String (`""`) an den äußeren `grep` übergibt. Der äußere Befehl wird zu `grep -i "" dictionary.txt`, der jede Zeile der Datei matcht und daher die gesamte dictionary.txt ausgibt.
+
+Das liegt daran, dass .der Payload im kleineren Response keine Ergebnisse übermittelt, weil die Bedingung über` grep ^{char} /etc/natas_webpass/natas17` überprüft, ob das Zeichen in der Datei vorhanden ist. Die Ausgabe ist deshalb klein (SUCCESS), weil der innere `grep` etwas findet (den Passworteintrag), diesen Wert an den äußeren `grep` übergibt (`grep -i "passwort" dictionary.txt`), und dieser Wert keine Entsprechung in der `dictionary.txt` findet.
+
+![Natas16 Intruder Konfiguration für Payload](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17d.png)
+
+Merke dir das Zeichen und füge es im Payload mit den nächsten Angriffen ein. Im Beispiel oben erhält der Payload in der ersten Zeile den Buchstaben `j`, sodass im nächsten Angriff der gesamte Payload dann wie folgt deklariert wird:
+
+```text`
+                Hier fügst du nacheinander die Zeichen ein
+                         |
+                         v
+?needle=%24%28grep+%5EEqj§char§+%2Fetc%2Fnatas_webpass%2Fnatas17%29&submit=Search
+```
+
+Das machst solange, bis du das gesamte Passwort, bestehend aus 32 Zeichen erhältst :-).
+
+
 </details>
 
+<div align=right>
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Natas 17 -> 18
+
+```text
+Username:   natas17
+
+URL:        http://natas17.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+
+
+</deatails>
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
