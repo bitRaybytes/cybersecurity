@@ -1937,8 +1937,128 @@ URL:        http://natas19.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+Das Level `natas19` baut auf der **Session Prediction-Schwachstelle** von `natas18` auf, indem es lediglich einen zusätzlichen Kodierungsschritt einführt. Der `PHPSESSID`-Cookie wird in **Hexadezimal** umgewandelt. 
+
+- **Schwachstelle:** Die begrenzte Anzahl von möglichen Session-IDs durch `maxid=640` führt dazu, dass die Session-ID vorhersehbar ist.
+
+- **Angriffsvektor:** **Session Brute-Force** (oder **Session Prediction**) der `PHPSESSID`.
+
+- **Ziel:** Eine `PHPSESSID` zu finden, die im Dekodierprozess die Session eines Admins repräsentiert, typischerweise durch die Erfüllung der Bedingung `idnum-admin`.
+
+![Natas19 Hauptanwendung](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20.png)
+ 
+
+Du musst also einen Weg finden, wie du den Benutzernamen `admin` mit der `PHPSESSID` so kombinierst, dass du aus diesen zwei Werten eine hexadezimale Zahlenfolge erhältst.
+
+![Natas19 Source Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20b.png)
+
+**1. Im Source Code siehst du:**
+
+In der Funktion `createID()` wird die hexadezimale Umwandlung vom zusammengesetzten String `$idstr = "$idnum-$user";` generiert und zurückgegeben.
+
+```php
+function createID(&$user) {
+    global $maxid;
+    $idnum = rand(1, $maxid);
+    $idstr = "$idnum-$user"; // z.B. "320-admin"
+    return bin2hex($idstr);  // Rückgabe: Hex-String
+}
+```
+
+- Die Funktion `bin2hex()` konvertiert den rohen Binär-String (`$idstr`), der aus der zufälligen ID, dem Bindestrich und dem Benutzernamen besteht (z.B. "`320-admin`"), in seine hexadezimale Darstellung.
+
+- **Beleg:** Der Bindestrich (`-`) wird zu seinem ASCII-Hex-Wert `2d` kodiert. Der String "`320-admin`" wird zu `3332302d61646d696e`.
+
+Die erfolgreiche Session-ID muss diese Struktur (Zahl-Bindestrich-admin) haben. Da die Anwendung die Eingabe eines Benutzers erwartet, müssen wir die `PHPSESSID` so setzen, dass die interne Logik des Servers diesen dekodierten String (z.B. "`119-admin`") interpretiert.
+
+Schau dir die Cookies des Requests an und du wirst den `PHPSESSID`-Cookie im **Cookie**-Header sehen. Wenn du den Wert kopierst, kannst du herausfinden, ob es sich tatsächlich um die hexadezimale Schreibweise handelt und deine Annahme bestätigt.
+
+![Natas19 PHPSESSID Nachweis hexadezimal kodierter String](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20c.png)
+
+
+**2. Bestätige deine Annahme mit der Umwandlung in ASCII**
+
+Geh auf **cyberchef.io** und wähle in der linken Seite die Option `From HEX` aus und füge den `PHPSESSID`-Wert in das rechte Eingabefeld.
+
+Entweder musst du für die Umwandlung auf den **grünen Bake** Button drücken oder es geschieht automatisch, weil das Häkchen gesetzt ist.
+
+![Natas19 Umwandlugn für PoC](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20d.png)
+
+Du siehst, dass es  noch wichtig ist, ein `-` (Hex `2d`) in die Umwandlung hinzuzufügen, bevor das Datenpaket an den Server übermittelt wird.
+
+**3. Starte den Exploit**
+
+Du kannst den Brute-Force Angriff wieder über Burp automatisieren. Allerdings wird es etwas tricky werden.
+
+Aufgrund der notwendigen vollständigen Hex-Kodierung des Musters POS-admin (inklusive des Bindestrichs), die von Burps Standard-Payload-Regeln nicht effizient abgebildet werden kann, ist die Generierung einer vollständigen Payload-Liste der effizienteste Ansatz.
+
+Der folgende Python-Dreizeiler stellt sicher, dass alle 640 möglichen Session-Strings korrekt kodiert werden.
+
+```python
+# Python-Skript zur Generierung der Liste:
+for pos in range(1, 641):
+    s = f"{pos}-admin"
+    print(s.encode('utf-8').hex())
+```
+
+**Wichtig:** `s.encode('utf-8').hex()` entspricht funktional der PHP-Funktion `bin2hex()`, da der String zuerst in seine Byte-Darstellung (binär) umgewandelt und dann in Hexadezimal dargestellt wird.
+
+
+Das Bash-Kommando leitet die Ausgabe direkt in eine Datei zur einfachen Übertragung nach Burp um:
+
+```bash
+python3 deinDateiname.py > payloadliste.txt
+```
+
+1. Sende einen beliebigen **Request** (am besten direkt mit dem Username `admin`) an den Intruder.
+
+2. Drücke links auf den Button `Add §` um eine Variable in den Request hinzuzufügen.
+
+3. Klicke im Reiter **Intruder** im rechten Menü unter Payload auf den Payload type und wähle `Simple list` aus. 
+
+4. In den **Payload configuration** klickst du auf den Button **Load** und lädst die eben erstellte Liste des Python Skripts. Das sollte dir alle Positionen von 1 - 640 (inklusive) importieren.
+
+**Hinweis:** Die Regeln brauchst du nicht zu beachten. Sie waren ein Versuch, den hexadezimal kodierten String über die Anweisungen zu erstellen.
+
+![Natas19 Payload in Burp importieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20e.png)
+
+
+Starte den Angriff und warte, bis die in hexadezimal kodierten **640** `PHPSESSID`s an den Server übermittelt werden.
+
+Bei erfolgreichen Exploit erhältst du wieder eine Length der HTML-Seite, die sich von den anderen unterscheidet. Diese HTML sollte das Passwort für `natas20` zurückgeben.
+
+
+![Natas19 Passwort über Brute-Force Angriff](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20f.png)
+
+
+**Wichtig zu wissen:** Die `maxid` von **640** ist ein extrem kleines und willkürlich gewähltes Limit, das in realen Anwendungen als **Session Prediction-Schwachstelle** sofort auffallen würde. Moderne Session-IDs nutzen kryptografisch sichere, lange, zufällige Zeichenketten, um Brute-Force-Angriffe dieser Art unmöglich zu machen.
 
 </details>
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+## Natas 19 -> 20
+
+```text
+Username:   natas20
+
+URL:        http://natas20.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+
+</details>
+
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
