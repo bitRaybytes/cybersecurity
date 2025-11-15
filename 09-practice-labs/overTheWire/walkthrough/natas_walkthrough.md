@@ -1,4 +1,5 @@
 # Over The Wire: Natas
+## Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
 > **ACHTUNG: SPOILER GEFAHR**
 
@@ -26,6 +27,8 @@
 - [natas 17 -> 18](#natas-17---18)
 - [natas 18 -> 19](#natas-18---19)
 - [natas 19 -> 20](#natas-19---20)
+- [natas 20 -> 21](#natas-20---21)
+- [natas 21 -> 22](#natas-21---22)
 
 
 
@@ -1897,7 +1900,7 @@ Sende die Seite an den Proxy von Burp, damit du die wichtigen Header erhältst. 
 
 Sobald du die Daten in Burp hast, sende sie mit einem Rechtsklick an den **Intruder**, wo du die Einstellungen für den Brute Force Angriff konfigurierst.
 
-1. Klick auf **Proxy**.
+1. Klicke auf **Proxy**.
 2. Klicke auf **Intercept off** um ihn zu aktivieren.
 3. Übermittel entweder ein leeres Formular oder gib Daten in die Eingabefelder ein (irrelevant).
 4. Sobald du die Daten erhalten hast: Rechtsklick auf das Ergebnis von `natas18` und **Send to Intruder** auswählen.
@@ -2018,7 +2021,7 @@ python3 deinDateiname.py > payloadliste.txt
 
 4. In den **Payload configuration** klickst du auf den Button **Load** und lädst die eben erstellte Liste des Python Skripts. Das sollte dir alle Positionen von 1 - 640 (inklusive) importieren.
 
-**Hinweis:** Die Regeln brauchst du nicht zu beachten. Sie waren ein Versuch, den hexadezimal kodierten String über die Anweisungen zu erstellen.
+**Hinweis:** Die Regeln im Screenshot brauchst du nicht zu beachten. Sie waren ein Versuch, den hexadezimal kodierten String über die Anweisungen zu erstellen.
 
 ![Natas19 Payload in Burp importieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20e.png)
 
@@ -2044,7 +2047,7 @@ Bei erfolgreichen Exploit erhältst du wieder eine Length der HTML-Seite, die si
 
 
 
-## Natas 19 -> 20
+## Natas 20 -> 21
 
 ```text
 Username:   natas20
@@ -2055,12 +2058,147 @@ URL:        http://natas20.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+In `natas20` ist es eine klassische **Session-Daten-Manipulation** (**Session Poisoning**), die durch die fehlerhafte Implementierung der eigenen Session-Handler `myread` und `mywrite` ermöglicht wird.
+
+![Natas20 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas21.png)
+
+**Code Analyse:**
+
+![Natas20 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas21b.png)
+
+Die Funktion `mywrite($sid, $data)` speichert die Session-Daten in einer benutzerdefinierten Formatierung.
+
+```php
+function mywrite($sid, $data){
+    // ... (Längen- und Zeichen-Allowlist für $sid) ...
+    
+    $filename = session_save_path() . "/" . "mysess_" . $sid;
+    $data = "";
+    ksort($_SESSION); // Sortiert das Session-Array nach Schlüssel
+    foreach($_SESSION as $key => $value) {
+        $data .= "$key $value\n"; // <-- SCHWACHSTELLE
+    }
+    file_put_contents($filename, $data);
+    chmod(filename, 0600);
+    return true;
+}
+```
+
+- **Fakt 1:** Der `name`-Parameter aus dem Formular wird in `$_SESSION["name"]` gespeichert.
+
+- **Fakt 2:** Die `mywrite`-Funktion nimmt den Wert (`$value`) aus `$_SESSION` und schreibt ihn direkt in die Datei, gefolgt von einem Newline-Zeichen (`\n`).
+
+- **Implikation:** Wenn ein Angreifer ein Newline-Zeichen (`\n`) innerhalb des `name`-Parameters einschleust, wird dieses Newline-Zeichen in die Session-Datei geschrieben. Dadurch kann der Angreifer die Datenstruktur der Session-Datei manipulieren und neue, eigene Schlüssel-Wert-Paare in die Datei injizieren.
+
+
+Die `myread()`-Funktion liest diese manipulierte Datei beim nächsten Laden der Seite:
+
+```php
+function myread($sid){
+    // ... (Prüfungen für $sid) ...
+    
+    $data = file_get_contents($filename);
+    $_SESSION = array();
+    foreach(explode("\n", $data) as $line) {
+        $parts = explode(" ", $line, 2);
+        if($parts[0] != "") {
+            $_SESSION[$parts[0]] = $parts[1]; // <-- ANGRIFFSZIELE
+        }
+    }
+}
+```
+
+- **Fakt:** `myread` liest die Datei, trennt sie an jedem Newline-Zeichen (`\n`) und erstellt aus jeder Zeile ein `$_SESSION`-Array-Element.
+
+
+**So kommst du an das Passwort:**
+
+**1. Exploit-Durchführung in zwei Phasen**
+
+**1.1 Angriffsphase 1: Session Poisoning**
+
+Das Ziel ist, einen `POST`-Request zu senden, der den name-Parameter so manipuliert, dass die `mywrite`-Funktion die Zeile `admin 1` in unsere Session-Datei schreibt.
+
+- Rufe die Natas 20-Seite auf. Dein Browser erhält eine gültige, 26-stellige `PHPSESSID` (z.B. `uGa...`). Behalte dieses Cookie.
+
+- Sende einen `POST`-Request (z.B. mit Burp Repeater) an `/index.php`.
+
+- Stelle sicher, dass dein gültiges `PHPSESSID`-Cookie gesendet wird.
+
+- Setze den `POST`-Body (den `name`-Parameter) auf den folgenden Payload:
+
+```HTTP
+name=%0Aadmin%201
+```
+
+**Was passiert im Backend (`mywrite`):**
+
+- `$_SESSION["name"]` wird auf "`\nadmin 1`" gesetzt.
+
+- `mywrite` iteriert durch `$_SESSION`:
+
+- Es schreibt: name `\nadmin 1\n`
+
+- Die Session-Datei (z.B. `mysess_uGa...`) enthält nun buchstäblich zwei Zeilen Text:
+```text
+name \n
+admin 1
+```
+
+**1.2. Phase 2: Session-Daten lesen (Admin-Status aktivieren)**
+
+Das "Gift" ist platziert. Jetzt muss die Anwendung die "vergiftete" Datei lesen.
+
+1. Lade die Seite `/index.php` erneut im Browser (oder mit Burp Repeater).
+
+2. Stelle sicher, dass dasselbe `PHPSESSID`-Cookie (`uGa...`) gesendet wird.
+
+3. **Was passiert im Backend (`myread`):**
+
+    - Der Server ruft myread("`uGa...`") auf.
+
+    - Die Funktion liest die manipulierte Datei.
+
+    - Sie explodiert am `\n`:
+
+        - **Zeile 1:** `name` ⟹ `$_SESSION["name"] = "\n"`
+
+        - **Zeile 2:** `admin 1` ⟹ `$_SESSION["admin"] = "1"`
+
+    - Der `myread`-Prozess ist abgeschlossen.
+
+4. Ergebnis: Die `print_credentials()`-Funktion wird ausgeführt, sieht `$_SESSION["admin"] == 1` und gibt das Passwort für `natas21` aus.
+
+
+![Natas20 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas21c.png)
+
 
 
 </details>
 
 
-# Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+## Natas 21 -> 22
+
+```text
+Username:   natas21
+
+URL:        http://natas21.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+</details>
 
 
 <div align=right>
