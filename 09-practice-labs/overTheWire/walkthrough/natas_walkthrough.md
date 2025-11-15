@@ -24,6 +24,8 @@
 - [natas 15 -> 16](#natas-15---16)
 - [natas 16 -> 17](#natas-16---17)
 - [natas 17 -> 18](#natas-17---18)
+- [natas 18 -> 19](#natas-18---19)
+- [natas 19 -> 20](#natas-19---20)
 
 
 
@@ -1777,7 +1779,7 @@ for pos in range(1, PASSWORD_LENGTH + 1):
         except requests.exceptions.Timeout:
              # Wenn das Timeout (z.B. 7s) erreicht wird, ABER die Antwortzeit > SLEEP_TIME (z.B. 5s) wäre,
              # ist die Bedingung erfüllt. Bei time-based Injection muss dies nicht als Fehler behandelt werden.
-             # Da wir das Request-Timeout höher als SLEEP_TIME gesetzt haben, sollte dies hier nur bei Netzwerkfehlern passieren.
+             # Da die Request-Timeout höher als SLEEP_TIME gesetzt haben, sollte dies hier nur bei Netzwerkfehlern passieren.
              found_char = chr(val)
              found_password += found_char
              print(f"[{pos:02}/{PASSWORD_LENGTH}] Treffer (Timeout): ASCII {val} ('{found_char}') -> {found_password}")
@@ -1826,9 +1828,117 @@ URL:        http://natas18.natas.labs.overthewire.org
 <details>
     <summary>Lösung</summary>
 
+Mit Blick auf den Source Code von `natas18` liegt die Vermutung nah, dass es bei diesem Exploit um einen **Session Prediction-** oder **Brute Force-Angriff** handeln könnte.
+
+Die Anwendung verwendet **`PHPSESSID`-Cookies** zur Verwaltung des Benutzerstatus. Um das Passwort von `natas19` zu erhalten, muss die Session des Benutzers auf Admin-Rechte umgestellt werden.
+
+
+![Natas18 Hauptseite](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19.png)
+
+**1. Source Code Analyse**
+
+<details><summary>Ausschnitt aus dem Source Code anzeigen</summary>
+
+![Natas18 Source Code](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19b.png)
 
 </details>
 
+1. Die `maxid`-Variable
+    - Die Variable `$maxid = 640;` legt die maximale **Obergrenze** für die zufällig generierten Benutzer-IDs fest, die im System verwendet werden können.
+    - **Bedeutung:** Jede neu erzeugte ID (mittels `createID`) wird im Bereich von **1** bis **640** liegen.
+
+    - **Implikation für den Angriff:** Da die mögliche Bandbreite der Benutzer-IDs sehr klein ist (nur 640), wird dies ein Hauptangriffsvektor sein. Es deutet auf eine **Session Fixation** oder einen **Brute-Force-Angriff** auf die Session-ID hin, da die Anzahl der möglichen gültigen IDs sehr überschaubar ist.
+
+2. Funktionale Zerlegung
+    
+    - `function isValidAdminLogin() { ... }`
+        - **Zweck:** Diese Funktion sollte ursprünglich die Anmeldeinformationen auf Gültigkeit prüfen, ist aber derzeit deaktiviert.
+    
+    - `function isValidID($id) { ... }`
+
+        - **Zweck:** Prüft, ob eine übergebene ID gültig ist.
+        - **Logik:** Die ID wird auf numerischen Typ geprüft (`is_numeric($id)`).
+        - **Rückgabe:** Gibt `true` zurück, wenn die ID numerisch ist, ansonsten false. (**Achtung: Dies ist eine sehr schwache Validierung, da keine Bereichsprüfung gegen `$maxid` stattfindet.**)
+
+    - `function createID(&$user) { ... }`
+        - **Zweck:** Erzeugt eine zufällige, neue Benutzer-ID.
+        - **Logik:**
+            - Prüft, ob die Session-ID (`PHPSESSID`) im Cookie existiert und mit `isValidID` numerisch validiert wird.
+
+            - Wenn die Session-ID existiert und gültig ist, wird die Session gestartet (`session_start()`).
+
+            - **Wichtige Prüfungen nach erfolgreichem Start:**
+
+                - Prüft, ob in der Session bereits ein admin-Flag gesetzt ist.
+
+                - Falls das `admin`-Flag existiert, wird die Session-Variable `$_SESSION["admin"]` auf **0** gesetzt, um sicherzustellen, dass man kein Admin ist.
+
+            - **Rückgabe:** `true` bei erfolgreichem Session-Start, ansonsten `false`.
+
+Der Code ist gegen typische Angriffe wie **SQL Injection** immun (keine SQL-Abfragen sichtbar), hat aber eine klare Schwachstelle:
+
+Die Schwachstelle: **Session Hijacking durch Brute-Force**
+
+- Die Funktion setzt den Session-Wert `$_SESSION["admin"]` nur dann auf **0**, wenn ein altes admin-Flag bereits in der Session existiert.
+
+- Wenn eine Session gestartet wird, die neu ist oder bei der das `admin`-Flag nicht gesetzt wurde, gibt es eine temporäre Lücke.
+
+- Die Session-ID (`PHPSESSID`) wird dem `$id` übergeben und mit `isValidID` geprüft, welches nur auf `is_numeric` prüft.
+
+- Da die möglichen Session-IDs durch `$maxid = 640` begrenzt sind, ist der Angriffsvektor klar: **Session Brute-Force (Session Prediction/Hijacking)**.
+
+Ziel ist es, einen Angriff zu finden, der die Range der Variable `$maxid = 640` nutzt und die Payloads an den Server übermittelt.
+
+Nutze Burp, das bereits auf Kali Linux installiert ist und starte einen automatischen Brute Force Angriff über den Intruder.
+
+Sende die Seite an den Proxy von Burp, damit du die wichtigen Header erhältst. Nutze `foxyproxy` um die Datenpakete an Burp zu senden.
+
+![Natas18 Burp Proxy](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19e.png)
+
+Sobald du die Daten in Burp hast, sende sie mit einem Rechtsklick an den **Intruder**, wo du die Einstellungen für den Brute Force Angriff konfigurierst.
+
+1. Klick auf **Proxy**.
+2. Klicke auf **Intercept off** um ihn zu aktivieren.
+3. Übermittel entweder ein leeres Formular oder gib Daten in die Eingabefelder ein (irrelevant).
+4. Sobald du die Daten erhalten hast: Rechtsklick auf das Ergebnis von `natas18` und **Send to Intruder** auswählen.
+![Natas18 senden an den Intruder ](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19f.png)
+
+5. Auf den Reiter **Intruder** klicken und Einstellungen vornehmen: 
+![Natas18 Intruder konfigurieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19c.png)
+   - Mit `Add §` legst du eine Variable fest - ich habe sie `admin` genannt.
+   - In den **Payloads** nutzt du den **type** `Numbers`.
+   - Lege die Range von 0 bis 640 fest. Die maximalen Größe der Zahlen kann aufgrund `maxid`-Variable nur 3 Stellen betragen.
+
+Starte den Angriff und warte, bis du einen Response erhältst, dessen HTML-Length anders ist. Bei mir war es der 120. Payload und der `PHPSESSID` **119**.
+
+![Natas18 Passwort für das natas19](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19d.png)
+
+Damit solltest du das Passwort für das nächste Level `natas19` erhalten haben und kannst mit der Challenge fortfahren.
+
+</details>
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+
+## Natas 19 -> 20
+
+```text
+Username:   natas19
+
+URL:        http://natas19.natas.labs.overthewire.org
+```
+
+<details>
+    <summary>Lösung</summary>
+
+
+</details>
 
 # Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
