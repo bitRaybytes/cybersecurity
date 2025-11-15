@@ -1,4 +1,5 @@
 # Over The Wire: Krypton
+## Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
 > **ACHTUNG: SPOILER GEFAHR**
 
@@ -81,3 +82,33 @@ ssh -l narnia0 narnia.labs.overthewire.org -p 2226
 ### Lösung
 
 </details>
+
+
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+## Haftungsausschluss
+
+Dieses Repository dient ausschließlich zu Ausbildungs-, Forschungs- und Demonstrationszwecken im Bereich der IT-Sicherheit.
+
+Alle hier dokumentierten Techniken und Tools dürfen nur in legalen und autorisierten Testumgebungen verwendet werden – z. B. in Labors, CTFs oder mit ausdrücklicher Genehmigung des Eigentümers der Zielsysteme.
+
+Wir distanzieren uns ausdrücklich von jeglicher illegalen Nutzung.
+Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und Auszubildende, die ethisch und rechtlich korrekt handeln.
+
+[Disclaimer](/00-disclaimer/disclaimer.md)
+
+--- 
+
+Stay curious – stay secure. 🔐
+
+🗓️ **Letzte Aktualisierung:** November 2025  
+🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
+
+---
