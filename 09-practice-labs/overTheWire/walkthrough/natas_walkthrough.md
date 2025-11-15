@@ -2010,7 +2010,7 @@ Das Bash-Kommando leitet die Ausgabe direkt in eine Datei zur einfachen Übertra
 python3 deinDateiname.py > payloadliste.txt
 ```
 
-1. Sende einen beliebigen **Request** (am besten direkt mit dem Username `admin`) an den Intruder.
+1. Sende einen beliebigen **Request** an den Intruder.
 
 2. Drücke links auf den Button `Add §` um eine Variable in den Request hinzuzufügen.
 
