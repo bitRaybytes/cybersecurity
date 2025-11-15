@@ -1,4 +1,5 @@
 # Over The Wire: Krypton
+## Wird laufend fortgesetzt, bis das letzte Level geschafft ist.
 
 > **ACHTUNG: SPOILER GEFAHR**
 
