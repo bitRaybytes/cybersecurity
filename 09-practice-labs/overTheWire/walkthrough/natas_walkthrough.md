@@ -1872,7 +1872,7 @@ Die Anwendung verwendet **`PHPSESSID`-Cookies** zur Verwaltung des Benutzerstatu
 
             - **Wichtige Prüfungen nach erfolgreichem Start:**
 
-                - Prüft, ob in der Session bereits ein admin-Flag gesetzt ist.
+                - Prüft, ob in der Session bereits ein `admin`-Flag gesetzt ist.
 
                 - Falls das `admin`-Flag existiert, wird die Session-Variable `$_SESSION["admin"]` auf **0** gesetzt, um sicherzustellen, dass man kein Admin ist.
 
@@ -1882,7 +1882,7 @@ Der Code ist gegen typische Angriffe wie **SQL Injection** immun (keine SQL-Abfr
 
 Die Schwachstelle: **Session Hijacking durch Brute-Force**
 
-- Die Funktion setzt den Session-Wert `$_SESSION["admin"]` nur dann auf **0**, wenn ein altes admin-Flag bereits in der Session existiert.
+- Die Funktion setzt den Session-Wert `$_SESSION["admin"]` nur dann auf **0**, wenn ein altes `admin`-Flag bereits in der Session existiert.
 
 - Wenn eine Session gestartet wird, die neu ist oder bei der das `admin`-Flag nicht gesetzt wurde, gibt es eine temporäre Lücke.
 
@@ -1902,11 +1902,12 @@ Sobald du die Daten in Burp hast, sende sie mit einem Rechtsklick an den **Intru
 
 1. Klicke auf **Proxy**.
 2. Klicke auf **Intercept off** um ihn zu aktivieren.
-3. Übermittel entweder ein leeres Formular oder gib Daten in die Eingabefelder ein (irrelevant).
+3. Übermittle entweder ein leeres Formular oder gib Daten in die Eingabefelder ein (irrelevant).
 4. Sobald du die Daten erhalten hast: Rechtsklick auf das Ergebnis von `natas18` und **Send to Intruder** auswählen.
 ![Natas18 senden an den Intruder ](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19f.png)
 
 5. Auf den Reiter **Intruder** klicken und Einstellungen vornehmen: 
+
 ![Natas18 Intruder konfigurieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas19c.png)
    - Mit `Add §` legst du eine Variable fest - ich habe sie `admin` genannt.
    - In den **Payloads** nutzt du den **type** `Numbers`.
@@ -1987,11 +1988,11 @@ Entweder musst du für die Umwandlung auf den **grünen Bake** Button drücken o
 
 ![Natas19 Umwandlugn für PoC](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20d.png)
 
-Du siehst, dass es  noch wichtig ist, ein `-` (Hex `2d`) in die Umwandlung hinzuzufügen, bevor das Datenpaket an den Server übermittelt wird.
+Du siehst, dass es noch wichtig ist, ein `-` (Hex `2d`) in die Umwandlung hinzuzufügen, bevor das Datenpaket an den Server übermittelt wird.
 
 **3. Starte den Exploit**
 
-Du kannst den Brute-Force Angriff wieder über Burp automatisieren. Allerdings wird es etwas tricky werden.
+Du kannst den Brute-Force Angriff wieder über Burp automatisieren. 
 
 Aufgrund der notwendigen vollständigen Hex-Kodierung des Musters POS-admin (inklusive des Bindestrichs), die von Burps Standard-Payload-Regeln nicht effizient abgebildet werden kann, ist die Generierung einer vollständigen Payload-Liste der effizienteste Ansatz.
 
@@ -2019,14 +2020,14 @@ python3 deinDateiname.py > payloadliste.txt
 
 3. Klicke im Reiter **Intruder** im rechten Menü unter Payload auf den Payload type und wähle `Simple list` aus. 
 
-4. In den **Payload configuration** klickst du auf den Button **Load** und lädst die eben erstellte Liste des Python Skripts. Das sollte dir alle Positionen von 1 - 640 (inklusive) importieren.
+4. In den **Payload configuration** klickst du auf den Button **Load** und lädst die eben erstellte Liste des Python Skripts. Das sollte dir alle Positionen von **1 - 640** (inklusive) importieren.
 
 **Hinweis:** Die Regeln im Screenshot brauchst du nicht zu beachten. Sie waren ein Versuch, den hexadezimal kodierten String über die Anweisungen zu erstellen.
 
 ![Natas19 Payload in Burp importieren](/09-practice-labs/ressourcen/pictures/overthewire/natas/natas20e.png)
 
 
-Starte den Angriff und warte, bis die in hexadezimal kodierten **640** `PHPSESSID`s an den Server übermittelt werden.
+Starte den Angriff und warte, bis die in hexadezimal kodierten **640** `PHPSESSID`'s an den Server übermittelt werden.
 
 Bei erfolgreichen Exploit erhältst du wieder eine Length der HTML-Seite, die sich von den anderen unterscheidet. Diese HTML sollte das Passwort für `natas20` zurückgeben.
 
@@ -2079,7 +2080,7 @@ function mywrite($sid, $data){
         $data .= "$key $value\n"; // <-- SCHWACHSTELLE
     }
     file_put_contents($filename, $data);
-    chmod(filename, 0600);
+    chmod($filename, 0600);
     return true;
 }
 ```
@@ -2115,11 +2116,11 @@ function myread($sid){
 
 **1. Exploit-Durchführung in zwei Phasen**
 
-**1.1 Angriffsphase 1: Session Poisoning**
+**1.1 Angriffsphase 1 - Session Poisoning**
 
-Das Ziel ist, einen `POST`-Request zu senden, der den name-Parameter so manipuliert, dass die `mywrite`-Funktion die Zeile `admin 1` in unsere Session-Datei schreibt.
+Das Ziel ist, einen `POST`-Request zu senden, der den `name`-Parameter so manipuliert, dass die `mywrite`-Funktion die Zeile `admin 1` in unsere Session-Datei schreibt.
 
-- Rufe die Natas 20-Seite auf. Dein Browser erhält eine gültige, 26-stellige `PHPSESSID` (z.B. `uGa...`). Behalte dieses Cookie.
+- Rufe die `natas20`-Seite auf. Dein Browser erhält eine gültige, 26-stellige `PHPSESSID` (z.B. `uGa...`). Behalte dieses Cookie.
 
 - Sende einen `POST`-Request (z.B. mit Burp Repeater) an `/index.php`.
 
