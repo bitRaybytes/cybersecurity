@@ -5,6 +5,8 @@
 - [Einleitung](#einleitung)
 - [Layer 2 Protokolle](#layer-2-protokolle)
   - [Ethernet II (Layer 2)](#ethernet-ii-layer-2)
+  - [Ethernet Frame (gesamt)](#ethernet-frame-gesamt)
+  - [VLAN Tag (IEEE 802.1Q)](#vlan-tag-ieee-8021q)
   - [ARP Header (Layer 2/3)](#arp-header-layer-23)
 - [Layer 3 Protokolle](#layer-3-protokolle)
   - [IPv4 Header (Layer 3)](#ipv4-header-layer-3)
@@ -17,7 +19,6 @@
   - [DHCP (über UDP 67/68) (Layer 5)](#dhcp-über-udp-6768-layer-5-7)
   - [DNS Header (UDP/TCP Port 53) (Layer 5)](#dns-header-udptcp-port-53-layer-5-7)
   - [HTTP/HTTPS (Layer 5)](#httphttps-layer-5-7)
-  - [ICMP Header (Layer 3)](#icmp-header-layer-3)
   - [NTP (Layer 5)](#ntp)
   - [TLS/SSL Record Layer (Layer 5)](#tlsssl-record-layer-layer-5-7)
   - [Kerberos (Authentication) (Layer 5)](#kerberos-authentication-layer-5-7)
@@ -25,6 +26,9 @@
   - [IPSec (Security for IP) (Layer 5)](#ipsec-internet-procotol-security-layer-5-7)
   - [SMB (Server Message Block) (Layer 5)](#smb-server-message-block)
   - [SNMP (Simple Network Management Protocol) (Layer 5)](#snmp-simple-network-management-protocol)
+  - [SMTP (Simple Mail Transport Protocol)](#smtp-simple-mail-transfer-protocol)
+  - [FTP (File Transport Protocol)](#ftp-file-transfer-protocol)
+  - [Telnet](#telnet)
   - [Syslog (Layer 5)](#syslog)
   - [ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog) ](#arbitrary-protocols-smb-ipsec-kerberos-snmp-syslog)
 - [Vergleichstabelle](#vergleichstabelle)
@@ -79,7 +83,55 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 ```
 
 
+<div align=right>
 
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### Ethernet Frame (Gesamt)
+
+- **Zweck:** Beschreibt die gesamte Struktur der Datenübertragung auf der Sicherungsschicht (inkl. Header und Trailer).
+
+- **Größe:** 64–1518 Bytes (inkl. Header und Trailer). Die minimale Nutzlast ist 46 Bytes.
+
+**Header-Größe:** 14 Bytes
+
+- **Trailer-Größe:** 4 Bytes (FCS)
+
+
+```text
++-----------------------------------------------------------------------------------+
+| Präambel (8B) | Header (14B) | Daten (46-1500B) | Frame Check Sequence / FCS (4B) |
++---------------+--------------+------------------+---------------------------------+
+```
+
+> **Anmerkung:** Präambel und FCS werden oft von Netzwerkkarten entfernt/hinzugefügt und sind in gängigen Hex-Dumps (z. B. Wireshark) nicht sichtbar.
+
+    
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### VLAN Tag (IEEE 802.1Q)
+
+- **Zweck:** Segmentierung und Priorisierung des Verkehrs über virtuelle Netzwerke (VLANs). Wird in den Ethernet Header zwischen Quell-MAC und EtherType/Length eingefügt.
+
+- **Header-Größe:** 4 Bytes (zusätzlich zum Ethernet-Header)
+
+
+```text
++----------------+----------------+----------------+----------------+
+| Ziel-MAC (6B)  | Quell-MAC (6B) | TPID (2B)      | TCI (2B)       |
++----------------+----------------+----------------+----------------+
+|                | EtherType/Length (2B)                            |
++-------------------------------------------------------------------+
+```
+> **Anmerkung:** **TPID** (Tag Protocol Identifier) ist immer `0x8100` für **802.1Q**. **TCI** (Tag Control Information) enthält das **VLAN ID** (12 Bit) und die Priorität.
 
 
 <div align=right>
@@ -126,21 +178,21 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 - **Header-Größe:** 20-60 Bytes (Minimum 20 Bytes, da die "Options" optional sind).
 
 ```text
- 0                   1                   2                   3
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|Version|  IHL  |   TOS/DSCP    |         Total Length          |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|        Identification         | Flags |    Fragment Offset    |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|      TTL      |    Protocol   |        Header Checksum        |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                         Source IP Address                     |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                      Destination IP Address                   |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                             Options                           |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+ 0               1               2               3
+ 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0|
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-----------+
+|Version|  IHL  |   TOS/DSCP    |  Total Length                   |   IPv4    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+           |
+|        Identification         |Flags|     Fragment Offset       |   HEADER  | 
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+           |
+|      TTL      |    Protocol   |           Header Checksum       |           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-----------+
+|                         Source IP Address                       |   TCP     |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+           |
+|                      Destination IP Address                     |   HEADER  |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+           |
+|               Option + Padding (nur wenn IHL > 5)               |           |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-----------+
 ```
 
 
@@ -175,19 +227,17 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 ```
 
 
-
-
 <div align=right>
 
 [↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
 
 </div>
 
-
 ### ICMP Header (Layer 3)
 
 - **Zweck:** Diagnose & Fehlerberichte (Ping, Traceroute).
 - **Header-Größe:** min. 8 Bytes (Standard, ohne Zusatzfelder)
+
 
 ```text
 0               1               2               3
@@ -198,7 +248,6 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 | Rest of Header (4 B)                                          |
 +---------------------------------------------------------------+
 ```
-
 
 
 <div align=right>
@@ -224,22 +273,27 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 - **Header-Größe:** 20–60 Bytes (5–15 Words à 32 Bit)
 
 ```text
- 0                   1                   2                   3
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ 0               1               2               3
+ 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7| 
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|          Source Port          |       Destination Port        |
+|          Source Port           |       Destination Port       |
 +---------------------------------------------------------------+
 |                        Sequence Number                        |
 +---------------------------------------------------------------+
 |                     Acknowledgment Number                     |
 +---------------------------------------------------------------+
-| Data Offset | Reserved  |C|E|U|A|P|R|S|F|     Window Size     |
+| Offset |Resrvd|C|E|U|A|P|R|S|F|     Window Size               |
 +---------------------------------------------------------------+
-|         Checksum              |      Urgent Pointer           |
+|         Checksum               |      Urgent Pointer          |
 +---------------------------------------------------------------+
-|                        Options (if any)                       |
+|              Option + Padding (nur selten)                    |
++---------------------------------------------------------------+
+|                       Rest sind Daten                         |
+|                                                               |
 +---------------------------------------------------------------+
 ```
+
+
 
 
 
@@ -581,6 +635,56 @@ Accept: */*
 </div>
 
 
+### SMTP (Simple Mail Transfer Protocol)
+
+- **Zweck:** Übertragung von E-Mails zwischen Mail-Servern.
+
+- **Transport:** TCP 25, 587 (Submission) oder 465 (SMTPS).
+
+- **Header:** Text-basiert (folgt auf den Transport-Header), bestehend aus Textzeilen.
+
+- **Angriffsaspekt:** Command-Injection, Open Relay Missbrauch.
+
+```text
+MAIL FROM:<sender@example.com> <--- Der SMTP-Befehl beginnt die Übertragung.
+RCPT TO:<recipient@other.net>
+DATA
+[Es folgt der E-Mail-Header und der Inhalt]
+.
+QUIT
+```
+
+
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
+
+### Telnet
+
+- **Zweck:** Bietet eine einfache, unverschlüsselte Text-Terminal-Sitzung. Wird heute durch `SSH` ersetzt.
+
+- **Transport:** TCP 23.
+
+- **Header:** Text-basiert (kein fester Header, da es ein zeichenorientiertes Terminal-Protokoll ist). Enthält optionale Option Negotiation-Befehle (z. B. `IAC DO`).
+
+- **Angriffsaspekt:** Übertragung von Passwörtern im Klartext.
+
+```text
+LOGIN: user
+PASSWORD: password123     <--- Alles Klartext
+[Es folgen Terminal-Befehle]
+```
+
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
+
 
 ### Syslog
 
@@ -593,8 +697,31 @@ Accept: */*
 ```
 
 
+<div align=right>
+
+[↑ Inhaltsverzeichnis](#inhaltsverzeichnis)
+
+</div>
 
 
+### FTP (File Transfer Protocol)
+
+- **Zweck:** Übertragung von Dateien zwischen Clients und Servern. Ein unsicheres Protokoll (unverschlüsselte Anmeldedaten).
+
+- **Transport:** Zwei separate TCP-Verbindungen:
+
+      - **Port 21:** Steuerkanal (Control Channel) für Befehle und Antworten.
+
+      - **Port 20 (Active) oder dynamischer Port (Passive):** Datenkanal für die Dateiübertragung.
+
+- **Header:** Text-basiert (Befehle wie `USER`, `PASS`, `RETR`, `STOR`).
+
+```text
+USER anonymous
+PASS guest@
+CWD /pub/downloads
+RETR important_file.zip
+```
 
 <div align=right>
 
