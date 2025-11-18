@@ -899,7 +899,7 @@ Es ist jedoch wichtig, den exakten Schlüssel zu kennen, damit der Klartext korr
 
 Der Sourcecode verrät, dass eine neue Variable `$data` mit dem Wert aus der Funktion `loadData($defaultdata)` initialisiert wird. Daraufhin wird geprüft, ob sich in diesem Array ein Parameter mit besonderem Wert `preg_match('/^#?:[a-f\d]{6})...` befindet, was auf den Inhalt des Eingabfelds (`#ffffff`) auf der Hauptseite von `natas11` hindeutet. 
 
-In dieser Funktion ist auch eine sogenannten *Superglobal* aus der `PHP`-Syntax, nämlich `$_COOKIE`. Ein Superglobal (`$_COOKIE`, `$_REQUEST`, usw.) ist ein vordefinierter Array, der vom PHP-Interpreter gefüllt wird und dir Zugriff auf Daten gibt, die von einem Client (dem Browser) an den Server gesendet werden.
+In dieser Funktion ist auch eine sogenannte *Superglobal* aus der `PHP`-Syntax, nämlich `$_COOKIE`. Ein Superglobal (`$_COOKIE`, `$_REQUEST`, usw.) ist ein vordefinierter Array, der vom PHP-Interpreter gefüllt wird und dir Zugriff auf Daten gibt, die von einem Client (dem Browser) an den Server gesendet werden.
 
 Die Variable `$_Cookie` enthält also die Daten, die der Browser im `Cookie`-Header der HTTP-Anfrage an den Server sendet.
 
