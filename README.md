@@ -124,7 +124,7 @@ So kannst du mitmachen:
 
 ## Lizenz
 
-Dieses Repository steht unter der MIT-Lizenz – freie Nutzung & Bearbeitung sind erwünscht.
+Dieses Repository steht unter der [MIT-Lizenz](/LICENSE) – freie Nutzung & Bearbeitung sind erwünscht.
 Credits bei Weiterverwendung wären nett. 😉
 
 **Hinweis:** Externe Tools und Links gehören den jeweiligen Anbietern.
