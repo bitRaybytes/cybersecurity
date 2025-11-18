@@ -25,6 +25,7 @@ Mehr zum Thema `ARP` erfährst du hier: [arp_grundlagen.md](/02-network-security
 
 
 ## Grundlagen: Was ist ARP?
+**ARP** oder **Address Resolution Protocol** ist ein Verfahren, dass IP Adressen in MAC-Adressen auflöst. Dies dient dazu, dass Geräte ins Netzwerk kommunizieren können, weil sie "identifiziert" werden können.
 
 - **ARP (Address Resolution Protocol)** ordnet **IP-Adressen (Layer 3)** den **MAC-Adressen (Layer 2)** zu.  
 - Jedes Gerät im LAN führt eine **ARP-Tabelle**, in der IP ↔ MAC-Zuordnungen gespeichert werden.  
