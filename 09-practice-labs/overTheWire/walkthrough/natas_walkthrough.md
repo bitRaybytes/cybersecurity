@@ -7,7 +7,6 @@
 
 - [Einleitung](#einleitung)
 - [Natas 0 Zugang](#natas-0-zugang)
-- [Natas 0 -> 1](#natas-1---2)
 - [Natas 1 -> 2](#natas-1---2)
 - [Natas 2 -> 3](#natas-2---3)
 - [natas 3 -> 4](#natas-3---4)
