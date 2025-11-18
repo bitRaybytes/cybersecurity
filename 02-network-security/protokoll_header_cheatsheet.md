@@ -347,8 +347,8 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 - **Transport:** UDP 67 (Server) und 68 (Client).
 
 ```text
- 0                   1                   2                   3
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+ 0               1               2               3
+ 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |     op (1B)   |   htype (1B)  |   hlen (1B)   |   hops (1B)   |
 +---------------+---------------+---------------+---------------+
@@ -395,13 +395,13 @@ Weitere technische Informationen und Dokumentationen zu Protokollen findest du u
 - Transport: UDP/TCP 53
 
 ```text
-+---------------------------------------------------------------+
-|            Transaction ID (2B)           |       Flags (2B)   |
-+---------------------------------------------------------------+
-|            Questions (2B)                |    Answer RRs (2B) |
-+---------------------------------------------------------------+
-|           Authority RRs (2B)             | Additional RRs (2B)|
-+---------------------------------------------------------------+
++--------------------------------------------------+
+|     Transaction ID (2B)   |       Flags (2B)     |
++--------------------------------------------------+
+|     Questions (2B)        |    Answer RRs (2B)   |
++--------------------------------------------------+
+|    Authority RRs (2B)     | Additional RRs (2B)  |
++--------------------------------------------------+
 ```
 
 
@@ -793,7 +793,7 @@ Dieses Projekt richtet sich an White-Hat-Sicherheitsforscher, Ethical Hacker und
 
 Stay curious – stay secure. 🔐
 
-🗓️ **Letzte Aktualisierung:** September 2025  
+🗓️ **Letzte Aktualisierung:** November 2025  
 🤝 **Pull Requests willkommen** – Vorschläge für neue Kurse oder Kategorien gerne einreichen!
 
 ---
