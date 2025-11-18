@@ -126,6 +126,7 @@ Der beste Schutz vor Social Engineering ist Aufklärung und Bewusstsein.
 - [BSI: Social Engineering - der Mensch als Schwachstelle](https://www.bsi.bund.de/DE/Themen/Verbraucherinnen-und-Verbraucher/Cyber-Sicherheitslage/Methoden-der-Cyber-Kriminalitaet/Social-Engineering/social-engineering_node.html)
 - [Wikipedia: Social Engineering](https://de.wikipedia.org/wiki/Social_Engineering_(Sicherheit))
 - [IBM: Social Engineering](https://www.ibm.com/de-de/think/topics/social-engineering)
+- [Bookmarklets von Social Engineer Spezialisten Micah und Griffin](https://tools.myosint.training/)
 
 <div align=right>
 
