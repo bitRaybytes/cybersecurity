@@ -17,8 +17,8 @@
   - [UDP Header (Layer 4)](#udp-header-layer-4)
 - [Layer 5-7 Protokolle](#)
   - [DHCP (über UDP 67/68) (Layer 5)](#dhcp-über-udp-6768-layer-5-7)
-  - [DNS Header (UDP/TCP Port 53) (Layer 5)](#dns-header-udptcp-port-53-layer-5-7)
-  - [HTTP/HTTPS (Layer 5)](#httphttps-layer-5-7)
+  - [DNS Header (UDP/TCP Port 53) (Layer 7)](#dns-header-udptcp-port-53-layer-5-7)
+  - [HTTP/HTTPS (Layer 7)](#httphttps-layer-5-7)
   - [NTP (Layer 5)](#ntp)
   - [TLS/SSL Record Layer (Layer 5)](#tlsssl-record-layer-layer-5-7)
   - [Kerberos (Authentication) (Layer 5)](#kerberos-authentication-layer-5-7)
@@ -30,7 +30,6 @@
   - [FTP (File Transport Protocol)](#ftp-file-transfer-protocol)
   - [Telnet](#telnet)
   - [Syslog (Layer 5)](#syslog)
-  - [ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog) ](#arbitrary-protocols-smb-ipsec-kerberos-snmp-syslog)
 - [Vergleichstabelle](#vergleichstabelle)
 - [Haftungsausschluss](#haftungsausschluss)
 
@@ -730,11 +729,7 @@ RETR important_file.zip
 </div>
 
 
-### ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)
-
-Diese Protokolle haben sehr variable Header-Aufbauten (häufig mit ASN.1 oder Block-Formaten). 
-
-Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
+### 
 
 
 
@@ -771,6 +766,10 @@ Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 | Syslog      | 514 UDP/TCP   | variabel           | variabel           | Log Manipulation           |
 
 
+**ARBITRARY PROTOCOLS (SMB, IPSec, Kerberos, SNMP, Syslog)**     
+Diese Protokolle haben sehr variable Header-Aufbauten (häufig mit ASN.1 oder Block-Formaten). 
+
+Eine 32-Bit-Wort-Darstellung wäre extrem komplex und übersteigt den Rahmen.
 
 <div align=right>
 
