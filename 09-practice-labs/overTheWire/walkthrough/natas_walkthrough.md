@@ -2119,7 +2119,7 @@ function myread($sid){
 
 Das Ziel ist, einen `POST`-Request zu senden, der den `name`-Parameter so manipuliert, dass die `mywrite`-Funktion die Zeile `admin 1` in unsere Session-Datei schreibt.
 
-- Rufe die `natas20`-Seite auf. Dein Browser erhält eine gültige, 26-stellige `PHPSESSID` (z.B. `uGa...`). Behalte dieses Cookie.
+- Rufe die `natas20`-Seite auf. Dein Browser erhält eine gültige `PHPSESSID`. Behalte dieses Cookie.
 
 - Sende einen `POST`-Request (z.B. mit Burp Repeater) an `/index.php`.
 
@@ -2139,7 +2139,7 @@ name=%0Aadmin%201
 
 - Es schreibt: name `\nadmin 1\n`
 
-- Die Session-Datei (z.B. `mysess_uGa...`) enthält nun buchstäblich zwei Zeilen Text:
+- Die Session-Datei (z.B. `PHPSESSID`) enthält nun buchstäblich zwei Zeilen Text:
 ```text
 name \n
 admin 1
@@ -2151,11 +2151,11 @@ Das "Gift" ist platziert. Jetzt muss die Anwendung die "vergiftete" Datei lesen.
 
 1. Lade die Seite `/index.php` erneut im Browser (oder mit Burp Repeater).
 
-2. Stelle sicher, dass dasselbe `PHPSESSID`-Cookie (`uGa...`) gesendet wird.
+2. Stelle sicher, dass dasselbe `PHPSESSID`-Cookie gesendet wird.
 
 3. **Was passiert im Backend (`myread`):**
 
-    - Der Server ruft myread("`uGa...`") auf.
+    - Der Server ruft myread("`PHPSESSID...`") auf.
 
     - Die Funktion liest die manipulierte Datei.
 
