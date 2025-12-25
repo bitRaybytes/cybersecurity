@@ -257,7 +257,7 @@ Das Ring-Modell organisiert die Komponenten nach ihrem Privilegien-Level. Ring 0
 
 - **Ring 1 und 2:** Diese Stufen sind in modernen Allzwecksystemen oft nicht im Einsatz, können aber für bestimmte Treiber oder in Virtualisierungsumgebungen genutzt werden, die einen Teil des Kernels isolieren.
 
-- **Ring 3 (Benutzermodus):** Diese Ebene ist für normale Anwendungsprogramme vorgesehen. Programme in Ring 3 dürfen nur auf ihren eigenen Speicher zugreifen und können keine gefährlichen oder hardwarenahen Befehle wie Interrupts ein- und aussachlten.
+- **Ring 3 (Benutzermodus):** Diese Ebene ist für normale Anwendungsprogramme vorgesehen. Programme in Ring 3 dürfen nur auf ihren eigenen Speicher zugreifen und können keine gefährlichen oder hardwarenahen Befehle wie Interrupts ein- und ausschalten.
 
 ```text
          +------------------------------------+
